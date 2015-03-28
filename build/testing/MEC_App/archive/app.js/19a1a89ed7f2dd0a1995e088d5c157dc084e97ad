@@ -1,4 +1,4 @@
-function _2742167c29ffac81842f9f1eb2cac8a316e84a2e(){};//@tag foundation,core
+function _19a1a89ed7f2dd0a1995e088d5c157dc084e97ad(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -55887,9 +55887,7 @@ Ext.define('MEC_App.view.MainNavView', {
                     {
                         xtype: 'button',
                         itemId: 'mybutton',
-                        width: 50,
-                        iconCls: 'list',
-                        text: ''
+                        text: 'Open Menu'
                     }
                 ]
             }

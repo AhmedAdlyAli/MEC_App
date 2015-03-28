@@ -20,6 +20,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "title": "الريئيسية"
+            },
             "name": "MyPanel",
             "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
             "cn": [
@@ -36,6 +39,22 @@
                     },
                     "name": "MyButton1",
                     "designerId": "fa42bbb4-6bb5-4e26-8dd9-18c08ff65c7f"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "list",
+                        "itemId": "mybutton",
+                        "text": "",
+                        "width": 50
+                    },
+                    "name": "MyButton",
+                    "designerId": "5402d611-80e8-4698-bd71-ebcbc2a98fe2"
                 }
             ]
         }

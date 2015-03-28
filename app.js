@@ -54,7 +54,8 @@ Ext.application({
         'WhereToShopView',
         'MonthlyFruitView',
         'TrademarkReportView',
-        'MainNavView'
+        'MainNavView',
+        'SideMenuView'
     ],
     controllers: [
         'HomeController'

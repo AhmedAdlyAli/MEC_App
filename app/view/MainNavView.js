@@ -26,11 +26,19 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
+                title: 'الريئيسية',
                 items: [
                     {
                         xtype: 'button',
                         itemId: 'mybutton1',
                         text: 'MyButton1'
+                    },
+                    {
+                        xtype: 'button',
+                        itemId: 'mybutton',
+                        width: 50,
+                        iconCls: 'list',
+                        text: ''
                     }
                 ]
             }

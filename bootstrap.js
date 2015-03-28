@@ -697,6 +697,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.RecallsView": [],
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
+  "MEC_App.view.SideMenuView": [],
   "MEC_App.view.SupplyServiceView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
   "MEC_App.view.TrademarkReportView": [],
@@ -1448,7 +1449,7 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.ConsumerIndicatorsView"
   ],
   "MEC_App.view.ContactUsView": [
-    "widget.ContactUsView1"
+    "widget.ContactUsView"
   ],
   "MEC_App.view.EconomyNewsView": [
     "widget.EconomyNewsView"
@@ -1518,6 +1519,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SettingsView": [
     "widget.SettingsView"
+  ],
+  "MEC_App.view.SideMenuView": [
+    "widget.SideMenuView"
   ],
   "MEC_App.view.SupplyServiceView": [
     "widget.SupplyServiceView"

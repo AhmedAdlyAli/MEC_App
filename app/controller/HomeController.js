@@ -18,35 +18,42 @@ Ext.define('MEC_App.controller.HomeController', {
 
     config: {
         control: {
-            "button#mybutton": {
-                tap: 'onMybuttonTap'
-            },
             "button#mybutton1": {
                 tap: 'onMybutton1Tap'
+            },
+            "button#mybutton2": {
+                tap: 'onMybutton2Tap'
+            },
+            "button#mybutton": {
+                tap: 'onMybuttonTap'
             }
         }
-    },
-
-    onMybuttonTap: function(button, e, eOpts) {
-
-        button.up('MainNavView').push({
-            xtype: 'widget.ContactUsView',
-            title: 'Step 3'
-        });
-
-
-
-
-
-
     },
 
     onMybutton1Tap: function(button, e, eOpts) {
 
         button.up('MainNavView').push({
-            xtype: 'ContactUsView1',
-            title: 'Step 2'
+            xtype: 'ContactUsView',
+            title: 'Contact Us'
         });
+
+
+
+
+    },
+
+    onMybutton2Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'EconomyNewsView',
+            title: 'testttttt'
+        });
+
+    },
+
+    onMybuttonTap: function(button, e, eOpts) {
+
+
+        Ext.Viewport.setActiveItem({xtype:'SideMenuView'});
 
 
 

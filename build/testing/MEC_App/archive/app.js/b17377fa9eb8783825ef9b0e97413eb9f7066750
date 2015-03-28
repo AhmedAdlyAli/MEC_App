@@ -1,4 +1,4 @@
-function _2742167c29ffac81842f9f1eb2cac8a316e84a2e(){};//@tag foundation,core
+function _b17377fa9eb8783825ef9b0e97413eb9f7066750(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -55887,9 +55887,7 @@ Ext.define('MEC_App.view.MainNavView', {
                     {
                         xtype: 'button',
                         itemId: 'mybutton',
-                        width: 50,
-                        iconCls: 'list',
-                        text: ''
+                        text: 'Open Menu'
                     }
                 ]
             }
@@ -55940,7 +55938,7 @@ Ext.define('MEC_App.controller.HomeController', {
     },
     onMybuttonTap: function(button, e, eOpts) {
         Ext.Viewport.setActiveItem({
-            xtype: 'SideMenuView'
+            xtype: 'SideNavView'
         });
     }
 });

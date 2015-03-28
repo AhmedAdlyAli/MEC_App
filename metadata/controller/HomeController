@@ -19,40 +19,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#mybutton",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onMybuttonTap",
-                "implHandler": [
-                    "",
-                    "button.up('MainNavView').push({",
-                    "    xtype: 'widget.ContactUsView',",
-                    "    title: 'Step 3'",
-                    "});",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "name": "tap"
-            },
-            "name": "onMybuttonTap",
-            "designerId": "5d23cef0-9529-478e-bd8f-8ee6830fa3d5"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|controlQuery": "button#mybutton1",
                 "designer|params": [
                     "button",
@@ -64,8 +30,8 @@
                 "implHandler": [
                     "",
                     "button.up('MainNavView').push({",
-                    "    xtype: 'ContactUsView1',",
-                    "    title: 'Step 2'",
+                    "    xtype: 'ContactUsView',",
+                    "    title: 'Contact Us'",
                     "});",
                     "",
                     "",
@@ -76,6 +42,64 @@
             },
             "name": "onMybutton1Tap",
             "designerId": "15ddf291-ee0b-411f-af06-a38e800830fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mybutton2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMybutton2Tap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'EconomyNewsView',",
+                    "    title: 'testttttt'",
+                    "});",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onMybutton2Tap",
+            "designerId": "35562a5b-3e0c-4ffb-a3ec-4042246e4770"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mybutton",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMybuttonTap",
+                "implHandler": [
+                    "",
+                    " ",
+                    "Ext.Viewport.setActiveItem({xtype:'SideMenuView'});",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onMybuttonTap",
+            "designerId": "137271a6-4b62-4871-aafa-f33b9970dbb2"
         }
     ]
 }

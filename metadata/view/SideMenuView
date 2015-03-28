@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "SideMenuView",
+        "designer|userClassName": "SideMenuView"
+    },
+    "name": "MyPanel1",
+    "designerId": "ef3a4564-e9c1-4771-a6e4-2ed5fe30d91b"
+}
