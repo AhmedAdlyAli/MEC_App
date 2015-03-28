@@ -100,6 +100,222 @@
             },
             "name": "onMybuttonTap",
             "designerId": "137271a6-4b62-4871-aafa-f33b9970dbb2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeServices",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeServicesTap",
+                "implHandler": [
+                    "        button.up('MainNavView').push({",
+                    "            xtype: 'PublicServiceView',",
+                    "            title: 'الخدمات العامة'",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeServicesTap",
+            "designerId": "49080649-7ec7-4928-8189-fc2836aadd49"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeNews",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeNewsTap",
+                "implHandler": [
+                    "        button.up('MainNavView').push({",
+                    "            xtype: 'EconomyNewsView',",
+                    "            title: 'المركز الاعلامي'",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeNewsTap",
+            "designerId": "9fd17247-1e55-4105-85d3-98e00dca3c3c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeInquire",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeInquireTap",
+                "implHandler": [
+                    "        button.up('MainNavView').push({",
+                    "             xtype: 'InquiriesView',",
+                    "             title: \"الاستعلامات و الاصدارات\"",
+                    "         });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeInquireTap",
+            "designerId": "10147f00-5a9c-4611-a23c-0092153590b1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeGeneralInfo",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeGeneralInfoTap",
+                "implHandler": [
+                    "        button.up('MainNavView').push({",
+                    "            xtype: 'InquiriesView',",
+                    "            title: \"معلومات عامة\"",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeGeneralInfoTap",
+            "designerId": "76d147f5-1749-4032-963c-43b17721fb0d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeReports",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeReportsTap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "        xtype: 'ReportsView',",
+                    "        title: \"المؤشرات و التقارير\"",
+                    "    });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeReportsTap",
+            "designerId": "5584ed4e-c50d-4e33-8547-a80a88be3ba8"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeProjects",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeProjectsTap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "        xtype: 'ProjectsView',",
+                    "        title: \"المبادرات و المشاريع\"",
+                    "    });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeProjectsTap",
+            "designerId": "471a9bc0-cefa-47cf-8bc0-f7467c309ace"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeeContact",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeeContactTap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "        xtype: 'ContactUsView',",
+                    "        title: \"التواصل\"",
+                    "    });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeeContactTap",
+            "designerId": "35387792-6e94-492f-8781-9f68f837cc72"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#homeProjects",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onHomeProjectsTap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "        xtype: 'ProjectsView',",
+                    "        title: \"المبادرات و المشاريع\"",
+                    "    });"
+                ],
+                "name": "tap"
+            },
+            "name": "onHomeProjectsTap",
+            "designerId": "8aeddf0e-dd74-4b5f-acb9-178c566315eb"
         }
     ]
 }

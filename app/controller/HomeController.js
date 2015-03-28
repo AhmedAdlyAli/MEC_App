@@ -26,6 +26,28 @@ Ext.define('MEC_App.controller.HomeController', {
             },
             "button#mybutton": {
                 tap: 'onMybuttonTap'
+            },
+            "button#homeServices": {
+                tap: 'onHomeServicesTap'
+            },
+            "button#homeNews": {
+                tap: 'onHomeNewsTap'
+            },
+            "button#homeInquire": {
+                tap: 'onHomeInquireTap'
+            },
+            "button#homeGeneralInfo": {
+                tap: 'onHomeGeneralInfoTap'
+            },
+            "button#homeReports": {
+                tap: 'onHomeReportsTap'
+            },
+            "button#homeProjects": {
+                tap: 'onHomeProjectsTap',
+                tap: 'onHomeProjectsTap'
+            },
+            "button#homeeContact": {
+                tap: 'onHomeeContactTap'
             }
         }
     },
@@ -58,6 +80,62 @@ Ext.define('MEC_App.controller.HomeController', {
 
 
 
+    },
+
+    onHomeServicesTap: function(button, e, eOpts) {
+                button.up('MainNavView').push({
+                    xtype: 'PublicServiceView',
+                    title: 'الخدمات العامة'
+                });
+    },
+
+    onHomeNewsTap: function(button, e, eOpts) {
+                button.up('MainNavView').push({
+                    xtype: 'EconomyNewsView',
+                    title: 'المركز الاعلامي'
+                });
+    },
+
+    onHomeInquireTap: function(button, e, eOpts) {
+                button.up('MainNavView').push({
+                     xtype: 'InquiriesView',
+                     title: "الاستعلامات و الاصدارات"
+                 });
+    },
+
+    onHomeGeneralInfoTap: function(button, e, eOpts) {
+                button.up('MainNavView').push({
+                    xtype: 'InquiriesView',
+                    title: "معلومات عامة"
+                });
+    },
+
+    onHomeReportsTap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                xtype: 'ReportsView',
+                title: "المؤشرات و التقارير"
+            });
+    },
+
+    onHomeProjectsTap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                xtype: 'ProjectsView',
+                title: "المبادرات و المشاريع"
+            });
+    },
+
+    onHomeeContactTap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                xtype: 'ContactUsView',
+                title: "التواصل"
+            });
+    },
+
+    onHomeProjectsTap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                xtype: 'ProjectsView',
+                title: "المبادرات و المشاريع"
+            });
     }
 
 });

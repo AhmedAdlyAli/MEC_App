@@ -1,9 +1,98 @@
 /* _arch-vars-start */
-$base-color: rgba(255,0,0,1);
+$alert-color: rgba(35,31,32,1);
+$base-color: rgba(255,255,255,1);
+$base-gradient: flat;
 
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
 
 
 /* _arch-other-start */
-.head{color:red}
+html,body{direction:rtl}
+
+.home-wrapper {
+    .x-button {
+        border: none;
+        background: none;
+        @include border-radius(0);
+    }
+    
+    .x-toolbar {
+        direction: ltr;
+    }
+}
+
+.home-header {
+    background: url(../images/home-header-bg.jpg);
+    background-size: cover;
+    color:#fff;
+
+    .x-innerhtml {
+        padding: 5%;
+    }
+}
+
+.home-btns {
+    .x-button {
+        @include border-radius(0);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        .x-button-icon {
+            background: url(../images/home-icons.png) no-repeat;
+            width: 50px;
+            height: 50px;
+            margin: 13% 0 10px;
+        }
+    }
+
+    .btn-services {
+        background: #3a2639;
+
+        .x-button-icon {
+            background-position: -50px 0px;
+        }
+    }
+
+    .btn-news {
+        background: #633054;
+
+        .x-button-icon {
+            background-position: 0px 0px;
+        }
+    }
+
+    .btn-general-info {
+        background: #691648;
+
+        .x-button-icon {
+            background-position: -50px -50px;
+        }
+    }
+
+    .btn-inquire {
+        background: #3a2639;
+
+        .x-button-icon {
+            background-position: 0px -50px;
+        }
+    }
+
+    .btn-projects {
+        background: #4f2440;
+
+        .x-button-icon {
+            background-position: -50px -100px;
+        }
+    }
+
+    .btn-contact {
+        background: #691648;
+
+        .x-button-icon {
+            background-position: 0px -108px;
+        }
+    }
+}

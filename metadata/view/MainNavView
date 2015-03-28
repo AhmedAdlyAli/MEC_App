@@ -6,9 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "home-wrapper"
+        ],
+        "defaultBackButtonText": "رجوع",
         "designer|initialView": true,
         "designer|userAlias": "MainNavView",
-        "designer|userClassName": "MainNavView"
+        "designer|userClassName": "MainNavView",
+        "fullscreen": true,
+        "requires": [
+            "Ext.Menu"
+        ],
+        "scrollable": false
     },
     "name": "MyNavigationView",
     "designerId": "a987dc04-f69b-4794-9834-ad522768096a",
@@ -21,42 +30,300 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": "vbox",
                 "title": "الريئيسية"
             },
             "name": "MyPanel",
             "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
             "cn": [
                 {
-                    "type": "Ext.Button",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "mybutton1",
-                        "text": "MyButton1"
+                        "cls": [
+                            "home-header"
+                        ],
+                        "html": "اخبار عامّة اخبار عامّة اخبار عامّة<br />اخبار عامّة اخبار عامّة  ",
+                        "layout|flex": 1
                     },
-                    "name": "MyButton1",
-                    "designerId": "fa42bbb4-6bb5-4e26-8dd9-18c08ff65c7f"
+                    "name": "MyPanel1",
+                    "designerId": "a8245f08-2e06-4951-a7b6-299ee637e8fb"
                 },
                 {
-                    "type": "Ext.Button",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "iconCls": "list",
-                        "itemId": "mybutton",
-                        "text": "",
-                        "width": 50
+                        "cls": [
+                            "home-btns"
+                        ],
+                        "layout": "vbox",
+                        "layout|flex": 2
                     },
-                    "name": "MyButton",
-                    "designerId": "5402d611-80e8-4698-bd71-ebcbc2a98fe2"
+                    "name": "MyPanel2",
+                    "designerId": "24c01667-166b-4058-9340-06c41d663814",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyPanel3",
+                            "designerId": "234d9518-89af-4723-b2c1-3fb37d7e7cd7",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-services"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "services",
+                                        "itemId": "homeServices",
+                                        "layout|flex": 1,
+                                        "text": "الخدمات العامة",
+                                        "ui": null
+                                    },
+                                    "name": "MyButton1",
+                                    "designerId": "c66ee932-e617-4c30-b271-6fc22c3ee4e4"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-news"
+                                        ],
+                                        "icon": null,
+                                        "iconAlign": "top",
+                                        "iconCls": "news",
+                                        "itemId": "homeNews",
+                                        "layout|flex": 1,
+                                        "text": "المركز الاعلامي"
+                                    },
+                                    "name": "MyButton2",
+                                    "designerId": "f29884be-8769-451a-a47f-daf37d3c2894"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyPanel4",
+                            "designerId": "f3233319-b753-42eb-a431-95eeb213ea6d",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-general-info"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "general-info",
+                                        "itemId": "homeInquire",
+                                        "layout|flex": 1,
+                                        "text": "الاستعلامات و الاصدارات"
+                                    },
+                                    "name": "MyButton3",
+                                    "designerId": "6a53c3e4-dca7-41a0-b231-7becea16ad1d"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-inquire"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "inquire",
+                                        "itemId": "homeReports",
+                                        "layout|flex": 1,
+                                        "text": "المؤشرات و التقارير"
+                                    },
+                                    "name": "MyButton4",
+                                    "designerId": "b94c474b-311c-400d-a037-35c2d382dbc3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "hbox",
+                                "layout|flex": 1
+                            },
+                            "name": "MyPanel5",
+                            "designerId": "6921a107-dc2e-4a03-8db2-e967478c89e4",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-projects"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "contact",
+                                        "itemId": "homeProjects",
+                                        "layout|flex": 1,
+                                        "text": "المبادرات و المشاريع"
+                                    },
+                                    "name": "MyButton5",
+                                    "designerId": "1a60594d-07c4-4f6e-b49f-3cd5dd00e145"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-contact"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "contact",
+                                        "itemId": "homeeContact",
+                                        "layout|flex": 1,
+                                        "text": "التواصل"
+                                    },
+                                    "name": "MyButton6",
+                                    "designerId": "4d7ce7f3-9b44-4ff4-8c85-fb7c7ae0f4c1"
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var me = this;",
+                    "",
+                    "",
+                    "Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar().add({",
+                    "    xtype:'button',",
+                    "    iconCls: 'list',",
+                    "    align:'right',",
+                    "    handler: function(){",
+                    "",
+                    "",
+                    "",
+                    "        //Ext.Viewport.setActiveItem({xtype:'SideMenuView'});",
+                    "",
+                    "",
+                    "        var theMenu = me.createMenu();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "       Ext.Viewport.setMenu(theMenu,{",
+                    "           side: 'left',",
+                    "          reveal: true",
+                    "       });",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    "});",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "7e63eba3-4a11-42ac-b230-48e893b41436"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createMenu",
+                "implHandler": [
+                    "var menu = Ext.create('Ext.Menu', {",
+                    "            width: 250,",
+                    "            scrollable: 'vertical',",
+                    "            items: [",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    text: 'Option 1',",
+                    "                },",
+                    "                {",
+                    "                    xtype: 'button',",
+                    "                    text: 'Option 2',",
+                    "                }",
+                    "            ]",
+                    "        });",
+                    "        return menu;",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "createMenu",
+            "designerId": "7b1c6200-c02c-49c0-ac3b-6c05265ff1cd"
         }
     ]
 }
