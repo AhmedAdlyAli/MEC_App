@@ -8,9 +8,9 @@
         },
         "canvasControls": {
             "viewportSize": {
-                "name": "iPhone",
+                "name": "iPhone 5",
                 "builtIn": true,
-                "height": 480,
+                "height": 568,
                 "width": 320
             },
             "viewportOrientation": "portrait"
@@ -72,7 +72,9 @@
             "1db16ba7-efb9-47a0-bd15-cad260d1620f"
         ],
         "store": [],
-        "controller": [],
+        "controller": [
+            "3dfa35d8-8ed3-47d7-87c2-c54669d036a1"
+        ],
         "model": [],
         "resource": [
             "7b6cd445-29cd-4010-b2e7-179f79b8b25b",

@@ -55,6 +55,9 @@ Ext.application({
         'MonthlyFruitView',
         'TrademarkReportView'
     ],
+    controllers: [
+        'HomeController'
+    ],
     name: 'MEC_App',
 
     launch: function() {

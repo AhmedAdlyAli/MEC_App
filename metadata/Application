@@ -6,6 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
+        "controllers": [
+            "HomeController"
+        ],
         "name": "MEC_App",
         "views": [
             "HomeView",

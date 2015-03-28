@@ -11,5 +11,37 @@
         "designer|userClassName": "HomeView"
     },
     "name": "MyPanel",
-    "designerId": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+    "designerId": "3adeb383-e444-404a-9382-121eaaf2cdf9",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "TopPanel",
+                "designer|displayName": "TopPanel"
+            },
+            "name": "MyPanel",
+            "designerId": "4144bdc7-4898-4576-a6db-37d41c92e414",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 30,
+                        "width": 30
+                    },
+                    "name": "MyImg",
+                    "designerId": "78641cac-2c50-4413-8375-926e0f074bf9"
+                }
+            ]
+        }
+    ]
 }
