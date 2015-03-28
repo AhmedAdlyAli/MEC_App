@@ -43,7 +43,8 @@
             "PricingView",
             "WhereToShopView",
             "MonthlyFruitView",
-            "TrademarkReportView"
+            "TrademarkReportView",
+            "MainNavView"
         ]
     },
     "name": "Application",

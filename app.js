@@ -53,7 +53,8 @@ Ext.application({
         'PricingView',
         'WhereToShopView',
         'MonthlyFruitView',
-        'TrademarkReportView'
+        'TrademarkReportView',
+        'MainNavView'
     ],
     controllers: [
         'HomeController'
@@ -62,7 +63,7 @@ Ext.application({
 
     launch: function() {
 
-        Ext.create('MEC_App.view.HomeView', {fullscreen: true});
+        Ext.create('MEC_App.view.MainNavView', {fullscreen: true});
     }
 
 });

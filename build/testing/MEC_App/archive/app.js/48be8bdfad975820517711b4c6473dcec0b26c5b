@@ -1,4 +1,4 @@
-function _db890518c4e34c82c3c58fe53d42aa88af300ac5(){};//@tag foundation,core
+function _48be8bdfad975820517711b4c6473dcec0b26c5b(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -55881,7 +55881,7 @@ Ext.define('MEC_App.view.HomeView', {
             },
             {
                 xtype: 'button',
-                text: 'GO TO Contact'
+                text: 'MyButton'
             }
         ]
     }

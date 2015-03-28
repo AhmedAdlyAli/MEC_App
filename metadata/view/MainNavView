@@ -1,0 +1,27 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MainNavView"
+    },
+    "name": "MyNavigationView",
+    "designerId": "a987dc04-f69b-4794-9834-ad522768096a",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "homeview",
+            "designerId": "ea89143e-7b25-4192-9e4f-fb5d0d083f1c",
+            "masterInstanceId": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+        }
+    ]
+}

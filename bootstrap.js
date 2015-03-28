@@ -680,6 +680,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.InquiriesView": [],
   "MEC_App.view.InvestorEducationView": [],
   "MEC_App.view.LogivFormView": [],
+  "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [],
   "MEC_App.view.MicroEconomicReport": [],
   "MEC_App.view.MinistryBranchesView": [],
@@ -1467,6 +1468,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.LogivFormView": [
     "widget.LogivFormView"
   ],
+  "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [
     "widget.MediaCenterView"
   ],

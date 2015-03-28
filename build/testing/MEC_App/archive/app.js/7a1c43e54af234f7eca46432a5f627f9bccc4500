@@ -1,4 +1,4 @@
-function _db890518c4e34c82c3c58fe53d42aa88af300ac5(){};//@tag foundation,core
+function _7a1c43e54af234f7eca46432a5f627f9bccc4500(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -31833,27 +31833,6 @@ Ext.define('Ext.Decorator', {
 });
 
 /**
- * A simple label component which allows you to insert content using {@link #html} configuration.
- *
- *     @example miniphone
- *     Ext.Viewport.add({
- *         xtype: 'label',
- *         html: 'My label!'
- *     });
- */
-Ext.define('Ext.Label', {
-    extend: Ext.Component,
-    xtype: 'label',
-    config: {
-        baseCls: Ext.baseCSSPrefix + 'label'
-    }
-});
-/**
-         * @cfg {String} html
-         * The label of this component.
-         */
-
-/**
  * A simple class used to mask any {@link Ext.Container}.
  *
  * This should rarely be used directly, instead look at the {@link Ext.Container#masked} configuration.
@@ -55873,18 +55852,7 @@ Ext.define('Ext.viewport.Viewport', {
 Ext.define('MEC_App.view.HomeView', {
     extend: Ext.Panel,
     alias: 'widget.HomeView',
-    config: {
-        items: [
-            {
-                xtype: 'label',
-                html: 'label1'
-            },
-            {
-                xtype: 'button',
-                text: 'GO TO Contact'
-            }
-        ]
-    }
+    config: {}
 });
 
 /*
