@@ -1,0 +1,48 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "name": "MEC_App",
+        "views": [
+            "HomeView",
+            "PublicServiceView",
+            "MediaCenterView",
+            "InquiriesView",
+            "ContactUsView",
+            "ProjectsView",
+            "ReportsView",
+            "SettingsView",
+            "LogivFormView",
+            "MyBusinessView",
+            "PrintOffsView",
+            "MyRequestsView",
+            "ComplaintsView",
+            "SupplyServiceView",
+            "MinistryPublicationView",
+            "MinistryInThePressView",
+            "EconomyNewsView",
+            "TradeNameAvailabilityView",
+            "RecallsView",
+            "ConsumerEducationView",
+            "InvestorEducationView",
+            "ViolationsView",
+            "AboutMinistryView",
+            "MinistryBranchesView",
+            "FeedbackFormView",
+            "MinistryEmployeesView",
+            "MicroEconomicReport",
+            "BusinessIndicatorsReport",
+            "ConsumerIndicatorsView",
+            "PricingView",
+            "WhereToShopView",
+            "MonthlyFruitView",
+            "TrademarkReportView"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}
