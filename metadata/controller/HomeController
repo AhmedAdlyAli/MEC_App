@@ -9,5 +9,73 @@
         "designer|userClassName": "HomeController"
     },
     "name": "MyController",
-    "designerId": "3dfa35d8-8ed3-47d7-87c2-c54669d036a1"
+    "designerId": "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mybutton",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMybuttonTap",
+                "implHandler": [
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'widget.ContactUsView',",
+                    "    title: 'Step 3'",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onMybuttonTap",
+            "designerId": "5d23cef0-9529-478e-bd8f-8ee6830fa3d5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mybutton1",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMybutton1Tap",
+                "implHandler": [
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'ContactUsView1',",
+                    "    title: 'Step 2'",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onMybutton1Tap",
+            "designerId": "15ddf291-ee0b-411f-af06-a38e800830fe"
+        }
+    ]
 }

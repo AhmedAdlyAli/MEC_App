@@ -1,4 +1,4 @@
-function _c7cd562fff0efc5fa39260cb6ef9c649e7757624(){};//@tag foundation,core
+function _fa220e4fec4038f3e14a7032bcd7b2ea24b0e78f(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -55872,18 +55872,12 @@ Ext.define('Ext.viewport.Viewport', {
  */
 Ext.define('MEC_App.view.MainNavView', {
     extend: Ext.navigation.View,
-    alias: 'widget.MainNavView',
     config: {
         items: [
             {
-                xtype: 'panel',
-                items: [
-                    {
-                        xtype: 'button',
-                        itemId: 'mybutton1',
-                        text: 'MyButton1'
-                    }
-                ]
+                xtype: 'button',
+                itemId: 'mybutton1',
+                text: 'MyButton1'
             }
         ]
     }
@@ -55923,8 +55917,8 @@ Ext.define('MEC_App.controller.HomeController', {
     },
     onMybutton1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-            xtype: 'ContactUsView1',
-            title: 'Step 2'
+            xtype: 'ContactUsView',
+            title: 'Step 3'
         });
     }
 });
@@ -56037,7 +56031,7 @@ Ext.define('MEC_App.view.InquiriesView', {
  */
 Ext.define('MEC_App.view.ContactUsView', {
     extend: Ext.Panel,
-    alias: 'widget.ContactUsView1',
+    alias: 'widget.ContactUsView',
     config: {}
 });
 

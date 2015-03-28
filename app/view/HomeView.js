@@ -30,6 +30,7 @@ Ext.define('MEC_App.view.HomeView', {
             },
             {
                 xtype: 'button',
+                itemId: 'mybutton',
                 text: 'GO TO Contact'
             }
         ]

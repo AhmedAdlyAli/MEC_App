@@ -15,7 +15,7 @@
 
 Ext.define('MEC_App.view.ContactUsView', {
     extend: 'Ext.Panel',
-    alias: 'widget.ContactUsView',
+    alias: 'widget.ContactUsView1',
 
     config: {
     }

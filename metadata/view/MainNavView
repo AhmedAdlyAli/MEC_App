@@ -7,21 +7,37 @@
     "codeClass": null,
     "userConfig": {
         "designer|initialView": true,
+        "designer|userAlias": "MainNavView",
         "designer|userClassName": "MainNavView"
     },
     "name": "MyNavigationView",
     "designerId": "a987dc04-f69b-4794-9834-ad522768096a",
     "cn": [
         {
-            "type": "linkedinstance",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "name": "homeview",
-            "designerId": "ea89143e-7b25-4192-9e4f-fb5d0d083f1c",
-            "masterInstanceId": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+            "name": "MyPanel",
+            "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "mybutton1",
+                        "text": "MyButton1"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "fa42bbb4-6bb5-4e26-8dd9-18c08ff65c7f"
+                }
+            ]
         }
     ]
 }

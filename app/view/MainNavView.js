@@ -15,16 +15,24 @@
 
 Ext.define('MEC_App.view.MainNavView', {
     extend: 'Ext.navigation.View',
+    alias: 'widget.MainNavView',
 
     requires: [
-        'MEC_App.view.HomeView',
-        'Ext.Panel'
+        'Ext.Panel',
+        'Ext.Button'
     ],
 
     config: {
         items: [
             {
-                xtype: 'HomeView'
+                xtype: 'panel',
+                items: [
+                    {
+                        xtype: 'button',
+                        itemId: 'mybutton1',
+                        text: 'MyButton1'
+                    }
+                ]
             }
         ]
     }

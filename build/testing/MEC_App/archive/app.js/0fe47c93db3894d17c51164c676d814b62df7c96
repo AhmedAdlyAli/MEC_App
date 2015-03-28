@@ -1,4 +1,4 @@
-function _c7cd562fff0efc5fa39260cb6ef9c649e7757624(){};//@tag foundation,core
+function _0fe47c93db3894d17c51164c676d814b62df7c96(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -55872,7 +55872,6 @@ Ext.define('Ext.viewport.Viewport', {
  */
 Ext.define('MEC_App.view.MainNavView', {
     extend: Ext.navigation.View,
-    alias: 'widget.MainNavView',
     config: {
         items: [
             {
@@ -55922,9 +55921,14 @@ Ext.define('MEC_App.controller.HomeController', {
         });
     },
     onMybutton1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ContactUsView1',
-            title: 'Step 2'
+        var loginForm = Ext.create('widget.ContactUsView1'),
+            // Login form
+            mainView = this.getMainView();
+        // Main view
+        // Navigate to login
+        mainView.push({
+            xtype: "loginform",
+            title: "Login"
         });
     }
 });

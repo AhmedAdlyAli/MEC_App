@@ -17,5 +17,40 @@ Ext.define('MEC_App.controller.HomeController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        control: {
+            "button#mybutton": {
+                tap: 'onMybuttonTap'
+            },
+            "button#mybutton1": {
+                tap: 'onMybutton1Tap'
+            }
+        }
+    },
+
+    onMybuttonTap: function(button, e, eOpts) {
+
+        button.up('MainNavView').push({
+            xtype: 'widget.ContactUsView',
+            title: 'Step 3'
+        });
+
+
+
+
+
+
+    },
+
+    onMybutton1Tap: function(button, e, eOpts) {
+
+        button.up('MainNavView').push({
+            xtype: 'ContactUsView1',
+            title: 'Step 2'
+        });
+
+
+
+
     }
+
 });

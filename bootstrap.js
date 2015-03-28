@@ -1448,7 +1448,7 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.ConsumerIndicatorsView"
   ],
   "MEC_App.view.ContactUsView": [
-    "widget.ContactUsView"
+    "widget.ContactUsView1"
   ],
   "MEC_App.view.EconomyNewsView": [
     "widget.EconomyNewsView"
@@ -1468,7 +1468,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.LogivFormView": [
     "widget.LogivFormView"
   ],
-  "MEC_App.view.MainNavView": [],
+  "MEC_App.view.MainNavView": [
+    "widget.MainNavView"
+  ],
   "MEC_App.view.MediaCenterView": [
     "widget.MediaCenterView"
   ],

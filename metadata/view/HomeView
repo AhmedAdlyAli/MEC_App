@@ -33,6 +33,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "itemId": "mybutton",
                 "text": "GO TO Contact"
             },
             "name": "MyButton",
