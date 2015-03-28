@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "MinistryBranchesView",
+        "designer|userClassName": "MinistryBranchesView"
+    },
+    "name": "MyPanel",
+    "designerId": "1cb6e1c6-d95c-472a-bf0c-a6eb6e1cdc33"
+}

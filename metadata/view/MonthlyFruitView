@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "MonthlyFruitView",
+        "designer|userClassName": "MonthlyFruitView"
+    },
+    "name": "MyPanel1",
+    "designerId": "6a491236-bca2-403b-859f-1664fe1f997d"
+}

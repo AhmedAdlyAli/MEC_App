@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ConsumerIndicatorsView",
+        "designer|userClassName": "ConsumerIndicatorsView"
+    },
+    "name": "MyPanel1",
+    "designerId": "34d13000-a03b-4f53-96ca-fc04ecea82f7"
+}

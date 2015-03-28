@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "SupplyServiceView",
+        "designer|userClassName": "SupplyServiceView"
+    },
+    "name": "MyPanel",
+    "designerId": "dd62271c-f582-41a0-9ce8-6403668a7ee2"
+}

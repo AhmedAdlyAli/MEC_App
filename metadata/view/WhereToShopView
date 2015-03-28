@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "WhereToShopView",
+        "designer|userClassName": "WhereToShopView"
+    },
+    "name": "MyPanel1",
+    "designerId": "91e4ac1b-7f20-4822-b9d2-6f9dc3053071"
+}

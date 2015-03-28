@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ViolationsView",
+        "designer|userClassName": "ViolationsView"
+    },
+    "name": "MyPanel",
+    "designerId": "4d5d49a7-4702-4301-babf-817f28a34bbc"
+}

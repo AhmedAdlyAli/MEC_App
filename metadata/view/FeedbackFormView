@@ -1,0 +1,14 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "FeedbackFormView",
+        "designer|userClassName": "FeedbackFormView"
+    },
+    "name": "MyFormPanel",
+    "designerId": "805d1b6c-754a-4996-8bdf-b5a12cd0ef72"
+}

@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "MediaCenterView",
+        "designer|userClassName": "MediaCenterView"
+    },
+    "name": "MyPanel",
+    "designerId": "414fada4-8958-4adc-befa-ddc2e264e1d7"
+}

@@ -667,8 +667,39 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.BusinessIndicatorsReport": [],
+  "MEC_App.view.ComplaintsView": [],
+  "MEC_App.view.ConsumerEducationView": [],
+  "MEC_App.view.ConsumerIndicatorsView": [],
+  "MEC_App.view.ContactUsView": [],
+  "MEC_App.view.EconomyNewsView": [],
+  "MEC_App.view.FeedbackFormView": [],
   "MEC_App.view.HomeView": [],
-  "MEC_App.view.MyPanel": []
+  "MEC_App.view.InquiriesView": [],
+  "MEC_App.view.InvestorEducationView": [],
+  "MEC_App.view.LogivFormView": [],
+  "MEC_App.view.MediaCenterView": [],
+  "MEC_App.view.MicroEconomicReport": [],
+  "MEC_App.view.MinistryBranchesView": [],
+  "MEC_App.view.MinistryEmployeesView": [],
+  "MEC_App.view.MinistryInThePressView": [],
+  "MEC_App.view.MinistryPublicationView": [],
+  "MEC_App.view.MonthlyFruitView": [],
+  "MEC_App.view.MyBusinessView": [],
+  "MEC_App.view.MyRequestsView": [],
+  "MEC_App.view.PricingView": [],
+  "MEC_App.view.PrintOffsView": [],
+  "MEC_App.view.ProjectsView": [],
+  "MEC_App.view.PublicServiceView": [],
+  "MEC_App.view.RecallsView": [],
+  "MEC_App.view.ReportsView": [],
+  "MEC_App.view.SettingsView": [],
+  "MEC_App.view.SupplyServiceView": [],
+  "MEC_App.view.TradeNameAvailabilityView": [],
+  "MEC_App.view.TrademarkReportView": [],
+  "MEC_App.view.ViolationsView": [],
+  "MEC_App.view.WhereToShopView": []
 });
 
 Ext.ClassManager.addNameAliasMappings({
@@ -1400,10 +1431,103 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.BusinessIndicatorsReport": [
+    "widget.BusinessIndicatorsReport"
+  ],
+  "MEC_App.view.ComplaintsView": [
+    "widget.ComplaintsView"
+  ],
+  "MEC_App.view.ConsumerEducationView": [
+    "widget.ConsumerEducationView"
+  ],
+  "MEC_App.view.ConsumerIndicatorsView": [
+    "widget.ConsumerIndicatorsView"
+  ],
+  "MEC_App.view.ContactUsView": [
+    "widget.ContactUsView"
+  ],
+  "MEC_App.view.EconomyNewsView": [
+    "widget.EconomyNewsView"
+  ],
+  "MEC_App.view.FeedbackFormView": [
+    "widget.FeedbackFormView"
+  ],
   "MEC_App.view.HomeView": [
     "widget.HomeView"
   ],
-  "MEC_App.view.MyPanel": []
+  "MEC_App.view.InquiriesView": [
+    "widget.InquiriesView"
+  ],
+  "MEC_App.view.InvestorEducationView": [
+    "widget.InvestorEducationView"
+  ],
+  "MEC_App.view.LogivFormView": [
+    "widget.LogivFormView"
+  ],
+  "MEC_App.view.MediaCenterView": [
+    "widget.MediaCenterView"
+  ],
+  "MEC_App.view.MicroEconomicReport": [
+    "widget.MicroEconomicReport"
+  ],
+  "MEC_App.view.MinistryBranchesView": [
+    "widget.MinistryBranchesView"
+  ],
+  "MEC_App.view.MinistryEmployeesView": [
+    "widget.MinistryEmployeesView"
+  ],
+  "MEC_App.view.MinistryInThePressView": [
+    "widget.MinistryInThePressView"
+  ],
+  "MEC_App.view.MinistryPublicationView": [
+    "widget.MinistryPublicationView"
+  ],
+  "MEC_App.view.MonthlyFruitView": [
+    "widget.MonthlyFruitView"
+  ],
+  "MEC_App.view.MyBusinessView": [
+    "widget.MyBusinessView"
+  ],
+  "MEC_App.view.MyRequestsView": [
+    "widget.MYRequestsView"
+  ],
+  "MEC_App.view.PricingView": [
+    "widget.PricingView"
+  ],
+  "MEC_App.view.PrintOffsView": [
+    "widget.PrintOffsView"
+  ],
+  "MEC_App.view.ProjectsView": [
+    "widget.ProjectsView"
+  ],
+  "MEC_App.view.PublicServiceView": [
+    "widget.PublicServiceView"
+  ],
+  "MEC_App.view.RecallsView": [
+    "widget.RecallsView"
+  ],
+  "MEC_App.view.ReportsView": [
+    "widget.ReportsView"
+  ],
+  "MEC_App.view.SettingsView": [
+    "widget.SettingsView"
+  ],
+  "MEC_App.view.SupplyServiceView": [
+    "widget.SupplyServiceView"
+  ],
+  "MEC_App.view.TradeNameAvailabilityView": [
+    "widget.TradeNameAvailabilityView"
+  ],
+  "MEC_App.view.TrademarkReportView": [
+    "widget.TrademarkReportView"
+  ],
+  "MEC_App.view.ViolationsView": [
+    "widget.ViolationsView"
+  ],
+  "MEC_App.view.WhereToShopView": [
+    "widget.WhereToShopView"
+  ]
 });
 
 

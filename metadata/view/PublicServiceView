@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "PublicServiceView",
+        "designer|userClassName": "PublicServiceView"
+    },
+    "name": "MyPanel",
+    "designerId": "7b23aef6-db2d-4685-9251-d9486597a989"
+}

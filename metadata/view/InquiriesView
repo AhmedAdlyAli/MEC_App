@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "InquiriesView",
+        "designer|userClassName": "InquiriesView"
+    },
+    "name": "MyPanel",
+    "designerId": "e1055513-c351-46d0-99d5-bb52247c8496"
+}

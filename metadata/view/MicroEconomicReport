@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "MicroEconomicReport",
+        "designer|userClassName": "MicroEconomicReport"
+    },
+    "name": "MyPanel1",
+    "designerId": "acebd8ff-4a40-460a-b25f-c73cbdf5e5da"
+}

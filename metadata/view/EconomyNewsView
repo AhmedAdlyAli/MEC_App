@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "EconomyNewsView",
+        "designer|userClassName": "EconomyNewsView"
+    },
+    "name": "MyPanel",
+    "designerId": "7bb9b1f3-41c9-4d55-993b-b3343ace8ef2"
+}

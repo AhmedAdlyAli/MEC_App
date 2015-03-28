@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "TradeNameAvailabilityView",
+        "designer|userClassName": "TradeNameAvailabilityView"
+    },
+    "name": "MyPanel",
+    "designerId": "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4"
+}

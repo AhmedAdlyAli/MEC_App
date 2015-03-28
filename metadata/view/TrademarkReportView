@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "TrademarkReportView",
+        "designer|userClassName": "TrademarkReportView"
+    },
+    "name": "MyPanel1",
+    "designerId": "1db16ba7-efb9-47a0-bd15-cad260d1620f"
+}

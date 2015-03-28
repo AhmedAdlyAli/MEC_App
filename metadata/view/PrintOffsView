@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "PrintOffsView",
+        "designer|userClassName": "PrintOffsView"
+    },
+    "name": "MyPanel",
+    "designerId": "733d4c5e-b3ac-4a12-8b7d-0d431204c1a2"
+}

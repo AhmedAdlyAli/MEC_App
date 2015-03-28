@@ -6,8 +6,9 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "MyPanel"
+        "designer|userAlias": "ReportsView",
+        "designer|userClassName": "ReportsView"
     },
     "name": "MyPanel",
-    "designerId": "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
+    "designerId": "5d31fee4-216c-43d3-8a20-0d5df2c1ebfb"
 }
