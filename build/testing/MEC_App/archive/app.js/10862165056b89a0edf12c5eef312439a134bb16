@@ -1,4 +1,4 @@
-function _1bf3997f997c8aa97c9a689a775acf5c1a264451(){};//@tag foundation,core
+function _10862165056b89a0edf12c5eef312439a134bb16(){};//@tag foundation,core
 //@define Ext
 /**
  * @class Ext
@@ -53462,7 +53462,13 @@ Ext.define('Ext.viewport.Viewport', {
 Ext.define('MEC_App.view.HomeView', {
     extend: Ext.Panel,
     alias: 'widget.HomeView',
-    config: {}
+    config: {
+        items: [
+            {
+                xtype: 'TopPanel'
+            }
+        ]
+    }
 });
 
 /*

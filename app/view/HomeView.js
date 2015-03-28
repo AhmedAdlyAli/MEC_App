@@ -17,24 +17,7 @@ Ext.define('MEC_App.view.HomeView', {
     extend: 'Ext.Panel',
     alias: 'widget.HomeView',
 
-    requires: [
-        'Ext.Panel',
-        'Ext.Img'
-    ],
-
     config: {
-        items: [
-            {
-                xtype: 'TopPanel',
-                items: [
-                    {
-                        xtype: 'image',
-                        height: 30,
-                        width: 30
-                    }
-                ]
-            }
-        ]
     }
 
 });

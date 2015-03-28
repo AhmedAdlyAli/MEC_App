@@ -2,17 +2,7 @@
     "expandedState": {
         "view": true,
         "3adeb383-e444-404a-9382-121eaaf2cdf9": {
-            "id": "3adeb383-e444-404a-9382-121eaaf2cdf9",
-            "cn": [
-                {
-                    "id": "4144bdc7-4898-4576-a6db-37d41c92e414",
-                    "cn": [
-                        {
-                            "id": "78641cac-2c50-4413-8375-926e0f074bf9"
-                        }
-                    ]
-                }
-            ]
+            "id": "3adeb383-e444-404a-9382-121eaaf2cdf9"
         },
         "e1055513-c351-46d0-99d5-bb52247c8496": {
             "id": "e1055513-c351-46d0-99d5-bb52247c8496"
@@ -54,7 +44,7 @@
     },
     "inspectorState": {
         "topInstance": "3adeb383-e444-404a-9382-121eaaf2cdf9",
-        "selectedInstance": "78641cac-2c50-4413-8375-926e0f074bf9"
+        "selectedInstance": "3adeb383-e444-404a-9382-121eaaf2cdf9"
     },
     "editMode": "design",
     "userSettings": {
