@@ -1,0 +1,15 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "HomeView",
+        "designer|userClassName": "HomeView"
+    },
+    "name": "MyPanel",
+    "designerId": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+}

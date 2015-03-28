@@ -1,0 +1,53 @@
+{
+    "name": "MEC_App",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "5.1.2.52",
+            "frameworkVersion": "2.4.0.482"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone",
+                "builtIn": true,
+                "height": 480,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "http://localhost:1843",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
+    },
+    "xdsVersion": "3.2.0",
+    "xdsBuild": 75,
+    "schemaVersion": 1,
+    "upgradeVersion": 310000000001,
+    "framework": "touch24",
+    "viewOrderMap": {
+        "view": [
+            "3adeb383-e444-404a-9382-121eaaf2cdf9"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "7b6cd445-29cd-4010-b2e7-179f79b8b25b",
+            "b9250969-23f4-41e2-820c-07743278932c"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
