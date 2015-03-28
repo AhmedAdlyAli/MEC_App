@@ -37,7 +37,8 @@
     "framework": "touch24",
     "viewOrderMap": {
         "view": [
-            "3adeb383-e444-404a-9382-121eaaf2cdf9"
+            "3adeb383-e444-404a-9382-121eaaf2cdf9",
+            "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
         ],
         "store": [],
         "controller": [],

@@ -4,6 +4,9 @@
         "3adeb383-e444-404a-9382-121eaaf2cdf9": {
             "id": "3adeb383-e444-404a-9382-121eaaf2cdf9"
         },
+        "94a067c8-ec26-4d42-bb64-1dcbe18987c3": {
+            "id": "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
+        },
         "store": true,
         "model": true,
         "controller": true,
@@ -17,15 +20,16 @@
     },
     "tabState": {
         "openTabs": [
-            "3adeb383-e444-404a-9382-121eaaf2cdf9"
+            "3adeb383-e444-404a-9382-121eaaf2cdf9",
+            "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
         ]
     },
     "canvasState": {
-        "topInstance": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+        "topInstance": "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
     },
     "inspectorState": {
-        "topInstance": "3adeb383-e444-404a-9382-121eaaf2cdf9",
-        "selectedInstance": "3adeb383-e444-404a-9382-121eaaf2cdf9"
+        "topInstance": "94a067c8-ec26-4d42-bb64-1dcbe18987c3",
+        "selectedInstance": "94a067c8-ec26-4d42-bb64-1dcbe18987c3"
     },
     "editMode": "design",
     "userSettings": {

@@ -667,7 +667,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
-  "MEC_App.view.HomeView": []
+  "MEC_App.view.HomeView": [],
+  "MEC_App.view.MyPanel": []
 });
 
 Ext.ClassManager.addNameAliasMappings({
@@ -1401,7 +1402,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.view.HomeView": [
     "widget.HomeView"
-  ]
+  ],
+  "MEC_App.view.MyPanel": []
 });
 
 
