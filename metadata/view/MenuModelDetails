@@ -1,0 +1,40 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menumodeldetails",
+        "designer|userClassName": "MenuModelDetails",
+        "itemId": "details",
+        "padding": 10
+    },
+    "configAlternates": {
+        "tpl": "array"
+    },
+    "designerId": "dd8ef1c4-1e0a-414a-856e-6a08e0bcfc42",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<div>\r",
+                    "<div><label>Item Name: </label><span>{ItemName}</span></div>\r",
+                    "<div><label>Item Icon Url: </label><span>{ItemIconURL}</span></div>\r",
+                    "<div><label>Item View: </label><span>{ItemView}</span></div>\r",
+                    "</div>"
+                ]
+            },
+            "name": "tpl",
+            "designerId": "388ffce1-f215-46c1-8cdb-887d378186c8"
+        }
+    ]
+}

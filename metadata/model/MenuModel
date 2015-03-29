@@ -1,0 +1,58 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "menumodel",
+        "designer|userClassName": "MenuModel"
+    },
+    "name": "MyModel",
+    "designerId": "852950f9-d75d-4a1f-b9c3-4aff04abef43",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemName",
+                "type": "string"
+            },
+            "name": "field2",
+            "designerId": "ca90e5fb-1cd9-4b44-aeb8-4fe3debb4638"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemView",
+                "type": "string"
+            },
+            "name": "field3",
+            "designerId": "00b92e09-18f0-4d9b-bdc8-6760e013712c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemIconURL",
+                "type": "string"
+            },
+            "name": "field4",
+            "designerId": "8e136d9d-0489-4079-a64e-2b55c793dc34"
+        }
+    ]
+}

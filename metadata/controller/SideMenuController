@@ -1,0 +1,53 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SideMenuController"
+    },
+    "name": "MyController",
+    "designerId": "838df556-7114-4a45-9136-513f8dc61168",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnServices",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnServicesTap",
+                "implHandler": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "Ext.Viewport.toggleMenu('right');",
+                    "//Ext.Viewport.setActiveItem({xtype:'PublicServiceView'});",
+                    "",
+                    "",
+                    "",
+                    "//button.up('MainNavView').push({",
+                    "//                    xtype: 'PublicServiceView',",
+                    "//                    title: 'الخدمات العامة'",
+                    " //               });"
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnServicesTap",
+            "designerId": "405fc7f7-45e1-4da9-a1a3-45882a62b76e"
+        }
+    ]
+}

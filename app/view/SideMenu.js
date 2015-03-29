@@ -18,14 +18,112 @@ Ext.define('MEC_App.view.SideMenu', {
     alias: 'widget.SideMenu',
 
     requires: [
+        'Ext.Panel',
+        'Ext.Img',
         'Ext.Button'
     ],
 
     config: {
+        height: '100%',
+        width: '85%',
         items: [
             {
-                xtype: 'button',
-                text: 'MyButton11'
+                xtype: 'panel',
+                height: '100%',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'MenuTop',
+                        items: [
+                            {
+                                xtype: 'image',
+                                height: 150,
+                                src: 'resources/images/logo.png'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 3,
+                        cls: 'MenuBtnList',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                iconAlign: 'right',
+                                iconCls: 'm-icon1',
+                                text: 'الرئيسية'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                itemId: 'btnServices',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon2',
+                                text: 'الخدمات العامة'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon3',
+                                text: 'المركز الاعلامي'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon4',
+                                text: 'الاستعلامات والاصدارات '
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon5',
+                                text: 'التواصل'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon6',
+                                text: 'المبادرات والمشاريع'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon7',
+                                text: 'المؤشرات والتقارير'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon8',
+                                text: 'الاعدادات'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon9',
+                                text: 'تسجيل الدخول'
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

@@ -1,0 +1,115 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "designer|userAlias": "menumodels",
+        "designer|userClassName": "MenuModels"
+    },
+    "designerId": "174da090-54c7-47b3-acc6-32e27174d2c5",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "list",
+                "store": null,
+                "title": "MenuModels"
+            },
+            "name": "MyList1",
+            "configAlternates": {
+                "itemTpl": "array"
+            },
+            "designerId": "08bc90ef-0b41-4968-abfc-02f606c3ca07",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>",
+                            "<div><label>Item Name: </label><span>{ItemName}</span></div>",
+                            "<div><label>Item Icon Url: </label><span>{ItemIconURL}</span></div>",
+                            "<div><label>Item View: </label><span>{ItemView}</span></div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "234650d3-cde8-47bc-9e67-b392c20f77f9"
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyNavigationBar",
+            "designerId": "ee63381a-8638-41f2-8dda-5f7d6b0b561b",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "add",
+                        "itemId": "addButton"
+                    },
+                    "name": "MyButton",
+                    "designerId": "6bcbec34-8173-4df7-8ad2-f8b22f361862"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "compose",
+                        "itemId": "editButton"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "67e86886-6259-46f3-aba0-f3b342034497"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "delete",
+                        "itemId": "removeButton"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "8675c3ca-0e66-48f5-8163-33f8be1b5b2a"
+                }
+            ]
+        }
+    ]
+}

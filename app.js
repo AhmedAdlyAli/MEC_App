@@ -21,10 +21,11 @@ Ext.Loader.setConfig({
 
 Ext.application({
     models: [
-        'PrintOffice'
+        'PrintOffice',
+        'MenuModel'
     ],
     stores: [
-        null,
+        'MenuArrayStore',
         'PrintOffices'
     ],
     views: [
@@ -66,13 +67,17 @@ Ext.application({
         'SideMenu',
         'PrintOffices',
         'PrintOfficeDetails',
-        'PrintOfficeForm'
+        'PrintOfficeForm',
+        'MenuModels',
+        'MenuModelDetails',
+        'MenuModelForm'
     ],
     controllers: [
         'HomeController',
         'PublicServicesController',
         'PrintOffices',
-        'PrintOffsController'
+        'PrintOffsController',
+        'SideMenuController'
     ],
     name: 'MEC_App',
 

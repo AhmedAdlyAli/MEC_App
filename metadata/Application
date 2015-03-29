@@ -10,14 +10,16 @@
             "HomeController",
             "PublicServicesController",
             "PrintOffices",
-            "PrintOffsController"
+            "PrintOffsController",
+            "SideMenuController"
         ],
         "models": [
-            "PrintOffice"
+            "PrintOffice",
+            "MenuModel"
         ],
         "name": "MEC_App",
         "stores": [
-            "MyArrayStore",
+            "MenuArrayStore",
             "PrintOffices"
         ],
         "views": [
@@ -59,7 +61,10 @@
             "SideMenu",
             "PrintOffices",
             "PrintOfficeDetails",
-            "PrintOfficeForm"
+            "PrintOfficeForm",
+            "MenuModels",
+            "MenuModelDetails",
+            "MenuModelForm"
         ]
     },
     "name": "Application",

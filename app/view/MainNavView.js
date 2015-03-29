@@ -135,8 +135,8 @@ Ext.define('MEC_App.view.MainNavView', {
         var theMenu = Ext.create('MEC_App.view.SideMenu');
 
 
-               Ext.Viewport.setMenu(theMenu,{
-                   side: 'right',
+              Ext.Viewport.setMenu(theMenu,{
+                  side: 'right',
                   reveal: true
                });
 

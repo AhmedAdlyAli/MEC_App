@@ -6,7 +6,7 @@ $base-gradient: flat;
 @import 'sencha-touch/default/all';
 
 
-html,body{direction:rtl}
+/*html,body{direction:rtl}*/
 
 .x-toolbar-dark {
     background-color: #fff;
@@ -208,7 +208,7 @@ html,body{direction:rtl}
     .x-innerhtml {
         background: #fff;
     }
-    
+
     .HListItem {
         background: url(../images/HListIcon.png) no-repeat right;
         padding: 0 30px 0 0;
@@ -216,4 +216,107 @@ html,body{direction:rtl}
     }
 
 }
+
+.MenuTop {
+
+    background-color: #671f48;
+
+}
+
+.Menu {
+
+    .x-innerhtml {
+        background: #191919;
+    }
+
+        .MenuItem {
+
+            background-position:right;
+            padding: 0 40px 0 0;
+        }
+
+    }
+
+
+.x-menu {
+    padding: 0;
+    
+    .x-img {
+        margin: 5% 0 0;
+    }
+}
+
+#appLoadingIndicator {
+    display: none;
+}
+
+.MenuBtnList {
+
+    .x-button {
+        background: #191919;
+        color: #fff;
+        text-align: right;
+        @include border-radius(0);
+        margin: 0;
+        padding:0 10px;
+        border:none;
+        border-bottom: solid 1px #242424;
+
+        &:last-child {
+            border:none;
+        }
+
+        .x-button-label {
+            text-align: right;
+        }
+
+        .x-button-icon {
+            width: 32px;
+            height: 32px;
+            background-size: contain;
+        }
+
+        .m-icon1 {
+            background: url(../images/m-home.png) no-repeat;
+        }
+
+        .m-icon2 {
+            background: url(../images/m-services.png) no-repeat;
+        }
+
+        .m-icon3 {
+            background: url(../images/m-media.png) no-repeat;
+        }
+
+        .m-icon4 {
+            background: url(../images/m-inq.png) no-repeat;
+        }
+
+        .m-icon5 {
+            background: url(../images/m-contact.png) no-repeat;
+        }
+
+        .m-icon6 {
+            background: url(../images/m-projects.png) no-repeat;
+        }
+
+        .m-icon7 {
+            background: url(../images/m-reports.png) no-repeat;
+        }
+
+        .m-icon8 {
+            background: url(../images/m-settings.png) no-repeat;
+        }
+
+        .m-icon9 {
+            background: url(../images/m-login.png) no-repeat;
+        }
+    }
+}
+
+
+
+
+
+
 

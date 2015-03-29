@@ -671,8 +671,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.SideMenuController": [],
+  "MEC_App.model.MenuModel": [],
   "MEC_App.model.PrintOffice": [],
+  "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.PrintOffices": [],
+  "MEC_App.store.override.MenuArrayStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [],
@@ -688,6 +692,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.LogivFormView": [],
   "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [],
+  "MEC_App.view.MenuModelDetails": [],
+  "MEC_App.view.MenuModelForm": [],
+  "MEC_App.view.MenuModels": [],
   "MEC_App.view.MicroEconomicReport": [],
   "MEC_App.view.MinistryBranchesView": [],
   "MEC_App.view.MinistryEmployeesView": [],
@@ -1450,12 +1457,18 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.SideMenuController": [],
+  "MEC_App.model.MenuModel": [
+    "model.menumodel"
+  ],
   "MEC_App.model.PrintOffice": [
     "model.printoffice"
   ],
+  "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.PrintOffices": [
     "store.printoffices"
   ],
+  "MEC_App.store.override.MenuArrayStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [
@@ -1496,6 +1509,15 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.MediaCenterView": [
     "widget.MediaCenterView"
+  ],
+  "MEC_App.view.MenuModelDetails": [
+    "widget.menumodeldetails"
+  ],
+  "MEC_App.view.MenuModelForm": [
+    "widget.menumodelform"
+  ],
+  "MEC_App.view.MenuModels": [
+    "widget.menumodels"
   ],
   "MEC_App.view.MicroEconomicReport": [
     "widget.MicroEconomicReport"

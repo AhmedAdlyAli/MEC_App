@@ -1,0 +1,88 @@
+{
+    "type": "arraystore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[",
+            "    {",
+            "        \"ItemName\": \"ut\",",
+            "        \"ItemView\": \"nihil\",",
+            "        \"ItemIconURL\": \"http//:delectus.ca/dolorem/quos/quo.asmx\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"non\",",
+            "        \"ItemView\": \"maiores\",",
+            "        \"ItemIconURL\": \"https//:nam.info/nemo/beatae/autem\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"nobis\",",
+            "        \"ItemView\": \"fuga\",",
+            "        \"ItemIconURL\": \"http//:dolores.net/facilis\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"qui\",",
+            "        \"ItemView\": \"sint\",",
+            "        \"ItemIconURL\": \"http//:ut.biz/ut/fugiat.html\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"dolorum\",",
+            "        \"ItemView\": \"vel\",",
+            "        \"ItemIconURL\": \"https//:velit.io/libero/corrupti/placeat\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"delectus\",",
+            "        \"ItemView\": \"sit\",",
+            "        \"ItemIconURL\": \"https//:explicabo.io/reiciendis/et/laborum.asmx\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"sed\",",
+            "        \"ItemView\": \"sapiente\",",
+            "        \"ItemIconURL\": \"https//:ut.me/dignissimos/esse/rerum\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"sint\",",
+            "        \"ItemView\": \"itaque\",",
+            "        \"ItemIconURL\": \"http//:asperiores.me\"",
+            "    },",
+            "    {",
+            "        \"ItemName\": \"ab\",",
+            "        \"ItemView\": \"quod\",",
+            "        \"ItemIconURL\": \"http//:dolor.io/deserunt/facilis\"",
+            "    }",
+            "]"
+        ],
+        "designer|userClassName": "MenuArrayStore",
+        "model": "MenuModel",
+        "storeId": "MenuArrayStore"
+    },
+    "name": "MyArrayStore",
+    "designerId": "ccc960be-070d-418b-ae65-bf898e8553e7",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "name": "MyAjaxProxy",
+            "designerId": "1a117c3a-87a9-44f5-925e-7030f3c44fbf",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Array",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyArrayReader",
+                    "designerId": "13628d54-0511-44ab-b19e-e04ece7f1eeb"
+                }
+            ]
+        }
+    ]
+}
