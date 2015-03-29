@@ -1,0 +1,251 @@
+{
+    "type": "Ext.Menu",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "SideMenu",
+        "designer|userClassName": "SideMenu",
+        "height": "100%",
+        "width": "85%"
+    },
+    "name": "MyMenu",
+    "designerId": "8c628192-46b8-471c-b6da-178990d679f1",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "layout": "vbox"
+            },
+            "name": "MyPanel15",
+            "designerId": "1bc80779-18d0-466d-be48-07624308447b",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "MenuTop"
+                        ],
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel",
+                    "designerId": "ec7f80f9-6612-46e5-8bf4-f8de8a1a6e2c",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 150,
+                                "src": "resources/images/logo.png"
+                            },
+                            "name": "MyImg",
+                            "designerId": "0162521c-8ed5-4658-8e25-b7afba7d2cc2"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "MenuBtnList"
+                        ],
+                        "layout": "vbox",
+                        "layout|flex": 3
+                    },
+                    "name": "MyPanel1",
+                    "designerId": "818de365-6472-44e6-bba7-e709bfcdef0c",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconAlign": "right",
+                                "iconCls": "m-icon1",
+                                "layout|flex": 1,
+                                "text": "الرئيسية"
+                            },
+                            "name": "MyButton11",
+                            "designerId": "1899c68f-1e70-464a-aafa-48b91a6fabdd"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "iconAlign": "right",
+                                "iconCls": "m-icon2",
+                                "itemId": "btnServices",
+                                "layout|flex": 1,
+                                "text": "الخدمات العامة"
+                            },
+                            "name": "MyButton17",
+                            "designerId": "831ec950-d2f1-4957-98ac-0ad8c9a12c1f"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon3",
+                                "layout|flex": 1,
+                                "text": "المركز الاعلامي"
+                            },
+                            "name": "MyButton",
+                            "designerId": "616c4b95-ae16-4678-aa75-63d48ecc3c38"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon4",
+                                "layout|flex": 1,
+                                "text": "الاستعلامات والاصدارات "
+                            },
+                            "name": "MyButton7",
+                            "designerId": "2416a376-1681-429c-a1f5-d0538d95be75"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon5",
+                                "layout|flex": 1,
+                                "text": "التواصل"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "36447bac-54c3-4bb1-ae25-71ecbf73d98a"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon6",
+                                "layout|flex": 1,
+                                "text": "المبادرات والمشاريع"
+                            },
+                            "name": "MyButton9",
+                            "designerId": "5385f99e-6dd5-40eb-b467-872dc0b1e782"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon7",
+                                "layout|flex": 1,
+                                "text": "المؤشرات والتقارير"
+                            },
+                            "name": "MyButton12",
+                            "designerId": "165253c3-fdbd-416a-beea-ad03f218bf80"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon8",
+                                "layout|flex": 1,
+                                "text": "الاعدادات"
+                            },
+                            "name": "MyButton13",
+                            "designerId": "4360b326-bc62-433c-ae69-3b39333df74f"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon9",
+                                "layout|flex": 1,
+                                "text": "تسجيل الدخول"
+                            },
+                            "name": "MyButton14",
+                            "designerId": "b4c1a082-6d95-4282-9a22-da8c46bf4dc2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
