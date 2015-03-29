@@ -24,7 +24,8 @@ Ext.application({
         'PrintOffice'
     ],
     stores: [
-        'MyArrayStore'
+        null,
+        'PrintOffices'
     ],
     views: [
         'HomeView',
@@ -61,11 +62,17 @@ Ext.application({
         'MonthlyFruitView',
         'TrademarkReportView',
         'MainNavView',
-        'SideMenuView'
+        'SideMenuView',
+        'SideMenu',
+        'PrintOffices',
+        'PrintOfficeDetails',
+        'PrintOfficeForm'
     ],
     controllers: [
         'HomeController',
-        'PublicServicesController'
+        'PublicServicesController',
+        'PrintOffices',
+        'PrintOffsController'
     ],
     name: 'MEC_App',
 

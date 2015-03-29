@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userAlias": "printoffice",
         "designer|userClassName": "PrintOffice"
     },
     "name": "MyModel",
@@ -19,11 +20,25 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "printOfficeService",
+                "name": "ItemName",
                 "type": "string"
             },
             "name": "field",
-            "designerId": "11067fe6-d09f-44cf-a4b0-fb3c88df084d"
+            "designerId": "d23804be-c3fb-4da1-ac8d-20e59a4b012b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ItemView",
+                "type": "string"
+            },
+            "name": "field1",
+            "designerId": "d3c34b5b-e446-4fac-8258-023f4771cd77"
         }
     ]
 }

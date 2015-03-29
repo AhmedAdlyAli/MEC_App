@@ -1,0 +1,325 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "printoffices",
+        "designer|userClassName": "PrintOffices",
+        "requires": [
+            "Ext.MessageBox"
+        ]
+    },
+    "designerId": "f00ba494-4f45-422a-a4aa-6031b0d1b2bc",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices #list",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "fn": "select",
+                "implHandler": [
+                    "// Show details",
+                    "this.getNavView().push({",
+                    "    xtype: 'printofficedetails',",
+                    "    title: 'PrintOffice Details',",
+                    "    record: record",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "select",
+            "designerId": "979065c3-8b94-47bf-b7a4-7d6312d5f24a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices #addButton",
+                "fn": "add",
+                "implHandler": [
+                    "// Remove current selection",
+                    "this.getList().deselectAll();",
+                    "",
+                    "// Show form",
+                    "this.getNavView().push({",
+                    "    xtype: 'printofficeform',",
+                    "    title: 'Add PrintOffice',",
+                    "    record: Ext.create('model.printoffice')",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "add",
+            "designerId": "cff58031-44f3-4d83-98b7-ddd5d3cd3b12"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices #editButton",
+                "fn": "edit",
+                "implHandler": [
+                    "// Get selected record",
+                    "var record = this.getList().getSelection()[0];",
+                    "",
+                    "// Show form",
+                    "this.getNavView().push({",
+                    "    xtype: 'printofficeform',",
+                    "    title: 'Edit PrintOffice',",
+                    "    record: record",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "edit",
+            "designerId": "d3d44b31-8bc7-4da8-b2f4-386c3c396a33"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices #saveButton",
+                "fn": "save",
+                "implHandler": [
+                    "var form = this.getForm(),",
+                    "    record = form.getRecord(),",
+                    "    store = Ext.getStore('PrintOffices');",
+                    "",
+                    "// Update associated record with form values",
+                    "form.updateRecord(record);",
+                    "",
+                    "// Run validation",
+                    "var errors = record.validate();",
+                    "",
+                    "// Valid",
+                    "if (errors.isValid()) {",
+                    "",
+                    "    // Add to store if new record",
+                    "    if (record.phantom) {",
+                    "",
+                    "        // TODO: Assign the record's ID from data source",
+                    "        // Normally, this value would be auto-generated,",
+                    "        // or returned from the server",
+                    "        var id = store.getData().all.length + 1;",
+                    "        record.set('id', id);",
+                    "",
+                    "        // Add to store",
+                    "        store.add(record);",
+                    "",
+                    "    }",
+                    "",
+                    "    // Commit changes",
+                    "    store.sync();",
+                    "",
+                    "    // Back to list",
+                    "    this.getNavView().reset(record);",
+                    "",
+                    "}",
+                    "",
+                    "// Invalid",
+                    "else {",
+                    "",
+                    "    var msg = '';",
+                    "    errors.each(function (error) {",
+                    "        msg += error.getMessage() + '<br/>';",
+                    "    });",
+                    "    Ext.Msg.alert('Error', msg);",
+                    "",
+                    "}"
+                ],
+                "name": "tap"
+            },
+            "name": "save",
+            "designerId": "f40c7032-f098-4434-9873-358c2a3ab95f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices #removeButton",
+                "fn": "remove",
+                "implHandler": [
+                    "var me = this,",
+                    "    title = 'Delete',",
+                    "    message = 'Are you sure you want to delete this printoffice?';",
+                    "",
+                    "// Show confirmation message",
+                    "Ext.Msg.confirm(title, message, function(response) {",
+                    "    if (response == 'yes') {",
+                    "",
+                    "        // Remove record",
+                    "        var store = Ext.getStore('PrintOffices'),",
+                    "            record = me.getList().getSelection()[0];",
+                    "        store.remove(record);",
+                    "",
+                    "        // Back to list view",
+                    "        me.getNavView().reset();",
+                    "",
+                    "    }",
+                    "});"
+                ],
+                "name": "tap"
+            },
+            "name": "remove",
+            "designerId": "68763f14-fcd9-4bba-98b7-6c0367838307"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "printoffices > *",
+                "designer|params": [
+                    "component"
+                ],
+                "fn": "setButtons",
+                "implHandler": [
+                    "// Hide/Show buttons based on view",
+                    "",
+                    "var add = this.getAddButton(),",
+                    "    edit = this.getEditButton(),",
+                    "    remove = this.getRemoveButton();",
+                    "",
+                    "switch (component.getItemId()) {",
+                    "    case 'list':",
+                    "        add.show();",
+                    "        edit.hide();",
+                    "        remove.hide();",
+                    "        break;",
+                    "    case 'details':",
+                    "        add.hide();",
+                    "        edit.show();",
+                    "        remove.show();",
+                    "        break;",
+                    "    case 'form':",
+                    "        add.hide();",
+                    "        edit.hide();",
+                    "        remove.hide();",
+                    "        break;",
+                    "}"
+                ],
+                "name": "show"
+            },
+            "name": "setButtons",
+            "designerId": "d7755fe7-bfe4-424c-b90f-0f9584928083"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "navView",
+                "selector": "printoffices"
+            },
+            "name": "navView",
+            "designerId": "ce97d4eb-b176-44de-bf02-67d4a1be2113"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "list",
+                "selector": "printoffices #list"
+            },
+            "name": "list",
+            "designerId": "044cbc3d-8214-4641-9317-65b87aea323c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "form",
+                "selector": "printoffices printofficeform"
+            },
+            "name": "form",
+            "designerId": "dbd3eabd-6543-47f5-9dff-49d0ba519a34"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "addButton",
+                "selector": "printoffices #addButton"
+            },
+            "name": "addButton",
+            "designerId": "09a2b917-dc54-4a06-9404-7afa4850b7b8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "editButton",
+                "selector": "printoffices #editButton"
+            },
+            "name": "editButton",
+            "designerId": "f4074060-2969-4f39-8cd0-9f6fdb3a9973"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "removeButton",
+                "selector": "printoffices #removeButton"
+            },
+            "name": "removeButton",
+            "designerId": "f07bf1d0-a34a-4a41-9ae9-9338d7e63315"
+        }
+    ]
+}

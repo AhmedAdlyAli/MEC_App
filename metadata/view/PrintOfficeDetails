@@ -1,0 +1,39 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "printofficedetails",
+        "designer|userClassName": "PrintOfficeDetails",
+        "itemId": "details",
+        "padding": 10
+    },
+    "configAlternates": {
+        "tpl": "array"
+    },
+    "designerId": "325e7e71-ee9a-492c-b776-194be19a6b76",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "tpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "tpl",
+                "implHandler": [
+                    "<div>\r",
+                    "<div><label>Item Name: </label><span>{ItemName}</span></div>\r",
+                    "<div><label>Item View: </label><span>{ItemView}</span></div>\r",
+                    "</div>"
+                ]
+            },
+            "name": "tpl",
+            "designerId": "0401d097-9e61-4449-8c5f-94d8896ffcf9"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "designer|userAlias": "printoffices",
+        "designer|userClassName": "PrintOffices"
+    },
+    "designerId": "6621a4b7-7f99-433d-83f2-6bb30032dcbf",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "list",
+                "store": "PrintOffices",
+                "title": "PrintOffices"
+            },
+            "name": "MyList1",
+            "configAlternates": {
+                "itemTpl": "array"
+            },
+            "designerId": "7fe4c21c-cb61-45c1-90c6-6e0f749f601d",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>",
+                            "<div><label>Item Name: </label><span>{ItemName}</span></div>",
+                            "<div><label>Item View: </label><span>{ItemView}</span></div>",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "bbc8ce96-cd35-48dd-81cd-32d1734eb67d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyNavigationBar",
+            "designerId": "e1b0d51f-e87f-4c69-8c06-d5055288eb22",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconCls": "add",
+                        "itemId": "addButton"
+                    },
+                    "name": "MyButton",
+                    "designerId": "58ed6e88-11c8-4f06-837a-3adc63817378"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "compose",
+                        "itemId": "editButton"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "1cada28e-81d1-4d05-a37c-1eb88a73852d"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "iconCls": "delete",
+                        "itemId": "removeButton"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "aa194c85-5f04-42cf-a45b-2df22e513c4d"
+                }
+            ]
+        }
+    ]
+}

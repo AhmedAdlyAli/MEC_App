@@ -1,0 +1,72 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "printofficeform",
+        "designer|userClassName": "PrintOfficeForm",
+        "itemId": "form"
+    },
+    "designerId": "861175d5-07c4-4b50-ac66-05638ca2f206",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyFieldSet",
+            "designerId": "d86ed843-549d-4bec-8df2-606530467e03",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Item Name",
+                        "name": "ItemName"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "609fee8c-2da3-42be-bb61-30d88362846e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Item View",
+                        "name": "ItemView"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "f8b94067-5dc5-4c63-bd42-152d117f7638"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "saveButton",
+                "margin": 10,
+                "text": "Save",
+                "ui": "action"
+            },
+            "name": "MyButton3",
+            "designerId": "92c0f8cc-1cc3-4617-9d04-8a9562fecee2"
+        }
+    ]
+}

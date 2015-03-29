@@ -15,6 +15,7 @@
 
 Ext.define('MEC_App.model.PrintOffice', {
     extend: 'Ext.data.Model',
+    alias: 'model.printoffice',
 
     requires: [
         'Ext.data.Field'
@@ -23,7 +24,11 @@ Ext.define('MEC_App.model.PrintOffice', {
     config: {
         fields: [
             {
-                name: 'printOfficeService',
+                name: 'ItemName',
+                type: 'string'
+            },
+            {
+                name: 'ItemView',
                 type: 'string'
             }
         ]

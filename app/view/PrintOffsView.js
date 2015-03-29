@@ -54,11 +54,13 @@ Ext.define('MEC_App.view.PrintOffsView', {
                 items: [
                     {
                         xtype: 'list',
+                        cls: 'HList',
                         height: '100%',
+                        itemId: 'PrintOffsList',
                         itemTpl: [
-                            '<div>{printOfficeService}</div>'
+                            '<div class=\'HListItem\'>{ItemName}</div>'
                         ],
-                        store: 'MyArrayStore'
+                        store: 'PrintOffices'
                     }
                 ]
             }

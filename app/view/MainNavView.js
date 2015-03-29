@@ -131,7 +131,15 @@ Ext.define('MEC_App.view.MainNavView', {
     initialize: function() {
         this.callParent();
 
-        var me = this;
+        //var me = this;
+        var theMenu = Ext.create('MEC_App.view.SideMenu');
+
+
+               Ext.Viewport.setMenu(theMenu,{
+                   side: 'right',
+                  reveal: true
+               });
+
 
 
         Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar().add({
@@ -145,42 +153,17 @@ Ext.define('MEC_App.view.MainNavView', {
                 //Ext.Viewport.setActiveItem({xtype:'SideMenuView'});
 
 
-                var theMenu = me.createMenu();
+                //var theMenu = me.createMenu();
+
+        Ext.Viewport.toggleMenu('right');
 
 
-
-
-               Ext.Viewport.setMenu(theMenu,{
-                   side: 'left',
-                  reveal: true
-               });
 
 
         }
 
 
         });
-
-
-    },
-
-    createMenu: function() {
-        var menu = Ext.create('Ext.Menu', {
-                    width: 250,
-                    scrollable: 'vertical',
-                    items: [
-                        {
-                            xtype: 'button',
-                            text: 'Option 1',
-                        },
-                        {
-                            xtype: 'button',
-                            text: 'Option 2',
-                        }
-                    ]
-                });
-                return menu;
-
 
 
     }

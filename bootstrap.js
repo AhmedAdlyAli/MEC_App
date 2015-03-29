@@ -668,7 +668,12 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.PrintOffices": [],
+  "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.model.PrintOffice": [],
+  "MEC_App.store.PrintOffices": [],
+  "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [],
   "MEC_App.view.ComplaintsView": [],
@@ -692,12 +697,16 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MyBusinessView": [],
   "MEC_App.view.MyRequestsView": [],
   "MEC_App.view.PricingView": [],
+  "MEC_App.view.PrintOfficeDetails": [],
+  "MEC_App.view.PrintOfficeForm": [],
+  "MEC_App.view.PrintOffices": [],
   "MEC_App.view.PrintOffsView": [],
   "MEC_App.view.ProjectsView": [],
   "MEC_App.view.PublicServiceView": [],
   "MEC_App.view.RecallsView": [],
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
+  "MEC_App.view.SideMenu": [],
   "MEC_App.view.SideMenuView": [],
   "MEC_App.view.SupplyServiceView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
@@ -1436,7 +1445,18 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.PrintOffices": [
+    "controller.printoffices"
+  ],
+  "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.model.PrintOffice": [
+    "model.printoffice"
+  ],
+  "MEC_App.store.PrintOffices": [
+    "store.printoffices"
+  ],
+  "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [
     "widget.BusinessIndicatorsReport"
@@ -1504,6 +1524,15 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.PricingView": [
     "widget.PricingView"
   ],
+  "MEC_App.view.PrintOfficeDetails": [
+    "widget.printofficedetails"
+  ],
+  "MEC_App.view.PrintOfficeForm": [
+    "widget.printofficeform"
+  ],
+  "MEC_App.view.PrintOffices": [
+    "widget.printoffices"
+  ],
   "MEC_App.view.PrintOffsView": [
     "widget.PrintOffsView"
   ],
@@ -1521,6 +1550,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SettingsView": [
     "widget.SettingsView"
+  ],
+  "MEC_App.view.SideMenu": [
+    "widget.SideMenu"
   ],
   "MEC_App.view.SideMenuView": [
     "widget.SideMenuView"

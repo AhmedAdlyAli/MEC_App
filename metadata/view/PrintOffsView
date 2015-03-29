@@ -88,8 +88,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "HList"
+                        ],
                         "height": "100%",
-                        "store": "MyArrayStore"
+                        "itemId": "PrintOffsList",
+                        "store": "PrintOffices"
                     },
                     "name": "MyList",
                     "designerId": "31057a72-79ac-4083-a480-34bcb2b3e1fd",
@@ -104,7 +108,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div>{printOfficeService}</div>"
+                                    "<div class='HListItem'>{ItemName}</div>"
                                 ]
                             },
                             "name": "itemTpl",

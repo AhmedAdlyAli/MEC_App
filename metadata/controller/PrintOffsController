@@ -1,0 +1,74 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PrintOffsController"
+    },
+    "name": "MyController",
+    "designerId": "0368eb08-6654-4c62-a283-ee255be7364b",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#PrintOffsList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onPrintOffsListItemSingletap",
+                "implHandler": [
+                    "dataview.up('MainNavView').push({",
+                    "             xtype: record.data.ItemView,",
+                    "            title: record.data.ItemName",
+                    "        });",
+                    "",
+                    ""
+                ],
+                "name": "itemsingletap"
+            },
+            "name": "onPrintOffsListItemSingletap",
+            "designerId": "a3fb88f1-8268-490e-bf40-81ea04abf195"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#PrintOffsList",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onPrintOffsListItemTap",
+                "implHandler": [
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onPrintOffsListItemTap",
+            "designerId": "df620ef2-f713-4e1a-9cf5-bc37dd628d8e"
+        }
+    ]
+}

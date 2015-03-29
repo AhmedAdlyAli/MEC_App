@@ -8,14 +8,17 @@
     "userConfig": {
         "controllers": [
             "HomeController",
-            "PublicServicesController"
+            "PublicServicesController",
+            "PrintOffices",
+            "PrintOffsController"
         ],
         "models": [
             "PrintOffice"
         ],
         "name": "MEC_App",
         "stores": [
-            "MyArrayStore"
+            "MyArrayStore",
+            "PrintOffices"
         ],
         "views": [
             "HomeView",
@@ -52,7 +55,11 @@
             "MonthlyFruitView",
             "TrademarkReportView",
             "MainNavView",
-            "SideMenuView"
+            "SideMenuView",
+            "SideMenu",
+            "PrintOffices",
+            "PrintOfficeDetails",
+            "PrintOfficeForm"
         ]
     },
     "name": "Application",
