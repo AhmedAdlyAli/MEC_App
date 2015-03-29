@@ -40,6 +40,7 @@ Ext.define('MEC_App.view.SideMenu', {
                             {
                                 xtype: 'image',
                                 height: 150,
+                                itemId: 'imgHome',
                                 src: 'resources/images/logo.png'
                             }
                         ]
@@ -53,6 +54,7 @@ Ext.define('MEC_App.view.SideMenu', {
                             {
                                 xtype: 'button',
                                 flex: 1,
+                                itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
                                 text: 'الرئيسية'
@@ -69,6 +71,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnMedai',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon3',
                                 text: 'المركز الاعلامي'
@@ -77,6 +80,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnInquiry',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon4',
                                 text: 'الاستعلامات والاصدارات '
@@ -85,6 +89,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnContact',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon5',
                                 text: 'التواصل'
@@ -93,6 +98,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnProjects',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon6',
                                 text: 'المبادرات والمشاريع'
@@ -101,6 +107,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnReports',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon7',
                                 text: 'المؤشرات والتقارير'
@@ -109,6 +116,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnSettings',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon8',
                                 text: 'الاعدادات'
@@ -117,6 +125,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                itemId: 'btnLogin',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon9',
                                 text: 'تسجيل الدخول'

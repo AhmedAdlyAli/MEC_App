@@ -29,25 +29,303 @@
                 "fn": "onBtnServicesTap",
                 "implHandler": [
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
                     "Ext.Viewport.toggleMenu('right');",
-                    "//Ext.Viewport.setActiveItem({xtype:'PublicServiceView'});",
                     "",
                     "",
+                    "Ext.Viewport.getActiveItem().push({",
+                    "    xtype: 'PublicServiceView',",
+                    "    title: 'الخدمات العامة'",
+                    "});",
                     "",
-                    "//button.up('MainNavView').push({",
-                    "//                    xtype: 'PublicServiceView',",
-                    "//                    title: 'الخدمات العامة'",
-                    " //               });"
+                    "",
+                    ""
                 ],
                 "name": "tap"
             },
             "name": "onBtnServicesTap",
             "designerId": "405fc7f7-45e1-4da9-a1a3-45882a62b76e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnHome",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnHomeTap",
+                "implHandler": [
+                    "Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "Ext.Viewport.getActiveItem().reset();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnHomeTap",
+            "designerId": "ac0e2272-3a64-4788-88a0-2bfec8407b80"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnMedai",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnMedaiTap",
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "Ext.Viewport.getActiveItem().push({",
+                    "    xtype: 'MediaCenterView',",
+                    "    title: 'المركز الإعلامي'",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnMedaiTap",
+            "designerId": "31eb10d6-22de-4543-a16d-67b4003082bb"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnInquiry",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnInquiryTap",
+                "implHandler": [
+                    " Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "        Ext.Viewport.getActiveItem().push({",
+                    "            xtype: 'InquiriesView',",
+                    "            title: 'الاستعلامات والاصدارات '",
+                    "        });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnInquiryTap",
+            "designerId": "72beb1eb-b5e7-4337-aac8-9561772bd260"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnContact",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnContactTap",
+                "implHandler": [
+                    "   Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "                Ext.Viewport.getActiveItem().push({",
+                    "                    xtype: 'InquiriesView',",
+                    "                    title: 'الاستعلامات والاصدارات '",
+                    "                });",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnContactTap",
+            "designerId": "26daba58-8b56-40e5-bdcd-d4b1371693ff"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnProjects",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnProjectsTap",
+                "implHandler": [
+                    "  Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "                        Ext.Viewport.getActiveItem().push({",
+                    "                            xtype: 'ProjectsView',",
+                    "                            title: 'المبادرات والمشاريع'",
+                    "                        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnProjectsTap",
+            "designerId": "d879ecfc-4b81-4fdf-849c-890aee9ccf34"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnReports",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnReportsTap",
+                "implHandler": [
+                    "        Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "                                Ext.Viewport.getActiveItem().push({",
+                    "                                    xtype: 'ReportsView',",
+                    "                                    title: 'المؤشرات والتقارير'",
+                    "                                });",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnReportsTap",
+            "designerId": "f4bfa497-8c2e-447e-9005-c057dfb1c4d9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnSettings",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnSettingsTap",
+                "implHandler": [
+                    " Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "                                        Ext.Viewport.getActiveItem().push({",
+                    "                                            xtype: 'SettingsView',",
+                    "                                            title: 'الاعدادات'",
+                    "                                        });",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnSettingsTap",
+            "designerId": "dc152748-fa8e-4d4f-b934-88f19b24ed63"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnLogin",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnLoginTap",
+                "implHandler": [
+                    "       Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "",
+                    "                                                Ext.Viewport.getActiveItem().push({",
+                    "                                                    xtype: 'LogivFormView',",
+                    "                                                    title: 'تسجيل الدخول'",
+                    "                                                });",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnLoginTap",
+            "designerId": "0733add7-53e3-4cbb-9c54-cd116681800b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "image#imgHome",
+                "designer|params": [
+                    "image",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Img",
+                "fn": "onImgHomeTap",
+                "implHandler": [
+                    " Ext.Viewport.toggleMenu('right');  ",
+                    "Ext.Viewport.getActiveItem().reset();"
+                ],
+                "name": "tap"
+            },
+            "name": "onImgHomeTap",
+            "designerId": "158bc6a2-182e-4a97-944b-8cef196fa618"
         }
     ]
 }

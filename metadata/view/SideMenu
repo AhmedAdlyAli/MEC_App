@@ -53,6 +53,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "height": 150,
+                                "itemId": "imgHome",
                                 "src": "resources/images/logo.png"
                             },
                             "name": "MyImg",
@@ -87,6 +88,7 @@
                             "userConfig": {
                                 "iconAlign": "right",
                                 "iconCls": "m-icon1",
+                                "itemId": "btnHome",
                                 "layout|flex": 1,
                                 "text": "الرئيسية"
                             },
@@ -123,6 +125,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon3",
+                                "itemId": "btnMedai",
                                 "layout|flex": 1,
                                 "text": "المركز الاعلامي"
                             },
@@ -142,6 +145,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon4",
+                                "itemId": "btnInquiry",
                                 "layout|flex": 1,
                                 "text": "الاستعلامات والاصدارات "
                             },
@@ -161,6 +165,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon5",
+                                "itemId": "btnContact",
                                 "layout|flex": 1,
                                 "text": "التواصل"
                             },
@@ -180,6 +185,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon6",
+                                "itemId": "btnProjects",
                                 "layout|flex": 1,
                                 "text": "المبادرات والمشاريع"
                             },
@@ -199,6 +205,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon7",
+                                "itemId": "btnReports",
                                 "layout|flex": 1,
                                 "text": "المؤشرات والتقارير"
                             },
@@ -218,6 +225,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon8",
+                                "itemId": "btnSettings",
                                 "layout|flex": 1,
                                 "text": "الاعدادات"
                             },
@@ -237,6 +245,7 @@
                                 ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon9",
+                                "itemId": "btnLogin",
                                 "layout|flex": 1,
                                 "text": "تسجيل الدخول"
                             },

@@ -37,6 +37,7 @@ $base-gradient: flat;
 }
 
 .home-header {
+    direction: rtl;
     background: url(../images/home-header-bg.jpg);
     background-size: cover;
 
@@ -53,6 +54,7 @@ $base-gradient: flat;
 }
 
 .home-btns {
+    direction: rtl;
     .x-button {
         @include border-radius(0);
         color: #fff;
@@ -119,6 +121,7 @@ $base-gradient: flat;
 
 .services-header,
 .print-office-header {
+    direction: rtl;
     background: url(../images/home-header-bg.jpg);
     background-size: cover;
 
@@ -149,10 +152,12 @@ $base-gradient: flat;
 }
 
 .inner-panel {
+    direction: rtl;
     background: #fff;
 }
 
 .service-title {
+    direction: rtl;
     background: #e1e1e1;
     color: #661f46;
     padding: 5px 20px;
@@ -160,6 +165,7 @@ $base-gradient: flat;
 }
 
 .services-list-panel {
+    direction: rtl;
     margin: 5px 20px;
     border-bottom:solid 1px #d7d7d7;
 
@@ -205,6 +211,7 @@ $base-gradient: flat;
 }
 
 .HList {
+    direction: rtl;
     .x-innerhtml {
         background: #fff;
     }
@@ -240,7 +247,7 @@ $base-gradient: flat;
 
 .x-menu {
     padding: 0;
-    
+
     .x-img {
         margin: 5% 0 0;
     }

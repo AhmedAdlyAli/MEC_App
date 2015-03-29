@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.MainNavView', {
     config: {
         cls: 'home-wrapper',
         fullscreen: true,
+        itemId: 'mainNav',
         scrollable: false,
         defaultBackButtonText: ' ',
         items: [
@@ -130,6 +131,7 @@ Ext.define('MEC_App.view.MainNavView', {
 
     initialize: function() {
         this.callParent();
+
 
         //var me = this;
         var theMenu = Ext.create('MEC_App.view.SideMenu');
