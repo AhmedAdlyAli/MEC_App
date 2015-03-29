@@ -27,7 +27,7 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         scrollable: false,
-        defaultBackButtonText: 'رجوع',
+        defaultBackButtonText: ' ',
         items: [
             {
                 xtype: 'panel',
@@ -38,7 +38,7 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'home-header',
-                        html: 'اخبار عامّة اخبار عامّة اخبار عامّة<br />اخبار عامّة اخبار عامّة  '
+                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
                     },
                     {
                         xtype: 'panel',

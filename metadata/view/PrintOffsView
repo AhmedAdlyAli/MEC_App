@@ -7,8 +7,112 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "PrintOffsView",
-        "designer|userClassName": "PrintOffsView"
+        "designer|userClassName": "PrintOffsView",
+        "layout": "vbox"
     },
     "name": "MyPanel",
-    "designerId": "733d4c5e-b3ac-4a12-8b7d-0d431204c1a2"
+    "designerId": "733d4c5e-b3ac-4a12-8b7d-0d431204c1a2",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "print-office-header"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyPanel6",
+            "designerId": "2cd2f675-3dc6-46fd-a920-98f9d51b2c94",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "print-office-header-overlay"
+                        ],
+                        "height": "100%"
+                    },
+                    "name": "MyPanel15",
+                    "designerId": "c3d48303-3da7-4d9b-8c76-bf4fa3c066b4",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-print-office"
+                                ],
+                                "iconAlign": "top",
+                                "iconCls": "print-office",
+                                "text": "خدمات المستخرجات"
+                            },
+                            "name": "MyButton10",
+                            "designerId": "f6cc4d7f-6794-4dea-9490-53915bf30f63"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2.2
+            },
+            "name": "MyPanel7",
+            "designerId": "05cf4777-b35e-4a8b-b4d5-1c90d83f5081",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "100%",
+                        "store": "MyArrayStore"
+                    },
+                    "name": "MyList",
+                    "designerId": "31057a72-79ac-4083-a480-34bcb2b3e1fd",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div>{printOfficeService}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "f7ac2b77-0ddd-473d-a3bc-3631d5e64446"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

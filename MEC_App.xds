@@ -73,11 +73,16 @@
             "a987dc04-f69b-4794-9834-ad522768096a",
             "ef3a4564-e9c1-4771-a6e4-2ed5fe30d91b"
         ],
-        "store": [],
-        "controller": [
-            "3dfa35d8-8ed3-47d7-87c2-c54669d036a1"
+        "store": [
+            "2f52e3d8-6c54-4ff9-9d62-7389eda883b8"
         ],
-        "model": [],
+        "controller": [
+            "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
+            "a8b70d4c-ae46-473d-9f8d-72ae4c075d80"
+        ],
+        "model": [
+            "1eedff92-788e-4de6-862c-b4c7207d377d"
+        ],
         "resource": [
             "7b6cd445-29cd-4010-b2e7-179f79b8b25b",
             "b9250969-23f4-41e2-820c-07743278932c"

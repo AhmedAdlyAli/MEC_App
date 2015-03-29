@@ -17,7 +17,142 @@ Ext.define('MEC_App.view.PublicServiceView', {
     extend: 'Ext.Panel',
     alias: 'widget.PublicServiceView',
 
+    requires: [
+        'Ext.Panel',
+        'Ext.Button',
+        'Ext.Label',
+        'Ext.Spacer'
+    ],
+
     config: {
+        fullscreen: true,
+        layout: 'fit',
+        scrollable: 'vertical',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'fit',
+                                items: [
+                                    {
+                                        xtype: 'button',
+                                        cls: 'btn-services',
+                                        iconAlign: 'top',
+                                        iconCls: 'services',
+                                        text: 'الخدمات العامة'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.3,
+                        cls: 'inner-panel',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        cls: 'service-title',
+                                        html: 'خدمات المستثمر'
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: 'بياناتي الخاصة'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'خدمات المستخرجات'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: 'متابعة المعاملات'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        cls: 'service-title',
+                                        html: 'خدمات المستهلك'
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: 'ابلاغ عن شكوي'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'supplyServicesBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: 'خدمات التموين'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 
 });

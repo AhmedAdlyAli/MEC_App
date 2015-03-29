@@ -9,7 +9,7 @@
         "cls": [
             "home-wrapper"
         ],
-        "defaultBackButtonText": "رجوع",
+        "defaultBackButtonText": " ",
         "designer|initialView": true,
         "designer|userAlias": "MainNavView",
         "designer|userClassName": "MainNavView",
@@ -47,7 +47,7 @@
                         "cls": [
                             "home-header"
                         ],
-                        "html": "اخبار عامّة اخبار عامّة اخبار عامّة<br />اخبار عامّة اخبار عامّة  ",
+                        "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
                         "layout|flex": 1
                     },
                     "name": "MyPanel1",

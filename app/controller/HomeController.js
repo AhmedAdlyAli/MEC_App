@@ -132,10 +132,10 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeProjectsTap: function(button, e, eOpts) {
-            button.up('MainNavView').push({
-                xtype: 'ProjectsView',
-                title: "المبادرات و المشاريع"
-            });
+                button.up('MainNavView').push({
+                    xtype: 'ProjectsView',
+                    title: "المبادرات و المشاريع"
+                });
     }
 
 });

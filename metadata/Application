@@ -7,9 +7,16 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "HomeController"
+            "HomeController",
+            "PublicServicesController"
+        ],
+        "models": [
+            "PrintOffice"
         ],
         "name": "MEC_App",
+        "stores": [
+            "MyArrayStore"
+        ],
         "views": [
             "HomeView",
             "PublicServiceView",

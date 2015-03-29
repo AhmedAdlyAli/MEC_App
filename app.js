@@ -20,6 +20,12 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+    models: [
+        'PrintOffice'
+    ],
+    stores: [
+        'MyArrayStore'
+    ],
     views: [
         'HomeView',
         'PublicServiceView',
@@ -58,7 +64,8 @@ Ext.application({
         'SideMenuView'
     ],
     controllers: [
-        'HomeController'
+        'HomeController',
+        'PublicServicesController'
     ],
     name: 'MEC_App',
 

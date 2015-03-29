@@ -307,10 +307,10 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeProjectsTap",
                 "implHandler": [
-                    "    button.up('MainNavView').push({",
-                    "        xtype: 'ProjectsView',",
-                    "        title: \"المبادرات و المشاريع\"",
-                    "    });"
+                    "        button.up('MainNavView').push({",
+                    "            xtype: 'ProjectsView',",
+                    "            title: \"المبادرات و المشاريع\"",
+                    "        });"
                 ],
                 "name": "tap"
             },

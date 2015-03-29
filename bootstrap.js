@@ -668,6 +668,7 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.viewport.WP"
   ],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.PublicServicesController": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [],
   "MEC_App.view.ComplaintsView": [],
@@ -1435,6 +1436,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.PublicServicesController": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [
     "widget.BusinessIndicatorsReport"

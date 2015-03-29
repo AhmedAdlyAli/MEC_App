@@ -7,8 +7,322 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "PublicServiceView",
-        "designer|userClassName": "PublicServiceView"
+        "designer|userClassName": "PublicServiceView",
+        "fullscreen": true,
+        "layout": "fit",
+        "scrollable": "vertical"
     },
     "name": "MyPanel",
-    "designerId": "7b23aef6-db2d-4685-9251-d9486597a989"
+    "designerId": "7b23aef6-db2d-4685-9251-d9486597a989",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
+            },
+            "name": "MyPanel14",
+            "designerId": "3dd15f51-c6d1-4d68-9a91-4f73b451c0f9",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "height": null,
+                        "layout": null,
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "ee512d53-ebdf-4c1c-9218-91563fd64772",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "fit"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "dfef4166-178a-4ac5-bc74-7fe67b99e38a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-services"
+                                        ],
+                                        "iconAlign": "top",
+                                        "iconCls": "services",
+                                        "text": "الخدمات العامة"
+                                    },
+                                    "name": "MyButton",
+                                    "designerId": "d6feb844-c0d9-45aa-ba6e-b1d229eb87e1"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "container|align": null,
+                        "height": null,
+                        "layout": "vbox",
+                        "layout|flex": 2.3
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel9",
+                            "designerId": "ed673919-8367-4368-9767-e54df485072d",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-title"
+                                        ],
+                                        "html": "خدمات المستثمر"
+                                    },
+                                    "name": "MyLabel",
+                                    "designerId": "3ef3c3cd-2e2f-4604-b0b0-df9c3103423b"
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel11",
+                                    "designerId": "a7cc08b5-ed6b-4158-8071-ca7cd362498e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-business",
+                                                "itemId": "myServiceBtn",
+                                                "layout|flex": 1,
+                                                "text": "بياناتي الخاصة"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "87962595-8bc9-43e6-b87c-8ec0f0fd235a"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "printOfficeBtn",
+                                                "layout|flex": 1,
+                                                "text": "خدمات المستخرجات"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "767ac0a1-a6e3-4ecd-8f9e-d228db3b6cca"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "62f33f1e-5828-44da-a672-0408ff2cf10c",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-request",
+                                                "itemId": "myRequestsBtn",
+                                                "layout|flex": 1,
+                                                "text": "متابعة المعاملات"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "655fd2cc-4649-4727-994f-b5d1c116322d"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1
+                                            },
+                                            "name": "MySpacer",
+                                            "designerId": "5bc7a899-3889-462e-8252-c94f92c6c00b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel10",
+                            "designerId": "9dc8387d-db98-4b0b-8054-aefc4bdc7c9a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-title"
+                                        ],
+                                        "html": "خدمات المستهلك"
+                                    },
+                                    "name": "MyLabel1",
+                                    "designerId": "9401d165-b5e6-4e21-8fcb-c8a6630fcb0b"
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel13",
+                                    "designerId": "51764f53-fce8-402b-99d5-48a63823db9f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-complain",
+                                                "itemId": "complainsBtn",
+                                                "layout|flex": 1,
+                                                "text": "ابلاغ عن شكوي"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "c4b8cd1e-dac5-4bc9-a755-d61e7f45c4bb"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-supply",
+                                                "itemId": "supplyServicesBtn",
+                                                "layout|flex": 1,
+                                                "text": "خدمات التموين"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "3997a5a9-bf2c-4a09-95f8-1bdfc3f47f3c"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

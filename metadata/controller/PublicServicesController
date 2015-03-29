@@ -1,0 +1,42 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PublicServicesController"
+    },
+    "name": "MyController",
+    "designerId": "a8b70d4c-ae46-473d-9f8d-72ae4c075d80",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#printOfficeBtn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onPrintOfficeBtnTap",
+                "implHandler": [
+                    "        button.up('MainNavView').push({",
+                    "            xtype: 'PrintOffsView',",
+                    "            title: \"خدمات المستخرجات\"",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onPrintOfficeBtnTap",
+            "designerId": "1c99b0f9-590c-44e4-ba1f-ed26011793d8"
+        }
+    ]
+}

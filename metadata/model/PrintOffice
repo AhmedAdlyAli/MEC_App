@@ -1,0 +1,29 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PrintOffice"
+    },
+    "name": "MyModel",
+    "designerId": "1eedff92-788e-4de6-862c-b4c7207d377d",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "printOfficeService",
+                "type": "string"
+            },
+            "name": "field",
+            "designerId": "11067fe6-d09f-44cf-a4b0-fb3c88df084d"
+        }
+    ]
+}
