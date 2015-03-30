@@ -26,13 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-<<<<<<< Updated upstream
             "value": "webBuild",
             "display": "Build web app"
-=======
-            "value": "nativeBuild",
-            "display": "Native Build"
->>>>>>> Stashed changes
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
