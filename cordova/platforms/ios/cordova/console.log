@@ -1,0 +1,43 @@
+2015-03-30 03:19:56.140 MEC_App[2550:774129] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/DC24921C-5691-4248-A370-F4A45EA5356A/Library/Cookies/Cookies.binarycookies
+2015-03-30 03:19:56.372 MEC_App[2550:774129] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-30 03:19:56.372 MEC_App[2550:774129] Multi-tasking -> Device: YES, App: YES
+2015-03-30 03:19:56.391 MEC_App[2550:774129] Unlimited access to network resources
+2015-03-30 03:19:56.396 MEC_App[2550:774129] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-30 03:19:57.257 MEC_App[2550:774129] Resetting plugins due to page load.
+2015-03-30 03:19:57.570 MEC_App[2550:774129] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/C61A645B-C465-4230-BA22-EC844B7A94C6/MEC_App.app/www/index.html
+2015-03-30 03:20:59.237 MEC_App[2550:783314] Terminating since there is no system app.
+2015-03-30 03:22:12.483 MEC_App[2859:791042] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/526E0C0A-F321-49CB-A875-6FA96C50947C/Library/Cookies/Cookies.binarycookies
+2015-03-30 03:22:12.535 MEC_App[2859:791042] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-30 03:22:12.535 MEC_App[2859:791042] Multi-tasking -> Device: YES, App: YES
+2015-03-30 03:22:12.536 MEC_App[2859:791042] Unlimited access to network resources
+2015-03-30 03:22:12.538 MEC_App[2859:791042] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-30 03:22:12.629 MEC_App[2859:791042] Resetting plugins due to page load.
+2015-03-30 03:22:12.747 MEC_App[2859:791042] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/B24C30EC-3109-4A1F-BC93-2D42A98A4A42/MEC_App.app/www/index.html
+2015-03-30 03:29:09.524 MEC_App[3118:842840] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/A11EE9E1-9541-410D-845A-1D6A1148BDFE/Library/Cookies/Cookies.binarycookies
+2015-03-30 03:29:09.595 MEC_App[3118:842840] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-30 03:29:09.595 MEC_App[3118:842840] Multi-tasking -> Device: YES, App: YES
+2015-03-30 03:29:09.596 MEC_App[3118:842840] Unlimited access to network resources
+2015-03-30 03:29:09.598 MEC_App[3118:842840] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-30 03:29:09.692 MEC_App[3118:842840] Resetting plugins due to page load.
+2015-03-30 03:29:09.803 MEC_App[3118:842840] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/55360A42-BB72-453F-BA4F-70D511D65046/MEC_App.app/www/index.html

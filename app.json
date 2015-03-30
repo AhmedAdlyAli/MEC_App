@@ -1,5 +1,16 @@
 {
    "name": "MEC_App",
+   "builds": {
+      "native": {
+         "packager": "cordova",
+         "cordova": {
+            "config": {
+               "platforms": "ios",
+               "id": "MEC.MEC_App"
+            }
+         }
+      }
+   },
    "indexHtmlPath": "index.html",
    "url": null,
    "js": [

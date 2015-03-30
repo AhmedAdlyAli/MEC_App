@@ -15,8 +15,8 @@
             },
             "viewportOrientation": "portrait"
         },
-        "urlPrefix": "http://localhost:1841",
-        "exportPath": "",
+        "urlPrefix": "http://localhost:1843",
+        "exportPath": "/sencha/MEC_App_Publish",
         "spacesToIndent": 4,
         "sdkPath": "",
         "lineEnding": "LF",
@@ -26,9 +26,11 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "webBuild",
-            "display": "Build web app"
-        }
+            "value": "emulate",
+            "display": "Native Build & Emulate"
+        },
+        "lockUrlPrefix": true,
+        "installStatus": "Not Installed"
     },
     "xdsVersion": "3.2.0",
     "xdsBuild": 75,
@@ -97,7 +99,12 @@
         ],
         "resource": [
             "7b6cd445-29cd-4010-b2e7-179f79b8b25b",
-            "b9250969-23f4-41e2-820c-07743278932c"
+            "b9250969-23f4-41e2-820c-07743278932c",
+            "5422c87d-0db0-4e6e-8817-95cc8cefa308",
+            "63f587cc-e6a7-42ce-8af2-9f71ab4fc101",
+            "d450e110-48d2-4fef-88bb-56e795a70e62",
+            "29e6211a-9b65-4799-8bfe-60f4fefd1c13",
+            "809b8fe7-467c-44da-a20d-b6cefeb61fa7"
         ],
         "app": [
             "application"
