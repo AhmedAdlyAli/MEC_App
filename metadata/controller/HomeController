@@ -146,7 +146,7 @@
                 "fn": "onHomeNewsTap",
                 "implHandler": [
                     "        button.up('MainNavView').push({",
-                    "            xtype: 'EconomyNewsView',",
+                    "            xtype: 'MediaCenterView',",
                     "            title: 'المركز الاعلامي'",
                     "        });"
                 ],
@@ -280,7 +280,7 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeeContactTap",
                 "implHandler": [
-                    "    button.up('MainNavView').push({",
+                    "button.up('MainNavView').push({",
                     "        xtype: 'ContactUsView',",
                     "        title: \"التواصل\"",
                     "    });"
@@ -288,34 +288,7 @@
                 "name": "tap"
             },
             "name": "onHomeeContactTap",
-            "designerId": "35387792-6e94-492f-8781-9f68f837cc72"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "button#homeProjects",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onHomeProjectsTap",
-                "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "            xtype: 'ProjectsView',",
-                    "            title: \"المبادرات و المشاريع\"",
-                    "        });"
-                ],
-                "name": "tap"
-            },
-            "name": "onHomeProjectsTap",
-            "designerId": "8aeddf0e-dd74-4b5f-acb9-178c566315eb"
+            "designerId": "feda011a-96bb-4814-bee8-2089bed18170"
         }
     ]
 }

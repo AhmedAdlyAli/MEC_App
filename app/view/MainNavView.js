@@ -55,6 +55,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                 items: [
                                     {
                                         xtype: 'panel',
+                                        flex: 1,
                                         cls: 'btn-services',
                                         layout: 'vbox',
                                         items: [
@@ -66,30 +67,49 @@ Ext.define('MEC_App.view.MainNavView', {
                                             {
                                                 xtype: 'label',
                                                 flex: 1,
+                                                cls: 'home-icon-text',
                                                 html: 'الخدمات العامة'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeServices',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
                                             }
                                         ]
                                     },
                                     {
-                                        xtype: 'panel'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        flex: 1,
-                                        cls: 'btn-services',
-                                        itemId: 'homeServices',
-                                        iconAlign: 'top',
-                                        iconCls: 'services',
-                                        text: 'الخدمات العامة'
-                                    },
-                                    {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-news',
-                                        itemId: 'homeNews',
-                                        iconAlign: 'top',
-                                        iconCls: 'news',
-                                        text: 'المركز الاعلامي'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'media'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: 'المركز الاعلامي'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeNews',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -99,22 +119,63 @@ Ext.define('MEC_App.view.MainNavView', {
                                 layout: 'hbox',
                                 items: [
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
-                                        cls: 'btn-general-info',
-                                        itemId: 'homeInquire',
-                                        iconAlign: 'top',
-                                        iconCls: 'general-info',
-                                        text: 'الاستعلامات و الاصدارات'
+                                        cls: 'btn-reports',
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'inquiries'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: 'الاستعلامات والاصدارات '
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeInquire',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     },
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-inquire',
-                                        itemId: 'homeReports',
-                                        iconAlign: 'top',
-                                        iconCls: 'inquire',
-                                        text: 'المؤشرات و التقارير'
+                                        itemId: 'mypanel18',
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'reports'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: 'المؤشرات والتقارير'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeReports',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -124,22 +185,64 @@ Ext.define('MEC_App.view.MainNavView', {
                                 layout: 'hbox',
                                 items: [
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-projects',
                                         itemId: 'homeProjects',
-                                        iconAlign: 'top',
-                                        iconCls: 'contact',
-                                        text: 'المبادرات و المشاريع'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'projects'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: 'المبادرات والمشاريع'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeProjects',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     },
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-contact',
                                         itemId: 'homeeContact',
-                                        iconAlign: 'top',
-                                        iconCls: 'contact',
-                                        text: 'التواصل'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'contact'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: 'التواصل'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeeContact',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             }

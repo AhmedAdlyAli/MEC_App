@@ -8,9 +8,15 @@ $base-gradient: flat;
 
 
 /* _arch-other-start */
+@font-face{font-family:'HelveticaNeueLTStd87HvCn';src:url('fonts/helveticaneueltstd-hvcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'HelveticaNeueLTStd47LtCn';src:url('fonts/helveticaneueltstd-ltcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'HelveticaNeueLTStd67MdCn';src:url('fonts/helveticaneueltstd-mdcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'HelveticaNeueLTStd37ThCn';src:url('fonts/helveticaneueltstd-thcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
+@font-face{font-family:'HelveticaNeueLTStd57Condensed';src:url('fonts/helveticaneueltstd-cn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
+
 @font-face {
     font-family: 'pf_din_text_universalregular';
-    src: url('PFDinTextUniversal-Regular-webfont.ttf') format('truetype');
+    src: url('fonts/PFDinTextUniversal-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -18,7 +24,7 @@ $base-gradient: flat;
 
 @font-face {
     font-family: 'pf_din_text_universalthin';
-    src: url('PFDinTextUniversal-Thin-webfont.ttf') format('truetype');
+    src: url('fonts/PFDinTextUniversal-Thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -26,7 +32,7 @@ $base-gradient: flat;
 
 @font-face {
     font-family: 'pf_din_text_universalXBlk';
-    src: url('PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');
+    src: url('fonts/PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -35,80 +41,47 @@ $base-gradient: flat;
 
 @font-face {
     font-family: 'pf_din_text_universalXTh';
-    src: url('PFDinTextUniversal-XThin-webfont.eot');
-    src: url('PFDinTextUniversal-XThin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PFDinTextUniversal-XThin-webfont.woff2') format('woff2'),
-         url('PFDinTextUniversal-XThin-webfont.woff') format('woff'),
-         url('PFDinTextUniversal-XThin-webfont.ttf') format('truetype'),
-         url('PFDinTextUniversal-XThin-webfont.svg#pf_din_text_universalXTh') format('svg');
+    src: url('fonts/PFDinTextUniversal-XThin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
 
 @font-face {
     font-family: 'pf_din_text_universalbold';
-    src: url('PFDinTextUniversal-Bold-webfont.eot');
-    src: url('PFDinTextUniversal-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PFDinTextUniversal-Bold-webfont.woff2') format('woff2'),
-         url('PFDinTextUniversal-Bold-webfont.woff') format('woff'),
-         url('PFDinTextUniversal-Bold-webfont.ttf') format('truetype'),
-         url('PFDinTextUniversal-Bold-webfont.svg#pf_din_text_universalbold') format('svg');
+    src: url('fonts/PFDinTextUniversal-Bold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'pf_din_text_universalhairline';
-    src: url('PFDinTextUniversal-Hairline-webfont.eot');
-    src: url('PFDinTextUniversal-Hairline-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PFDinTextUniversal-Hairline-webfont.woff2') format('woff2'),
-         url('PFDinTextUniversal-Hairline-webfont.woff') format('woff'),
-         url('PFDinTextUniversal-Hairline-webfont.ttf') format('truetype'),
-         url('PFDinTextUniversal-Hairline-webfont.svg#pf_din_text_universalhairline') format('svg');
+    src: url('fonts/PFDinTextUniversal-Hairline-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'pf_din_text_universallight';
-    src: url('PFDinTextUniversal-Light-webfont.eot');
-    src: url('PFDinTextUniversal-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PFDinTextUniversal-Light-webfont.woff2') format('woff2'),
-         url('PFDinTextUniversal-Light-webfont.woff') format('woff'),
-         url('PFDinTextUniversal-Light-webfont.ttf') format('truetype'),
-         url('PFDinTextUniversal-Light-webfont.svg#pf_din_text_universallight') format('svg');
+    src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'pf_din_text_universalmedium';
-    src: url('PFDinTextUniversal-Medium-webfont.eot');
-    src: url('PFDinTextUniversal-Medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('PFDinTextUniversal-Medium-webfont.woff2') format('woff2'),
-         url('PFDinTextUniversal-Medium-webfont.woff') format('woff'),
-         url('PFDinTextUniversal-Medium-webfont.ttf') format('truetype'),
-         url('PFDinTextUniversal-Medium-webfont.svg#pf_din_text_universalmedium') format('svg');
+    src: url('fonts/PFDinTextUniversal-Medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 
+* {
+    font-family: 'pf_din_text_universalmedium' !important;
+}
 
 .x-toolbar-dark {
     background-color: #fff;
@@ -158,72 +131,71 @@ $base-gradient: flat;
 
 .home-btns {
     direction: rtl;
-    .x-button {
-        @include border-radius(0);
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        border: none;
 
-        .x-button-icon {
-            background: url(../images/home-icons.png) no-repeat;
-            width: 50px;
-            height: 50px;
-            margin: 13% 0 10px;
-        }
+    .home-icon-text {
+        color: #fff;
+        text-align: center;
+        margin: 2% 0 8%;
     }
 
     .btn-services {
         background: #3a2639;
-
-        .x-button-icon {
-            background-position: -50px 0px;
-        }
     }
 
     .services {
-        background: url(../images/home-icons.png) no-repeat -50px 0px;
+        background: url(../images/home-icon-public-services.png) no-repeat center;
         background-size: contain;
+        margin: 10% 0 3%;
     }
 
     .btn-news {
         background: #633054;
-
-        .x-button-icon {
-            background-position: 0px 0px;
-        }
+    }
+    
+    .media {
+        background: url(../images/home-icon-media.png) no-repeat center;
+        background-size: contain;
+        margin: 10% 0 3%;
     }
 
-    .btn-general-info {
+    .btn-reports {
         background: #691648;
-
-        .x-button-icon {
-            background-position: -50px -50px;
-        }
+    }
+    
+    .reports {
+        background: url(../images/home-icon-reports.png) no-repeat center;
+        background-size: contain;
+        margin: 10% 0 3%;
     }
 
     .btn-inquire {
         background: #3a2639;
-
-        .x-button-icon {
-            background-position: 0px -50px;
-        }
+    }
+    
+    .inquiries {
+        background: url(../images/home-icon-inquiries.png) no-repeat center;
+        background-size: contain;
+        margin: 10% 0 3%;
     }
 
     .btn-projects {
         background: #4f2440;
-
-        .x-button-icon {
-            background-position: -50px -100px;
-        }
+    }
+    
+    .projects {
+        background: url(../images/home-icon-projects.png) no-repeat center;
+        background-size: contain;
+        margin: 10% 0 3%;
     }
 
     .btn-contact {
         background: #691648;
-
-        .x-button-icon {
-            background-position: 0px -108px;
-        }
+    }
+    
+    .contact {
+        background: url(../images/home-icon-contact.png) no-repeat center;
+        background-size: contain;
+        margin: 10% 0 3%;
     }
 }
 

@@ -43,7 +43,6 @@ Ext.define('MEC_App.controller.HomeController', {
                 tap: 'onHomeReportsTap'
             },
             "button#homeProjects": {
-                tap: 'onHomeProjectsTap',
                 tap: 'onHomeProjectsTap'
             },
             "button#homeeContact": {
@@ -91,7 +90,7 @@ Ext.define('MEC_App.controller.HomeController', {
 
     onHomeNewsTap: function(button, e, eOpts) {
                 button.up('MainNavView').push({
-                    xtype: 'EconomyNewsView',
+                    xtype: 'MediaCenterView',
                     title: 'المركز الاعلامي'
                 });
     },
@@ -125,17 +124,10 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeeContactTap: function(button, e, eOpts) {
-            button.up('MainNavView').push({
+        button.up('MainNavView').push({
                 xtype: 'ContactUsView',
                 title: "التواصل"
             });
-    },
-
-    onHomeProjectsTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
-                    xtype: 'ProjectsView',
-                    title: "المبادرات و المشاريع"
-                });
     }
 
 });

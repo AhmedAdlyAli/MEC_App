@@ -62666,6 +62666,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                 items: [
                                     {
                                         xtype: 'panel',
+                                        flex: 1,
                                         cls: 'btn-services',
                                         layout: 'vbox',
                                         items: [
@@ -62677,30 +62678,49 @@ Ext.define('MEC_App.view.MainNavView', {
                                             {
                                                 xtype: 'label',
                                                 flex: 1,
+                                                cls: 'home-icon-text',
                                                 html: '«·Œœ„«  «·⁄«„…'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeServices',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
                                             }
                                         ]
                                     },
                                     {
-                                        xtype: 'panel'
-                                    },
-                                    {
-                                        xtype: 'button',
-                                        flex: 1,
-                                        cls: 'btn-services',
-                                        itemId: 'homeServices',
-                                        iconAlign: 'top',
-                                        iconCls: 'services',
-                                        text: '«·Œœ„«  «·⁄«„…'
-                                    },
-                                    {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-news',
-                                        itemId: 'homeNews',
-                                        iconAlign: 'top',
-                                        iconCls: 'news',
-                                        text: '«·„—ﬂ“ «·«⁄·«„Ì'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'media'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: '«·„—ﬂ“ «·«⁄·«„Ì'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeNews',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -62710,22 +62730,63 @@ Ext.define('MEC_App.view.MainNavView', {
                                 layout: 'hbox',
                                 items: [
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
-                                        cls: 'btn-general-info',
-                                        itemId: 'homeInquire',
-                                        iconAlign: 'top',
-                                        iconCls: 'general-info',
-                                        text: '«·«” ⁄·«„«  Ê «·«’œ«—« '
+                                        cls: 'btn-reports',
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'inquiries'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: '«·«” ⁄·«„«  Ê«·«’œ«—«  '
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeInquire',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     },
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-inquire',
-                                        itemId: 'homeReports',
-                                        iconAlign: 'top',
-                                        iconCls: 'inquire',
-                                        text: '«·„ƒ‘—«  Ê «· ﬁ«—Ì—'
+                                        itemId: 'mypanel18',
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'reports'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeReports',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -62735,22 +62796,64 @@ Ext.define('MEC_App.view.MainNavView', {
                                 layout: 'hbox',
                                 items: [
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-projects',
                                         itemId: 'homeProjects',
-                                        iconAlign: 'top',
-                                        iconCls: 'contact',
-                                        text: '«·„»«œ—«  Ê «·„‘«—Ì⁄'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'projects'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: '«·„»«œ—«  Ê«·„‘«—Ì⁄'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeProjects',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     },
                                     {
-                                        xtype: 'button',
+                                        xtype: 'panel',
                                         flex: 1,
                                         cls: 'btn-contact',
                                         itemId: 'homeeContact',
-                                        iconAlign: 'top',
-                                        iconCls: 'contact',
-                                        text: '«· Ê«’·'
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'contact'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                cls: 'home-icon-text',
+                                                html: '«· Ê«’·'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                bottom: 0,
+                                                centered: true,
+                                                itemId: 'homeeContact',
+                                                left: 0,
+                                                right: 0,
+                                                top: 0,
+                                                text: ''
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -62824,7 +62927,6 @@ Ext.define('MEC_App.controller.HomeController', {
                 tap: 'onHomeReportsTap'
             },
             "button#homeProjects": {
-                tap: 'onHomeProjectsTap',
                 tap: 'onHomeProjectsTap'
             },
             "button#homeeContact": {
@@ -62857,7 +62959,7 @@ Ext.define('MEC_App.controller.HomeController', {
     },
     onHomeNewsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-            xtype: 'EconomyNewsView',
+            xtype: 'MediaCenterView',
             title: '«·„—ﬂ“ «·«⁄·«„Ì'
         });
     },
@@ -62889,12 +62991,6 @@ Ext.define('MEC_App.controller.HomeController', {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
             title: "«· Ê«’·"
-        });
-    },
-    onHomeProjectsTap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ProjectsView',
-            title: "«·„»«œ—«  Ê «·„‘«—Ì⁄"
         });
     }
 });
