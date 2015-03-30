@@ -6,7 +6,107 @@ $base-gradient: flat;
 @import 'sencha-touch/default/all';
 
 
-/*html,body{direction:rtl}*/
+@font-face {
+    font-family: 'pf_din_text_universalregular';
+    src: url('PFDinTextUniversal-Regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pf_din_text_universalthin';
+    src: url('PFDinTextUniversal-Thin-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pf_din_text_universalXBlk';
+    src: url('PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'pf_din_text_universalXTh';
+    src: url('PFDinTextUniversal-XThin-webfont.eot');
+    src: url('PFDinTextUniversal-XThin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PFDinTextUniversal-XThin-webfont.woff2') format('woff2'),
+         url('PFDinTextUniversal-XThin-webfont.woff') format('woff'),
+         url('PFDinTextUniversal-XThin-webfont.ttf') format('truetype'),
+         url('PFDinTextUniversal-XThin-webfont.svg#pf_din_text_universalXTh') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'pf_din_text_universalbold';
+    src: url('PFDinTextUniversal-Bold-webfont.eot');
+    src: url('PFDinTextUniversal-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PFDinTextUniversal-Bold-webfont.woff2') format('woff2'),
+         url('PFDinTextUniversal-Bold-webfont.woff') format('woff'),
+         url('PFDinTextUniversal-Bold-webfont.ttf') format('truetype'),
+         url('PFDinTextUniversal-Bold-webfont.svg#pf_din_text_universalbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'pf_din_text_universalhairline';
+    src: url('PFDinTextUniversal-Hairline-webfont.eot');
+    src: url('PFDinTextUniversal-Hairline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PFDinTextUniversal-Hairline-webfont.woff2') format('woff2'),
+         url('PFDinTextUniversal-Hairline-webfont.woff') format('woff'),
+         url('PFDinTextUniversal-Hairline-webfont.ttf') format('truetype'),
+         url('PFDinTextUniversal-Hairline-webfont.svg#pf_din_text_universalhairline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'pf_din_text_universallight';
+    src: url('PFDinTextUniversal-Light-webfont.eot');
+    src: url('PFDinTextUniversal-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PFDinTextUniversal-Light-webfont.woff2') format('woff2'),
+         url('PFDinTextUniversal-Light-webfont.woff') format('woff'),
+         url('PFDinTextUniversal-Light-webfont.ttf') format('truetype'),
+         url('PFDinTextUniversal-Light-webfont.svg#pf_din_text_universallight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'pf_din_text_universalmedium';
+    src: url('PFDinTextUniversal-Medium-webfont.eot');
+    src: url('PFDinTextUniversal-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PFDinTextUniversal-Medium-webfont.woff2') format('woff2'),
+         url('PFDinTextUniversal-Medium-webfont.woff') format('woff'),
+         url('PFDinTextUniversal-Medium-webfont.ttf') format('truetype'),
+         url('PFDinTextUniversal-Medium-webfont.svg#pf_din_text_universalmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 .x-toolbar-dark {
     background-color: #fff;
