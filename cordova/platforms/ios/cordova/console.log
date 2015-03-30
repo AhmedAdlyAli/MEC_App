@@ -41,3 +41,67 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-03-30 03:29:09.692 MEC_App[3118:842840] Resetting plugins due to page load.
 2015-03-30 03:29:09.803 MEC_App[3118:842840] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/55360A42-BB72-453F-BA4F-70D511D65046/MEC_App.app/www/index.html
+2015-03-30 03:38:48.697 MEC_App[3804:916547] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/96491997-9ECF-47D3-B3A7-435C662BC6B2/Library/Cookies/Cookies.binarycookies
+2015-03-30 03:38:48.778 MEC_App[3804:916547] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-30 03:38:48.779 MEC_App[3804:916547] Multi-tasking -> Device: YES, App: YES
+2015-03-30 03:38:48.801 MEC_App[3804:916547] Unlimited access to network resources
+2015-03-30 03:38:48.803 MEC_App[3804:916547] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-30 03:38:48.894 MEC_App[3804:916547] Resetting plugins due to page load.
+2015-03-30 03:38:49.130 MEC_App[3804:916547] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/31983F9C-310E-40B6-8A86-DC99CB6E2127/MEC_App.app/www/index.html
+2015-03-30 03:39:16.310 MEC_App[3804:917278] Terminating since there is no system app.
+2015-03-30 10:05:26.240 MEC_App[1461:218517] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/B188DDA1-86F5-4E45-94E1-304B8B0FDB49/Library/Cookies/Cookies.binarycookies
+2015-03-30 10:05:26.511 MEC_App[1461:218517] *** Terminating app due to uncaught exception 'NSUnknownKeyException', reason: '[<UIApplication 0x7b055f20> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key view.'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x002d5466 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0243da97 objc_exception_throw + 44
+	2   CoreFoundation                      0x002d5081 -[NSException raise] + 17
+	3   Foundation                          0x020c080e -[NSObject(NSKeyValueCoding) setValue:forUndefinedKey:] + 282
+	4   Foundation                          0x0201c838 _NSSetUsingKeyValueSetter + 115
+	5   Foundation                          0x0201c7bd -[NSObject(NSKeyValueCoding) setValue:forKey:] + 267
+	6   Foundation                          0x020520a6 -[NSObject(NSKeyValueCoding) setValue:forKeyPath:] + 386
+	7   UIKit                               0x009c2329 -[UIRuntimeOutletConnection connect] + 106
+	8   libobjc.A.dylib                     0x02453724 -[NSObject performSelector:] + 62
+	9   CoreFoundation                      0x0020edbc -[NSArray makeObjectsPerformSelector:] + 316
+	10  UIKit                               0x009c0dea -[UINib instantiateWithOwner:options:] + 1775
+	11  UIKit                               0x009c2c89 -[NSBundle(UINSBundleAdditions) loadNibNamed:owner:options:] + 180
+	12  UIKit                               0x00689f1b -[UIApplication _loadMainNibFileNamed:bundle:] + 58
+	13  UIKit                               0x0068a234 -[UIApplication _loadMainInterfaceFile] + 245
+	14  UIKit                               0x00688b84 -[UIApplication _runWithMainScene:transitionContext:completion:] + 1337
+	15  UIKit                               0x006a1e1e __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke + 59
+	16  UIKit                               0x006878da -[UIApplication workspaceDidEndTransaction:] + 155
+	17  FrontBoardServices                  0x02fb890e __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2 + 71
+	18  FrontBoardServices                  0x02fb839f __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke + 54
+	19  FrontBoardServices                  0x02fca3a5 __31-[FBSSerialQueue performAsync:]_block_invoke + 26
+	20  CoreFoundation                      0x001f8970 __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 16
+	21  CoreFoundation                      0x001ee283 __CFRunLoopDoBlocks + 195
+	22  CoreFoundation                      0x001ee0db __CFRunLoopRun + 2715
+	23  CoreFoundation                      0x001ed37b CFRunLoopRunSpecific + 443
+	24  CoreFoundation                      0x001ed1ab CFRunLoopRunInMode + 123
+	25  UIKit                               0x00687292 -[UIApplication _run] + 571
+	26  UIKit                               0x0068a9b6 UIApplicationMain + 1526
+	27  MEC_App                             0x000dc4ec main + 92
+	28  libdyld.dylib                       0x02b14ac9 start + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-03-30 12:34:56.943 MEC_App[5178:1062764] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/D7F650EA-FD90-4C72-8D79-06FC522FDFEA/Library/Cookies/Cookies.binarycookies
+2015-03-30 12:34:57.285 MEC_App[5178:1062764] Apache Cordova native platform version 3.8.0 is starting.
+2015-03-30 12:34:57.317 MEC_App[5178:1062764] Multi-tasking -> Device: YES, App: YES
+2015-03-30 12:34:57.376 MEC_App[5178:1062764] Unlimited access to network resources
+2015-03-30 12:34:57.416 MEC_App[5178:1062764] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-03-30 12:34:58.713 MEC_App[5178:1062764] Resetting plugins due to page load.
+2015-03-30 12:34:59.304 MEC_App[5178:1062764] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/38FECDD5-9E1A-471C-8903-9BC9F9A305A8/MEC_App.app/www/index.html
