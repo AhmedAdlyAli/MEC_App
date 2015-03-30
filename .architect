@@ -507,7 +507,7 @@
                 }
             ]
         },
-        "controller": false,
+        "controller": true,
         "3dfa35d8-8ed3-47d7-87c2-c54669d036a1": {
             "id": "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
             "cn": [
@@ -690,10 +690,6 @@
     },
     "tabState": {
         "openTabs": [
-            "application",
-            "838df556-7114-4a45-9136-513f8dc61168",
-            "07376d4e-cac1-47a7-95b5-aef09e35442f",
-            "9ce4c185-2173-4269-af48-0fe93a6e6860",
             "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca"
         ]
     },
