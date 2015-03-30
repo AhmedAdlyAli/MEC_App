@@ -82,7 +82,6 @@
                                 "layout": "hbox",
                                 "layout|flex": 1
                             },
-<<<<<<< Updated upstream
                             "name": "MyPanel3",
                             "designerId": "234d9518-89af-4723-b2c1-3fb37d7e7cd7",
                             "cn": [
@@ -126,6 +125,7 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "designer|displayName": "test1",
                                                 "html": "الخدمات العامة",
                                                 "layout|flex": 1
                                             },
@@ -199,8 +199,6 @@
                                 "layout": "hbox",
                                 "layout|flex": 1
                             },
-=======
->>>>>>> Stashed changes
                             "name": "MyPanel4",
                             "designerId": "f3233319-b753-42eb-a431-95eeb213ea6d",
                             "cn": [
