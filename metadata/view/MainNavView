@@ -86,6 +86,64 @@
                             "designerId": "234d9518-89af-4723-b2c1-3fb37d7e7cd7",
                             "cn": [
                                 {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "btn-services"
+                                        ],
+                                        "layout": "vbox"
+                                    },
+                                    "name": "MyPanel17",
+                                    "designerId": "2c8ca6ee-6c02-4c40-ac3b-523f1039fb94",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Panel",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "cls": [
+                                                    "services"
+                                                ],
+                                                "layout|flex": 2
+                                            },
+                                            "name": "MyPanel19",
+                                            "designerId": "118e3046-733d-401c-9452-294bdb5a0528"
+                                        },
+                                        {
+                                            "type": "Ext.Label",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "html": "الخدمات العامة",
+                                                "layout|flex": 1
+                                            },
+                                            "name": "MyLabel3",
+                                            "designerId": "24b6ed2f-d170-436f-9aca-f13cb9e5728f"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MyPanel18",
+                                    "designerId": "8af20715-12af-439f-a9ac-5cc745118fff"
+                                },
+                                {
                                     "type": "Ext.Button",
                                     "reference": {
                                         "name": "items",

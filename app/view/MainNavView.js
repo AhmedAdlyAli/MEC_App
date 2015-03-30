@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.MainNavView', {
 
     requires: [
         'Ext.Panel',
+        'Ext.Label',
         'Ext.Button',
         'Ext.Menu'
     ],
@@ -52,6 +53,26 @@ Ext.define('MEC_App.view.MainNavView', {
                                 flex: 1,
                                 layout: 'hbox',
                                 items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'btn-services',
+                                        layout: 'vbox',
+                                        items: [
+                                            {
+                                                xtype: 'panel',
+                                                flex: 2,
+                                                cls: 'services'
+                                            },
+                                            {
+                                                xtype: 'label',
+                                                flex: 1,
+                                                html: 'الخدمات العامة'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel'
+                                    },
                                     {
                                         xtype: 'button',
                                         flex: 1,

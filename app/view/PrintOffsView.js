@@ -19,7 +19,7 @@ Ext.define('MEC_App.view.PrintOffsView', {
 
     requires: [
         'Ext.Panel',
-        'Ext.Button',
+        'Ext.Label',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -36,13 +36,19 @@ Ext.define('MEC_App.view.PrintOffsView', {
                         xtype: 'panel',
                         cls: 'print-office-header-overlay',
                         height: '100%',
+                        layout: 'vbox',
                         items: [
                             {
-                                xtype: 'button',
-                                cls: 'btn-print-office',
-                                iconAlign: 'top',
-                                iconCls: 'print-office',
-                                text: 'خدمات المستخرجات'
+                                xtype: 'panel',
+                                flex: 2,
+                                cls: 'print-office-header-icon'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'print-office-header-title',
+                                docked: 'bottom',
+                                html: 'خدمات المستخرجات'
                             }
                         ]
                     }

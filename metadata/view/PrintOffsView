@@ -40,13 +40,14 @@
                         "cls": [
                             "print-office-header-overlay"
                         ],
-                        "height": "100%"
+                        "height": "100%",
+                        "layout": "vbox"
                     },
                     "name": "MyPanel15",
                     "designerId": "c3d48303-3da7-4d9b-8c76-bf4fa3c066b4",
                     "cn": [
                         {
-                            "type": "Ext.Button",
+                            "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -54,14 +55,31 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "btn-print-office"
+                                    "print-office-header-icon"
                                 ],
-                                "iconAlign": "top",
-                                "iconCls": "print-office",
-                                "text": "خدمات المستخرجات"
+                                "layout|flex": 2
                             },
-                            "name": "MyButton10",
-                            "designerId": "f6cc4d7f-6794-4dea-9490-53915bf30f63"
+                            "name": "MyPanel8",
+                            "designerId": "42f1d87f-ef2e-4579-b6d5-83b31223e40e"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": null,
+                                "cls": [
+                                    "print-office-header-title"
+                                ],
+                                "docked": "bottom",
+                                "html": "خدمات المستخرجات",
+                                "layout|flex": 1
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "4b0a45bc-a538-4e97-888e-2778f1a48c61"
                         }
                     ]
                 }

@@ -19,15 +19,14 @@ Ext.define('MEC_App.view.PublicServiceView', {
 
     requires: [
         'Ext.Panel',
-        'Ext.Button',
         'Ext.Label',
+        'Ext.Button',
         'Ext.Spacer'
     ],
 
     config: {
         fullscreen: true,
         layout: 'fit',
-        scrollable: 'vertical',
         items: [
             {
                 xtype: 'panel',
@@ -37,19 +36,25 @@ Ext.define('MEC_App.view.PublicServiceView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
                         items: [
                             {
                                 xtype: 'panel',
                                 cls: 'services-header-overlay',
                                 height: '100%',
-                                layout: 'fit',
+                                layout: 'vbox',
                                 items: [
                                     {
-                                        xtype: 'button',
-                                        cls: 'btn-services',
-                                        iconAlign: 'top',
-                                        iconCls: 'services',
-                                        text: 'الخدمات العامة'
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'الخدمات العامة'
                                     }
                                 ]
                             }
@@ -57,9 +62,10 @@ Ext.define('MEC_App.view.PublicServiceView', {
                     },
                     {
                         xtype: 'panel',
-                        flex: 2.3,
+                        flex: 2.2,
                         cls: 'inner-panel',
-                        layout: 'vbox',
+                        height: 'auto',
+                        scrollable: 'vertical',
                         items: [
                             {
                                 xtype: 'panel',

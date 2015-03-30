@@ -10,7 +10,7 @@
         "designer|userClassName": "PublicServiceView",
         "fullscreen": true,
         "layout": "fit",
-        "scrollable": "vertical"
+        "scrollable": null
     },
     "name": "MyPanel",
     "designerId": "7b23aef6-db2d-4685-9251-d9486597a989",
@@ -41,8 +41,9 @@
                         "cls": [
                             "services-header"
                         ],
-                        "height": null,
-                        "layout": null,
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
                         "layout|flex": 1
                     },
                     "name": "MyPanel6",
@@ -60,13 +61,13 @@
                                     "services-header-overlay"
                                 ],
                                 "height": "100%",
-                                "layout": "fit"
+                                "layout": "vbox"
                             },
                             "name": "MyPanel8",
                             "designerId": "dfef4166-178a-4ac5-bc74-7fe67b99e38a",
                             "cn": [
                                 {
-                                    "type": "Ext.Button",
+                                    "type": "Ext.Panel",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
@@ -74,14 +75,29 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "cls": [
-                                            "btn-services"
+                                            "service-header-icon"
                                         ],
-                                        "iconAlign": "top",
-                                        "iconCls": "services",
-                                        "text": "الخدمات العامة"
+                                        "layout|flex": 2
                                     },
-                                    "name": "MyButton",
-                                    "designerId": "d6feb844-c0d9-45aa-ba6e-b1d229eb87e1"
+                                    "name": "MyPanel16",
+                                    "designerId": "2ceba139-9583-4368-b507-68b37da894b5"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "الخدمات العامة",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "76b9eafc-acea-40f2-87b2-7e10400f3fca"
                                 }
                             ]
                         }
@@ -98,10 +114,9 @@
                         "cls": [
                             "inner-panel"
                         ],
-                        "container|align": null,
-                        "height": null,
-                        "layout": "vbox",
-                        "layout|flex": 2.3
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": "vertical"
                     },
                     "name": "MyPanel7",
                     "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
