@@ -18,6 +18,10 @@
             "MenuModel"
         ],
         "name": "MEC_App",
+        "requires": [
+            "MEC_App.controller.Global",
+            "MEC_App.controller.LocAr"
+        ],
         "stores": [
             "MenuArrayStore",
             "PrintOffices"
@@ -68,5 +72,35 @@
         ]
     },
     "name": "Application",
-    "designerId": "application"
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "//Ext.Viewport.add(Ext.create('HelloWorld.view.Main'));",
+                    "",
+                    "",
+                    "//var loc = Ext.create('MEC_App.controller.LocAr');",
+                    "Ext.Global.LoadLocalization();",
+                    "",
+                    "//this.Loc = loc;",
+                    "",
+                    "",
+                    "//var Loc;",
+                    "",
+                    "//Loc = this.getController('MEC_App.controller.Locale.Ar');",
+                    "//   Loc.Load();"
+                ]
+            },
+            "name": "launch",
+            "designerId": "9a857bb2-d605-4f39-8c34-aa7faa7d3ccc"
+        }
+    ]
 }

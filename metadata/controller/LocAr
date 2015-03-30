@@ -1,0 +1,55 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LocAr"
+    },
+    "name": "MyClass1",
+    "designerId": "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "g"
+                ],
+                "fn": "Load",
+                "implHandler": [
+                    "g.ViewTitles = {",
+                    "",
+                    "    'Home': 'الرئيسية',",
+                    "    'MediaCenter': ' المركز الاعلامي',",
+                    "    'PublicServices':'الخدمات العامة',",
+                    "    'Inquiries': 'الاستعلامات والاصدارات ',",
+                    "    'ContactUs': 'اتصل بنا',",
+                    "    'Projects' : 'المبادرات والمشاريع',",
+                    "    'Reports': 'المؤشرات والتقارير',",
+                    "    'Settings': 'الاعدادات',",
+                    "    'LogivForm' : 'تسجيل الدخول'",
+                    "",
+                    "",
+                    "",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "Load",
+            "designerId": "02fedf19-12dc-4626-abcf-62df303641bd"
+        }
+    ]
+}

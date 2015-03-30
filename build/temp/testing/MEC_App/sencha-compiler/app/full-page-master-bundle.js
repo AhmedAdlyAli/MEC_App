@@ -1,2 +1,2 @@
 // @tag full-page
-// @require D:\Sencha\MEC_App\app.js
+// @require /sencha/MEC_App/app.js

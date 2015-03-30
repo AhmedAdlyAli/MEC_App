@@ -1,6 +1,6 @@
 {
     "expandedState": {
-        "view": true,
+        "view": false,
         "3adeb383-e444-404a-9382-121eaaf2cdf9": {
             "id": "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "cn": [
@@ -509,6 +509,9 @@
                 }
             ]
         },
+        "07376d4e-cac1-47a7-95b5-aef09e35442f": {
+            "id": "07376d4e-cac1-47a7-95b5-aef09e35442f"
+        },
         "store": false,
         "d1421f7d-5956-46cb-bdef-8f48b519450a": {
             "id": "d1421f7d-5956-46cb-bdef-8f48b519450a",
@@ -688,7 +691,26 @@
                 }
             ]
         },
-        "resource": true,
+        "9ce4c185-2173-4269-af48-0fe93a6e6860": {
+            "id": "9ce4c185-2173-4269-af48-0fe93a6e6860",
+            "cn": [
+                {
+                    "id": "2d8bda64-846f-41b7-89bb-59a8de4c58dc"
+                },
+                {
+                    "id": "e8dae46a-895d-4524-9af1-492443bcd1da"
+                }
+            ]
+        },
+        "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca": {
+            "id": "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca",
+            "cn": [
+                {
+                    "id": "02fedf19-12dc-4626-abcf-62df303641bd"
+                }
+            ]
+        },
+        "resource": false,
         "7b6cd445-29cd-4010-b2e7-179f79b8b25b": {
             "id": "7b6cd445-29cd-4010-b2e7-179f79b8b25b"
         },
@@ -718,17 +740,15 @@
     },
     "tabState": {
         "openTabs": [
-            "a987dc04-f69b-4794-9834-ad522768096a",
-            "b9250969-23f4-41e2-820c-07743278932c",
-            "3dfa35d8-8ed3-47d7-87c2-c54669d036a1"
+            "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca"
         ]
     },
     "canvasState": {
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
-        "selectedInstance": "9fd17247-1e55-4105-85d3-98e00dca3c3c"
+        "topInstance": "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca",
+        "selectedInstance": "02fedf19-12dc-4626-abcf-62df303641bd"
     },
     "editMode": "code",
     "userSettings": {

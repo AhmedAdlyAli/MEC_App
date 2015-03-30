@@ -58,7 +58,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'PublicServiceView',
-            title: 'الخدمات العامة'
+            title: Ext.Global.GetViewTitle('PublicService')
         });
 
 
@@ -84,7 +84,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'MediaCenterView',
-            title: 'المركز الإعلامي'
+            title: Ext.Global.GetViewTitle('MediaCenter')
         });
 
 
@@ -96,7 +96,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                 Ext.Viewport.getActiveItem().push({
                     xtype: 'InquiriesView',
-                    title: 'الاستعلامات والاصدارات '
+                    title: Ext.Global.GetViewTitle('Inquiries')
                 });
 
 
@@ -109,7 +109,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                         Ext.Viewport.getActiveItem().push({
                             xtype: 'InquiriesView',
-                            title: 'الاستعلامات والاصدارات '
+                            title:  Ext.Global.GetViewTitle('Inquiries')
                         });
 
 
@@ -121,7 +121,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                 Ext.Viewport.getActiveItem().push({
                                     xtype: 'ProjectsView',
-                                    title: 'المبادرات والمشاريع'
+                                    title: Ext.Global.GetViewTitle('Projects')
                                 });
     },
 
@@ -131,7 +131,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                         Ext.Viewport.getActiveItem().push({
                                             xtype: 'ReportsView',
-                                            title: 'المؤشرات والتقارير'
+                                            title:  Ext.Global.GetViewTitle('Reports')
                                         });
 
 
@@ -143,7 +143,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                                 Ext.Viewport.getActiveItem().push({
                                                     xtype: 'SettingsView',
-                                                    title: 'الاعدادات'
+                                                    title: Ext.Global.GetViewTitle('Settings')
                                                 });
 
 
@@ -156,7 +156,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                                         Ext.Viewport.getActiveItem().push({
                                                             xtype: 'LogivFormView',
-                                                            title: 'تسجيل الدخول'
+                                                            title:  Ext.Global.GetViewTitle('LogivForm')
                                                         });
 
 
