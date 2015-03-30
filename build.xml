@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="iso-8859-6"?>
 <project name="MEC_App" default=".help">
     <!--
     The build-impl.xml file imported here contains the guts of the build process. It is
