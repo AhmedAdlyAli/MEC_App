@@ -84,7 +84,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'MediaCenterView',
-            title: 'المركز الإعلامي'
+            title: Ext.Global.GetViewTitle('MediaCenter')
         });
 
 

@@ -20,6 +20,11 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
+
+    requires: [
+        'MEC_App.controller.Global',
+        'MEC_App.controller.LocAr'
+    ],
     models: [
         'PrintOffice',
         'MenuModel'
@@ -82,7 +87,19 @@ Ext.application({
     name: 'MEC_App',
 
     launch: function() {
+        //Ext.Viewport.add(Ext.create('HelloWorld.view.Main'));
 
+
+        //var loc = Ext.create('MEC_App.controller.LocAr');
+        Ext.Global.LoadLocalization();
+
+        //this.Loc = loc;
+
+
+        //var Loc;
+
+        //Loc = this.getController('MEC_App.controller.Locale.Ar');
+        //   Loc.Load();
         Ext.create('MEC_App.view.MainNavView', {fullscreen: true});
     }
 

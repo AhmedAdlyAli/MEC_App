@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -667,7 +656,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MEC_App.controller.Global": [
+    "Ext.Global"
+  ],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.LocAr": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
@@ -702,6 +695,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MinistryPublicationView": [],
   "MEC_App.view.MonthlyFruitView": [],
   "MEC_App.view.MyBusinessView": [],
+  "MEC_App.view.MyClass": [],
   "MEC_App.view.MyRequestsView": [],
   "MEC_App.view.PricingView": [],
   "MEC_App.view.PrintOfficeDetails": [],
@@ -1300,17 +1294,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1451,7 +1434,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MEC_App.controller.Global": [],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.LocAr": [],
   "MEC_App.controller.PrintOffices": [
     "controller.printoffices"
   ],
@@ -1540,6 +1525,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MyBusinessView": [
     "widget.MyBusinessView"
   ],
+  "MEC_App.view.MyClass": [],
   "MEC_App.view.MyRequestsView": [
     "widget.MYRequestsView"
   ],

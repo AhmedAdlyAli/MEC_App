@@ -1,0 +1,13 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyClass"
+    },
+    "name": "MyClass",
+    "designerId": "07376d4e-cac1-47a7-95b5-aef09e35442f"
+}

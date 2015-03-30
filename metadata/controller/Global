@@ -1,0 +1,60 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "Ext.Global"
+        ],
+        "designer|userAlias": "",
+        "designer|userClassName": "Global",
+        "singleton": true
+    },
+    "name": "MyClass1",
+    "designerId": "9ce4c185-2173-4269-af48-0fe93a6e6860",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LoadLocalization",
+                "implHandler": [
+                    "",
+                    "",
+                    "var loc = Ext.create('MEC_App.controller.LocAr');",
+                    "",
+                    "",
+                    "loc.Load(this);"
+                ]
+            },
+            "name": "LoadLocalization",
+            "designerId": "2d8bda64-846f-41b7-89bb-59a8de4c58dc"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view"
+                ],
+                "fn": "GetViewTitle",
+                "implHandler": [
+                    "  return this.ViewTitles[view];"
+                ]
+            },
+            "name": "GetViewTitle",
+            "designerId": "e8dae46a-895d-4524-9af1-492443bcd1da"
+        }
+    ]
+}
