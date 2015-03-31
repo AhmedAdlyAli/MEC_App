@@ -32,7 +32,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: 'الريئيسية',
+                title: 'الرئيسية',
                 itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
@@ -268,11 +268,11 @@ Ext.define('MEC_App.view.MainNavView', {
         var theMenu = Ext.create('MEC_App.view.SideMenu');
 
 
-              Ext.Viewport.setMenu(theMenu,{
-                  side: 'right',
-                  reveal: false,
-                  cover: false
-               });
+        Ext.Viewport.setMenu(theMenu,{
+            side: 'right',
+            reveal: false,
+            cover: false
+        });
 
 
 
@@ -299,6 +299,10 @@ Ext.define('MEC_App.view.MainNavView', {
         this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
         this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
         this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
+
+
+        //Ext.getCmp('pnlHome').setTitle('Changed Title');
+
 
 
 

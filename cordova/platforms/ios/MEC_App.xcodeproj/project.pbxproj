@@ -29,7 +29,7 @@
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
 		5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */; };
-		629A20281AC93D2500A37BF9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 629A20271AC93D2500A37BF9 /* logo.png */; };
+		621D560C1ACA4F910023D8A5 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 621D560B1ACA4F910023D8A5 /* splash.png */; };
 		62C289B31AC92DC4000F3B44 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62C289B21AC92DC4000F3B44 /* Images.xcassets */; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
 		7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D51810823500FA85AD /* icon-40@2x.png */; };
@@ -89,9 +89,10 @@
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* MEC_App-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MEC_App-Prefix.pch"; sourceTree = "<group>"; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		621D560B1ACA4F910023D8A5 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		6260D6851AC971870089AEB9 /* MEC_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = MEC_App.entitlements; path = MEC_App/MEC_App.entitlements; sourceTree = "<group>"; };
-		629A20271AC93D2500A37BF9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		62C289B21AC92DC4000F3B44 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MEC_App/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		62C839081ACA3EB600BEE23E /* logo120X120 */ = {isa = PBXFileReference; lastKnownFileType = file; path = logo120X120; sourceTree = "<group>"; };
 		7E7966D41810823500FA85AD /* icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40.png"; sourceTree = "<group>"; };
 		7E7966D51810823500FA85AD /* icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40@2x.png"; sourceTree = "<group>"; };
 		7E7966D61810823500FA85AD /* icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-50.png"; sourceTree = "<group>"; };
@@ -216,7 +217,7 @@
 		308D052D1370CCF300D202BF /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				629A20271AC93D2500A37BF9 /* logo.png */,
+				62C839081ACA3EB600BEE23E /* logo120X120 */,
 				30C1856519D5FC0A00212699 /* icon-60@3x.png */,
 				7E7966D41810823500FA85AD /* icon-40.png */,
 				7E7966D51810823500FA85AD /* icon-40@2x.png */,
@@ -239,6 +240,7 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
+				621D560B1ACA4F910023D8A5 /* splash.png */,
 				30B4F2FD19D5E07200D9F7D8 /* Default-667h.png */,
 				30B4F2FE19D5E07200D9F7D8 /* Default-736h.png */,
 				30B4F2FF19D5E07200D9F7D8 /* Default-Landscape-736h.png */,
@@ -350,11 +352,11 @@
 				7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */,
 				308D05371370CCF300D202BF /* icon-72.png in Resources */,
 				30B4F30119D5E07200D9F7D8 /* Default-736h.png in Resources */,
-				629A20281AC93D2500A37BF9 /* logo.png in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
 				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
 				7E7966E01810823500FA85AD /* icon-50.png in Resources */,
+				621D560C1ACA4F910023D8A5 /* splash.png in Resources */,
 				7E7966E31810823500FA85AD /* icon-60@2x.png in Resources */,
 				62C289B31AC92DC4000F3B44 /* Images.xcassets in Resources */,
 				7E7966E61810823500FA85AD /* icon-small.png in Resources */,
@@ -427,8 +429,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -464,8 +466,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MEC_App/MEC_App-Prefix.pch";

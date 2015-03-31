@@ -15,7 +15,7 @@
             },
             "viewportOrientation": "portrait"
         },
-        "urlPrefix": "http://localhost:1841",
+        "urlPrefix": "http://localhost:1843",
         "exportPath": "/sencha/MEC_App_Publish",
         "spacesToIndent": 4,
         "sdkPath": "",

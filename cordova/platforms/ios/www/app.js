@@ -62406,7 +62406,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: '?????????',
+                title: '????????',
                 itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
@@ -62639,7 +62639,8 @@ Ext.define('MEC_App.view.MainNavView', {
         var theMenu = Ext.create('MEC_App.view.SideMenu');
         Ext.Viewport.setMenu(theMenu, {
             side: 'right',
-            reveal: true
+            reveal: false,
+            cover: false
         });
         Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar().add({
             xtype: 'button',
@@ -62657,6 +62658,16 @@ Ext.define('MEC_App.view.MainNavView', {
         this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
         this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
         this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
+        //Ext.getCmp('pnlHome').setTitle('Changed Title');
+        Ext.Viewport.bodyElement.on('swipe', function(event, node, options) {
+            if (event.direction == 'left' && theMenu.isHidden()) {
+                Ext.Viewport.showMenu('right');
+            } else {
+                if (theMenu.isHidden()) {
+                    Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
+                }
+            }
+        });
     }
 });
 
@@ -63700,6 +63711,7 @@ Ext.define('MEC_App.view.ContactUsView', {
     extend: Ext.Panel,
     alias: 'widget.ContactUsView',
     config: {
+        itemId: 'mypanel',
         items: [
             {
                 xtype: 'button',
