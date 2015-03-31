@@ -34,7 +34,7 @@ Ext.define('MEC_App.view.MainNavView', {
             {
                 xtype: 'panel',
                 title: 'الريئيسية',
-                itemId: 'mypanel',
+                itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
                     {
@@ -69,13 +69,15 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'الخدمات العامة'
+                                                html: 'الخدمات العامة',
+                                                id: 'homeServices',
+                                                itemId: 'homeServices'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeServices',
+                                                itemId: 'homeServices1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -98,13 +100,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'المركز الاعلامي'
+                                                html: 'المركز الاعلامي',
+                                                itemId: 'btnMediaCenter'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeNews',
+                                                itemId: 'btnMediaCenter1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -134,13 +137,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'الاستعلامات والاصدارات '
+                                                html: 'الاستعلامات والاصدارات ',
+                                                itemId: 'homeInquire'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeInquire',
+                                                itemId: 'homeInquire1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -164,13 +168,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'المؤشرات والتقارير'
+                                                html: 'المؤشرات والتقارير',
+                                                itemId: 'homeReports'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeReports',
+                                                itemId: 'homeReports1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -201,13 +206,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'المبادرات والمشاريع'
+                                                html: 'المبادرات والمشاريع',
+                                                itemId: 'btnProjects'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeProjects',
+                                                itemId: 'btnProjects1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -231,13 +237,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'التواصل'
+                                                html: 'التواصل',
+                                                itemId: 'homeContact'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeeContact',
+                                                itemId: 'homeContact1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -275,23 +282,27 @@ Ext.define('MEC_App.view.MainNavView', {
             iconCls: 'list',
             align:'right',
             handler: function(){
-
-
-
-                //Ext.Viewport.setActiveItem({xtype:'SideMenuView'});
-
-
-                //var theMenu = me.createMenu();
-
-        Ext.Viewport.toggleMenu('right');
-
-
-
-
-        }
+                Ext.Viewport.toggleMenu('right');
+            }
 
 
         });
+
+
+
+        //Localization
+
+        //this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));
+
+        this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
+        this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
+        this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
+        this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
+        this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
+        this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
+
+
+
 
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
             if (event.direction == 'left' && theMenu.isHidden()) {

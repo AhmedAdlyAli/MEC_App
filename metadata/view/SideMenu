@@ -88,8 +88,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|createAlias": "",
                                 "iconAlign": "right",
                                 "iconCls": "m-icon1",
+                                "id": "",
                                 "itemId": "btnHome",
                                 "layout|flex": 1,
                                 "text": "الرئيسية"
@@ -257,6 +259,39 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "this.down('#btnHome').setText(Ext.Global.GetViewTitle('Home'));",
+                    "this.down('#btnServices').setText(Ext.Global.GetViewTitle('PublicServices'));",
+                    "",
+                    "this.down('#btnMedai').setText(Ext.Global.GetViewTitle('MediaCenter'));",
+                    "this.down('#btnInquiry').setText(Ext.Global.GetViewTitle('Inquiries'));",
+                    "this.down('#btnContact').setText(Ext.Global.GetViewTitle('ContactUs'));",
+                    "this.down('#btnProjects').setText(Ext.Global.GetViewTitle('Projects'));",
+                    "this.down('#btnReports').setText(Ext.Global.GetViewTitle('Reports'));",
+                    "this.down('#btnSettings').setText(Ext.Global.GetViewTitle('Settings'));",
+                    "this.down('#btnLogin').setText(Ext.Global.GetViewTitle('LogivForm'));",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "8d57f1b7-04c8-4457-aef8-7fb3f0e20344"
         }
     ]
 }

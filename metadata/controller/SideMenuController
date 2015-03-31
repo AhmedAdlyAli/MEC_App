@@ -34,7 +34,7 @@
                     "",
                     "Ext.Viewport.getActiveItem().push({",
                     "    xtype: 'PublicServiceView',",
-                    "    title: Ext.Global.GetViewTitle('PublicService')",
+                    "    title: Ext.Global.GetViewTitle('PublicServices')",
                     "});",
                     "",
                     "",
@@ -319,7 +319,7 @@
                 "designer|targetType": "Ext.Img",
                 "fn": "onImgHomeTap",
                 "implHandler": [
-                    " Ext.Viewport.toggleMenu('right');  ",
+                    "Ext.Viewport.toggleMenu('right');",
                     "Ext.Viewport.getActiveItem().reset();"
                 ],
                 "name": "tap"

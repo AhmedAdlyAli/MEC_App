@@ -31,7 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "mypanel",
+                "itemId": "pnlMain",
                 "layout": "vbox",
                 "title": "الريئيسية"
             },
@@ -130,8 +130,10 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "الخدمات العامة",
+                                                "id": "homeServices",
+                                                "itemId": "homeServices",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
@@ -147,7 +149,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeServices",
+                                                "itemId": "homeServices1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -203,8 +205,9 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "المركز الاعلامي",
+                                                "itemId": "btnMediaCenter",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
@@ -220,7 +223,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeNews",
+                                                "itemId": "btnMediaCenter1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -292,8 +295,9 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "الاستعلامات والاصدارات ",
+                                                "itemId": "homeInquire",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
@@ -309,7 +313,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeInquire",
+                                                "itemId": "homeInquire1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -366,8 +370,9 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "المؤشرات والتقارير",
+                                                "itemId": "homeReports",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
@@ -383,7 +388,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeReports",
+                                                "itemId": "homeReports1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -456,8 +461,9 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "المبادرات والمشاريع",
+                                                "itemId": "btnProjects",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
@@ -473,7 +479,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeProjects",
+                                                "itemId": "btnProjects1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -530,8 +536,9 @@
                                                 "cls": [
                                                     "home-icon-text"
                                                 ],
-                                                "designer|displayName": "test1",
+                                                "designer|displayName": "",
                                                 "html": "التواصل",
+                                                "itemId": "homeContact",
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
@@ -547,7 +554,7 @@
                                             "userConfig": {
                                                 "bottom": 0,
                                                 "centered": true,
-                                                "itemId": "homeeContact",
+                                                "itemId": "homeContact1",
                                                 "layout|flex": null,
                                                 "left": 0,
                                                 "right": 0,
@@ -595,23 +602,27 @@
                     "    iconCls: 'list',",
                     "    align:'right',",
                     "    handler: function(){",
-                    "",
-                    "",
-                    "",
-                    "        //Ext.Viewport.setActiveItem({xtype:'SideMenuView'});",
-                    "",
-                    "",
-                    "        //var theMenu = me.createMenu();",
-                    "",
-                    "Ext.Viewport.toggleMenu('right');",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "}",
+                    "        Ext.Viewport.toggleMenu('right');",
+                    "    }",
                     "",
                     "",
                     "});",
+                    "",
+                    "",
+                    "",
+                    "//Localization",
+                    "",
+                    "//this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));",
+                    "",
+                    "this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));",
+                    "this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));",
+                    "this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));",
+                    "this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));",
+                    "this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));",
+                    "this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));",
+                    "",
+                    "",
+                    "",
                     "",
                     "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){",
                     "    if (event.direction == 'left' && theMenu.isHidden()) {",

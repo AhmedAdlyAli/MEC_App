@@ -26,12 +26,9 @@
             "userConfig": {
                 "fn": "LoadLocalization",
                 "implHandler": [
-                    "",
-                    "",
-                    "var loc = Ext.create('MEC_App.controller.LocAr');",
-                    "",
-                    "",
-                    "loc.Load(this);"
+                    "        var loc = Ext.create('MEC_App.controller.LocAr');",
+                    "        loc.Load(this);",
+                    ""
                 ]
             },
             "name": "LoadLocalization",
