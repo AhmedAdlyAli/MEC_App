@@ -429,7 +429,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -439,7 +439,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MEC_App/MEC_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,
@@ -453,7 +453,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "5ff7ae69-74f0-4512-924c-22be5fe2a965";
+				PROVISIONING_PROFILE = "8742ce1e-b640-48fe-a695-d35cbde70707";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -466,7 +466,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -474,7 +474,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MEC_App/MEC_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,
@@ -488,7 +488,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "5ff7ae69-74f0-4512-924c-22be5fe2a965";
+				PROVISIONING_PROFILE = "8742ce1e-b640-48fe-a695-d35cbde70707";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

@@ -54,7 +54,8 @@ Ext.define('MEC_App.view.ContactUsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: 'التواصل'
+                                        html: 'التواصل',
+                                        itemId: 'viewLbl'
                                     }
                                 ]
                             }
@@ -160,7 +161,7 @@ Ext.define('MEC_App.view.ContactUsView', {
         this.down('#contactBtn5').setHtml(Ext.Global.GetViewTitle('Employees'));
 
 
-
+        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('ContactUs'));
 
 
     }

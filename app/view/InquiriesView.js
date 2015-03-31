@@ -53,7 +53,8 @@ Ext.define('MEC_App.view.InquiriesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: 'الاستعلامات والاصدارات'
+                                        html: 'الاستعلامات والاصدارات',
+                                        itemId: 'viewLbl'
                                     }
                                 ]
                             }
@@ -161,7 +162,7 @@ Ext.define('MEC_App.view.InquiriesView', {
         this.down('#inquiriesBtn6').setHtml(Ext.Global.GetViewTitle('Violations'));
 
 
-
+        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Inquiries'));
 
 
 

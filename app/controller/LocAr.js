@@ -93,7 +93,7 @@ Ext.define('MEC_App.controller.LocAr', {
 
         g.GenericContent ={
 
-            HomeNews:"<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>"
+            HomeNews:'<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
         };
 
 

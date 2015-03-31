@@ -53,7 +53,8 @@ Ext.define('MEC_App.view.ReportsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: 'المؤشرات والتقارير'
+                                        html: 'المؤشرات والتقارير',
+                                        itemId: 'viewLbl'
                                     }
                                 ]
                             }
@@ -134,6 +135,8 @@ Ext.define('MEC_App.view.ReportsView', {
         this.down('#reportsBtn4').setHtml(Ext.Global.GetViewTitle('TradeReports'));
 
 
+
+        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Reports'));
 
 
 

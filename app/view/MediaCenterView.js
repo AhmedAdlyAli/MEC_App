@@ -55,7 +55,8 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: 'المركز الاعلامي'
+                                        html: 'المركز الاعلامي',
+                                        itemId: 'viewLbl'
                                     }
                                 ]
                             }
@@ -130,7 +131,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
         this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));
         this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));
 
-
+        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('MediaCenter'));
 
 
 

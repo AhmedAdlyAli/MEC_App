@@ -95,6 +95,7 @@
                                             "service-header-title"
                                         ],
                                         "html": "المركز الاعلامي",
+                                        "itemId": "viewLbl",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel2",
@@ -161,9 +162,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-
                                                 "itemId": "btnPublications",
-
                                                 "layout|flex": 1,
                                                 "text": "اصدارات الوزارة"
                                             },
@@ -180,9 +179,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-
                                                 "itemId": "btnMinistryNews",
-
                                                 "layout|flex": 1,
                                                 "text": "اصداء عن الوزارة"
                                             },
@@ -217,8 +214,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                       "itemId": "btnNews",
- 
+                                                "itemId": "btnNews",
                                                 "layout|flex": 1,
                                                 "text": "اخبار اقتصادية"
                                             },
@@ -262,7 +258,7 @@
                     "this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));",
                     "this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));",
                     "",
-                    "",
+                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('MediaCenter'));",
                     "",
                     "",
                     "",

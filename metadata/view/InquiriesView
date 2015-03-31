@@ -94,6 +94,7 @@
                                             "service-header-title"
                                         ],
                                         "html": "الاستعلامات والاصدارات",
+                                        "itemId": "viewLbl",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel2",
@@ -318,7 +319,7 @@
                     "this.down('#inquiriesBtn6').setHtml(Ext.Global.GetViewTitle('Violations'));",
                     "",
                     "",
-                    "",
+                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Inquiries'));",
                     "",
                     "",
                     "",

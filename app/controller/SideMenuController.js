@@ -104,13 +104,13 @@ Ext.define('MEC_App.controller.SideMenuController', {
     },
 
     onBtnContactTap: function(button, e, eOpts) {
-           Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
 
 
-                        Ext.Viewport.getActiveItem().push({
-                            xtype: 'InquiriesView',
-                            title:  Ext.Global.GetViewTitle('Inquiries')
-                        });
+        Ext.Viewport.getActiveItem().push({
+            xtype: 'ContactUsView',
+            title:  Ext.Global.GetViewTitle('ContactUs')
+        });
 
 
     },

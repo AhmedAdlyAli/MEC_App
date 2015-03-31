@@ -94,6 +94,7 @@
                                             "service-header-title"
                                         ],
                                         "html": "الخدمات العامة",
+                                        "itemId": "viewLbl",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel2",
@@ -353,7 +354,7 @@
             "userConfig": {
                 "fn": "initialize",
                 "implHandler": [
-                    "        this.callParent();",
+                    "this.callParent();",
                     "",
                     "",
                     "",
@@ -371,7 +372,7 @@
                     "",
                     "",
                     "",
-                    "",
+                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('PublicServices'));",
                     "",
                     ""
                 ]

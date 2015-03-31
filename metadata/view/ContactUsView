@@ -94,6 +94,7 @@
                                             "service-header-title"
                                         ],
                                         "html": "التواصل",
+                                        "itemId": "viewLbl",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel2",
@@ -316,7 +317,7 @@
                     "this.down('#contactBtn5').setHtml(Ext.Global.GetViewTitle('Employees'));",
                     "",
                     "",
-                    "",
+                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('ContactUs'));",
                     "",
                     ""
                 ]

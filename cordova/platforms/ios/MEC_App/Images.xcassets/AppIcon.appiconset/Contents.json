@@ -58,60 +58,70 @@
       "size" : "29x29",
       "idiom" : "ipad",
       "filename" : "logo120X120-9.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
       "filename" : "logo120X120-10.png",
+      "unassigned" : true,
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
       "filename" : "logo120X120-11.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
       "filename" : "logo120X120-12.png",
+      "unassigned" : true,
       "scale" : "2x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
       "filename" : "logo120X120-13.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "size" : "50x50",
       "idiom" : "ipad",
       "filename" : "logo120X120-14.png",
+      "unassigned" : true,
       "scale" : "2x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
       "filename" : "logo120X120-15.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "size" : "72x72",
       "idiom" : "ipad",
       "filename" : "logo120X120-16.png",
+      "unassigned" : true,
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
       "filename" : "logo120X120-17.png",
+      "unassigned" : true,
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
       "filename" : "logo120X120-18.png",
+      "unassigned" : true,
       "scale" : "2x"
     }
   ],

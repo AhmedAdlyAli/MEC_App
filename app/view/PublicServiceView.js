@@ -54,7 +54,8 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: 'الخدمات العامة'
+                                        html: 'الخدمات العامة',
+                                        itemId: 'viewLbl'
                                     }
                                 ]
                             }
@@ -166,7 +167,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
     },
 
     initialize: function() {
-                this.callParent();
+        this.callParent();
 
 
 
@@ -184,7 +185,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
 
 
 
-
+        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('PublicServices'));
 
 
     }

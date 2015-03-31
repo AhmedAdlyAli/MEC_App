@@ -94,6 +94,7 @@
                                             "service-header-title"
                                         ],
                                         "html": "المؤشرات والتقارير",
+                                        "itemId": "viewLbl",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel2",
@@ -262,6 +263,8 @@
                     "this.down('#reportsBtn4').setHtml(Ext.Global.GetViewTitle('TradeReports'));",
                     "",
                     "",
+                    "",
+                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Reports'));",
                     "",
                     "",
                     ""
