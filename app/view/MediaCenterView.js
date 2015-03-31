@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
     config: {
         fullscreen: true,
+        itemId: 'publicserviceview1',
         layout: 'fit',
         items: [
             {
@@ -79,7 +80,9 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'mediaCenterBtn2',
+
+                                                itemId: 'btnPublications',
+ 
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
                                                 text: 'اصدارات الوزارة'
@@ -87,7 +90,9 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'mediaCenterBtn',
+
+                                                itemId: 'btnMinistryNews',
+
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
                                                 text: 'اصداء عن الوزارة'
@@ -102,7 +107,9 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'mediaCenterBtn3',
+
+                                                itemId: 'btnNews',
+ 
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'اخبار اقتصادية'
@@ -120,6 +127,21 @@ Ext.define('MEC_App.view.MediaCenterView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        this.down('#btnPublications').setHtml(Ext.Global.GetViewTitle('MinistryPublications'));
+        this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));
+        this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));
+
+
+
+
+
+
+
     }
 
 });

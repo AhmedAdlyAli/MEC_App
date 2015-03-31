@@ -31,6 +31,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "id": "pnlMain",
                 "itemId": "pnlMain",
                 "layout": "vbox",
                 "title": "الرئيسية"
@@ -50,6 +51,8 @@
                             "home-header"
                         ],
                         "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
+                        "id": "pnlNews",
+                        "itemId": "pnlNews",
                         "layout|flex": 1
                     },
                     "name": "MyPanel1",
@@ -612,7 +615,8 @@
                     "",
                     "//Localization",
                     "",
-                    "//this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));",
+                    "",
+                    "//Ext.Viewport.getActiveItem().getNavigationBar().titleComponent.setTitle(Ext.Global.GetViewTitle('Home'));",
                     "",
                     "this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));",
                     "this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));",
@@ -622,14 +626,13 @@
                     "this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));",
                     "",
                     "",
-                    "//Ext.getCmp('pnlHome').setTitle('Changed Title');",
+                    "this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));",
                     "",
                     "",
                     "",
                     "",
+                    "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){",
                     "",
-                    "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){\t",
-                    "    ",
                     "    if (event.direction == 'left' && theMenu.isHidden()) {",
                     "        Ext.Viewport.showMenu('right');",
                     "    } else {",

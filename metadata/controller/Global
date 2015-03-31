@@ -52,6 +52,25 @@
             },
             "name": "GetViewTitle",
             "designerId": "e8dae46a-895d-4524-9af1-492443bcd1da"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "content"
+                ],
+                "fn": "GetGenericContent",
+                "implHandler": [
+                    "        return this.GenericContent[content];"
+                ]
+            },
+            "name": "GetGenericContent",
+            "designerId": "62b3797f-f72d-4d3e-a23e-1face50bb8f8"
         }
     ]
 }

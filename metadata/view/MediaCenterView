@@ -9,6 +9,7 @@
         "designer|userAlias": "MediaCenterView",
         "designer|userClassName": "MediaCenterView",
         "fullscreen": true,
+        "itemId": "publicserviceview1",
         "layout": "fit",
         "scrollable": null
     },
@@ -160,7 +161,9 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-                                                "itemId": "mediaCenterBtn2",
+
+                                                "itemId": "btnPublications",
+
                                                 "layout|flex": 1,
                                                 "text": "اصدارات الوزارة"
                                             },
@@ -177,7 +180,9 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "mediaCenterBtn",
+
+                                                "itemId": "btnMinistryNews",
+
                                                 "layout|flex": 1,
                                                 "text": "اصداء عن الوزارة"
                                             },
@@ -212,7 +217,8 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "mediaCenterBtn3",
+                                       "itemId": "btnNews",
+ 
                                                 "layout|flex": 1,
                                                 "text": "اخبار اقتصادية"
                                             },
@@ -239,6 +245,33 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "this.down('#btnPublications').setHtml(Ext.Global.GetViewTitle('MinistryPublications'));",
+                    "this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));",
+                    "this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "7c2bd592-85c8-4711-b427-c3930361af31"
         }
     ]
 }

@@ -32,6 +32,10 @@ Ext.define('MEC_App.controller.Global', {
 
     GetViewTitle: function(view) {
           return this.ViewTitles[view];
+    },
+
+    GetGenericContent: function(content) {
+                return this.GenericContent[content];
     }
 
 });

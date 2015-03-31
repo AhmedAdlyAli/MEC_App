@@ -33,6 +33,7 @@ Ext.define('MEC_App.view.MainNavView', {
             {
                 xtype: 'panel',
                 title: 'الرئيسية',
+                id: 'pnlMain',
                 itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
@@ -40,7 +41,9 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'home-header',
-                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
+                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
+                        id: 'pnlNews',
+                        itemId: 'pnlNews'
                     },
                     {
                         xtype: 'panel',
@@ -291,7 +294,8 @@ Ext.define('MEC_App.view.MainNavView', {
 
         //Localization
 
-        //this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));
+
+        //Ext.Viewport.getActiveItem().getNavigationBar().titleComponent.setTitle(Ext.Global.GetViewTitle('Home'));
 
         this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
         this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
@@ -301,8 +305,7 @@ Ext.define('MEC_App.view.MainNavView', {
         this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
 
 
-        //Ext.getCmp('pnlHome').setTitle('Changed Title');
-
+        this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
 
 
 
