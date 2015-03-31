@@ -28,7 +28,6 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'mainNav',
-        scrollable: false,
         defaultBackButtonText: ' ',
         items: [
             {
@@ -305,10 +304,11 @@ Ext.define('MEC_App.view.MainNavView', {
 
 
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
+
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
             } else {
-                if (theMenu.isHidden()) {
+                if (theMenu.isHidden() && event.startX < 20) {
                     Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
                 }
 

@@ -18,7 +18,7 @@
         "requires": [
             "Ext.Menu"
         ],
-        "scrollable": false
+        "scrollable": null
     },
     "name": "MyNavigationView",
     "designerId": "a987dc04-f69b-4794-9834-ad522768096a",
@@ -624,14 +624,15 @@
                     "",
                     "",
                     "",
-                    "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){",
+                    "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){\t",
+                    "    ",
                     "    if (event.direction == 'left' && theMenu.isHidden()) {",
                     "        Ext.Viewport.showMenu('right');",
                     "    } else {",
-                    "        if (theMenu.isHidden()) {",
+                    "        if (theMenu.isHidden() && event.startX < 20) {",
                     "            Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');",
                     "        }",
-                    "        ",
+                    "",
                     "    }",
                     "",
                     "});",
