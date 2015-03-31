@@ -62401,7 +62401,6 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'mainNav',
-        scrollable: false,
         defaultBackButtonText: ' ',
         items: [
             {
@@ -62663,7 +62662,7 @@ Ext.define('MEC_App.view.MainNavView', {
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
             } else {
-                if (theMenu.isHidden()) {
+                if (theMenu.isHidden() && event.startX < 20) {
                     Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
                 }
             }
@@ -63670,7 +63669,103 @@ Ext.define('MEC_App.view.PublicServiceView', {
 Ext.define('MEC_App.view.MediaCenterView', {
     extend: Ext.Panel,
     alias: 'widget.MediaCenterView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '?????? ????????'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '??????? ???????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '????? ?? ???????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '????? ????????'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -63690,7 +63785,130 @@ Ext.define('MEC_App.view.MediaCenterView', {
 Ext.define('MEC_App.view.InquiriesView', {
     extend: Ext.Panel,
     alias: 'widget.InquiriesView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '??????????? ??????????'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '????? ?? ??? ?????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '????? ?? ???? ?????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '???????????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '????? ????????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: '????? ????????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'supplyServicesBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: '????????? ??????????'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -63711,12 +63929,122 @@ Ext.define('MEC_App.view.ContactUsView', {
     extend: Ext.Panel,
     alias: 'widget.ContactUsView',
     config: {
-        itemId: 'mypanel',
+        fullscreen: true,
+        layout: 'fit',
         items: [
             {
-                xtype: 'button',
-                itemId: 'mybutton2',
-                text: 'MyButton2'
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '???????'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '?? ???????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '??????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '???????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: '????? ????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: '????? ???????'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
@@ -63759,7 +64087,107 @@ Ext.define('MEC_App.view.ProjectsView', {
 Ext.define('MEC_App.view.ReportsView', {
     extend: Ext.Panel,
     alias: 'widget.ReportsView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '???????? ?????????'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '?????? ????????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '?????? ???????'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '?????? ?????????'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: '????? ???????? ????????'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*

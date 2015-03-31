@@ -62301,17 +62301,6 @@ Ext.define('MEC_App.controller.LocAr', {
     config: {},
     Load: function(g) {
         g.ViewTitles = {
-<<<<<<< Updated upstream
-            'Home': '«·—∆Ì”Ì…',
-            'PublicServices': '«·Œœ„«  «·⁄«„…',
-            'MediaCenter': ' «·„—ﬂ“ «·«⁄·«„Ì',
-            'Inquiries': '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
-            'ContactUs': '« ’· »‰«',
-            'Projects': '«·„»«œ—«  Ê«·„‘«—Ì⁄',
-            'Reports': '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
-            'Settings': '«·«⁄œ«œ« ',
-            'LogivForm': ' ”ÃÌ· «·œŒÊ·'
-=======
             'Home': '????????',
             'PublicServices': '??????? ??????',
             'MediaCenter': ' ?????? ????????',
@@ -62321,7 +62310,6 @@ Ext.define('MEC_App.controller.LocAr', {
             'Reports': '???????? ?????????',
             'Settings': '?????????',
             'LogivForm': '????? ??????'
->>>>>>> Stashed changes
         };
     }
 });
@@ -62417,11 +62405,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-<<<<<<< Updated upstream
-                title: '«·—Ì∆Ì”Ì…',
-=======
                 title: '????????',
->>>>>>> Stashed changes
                 itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
@@ -62457,11 +62441,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«·Œœ„«  «·⁄«„…',
-=======
                                                 html: '??????? ??????',
->>>>>>> Stashed changes
                                                 id: 'homeServices',
                                                 itemId: 'homeServices'
                                             },
@@ -62492,11 +62472,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«·„—ﬂ“ «·«⁄·«„Ì',
-=======
                                                 html: '?????? ????????',
->>>>>>> Stashed changes
                                                 itemId: 'btnMediaCenter'
                                             },
                                             {
@@ -62533,11 +62509,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
-=======
                                                 html: '??????????? ?????????? ',
->>>>>>> Stashed changes
                                                 itemId: 'homeInquire'
                                             },
                                             {
@@ -62568,11 +62540,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
-=======
                                                 html: '???????? ?????????',
->>>>>>> Stashed changes
                                                 itemId: 'homeReports'
                                             },
                                             {
@@ -62610,11 +62578,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«·„»«œ—«  Ê«·„‘«—Ì⁄',
-=======
                                                 html: '????????? ?????????',
->>>>>>> Stashed changes
                                                 itemId: 'btnProjects'
                                             },
                                             {
@@ -62645,11 +62609,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-<<<<<<< Updated upstream
-                                                html: '«· Ê«’·',
-=======
                                                 html: '???????',
->>>>>>> Stashed changes
                                                 itemId: 'homeContact'
                                             },
                                             {
@@ -62702,7 +62662,7 @@ Ext.define('MEC_App.view.MainNavView', {
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
             } else {
-                if (theMenu.isHidden()) {
+                if (theMenu.isHidden() && event.startX < 20) {
                     Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
                 }
             }
@@ -62961,31 +62921,6 @@ Ext.define('MEC_App.controller.PrintOffices', {
             title: 'PrintOffice Details',
             record: record
         });
-<<<<<<< Updated upstream
-        Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar().add({
-            xtype: 'button',
-            iconCls: 'list',
-            align: 'right',
-            handler: function() {
-                Ext.Viewport.toggleMenu('right');
-            }
-        });
-        //Localization
-        //this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));
-        this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
-        this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
-        this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
-        this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
-        this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
-        this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
-        Ext.Viewport.bodyElement.on('swipe', function(event, node, options) {
-            if (event.direction == 'left' && theMenu.isHidden()) {
-                Ext.Viewport.showMenu('right');
-            } else {
-                if (theMenu.isHidden() && event.startX < 20) {
-                    Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
-                }
-=======
     },
     add: function() {
         // Remove current selection
@@ -63053,7 +62988,6 @@ Ext.define('MEC_App.controller.PrintOffices', {
                 store.remove(record);
                 // Back to list view
                 me.getNavView().reset();
->>>>>>> Stashed changes
             }
         });
     },
@@ -63160,31 +63094,8 @@ Ext.define('MEC_App.controller.SideMenuController', {
             "button#btnLogin": {
                 tap: 'onBtnLoginTap'
             },
-<<<<<<< Updated upstream
-            "button#homeeContact": {
-                tap: 'onHomeeContactTap'
-            },
-            "button#homeServices1": {
-                tap: 'onHomeServices1Tap'
-            },
-            "button#btnMediaCenter1": {
-                tap: 'onBtnMediaCenter1Tap'
-            },
-            "button#homeInquire1": {
-                tap: 'onHomeInquire1Tap'
-            },
-            "button#homeReports1": {
-                tap: 'onHomeReports1Tap'
-            },
-            "button#btnProjects1": {
-                tap: 'onBtnProjects1Tap'
-            },
-            "button#homeContact1": {
-                tap: 'onHomeContact1Tap'
-=======
             "image#imgHome": {
                 tap: 'onImgHomeTap'
->>>>>>> Stashed changes
             }
         }
     },
@@ -63248,54 +63159,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             title: Ext.Global.GetViewTitle('LogivForm')
         });
     },
-<<<<<<< Updated upstream
-    onHomeeContactTap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ContactUsView',
-            title: "«· Ê«’·"
-        });
-    },
-    onHomeServices1Tap: function(button, e, eOpts) {
-        //heeeeeee
-        button.up('MainNavView').push({
-            xtype: 'PublicServiceView',
-            title: Ext.Global.GetViewTitle('PublicServices')
-        });
-    },
-    onBtnMediaCenter1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'MediaCenterView',
-            title: Ext.Global.GetViewTitle('MediaCenter')
-        });
-    },
-    onHomeInquire1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'InquiriesView',
-            title: Ext.Global.GetViewTitle('Inquiries')
-        });
-    },
-    onHomeReports1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ReportsView',
-            title: Ext.Global.GetViewTitle('Reports')
-        });
-    },
-    onBtnProjects1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ProjectsView',
-            title: Ext.Global.GetViewTitle('Projects')
-        });
-    },
-    onHomeContact1Tap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'ContactUsView',
-            title: Ext.Global.GetViewTitle('ContactUs')
-        });
-=======
     onImgHomeTap: function(image, e, eOpts) {
         Ext.Viewport.toggleMenu('right');
         Ext.Viewport.getActiveItem().reset();
->>>>>>> Stashed changes
     }
 });
 
@@ -63596,73 +63462,6 @@ Ext.define('MEC_App.store.PrintOffices', {
         proxy: {
             type: 'memory'
         }
-<<<<<<< Updated upstream
-    },
-    onBtnServicesTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'PublicServiceView',
-            title: Ext.Global.GetViewTitle('PublicServices')
-        });
-    },
-    onBtnHomeTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().reset();
-    },
-    onBtnMedaiTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'MediaCenterView',
-            title: Ext.Global.GetViewTitle('MediaCenter')
-        });
-    },
-    onBtnInquiryTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'InquiriesView',
-            title: Ext.Global.GetViewTitle('Inquiries')
-        });
-    },
-    onBtnContactTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'InquiriesView',
-            title: Ext.Global.GetViewTitle('Inquiries')
-        });
-    },
-    onBtnProjectsTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'ProjectsView',
-            title: Ext.Global.GetViewTitle('Projects')
-        });
-    },
-    onBtnReportsTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'ReportsView',
-            title: Ext.Global.GetViewTitle('Reports')
-        });
-    },
-    onBtnSettingsTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'SettingsView',
-            title: Ext.Global.GetViewTitle('Settings')
-        });
-    },
-    onBtnLoginTap: function(button, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'LogivFormView',
-            title: Ext.Global.GetViewTitle('LogivForm')
-        });
-    },
-    onImgHomeTap: function(image, e, eOpts) {
-        Ext.Viewport.toggleMenu('right');
-        Ext.Viewport.getActiveItem().reset();
-=======
->>>>>>> Stashed changes
     }
 });
 
@@ -63900,7 +63699,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '«·„—ﬂ“ «·«⁄·«„Ì'
+                                        html: '?????? ????????'
                                     }
                                 ]
                             }
@@ -63928,7 +63727,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '«’œ«—«  «·Ê“«—…'
+                                                text: '??????? ???????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63936,7 +63735,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '«’œ«¡ ⁄‰ «·Ê“«—…'
+                                                text: '????? ?? ???????'
                                             }
                                         ]
                                     },
@@ -63951,7 +63750,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '«Œ»«— «ﬁ ’«œÌ…'
+                                                text: '????? ????????'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -64016,7 +63815,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '«·«” ⁄·«„«  Ê«·«’œ«—« '
+                                        html: '??????????? ??????????'
                                     }
                                 ]
                             }
@@ -64044,7 +63843,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '«·»ÕÀ ⁄‰ «”„  Ã«—Ì'
+                                                text: '????? ?? ??? ?????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64052,7 +63851,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '«·»ÕÀ ⁄‰ ‰‘«ÿ  Ã«—Ì'
+                                                text: '????? ?? ???? ?????'
                                             }
                                         ]
                                     },
@@ -64067,7 +63866,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '«·«” œ⁄«¡« '
+                                                text: '???????????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64075,7 +63874,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: 'Àﬁ«›… «·„” Â·ﬂ'
+                                                text: '????? ????????'
                                             }
                                         ]
                                     },
@@ -64090,7 +63889,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: 'Àﬁ«›… «·„” À„—'
+                                                text: '????? ????????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64098,7 +63897,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'supplyServicesBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '«·„Œ«·›«  Ê«·«€·«ﬁ« '
+                                                text: '????????? ??????????'
                                             }
                                         ]
                                     }
@@ -64159,7 +63958,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '«· Ê«’·'
+                                        html: '???????'
                                     }
                                 ]
                             }
@@ -64187,7 +63986,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '⁄‰ «·Ê“«—…'
+                                                text: '?? ???????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64195,7 +63994,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '«·›—Ê⁄'
+                                                text: '??????'
                                             }
                                         ]
                                     },
@@ -64210,7 +64009,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '„ﬁ —Õ« '
+                                                text: '???????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64218,7 +64017,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: ' Ê«’· „⁄‰«'
+                                                text: '????? ????'
                                             }
                                         ]
                                     },
@@ -64233,7 +64032,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '„ÊŸ›Ê «·Ê“«—…'
+                                                text: '????? ???????'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -64318,7 +64117,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
+                                        html: '???????? ?????????'
                                     }
                                 ]
                             }
@@ -64346,7 +64145,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '„ƒ‘—«  «ﬁ ’«œÌ…'
+                                                text: '?????? ????????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64354,7 +64153,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '„ƒ‘—«  «·«⁄„«·'
+                                                text: '?????? ???????'
                                             }
                                         ]
                                     },
@@ -64369,7 +64168,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '„ƒ‘—«  «” Â·«ﬂÌ…'
+                                                text: '?????? ?????????'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64377,7 +64176,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: ' ﬁ—Ì— «·⁄·«„«  «· Ã«—Ì…'
+                                                text: '????? ???????? ????????'
                                             }
                                         ]
                                     }
