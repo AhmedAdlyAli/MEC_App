@@ -7,8 +7,242 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "ReportsView",
-        "designer|userClassName": "ReportsView"
+        "designer|userClassName": "ReportsView",
+        "fullscreen": true,
+        "layout": "fit",
+        "scrollable": null
     },
-    "name": "MyPanel",
-    "designerId": "5d31fee4-216c-43d3-8a20-0d5df2c1ebfb"
+    "name": "InquiriesView1",
+    "designerId": "4a0cd04b-c28e-477e-a81a-e02be07018db",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
+            },
+            "name": "MyPanel14",
+            "designerId": "e64464e3-e559-49a2-a67c-1c3ce56c7242",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "1b254a35-69df-4f37-8a99-1a685b96a5bd",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "d0ba032c-4c45-47c0-8609-48ed8ec2e65e",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-icon"
+                                        ],
+                                        "layout|flex": 2
+                                    },
+                                    "name": "MyPanel16",
+                                    "designerId": "5d0f8586-4fa8-4953-bc92-c0136d706d54"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "المؤشرات والتقارير",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "d2714744-eb91-4eae-a180-40a9bc111949"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": "vertical"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "d42e4bab-0e1f-4130-999e-f9231ee194a0",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel9",
+                            "designerId": "b51412d4-1060-4817-8a47-1e7304ef8280",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel11",
+                                    "designerId": "f5a852d0-f250-4534-acd2-484ae59744ec",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-business",
+                                                "itemId": "myServiceBtn",
+                                                "layout|flex": 1,
+                                                "text": "مؤشرات اقتصادية"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "8d4a2b20-c513-4376-ae1e-942a0a3926f9"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "printOfficeBtn",
+                                                "layout|flex": 1,
+                                                "text": "مؤشرات الاعمال"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "5ae08204-68d7-4233-94c6-1e03089ba749"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "4d47849f-78e9-46e4-b036-298c9d180f78",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-request",
+                                                "itemId": "myRequestsBtn",
+                                                "layout|flex": 1,
+                                                "text": "مؤشرات استهلاكية"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "384b8694-8e68-46b7-9d59-0e0293b9584e"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-supply",
+                                                "itemId": "myRequestsBtn1",
+                                                "layout|flex": 1,
+                                                "text": "تقرير العلامات التجارية"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "fa7b68e7-aba9-444d-b5ff-95f0bf31d040"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

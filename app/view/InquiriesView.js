@@ -17,7 +17,135 @@ Ext.define('MEC_App.view.InquiriesView', {
     extend: 'Ext.Panel',
     alias: 'widget.InquiriesView',
 
+    requires: [
+        'Ext.Panel',
+        'Ext.Label',
+        'Ext.Button'
+    ],
+
     config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'الاستعلامات والاصدارات'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: 'البحث عن اسم تجاري'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'البحث عن نشاط تجاري'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: 'الاستدعاءات'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: 'ثقافة المستهلك'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: 'ثقافة المستثمر'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'supplyServicesBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: 'المخالفات والاغلاقات'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 
 });

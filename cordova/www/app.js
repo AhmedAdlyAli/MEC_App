@@ -62302,8 +62302,8 @@ Ext.define('MEC_App.controller.LocAr', {
     Load: function(g) {
         g.ViewTitles = {
             'Home': '«·—∆Ì”Ì…',
-            'MediaCenter': ' «·„—ﬂ“ «·«⁄·«„Ì',
             'PublicServices': '«·Œœ„«  «·⁄«„…',
+            'MediaCenter': ' «·„—ﬂ“ «·«⁄·«„Ì',
             'Inquiries': '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
             'ContactUs': '« ’· »‰«',
             'Projects': '«·„»«œ—«  Ê«·„‘«—Ì⁄',
@@ -62701,13 +62701,12 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'mainNav',
-        scrollable: false,
         defaultBackButtonText: ' ',
         items: [
             {
                 xtype: 'panel',
                 title: '«·—Ì∆Ì”Ì…',
-                itemId: 'mypanel',
+                itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
                     {
@@ -62742,13 +62741,15 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«·Œœ„«  «·⁄«„…'
+                                                html: '«·Œœ„«  «·⁄«„…',
+                                                id: 'homeServices',
+                                                itemId: 'homeServices'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeServices',
+                                                itemId: 'homeServices1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62771,13 +62772,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«·„—ﬂ“ «·«⁄·«„Ì'
+                                                html: '«·„—ﬂ“ «·«⁄·«„Ì',
+                                                itemId: 'btnMediaCenter'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeNews',
+                                                itemId: 'btnMediaCenter1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62807,13 +62809,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«·«” ⁄·«„«  Ê«·«’œ«—«  '
+                                                html: '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
+                                                itemId: 'homeInquire'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeInquire',
+                                                itemId: 'homeInquire1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62837,13 +62840,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
+                                                html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
+                                                itemId: 'homeReports'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeReports',
+                                                itemId: 'homeReports1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62874,13 +62878,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«·„»«œ—«  Ê«·„‘«—Ì⁄'
+                                                html: '«·„»«œ—«  Ê«·„‘«—Ì⁄',
+                                                itemId: 'btnProjects'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeProjects',
+                                                itemId: 'btnProjects1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62904,13 +62909,14 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '«· Ê«’·'
+                                                html: '«· Ê«’·',
+                                                itemId: 'homeContact'
                                             },
                                             {
                                                 xtype: 'button',
                                                 bottom: 0,
                                                 centered: true,
-                                                itemId: 'homeeContact',
+                                                itemId: 'homeContact1',
                                                 left: 0,
                                                 right: 0,
                                                 top: 0,
@@ -62940,16 +62946,22 @@ Ext.define('MEC_App.view.MainNavView', {
             iconCls: 'list',
             align: 'right',
             handler: function() {
-                //Ext.Viewport.setActiveItem({xtype:'SideMenuView'});
-                //var theMenu = me.createMenu();
                 Ext.Viewport.toggleMenu('right');
             }
         });
+        //Localization
+        //this.down('#pnlHome').setHtml(Ext.Global.GetViewTitle('Home'));
+        this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
+        this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
+        this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
+        this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
+        this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
+        this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
         Ext.Viewport.bodyElement.on('swipe', function(event, node, options) {
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
             } else {
-                if (theMenu.isHidden()) {
+                if (theMenu.isHidden() && event.startX < 20) {
                     Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
                 }
             }
@@ -63004,6 +63016,24 @@ Ext.define('MEC_App.controller.HomeController', {
             },
             "button#homeeContact": {
                 tap: 'onHomeeContactTap'
+            },
+            "button#homeServices1": {
+                tap: 'onHomeServices1Tap'
+            },
+            "button#btnMediaCenter1": {
+                tap: 'onBtnMediaCenter1Tap'
+            },
+            "button#homeInquire1": {
+                tap: 'onHomeInquire1Tap'
+            },
+            "button#homeReports1": {
+                tap: 'onHomeReports1Tap'
+            },
+            "button#btnProjects1": {
+                tap: 'onBtnProjects1Tap'
+            },
+            "button#homeContact1": {
+                tap: 'onHomeContact1Tap'
             }
         }
     },
@@ -63064,6 +63094,43 @@ Ext.define('MEC_App.controller.HomeController', {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
             title: "«· Ê«’·"
+        });
+    },
+    onHomeServices1Tap: function(button, e, eOpts) {
+        //heeeeeee
+        button.up('MainNavView').push({
+            xtype: 'PublicServiceView',
+            title: Ext.Global.GetViewTitle('PublicServices')
+        });
+    },
+    onBtnMediaCenter1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'MediaCenterView',
+            title: Ext.Global.GetViewTitle('MediaCenter')
+        });
+    },
+    onHomeInquire1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'InquiriesView',
+            title: Ext.Global.GetViewTitle('Inquiries')
+        });
+    },
+    onHomeReports1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'ReportsView',
+            title: Ext.Global.GetViewTitle('Reports')
+        });
+    },
+    onBtnProjects1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'ProjectsView',
+            title: Ext.Global.GetViewTitle('Projects')
+        });
+    },
+    onHomeContact1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'ContactUsView',
+            title: Ext.Global.GetViewTitle('ContactUs')
         });
     }
 });
@@ -63335,7 +63402,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
         Ext.Viewport.toggleMenu('right');
         Ext.Viewport.getActiveItem().push({
             xtype: 'PublicServiceView',
-            title: Ext.Global.GetViewTitle('PublicService')
+            title: Ext.Global.GetViewTitle('PublicServices')
         });
     },
     onBtnHomeTap: function(button, e, eOpts) {
@@ -63601,7 +63668,103 @@ Ext.define('MEC_App.view.PublicServiceView', {
 Ext.define('MEC_App.view.MediaCenterView', {
     extend: Ext.Panel,
     alias: 'widget.MediaCenterView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '«·„—ﬂ“ «·«⁄·«„Ì'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '«’œ«—«  «·Ê“«—…'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '«’œ«¡ ⁄‰ «·Ê“«—…'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '«Œ»«— «ﬁ ’«œÌ…'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -63621,7 +63784,130 @@ Ext.define('MEC_App.view.MediaCenterView', {
 Ext.define('MEC_App.view.InquiriesView', {
     extend: Ext.Panel,
     alias: 'widget.InquiriesView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '«·«” ⁄·«„«  Ê«·«’œ«—« '
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '«·»ÕÀ ⁄‰ «”„  Ã«—Ì'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '«·»ÕÀ ⁄‰ ‰‘«ÿ  Ã«—Ì'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '«·«” œ⁄«¡« '
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: 'Àﬁ«›… «·„” Â·ﬂ'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: 'Àﬁ«›… «·„” À„—'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'supplyServicesBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: '«·„Œ«·›«  Ê«·«€·«ﬁ« '
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -63642,12 +63928,122 @@ Ext.define('MEC_App.view.ContactUsView', {
     extend: Ext.Panel,
     alias: 'widget.ContactUsView',
     config: {
-        itemId: 'mypanel',
+        fullscreen: true,
+        layout: 'fit',
         items: [
             {
-                xtype: 'button',
-                itemId: 'mybutton2',
-                text: 'MyButton2'
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '«· Ê«’·'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '⁄‰ «·Ê“«—…'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '«·›—Ê⁄'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '„ﬁ —Õ« '
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: ' Ê«’· „⁄‰«'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: '„ÊŸ›Ê «·Ê“«—…'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
@@ -63690,7 +64086,107 @@ Ext.define('MEC_App.view.ProjectsView', {
 Ext.define('MEC_App.view.ReportsView', {
     extend: Ext.Panel,
     alias: 'widget.ReportsView',
-    config: {}
+    config: {
+        fullscreen: true,
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: '„ƒ‘—«  «ﬁ ’«œÌ…'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: '„ƒ‘—«  «·«⁄„«·'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: '„ƒ‘—«  «” Â·«ﬂÌ…'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: ' ﬁ—Ì— «·⁄·«„«  «· Ã«—Ì…'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -64327,6 +64823,7 @@ Ext.define('MEC_App.view.SideMenu', {
                             {
                                 xtype: 'button',
                                 flex: 1,
+                                id: '',
                                 itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
@@ -64408,6 +64905,18 @@ Ext.define('MEC_App.view.SideMenu', {
                 ]
             }
         ]
+    },
+    initialize: function() {
+        this.callParent();
+        this.down('#btnHome').setText(Ext.Global.GetViewTitle('Home'));
+        this.down('#btnServices').setText(Ext.Global.GetViewTitle('PublicServices'));
+        this.down('#btnMedai').setText(Ext.Global.GetViewTitle('MediaCenter'));
+        this.down('#btnInquiry').setText(Ext.Global.GetViewTitle('Inquiries'));
+        this.down('#btnContact').setText(Ext.Global.GetViewTitle('ContactUs'));
+        this.down('#btnProjects').setText(Ext.Global.GetViewTitle('Projects'));
+        this.down('#btnReports').setText(Ext.Global.GetViewTitle('Reports'));
+        this.down('#btnSettings').setText(Ext.Global.GetViewTitle('Settings'));
+        this.down('#btnLogin').setText(Ext.Global.GetViewTitle('LogivForm'));
     }
 });
 

@@ -8,9 +8,9 @@
         },
         "canvasControls": {
             "viewportSize": {
-                "name": "iPhone",
+                "name": "iPhone 5",
                 "builtIn": true,
-                "height": 480,
+                "height": 568,
                 "width": 320
             },
             "viewportOrientation": "portrait"
@@ -41,11 +41,11 @@
         "view": [
             "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "7b23aef6-db2d-4685-9251-d9486597a989",
-            "414fada4-8958-4adc-befa-ddc2e264e1d7",
-            "e1055513-c351-46d0-99d5-bb52247c8496",
-            "4257bee8-8e2f-452c-9f89-6ef5eafd86eb",
+            "4120aa2a-0201-4867-b1b7-de774744c5df",
+            "4a0cd04b-c28e-477e-a81a-e02be07018db",
+            "9f841d86-496b-40a3-a5a1-0a1d6404185c",
+            "05d7c039-6661-4fb5-ba60-169fb9b867d0",
             "107aadea-0be2-4848-b613-91a9dbc488dc",
-            "5d31fee4-216c-43d3-8a20-0d5df2c1ebfb",
             "ad686a47-69e6-4c20-9e12-d2fa56c317c3",
             "5f6262a7-58ba-4187-86b8-16314e12dc77",
             "4872b1ad-f612-4a9b-a8cc-b610878f1115",

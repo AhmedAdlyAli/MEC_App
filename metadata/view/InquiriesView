@@ -7,8 +7,294 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "InquiriesView",
-        "designer|userClassName": "InquiriesView"
+        "designer|userClassName": "InquiriesView",
+        "fullscreen": true,
+        "layout": "fit",
+        "scrollable": null
     },
-    "name": "MyPanel",
-    "designerId": "e1055513-c351-46d0-99d5-bb52247c8496"
+    "name": "PublicServiceView2",
+    "designerId": "4120aa2a-0201-4867-b1b7-de774744c5df",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
+            },
+            "name": "MyPanel14",
+            "designerId": "918f400e-b8bc-4e59-8351-eea0683c9e10",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "73c2ec11-21e2-426f-a776-4e56e530b75d",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "bf5fdc04-dc01-4537-9e2f-33ebe4603a16",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-icon"
+                                        ],
+                                        "layout|flex": 2
+                                    },
+                                    "name": "MyPanel16",
+                                    "designerId": "049346e8-f720-45d1-9b93-7baf16fb58a1"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "الاستعلامات والاصدارات",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "aaeb780a-6102-48b1-9e18-425d51e51c81"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": "vertical"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "1f60c941-f631-4bf4-a6ad-c855d5fb6711",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel9",
+                            "designerId": "31b385a1-211a-43f0-8f76-3617210cee0c",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel11",
+                                    "designerId": "198df3c6-0e41-4150-9560-faf8bdcb2cf8",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-business",
+                                                "itemId": "myServiceBtn",
+                                                "layout|flex": 1,
+                                                "text": "البحث عن اسم تجاري"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "da99fab8-07f7-4b77-baa3-68e426c9d035"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "printOfficeBtn",
+                                                "layout|flex": 1,
+                                                "text": "البحث عن نشاط تجاري"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "bb27a4ed-f8c1-4da6-ad99-62337e194d32"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "fa63aaa0-d5a3-45b9-974b-0172e0d3fdf8",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-request",
+                                                "itemId": "myRequestsBtn",
+                                                "layout|flex": 1,
+                                                "text": "الاستدعاءات"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "fbee1fed-b0e0-4696-88c6-2b8d35f54c3d"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-request",
+                                                "itemId": "myRequestsBtn1",
+                                                "layout|flex": 1,
+                                                "text": "ثقافة المستهلك"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "f90d60a7-86a8-4c90-a999-ce0435dbe922"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel13",
+                                    "designerId": "41bdaf6a-4982-4db6-9ca5-ffb262cfcb9f",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-complain",
+                                                "itemId": "complainsBtn",
+                                                "layout|flex": 1,
+                                                "text": "ثقافة المستثمر"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "c5ef7d3f-f948-4d14-b1b3-6c254efac11f"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-supply",
+                                                "itemId": "supplyServicesBtn",
+                                                "layout|flex": 1,
+                                                "text": "المخالفات والاغلاقات"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "e91b991c-a3ec-4355-adaf-6b2b5c8958a2"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

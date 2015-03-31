@@ -18,16 +18,129 @@ Ext.define('MEC_App.view.ContactUsView', {
     alias: 'widget.ContactUsView',
 
     requires: [
-        'Ext.Button'
+        'Ext.Panel',
+        'Ext.Label',
+        'Ext.Button',
+        'Ext.Spacer'
     ],
 
     config: {
-        itemId: 'mypanel',
+        fullscreen: true,
+        layout: 'fit',
         items: [
             {
-                xtype: 'button',
-                itemId: 'mybutton2',
-                text: 'MyButton2'
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'التواصل'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: 'vertical',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myServiceBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-business',
+                                                text: 'عن الوزارة'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'الفروع'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-my-request',
+                                                text: 'مقترحات'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'myRequestsBtn1',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-supply',
+                                                text: 'تواصل معنا'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'complainsBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-complain',
+                                                text: 'موظفو الوزارة'
+                                            },
+                                            {
+                                                xtype: 'spacer',
+                                                flex: 1
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

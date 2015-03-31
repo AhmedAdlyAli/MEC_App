@@ -8,24 +8,289 @@
     "userConfig": {
         "designer|userAlias": "ContactUsView",
         "designer|userClassName": "ContactUsView",
-        "itemId": "mypanel"
+        "fullscreen": true,
+        "layout": "fit",
+        "scrollable": null
     },
-    "name": "MyPanel",
-    "designerId": "4257bee8-8e2f-452c-9f89-6ef5eafd86eb",
+    "name": "InquiriesView1",
+    "designerId": "9f841d86-496b-40a3-a5a1-0a1d6404185c",
     "cn": [
         {
-            "type": "Ext.Button",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "mybutton2",
-                "text": "MyButton2"
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
             },
-            "name": "MyButton2",
-            "designerId": "8a580aa2-67ed-4569-9dd2-7157d90eb0e5"
+            "name": "MyPanel14",
+            "designerId": "9c3b1758-f3f9-4cba-8ed3-6d5f8f83d986",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "a356e69a-e4f6-4e57-a3a5-f374ef068e3a",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "31943aa4-e6a0-488a-94ab-e77186275b3c",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-icon"
+                                        ],
+                                        "layout|flex": 2
+                                    },
+                                    "name": "MyPanel16",
+                                    "designerId": "e1d04f14-1f18-4470-9644-441c390836d9"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "التواصل",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "35a5434a-35ba-41b8-a79c-44f6da337958"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": "vertical"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "1d0e7381-0354-477a-84b2-938b0c47dc81",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel9",
+                            "designerId": "7041a697-44ef-471a-b05f-cb9d6eac8eb5",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel11",
+                                    "designerId": "2271ac26-5ba1-450c-81b2-f839505f114e",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-business",
+                                                "itemId": "myServiceBtn",
+                                                "layout|flex": 1,
+                                                "text": "عن الوزارة"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "5e1dc546-6f7b-4d7c-990c-965bf2b97f3b"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "printOfficeBtn",
+                                                "layout|flex": 1,
+                                                "text": "الفروع"
+                                            },
+                                            "name": "MyButton8",
+                                            "designerId": "d1556927-d5f7-44c3-96d4-cea7da9f750c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "3cd93c94-e830-42ea-b0ff-be1c2bad7933",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-my-request",
+                                                "itemId": "myRequestsBtn",
+                                                "layout|flex": 1,
+                                                "text": "مقترحات"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "e02eda45-2039-4b77-a137-014fa40ee6d5"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-supply",
+                                                "itemId": "myRequestsBtn1",
+                                                "layout|flex": 1,
+                                                "text": "تواصل معنا"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "60ee24a9-6102-4a19-996b-dbb55001f90b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel13",
+                                    "designerId": "b3283929-ec42-4744-b297-c864b31e5ee7",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-complain",
+                                                "itemId": "complainsBtn",
+                                                "layout|flex": 1,
+                                                "text": "موظفو الوزارة"
+                                            },
+                                            "name": "MyButton7",
+                                            "designerId": "3eba76b4-e4fe-4b18-8c63-c1c361d05a6b"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 1
+                                            },
+                                            "name": "MySpacer1",
+                                            "designerId": "4142f5d7-9214-439c-b7e4-cede35f42ba8"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
