@@ -19,7 +19,6 @@ Ext.define('MEC_App.view.SideMenu', {
 
     requires: [
         'Ext.Panel',
-        'Ext.Img',
         'Ext.Button'
     ],
 
@@ -36,12 +35,12 @@ Ext.define('MEC_App.view.SideMenu', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'MenuTop',
+                        layout: 'vbox',
                         items: [
                             {
-                                xtype: 'image',
-                                height: 150,
-                                itemId: 'imgHome',
-                                src: 'resources/images/logo.png'
+                                xtype: 'panel',
+                                flex: 1,
+                                cls: 'logo'
                             }
                         ]
                     },

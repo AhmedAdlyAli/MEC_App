@@ -25,7 +25,8 @@
             "codeClass": null,
             "userConfig": {
                 "height": "100%",
-                "layout": "vbox"
+                "layout": "vbox",
+                "scrollable": null
             },
             "name": "MyPanel15",
             "designerId": "1bc80779-18d0-466d-be48-07624308447b",
@@ -41,25 +42,28 @@
                         "cls": [
                             "MenuTop"
                         ],
+                        "layout": "vbox",
                         "layout|flex": 1
                     },
                     "name": "MyPanel",
                     "designerId": "ec7f80f9-6612-46e5-8bf4-f8de8a1a6e2c",
                     "cn": [
                         {
-                            "type": "Ext.Img",
+                            "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": 150,
-                                "itemId": "imgHome",
-                                "src": "resources/images/logo.png"
+                                "cls": [
+                                    "logo"
+                                ],
+                                "height": null,
+                                "layout|flex": 1
                             },
-                            "name": "MyImg",
-                            "designerId": "0162521c-8ed5-4658-8e25-b7afba7d2cc2"
+                            "name": "MyPanel5",
+                            "designerId": "a5afe218-aac1-4aa4-a7ba-f7af92a06299"
                         }
                     ]
                 },

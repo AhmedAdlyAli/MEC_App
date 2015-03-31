@@ -31997,208 +31997,6 @@ Ext.define('Ext.Decorator', {
 });
 
 /**
- * This is a simple way to add an image of any size to your application and have it participate in the layout system
- * like any other component. This component typically takes between 1 and 3 configurations - a {@link #src}, and
- * optionally a {@link #height} and a {@link #width}:
- *
- *     @example miniphone
- *     var img = Ext.create('Ext.Img', {
- *         src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png',
- *         height: 64,
- *         width: 64
- *     });
- *     Ext.Viewport.add(img);
- *
- * It's also easy to add an image into a panel or other container using its xtype:
- *
- *     @example miniphone
- *     Ext.create('Ext.Panel', {
- *         fullscreen: true,
- *         layout: 'hbox',
- *         items: [
- *             {
- *                 xtype: 'image',
- *                 src: 'http://www.sencha.com/assets/images/sencha-avatar-64x64.png',
- *                 flex: 1
- *             },
- *             {
- *                 xtype: 'panel',
- *                 flex: 2,
- *                 html: 'Sencha Inc.<br/>1700 Seaport Boulevard Suite 120, Redwood City, CA'
- *             }
- *         ]
- *     });
- *
- * Here we created a panel which contains an image (a profile picture in this case) and a text area to allow the user
- * to enter profile information about themselves. In this case we used an {@link Ext.layout.HBox hbox layout} and
- * flexed the image to take up one third of the width and the text area to take two thirds of the width. See the
- * {@link Ext.layout.HBox hbox docs} for more information on flexing items.
- */
-Ext.define('Ext.Img', {
-    extend: Ext.Component,
-    xtype: [
-        'image',
-        'img'
-    ],
-    /**
-     * @event tap
-     * Fires whenever the component is tapped
-     * @param {Ext.Img} this The Image instance
-     * @param {Ext.EventObject} e The event object
-     */
-    /**
-     * @event load
-     * Fires when the image is loaded
-     * @param {Ext.Img} this The Image instance
-     * @param {Ext.EventObject} e The event object
-     */
-    /**
-     * @event error
-     * Fires if an error occured when trying to load the image
-     * @param {Ext.Img} this The Image instance
-     * @param {Ext.EventObject} e The event object
-     */
-    config: {
-        /**
-         * @cfg {String} src The source of this image
-         * @accessor
-         */
-        src: null,
-        /**
-         * @cfg
-         * @inheritdoc
-         */
-        baseCls: Ext.baseCSSPrefix + 'img',
-        /**
-         * @cfg {String} imageCls The CSS class to be used when {@link #mode} is not set to 'background'
-         * @accessor
-         */
-        imageCls: Ext.baseCSSPrefix + 'img-image',
-        /**
-         * @cfg {String} backgroundCls The CSS class to be used when {@link #mode} is set to 'background'
-         * @accessor
-         */
-        backgroundCls: Ext.baseCSSPrefix + 'img-background',
-        /**
-         * @cfg {String} mode If set to 'background', uses a background-image CSS property instead of an
-         * `<img>` tag to display the image.
-         */
-        mode: 'background'
-    },
-    beforeInitialize: function() {
-        var me = this;
-        me.onLoad = Ext.Function.bind(me.onLoad, me);
-        me.onError = Ext.Function.bind(me.onError, me);
-    },
-    initialize: function() {
-        var me = this;
-        me.callParent();
-        me.relayEvents(me.renderElement, '*');
-        me.element.on({
-            tap: 'onTap',
-            scope: me
-        });
-    },
-    hide: function() {
-        this.callParent(arguments);
-        this.hiddenSrc = this.hiddenSrc || this.getSrc();
-        this.setSrc(null);
-    },
-    show: function() {
-        this.callParent(arguments);
-        if (this.hiddenSrc) {
-            this.setSrc(this.hiddenSrc);
-            delete this.hiddenSrc;
-        }
-    },
-    updateMode: function(mode) {
-        var me = this,
-            imageCls = me.getImageCls(),
-            backgroundCls = me.getBackgroundCls();
-        if (mode === 'background') {
-            if (me.imageElement) {
-                me.imageElement.destroy();
-                delete me.imageElement;
-                me.updateSrc(me.getSrc());
-            }
-            me.replaceCls(imageCls, backgroundCls);
-        } else {
-            me.imageElement = me.element.createChild({
-                tag: 'img'
-            });
-            me.replaceCls(backgroundCls, imageCls);
-        }
-    },
-    updateImageCls: function(newCls, oldCls) {
-        this.replaceCls(oldCls, newCls);
-    },
-    updateBackgroundCls: function(newCls, oldCls) {
-        this.replaceCls(oldCls, newCls);
-    },
-    onTap: function(e) {
-        this.fireEvent('tap', this, e);
-    },
-    onAfterRender: function() {
-        this.updateSrc(this.getSrc());
-    },
-    /**
-     * @private
-     */
-    updateSrc: function(newSrc) {
-        var me = this,
-            dom;
-        if (me.getMode() === 'background') {
-            dom = this.imageObject || new Image();
-        } else {
-            dom = me.imageElement.dom;
-        }
-        this.imageObject = dom;
-        dom.setAttribute('src', Ext.isString(newSrc) ? newSrc : '');
-        dom.addEventListener('load', me.onLoad, false);
-        dom.addEventListener('error', me.onError, false);
-    },
-    detachListeners: function() {
-        var dom = this.imageObject;
-        if (dom) {
-            dom.removeEventListener('load', this.onLoad, false);
-            dom.removeEventListener('error', this.onError, false);
-        }
-    },
-    onLoad: function(e) {
-        this.detachListeners();
-        if (this.getMode() === 'background') {
-            this.element.dom.style.backgroundImage = 'url("' + this.imageObject.src + '")';
-        }
-        this.fireEvent('load', this, e);
-    },
-    onError: function(e) {
-        this.detachListeners();
-        // Attempt to set the src even though the error event fired.
-        if (this.getMode() === 'background') {
-            this.element.dom.style.backgroundImage = 'url("' + this.imageObject.src + '")';
-        }
-        this.fireEvent('error', this, e);
-    },
-    doSetWidth: function(width) {
-        var sizingElement = (this.getMode() === 'background') ? this.element : this.imageElement;
-        sizingElement.setWidth(width);
-        this.callParent(arguments);
-    },
-    doSetHeight: function(height) {
-        var sizingElement = (this.getMode() === 'background') ? this.element : this.imageElement;
-        sizingElement.setHeight(height);
-        this.callParent(arguments);
-    },
-    destroy: function() {
-        this.detachListeners();
-        Ext.destroy(this.imageObject, this.imageElement);
-        delete this.imageObject;
-        delete this.imageElement;
-        this.callParent();
-    }
-});
-
-/**
  * A simple label component which allows you to insert content using {@link #html} configuration.
  *
  *     @example miniphone
@@ -62301,15 +62099,15 @@ Ext.define('MEC_App.controller.LocAr', {
     config: {},
     Load: function(g) {
         g.ViewTitles = {
-            'Home': '????????',
-            'PublicServices': '??????? ??????',
-            'MediaCenter': ' ?????? ????????',
-            'Inquiries': '??????????? ?????????? ',
-            'ContactUs': '???? ???',
-            'Projects': '????????? ?????????',
-            'Reports': '???????? ?????????',
-            'Settings': '?????????',
-            'LogivForm': '????? ??????'
+            'Home': '«·—∆Ì”Ì…',
+            'PublicServices': '«·Œœ„«  «·⁄«„…',
+            'MediaCenter': ' «·„—ﬂ“ «·«⁄·«„Ì',
+            'Inquiries': '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
+            'ContactUs': '« ’· »‰«',
+            'Projects': '«·„»«œ—«  Ê«·„‘«—Ì⁄',
+            'Reports': '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
+            'Settings': '«·«⁄œ«œ« ',
+            'LogivForm': ' ”ÃÌ· «·œŒÊ·'
         };
     }
 });
@@ -62380,6 +62178,306 @@ Ext.define('MEC_App.model.MenuModel', {
     }
 });
 
+Ext.define('MEC_App.store.override.MenuArrayStore', {
+    override: 'MEC_App.store.MenuArrayStore',
+    config: {
+        data: [
+            {
+                ItemName: '«·—∆Ì”Ì…',
+                ItemView: 'MainNavView',
+                ItemIconURL: 'resources/images/m-home.png'
+            },
+            {
+                ItemName: '«·Œœ„«  «·⁄«„…',
+                ItemView: 'PublicServiceView',
+                ItemIconURL: 'resources/images/m-services.png'
+            },
+            {
+                ItemName: '«·„—ﬂ“ «·«⁄·«„Ì',
+                ItemView: 'MediaCenterView',
+                ItemIconURL: 'resources/images/m-media.png'
+            },
+            {
+                ItemName: '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
+                ItemView: 'InquiriesView',
+                ItemIconURL: 'resources/images/m-inq.png'
+            },
+            {
+                ItemName: '«· Ê«’·',
+                ItemView: 'ContactUsView',
+                ItemIconURL: 'resources/images/m-contact.png'
+            },
+            {
+                ItemName: '«·„»«œ—«  Ê«·„‘«—Ì⁄',
+                ItemView: 'ProjectsView',
+                ItemIconURL: 'resources/images/m-projects.png'
+            },
+            {
+                ItemName: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
+                ItemView: 'ReportsView',
+                ItemIconURL: 'resources/images/m-reports.png'
+            },
+            {
+                ItemName: '«·«⁄œ«œ« ',
+                ItemView: 'SettingsView',
+                ItemIconURL: 'resources/images/m-settings.png'
+            },
+            {
+                ItemName: ' ”ÃÌ· «·œŒÊ·',
+                ItemView: 'LogivFormView',
+                ItemIconURL: 'resources/images/m-login.png'
+            }
+        ]
+    }
+});
+
+/*
+ * File: app/store/MenuArrayStore.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.store.MenuArrayStore', {
+    extend: Ext.data.Store,
+    config: {
+        data: [
+            {
+                ItemName: 'ut',
+                ItemView: 'nihil',
+                ItemIconURL: 'http//:delectus.ca/dolorem/quos/quo.asmx'
+            },
+            {
+                ItemName: 'non',
+                ItemView: 'maiores',
+                ItemIconURL: 'https//:nam.info/nemo/beatae/autem'
+            },
+            {
+                ItemName: 'nobis',
+                ItemView: 'fuga',
+                ItemIconURL: 'http//:dolores.net/facilis'
+            },
+            {
+                ItemName: 'qui',
+                ItemView: 'sint',
+                ItemIconURL: 'http//:ut.biz/ut/fugiat.html'
+            },
+            {
+                ItemName: 'dolorum',
+                ItemView: 'vel',
+                ItemIconURL: 'https//:velit.io/libero/corrupti/placeat'
+            },
+            {
+                ItemName: 'delectus',
+                ItemView: 'sit',
+                ItemIconURL: 'https//:explicabo.io/reiciendis/et/laborum.asmx'
+            },
+            {
+                ItemName: 'sed',
+                ItemView: 'sapiente',
+                ItemIconURL: 'https//:ut.me/dignissimos/esse/rerum'
+            },
+            {
+                ItemName: 'sint',
+                ItemView: 'itaque',
+                ItemIconURL: 'http//:asperiores.me'
+            },
+            {
+                ItemName: 'ab',
+                ItemView: 'quod',
+                ItemIconURL: 'http//:dolor.io/deserunt/facilis'
+            }
+        ],
+        model: 'MEC_App.model.MenuModel',
+        storeId: 'MenuArrayStore',
+        proxy: {
+            type: 'ajax',
+            reader: {
+                type: 'array'
+            }
+        }
+    }
+});
+
+Ext.define('MEC_App.store.override.PrintOffices', {
+    override: 'MEC_App.store.PrintOffices',
+    config: {
+        data: [
+            {
+                ItemName: '‰„Ê–Ã «· ”ÃÌ· »«··€… «·⁄—»Ì…',
+                ItemView: 'BusinessIndicatorsReport'
+            },
+            {
+                ItemName: '‰„Ê–Ã «· ”ÃÌ· »«··€… «·«‰ﬂ·Ì“Ì…',
+                ItemView: 'BusinessIndicatorsReport'
+            },
+            {
+                ItemName: '‰„Ê–Ã ”Ã·  Ã«—Ì',
+                ItemView: 'BusinessIndicatorsReport'
+            },
+            {
+                ItemName: '‘Â«œ… ⁄œ„ „·ﬂÌ… «Ê „‘«—ﬂ… ›Ì ”Ã·  Ã«—Ì ',
+                ItemView: 'BusinessIndicatorsReport'
+            }
+        ]
+    }
+});
+
+/*
+ * File: app/store/PrintOffices.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.store.PrintOffices', {
+    extend: Ext.data.Store,
+    alias: 'store.printoffices',
+    config: {
+        data: [
+            {
+                ItemName: 'rerum',
+                ItemView: 'ad'
+            },
+            {
+                ItemName: 'eos',
+                ItemView: 'voluptas'
+            },
+            {
+                ItemName: 'labore',
+                ItemView: 'repellat'
+            },
+            {
+                ItemName: 'consectetur',
+                ItemView: 'nostrum'
+            },
+            {
+                ItemName: 'minus',
+                ItemView: 'repudiandae'
+            },
+            {
+                ItemName: 'aut',
+                ItemView: 'eos'
+            },
+            {
+                ItemName: 'iusto',
+                ItemView: 'animi'
+            },
+            {
+                ItemName: 'quam',
+                ItemView: 'dicta'
+            },
+            {
+                ItemName: 'nemo',
+                ItemView: 'nesciunt'
+            },
+            {
+                ItemName: 'ut',
+                ItemView: 'rerum'
+            },
+            {
+                ItemName: 'sit',
+                ItemView: 'voluptatibus'
+            },
+            {
+                ItemName: 'id',
+                ItemView: 'officia'
+            },
+            {
+                ItemName: 'consequatur',
+                ItemView: 'praesentium'
+            },
+            {
+                ItemName: 'et',
+                ItemView: 'sit'
+            },
+            {
+                ItemName: 'odit',
+                ItemView: 'iure'
+            },
+            {
+                ItemName: 'ratione',
+                ItemView: 'esse'
+            },
+            {
+                ItemName: 'error',
+                ItemView: 'dolores'
+            },
+            {
+                ItemName: 'mollitia',
+                ItemView: 'dolorum'
+            },
+            {
+                ItemName: 'eligendi',
+                ItemView: 'quia'
+            },
+            {
+                ItemName: 'et',
+                ItemView: 'sequi'
+            },
+            {
+                ItemName: 'mollitia',
+                ItemView: 'tempore'
+            },
+            {
+                ItemName: 'debitis',
+                ItemView: 'ut'
+            },
+            {
+                ItemName: 'voluptatem',
+                ItemView: 'suscipit'
+            },
+            {
+                ItemName: 'atque',
+                ItemView: 'corporis'
+            },
+            {
+                ItemName: 'provident',
+                ItemView: 'deserunt'
+            },
+            {
+                ItemName: 'perspiciatis',
+                ItemView: 'ea'
+            },
+            {
+                ItemName: 'quo',
+                ItemView: 'ad'
+            },
+            {
+                ItemName: 'eos',
+                ItemView: 'exercitationem'
+            },
+            {
+                ItemName: 'commodi',
+                ItemView: 'sequi'
+            },
+            {
+                ItemName: 'officia',
+                ItemView: 'sint'
+            }
+        ],
+        model: 'MEC_App.model.PrintOffice',
+        storeId: 'PrintOffices',
+        proxy: {
+            type: 'memory'
+        }
+    }
+});
+
 /*
  * File: app/view/MainNavView.js
  *
@@ -62405,7 +62503,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: '????????',
+                title: '«·—∆Ì”Ì…',
                 itemId: 'pnlMain',
                 layout: 'vbox',
                 items: [
@@ -62413,7 +62511,7 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'home-header',
-                        html: '<div class="header-text-bg"><b>????? ????? ????? ????? ????? ?????</b><br />????? ????? ????? ?????  </div>'
+                        html: '<div class="header-text-bg"><b>«Œ»«— ⁄«„¯… «Œ»«— ⁄«„¯… «Œ»«— ⁄«„¯…</b><br />«Œ»«— ⁄«„¯… «Œ»«— ⁄«„¯…  </div>'
                     },
                     {
                         xtype: 'panel',
@@ -62441,7 +62539,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????? ??????',
+                                                html: '«·Œœ„«  «·⁄«„…',
                                                 id: 'homeServices',
                                                 itemId: 'homeServices'
                                             },
@@ -62472,7 +62570,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '?????? ????????',
+                                                html: '«·„—ﬂ“ «·«⁄·«„Ì',
                                                 itemId: 'btnMediaCenter'
                                             },
                                             {
@@ -62509,7 +62607,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????????? ?????????? ',
+                                                html: '«·«” ⁄·«„«  Ê«·«’œ«—«  ',
                                                 itemId: 'homeInquire'
                                             },
                                             {
@@ -62540,7 +62638,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????? ?????????',
+                                                html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—',
                                                 itemId: 'homeReports'
                                             },
                                             {
@@ -62578,7 +62676,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '????????? ?????????',
+                                                html: '«·„»«œ—«  Ê«·„‘«—Ì⁄',
                                                 itemId: 'btnProjects'
                                             },
                                             {
@@ -62609,7 +62707,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????',
+                                                html: '«· Ê«’·',
                                                 itemId: 'homeContact'
                                             },
                                             {
@@ -62758,43 +62856,43 @@ Ext.define('MEC_App.controller.HomeController', {
     onHomeServicesTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'PublicServiceView',
-            title: '??????? ??????'
+            title: '«·Œœ„«  «·⁄«„…'
         });
     },
     onHomeNewsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'MediaCenterView',
-            title: '?????? ????????'
+            title: '«·„—ﬂ“ «·«⁄·«„Ì'
         });
     },
     onHomeInquireTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????????? ? ?????????"
+            title: "«·«” ⁄·«„«  Ê «·«’œ«—« "
         });
     },
     onHomeGeneralInfoTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????? ????"
+            title: "„⁄·Ê„«  ⁄«„…"
         });
     },
     onHomeReportsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ReportsView',
-            title: "???????? ? ????????"
+            title: "«·„ƒ‘—«  Ê «· ﬁ«—Ì—"
         });
     },
     onHomeProjectsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ProjectsView',
-            title: "????????? ? ????????"
+            title: "«·„»«œ—«  Ê «·„‘«—Ì⁄"
         });
     },
     onHomeeContactTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
-            title: "???????"
+            title: "«· Ê«’·"
         });
     },
     onHomeServices1Tap: function(button, e, eOpts) {
@@ -62862,7 +62960,7 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     onPrintOfficeBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'PrintOffsView',
-            title: "????? ??????????"
+            title: "Œœ„«  «·„” Œ—Ã« "
         });
     }
 });
@@ -63165,306 +63263,6 @@ Ext.define('MEC_App.controller.SideMenuController', {
     }
 });
 
-Ext.define('MEC_App.store.override.MenuArrayStore', {
-    override: 'MEC_App.store.MenuArrayStore',
-    config: {
-        data: [
-            {
-                ItemName: '????????',
-                ItemView: 'MainNavView',
-                ItemIconURL: 'resources/images/m-home.png'
-            },
-            {
-                ItemName: '??????? ??????',
-                ItemView: 'PublicServiceView',
-                ItemIconURL: 'resources/images/m-services.png'
-            },
-            {
-                ItemName: '?????? ????????',
-                ItemView: 'MediaCenterView',
-                ItemIconURL: 'resources/images/m-media.png'
-            },
-            {
-                ItemName: '??????????? ?????????? ',
-                ItemView: 'InquiriesView',
-                ItemIconURL: 'resources/images/m-inq.png'
-            },
-            {
-                ItemName: '???????',
-                ItemView: 'ContactUsView',
-                ItemIconURL: 'resources/images/m-contact.png'
-            },
-            {
-                ItemName: '????????? ?????????',
-                ItemView: 'ProjectsView',
-                ItemIconURL: 'resources/images/m-projects.png'
-            },
-            {
-                ItemName: '???????? ?????????',
-                ItemView: 'ReportsView',
-                ItemIconURL: 'resources/images/m-reports.png'
-            },
-            {
-                ItemName: '?????????',
-                ItemView: 'SettingsView',
-                ItemIconURL: 'resources/images/m-settings.png'
-            },
-            {
-                ItemName: '????? ??????',
-                ItemView: 'LogivFormView',
-                ItemIconURL: 'resources/images/m-login.png'
-            }
-        ]
-    }
-});
-
-/*
- * File: app/store/MenuArrayStore.js
- *
- * This file was generated by Sencha Architect version 3.2.0.
- * http://www.sencha.com/products/architect/
- *
- * This file requires use of the Sencha Touch 2.4.x library, under independent license.
- * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
- * details see http://www.sencha.com/license or contact license@sencha.com.
- *
- * This file will be auto-generated each and everytime you save your project.
- *
- * Do NOT hand edit this file.
- */
-Ext.define('MEC_App.store.MenuArrayStore', {
-    extend: Ext.data.Store,
-    config: {
-        data: [
-            {
-                ItemName: 'ut',
-                ItemView: 'nihil',
-                ItemIconURL: 'http//:delectus.ca/dolorem/quos/quo.asmx'
-            },
-            {
-                ItemName: 'non',
-                ItemView: 'maiores',
-                ItemIconURL: 'https//:nam.info/nemo/beatae/autem'
-            },
-            {
-                ItemName: 'nobis',
-                ItemView: 'fuga',
-                ItemIconURL: 'http//:dolores.net/facilis'
-            },
-            {
-                ItemName: 'qui',
-                ItemView: 'sint',
-                ItemIconURL: 'http//:ut.biz/ut/fugiat.html'
-            },
-            {
-                ItemName: 'dolorum',
-                ItemView: 'vel',
-                ItemIconURL: 'https//:velit.io/libero/corrupti/placeat'
-            },
-            {
-                ItemName: 'delectus',
-                ItemView: 'sit',
-                ItemIconURL: 'https//:explicabo.io/reiciendis/et/laborum.asmx'
-            },
-            {
-                ItemName: 'sed',
-                ItemView: 'sapiente',
-                ItemIconURL: 'https//:ut.me/dignissimos/esse/rerum'
-            },
-            {
-                ItemName: 'sint',
-                ItemView: 'itaque',
-                ItemIconURL: 'http//:asperiores.me'
-            },
-            {
-                ItemName: 'ab',
-                ItemView: 'quod',
-                ItemIconURL: 'http//:dolor.io/deserunt/facilis'
-            }
-        ],
-        model: 'MEC_App.model.MenuModel',
-        storeId: 'MenuArrayStore',
-        proxy: {
-            type: 'ajax',
-            reader: {
-                type: 'array'
-            }
-        }
-    }
-});
-
-Ext.define('MEC_App.store.override.PrintOffices', {
-    override: 'MEC_App.store.PrintOffices',
-    config: {
-        data: [
-            {
-                ItemName: '????? ??????? ?????? ???????',
-                ItemView: 'BusinessIndicatorsReport'
-            },
-            {
-                ItemName: '????? ??????? ?????? ??????????',
-                ItemView: 'BusinessIndicatorsReport'
-            },
-            {
-                ItemName: '????? ??? ?????',
-                ItemView: 'BusinessIndicatorsReport'
-            },
-            {
-                ItemName: '????? ??? ????? ?? ?????? ?? ??? ????? ',
-                ItemView: 'BusinessIndicatorsReport'
-            }
-        ]
-    }
-});
-
-/*
- * File: app/store/PrintOffices.js
- *
- * This file was generated by Sencha Architect version 3.2.0.
- * http://www.sencha.com/products/architect/
- *
- * This file requires use of the Sencha Touch 2.4.x library, under independent license.
- * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
- * details see http://www.sencha.com/license or contact license@sencha.com.
- *
- * This file will be auto-generated each and everytime you save your project.
- *
- * Do NOT hand edit this file.
- */
-Ext.define('MEC_App.store.PrintOffices', {
-    extend: Ext.data.Store,
-    alias: 'store.printoffices',
-    config: {
-        data: [
-            {
-                ItemName: 'rerum',
-                ItemView: 'ad'
-            },
-            {
-                ItemName: 'eos',
-                ItemView: 'voluptas'
-            },
-            {
-                ItemName: 'labore',
-                ItemView: 'repellat'
-            },
-            {
-                ItemName: 'consectetur',
-                ItemView: 'nostrum'
-            },
-            {
-                ItemName: 'minus',
-                ItemView: 'repudiandae'
-            },
-            {
-                ItemName: 'aut',
-                ItemView: 'eos'
-            },
-            {
-                ItemName: 'iusto',
-                ItemView: 'animi'
-            },
-            {
-                ItemName: 'quam',
-                ItemView: 'dicta'
-            },
-            {
-                ItemName: 'nemo',
-                ItemView: 'nesciunt'
-            },
-            {
-                ItemName: 'ut',
-                ItemView: 'rerum'
-            },
-            {
-                ItemName: 'sit',
-                ItemView: 'voluptatibus'
-            },
-            {
-                ItemName: 'id',
-                ItemView: 'officia'
-            },
-            {
-                ItemName: 'consequatur',
-                ItemView: 'praesentium'
-            },
-            {
-                ItemName: 'et',
-                ItemView: 'sit'
-            },
-            {
-                ItemName: 'odit',
-                ItemView: 'iure'
-            },
-            {
-                ItemName: 'ratione',
-                ItemView: 'esse'
-            },
-            {
-                ItemName: 'error',
-                ItemView: 'dolores'
-            },
-            {
-                ItemName: 'mollitia',
-                ItemView: 'dolorum'
-            },
-            {
-                ItemName: 'eligendi',
-                ItemView: 'quia'
-            },
-            {
-                ItemName: 'et',
-                ItemView: 'sequi'
-            },
-            {
-                ItemName: 'mollitia',
-                ItemView: 'tempore'
-            },
-            {
-                ItemName: 'debitis',
-                ItemView: 'ut'
-            },
-            {
-                ItemName: 'voluptatem',
-                ItemView: 'suscipit'
-            },
-            {
-                ItemName: 'atque',
-                ItemView: 'corporis'
-            },
-            {
-                ItemName: 'provident',
-                ItemView: 'deserunt'
-            },
-            {
-                ItemName: 'perspiciatis',
-                ItemView: 'ea'
-            },
-            {
-                ItemName: 'quo',
-                ItemView: 'ad'
-            },
-            {
-                ItemName: 'eos',
-                ItemView: 'exercitationem'
-            },
-            {
-                ItemName: 'commodi',
-                ItemView: 'sequi'
-            },
-            {
-                ItemName: 'officia',
-                ItemView: 'sint'
-            }
-        ],
-        model: 'MEC_App.model.PrintOffice',
-        storeId: 'PrintOffices',
-        proxy: {
-            type: 'memory'
-        }
-    }
-});
-
 /*
  * File: app/view/HomeView.js
  *
@@ -63544,7 +63342,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????? ??????'
+                                        html: '«·Œœ„«  «·⁄«„…'
                                     }
                                 ]
                             }
@@ -63564,7 +63362,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????'
+                                        html: 'Œœ„«  «·„” À„—'
                                     },
                                     {
                                         xtype: 'panel',
@@ -63577,7 +63375,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '??????? ??????'
+                                                text: '»Ì«‰« Ì «·Œ«’…'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63585,7 +63383,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ??????????'
+                                                text: 'Œœ„«  «·„” Œ—Ã« '
                                             }
                                         ]
                                     },
@@ -63600,7 +63398,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: '„ «»⁄… «·„⁄«„·« '
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -63617,7 +63415,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????'
+                                        html: 'Œœ„«  «·„” Â·ﬂ'
                                     },
                                     {
                                         xtype: 'panel',
@@ -63630,7 +63428,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ?? ????'
+                                                text: '«»·«€ ⁄‰ ‘ﬂÊÌ'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63638,7 +63436,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'supplyServicesBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????'
+                                                text: 'Œœ„«  «· „ÊÌ‰'
                                             }
                                         ]
                                     }
@@ -63699,7 +63497,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '?????? ????????'
+                                        html: '«·„—ﬂ“ «·«⁄·«„Ì'
                                     }
                                 ]
                             }
@@ -63727,7 +63525,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '??????? ???????'
+                                                text: '«’œ«—«  «·Ê“«—…'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63735,7 +63533,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ?? ???????'
+                                                text: '«’œ«¡ ⁄‰ «·Ê“«—…'
                                             }
                                         ]
                                     },
@@ -63750,7 +63548,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '????? ????????'
+                                                text: '«Œ»«— «ﬁ ’«œÌ…'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -63815,7 +63613,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????????? ??????????'
+                                        html: '«·«” ⁄·«„«  Ê«·«’œ«—« '
                                     }
                                 ]
                             }
@@ -63843,7 +63641,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '????? ?? ??? ?????'
+                                                text: '«·»ÕÀ ⁄‰ «”„  Ã«—Ì'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63851,7 +63649,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ?? ???? ?????'
+                                                text: '«·»ÕÀ ⁄‰ ‰‘«ÿ  Ã«—Ì'
                                             }
                                         ]
                                     },
@@ -63866,7 +63664,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????????'
+                                                text: '«·«” œ⁄«¡« '
                                             },
                                             {
                                                 xtype: 'button',
@@ -63874,7 +63672,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '????? ????????'
+                                                text: 'Àﬁ«›… «·„” Â·ﬂ'
                                             }
                                         ]
                                     },
@@ -63889,7 +63687,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ????????'
+                                                text: 'Àﬁ«›… «·„” À„—'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63897,7 +63695,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'supplyServicesBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????????? ??????????'
+                                                text: '«·„Œ«·›«  Ê«·«€·«ﬁ« '
                                             }
                                         ]
                                     }
@@ -63958,7 +63756,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????'
+                                        html: '«· Ê«’·'
                                     }
                                 ]
                             }
@@ -63986,7 +63784,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?? ???????'
+                                                text: '⁄‰ «·Ê“«—…'
                                             },
                                             {
                                                 xtype: 'button',
@@ -63994,7 +63792,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '??????'
+                                                text: '«·›—Ê⁄'
                                             }
                                         ]
                                     },
@@ -64009,7 +63807,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????'
+                                                text: '„ﬁ —Õ« '
                                             },
                                             {
                                                 xtype: 'button',
@@ -64017,7 +63815,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ????'
+                                                text: ' Ê«’· „⁄‰«'
                                             }
                                         ]
                                     },
@@ -64032,7 +63830,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ???????'
+                                                text: '„ÊŸ›Ê «·Ê“«—…'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -64117,7 +63915,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????? ?????????'
+                                        html: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
                                     }
                                 ]
                             }
@@ -64145,7 +63943,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?????? ????????'
+                                                text: '„ƒ‘—«  «ﬁ ’«œÌ…'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64153,7 +63951,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '?????? ???????'
+                                                text: '„ƒ‘—«  «·«⁄„«·'
                                             }
                                         ]
                                     },
@@ -64168,7 +63966,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: '„ƒ‘—«  «” Â·«ﬂÌ…'
                                             },
                                             {
                                                 xtype: 'button',
@@ -64176,7 +63974,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'myRequestsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????? ????????'
+                                                text: ' ﬁ—Ì— «·⁄·«„«  «· Ã«—Ì…'
                                             }
                                         ]
                                     }
@@ -64291,7 +64089,7 @@ Ext.define('MEC_App.view.PrintOffsView', {
                                 flex: 1,
                                 cls: 'print-office-header-title',
                                 docked: 'bottom',
-                                html: '????? ??????????'
+                                html: 'Œœ„«  «·„” Œ—Ã« '
                             }
                         ]
                     }
@@ -64806,12 +64604,12 @@ Ext.define('MEC_App.view.SideMenu', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'MenuTop',
+                        layout: 'vbox',
                         items: [
                             {
-                                xtype: 'image',
-                                height: 150,
-                                itemId: 'imgHome',
-                                src: 'resources/images/logo.png'
+                                xtype: 'panel',
+                                flex: 1,
+                                cls: 'logo'
                             }
                         ]
                     },
@@ -64828,7 +64626,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
-                                text: '????????'
+                                text: '«·—∆Ì”Ì…'
                             },
                             {
                                 xtype: 'button',
@@ -64836,7 +64634,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnServices',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon2',
-                                text: '??????? ??????'
+                                text: '«·Œœ„«  «·⁄«„…'
                             },
                             {
                                 xtype: 'button',
@@ -64845,7 +64643,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnMedai',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon3',
-                                text: '?????? ????????'
+                                text: '«·„—ﬂ“ «·«⁄·«„Ì'
                             },
                             {
                                 xtype: 'button',
@@ -64854,7 +64652,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnInquiry',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon4',
-                                text: '??????????? ?????????? '
+                                text: '«·«” ⁄·«„«  Ê«·«’œ«—«  '
                             },
                             {
                                 xtype: 'button',
@@ -64863,7 +64661,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnContact',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon5',
-                                text: '???????'
+                                text: '«· Ê«’·'
                             },
                             {
                                 xtype: 'button',
@@ -64872,7 +64670,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnProjects',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon6',
-                                text: '????????? ?????????'
+                                text: '«·„»«œ—«  Ê«·„‘«—Ì⁄'
                             },
                             {
                                 xtype: 'button',
@@ -64881,7 +64679,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnReports',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon7',
-                                text: '???????? ?????????'
+                                text: '«·„ƒ‘—«  Ê«· ﬁ«—Ì—'
                             },
                             {
                                 xtype: 'button',
@@ -64890,7 +64688,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnSettings',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon8',
-                                text: '?????????'
+                                text: '«·«⁄œ«œ« '
                             },
                             {
                                 xtype: 'button',
@@ -64899,7 +64697,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnLogin',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon9',
-                                text: '????? ??????'
+                                text: ' ”ÃÌ· «·œŒÊ·'
                             }
                         ]
                     }
@@ -65291,5 +65089,5 @@ Ext.application({
 });
 
 // @tag full-page
-// @require /sencha/MEC_App/app.js
+// @require D:\Sencha\MEC_App\app.js
 

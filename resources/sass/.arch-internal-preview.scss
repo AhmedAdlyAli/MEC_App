@@ -8,6 +8,10 @@ $base-gradient: flat;
 
 
 /* _arch-other-start */
+body {
+    background-color: #671f48;
+}
+
 @font-face{font-family:'HelveticaNeueLTStd87HvCn';src:url('fonts/helveticaneueltstd-hvcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
 @font-face{font-family:'HelveticaNeueLTStd47LtCn';src:url('fonts/helveticaneueltstd-ltcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
 @font-face{font-family:'HelveticaNeueLTStd67MdCn';src:url('fonts/helveticaneueltstd-mdcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
@@ -19,7 +23,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -27,7 +30,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -35,7 +37,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 
@@ -44,7 +45,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-XThin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -52,7 +52,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Bold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -60,7 +59,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Hairline-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -68,7 +66,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -76,7 +73,6 @@ $base-gradient: flat;
     src: url('fonts/PFDinTextUniversal-Medium-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
 
 * {
@@ -333,6 +329,12 @@ $base-gradient: flat;
 .MenuTop {
 
     background-color: #671f48;
+
+    .logo {
+        background: url(../images/logo.png) no-repeat center;
+        background-size: contain;
+        margin: 5% 0;
+    }
 
 }
 
