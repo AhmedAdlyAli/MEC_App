@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PublicServicesController"
+        "designer|userClassName": "InquiriesController"
     },
     "name": "MyController",
-    "designerId": "a8b70d4c-ae46-473d-9f8d-72ae4c075d80",
+    "designerId": "9de3d747-63d5-4416-9da5-6548865c317a",
     "cn": [
         {
             "type": "controlleraction",
@@ -19,24 +19,24 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#printOfficeBtn",
+                "designer|controlQuery": "button#inquiriesBtn1",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onPrintOfficeBtnTap",
+                "fn": "onInquiriesBtn1Tap",
                 "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "            xtype: 'PrintOffsView',",
-                    "            title: \"خدمات المستخرجات\"",
+                    "button.up('MainNavView').push({",
+                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            title: Ext.Global.GetViewTitle('ContactUs')",
                     "        });"
                 ],
                 "name": "tap"
             },
-            "name": "onPrintOfficeBtnTap",
-            "designerId": "1c99b0f9-590c-44e4-ba1f-ed26011793d8"
+            "name": "onInquiriesBtn1Tap",
+            "designerId": "6989c4de-e629-4868-b4dd-3edd37e0d8d8"
         },
         {
             "type": "controlleraction",
@@ -46,14 +46,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#myServiceBtn",
+                "designer|controlQuery": "button#inquiriesBtn2",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onMyServiceBtnTap",
+                "fn": "onInquiriesBtn2Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
@@ -62,8 +62,8 @@
                 ],
                 "name": "tap"
             },
-            "name": "onMyServiceBtnTap",
-            "designerId": "2c75ae70-867e-4906-9c28-317d4136b3f7"
+            "name": "onInquiriesBtn2Tap",
+            "designerId": "13fab0cb-2650-4265-94b0-ee181d683166"
         },
         {
             "type": "controlleraction",
@@ -73,14 +73,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#myRequestsBtn",
+                "designer|controlQuery": "button#inquiriesBtn3",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onMyRequestsBtnTap",
+                "fn": "onInquiriesBtn3Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
@@ -89,8 +89,8 @@
                 ],
                 "name": "tap"
             },
-            "name": "onMyRequestsBtnTap",
-            "designerId": "f6d48240-64fb-4c01-b224-02c0c9809113"
+            "name": "onInquiriesBtn3Tap",
+            "designerId": "45dcaf8d-5bca-4021-9840-1e358e68b2a5"
         },
         {
             "type": "controlleraction",
@@ -100,14 +100,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#complainsBtn",
+                "designer|controlQuery": "button#inquiriesBtn4",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onComplainsBtnTap",
+                "fn": "onInquiriesBtn4Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
@@ -116,8 +116,8 @@
                 ],
                 "name": "tap"
             },
-            "name": "onComplainsBtnTap",
-            "designerId": "c7d09422-162a-45f2-b7b8-45f59a398fe3"
+            "name": "onInquiriesBtn4Tap",
+            "designerId": "6d2948e0-9291-469e-884b-6acd322af94a"
         },
         {
             "type": "controlleraction",
@@ -127,14 +127,14 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#supplyServicesBtn",
+                "designer|controlQuery": "button#inquiriesBtn5",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onSupplyServicesBtnTap",
+                "fn": "onInquiriesBtn5Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
@@ -143,8 +143,35 @@
                 ],
                 "name": "tap"
             },
-            "name": "onSupplyServicesBtnTap",
-            "designerId": "01e34edc-0e1c-413a-82e2-1ac2fc34ebaa"
+            "name": "onInquiriesBtn5Tap",
+            "designerId": "ba5361ca-0593-409c-9b97-bcf86eb1d2fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#inquiriesBtn6",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onInquiriesBtn6Tap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onInquiriesBtn6Tap",
+            "designerId": "403d7e60-13f5-4219-8d62-9cb9dc1fa66f"
         }
     ]
 }

@@ -78,7 +78,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myServiceBtn',
+                                                itemId: 'reportsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
                                                 text: 'مؤشرات اقتصادية'
@@ -86,7 +86,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'printOfficeBtn',
+                                                itemId: 'reportsBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
                                                 text: 'مؤشرات الاعمال'
@@ -101,7 +101,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn',
+                                                itemId: 'reportsBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'مؤشرات استهلاكية'
@@ -109,7 +109,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn1',
+                                                itemId: 'reportsBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
                                                 text: 'تقرير العلامات التجارية'

@@ -82,7 +82,11 @@ Ext.application({
         'PublicServicesController',
         'PrintOffices',
         'PrintOffsController',
-        'SideMenuController'
+        'SideMenuController',
+        'MediaCenterController',
+        'InquiriesController',
+        'ReportsController',
+        'ContactController'
     ],
     name: 'MEC_App',
 

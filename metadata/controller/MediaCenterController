@@ -1,0 +1,96 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MediaCenterController"
+    },
+    "name": "MyController",
+    "designerId": "c529c1c6-243f-4945-b6db-00f7c7f4301c",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mediaCenterBtn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMediaCenterBtnTap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onMediaCenterBtnTap",
+            "designerId": "46f74eaa-aac6-4e31-890f-e71dd309463e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mediaCenterBtn2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMediaCenterBtn2Tap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onMediaCenterBtn2Tap",
+            "designerId": "10ea42e4-9374-4700-ad9f-8a39dd91fb31"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#mediaCenterBtn3",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onMediaCenterBtn3Tap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "        });"
+                ],
+                "name": "tap"
+            },
+            "name": "onMediaCenterBtn3Tap",
+            "designerId": "deb9999a-fe3a-4148-b856-4cebde594c22"
+        }
+    ]
+}

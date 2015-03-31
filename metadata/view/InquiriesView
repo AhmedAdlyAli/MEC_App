@@ -160,7 +160,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-                                                "itemId": "myServiceBtn",
+                                                "itemId": "inquiriesBtn1",
                                                 "layout|flex": 1,
                                                 "text": "البحث عن اسم تجاري"
                                             },
@@ -177,7 +177,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
+                                                "itemId": "inquiriesBtn2",
                                                 "layout|flex": 1,
                                                 "text": "البحث عن نشاط تجاري"
                                             },
@@ -212,7 +212,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn",
+                                                "itemId": "inquiriesBtn3",
                                                 "layout|flex": 1,
                                                 "text": "الاستدعاءات"
                                             },
@@ -229,7 +229,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn1",
+                                                "itemId": "inquiriesBtn4",
                                                 "layout|flex": 1,
                                                 "text": "ثقافة المستهلك"
                                             },
@@ -264,7 +264,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-complain",
-                                                "itemId": "complainsBtn",
+                                                "itemId": "inquiriesBtn5",
                                                 "layout|flex": 1,
                                                 "text": "ثقافة المستثمر"
                                             },
@@ -281,7 +281,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-supply",
-                                                "itemId": "supplyServicesBtn",
+                                                "itemId": "inquiriesBtn6",
                                                 "layout|flex": 1,
                                                 "text": "المخالفات والاغلاقات"
                                             },

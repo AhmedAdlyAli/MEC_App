@@ -78,7 +78,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myServiceBtn',
+                                                itemId: 'inquiriesBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
                                                 text: 'البحث عن اسم تجاري'
@@ -86,7 +86,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'printOfficeBtn',
+                                                itemId: 'inquiriesBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
                                                 text: 'البحث عن نشاط تجاري'
@@ -101,7 +101,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn',
+                                                itemId: 'inquiriesBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'الاستدعاءات'
@@ -109,7 +109,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn1',
+                                                itemId: 'inquiriesBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'ثقافة المستهلك'
@@ -124,7 +124,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'complainsBtn',
+                                                itemId: 'inquiriesBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
                                                 text: 'ثقافة المستثمر'
@@ -132,7 +132,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'supplyServicesBtn',
+                                                itemId: 'inquiriesBtn6',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
                                                 text: 'المخالفات والاغلاقات'

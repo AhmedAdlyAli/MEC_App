@@ -160,7 +160,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-                                                "itemId": "myServiceBtn",
+                                                "itemId": "reportsBtn1",
                                                 "layout|flex": 1,
                                                 "text": "مؤشرات اقتصادية"
                                             },
@@ -177,7 +177,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
+                                                "itemId": "reportsBtn2",
                                                 "layout|flex": 1,
                                                 "text": "مؤشرات الاعمال"
                                             },
@@ -212,7 +212,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn",
+                                                "itemId": "reportsBtn3",
                                                 "layout|flex": 1,
                                                 "text": "مؤشرات استهلاكية"
                                             },
@@ -229,7 +229,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-supply",
-                                                "itemId": "myRequestsBtn1",
+                                                "itemId": "reportsBtn4",
                                                 "layout|flex": 1,
                                                 "text": "تقرير العلامات التجارية"
                                             },

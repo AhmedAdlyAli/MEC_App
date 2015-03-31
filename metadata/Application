@@ -11,7 +11,11 @@
             "PublicServicesController",
             "PrintOffices",
             "PrintOffsController",
-            "SideMenuController"
+            "SideMenuController",
+            "MediaCenterController",
+            "InquiriesController",
+            "ReportsController",
+            "ContactController"
         ],
         "models": [
             "PrintOffice",

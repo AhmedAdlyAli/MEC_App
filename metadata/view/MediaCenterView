@@ -160,7 +160,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-                                                "itemId": "myServiceBtn",
+                                                "itemId": "mediaCenterBtn2",
                                                 "layout|flex": 1,
                                                 "text": "اصدارات الوزارة"
                                             },
@@ -177,7 +177,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
+                                                "itemId": "mediaCenterBtn",
                                                 "layout|flex": 1,
                                                 "text": "اصداء عن الوزارة"
                                             },
@@ -212,7 +212,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn",
+                                                "itemId": "mediaCenterBtn3",
                                                 "layout|flex": 1,
                                                 "text": "اخبار اقتصادية"
                                             },

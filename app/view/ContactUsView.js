@@ -79,7 +79,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myServiceBtn',
+                                                itemId: 'contactBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
                                                 text: 'عن الوزارة'
@@ -87,7 +87,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'printOfficeBtn',
+                                                itemId: 'contactBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
                                                 text: 'الفروع'
@@ -102,7 +102,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn',
+                                                itemId: 'contactBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'مقترحات'
@@ -110,7 +110,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'myRequestsBtn1',
+                                                itemId: 'contactBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
                                                 text: 'تواصل معنا'
@@ -125,7 +125,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'complainsBtn',
+                                                itemId: 'contactBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
                                                 text: 'موظفو الوزارة'

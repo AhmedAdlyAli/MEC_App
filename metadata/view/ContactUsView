@@ -160,7 +160,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-business",
-                                                "itemId": "myServiceBtn",
+                                                "itemId": "contactBtn1",
                                                 "layout|flex": 1,
                                                 "text": "عن الوزارة"
                                             },
@@ -177,7 +177,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
+                                                "itemId": "contactBtn2",
                                                 "layout|flex": 1,
                                                 "text": "الفروع"
                                             },
@@ -212,7 +212,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn",
+                                                "itemId": "contactBtn3",
                                                 "layout|flex": 1,
                                                 "text": "مقترحات"
                                             },
@@ -229,7 +229,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-supply",
-                                                "itemId": "myRequestsBtn1",
+                                                "itemId": "contactBtn4",
                                                 "layout|flex": 1,
                                                 "text": "تواصل معنا"
                                             },
@@ -264,7 +264,7 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-complain",
-                                                "itemId": "complainsBtn",
+                                                "itemId": "contactBtn5",
                                                 "layout|flex": 1,
                                                 "text": "موظفو الوزارة"
                                             },
