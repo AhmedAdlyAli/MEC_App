@@ -47,6 +47,24 @@ Ext.define('MEC_App.controller.HomeController', {
             },
             "button#homeeContact": {
                 tap: 'onHomeeContactTap'
+            },
+            "button#homeServices1": {
+                tap: 'onHomeServices1Tap'
+            },
+            "button#btnMediaCenter1": {
+                tap: 'onBtnMediaCenter1Tap'
+            },
+            "button#homeInquire1": {
+                tap: 'onHomeInquire1Tap'
+            },
+            "button#homeReports1": {
+                tap: 'onHomeReports1Tap'
+            },
+            "button#btnProjects1": {
+                tap: 'onBtnProjects1Tap'
+            },
+            "button#homeContact1": {
+                tap: 'onHomeContact1Tap'
             }
         }
     },
@@ -128,6 +146,58 @@ Ext.define('MEC_App.controller.HomeController', {
                 xtype: 'ContactUsView',
                 title: "التواصل"
             });
+    },
+
+    onHomeServices1Tap: function(button, e, eOpts) {
+        //heeeeeee
+
+        button.up('MainNavView').push({
+                            xtype: 'PublicServiceView',
+                            title: Ext.Global.GetViewTitle('PublicServices')
+                        });
+
+
+    },
+
+    onBtnMediaCenter1Tap: function(button, e, eOpts) {
+         button.up('MainNavView').push({
+                            xtype: 'MediaCenterView',
+                            title: Ext.Global.GetViewTitle('MediaCenter')
+                        });
+
+    },
+
+    onHomeInquire1Tap: function(button, e, eOpts) {
+         button.up('MainNavView').push({
+                             xtype: 'InquiriesView',
+                             title: Ext.Global.GetViewTitle('Inquiries')
+                         });
+
+    },
+
+    onHomeReports1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+                        xtype: 'ReportsView',
+                        title: Ext.Global.GetViewTitle('Reports')
+                    });
+
+
+    },
+
+    onBtnProjects1Tap: function(button, e, eOpts) {
+         button.up('MainNavView').push({
+                        xtype: 'ProjectsView',
+                        title: Ext.Global.GetViewTitle('Projects')
+                    });
+
+    },
+
+    onHomeContact1Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'ContactUsView',
+            title: Ext.Global.GetViewTitle('ContactUs')
+        });
+
     }
 
 });

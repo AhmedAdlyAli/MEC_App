@@ -58,7 +58,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'PublicServiceView',
-            title: Ext.Global.GetViewTitle('PublicService')
+            title: Ext.Global.GetViewTitle('PublicServices')
         });
 
 
@@ -163,7 +163,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
     },
 
     onImgHomeTap: function(image, e, eOpts) {
-         Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
         Ext.Viewport.getActiveItem().reset();
     }
 

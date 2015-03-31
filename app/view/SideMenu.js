@@ -54,6 +54,7 @@ Ext.define('MEC_App.view.SideMenu', {
                             {
                                 xtype: 'button',
                                 flex: 1,
+                                id: '',
                                 itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
@@ -135,6 +136,27 @@ Ext.define('MEC_App.view.SideMenu', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        this.down('#btnHome').setText(Ext.Global.GetViewTitle('Home'));
+        this.down('#btnServices').setText(Ext.Global.GetViewTitle('PublicServices'));
+
+        this.down('#btnMedai').setText(Ext.Global.GetViewTitle('MediaCenter'));
+        this.down('#btnInquiry').setText(Ext.Global.GetViewTitle('Inquiries'));
+        this.down('#btnContact').setText(Ext.Global.GetViewTitle('ContactUs'));
+        this.down('#btnProjects').setText(Ext.Global.GetViewTitle('Projects'));
+        this.down('#btnReports').setText(Ext.Global.GetViewTitle('Reports'));
+        this.down('#btnSettings').setText(Ext.Global.GetViewTitle('Settings'));
+        this.down('#btnLogin').setText(Ext.Global.GetViewTitle('LogivForm'));
+
+
+
+
+
+
     }
 
 });

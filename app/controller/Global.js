@@ -25,12 +25,9 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     LoadLocalization: function() {
+                var loc = Ext.create('MEC_App.controller.LocAr');
+                loc.Load(this);
 
-
-        var loc = Ext.create('MEC_App.controller.LocAr');
-
-
-        loc.Load(this);
     },
 
     GetViewTitle: function(view) {

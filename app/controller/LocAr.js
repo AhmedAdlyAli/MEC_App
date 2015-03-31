@@ -23,16 +23,14 @@ Ext.define('MEC_App.controller.LocAr', {
         g.ViewTitles = {
 
             'Home': 'الرئيسية',
-            'MediaCenter': ' المركز الاعلامي',
             'PublicServices':'الخدمات العامة',
+            'MediaCenter': ' المركز الاعلامي',
             'Inquiries': 'الاستعلامات والاصدارات ',
             'ContactUs': 'اتصل بنا',
             'Projects' : 'المبادرات والمشاريع',
             'Reports': 'المؤشرات والتقارير',
             'Settings': 'الاعدادات',
             'LogivForm' : 'تسجيل الدخول'
-
-
 
         };
 
