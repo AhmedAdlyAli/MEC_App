@@ -123,6 +123,20 @@ Ext.define('MEC_App.view.ReportsView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        this.down('#reportsBtn1').setHtml(Ext.Global.GetViewTitle('EcoReports'));
+        this.down('#reportsBtn2').setHtml(Ext.Global.GetViewTitle('BizReports'));
+        this.down('#reportsBtn3').setHtml(Ext.Global.GetViewTitle('ConsumerReports'));
+        this.down('#reportsBtn4').setHtml(Ext.Global.GetViewTitle('TradeReports'));
+
+
+
+
+
     }
 
 });

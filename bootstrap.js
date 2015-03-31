@@ -667,14 +667,18 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MEC_App.controller.ContactController": [],
   "MEC_App.controller.Global": [
     "Ext.Global"
   ],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.model.MenuModel": [],
   "MEC_App.model.PrintOffice": [],
@@ -1456,14 +1460,18 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MEC_App.controller.ContactController": [],
   "MEC_App.controller.Global": [],
   "MEC_App.controller.HomeController": [],
+  "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.PrintOffices": [
     "controller.printoffices"
   ],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.model.MenuModel": [
     "model.menumodel"

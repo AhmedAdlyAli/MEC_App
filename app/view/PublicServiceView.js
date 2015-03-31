@@ -74,7 +74,9 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: 'خدمات المستثمر'
+                                        html: 'خدمات المستثمر',
+                                        id: 'lblInvestor',
+                                        itemId: 'lblInvestor'
                                     },
                                     {
                                         xtype: 'panel',
@@ -127,7 +129,9 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: 'خدمات المستهلك'
+                                        html: 'خدمات المستهلك',
+                                        id: 'lblConsumer',
+                                        itemId: 'lblConsumer'
                                     },
                                     {
                                         xtype: 'panel',
@@ -159,6 +163,30 @@ Ext.define('MEC_App.view.PublicServiceView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+                this.callParent();
+
+
+
+        this.down('#myServiceBtn').setHtml(Ext.Global.GetViewTitle('MyBusiness'));
+        this.down('#printOfficeBtn').setHtml(Ext.Global.GetViewTitle('PrintOffs'));
+        this.down('#myRequestsBtn').setHtml(Ext.Global.GetViewTitle('RequestFollowup'));
+        this.down('#complainsBtn').setHtml(Ext.Global.GetViewTitle('Complaints'));
+        this.down('#supplyServicesBtn').setHtml(Ext.Global.GetViewTitle('SupplyService'));
+
+
+
+        this.down('#lblInvestor').setHtml(Ext.Global.GetViewTitle('InvestorServices'));
+        this.down('#lblConsumer').setHtml(Ext.Global.GetViewTitle('ConsumerServices'));
+
+
+
+
+
+
+
     }
 
 });

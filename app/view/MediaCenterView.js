@@ -80,9 +80,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-
                                                 itemId: 'btnPublications',
- 
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
                                                 text: 'اصدارات الوزارة'
@@ -90,9 +88,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-
                                                 itemId: 'btnMinistryNews',
-
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
                                                 text: 'اصداء عن الوزارة'
@@ -107,9 +103,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-
                                                 itemId: 'btnNews',
- 
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
                                                 text: 'اخبار اقتصادية'

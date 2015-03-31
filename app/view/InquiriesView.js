@@ -146,6 +146,26 @@ Ext.define('MEC_App.view.InquiriesView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+
+
+        this.down('#inquiriesBtn1').setHtml(Ext.Global.GetViewTitle('SearchTradeName'));
+        this.down('#inquiriesBtn2').setHtml(Ext.Global.GetViewTitle('SearchAct'));
+        this.down('#inquiriesBtn3').setHtml(Ext.Global.GetViewTitle('Recalls'));
+        this.down('#inquiriesBtn4').setHtml(Ext.Global.GetViewTitle('ConsulerEdu'));
+        this.down('#inquiriesBtn5').setHtml(Ext.Global.GetViewTitle('InvestorEdu'));
+        this.down('#inquiriesBtn6').setHtml(Ext.Global.GetViewTitle('Violations'));
+
+
+
+
+
+
+
     }
 
 });

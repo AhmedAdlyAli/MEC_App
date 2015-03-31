@@ -36,19 +36,54 @@ Ext.define('MEC_App.controller.LocAr', {
 
 
 
-             'MinistryPublications' : 'اصدارات الوزارة',
-             'MinistryNews' : 'اصداء عن الوزارة',
-             'EconomyNews' : 'اخبار اقتصادية',
+            'MinistryPublications' : 'اصدارات الوزارة',
+            'MinistryNews' : 'اصداء عن الوزارة',
+            'EconomyNews' : 'اخبار اقتصادية',
+
+
+            //services
+
+            'PrintOffs' :' خدمات المستخرجات',
+            'MyBusiness' :' بياناتي الخاصة',
+            'RequestFollowup' :' متابعة المعاملات',
+            'Complaints' :' ابلاغ عن شكوي',
+            'SupplyService' :' خدمات التموين',
+            'InvestorServices' :' خدمات المستثمر',
+            'ConsumerServices' :' خدمات المستهلك',
 
 
 
-         'PrintOffs' :' خدمات المستخرجات',
-         'MyBusiness' :' بياناتي الخاصة',
-         'RequestFollowup' :' متابعة المعاملات',
-         'Complaints' :' ابلاغ عن شكوي',
-         'SupplyService' :' خدمات التموين',
-         'InvestorServices' :' خدمات المستثمر',
-         'ConsumerServices' :' خدمات المستهلك'
+
+            // inq
+
+            'SearchTradeName' :    'البحث عن اسم تجاري',
+            'SearchAct' :'البحث عن نشاط تجاري',
+            'Recalls' :'الاستدعاءات',
+            'ConsulerEdu' :'ثقافة المستهلك',
+            'InvestorEdu' :'ثقافة المستثمر',
+            'Violations' :'المخالفات والاغلاقات',
+
+
+
+            //reports
+
+
+
+            'EcoReports' :'مؤشرات اقتصادية',
+            'BizReports' :'مؤشرات الاعمال',
+            'ConsumerReports' :'مؤشرات استهلاكية',
+            'TradeReports' :'تقرير العلامات التجارية',
+
+
+            //contact
+
+            'AboutMinistry' :'عن الوزارة',
+            'Branches' :'الفروع',
+            'Suggestions' :'مقترحات',
+            'ContactUs2' :'تواصل معنا',
+            'Employees' :'موظفو الوزارة'
+
+
 
 
 

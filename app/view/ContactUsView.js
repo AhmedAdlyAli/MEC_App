@@ -143,6 +143,26 @@ Ext.define('MEC_App.view.ContactUsView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+
+        this.down('#contactBtn1').setHtml(Ext.Global.GetViewTitle('AboutMinistry'));
+
+        this.down('#contactBtn2').setHtml(Ext.Global.GetViewTitle('Branches'));
+
+        this.down('#contactBtn3').setHtml(Ext.Global.GetViewTitle('Suggestions'));
+
+        this.down('#contactBtn4').setHtml(Ext.Global.GetViewTitle('ContactUs2'));
+
+        this.down('#contactBtn5').setHtml(Ext.Global.GetViewTitle('Employees'));
+
+
+
+
+
     }
 
 });
