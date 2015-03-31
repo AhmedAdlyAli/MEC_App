@@ -151,7 +151,7 @@ $base-gradient: flat;
     .btn-news {
         background: #633054;
     }
-    
+
     .media {
         background: url(../images/home-icon-media.png) no-repeat center;
         background-size: contain;
@@ -161,7 +161,7 @@ $base-gradient: flat;
     .btn-reports {
         background: #691648;
     }
-    
+
     .reports {
         background: url(../images/home-icon-reports.png) no-repeat center;
         background-size: contain;
@@ -171,7 +171,7 @@ $base-gradient: flat;
     .btn-inquire {
         background: #3a2639;
     }
-    
+
     .inquiries {
         background: url(../images/home-icon-inquiries.png) no-repeat center;
         background-size: contain;
@@ -181,7 +181,7 @@ $base-gradient: flat;
     .btn-projects {
         background: #4f2440;
     }
-    
+
     .projects {
         background: url(../images/home-icon-projects.png) no-repeat center;
         background-size: contain;
@@ -191,7 +191,7 @@ $base-gradient: flat;
     .btn-contact {
         background: #691648;
     }
-    
+
     .contact {
         background: url(../images/home-icon-contact.png) no-repeat center;
         background-size: contain;
@@ -282,6 +282,7 @@ $base-gradient: flat;
         margin: 5px 0px;
         padding: 0;
         color: #050505;
+        font-size: 12px;
 
         &:first-child {
             border-left: solid 1px #d7d7d7;

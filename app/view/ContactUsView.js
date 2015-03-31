@@ -22,6 +22,7 @@ Ext.define('MEC_App.view.ContactUsView', {
     ],
 
     config: {
+        itemId: 'mypanel',
         items: [
             {
                 xtype: 'button',

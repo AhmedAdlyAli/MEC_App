@@ -8,6 +8,8 @@
     "userConfig": {
         "designer|userAlias": "SideMenu",
         "designer|userClassName": "SideMenu",
+        "enter": null,
+        "exit": null,
         "height": "100%",
         "width": "85%"
     },

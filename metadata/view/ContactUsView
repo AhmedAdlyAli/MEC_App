@@ -7,7 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "ContactUsView",
-        "designer|userClassName": "ContactUsView"
+        "designer|userClassName": "ContactUsView",
+        "itemId": "mypanel"
     },
     "name": "MyPanel",
     "designerId": "4257bee8-8e2f-452c-9f89-6ef5eafd86eb",
