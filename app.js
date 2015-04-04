@@ -23,7 +23,10 @@ Ext.application({
 
     requires: [
         'MEC_App.controller.Global',
-        'MEC_App.controller.LocAr'
+        'MEC_App.controller.LocAr',
+        'Ext.device.Camera',
+        'Ext.device.Notification',
+        'Ext.Img'
     ],
     models: [
         'PrintOffice',
@@ -86,7 +89,8 @@ Ext.application({
         'MediaCenterController',
         'InquiriesController',
         'ReportsController',
-        'ContactController'
+        'ContactController',
+        'ComplaintsController'
     ],
     name: 'MEC_App',
 

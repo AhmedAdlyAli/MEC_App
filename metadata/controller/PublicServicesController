@@ -110,8 +110,8 @@
                 "fn": "onComplainsBtnTap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            xtype: 'ComplaintsView',",
+                    "            title: Ext.Global.GetViewTitle('Complaints')",
                     "        });"
                 ],
                 "name": "tap"

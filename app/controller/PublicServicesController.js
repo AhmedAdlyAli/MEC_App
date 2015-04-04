@@ -59,8 +59,8 @@ Ext.define('MEC_App.controller.PublicServicesController', {
 
     onComplainsBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    xtype: 'ComplaintsView',
+                    title: Ext.Global.GetViewTitle('Complaints')
                 });
     },
 

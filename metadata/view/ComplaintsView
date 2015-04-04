@@ -7,8 +7,32 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "ComplaintsView",
-        "designer|userClassName": "ComplaintsView"
+        "designer|userClassName": "ComplaintsView",
+        "requires": [
+            "Ext.Img",
+            "Ext.device.Camera",
+            "Ext.device.Notification"
+        ]
     },
     "name": "MyFormPanel",
-    "designerId": "af082f99-5a5f-40f9-b59b-06008a5ff047"
+    "designerId": "af082f99-5a5f-40f9-b59b-06008a5ff047",
+    "cn": [
+        {
+            "type": "Ext.field.File",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "fldImage",
+                "itemId": "fldImage",
+                "label": "ارفق صورة",
+                "labelAlign": "right",
+                "labelWidth": "40%"
+            },
+            "name": "MyFileField",
+            "designerId": "390fd98d-90df-48a5-889c-926e907e6950"
+        }
+    ]
 }

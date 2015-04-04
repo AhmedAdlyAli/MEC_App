@@ -17,7 +17,24 @@ Ext.define('MEC_App.view.ComplaintsView', {
     extend: 'Ext.form.Panel',
     alias: 'widget.ComplaintsView',
 
+    requires: [
+        'Ext.field.File',
+        'Ext.Img',
+        'Ext.device.Camera',
+        'Ext.device.Notification'
+    ],
+
     config: {
+        items: [
+            {
+                xtype: 'filefield',
+                id: 'fldImage',
+                itemId: 'fldImage',
+                label: 'ارفق صورة',
+                labelAlign: 'right',
+                labelWidth: '40%'
+            }
+        ]
     }
 
 });

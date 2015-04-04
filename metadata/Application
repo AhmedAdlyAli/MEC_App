@@ -15,7 +15,8 @@
             "MediaCenterController",
             "InquiriesController",
             "ReportsController",
-            "ContactController"
+            "ContactController",
+            "ComplaintsController"
         ],
         "models": [
             "PrintOffice",
@@ -24,7 +25,10 @@
         "name": "MEC_App",
         "requires": [
             "MEC_App.controller.Global",
-            "MEC_App.controller.LocAr"
+            "MEC_App.controller.LocAr",
+            "Ext.device.Camera",
+            "Ext.device.Notification",
+            "Ext.Img"
         ],
         "stores": [
             "MenuArrayStore",
