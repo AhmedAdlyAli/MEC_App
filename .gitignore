@@ -1,5 +1,8 @@
 .architect
 bootstrap.json
-build
-ext
-touch
+build/
+ext/
+touch/
+.sass-cahce
+.sass-cahce/
+*.css.map
