@@ -3,7 +3,6 @@ bootstrap.json
 build/
 ext/
 touch/
-.sass-cahce
-.sass-cahce/
+resources/sass/.sass-cache
 *.css.map
 .DS_Store
