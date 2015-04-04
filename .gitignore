@@ -6,3 +6,4 @@ touch/
 .sass-cahce
 .sass-cahce/
 *.css.map
+.DS_Store
