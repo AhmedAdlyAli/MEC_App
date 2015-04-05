@@ -28,7 +28,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
     ],
 
     config: {
-        standardSubmit: true,
+        enableSubmissionForm: false,
         url: 'http://www.google.com',
         items: [
             {
@@ -37,6 +37,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
                 items: [
                     {
                         xtype: 'textfield',
+                        id: 'shopName',
+                        itemId: 'shopName',
                         label: '',
                         labelAlign: 'right',
                         name: 'shopName',
@@ -45,18 +47,11 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
+                        id: 'shopLocation',
                         label: '',
                         labelAlign: 'right',
                         name: 'shopLocation',
                         placeHolder: 'موقع المتجر'
-                    },
-                    {
-                        xtype: 'textfield',
-                        hidden: true,
-                        id: 'txtCategory',
-                        itemId: 'txtCategory',
-                        label: 'Field',
-                        name: 'txtCategory'
                     },
                     {
                         xtype: 'button',
@@ -104,7 +99,16 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         text: 'نوع الشكوي'
                     },
                     {
+                        xtype: 'textfield',
+                        hidden: false,
+                        id: 'txtCategory',
+                        itemId: 'txtCategory',
+                        label: '',
+                        name: 'txtCategory'
+                    },
+                    {
                         xtype: 'textareafield',
+                        id: 'txtComplaint',
                         label: '',
                         labelAlign: 'right',
                         name: 'txtComplaint',
@@ -112,6 +116,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
+                        id: 'fullName',
                         label: '',
                         labelAlign: 'right',
                         name: 'fullName',
@@ -119,6 +124,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
+                        id: 'email',
                         label: '',
                         labelAlign: 'right',
                         name: 'email',
@@ -126,6 +132,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
+                        id: 'mobile',
                         label: '',
                         labelAlign: 'right',
                         name: 'mobile',
@@ -148,7 +155,13 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                                 */
 
-                                btn.setText(result.text);
+                                // btn.setText(result.text);
+
+
+
+                                Ext.getCmp('txtBarCode').setValue(result.text);
+
+
 
                             },
                             function (error) {
@@ -161,7 +174,15 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
                         },
+                        id: 'barcode',
                         text: 'barcode'
+                    },
+                    {
+                        xtype: 'textfield',
+                        hidden: false,
+                        id: 'txtBarCode',
+                        label: '',
+                        name: 'txtBarCode'
                     },
                     {
                         xtype: 'filefield',
@@ -277,6 +298,42 @@ Ext.define('MEC_App.view.ComplaintsView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+
+
+
+        this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'));
+        this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'));
+        this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'));
+        this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'));
+        this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'));
+        this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'));
+        this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'));
+        this.down('#barcode').setText(Ext.Global.GetComplaintsTitle('barcode'));
+
+
+        //this.down('#AttachHome').setHtml(Ext.Global.GetViewTitle('AttachHome'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
 });

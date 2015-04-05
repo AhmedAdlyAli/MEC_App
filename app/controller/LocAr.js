@@ -90,11 +90,31 @@ Ext.define('MEC_App.controller.LocAr', {
         };
 
 
+        g.ComplaintsLabels ={
+
+            'shopName': ' اسم المحل',
+            'shopLocation': ' موقع المتجر',
+            'ComplaintType': ' نوع الشكوي',
+            'txtComplaint': ' نص الشكوي',
+            'fullName': ' الاسم بالكامل',
+            'email': ' البريد الالكتدوني',
+            'mobile': ' رقم الهاتف',
+            'barcode': ' ادخل باركود',
+            'AttachHome': ' ارفق صورة'
+
+
+        };
+
+
+
 
         g.GenericContent ={
 
             HomeNews:'<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
         };
+
+
+
 
 
 

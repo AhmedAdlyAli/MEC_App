@@ -47,28 +47,27 @@ Ext.define('MEC_App.view.ContactUs2View', {
             {
                 xtype: 'panel',
                 cls: 'map-panel',
+                height: 300,
+                id: 'map',
+                itemId: 'map',
                 items: [
                     {
                         xtype: 'map',
+                        centered: false,
                         height: 250,
                         itemId: 'mymap',
-                        mapOptions: {
-                            center: new google.maps.LatLng(25.321283,
-                            51.528329),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP,
-                            zoom: 14
-                        },
+                        width: '100%',
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
                                     var gMap = this.getMap();
 
-                                    var marker = new google.maps.Marker({
-                                        map: gMap,
-                                        animation: google.maps.Animation.DROP,
-                                        position: new google.maps.LatLng (25.321283,51.528329),
-                                        icon: 'resources/images/drop-pin.png'
-                                    });
+
+                                    //gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+
+
+
+
                                 },
                                 event: 'initialize'
                             }
@@ -126,6 +125,44 @@ Ext.define('MEC_App.view.ContactUs2View', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+
+
+        Ext.Function.defer(function(){
+
+            var mapPanel = this.down('map');
+          var gMap = mapPanel.getMap();
+
+          if (gMap === null) {
+           Ext.Function.defer(this.initMap,250,this);
+          } else {
+             // ready to start calling google map methods
+
+             // alert('not null');
+
+
+          gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+
+
+              var marker = new google.maps.Marker({
+            map: gMap,
+            animation: google.maps.Animation.DROP,
+            position: new google.maps.LatLng (25.321283,51.528329),
+            icon: 'resources/images/drop-pin.png'
+           });
+
+
+
+
+
+          }
+        } ,100,this);
+
+
     }
 
 });
