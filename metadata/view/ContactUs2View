@@ -320,7 +320,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    " window.open('https://www.facebook.com','_blank','location=1');",
+                                    "window.open('https://www.facebook.com','_blank','location=1');",
                                     ""
                                 ]
                             },

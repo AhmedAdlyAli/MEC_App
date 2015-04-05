@@ -20,7 +20,7 @@
             "Ext.device.Notification"
         ],
         "scrollable": [
-            "{ direction: 'vertical', directionLock: true }"
+            "{ direction: 'vertical', directionLock: false }"
         ],
         "url": "http://www.google.com"
     },
@@ -329,6 +329,410 @@
                     "designerId": "965f6279-da2c-427a-b7b0-c8d305aa3604"
                 },
                 {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "load image 1"
+                    },
+                    "name": "MyButton4",
+                    "designerId": "cd4b1a64-0372-4f5f-8dc5-e8ad263c04f0",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "Ext.device.Notification.show({",
+                                    "    title: 'Choose Source',",
+                                    "    message: 'Please Choose photo source',",
+                                    "    buttons: [\"Camera\", \"Library\"],",
+                                    "",
+                                    "    callback: function(button) {",
+                                    "        //When the user taps a button, show another notification",
+                                    "        ",
+                                    "        Ext.device.Camera.capture({",
+                                    "    source: button,",
+                                    "    destination: 'file',",
+                                    "",
+                                    "    success: function(url) {",
+                                    "        //show the newly captured image in a full screen Ext.Img component:",
+                                    "        Ext.getCmp('img1').setSrc(url);",
+                                    "    }",
+                                    "});",
+                                    "        ",
+                                    "        ",
+                                    "        ",
+                                    "     ",
+                                    "        ",
+                                    "        ",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "584409eb-b315-4b41-80bc-6db49f436017"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "id": "img1",
+                        "itemId": "img1",
+                        "src": "resources/images/logo.png",
+                        "width": 200
+                    },
+                    "name": "MyImg",
+                    "designerId": "942d8a7f-63dc-452a-a1ea-bfa89555e842"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "load image 2"
+                    },
+                    "name": "MyButton",
+                    "designerId": "270612c6-4412-4315-b519-94292ccc9815",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "Ext.device.Notification.show({",
+                                    "    title: 'Choose Source',",
+                                    "    message: 'Please Choose photo source',",
+                                    "    buttons: [\"Camera\", \"Library\"],",
+                                    "",
+                                    "    callback: function(button) {",
+                                    "        //When the user taps a button, show another notification",
+                                    "",
+                                    "        Ext.device.Camera.capture({",
+                                    "    source: button,",
+                                    "    destination: 'file',",
+                                    "",
+                                    "    success: function(url) {",
+                                    "        //show the newly captured image in a full screen Ext.Img component:",
+                                    "        Ext.getCmp('img2').setSrc(url);",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "b6b78341-0278-4cf5-a422-172b95c01c2a"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "id": "img2",
+                        "itemId": "img2",
+                        "src": "resources/images/logo.png",
+                        "width": 200
+                    },
+                    "name": "MyImg1",
+                    "designerId": "57e92835-3815-4024-a99a-e0bf2fe7bc0b"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "load image 3"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "d15c0aa8-db96-4a0a-bd5e-9abbfec94526",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "Ext.device.Notification.show({",
+                                    "    title: 'Choose Source',",
+                                    "    message: 'Please Choose photo source',",
+                                    "    buttons: [\"Camera\", \"Library\"],",
+                                    "",
+                                    "    callback: function(button) {",
+                                    "        //When the user taps a button, show another notification",
+                                    "",
+                                    "        Ext.device.Camera.capture({",
+                                    "    source: button,",
+                                    "    destination: 'file',",
+                                    "",
+                                    "    success: function(url) {",
+                                    "        //show the newly captured image in a full screen Ext.Img component:",
+                                    "        Ext.getCmp('img3').setSrc(url);",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "e1ca6141-aaa8-4eac-8ed6-a3278710bd9d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "id": "img3",
+                        "itemId": "img3",
+                        "src": "resources/images/logo.png",
+                        "width": 200
+                    },
+                    "name": "MyImg2",
+                    "designerId": "e7c07423-bc31-4a70-93fd-e98e0f8ee6e5"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "load image 4"
+                    },
+                    "name": "MyButton2",
+                    "designerId": "26ed5dac-f68f-4807-a63b-802837103f56",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "Ext.device.Notification.show({",
+                                    "    title: 'Choose Source',",
+                                    "    message: 'Please Choose photo source',",
+                                    "    buttons: [\"Camera\", \"Library\"],",
+                                    "",
+                                    "    callback: function(button) {",
+                                    "        //When the user taps a button, show another notification",
+                                    "",
+                                    "        Ext.device.Camera.capture({",
+                                    "    source: button,",
+                                    "    destination: 'file',",
+                                    "",
+                                    "    success: function(url) {",
+                                    "        //show the newly captured image in a full screen Ext.Img component:",
+                                    "        Ext.getCmp('img4').setSrc(url);",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "1fc1bf35-2611-40ff-969d-9f1da78e974b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 201,
+                        "id": "img4",
+                        "itemId": "img4",
+                        "src": "resources/images/logo.png",
+                        "width": 200
+                    },
+                    "name": "MyImg3",
+                    "designerId": "4fd84d98-283c-4afa-8846-9fa2f3b26653"
+                },
+                {
                     "type": "Ext.field.File",
                     "reference": {
                         "name": "items",
@@ -345,24 +749,6 @@
                     },
                     "name": "MyFileField",
                     "designerId": "390fd98d-90df-48a5-889c-926e907e6950"
-                },
-                {
-                    "type": "Ext.field.File",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": null,
-                        "itemId": null,
-                        "label": "ارفق صورة",
-                        "labelAlign": "right",
-                        "labelWidth": "40%",
-                        "name": "img2"
-                    },
-                    "name": "MyFileField2",
-                    "designerId": "2d331122-e452-4f13-8530-aec0136594a7"
                 },
                 {
                     "type": "Ext.Button",
