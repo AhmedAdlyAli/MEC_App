@@ -76,7 +76,8 @@
             "PrintOfficeForm",
             "MenuModels",
             "MenuModelDetails",
-            "MenuModelForm"
+            "MenuModelForm",
+            "ContactUs2View"
         ]
     },
     "name": "Application",

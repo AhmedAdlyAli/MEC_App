@@ -117,9 +117,14 @@
                         ],
                         "height": "auto",
                         "layout|flex": 2.2,
-                        "scrollable": "vertical"
+                        "scrollable": [
+                            "{ direction: 'vertical', directionLock: true }"
+                        ]
                     },
                     "name": "MyPanel7",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
                     "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
                     "cn": [
                         {

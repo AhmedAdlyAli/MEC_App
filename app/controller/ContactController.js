@@ -46,7 +46,7 @@ Ext.define('MEC_App.controller.ContactController', {
     onContactBtn2Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetViewTitle('Branches')
                 });
     },
 
@@ -59,9 +59,9 @@ Ext.define('MEC_App.controller.ContactController', {
 
     onContactBtn4Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
-                });
+            xtype: 'ContactUs2View',
+            title: Ext.Global.GetViewTitle('ContactUs2')
+        });
     },
 
     onContactBtn5Tap: function(button, e, eOpts) {

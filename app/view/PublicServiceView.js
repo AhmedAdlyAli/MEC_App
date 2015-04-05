@@ -66,7 +66,10 @@ Ext.define('MEC_App.view.PublicServiceView', {
                         flex: 2.2,
                         cls: 'inner-panel',
                         height: 'auto',
-                        scrollable: 'vertical',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionLock: true
+                        },
                         items: [
                             {
                                 xtype: 'panel',

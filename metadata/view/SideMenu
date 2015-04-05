@@ -26,7 +26,7 @@
             "userConfig": {
                 "height": "100%",
                 "layout": "vbox",
-                "scrollable": null
+                "scrollable": "vertical"
             },
             "name": "MyPanel15",
             "designerId": "1bc80779-18d0-466d-be48-07624308447b",

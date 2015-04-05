@@ -30,6 +30,7 @@ Ext.define('MEC_App.view.SideMenu', {
                 xtype: 'panel',
                 height: '100%',
                 layout: 'vbox',
+                scrollable: 'vertical',
                 items: [
                     {
                         xtype: 'panel',

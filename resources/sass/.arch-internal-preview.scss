@@ -18,65 +18,24 @@ body {
 @font-face{font-family:'HelveticaNeueLTStd37ThCn';src:url('fonts/helveticaneueltstd-thcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
 @font-face{font-family:'HelveticaNeueLTStd57Condensed';src:url('fonts/helveticaneueltstd-cn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
 
-@font-face {
-    font-family: 'pf_din_text_universalregular';
-    src: url('fonts/PFDinTextUniversal-Regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universalregular';src: url('fonts/PFDinTextUniversal-Regular-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universalthin';
-    src: url('fonts/PFDinTextUniversal-Thin-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universalthin';src: url('fonts/PFDinTextUniversal-Thin-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universalXBlk';
-    src: url('fonts/PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universalXBlk';src: url('fonts/PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
+@font-face {font-family: 'pf_din_text_universalXTh';src: url('fonts/PFDinTextUniversal-XThin-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universalXTh';
-    src: url('fonts/PFDinTextUniversal-XThin-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universalbold';src: url('fonts/PFDinTextUniversal-Bold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universalbold';
-    src: url('fonts/PFDinTextUniversal-Bold-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universalhairline';src: url('fonts/PFDinTextUniversal-Hairline-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universalhairline';
-    src: url('fonts/PFDinTextUniversal-Hairline-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pf_din_text_universallight';src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {
-    font-family: 'pf_din_text_universallight';
-    src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'pf_din_text_universalmedium';
-    src: url('fonts/PFDinTextUniversal-Medium-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+@font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
 * {
-    font-family: 'pf_din_text_universalmedium' !important;
+    font-family: 'pfDinTextUniversalMedium' !important;
 }
 
 .x-toolbar-dark {
@@ -330,6 +289,11 @@ body {
 
 }
 
+
+.x-menu {
+    background-color: #671f48;
+}
+
 .MenuTop {
 
     background-color: #671f48;
@@ -434,4 +398,40 @@ body {
 }
 
 
+.contact-us-view {
+    direction: rtl;
 
+    h2 {
+        padding: 0 50px 0;
+        color: #691f49;
+        line-height: 40px;
+        margin: 15px 0;
+
+        &.contact-us {
+            background: #e1e1e1 url(../images/contact-us-title-icon.png) no-repeat 96% center;
+            margin: 0 0 15px;
+        }
+
+        &.branches {
+            background: #e1e1e1 url(../images/branches.png) no-repeat 96% center;
+        }
+    }
+
+    a {
+        color: #89bee9;
+        padding: 0 50px 0 0;
+        line-height: 40px;
+
+        &.call {
+            background: url(../images/contact-us-item-icon.png) no-repeat 92% center;
+        }
+
+        &.mail {
+            background: url(../images/mail.png) no-repeat 92% center;
+        }
+    }
+
+    .map-panel {
+        margin: 0 15px 15px;
+    }
+}

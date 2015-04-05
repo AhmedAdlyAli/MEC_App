@@ -78,7 +78,8 @@ Ext.application({
         'PrintOfficeForm',
         'MenuModels',
         'MenuModelDetails',
-        'MenuModelForm'
+        'MenuModelForm',
+        'ContactUs2View'
     ],
     controllers: [
         'HomeController',

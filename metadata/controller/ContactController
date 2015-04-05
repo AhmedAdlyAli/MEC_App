@@ -57,7 +57,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetViewTitle('Branches')",
                     "        });"
                 ],
                 "name": "tap"
@@ -110,9 +110,9 @@
                 "fn": "onContactBtn4Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
+                    "    xtype: 'ContactUs2View',",
+                    "    title: Ext.Global.GetViewTitle('ContactUs2')",
+                    "});"
                 ],
                 "name": "tap"
             },
