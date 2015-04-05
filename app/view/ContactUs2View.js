@@ -65,6 +65,14 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+                            //Ext.device.Device.openURL('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg');
+
+                            window.open('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_blank','location=1');
+
+
+
+                        },
                         cls: 'btn-youtube',
                         itemId: 'youtube',
                         iconAlign: 'center',
@@ -75,6 +83,12 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+                            window.open('https://instagram.com/mec_qatar/','_blank','location=1');
+
+
+
+                        },
                         cls: 'btn-instagram',
                         itemId: 'instagram',
                         iconAlign: 'center',
@@ -85,6 +99,11 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+                            window.open('https://twitter.com/mec_qatar','_blank','location=1');
+
+
+                        },
                         cls: 'btn-twitter',
                         itemId: 'twitter',
                         iconAlign: 'center',
@@ -95,6 +114,10 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+                            window.open('https://www.facebook.com','_blank','location=1');
+
+                        },
                         cls: 'btn-facebook',
                         itemId: 'facebook',
                         iconAlign: 'center',

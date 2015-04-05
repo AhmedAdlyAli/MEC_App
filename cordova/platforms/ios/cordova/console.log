@@ -1127,3 +1127,79 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-04-05 08:37:05.461 MEC_App[25394:4261805] Resetting plugins due to page load.
 2015-04-05 08:37:05.884 MEC_App[25394:4261805] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/138656B8-434B-44C8-805E-72E3B3D46B43/MEC_App.app/www/index.html
+2015-04-05 11:36:29.293 MEC_App[27645:4537925] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Data/Application/F219A0F8-B059-4EDB-94D7-57503F66451A/Library/Cookies/Cookies.binarycookies
+2015-04-05 11:36:29.427 MEC_App[27645:4537925] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-05 11:36:29.428 MEC_App[27645:4537925] Multi-tasking -> Device: YES, App: YES
+2015-04-05 11:36:29.429 MEC_App[27645:4537925] Unlimited access to network resources
+2015-04-05 11:36:29.445 MEC_App[27645:4537925] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-05 11:36:29.819 MEC_App[27645:4537925] Resetting plugins due to page load.
+2015-04-05 11:36:30.523 MEC_App[27645:4537925] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/A377E198-6BE6-4395-877E-07E7817551A7/MEC_App.app/www/index.html
+2015-04-05 11:36:30.538 MEC_App[27645:4537925] THREAD WARNING: ['Device'] took '13.034668' ms. Plugin should use a background thread.
+2015-04-05 11:36:56.624 MEC_App[27645:4537925] Resetting plugins due to page load.
+2015-04-05 11:36:58.608 MEC_App[27645:4537925] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:36:58.609 MEC_App[27645:4537925] Resetting plugins due to page load.
+2015-04-05 11:37:00.372 MEC_App[27645:4537925] Finished load of: https://m.youtube.com/#/channel/UC6g2VPwsbQ57G-Ni-N8rTVg
+2015-04-05 11:41:12.959 MEC_App[28036:4553370] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-05 11:41:12.965 MEC_App[28036:4553370] Multi-tasking -> Device: YES, App: YES
+2015-04-05 11:41:12.966 MEC_App[28036:4553370] Unlimited access to network resources
+2015-04-05 11:41:12.985 MEC_App[28036:4553370] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-05 11:41:13.507 MEC_App[28036:4553370] Resetting plugins due to page load.
+2015-04-05 11:41:13.905 MEC_App[28036:4553370] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/02CF3A69-4CB1-48AD-A1DB-570799918A99/MEC_App.app/www/index.html
+2015-04-05 11:41:41.969 MEC_App[28036:4553370] Resetting plugins due to page load.
+2015-04-05 11:41:43.100 MEC_App[28036:4553370] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:41:43.102 MEC_App[28036:4553370] Resetting plugins due to page load.
+2015-04-05 11:41:43.313 MEC_App[28036:4553370] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:41:43.314 MEC_App[28036:4553370] Resetting plugins due to page load.
+2015-04-05 11:41:44.877 MEC_App[28036:4553370] Finished load of: https://m.youtube.com/#/channel/UC6g2VPwsbQ57G-Ni-N8rTVg
+2015-04-05 11:42:17.791 MEC_App[28284:4559537] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-05 11:42:17.792 MEC_App[28284:4559537] Multi-tasking -> Device: YES, App: YES
+2015-04-05 11:42:17.794 MEC_App[28284:4559537] Unlimited access to network resources
+2015-04-05 11:42:17.796 MEC_App[28284:4559537] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-05 11:42:17.917 MEC_App[28284:4559537] Resetting plugins due to page load.
+2015-04-05 11:42:18.113 MEC_App[28284:4559537] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/521D7908-7BFB-4785-9443-F538091E6209/MEC_App.app/www/index.html
+2015-04-05 11:42:25.503 MEC_App[28284:4559537] Resetting plugins due to page load.
+2015-04-05 11:42:26.571 MEC_App[28284:4559537] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:42:26.572 MEC_App[28284:4559537] Resetting plugins due to page load.
+2015-04-05 11:42:26.795 MEC_App[28284:4559537] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:42:26.795 MEC_App[28284:4559537] Resetting plugins due to page load.
+2015-04-05 11:42:27.917 MEC_App[28284:4559537] Finished load of: https://m.youtube.com/#/channel/UC6g2VPwsbQ57G-Ni-N8rTVg
+2015-04-05 11:43:04.404 MEC_App[28526:4565719] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-05 11:43:04.418 MEC_App[28526:4565719] Multi-tasking -> Device: YES, App: YES
+2015-04-05 11:43:04.483 MEC_App[28526:4565719] Unlimited access to network resources
+2015-04-05 11:43:04.485 MEC_App[28526:4565719] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-05 11:43:05.056 MEC_App[28526:4565719] Resetting plugins due to page load.
+2015-04-05 11:43:05.240 MEC_App[28526:4565719] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/15C2C0C1-BE00-44C0-BB4C-201CC84E96AE/MEC_App.app/www/index.html
+2015-04-05 11:43:08.408 MEC_App[28526:4565719] Resetting plugins due to page load.
+2015-04-05 11:43:09.659 MEC_App[28526:4565719] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2015-04-05 11:43:09.659 MEC_App[28526:4565719] Resetting plugins due to page load.
+2015-04-05 11:43:10.806 MEC_App[28526:4565719] Finished load of: https://m.youtube.com/#/channel/UC6g2VPwsbQ57G-Ni-N8rTVg
+2015-04-05 11:43:25.449 MEC_App[28526:4565719] Resetting plugins due to page load.
+2015-04-05 11:43:27.414 MEC_App[28526:4565719] Finished load of: https://accounts.google.com/ServiceLogin?uilel=3&hl=en&passive=true&ltmpl=mobile&continue=https%3A%2F%2Fm.youtube.com%2Fsignin%3Fnext%3D%252Fchannel%252FUC6g2VPwsbQ57G-Ni-N8rTVg%253Frdm%253D1honej4g2%26feature%3Dblazerbootstrap%26action_handle_signin%3Dtrue%26app%3Dm%26hl%3Den&service=youtube
