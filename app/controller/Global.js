@@ -31,11 +31,17 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     GetViewTitle: function(view) {
-          return this.ViewTitles[view];
+                  return this.ViewTitles[view];
     },
 
     GetGenericContent: function(content) {
                 return this.GenericContent[content];
+    },
+
+    GetComplaintsTitle: function(title) {
+        return this.ComplaintsLabels[title];
+
+
     }
 
 });

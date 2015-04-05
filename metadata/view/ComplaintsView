@@ -8,12 +8,12 @@
     "userConfig": {
         "designer|userAlias": "ComplaintsView",
         "designer|userClassName": "ComplaintsView",
+        "enableSubmissionForm": false,
         "requires": [
             "Ext.Img",
             "Ext.device.Camera",
             "Ext.device.Notification"
         ],
-        "standardSubmit": true,
         "url": "http://www.google.com"
     },
     "name": "MyFormPanel",
@@ -41,8 +41,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": null,
-                        "itemId": null,
+                        "id": "shopName",
+                        "itemId": "shopName",
                         "label": "",
                         "labelAlign": "right",
                         "name": "shopName",
@@ -60,6 +60,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "shopLocation",
                         "itemId": null,
                         "label": "",
                         "labelAlign": "right",
@@ -68,23 +69,6 @@
                     },
                     "name": "MyTextField3",
                     "designerId": "e1574abc-b7d4-4b58-84c2-a907c07b2537"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "hidden": true,
-                        "id": "txtCategory",
-                        "itemId": "txtCategory",
-                        "label": "Field",
-                        "name": "txtCategory"
-                    },
-                    "name": "MyTextField4",
-                    "designerId": "1afff474-e436-4b6a-be78-cfe0e6d2c92d"
                 },
                 {
                     "type": "Ext.Button",
@@ -120,11 +104,11 @@
                                     "    title: \"نوع الشكوي\",",
                                     "    items: [",
                                     "        { text: \"Type 1\", value: \"1\" },",
-                                    "         { text: \"Type 2\", value: \"2\" },",
-                                    "         { text: \"Type 3\", value: \"3\" },",
-                                    "         { text: \"Type 4\", value: \"4\" },",
-                                    "         { text: \"Type 5\", value: \"5\" },",
-                                    "         { text: \"Type 6\", value: \"6\" }",
+                                    "        { text: \"Type 2\", value: \"2\" },",
+                                    "        { text: \"Type 3\", value: \"3\" },",
+                                    "        { text: \"Type 4\", value: \"4\" },",
+                                    "        { text: \"Type 5\", value: \"5\" },",
+                                    "        { text: \"Type 6\", value: \"6\" }",
                                     "",
                                     "",
                                     "    ],",
@@ -136,16 +120,16 @@
                                     "// Show the picker",
                                     "window.plugins.listpicker.showPicker(config,",
                                     "                                     function(item) {",
-                                    "                                        //btn.setText(item);",
-                                    "                                        // alert(item);",
+                                    "                                         //btn.setText(item);",
+                                    "                                         // alert(item);",
                                     "",
                                     "",
-                                    "Ext.getCmp('txtCategory').setValue(item);",
+                                    "                                         Ext.getCmp('txtCategory').setValue(item);",
                                     "",
                                     "",
                                     "                                     },",
                                     "                                     function() {",
-                                    "                                       //  alert(\"You have cancelled\");",
+                                    "                                         //  alert(\"You have cancelled\");",
                                     "                                     }",
                                     "                                    );",
                                     "",
@@ -160,6 +144,23 @@
                     ]
                 },
                 {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "id": "txtCategory",
+                        "itemId": "txtCategory",
+                        "label": "",
+                        "name": "txtCategory"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "1afff474-e436-4b6a-be78-cfe0e6d2c92d"
+                },
+                {
                     "type": "Ext.field.TextArea",
                     "reference": {
                         "name": "items",
@@ -167,6 +168,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "txtComplaint",
                         "label": "",
                         "labelAlign": "right",
                         "name": "txtComplaint",
@@ -183,6 +185,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "fullName",
                         "label": "",
                         "labelAlign": "right",
                         "name": "fullName",
@@ -199,6 +202,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "email",
                         "label": "",
                         "labelAlign": "right",
                         "name": "email",
@@ -215,6 +219,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "mobile",
                         "label": "",
                         "labelAlign": "right",
                         "name": "mobile",
@@ -232,6 +237,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "designer|displayName": "barcode",
+                        "id": "barcode",
                         "text": "barcode"
                     },
                     "name": "MyButton19",
@@ -264,8 +270,14 @@
                                     "                \"Cancelled: \" + result.cancelled);",
                                     "",
                                     "*/",
+                                    "",
+                                    "         // btn.setText(result.text);",
                                     "          ",
-                                    "          btn.setText(result.text);",
+                                    "          ",
+                                    "          ",
+                                    "           Ext.getCmp('txtBarCode').setValue(result.text);",
+                                    "          ",
+                                    "          ",
                                     "",
                                     "      },",
                                     "      function (error) {",
@@ -283,6 +295,22 @@
                             "designerId": "d2a9fc96-adac-43c8-b285-b8af16aec053"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "id": "txtBarCode",
+                        "label": "",
+                        "name": "txtBarCode"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "965f6279-da2c-427a-b7b0-c8d305aa3604"
                 },
                 {
                     "type": "Ext.field.File",
@@ -446,6 +474,54 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'));",
+                    "this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'));",
+                    "this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'));",
+                    "this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'));",
+                    "this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'));",
+                    "this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'));",
+                    "this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'));",
+                    "this.down('#barcode').setText(Ext.Global.GetComplaintsTitle('barcode'));",
+                    "",
+                    "",
+                    "//this.down('#AttachHome').setHtml(Ext.Global.GetViewTitle('AttachHome'));",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "c7206cf5-4e6a-42a5-a6de-adce5e52ae3a"
         }
     ]
 }

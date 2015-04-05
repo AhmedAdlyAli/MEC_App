@@ -47,7 +47,7 @@
                 ],
                 "fn": "GetViewTitle",
                 "implHandler": [
-                    "  return this.ViewTitles[view];"
+                    "          return this.ViewTitles[view];"
                 ]
             },
             "name": "GetViewTitle",
@@ -71,6 +71,27 @@
             },
             "name": "GetGenericContent",
             "designerId": "62b3797f-f72d-4d3e-a23e-1face50bb8f8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "title"
+                ],
+                "fn": "GetComplaintsTitle",
+                "implHandler": [
+                    "return this.ComplaintsLabels[title];",
+                    "",
+                    ""
+                ]
+            },
+            "name": "GetComplaintsTitle",
+            "designerId": "e6e9e5b4-8228-40dc-a7be-9057e29ff23f"
         }
     ]
 }
