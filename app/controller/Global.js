@@ -47,6 +47,11 @@ Ext.define('MEC_App.controller.Global', {
     GetValidationMsg: function(msg) {
                  return this.ValidationMsg[msg];
 
+    },
+
+    GetConfirmationMsg: function(msg) {
+                 return this.ConfirmationMsg[msg];
+
     }
 
 });

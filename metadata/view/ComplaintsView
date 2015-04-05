@@ -175,7 +175,8 @@
                         "label": "",
                         "labelAlign": null,
                         "name": "txtComplaint",
-                        "placeHolder": "نص الشكوي"
+                        "placeHolder": "نص الشكوي",
+                        "required": true
                     },
                     "name": "MyTextArea",
                     "designerId": "c07288f4-0a40-414b-ad89-923d7267e49d"
@@ -192,7 +193,8 @@
                         "label": "",
                         "labelAlign": null,
                         "name": "fullName",
-                        "placeHolder": "الاسم بالكامل"
+                        "placeHolder": "الاسم بالكامل",
+                        "required": true
                     },
                     "name": "MyTextField5",
                     "designerId": "4b8df373-3f3d-4bd0-a7cb-b4c3c9ec3e26"
@@ -226,7 +228,8 @@
                         "label": "",
                         "labelAlign": null,
                         "name": "mobile",
-                        "placeHolder": "رقم الهاتف"
+                        "placeHolder": "رقم الهاتف",
+                        "required": true
                     },
                     "name": "MyTextField7",
                     "designerId": "fba83ece-53fd-4aa8-bb74-fe811ab2a86c"
@@ -530,10 +533,10 @@
                                     "}",
                                     "",
                                     "",
-                                    "if(formData.txtCategory===''){",
+                                    "//if(formData.txtCategory===''){",
                                     "",
-                                    "    err+=Ext.Global.GetValidationMsg('errComplaintType');",
-                                    "}",
+                                    "//    err+=Ext.Global.GetValidationMsg('errComplaintType');",
+                                    "//}",
                                     "",
                                     "",
                                     "",
@@ -565,6 +568,23 @@
                                     "        buttons: [\"OK\"],",
                                     "        message: err",
                                     "    });",
+                                    "}else{",
+                                    "",
+                                    "",
+                                    "    Ext.device.Notification.show({",
+                                    "        title: 'Ok',",
+                                    "        buttons: [\"OK\"],",
+                                    "        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),",
+                                    "        callback: function(button) {",
+                                    "",
+                                    "        //return user to home page",
+                                    "            ",
+                                    "            Ext.Viewport.getActiveItem().reset();",
+                                    "",
+                                    "        }",
+                                    "     });",
+                                    "",
+                                    "",
                                     "}",
                                     "",
                                     ""

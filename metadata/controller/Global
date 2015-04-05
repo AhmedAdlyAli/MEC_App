@@ -112,6 +112,26 @@
             },
             "name": "GetValidationMsg",
             "designerId": "3408a3fe-65b7-431e-8ce1-d42529afdf9d"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "msg"
+                ],
+                "fn": "GetConfirmationMsg",
+                "implHandler": [
+                    "         return this.ConfirmationMsg[msg];",
+                    ""
+                ]
+            },
+            "name": "GetConfirmationMsg",
+            "designerId": "5efa3be2-c8e5-467e-bbf9-c833af8da070"
         }
     ]
 }

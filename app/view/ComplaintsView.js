@@ -110,6 +110,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'txtComplaint',
                         label: '',
                         name: 'txtComplaint',
+                        required: true,
                         placeHolder: 'نص الشكوي'
                     },
                     {
@@ -117,6 +118,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'fullName',
                         label: '',
                         name: 'fullName',
+                        required: true,
                         placeHolder: 'الاسم بالكامل'
                     },
                     {
@@ -131,6 +133,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'mobile',
                         label: '',
                         name: 'mobile',
+                        required: true,
                         placeHolder: 'رقم الهاتف'
                     },
                     {
@@ -229,10 +232,10 @@ Ext.define('MEC_App.view.ComplaintsView', {
                             }
 
 
-                            if(formData.txtCategory===''){
+                            //if(formData.txtCategory===''){
 
-                                err+=Ext.Global.GetValidationMsg('errComplaintType');
-                            }
+                            //    err+=Ext.Global.GetValidationMsg('errComplaintType');
+                            //}
 
 
 
@@ -264,6 +267,23 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                     buttons: ["OK"],
                                     message: err
                                 });
+                            }else{
+
+
+                                Ext.device.Notification.show({
+                                    title: 'Ok',
+                                    buttons: ["OK"],
+                                    message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
+                                    callback: function(button) {
+
+                                        //return user to home page
+
+                                        Ext.Viewport.getActiveItem().reset();
+
+                                    }
+                                });
+
+
                             }
 
 

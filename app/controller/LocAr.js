@@ -119,6 +119,22 @@ Ext.define('MEC_App.controller.LocAr', {
         };
 
 
+
+
+        g.ConfirmationMsg ={
+
+            msgConfirmComplaints:'تم ارسال الشكوي بنجاح'
+
+
+
+        };
+
+
+
+
+
+
+
         g.GenericContent ={
 
             HomeNews:'<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
