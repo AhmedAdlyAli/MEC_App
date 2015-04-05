@@ -314,8 +314,8 @@ Ext.define('MEC_App.view.MainNavView', {
 
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
-            } else {
-                if (theMenu.isHidden() && event.startX < 50) {
+            } else if (event.direction == 'right') {
+                if (theMenu.isHidden()) {
                     Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
                 }
 

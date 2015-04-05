@@ -51,28 +51,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     {
                         xtype: 'map',
                         height: 250,
-                        itemId: 'mymap',
-                        mapOptions: {
-                            center: new google.maps.LatLng(25.321283,
-                            51.528329),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP,
-                            zoom: 14
-                        },
-                        listeners: [
-                            {
-                                fn: function(component, eOpts) {
-                                    var gMap = this.getMap();
-
-                                    var marker = new google.maps.Marker({
-                                        map: gMap,
-                                        animation: google.maps.Animation.DROP,
-                                        position: new google.maps.LatLng (25.321283,51.528329),
-                                        icon: 'resources/images/drop-pin.png'
-                                    });
-                                },
-                                event: 'initialize'
-                            }
-                        ]
+                        id: 'mymap',
+                        itemId: 'mymap'
                     }
                 ]
             },
@@ -85,8 +65,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'btn-youtube',
                         itemId: 'youtube',
-                        icon: 'true',
                         iconAlign: 'center',
                         iconCls: 'youtube'
                     },
@@ -95,8 +75,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'btn-instagram',
                         itemId: 'instagram',
-                        icon: 'true',
                         iconAlign: 'center',
                         iconCls: 'instagram'
                     },
@@ -105,8 +85,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'btn-twitter',
                         itemId: 'twitter',
-                        icon: 'true',
                         iconAlign: 'center',
                         iconCls: 'twitter'
                     },
@@ -115,10 +95,10 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'button',
+                        cls: 'btn-facebook',
                         itemId: 'facebook',
-                        icon: 'true',
                         iconAlign: 'center',
-                        iconCls: 'youtube'
+                        iconCls: 'facebook'
                     },
                     {
                         xtype: 'spacer'
@@ -126,6 +106,51 @@ Ext.define('MEC_App.view.ContactUs2View', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        var mapPanel = this.down('map');
+          var gMap = mapPanel.getMap();
+
+        Ext.Function.defer(function(){
+
+          if (gMap === null) {
+           Ext.Function.defer(this.initMap,250,this);
+          } else {
+             // ready to start calling google map methods
+
+             // alert('not null');
+
+
+          gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+
+
+              var marker = new google.maps.Marker({
+            map: gMap,
+            animation: google.maps.Animation.DROP,
+            position: new google.maps.LatLng (25.321283,51.528329),
+            icon: 'resources/images/drop-pin.png'
+           });
+
+          }
+        } ,100,this);
+
+        mapPanel.element.on({
+            tap: this.domEvent,
+            touchstart:this.domEvent,
+            touchmove:this.domEvent,
+            touchdown:this.domEvent,
+            scroll:this.domEvent,
+            pinch:this.domEvent,
+            pinchstart:this.domEvent,
+            pinchend:this.domEvent
+        });
+    },
+
+    domEvent: function(evt, el, o) {
+        evt.stopPropagation();
     }
 
 });

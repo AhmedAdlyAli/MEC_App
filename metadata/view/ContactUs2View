@@ -86,45 +86,13 @@
                     "userConfig": {
                         "docked": null,
                         "height": 250,
+                        "id": "mymap",
                         "itemId": "mymap",
-                        "mapOptions": [
-                            "{",
-                            "    center: new google.maps.LatLng (25.321283,51.528329),",
-                            "    mapTypeId: google.maps.MapTypeId.ROADMAP,",
-                            "    zoom: 14",
-                            "}"
-                        ],
                         "useCurrentLocation": null,
                         "width": null
                     },
                     "name": "MyMap",
-                    "designerId": "71ede7c1-aa5c-45ce-9c8a-733c75375fc5",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "onMymapInitialize",
-                                "implHandler": [
-                                    "var gMap = this.getMap();",
-                                    "",
-                                    "var marker = new google.maps.Marker({",
-                                    "    map: gMap,",
-                                    "    animation: google.maps.Animation.DROP,",
-                                    "    position: new google.maps.LatLng (25.321283,51.528329),",
-                                    "    icon: 'resources/images/drop-pin.png'",
-                                    "   });"
-                                ],
-                                "name": "initialize"
-                            },
-                            "name": "onMymapInitialize",
-                            "designerId": "0a497df4-e682-4fe0-b22d-4a929de2fc60"
-                        }
-                    ]
+                    "designerId": "71ede7c1-aa5c-45ce-9c8a-733c75375fc5"
                 }
             ]
         },
@@ -159,10 +127,14 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "icon": "true",
+                        "cls": [
+                            "btn-youtube"
+                        ],
+                        "icon": null,
                         "iconAlign": "center",
                         "iconCls": "youtube",
                         "itemId": "youtube",
+                        "layout|flex": null,
                         "text": null
                     },
                     "name": "MyButton",
@@ -186,7 +158,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "icon": "true",
+                        "cls": [
+                            "btn-instagram"
+                        ],
+                        "icon": null,
                         "iconAlign": "center",
                         "iconCls": "instagram",
                         "itemId": "instagram",
@@ -213,7 +188,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "icon": "true",
+                        "cls": [
+                            "btn-twitter"
+                        ],
+                        "icon": null,
                         "iconAlign": "center",
                         "iconCls": "twitter",
                         "itemId": "twitter",
@@ -240,9 +218,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "icon": "true",
+                        "cls": [
+                            "btn-facebook"
+                        ],
+                        "icon": null,
                         "iconAlign": "center",
-                        "iconCls": "youtube",
+                        "iconCls": "facebook",
                         "itemId": "facebook",
                         "text": null
                     },
@@ -260,6 +241,80 @@
                     "designerId": "37ac226b-1407-462a-bab3-284b84ebc00e"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var mapPanel = this.down('map');",
+                    "  var gMap = mapPanel.getMap();",
+                    "",
+                    "Ext.Function.defer(function(){",
+                    "",
+                    "  if (gMap === null) {",
+                    "   Ext.Function.defer(this.initMap,250,this);",
+                    "  } else {",
+                    "     // ready to start calling google map methods",
+                    "",
+                    "     // alert('not null');",
+                    "",
+                    "",
+                    "  gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));",
+                    "",
+                    "",
+                    "      var marker = new google.maps.Marker({",
+                    "    map: gMap,",
+                    "    animation: google.maps.Animation.DROP,",
+                    "    position: new google.maps.LatLng (25.321283,51.528329),",
+                    "    icon: 'resources/images/drop-pin.png'",
+                    "   });",
+                    "",
+                    "  }",
+                    "} ,100,this);",
+                    "",
+                    "mapPanel.element.on({",
+                    "    tap: this.domEvent,",
+                    "    touchstart:this.domEvent,",
+                    "    touchmove:this.domEvent,",
+                    "    touchdown:this.domEvent,",
+                    "    scroll:this.domEvent,",
+                    "    pinch:this.domEvent,",
+                    "    pinchstart:this.domEvent,",
+                    "    pinchend:this.domEvent",
+                    "});"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "bb36dc09-8e93-4e7b-b257-3a573972ca75"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "evt",
+                    "el",
+                    "o"
+                ],
+                "fn": "domEvent",
+                "implHandler": [
+                    "evt.stopPropagation();"
+                ]
+            },
+            "name": "domEvent",
+            "designerId": "62738da9-c390-4bb4-a0ad-81734c0ab5ed"
         }
     ]
 }

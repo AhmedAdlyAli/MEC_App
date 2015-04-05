@@ -30,7 +30,7 @@ body {
 
 @font-face {font-family: 'pf_din_text_universallight';src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
-@font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium_gdi.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
 * {
     font-family: 'pfDinTextUniversalMedium' !important;
@@ -398,6 +398,7 @@ body {
 
 .contact-us-view {
     direction: rtl;
+    background: #fff;
 
     h2 {
         padding: 0 50px 0;
@@ -419,17 +420,46 @@ body {
         color: #89bee9;
         padding: 0 50px 0 0;
         line-height: 40px;
+        direction: ltr;
+        display: block;
+        font-family: HelveticaNeueLTStd57Condensed;
 
         &.call {
-            background: url(../images/contact-us-item-icon.png) no-repeat 92% center;
+            background: url(../images/contact-us-item-icon.png) no-repeat 96% center;
         }
 
         &.mail {
-            background: url(../images/mail.png) no-repeat 92% center;
+            background: url(../images/mail.png) no-repeat 96% center;
         }
     }
 
     .map-panel {
-        margin: 0 15px 15px;
+        margin: 15px;
+    }
+
+    .x-button {
+        background: none;
+        border: none;
+        
+        .x-button-icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .youtube {
+        background: url(../images/youtube.png) no-repeat center;
+    }
+
+    .facebook {
+        background: url(../images/facebook.png) no-repeat center;
+    }
+
+    .twitter {
+        background: url(../images/twitter.png) no-repeat center;
+    }
+
+    .instagram {
+        background: url(../images/instagram.png) no-repeat center;
     }
 }
