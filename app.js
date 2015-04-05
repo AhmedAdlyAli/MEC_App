@@ -30,7 +30,8 @@ Ext.application({
     ],
     models: [
         'PrintOffice',
-        'MenuModel'
+        'MenuModel',
+        'ComplaintsModel'
     ],
     stores: [
         'MenuArrayStore',

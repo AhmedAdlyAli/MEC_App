@@ -25,5 +25,17 @@
             "url": "https://git-wip-us.apache.org/repos/asf/cordova-plugin-dialogs.git",
             "subdir": "."
         }
+    },
+    "am.armsoft.plugins.ListPicker": {
+        "source": {
+            "type": "registry",
+            "id": "am.armsoft.plugins.listpicker"
+        }
+    },
+    "com.phonegap.plugins.barcodescanner": {
+        "source": {
+            "type": "registry",
+            "id": "com.phonegap.plugins.barcodescanner"
+        }
     }
 }

@@ -48,6 +48,6 @@ Ext.define('MEC_App.store.override.MenuArrayStore', {
                 ItemIconURL: 'resources/images/m-login.png'
             }
         ]
-       
+
     }
 });

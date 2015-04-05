@@ -27,6 +27,12 @@
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
     </feature>
+    <feature name="ListPicker">
+        <param name="ios-package" value="ListPicker" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="ios-package" value="CDVBarcodeScanner" />
+    </feature>
     <name>MEC_App</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

@@ -49,6 +49,20 @@ module.exports = [
         "merges": [
             "navigator.notification"
         ]
+    },
+    {
+        "file": "plugins/am.armsoft.plugins.ListPicker/www/ListPicker.js",
+        "id": "am.armsoft.plugins.ListPicker.ListPicker",
+        "clobbers": [
+            "window.plugins.listpicker"
+        ]
+    },
+    {
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
+        "clobbers": [
+            "cordova.plugins.barcodeScanner"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -57,7 +71,9 @@ module.exports.metadata =
     "cordova-plugin-camera": "0.3.7-dev",
     "org.apache.cordova.device": "0.3.0",
     "cordova-plugin-vibration": "0.3.14-dev",
-    "cordova-plugin-dialogs": "0.3.1-dev"
+    "cordova-plugin-dialogs": "0.3.1-dev",
+    "am.armsoft.plugins.ListPicker": "2.2.0",
+    "com.phonegap.plugins.barcodescanner": "2.0.1"
 }
 // BOTTOM OF METADATA
 });

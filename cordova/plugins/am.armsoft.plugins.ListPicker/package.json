@@ -1,0 +1,25 @@
+{
+    "version": "2.2.0",
+    "name": "am.armsoft.plugins.listpicker",
+    "cordova_name": "ListPicker",
+    "description": "\r\n  \tPhoneGap plugin to display a list picker dialog for Android and iOS.\r\n  ",
+    "license": "MIT",
+    "keywords": [
+        "phonegap",
+        "android",
+        "ios",
+        "list",
+        "picker",
+        "dialog"
+    ],
+    "platforms": [
+        "ios",
+        "android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

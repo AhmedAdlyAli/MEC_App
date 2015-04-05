@@ -18,6 +18,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
     alias: 'widget.ComplaintsView',
 
     requires: [
+        'Ext.form.FieldSet',
+        'Ext.Button',
+        'Ext.field.TextArea',
         'Ext.field.File',
         'Ext.Img',
         'Ext.device.Camera',
@@ -25,14 +28,253 @@ Ext.define('MEC_App.view.ComplaintsView', {
     ],
 
     config: {
+        standardSubmit: true,
+        url: 'http://www.google.com',
         items: [
             {
-                xtype: 'filefield',
-                id: 'fldImage',
-                itemId: 'fldImage',
-                label: 'ارفق صورة',
-                labelAlign: 'right',
-                labelWidth: '40%'
+                xtype: 'fieldset',
+                modal: true,
+                items: [
+                    {
+                        xtype: 'textfield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'shopName',
+                        required: true,
+                        placeHolder: 'اسم المحل'
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'shopLocation',
+                        placeHolder: 'موقع المتجر'
+                    },
+                    {
+                        xtype: 'textfield',
+                        hidden: true,
+                        id: 'txtCategory',
+                        itemId: 'txtCategory',
+                        label: 'Field',
+                        name: 'txtCategory'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+                            var btn = this;
+                            var config = {
+                                title: "نوع الشكوي",
+                                items: [
+                                { text: "Type 1", value: "1" },
+                                { text: "Type 2", value: "2" },
+                                { text: "Type 3", value: "3" },
+                                { text: "Type 4", value: "4" },
+                                { text: "Type 5", value: "5" },
+                                { text: "Type 6", value: "6" }
+
+
+                                ],
+                                selectedValue: "2",
+                                doneButtonLabel: "ٌختيار",
+                                cancelButtonLabel: "الغاء"
+                            };
+
+                            // Show the picker
+                            window.plugins.listpicker.showPicker(config,
+                            function(item) {
+                                //btn.setText(item);
+                                // alert(item);
+
+
+                                Ext.getCmp('txtCategory').setValue(item);
+
+
+                            },
+                            function() {
+                                //  alert("You have cancelled");
+                            }
+                            );
+
+
+
+
+                        },
+                        id: 'btnSelectCategory',
+                        iconAlign: 'right',
+                        text: 'نوع الشكوي'
+                    },
+                    {
+                        xtype: 'textareafield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'txtComplaint',
+                        placeHolder: 'نص الشكوي'
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'fullName',
+                        placeHolder: 'الاسم بالكامل'
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'email',
+                        placeHolder: 'البريد الالكتدوني'
+                    },
+                    {
+                        xtype: 'textfield',
+                        label: '',
+                        labelAlign: 'right',
+                        name: 'mobile',
+                        placeHolder: 'رقم الهاتف'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+                            //Ext.Msg.alert('Error', 'There was an error when acquiring the picture.');
+
+                            var btn = this;
+
+                            cordova.plugins.barcodeScanner.scan(
+                            function (result) {
+
+                                /*  alert("We got a barcode\n" +
+                                "Result: " + result.text + "\n" +
+                                "Format: " + result.format + "\n" +
+                                "Cancelled: " + result.cancelled);
+
+                                */
+
+                                btn.setText(result.text);
+
+                            },
+                            function (error) {
+                                alert("Scanning failed: " + error);
+                            }
+                            );
+
+
+
+
+
+                        },
+                        text: 'barcode'
+                    },
+                    {
+                        xtype: 'filefield',
+                        label: 'ارفق صورة',
+                        labelAlign: 'right',
+                        labelWidth: '40%',
+                        name: 'img1'
+                    },
+                    {
+                        xtype: 'filefield',
+                        label: 'ارفق صورة',
+                        labelAlign: 'right',
+                        labelWidth: '40%',
+                        name: 'img2'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+
+                            var frm = button.up('ComplaintsView');
+
+
+
+                            //alert(frm.getValues().shopName);
+                            var formData =frm.getValues();
+
+
+                            var err='';
+
+                            if(formData.shopName===''){
+
+                                err+='Please enter shop name\n';
+                            }
+
+
+                            if(formData.txtCategory===''){
+
+                                err+='Please enter category\n';
+                            }
+
+
+
+                            if(formData.txtComplaint===''){
+
+                                err+='Please enter the Complaint\n';
+                            }
+
+
+
+                            if(formData.fullName===''){
+
+                                err+='Please enter the full name\n';
+                            }
+
+
+                            if(formData.mobile===''){
+
+                                err+='Please enter the mobile\n';
+                            }
+
+
+
+
+                            if(err.length>0){
+
+                                Ext.device.Notification.show({
+                                    title: 'Error',
+                                    buttons: ["OK"],
+                                    message: err
+                                });
+                            }
+
+
+
+
+
+
+
+
+                            /*var cmp = Ext.create('model.ComplaintsModel',{
+                            shopName: formData.shopName
+
+                            });
+
+                            var errs = cmp.validate();
+
+
+                            var msg = '';
+
+                            if (!errs.isValid()) {
+                            errs.each(function (err) {
+                            msg += err.getField() + ' : ' + err.getMessage() + '';
+                            });
+
+
+                            Ext.Msg.alert('ERROR', msg);
+
+                            } else {
+                            Ext.Msg.alert('SUCCESS', 'Looks like the Form is valid');
+                            }
+
+                            */
+
+
+
+
+
+
+
+                        },
+                        text: 'ارسال'
+                    }
+                ]
             }
         ]
     }
