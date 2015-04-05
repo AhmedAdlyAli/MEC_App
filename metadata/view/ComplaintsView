@@ -6,17 +6,28 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "ComplaintsView",
         "designer|userClassName": "ComplaintsView",
         "enableSubmissionForm": false,
+        "fullscreen": null,
+        "layout": "vbox",
         "requires": [
             "Ext.Img",
             "Ext.device.Camera",
             "Ext.device.Notification"
         ],
+        "scrollable": [
+            "{ direction: 'vertical', directionLock: true }"
+        ],
         "url": "http://www.google.com"
     },
     "name": "MyFormPanel",
+    "configAlternates": {
+        "scrollable": "object"
+    },
     "designerId": "af082f99-5a5f-40f9-b59b-06008a5ff047",
     "cn": [
         {
@@ -27,10 +38,15 @@
             },
             "codeClass": null,
             "userConfig": {
+                "height": null,
+                "layout": null,
                 "modal": true,
                 "title": null
             },
             "name": "MyFieldSet1",
+            "configAlternates": {
+                "scrollable": "object"
+            },
             "designerId": "1b735146-3053-46cc-8a1b-3146d4611a7f",
             "cn": [
                 {

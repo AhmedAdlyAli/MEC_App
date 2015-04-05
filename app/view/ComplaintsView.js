@@ -28,8 +28,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
     ],
 
     config: {
+        cls: 'complaint-view',
+        layout: 'vbox',
         enableSubmissionForm: false,
         url: 'http://www.google.com',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
         items: [
             {
                 xtype: 'fieldset',
