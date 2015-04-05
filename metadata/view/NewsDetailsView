@@ -1,0 +1,138 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "NewsDetailsView",
+        "designer|userClassName": "NewsDetailsView",
+        "id": "NewsDetailsView",
+        "itemId": "NewsDetailsView",
+        "layout": "vbox"
+    },
+    "name": "MyPanel2",
+    "designerId": "af50c861-2e74-49ff-b8eb-247d83453b48",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel2",
+            "designerId": "ccecec3b-8617-48df-aada-e52db4529aa8"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "newsDetails"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyPanel3",
+            "designerId": "e1713cbf-df44-44eb-910b-8ff034c9fcd1",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "title"
+                        ],
+                        "height": 40,
+                        "html": "",
+                        "id": "lblTitle"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "67a0cb63-b32a-403c-a1de-3869a2b30248"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "img"
+                        ],
+                        "height": 201,
+                        "id": "imgNews"
+                    },
+                    "name": "MyImg",
+                    "designerId": "02fe8cdf-2680-474f-a82c-54e37ce20156"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "date"
+                        ],
+                        "height": 40,
+                        "id": "lblDate"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "7341e5e3-a50d-4453-93ca-cdc02aa82730"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "details"
+                        ],
+                        "id": "lblDetails"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "a31d47de-224d-477d-a056-45a1064ae8ad"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNewsDetailsViewInitialize",
+                "implHandler": [
+                    "",
+                    " this.down('#lblTitle').setHtml(this.Data.NewsTitle);",
+                    " this.down('#lblDate').setHtml(this.Data.NewsDate);",
+                    " this.down('#lblDetails').setHtml(this.Data.NewsDetails);",
+                    " this.down('#imgNews').setSrc(this.Data.NewsImgUrl);",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onNewsDetailsViewInitialize",
+            "designerId": "0e44d331-f094-4cbe-9206-a4becde63f3b"
+        }
+    ]
+}

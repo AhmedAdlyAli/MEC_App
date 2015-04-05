@@ -37,8 +37,10 @@ Ext.define('MEC_App.controller.LocAr', {
 
 
             'MinistryPublications' : 'اصدارات الوزارة',
-            'MinistryNews' : 'اصداء عن الوزارة',
-            'EconomyNews' : 'اخبار اقتصادية',
+            'MinistryNews'  : 'اخبار الوزارة',
+            'EconomyNews' : 'اخبار الوزارة',
+            'NewsDetails' : 'تفاصيل الخبر',
+
 
 
             //services

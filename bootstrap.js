@@ -532,6 +532,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -668,6 +679,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
   "MEC_App.controller.MediaCenterController": [],
+  "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
@@ -675,10 +687,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.model.ComplaintsModel": [],
   "MEC_App.model.MenuModel": [],
+  "MEC_App.model.MinistryNewsModel": [],
   "MEC_App.model.PrintOffice": [],
   "MEC_App.store.MenuArrayStore": [],
+  "MEC_App.store.MinistryNewsStore": [],
   "MEC_App.store.PrintOffices": [],
   "MEC_App.store.override.MenuArrayStore": [],
+  "MEC_App.store.override.MinistryNewsStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [],
@@ -702,11 +717,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MinistryBranchesView": [],
   "MEC_App.view.MinistryEmployeesView": [],
   "MEC_App.view.MinistryInThePressView": [],
+  "MEC_App.view.MinistryNewsView": [],
   "MEC_App.view.MinistryPublicationView": [],
   "MEC_App.view.MonthlyFruitView": [],
   "MEC_App.view.MyBusinessView": [],
-  "MEC_App.view.MyClass": [],
+  "MEC_App.view.MyPanel": [],
   "MEC_App.view.MyRequestsView": [],
+  "MEC_App.view.NewsDetailsView": [],
   "MEC_App.view.PricingView": [],
   "MEC_App.view.PrintOfficeDetails": [],
   "MEC_App.view.PrintOfficeForm": [],
@@ -1304,6 +1321,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1452,6 +1480,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
   "MEC_App.controller.MediaCenterController": [],
+  "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.PrintOffices": [
     "controller.printoffices"
   ],
@@ -1465,14 +1494,19 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.model.MenuModel": [
     "model.menumodel"
   ],
+  "MEC_App.model.MinistryNewsModel": [
+    "model.MinistryNewsModel"
+  ],
   "MEC_App.model.PrintOffice": [
     "model.printoffice"
   ],
   "MEC_App.store.MenuArrayStore": [],
+  "MEC_App.store.MinistryNewsStore": [],
   "MEC_App.store.PrintOffices": [
     "store.printoffices"
   ],
   "MEC_App.store.override.MenuArrayStore": [],
+  "MEC_App.store.override.MinistryNewsStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.BusinessIndicatorsReport": [
@@ -1538,6 +1572,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MinistryInThePressView": [
     "widget.MinistryInThePressView"
   ],
+  "MEC_App.view.MinistryNewsView": [
+    "widget.MinistryNewsView"
+  ],
   "MEC_App.view.MinistryPublicationView": [
     "widget.MinistryPublicationView"
   ],
@@ -1547,9 +1584,12 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MyBusinessView": [
     "widget.MyBusinessView"
   ],
-  "MEC_App.view.MyClass": [],
+  "MEC_App.view.MyPanel": [],
   "MEC_App.view.MyRequestsView": [
     "widget.MYRequestsView"
+  ],
+  "MEC_App.view.NewsDetailsView": [
+    "widget.NewsDetailsView"
   ],
   "MEC_App.view.PricingView": [
     "widget.PricingView"

@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
+            "value": "webBuild",
+            "display": "Build web app"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -39,6 +39,7 @@
     "framework": "touch24",
     "viewOrderMap": {
         "view": [
+            "aadc0863-390a-4bd8-a9e1-47959a487335",
             "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "7b23aef6-db2d-4685-9251-d9486597a989",
             "4120aa2a-0201-4867-b1b7-de774744c5df",
@@ -81,12 +82,14 @@
             "174da090-54c7-47b3-acc6-32e27174d2c5",
             "dd8ef1c4-1e0a-414a-856e-6a08e0bcfc42",
             "23e1548e-26b7-4c14-82c3-7df6940cedee",
-            "07376d4e-cac1-47a7-95b5-aef09e35442f",
-            "020152b0-6c67-42a9-a552-1f580220e176"
+            "020152b0-6c67-42a9-a552-1f580220e176",
+            "af50c861-2e74-49ff-b8eb-247d83453b48",
+            "a1331846-d900-4d10-ba7f-6618c494ec94"
         ],
         "store": [
             "d1421f7d-5956-46cb-bdef-8f48b519450a",
-            "ccc960be-070d-418b-ae65-bf898e8553e7"
+            "ccc960be-070d-418b-ae65-bf898e8553e7",
+            "d9381a1f-9898-42ea-bc8b-b3f9c17b21af"
         ],
         "controller": [
             "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
@@ -101,12 +104,14 @@
             "d0f0e7b6-8a4e-43a9-8102-6fdeef86a65c",
             "9fbf3bcb-9402-495a-ad7e-608966074178",
             "d795d76e-8b9e-461e-a672-d06c3253047b",
-            "acbc0b75-7878-48ef-9abf-639135e3dfb3"
+            "acbc0b75-7878-48ef-9abf-639135e3dfb3",
+            "38a44a64-39c7-44e0-9642-02d0a4777313"
         ],
         "model": [
             "1eedff92-788e-4de6-862c-b4c7207d377d",
             "852950f9-d75d-4a1f-b9c3-4aff04abef43",
-            "9e57893b-777f-4b16-a4e7-2da0e45fc1fe"
+            "9e57893b-777f-4b16-a4e7-2da0e45fc1fe",
+            "43617f67-e2c9-4d40-8451-90bbf7811085"
         ],
         "resource": [
             "7b6cd445-29cd-4010-b2e7-179f79b8b25b",

@@ -56,9 +56,9 @@
                 "fn": "onMyServiceBtnTap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
+                    "    xtype: 'BusinessIndicatorsReport',",
+                    "    title: Ext.Global.GetViewTitle('ContactUs')",
+                    "});"
                 ],
                 "name": "tap"
             },

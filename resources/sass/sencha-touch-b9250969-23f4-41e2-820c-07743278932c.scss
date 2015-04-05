@@ -6,7 +6,7 @@ $base-gradient: flat;
 @import 'sencha-touch/default/all';
 
 
-body {
+    body {
     background-color: #671f48;
 }
 
@@ -478,18 +478,18 @@ body {
         }
     }
 
-    
+
     .x-label{
 
     margin: 5px 10px 15px 0;
     font-size: 1em;
     font-weight: bold;
- 
-        
+
+
     }
-    
-    
-    
+
+
+
     .x-button-label {
         text-align: right;
         color: #691e49;
@@ -505,3 +505,52 @@ body {
         }
     }
 }
+
+
+
+.newsDetails {
+    direction:rtl;
+    margin: 10px;
+
+    .title{
+        font-weight:bold
+
+    }
+    .img{
+    margin:10px
+    }
+
+    .date{
+        margin:20px 0 20px 0
+    }
+}
+
+
+.newsListing{
+
+    direction:rtl;
+clear:both
+    
+    
+    
+    .title{
+        
+        float:right
+    }
+    .img{
+        width:100px;
+        height:100px;
+        float:right
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

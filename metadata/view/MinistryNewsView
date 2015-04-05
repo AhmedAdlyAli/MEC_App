@@ -1,0 +1,102 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "MinistryNewsView",
+        "designer|userClassName": "MinistryNewsView",
+        "layout": "vbox"
+    },
+    "name": "MyPanel",
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "aadc0863-390a-4bd8-a9e1-47959a487335",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel",
+            "designerId": "179012fe-53a0-4dcc-90ce-59332767344c"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": null,
+                "layout|flex": 1,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel1",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "200f88e9-b002-4723-8170-5f081751ec22",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "newsListing"
+                        ],
+                        "docked": "top",
+                        "height": "100%",
+                        "id": "lstNews",
+                        "onItemDisclosure": false,
+                        "store": "MinistryNewsStore"
+                    },
+                    "name": "MyList",
+                    "designerId": "f985141e-f266-41c7-a13d-9e624cb91843",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div>",
+                                    "    ",
+                                    "    ",
+                                    "     {NewsTitle}",
+                                    "    ",
+                                    "",
+                                    "",
+                                    "</div>",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "5e33634e-ce11-445d-82bd-ba1382ae11df"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

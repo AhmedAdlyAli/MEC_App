@@ -31,11 +31,13 @@ Ext.application({
     models: [
         'PrintOffice',
         'MenuModel',
-        'ComplaintsModel'
+        'ComplaintsModel',
+        'MinistryNewsModel'
     ],
     stores: [
         'MenuArrayStore',
-        'PrintOffices'
+        'PrintOffices',
+        'MinistryNewsStore'
     ],
     views: [
         'HomeView',
@@ -80,7 +82,9 @@ Ext.application({
         'MenuModels',
         'MenuModelDetails',
         'MenuModelForm',
-        'ContactUs2View'
+        'ContactUs2View',
+        'MyPanel',
+        'NewsDetailsView'
     ],
     controllers: [
         'HomeController',
@@ -92,7 +96,8 @@ Ext.application({
         'InquiriesController',
         'ReportsController',
         'ContactController',
-        'ComplaintsController'
+        'ComplaintsController',
+        'MinistryNewsController'
     ],
     name: 'MEC_App',
 

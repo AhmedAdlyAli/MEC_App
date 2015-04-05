@@ -19,78 +19,26 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#mediaCenterBtn",
+                "designer|controlQuery": "button#btnMinistryNews",
                 "designer|params": [
                     "button",
                     "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Button",
-                "fn": "onMediaCenterBtnTap",
+                "fn": "onBtnMinistryNewsTap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
+                    "    xtype: 'MinistryNewsView',",
+                    "    title: Ext.Global.GetViewTitle('MinistryNews')",
+                    "});",
+                    "",
+                    ""
                 ],
                 "name": "tap"
             },
-            "name": "onMediaCenterBtnTap",
-            "designerId": "46f74eaa-aac6-4e31-890f-e71dd309463e"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "button#mediaCenterBtn2",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onMediaCenterBtn2Tap",
-                "implHandler": [
-                    "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
-                ],
-                "name": "tap"
-            },
-            "name": "onMediaCenterBtn2Tap",
-            "designerId": "10ea42e4-9374-4700-ad9f-8a39dd91fb31"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "button#mediaCenterBtn3",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onMediaCenterBtn3Tap",
-                "implHandler": [
-                    "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
-                ],
-                "name": "tap"
-            },
-            "name": "onMediaCenterBtn3Tap",
-            "designerId": "deb9999a-fe3a-4148-b856-4cebde594c22"
+            "name": "onBtnMinistryNewsTap",
+            "designerId": "42f06caa-2633-4d2d-b235-a992d4c3d0d0"
         }
     ]
 }

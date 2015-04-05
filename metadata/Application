@@ -16,12 +16,14 @@
             "InquiriesController",
             "ReportsController",
             "ContactController",
-            "ComplaintsController"
+            "ComplaintsController",
+            "MinistryNewsController"
         ],
         "models": [
             "PrintOffice",
             "MenuModel",
-            "ComplaintsModel"
+            "ComplaintsModel",
+            "MinistryNewsModel"
         ],
         "name": "MEC_App",
         "requires": [
@@ -33,7 +35,8 @@
         ],
         "stores": [
             "MenuArrayStore",
-            "PrintOffices"
+            "PrintOffices",
+            "MinistryNewsStore"
         ],
         "views": [
             "HomeView",
@@ -78,7 +81,9 @@
             "MenuModels",
             "MenuModelDetails",
             "MenuModelForm",
-            "ContactUs2View"
+            "ContactUs2View",
+            "MyPanel",
+            "NewsDetailsView"
         ]
     },
     "name": "Application",
