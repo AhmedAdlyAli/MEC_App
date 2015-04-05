@@ -465,7 +465,7 @@ body {
 }
 
 .complaint-view {
-    .x-form-fieldset {
+    .x-form-fieldset  {
         direction: rtl;
         margin: 0;
     }
@@ -480,6 +480,18 @@ body {
         }
     }
 
+    
+    .x-label{
+
+    margin: 5px 10px 15px 0;
+    font-size: 1em;
+    font-weight: bold;
+ 
+        
+    }
+    
+    
+    
     .x-button-label {
         text-align: right;
         color: #691e49;
@@ -489,9 +501,9 @@ body {
         background: #691e49;
         margin: 10px;
 
-        .x-button-label {
+         .x-button-label {
             text-align: center;
             color: #fff;
-        }   
+        }
     }
 }

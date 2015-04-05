@@ -18,7 +18,8 @@
         "requires": [
             "Ext.Img",
             "Ext.device.Camera",
-            "Ext.device.Notification"
+            "Ext.device.Notification",
+            "MEC_App.controller.DeviceController"
         ],
         "url": "http://www.google.com"
     },
@@ -69,7 +70,7 @@
                         "id": "shopName",
                         "itemId": "shopName",
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "shopName",
                         "placeHolder": "اسم المحل",
                         "required": true
@@ -88,85 +89,12 @@
                         "id": "shopLocation",
                         "itemId": null,
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "shopLocation",
                         "placeHolder": "موقع المتجر"
                     },
                     "name": "MyTextField3",
                     "designerId": "e1574abc-b7d4-4b58-84c2-a907c07b2537"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "iconAlign": "right",
-                        "id": "btnSelectCategory",
-                        "text": "نوع الشكوي"
-                    },
-                    "name": "MyButton21",
-                    "designerId": "679017f6-881b-4f31-8cf2-58c29d8176a3",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "var btn = this;",
-                                    "var config = {",
-                                    "    title: \"نوع الشكوي\",",
-                                    "    items: [",
-                                    "        { text: \"Type 1\", value: \"1\" },",
-                                    "        { text: \"Type 2\", value: \"2\" },",
-                                    "        { text: \"Type 3\", value: \"3\" },",
-                                    "        { text: \"Type 4\", value: \"4\" },",
-                                    "        { text: \"Type 5\", value: \"5\" },",
-                                    "        { text: \"Type 6\", value: \"6\" }",
-                                    "",
-                                    "",
-                                    "    ],",
-                                    "    selectedValue: \"2\",",
-                                    "    doneButtonLabel: \"ٌختيار\",",
-                                    "    cancelButtonLabel: \"الغاء\"",
-                                    "};",
-                                    "",
-                                    "// Show the picker",
-                                    "window.plugins.listpicker.showPicker(config,",
-                                    "                                     function(item) {",
-                                    "                                         //btn.setText(item);",
-                                    "                                         // alert(item);",
-                                    "",
-                                    "",
-                                    "                                         Ext.getCmp('txtCategory').setValue(item);",
-                                    "",
-                                    "",
-                                    "                                     },",
-                                    "                                     function() {",
-                                    "                                         //  alert(\"You have cancelled\");",
-                                    "                                     }",
-                                    "                                    );",
-                                    "",
-                                    "",
-                                    "",
-                                    ""
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "d788f47c-3338-4cbf-9d34-221e469fd047"
-                        }
-                    ]
                 },
                 {
                     "type": "Ext.field.Text",
@@ -179,12 +107,61 @@
                         "hidden": false,
                         "id": "txtCategory",
                         "itemId": "txtCategory",
-                        "label": "",
+                        "label": null,
                         "name": "txtCategory",
+                        "placeHolder": "نوع الشكوي",
                         "readOnly": true
                     },
                     "name": "MyTextField4",
-                    "designerId": "1afff474-e436-4b6a-be78-cfe0e6d2c92d"
+                    "designerId": "1afff474-e436-4b6a-be78-cfe0e6d2c92d",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtCategoryInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// add tab function on text field",
+                                    "    var me = this;",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "    title: \"نوع الشكوي\",",
+                                    "    items: [",
+                                    "        { text: \"Type 1\", value: \"Type 1\" },",
+                                    "        { text: \"Type 2\", value: \"Type 2\" },",
+                                    "        { text: \"Type 3\", value: \"Type 3\" },",
+                                    "        { text: \"Type 4\", value: \"Type 4\" },",
+                                    "        { text: \"Type 5\", value: \"Type 5\" },",
+                                    "        { text: \"Type 6\", value: \"Type 6\" }",
+                                    "",
+                                    "",
+                                    "    ],",
+                                    "    selectedValue: \"2\",",
+                                    "    doneButtonLabel: \"ٌختيار\",",
+                                    "    cancelButtonLabel: \"الغاء\"",
+                                    "    };",
+                                    "",
+                                    "    Ext.DeviceController.ShowNativePicker(me,config);",
+                                    "",
+                                    "",
+                                    "}, me);",
+                                    "",
+                                    "",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtCategoryInitialize",
+                            "designerId": "28f0756a-7019-4d39-bf98-dfe1addc6042"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.TextArea",
@@ -196,7 +173,7 @@
                     "userConfig": {
                         "id": "txtComplaint",
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "txtComplaint",
                         "placeHolder": "نص الشكوي"
                     },
@@ -213,7 +190,7 @@
                     "userConfig": {
                         "id": "fullName",
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "fullName",
                         "placeHolder": "الاسم بالكامل"
                     },
@@ -230,7 +207,7 @@
                     "userConfig": {
                         "id": "email",
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "email",
                         "placeHolder": "البريد الالكتدوني"
                     },
@@ -247,80 +224,12 @@
                     "userConfig": {
                         "id": "mobile",
                         "label": "",
-                        "labelAlign": "right",
+                        "labelAlign": null,
                         "name": "mobile",
                         "placeHolder": "رقم الهاتف"
                     },
                     "name": "MyTextField7",
                     "designerId": "fba83ece-53fd-4aa8-bb74-fe811ab2a86c"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "barcode",
-                        "id": "barcode",
-                        "text": "barcode"
-                    },
-                    "name": "MyButton19",
-                    "designerId": "80b09d55-22c0-43fe-acc1-3eed34a082a4",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "//Ext.Msg.alert('Error', 'There was an error when acquiring the picture.');",
-                                    "",
-                                    "var btn = this;",
-                                    "",
-                                    "cordova.plugins.barcodeScanner.scan(",
-                                    "      function (result) {",
-                                    "",
-                                    "        /*  alert(\"We got a barcode\\n\" +",
-                                    "                \"Result: \" + result.text + \"\\n\" +",
-                                    "                \"Format: \" + result.format + \"\\n\" +",
-                                    "                \"Cancelled: \" + result.cancelled);",
-                                    "",
-                                    "*/",
-                                    "",
-                                    "         // btn.setText(result.text);",
-                                    "          ",
-                                    "          ",
-                                    "          ",
-                                    "           Ext.getCmp('txtBarCode').setValue(result.text);",
-                                    "          ",
-                                    "          ",
-                                    "",
-                                    "      },",
-                                    "      function (error) {",
-                                    "          alert(\"Scanning failed: \" + error);",
-                                    "      }",
-                                    "   );",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    ""
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "d2a9fc96-adac-43c8-b285-b8af16aec053"
-                        }
-                    ]
                 },
                 {
                     "type": "Ext.field.Text",
@@ -332,12 +241,56 @@
                     "userConfig": {
                         "hidden": false,
                         "id": "txtBarCode",
+                        "itemId": "mytextfield",
                         "label": "",
                         "name": "txtBarCode",
+                        "placeHolder": "barcode",
                         "readOnly": true
                     },
                     "name": "MyTextField",
-                    "designerId": "965f6279-da2c-427a-b7b0-c8d305aa3604"
+                    "designerId": "965f6279-da2c-427a-b7b0-c8d305aa3604",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtBarCodeInitialize",
+                                "implHandler": [
+                                    "// add tab function on text field",
+                                    "var me = this;",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "",
+                                    "   Ext.DeviceController.GetBarcode(me);",
+                                    "",
+                                    "",
+                                    "}, me);",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtBarCodeInitialize",
+                            "designerId": "529f1c44-a669-489e-a961-0104f7bf94ef"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "ارفق صورة",
+                        "id": "lblAttachImage"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "e0f8a5c5-be1f-48bc-9af1-14a9fcf27fa9"
                 },
                 {
                     "type": "Ext.Panel",
@@ -380,32 +333,9 @@
                                     "userConfig": {
                                         "fn": "onImg1Tap",
                                         "implHandler": [
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
                                             "",
-                                            "Ext.device.Notification.show({",
-                                            "    title: 'Choose Source',",
-                                            "    message: 'Please Choose photo source',",
-                                            "    buttons: [\"Camera\", \"Library\"],",
-                                            "",
-                                            "    callback: function(button) {",
-                                            "        //When the user taps a button, show another notification",
-                                            "",
-                                            "        Ext.device.Camera.capture({",
-                                            "    source: button,",
-                                            "    destination: 'file',",
-                                            "",
-                                            "    success: function(url) {",
-                                            "        //show the newly captured image in a full screen Ext.Img component:",
-                                            "        image.setSrc(url);",
-                                            "    }",
-                                            "});",
-                                            "",
-                                            "",
-                                            "",
-                                            "",
-                                            "",
-                                            "",
-                                            "    }",
-                                            "});",
                                             ""
                                         ],
                                         "name": "tap"
@@ -444,27 +374,8 @@
                                         "fn": "onImg2Tap",
                                         "implHandler": [
                                             "",
-                                            "Ext.device.Notification.show({",
-                                            "    title: 'Choose Source',",
-                                            "    message: 'Please Choose photo source',",
-                                            "    buttons: [\"Camera\", \"Library\"],",
-                                            "",
-                                            "    callback: function(button) {",
-                                            "        //When the user taps a button, show another notification",
-                                            "",
-                                            "        Ext.device.Camera.capture({",
-                                            "    source: button,",
-                                            "    destination: 'file',",
-                                            "",
-                                            "    success: function(url) {",
-                                            "        //show the newly captured image in a full screen Ext.Img component:",
-                                            "        image.setSrc(url);",
-                                            "    }",
-                                            "});",
-                                            "",
-                                            "",
-                                            "    }",
-                                            "});",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
                                             ""
                                         ],
                                         "name": "tap"
@@ -518,27 +429,8 @@
                                         "fn": "onImg3Tap",
                                         "implHandler": [
                                             "",
-                                            "Ext.device.Notification.show({",
-                                            "    title: 'Choose Source',",
-                                            "    message: 'Please Choose photo source',",
-                                            "    buttons: [\"Camera\", \"Library\"],",
-                                            "",
-                                            "    callback: function(button) {",
-                                            "        //When the user taps a button, show another notification",
-                                            "",
-                                            "        Ext.device.Camera.capture({",
-                                            "    source: button,",
-                                            "    destination: 'file',",
-                                            "",
-                                            "    success: function(url) {",
-                                            "        //show the newly captured image in a full screen Ext.Img component:",
-                                            "        image.setSrc(url);",
-                                            "    }",
-                                            "});",
-                                            "",
-                                            "",
-                                            "    }",
-                                            "});",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
                                             ""
                                         ],
                                         "name": "tap"
@@ -577,27 +469,8 @@
                                         "fn": "onImg4Tap",
                                         "implHandler": [
                                             "",
-                                            "Ext.device.Notification.show({",
-                                            "    title: 'Choose Source',",
-                                            "    message: 'Please Choose photo source',",
-                                            "    buttons: [\"Camera\", \"Library\"],",
-                                            "",
-                                            "    callback: function(button) {",
-                                            "        //When the user taps a button, show another notification",
-                                            "",
-                                            "        Ext.device.Camera.capture({",
-                                            "    source: button,",
-                                            "    destination: 'file',",
-                                            "",
-                                            "    success: function(url) {",
-                                            "        //show the newly captured image in a full screen Ext.Img component:",
-                                            "        image.setSrc(url);",
-                                            "    }",
-                                            "});",
-                                            "",
-                                            "",
-                                            "    }",
-                                            "});",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
                                             ""
                                         ],
                                         "name": "tap"
@@ -620,6 +493,7 @@
                         "cls": [
                             "btn-send"
                         ],
+                        "id": "btnSubmit",
                         "text": "ارسال"
                     },
                     "name": "MyButton20",
@@ -652,33 +526,33 @@
                                     "",
                                     "if(formData.shopName===''){",
                                     "",
-                                    "    err+='Please enter shop name\\n';",
+                                    "    err+=Ext.Global.GetValidationMsg('errShopName');",
                                     "}",
                                     "",
                                     "",
                                     "if(formData.txtCategory===''){",
                                     "",
-                                    "    err+='Please enter category\\n';",
+                                    "    err+=Ext.Global.GetValidationMsg('errComplaintType');",
                                     "}",
                                     "",
                                     "",
                                     "",
                                     "if(formData.txtComplaint===''){",
                                     "",
-                                    "    err+='Please enter the Complaint\\n';",
+                                    "    err+=Ext.Global.GetValidationMsg('errComplaintText');",
                                     "}",
                                     "",
                                     "",
                                     "",
                                     "if(formData.fullName===''){",
                                     "",
-                                    "    err+='Please enter the full name\\n';",
+                                    "    err+=Ext.Global.GetValidationMsg('errFullName');",
                                     "}",
                                     "",
                                     "",
                                     "if(formData.mobile===''){",
                                     "",
-                                    "    err+='Please enter the mobile\\n';",
+                                    "    err+=Ext.Global.GetValidationMsg('errMobile');",
                                     "}",
                                     "",
                                     "",
@@ -692,42 +566,6 @@
                                     "        message: err",
                                     "    });",
                                     "}",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "/*var cmp = Ext.create('model.ComplaintsModel',{",
-                                    "     shopName: formData.shopName",
-                                    "",
-                                    "});",
-                                    "",
-                                    "var errs = cmp.validate();",
-                                    "",
-                                    "",
-                                    "var msg = '';",
-                                    "",
-                                    "if (!errs.isValid()) {",
-                                    "   errs.each(function (err) {",
-                                    "   msg += err.getField() + ' : ' + err.getMessage() + '';",
-                                    "   });",
-                                    "",
-                                    "",
-                                    "   Ext.Msg.alert('ERROR', msg);",
-                                    "",
-                                    "} else {",
-                                    "    Ext.Msg.alert('SUCCESS', 'Looks like the Form is valid');",
-                                    "}",
-                                    "",
-                                    "*/",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
                                     "",
                                     ""
                                 ]
@@ -752,33 +590,36 @@
                     "this.callParent();",
                     "",
                     "",
+                    "this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'))",
+                    "                      .setLabel(Ext.Global.GetComplaintsTitle('shopName'));",
                     "",
                     "",
-                    "this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'));",
-                    "this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'));",
-                    "this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'));",
-                    "this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'));",
-                    "this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'));",
-                    "this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'));",
-                    "this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'));",
-                    "this.down('#barcode').setText(Ext.Global.GetComplaintsTitle('barcode'));",
+                    "this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('shopLocation'));",
+                    "",
+                    "this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('ComplaintType'));",
+                    "",
+                    "this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('txtComplaint'));",
+                    "",
+                    "this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('fullName'));",
+                    "",
+                    "this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('email'));",
+                    "",
+                    "this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('mobile'));",
                     "",
                     "",
-                    "//this.down('#AttachHome').setHtml(Ext.Global.GetViewTitle('AttachHome'));",
+                    "this.down('#txtBarCode').setPlaceHolder(Ext.Global.GetComplaintsTitle('barcode'))",
+                    "                          .setLabel(Ext.Global.GetComplaintsTitle('barcode'));",
                     "",
                     "",
+                    "this.down('#lblAttachImage').setHtml(Ext.Global.GetComplaintsTitle('AttachImg'));",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
+                    "this.down('#btnSubmit').setText(Ext.Global.GetComplaintsTitle('Submit'));",
                     "",
                     "",
                     ""

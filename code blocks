@@ -1,0 +1,75 @@
+// show native alert 
+Ext.device.Notification.show({
+    title: 'Choose Source',
+    message: 'Please Choose photo source',
+    buttons: ["Camera", "Library"],
+
+    callback: function(button) {
+        //When the user taps a button, show another notification
+
+       
+
+    }
+});
+
+
+
+
+// add tab function on text field
+
+    var me = this;
+me.element.on('tap', function(){
+    
+    var btn = this;
+    var config = {
+    title: "نوع الشكوي",
+    items: [
+        { text: "Type 1", value: "Type 1" },
+        { text: "Type 2", value: "Type 2" },
+        { text: "Type 3", value: "Type 3" },
+        { text: "Type 4", value: "Type 4" },
+        { text: "Type 5", value: "Type 5" },
+        { text: "Type 6", value: "Type 6" }
+
+
+    ],
+    selectedValue: "2",
+    doneButtonLabel: "ٌختيار",
+    cancelButtonLabel: "الغاء"
+    };
+
+    Ext.DeviceController.ShowNativePicker(me,config);
+
+
+}, me);
+
+
+
+//model and data
+
+
+
+/*var cmp = Ext.create('model.ComplaintsModel',{
+     shopName: formData.shopName
+
+});
+
+var errs = cmp.validate();
+
+
+var msg = '';
+
+if (!errs.isValid()) {
+   errs.each(function (err) {
+   msg += err.getField() + ' : ' + err.getMessage() + '';
+   });
+
+
+   Ext.Msg.alert('ERROR', msg);
+
+} else {
+    Ext.Msg.alert('SUCCESS', 'Looks like the Form is valid');
+}
+
+*/
+

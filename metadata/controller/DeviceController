@@ -1,0 +1,153 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "Ext.DeviceController"
+        ],
+        "designer|userAlias": "",
+        "designer|userClassName": "DeviceController",
+        "requires": [
+            "Ext.device.Camera"
+        ],
+        "singleton": true
+    },
+    "name": "MyClass1",
+    "designerId": "acbc0b75-7878-48ef-9abf-639135e3dfb3",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "image"
+                ],
+                "fn": "CaptureImage",
+                "implHandler": [
+                    "var options = {",
+                    "    'title': 'Chose a method to add Photo',",
+                    "    'buttonLabels': ['Camera', 'Library'],",
+                    "    'addCancelButtonWithLabel': 'Cancel',",
+                    "    'androidEnableCancelButton' : true, // default false",
+                    "    'winphoneEnableCancelButton' : true // default false",
+                    "",
+                    "};",
+                    "// of the SocialSharing plugin (https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin)",
+                    "window.plugins.actionsheet.show(options, function(buttonIndex){",
+                    "    //callback",
+                    "    var captureSource = '';",
+                    "",
+                    "    if(buttonIndex===1)captureSource='camera';",
+                    "    if(buttonIndex===2)captureSource='library';",
+                    "",
+                    "",
+                    "    if(captureSource!=='')",
+                    "    {",
+                    "",
+                    "        Ext.device.Camera.capture({",
+                    "            source: captureSource,",
+                    "            destination: 'file',",
+                    "            success: function(url) {",
+                    "                //show the newly captured image in a full screen Ext.Img component:",
+                    "                image.setSrc(url);",
+                    "            }",
+                    "        });",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "CaptureImage",
+            "designerId": "9d0d5386-3b0b-474d-be13-ca54b9ea8c8b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "txtField",
+                    "config"
+                ],
+                "fn": "ShowNativePicker",
+                "implHandler": [
+                    "",
+                    "// Show the picker",
+                    "window.plugins.listpicker.showPicker(config,",
+                    "                                     //select item",
+                    "                                     function(item) {",
+                    "",
+                    "                                         txtField.setValue(item);",
+                    "",
+                    "",
+                    "                                     },",
+                    "                                     //cancel",
+                    "                                     function() {",
+                    "                                         //  alert(\"You have cancelled\");",
+                    "                                     }",
+                    "                                    );",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "ShowNativePicker",
+            "designerId": "e7209fac-1f4c-4e7f-9c05-a3979ebad487"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "txtField"
+                ],
+                "fn": "GetBarcode",
+                "implHandler": [
+                    "cordova.plugins.barcodeScanner.scan(",
+                    "    function (result) {",
+                    "",
+                    "        /*  alert(\"We got a barcode\\n\" +",
+                    "                                \"Result: \" + result.text + \"\\n\" +",
+                    "                                \"Format: \" + result.format + \"\\n\" +",
+                    "                                \"Cancelled: \" + result.cancelled);",
+                    "                                */",
+                    "",
+                    "        txtField.setValue(result.text);",
+                    "",
+                    "",
+                    "         ",
+                    "",
+                    "    },",
+                    "    function (error) {",
+                    "        alert(\"Scanning failed: \" + error);",
+                    "    }",
+                    ");",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "GetBarcode",
+            "designerId": "3673f7e8-f232-4d8a-9e97-71c910c2a7bb"
+        }
+    ]
+}

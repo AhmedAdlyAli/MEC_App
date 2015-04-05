@@ -15,7 +15,7 @@
             },
             "viewportOrientation": "portrait"
         },
-        "urlPrefix": "http://localhost:1841",
+        "urlPrefix": "http://localhost:1843",
         "exportPath": "/sencha/MEC_App_Publish",
         "spacesToIndent": 4,
         "sdkPath": "",
@@ -100,7 +100,8 @@
             "9de3d747-63d5-4416-9da5-6548865c317a",
             "d0f0e7b6-8a4e-43a9-8102-6fdeef86a65c",
             "9fbf3bcb-9402-495a-ad7e-608966074178",
-            "d795d76e-8b9e-461e-a672-d06c3253047b"
+            "d795d76e-8b9e-461e-a672-d06c3253047b",
+            "acbc0b75-7878-48ef-9abf-639135e3dfb3"
         ],
         "model": [
             "1eedff92-788e-4de6-862c-b4c7207d377d",

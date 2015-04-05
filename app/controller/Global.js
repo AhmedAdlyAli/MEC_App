@@ -42,6 +42,11 @@ Ext.define('MEC_App.controller.Global', {
         return this.ComplaintsLabels[title];
 
 
+    },
+
+    GetValidationMsg: function(msg) {
+                 return this.ValidationMsg[msg];
+
     }
 
 });

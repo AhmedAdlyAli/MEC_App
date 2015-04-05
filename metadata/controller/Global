@@ -92,6 +92,26 @@
             },
             "name": "GetComplaintsTitle",
             "designerId": "e6e9e5b4-8228-40dc-a7be-9057e29ff23f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "msg"
+                ],
+                "fn": "GetValidationMsg",
+                "implHandler": [
+                    "         return this.ValidationMsg[msg];",
+                    ""
+                ]
+            },
+            "name": "GetValidationMsg",
+            "designerId": "3408a3fe-65b7-431e-8ce1-d42529afdf9d"
         }
     ]
 }

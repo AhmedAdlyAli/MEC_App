@@ -7,6 +7,9 @@ cordova plugin add am.armsoft.plugins.listpicker
 
 cordova plugin add com.phonegap.plugins.barcodescanner
 
+cordova plugin add nl.x-services.plugins.actionsheet
+
+
 
 http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-app
 

@@ -37,5 +37,11 @@
             "type": "registry",
             "id": "com.phonegap.plugins.barcodescanner"
         }
+    },
+    "nl.x-services.plugins.actionsheet": {
+        "source": {
+            "type": "registry",
+            "id": "nl.x-services.plugins.actionsheet"
+        }
     }
 }

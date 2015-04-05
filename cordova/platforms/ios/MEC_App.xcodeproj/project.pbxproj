@@ -59,6 +59,7 @@
 		CAFF29CC8A714DC5BE41C21A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE3733BFA9C45288E14CB33 /* QuartzCore.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DAE9A9A3E4654DBDB9C24B22 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3BCFCC7B1443F5A9DB5633 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9B68F64B94494F2687373A0B /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,8 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F2B119578AE64645833E8425 /* CoreVideo.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MEC_App/config.xml; sourceTree = "<group>"; };
+		95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ActionSheet.m"; path = "nl.x-services.plugins.actionsheet/ActionSheet.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A631F66F81794ACBA6A19846 /* ActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ActionSheet.h"; path = "nl.x-services.plugins.actionsheet/ActionSheet.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +290,8 @@
 				4A0174A90F1C498E96B9AB1B /* CDVBarcodeScanner.mm */,
 				05D95C2F46D44F86AB82C308 /* zxing-all-in-one.cpp */,
 				8B79601BFC734A6EA7D68579 /* zxing-all-in-one.h */,
+				95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */,
+				A631F66F81794ACBA6A19846 /* ActionSheet.h */,
 			);
 			name = Plugins;
 			path = MEC_App/Plugins;
@@ -496,6 +501,7 @@
 				3A8376C9A0DA45BF9789B70E /* ListPicker.m in Sources */,
 				B3E43AE47F124C38AA98BAC3 /* CDVBarcodeScanner.mm in Sources */,
 				53F42C12DF3D4477975D27D8 /* zxing-all-in-one.cpp in Sources */,
+				9B68F64B94494F2687373A0B /* ActionSheet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

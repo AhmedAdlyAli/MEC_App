@@ -33,6 +33,9 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="ActionSheet">
+        <param name="ios-package" value="ActionSheet" />
+    </feature>
     <name>MEC_App</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

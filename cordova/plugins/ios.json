@@ -99,6 +99,10 @@
                         {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -132,6 +136,9 @@
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "nl.x-services.plugins.actionsheet": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },

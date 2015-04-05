@@ -658,6 +658,9 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ContactController": [],
+  "MEC_App.controller.DeviceController": [
+    "Ext.DeviceController"
+  ],
   "MEC_App.controller.Global": [
     "Ext.Global"
   ],
@@ -1443,6 +1446,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ContactController": [],
+  "MEC_App.controller.DeviceController": [],
   "MEC_App.controller.Global": [],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],

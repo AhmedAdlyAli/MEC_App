@@ -63,6 +63,13 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.barcodeScanner"
         ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js",
+        "id": "nl.x-services.plugins.actionsheet.ActionSheet",
+        "clobbers": [
+            "window.plugins.actionsheet"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -73,7 +80,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "0.3.14-dev",
     "cordova-plugin-dialogs": "0.3.1-dev",
     "am.armsoft.plugins.ListPicker": "2.2.0",
-    "com.phonegap.plugins.barcodescanner": "2.0.1"
+    "com.phonegap.plugins.barcodescanner": "2.0.1",
+    "nl.x-services.plugins.actionsheet": "1.1.4"
 }
 // BOTTOM OF METADATA
 });
