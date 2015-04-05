@@ -12,27 +12,440 @@
             "Ext.Img",
             "Ext.device.Camera",
             "Ext.device.Notification"
-        ]
+        ],
+        "standardSubmit": true,
+        "url": "http://www.google.com"
     },
     "name": "MyFormPanel",
     "designerId": "af082f99-5a5f-40f9-b59b-06008a5ff047",
     "cn": [
         {
-            "type": "Ext.field.File",
+            "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "id": "fldImage",
-                "itemId": "fldImage",
-                "label": "ارفق صورة",
-                "labelAlign": "right",
-                "labelWidth": "40%"
+                "modal": true,
+                "title": null
             },
-            "name": "MyFileField",
-            "designerId": "390fd98d-90df-48a5-889c-926e907e6950"
+            "name": "MyFieldSet1",
+            "designerId": "1b735146-3053-46cc-8a1b-3146d4611a7f",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": null,
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "shopName",
+                        "placeHolder": "اسم المحل",
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "11ed8214-a102-4d89-bfea-be7dcd23afb9"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": null,
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "shopLocation",
+                        "placeHolder": "موقع المتجر"
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "e1574abc-b7d4-4b58-84c2-a907c07b2537"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": true,
+                        "id": "txtCategory",
+                        "itemId": "txtCategory",
+                        "label": "Field",
+                        "name": "txtCategory"
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "1afff474-e436-4b6a-be78-cfe0e6d2c92d"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "iconAlign": "right",
+                        "id": "btnSelectCategory",
+                        "text": "نوع الشكوي"
+                    },
+                    "name": "MyButton21",
+                    "designerId": "679017f6-881b-4f31-8cf2-58c29d8176a3",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "var btn = this;",
+                                    "var config = {",
+                                    "    title: \"نوع الشكوي\",",
+                                    "    items: [",
+                                    "        { text: \"Type 1\", value: \"1\" },",
+                                    "         { text: \"Type 2\", value: \"2\" },",
+                                    "         { text: \"Type 3\", value: \"3\" },",
+                                    "         { text: \"Type 4\", value: \"4\" },",
+                                    "         { text: \"Type 5\", value: \"5\" },",
+                                    "         { text: \"Type 6\", value: \"6\" }",
+                                    "",
+                                    "",
+                                    "    ],",
+                                    "    selectedValue: \"2\",",
+                                    "    doneButtonLabel: \"ٌختيار\",",
+                                    "    cancelButtonLabel: \"الغاء\"",
+                                    "};",
+                                    "",
+                                    "// Show the picker",
+                                    "window.plugins.listpicker.showPicker(config,",
+                                    "                                     function(item) {",
+                                    "                                        //btn.setText(item);",
+                                    "                                        // alert(item);",
+                                    "",
+                                    "",
+                                    "Ext.getCmp('txtCategory').setValue(item);",
+                                    "",
+                                    "",
+                                    "                                     },",
+                                    "                                     function() {",
+                                    "                                       //  alert(\"You have cancelled\");",
+                                    "                                     }",
+                                    "                                    );",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "d788f47c-3338-4cbf-9d34-221e469fd047"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "txtComplaint",
+                        "placeHolder": "نص الشكوي"
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "c07288f4-0a40-414b-ad89-923d7267e49d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "fullName",
+                        "placeHolder": "الاسم بالكامل"
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "4b8df373-3f3d-4bd0-a7cb-b4c3c9ec3e26"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "email",
+                        "placeHolder": "البريد الالكتدوني"
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "b2ba6435-40a8-4155-86a1-107ec68797b2"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "",
+                        "labelAlign": "right",
+                        "name": "mobile",
+                        "placeHolder": "رقم الهاتف"
+                    },
+                    "name": "MyTextField7",
+                    "designerId": "fba83ece-53fd-4aa8-bb74-fe811ab2a86c"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "barcode",
+                        "text": "barcode"
+                    },
+                    "name": "MyButton19",
+                    "designerId": "80b09d55-22c0-43fe-acc1-3eed34a082a4",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "//Ext.Msg.alert('Error', 'There was an error when acquiring the picture.');",
+                                    "",
+                                    "var btn = this;",
+                                    "",
+                                    "cordova.plugins.barcodeScanner.scan(",
+                                    "      function (result) {",
+                                    "",
+                                    "        /*  alert(\"We got a barcode\\n\" +",
+                                    "                \"Result: \" + result.text + \"\\n\" +",
+                                    "                \"Format: \" + result.format + \"\\n\" +",
+                                    "                \"Cancelled: \" + result.cancelled);",
+                                    "",
+                                    "*/",
+                                    "          ",
+                                    "          btn.setText(result.text);",
+                                    "",
+                                    "      },",
+                                    "      function (error) {",
+                                    "          alert(\"Scanning failed: \" + error);",
+                                    "      }",
+                                    "   );",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "d2a9fc96-adac-43c8-b285-b8af16aec053"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": null,
+                        "label": "ارفق صورة",
+                        "labelAlign": "right",
+                        "labelWidth": "40%",
+                        "name": "img1"
+                    },
+                    "name": "MyFileField",
+                    "designerId": "390fd98d-90df-48a5-889c-926e907e6950"
+                },
+                {
+                    "type": "Ext.field.File",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": null,
+                        "label": "ارفق صورة",
+                        "labelAlign": "right",
+                        "labelWidth": "40%",
+                        "name": "img2"
+                    },
+                    "name": "MyFileField2",
+                    "designerId": "2d331122-e452-4f13-8530-aec0136594a7"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "text": "ارسال"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "ebf5d98d-ab7f-4416-a410-e07f9674026a",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "var frm = button.up('ComplaintsView');",
+                                    "",
+                                    "",
+                                    "",
+                                    "//alert(frm.getValues().shopName);",
+                                    "var formData =frm.getValues();",
+                                    "",
+                                    "",
+                                    "var err='';",
+                                    "",
+                                    "if(formData.shopName===''){",
+                                    "",
+                                    "    err+='Please enter shop name\\n';",
+                                    "}",
+                                    "",
+                                    "",
+                                    "if(formData.txtCategory===''){",
+                                    "",
+                                    "    err+='Please enter category\\n';",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "if(formData.txtComplaint===''){",
+                                    "",
+                                    "    err+='Please enter the Complaint\\n';",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "if(formData.fullName===''){",
+                                    "",
+                                    "    err+='Please enter the full name\\n';",
+                                    "}",
+                                    "",
+                                    "",
+                                    "if(formData.mobile===''){",
+                                    "",
+                                    "    err+='Please enter the mobile\\n';",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "if(err.length>0){",
+                                    "",
+                                    "    Ext.device.Notification.show({",
+                                    "        title: 'Error',",
+                                    "        buttons: [\"OK\"],",
+                                    "        message: err",
+                                    "    });",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "/*var cmp = Ext.create('model.ComplaintsModel',{",
+                                    "     shopName: formData.shopName",
+                                    "",
+                                    "});",
+                                    "",
+                                    "var errs = cmp.validate();",
+                                    "",
+                                    "",
+                                    "var msg = '';",
+                                    "",
+                                    "if (!errs.isValid()) {",
+                                    "   errs.each(function (err) {",
+                                    "   msg += err.getField() + ' : ' + err.getMessage() + '';",
+                                    "   });",
+                                    "",
+                                    "",
+                                    "   Ext.Msg.alert('ERROR', msg);",
+                                    "",
+                                    "} else {",
+                                    "    Ext.Msg.alert('SUCCESS', 'Looks like the Form is valid');",
+                                    "}",
+                                    "",
+                                    "*/",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "1ed4e076-8674-45ac-8f43-f9f159c07f8c"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -1,0 +1,12 @@
+Plugins used in this project
+
+
+cordova plugin add org.apache.cordova.device
+cordova plugin add am.armsoft.plugins.listpicker
+
+
+cordova plugin add com.phonegap.plugins.barcodescanner
+
+
+http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-app
+

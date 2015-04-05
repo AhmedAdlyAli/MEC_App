@@ -670,6 +670,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
+  "MEC_App.model.ComplaintsModel": [],
   "MEC_App.model.MenuModel": [],
   "MEC_App.model.PrintOffice": [],
   "MEC_App.store.MenuArrayStore": [],
@@ -1453,6 +1454,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
+  "MEC_App.model.ComplaintsModel": [
+    "model.ComplaintsModel"
+  ],
   "MEC_App.model.MenuModel": [
     "model.menumodel"
   ],

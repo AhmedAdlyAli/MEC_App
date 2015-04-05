@@ -20,7 +20,8 @@
         ],
         "models": [
             "PrintOffice",
-            "MenuModel"
+            "MenuModel",
+            "ComplaintsModel"
         ],
         "name": "MEC_App",
         "requires": [
