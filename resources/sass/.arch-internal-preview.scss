@@ -479,10 +479,19 @@ body {
             -webkit-text-fill-color: #313131;
         }
     }
-    
+
     .x-button-label {
         text-align: right;
         color: #691e49;
-        line-height: 27px;
+    }
+
+    .btn-send {
+        background: #691e49;
+        margin: 10px;
+
+        .x-button-label {
+            text-align: center;
+            color: #fff;
+        }   
     }
 }

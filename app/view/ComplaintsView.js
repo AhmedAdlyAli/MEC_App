@@ -21,8 +21,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
         'Ext.form.FieldSet',
         'Ext.Button',
         'Ext.field.TextArea',
+        'Ext.Panel',
         'Ext.Img',
-        'Ext.field.File',
         'Ext.device.Camera',
         'Ext.device.Notification'
     ],
@@ -32,14 +32,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
         layout: 'vbox',
         enableSubmissionForm: false,
         url: 'http://www.google.com',
-        scrollable: {
-            direction: 'vertical',
-            directionLock: false
-        },
         items: [
             {
                 xtype: 'fieldset',
-                modal: true,
+                flex: 1,
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
                 items: [
                     {
                         xtype: 'textfield',
@@ -110,7 +110,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'txtCategory',
                         itemId: 'txtCategory',
                         label: '',
-                        name: 'txtCategory'
+                        name: 'txtCategory',
+                        readOnly: true
                     },
                     {
                         xtype: 'textareafield',
@@ -188,270 +189,52 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         hidden: false,
                         id: 'txtBarCode',
                         label: '',
-                        name: 'txtBarCode'
+                        name: 'txtBarCode',
+                        readOnly: true
                     },
                     {
-                        xtype: 'button',
-                        handler: function(button, e) {
-
-                            Ext.device.Notification.show({
-                                title: 'Choose Source',
-                                message: 'Please Choose photo source',
-                                buttons: ["Camera", "Library"],
-
-                                callback: function(button) {
-                                    //When the user taps a button, show another notification
-
-                                    Ext.device.Camera.capture({
-                                        source: button,
-                                        destination: 'file',
-
-                                        success: function(url) {
-                                            //show the newly captured image in a full screen Ext.Img component:
-                                            Ext.getCmp('img1').setSrc(url);
-                                        }
-                                    });
-
-
-
-
-
-
-                                }
-                            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        },
-                        text: 'load image 1'
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img1',
+                                itemId: 'img1',
+                                src: 'resources/images/logo.png'
+                            },
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                id: 'img2',
+                                itemId: 'img2',
+                                src: 'resources/images/logo.png'
+                            }
+                        ]
                     },
                     {
-                        xtype: 'image',
-                        height: 201,
-                        id: 'img1',
-                        itemId: 'img1',
-                        width: 200,
-                        src: 'resources/images/logo.png'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-
-                            Ext.device.Notification.show({
-                                title: 'Choose Source',
-                                message: 'Please Choose photo source',
-                                buttons: ["Camera", "Library"],
-
-                                callback: function(button) {
-                                    //When the user taps a button, show another notification
-
-                                    Ext.device.Camera.capture({
-                                        source: button,
-                                        destination: 'file',
-
-                                        success: function(url) {
-                                            //show the newly captured image in a full screen Ext.Img component:
-                                            Ext.getCmp('img2').setSrc(url);
-                                        }
-                                    });
-
-
-
-
-
-
-                                }
-                            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        },
-                        text: 'load image 2'
-                    },
-                    {
-                        xtype: 'image',
-                        height: 201,
-                        id: 'img2',
-                        itemId: 'img2',
-                        width: 200,
-                        src: 'resources/images/logo.png'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-
-                            Ext.device.Notification.show({
-                                title: 'Choose Source',
-                                message: 'Please Choose photo source',
-                                buttons: ["Camera", "Library"],
-
-                                callback: function(button) {
-                                    //When the user taps a button, show another notification
-
-                                    Ext.device.Camera.capture({
-                                        source: button,
-                                        destination: 'file',
-
-                                        success: function(url) {
-                                            //show the newly captured image in a full screen Ext.Img component:
-                                            Ext.getCmp('img3').setSrc(url);
-                                        }
-                                    });
-
-
-
-
-
-
-                                }
-                            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        },
-                        text: 'load image 3'
-                    },
-                    {
-                        xtype: 'image',
-                        height: 201,
-                        id: 'img3',
-                        itemId: 'img3',
-                        width: 200,
-                        src: 'resources/images/logo.png'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-
-                            Ext.device.Notification.show({
-                                title: 'Choose Source',
-                                message: 'Please Choose photo source',
-                                buttons: ["Camera", "Library"],
-
-                                callback: function(button) {
-                                    //When the user taps a button, show another notification
-
-                                    Ext.device.Camera.capture({
-                                        source: button,
-                                        destination: 'file',
-
-                                        success: function(url) {
-                                            //show the newly captured image in a full screen Ext.Img component:
-                                            Ext.getCmp('img4').setSrc(url);
-                                        }
-                                    });
-
-
-
-
-
-
-                                }
-                            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        },
-                        text: 'load image 4'
-                    },
-                    {
-                        xtype: 'image',
-                        height: 201,
-                        id: 'img4',
-                        itemId: 'img4',
-                        width: 200,
-                        src: 'resources/images/logo.png'
-                    },
-                    {
-                        xtype: 'filefield',
-                        label: 'ارفق صورة',
-                        labelAlign: 'right',
-                        labelWidth: '40%',
-                        name: 'img1'
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img3',
+                                itemId: 'img3',
+                                src: 'resources/images/logo.png'
+                            },
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img4',
+                                itemId: 'img4',
+                                width: 200,
+                                src: 'resources/images/logo.png'
+                            }
+                        ]
                     },
                     {
                         xtype: 'button',
@@ -548,11 +331,142 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
                         },
+                        cls: 'btn-send',
                         text: 'ارسال'
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onImg1Tap',
+                event: 'tap',
+                delegate: '#img1'
+            },
+            {
+                fn: 'onImg2Tap',
+                event: 'tap',
+                delegate: '#img2'
+            },
+            {
+                fn: 'onImg3Tap',
+                event: 'tap',
+                delegate: '#img3'
+            },
+            {
+                fn: 'onImg4Tap',
+                event: 'tap',
+                delegate: '#img4'
+            }
         ]
+    },
+
+    onImg1Tap: function(image, e, eOpts) {
+
+        Ext.device.Notification.show({
+            title: 'Choose Source',
+            message: 'Please Choose photo source',
+            buttons: ["Camera", "Library"],
+
+            callback: function(button) {
+                //When the user taps a button, show another notification
+
+                Ext.device.Camera.capture({
+            source: button,
+            destination: 'file',
+
+            success: function(url) {
+                //show the newly captured image in a full screen Ext.Img component:
+                image.setSrc(url);
+            }
+        });
+
+
+
+
+
+
+            }
+        });
+
+    },
+
+    onImg2Tap: function(image, e, eOpts) {
+
+        Ext.device.Notification.show({
+            title: 'Choose Source',
+            message: 'Please Choose photo source',
+            buttons: ["Camera", "Library"],
+
+            callback: function(button) {
+                //When the user taps a button, show another notification
+
+                Ext.device.Camera.capture({
+            source: button,
+            destination: 'file',
+
+            success: function(url) {
+                //show the newly captured image in a full screen Ext.Img component:
+                image.setSrc(url);
+            }
+        });
+
+
+            }
+        });
+
+    },
+
+    onImg3Tap: function(image, e, eOpts) {
+
+        Ext.device.Notification.show({
+            title: 'Choose Source',
+            message: 'Please Choose photo source',
+            buttons: ["Camera", "Library"],
+
+            callback: function(button) {
+                //When the user taps a button, show another notification
+
+                Ext.device.Camera.capture({
+            source: button,
+            destination: 'file',
+
+            success: function(url) {
+                //show the newly captured image in a full screen Ext.Img component:
+                image.setSrc(url);
+            }
+        });
+
+
+            }
+        });
+
+    },
+
+    onImg4Tap: function(image, e, eOpts) {
+
+        Ext.device.Notification.show({
+            title: 'Choose Source',
+            message: 'Please Choose photo source',
+            buttons: ["Camera", "Library"],
+
+            callback: function(button) {
+                //When the user taps a button, show another notification
+
+                Ext.device.Camera.capture({
+            source: button,
+            destination: 'file',
+
+            success: function(url) {
+                //show the newly captured image in a full screen Ext.Img component:
+                image.setSrc(url);
+            }
+        });
+
+
+            }
+        });
+
     },
 
     initialize: function() {
