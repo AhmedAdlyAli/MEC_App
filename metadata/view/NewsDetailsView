@@ -10,10 +10,18 @@
         "designer|userClassName": "NewsDetailsView",
         "id": "NewsDetailsView",
         "itemId": "NewsDetailsView",
-        "layout": "vbox"
+        "layout": "vbox",
+        "xtype": null
     },
     "name": "MyPanel2",
     "designerId": "af50c861-2e74-49ff-b8eb-247d83453b48",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "xtype",
+            "type": "string"
+        }
+    ],
     "cn": [
         {
             "type": "Ext.Panel",
@@ -22,8 +30,31 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "hatem"
+                ]
+            },
             "name": "MyPanel2",
-            "designerId": "ccecec3b-8617-48df-aada-e52db4529aa8"
+            "designerId": "ccecec3b-8617-48df-aada-e52db4529aa8",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "tpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "tpl",
+                        "implHandler": [
+                            "{NewsTitle}"
+                        ]
+                    },
+                    "name": "tpl",
+                    "designerId": "01cd87d0-8de9-417e-a64b-80fa892364f0"
+                }
+            ]
         },
         {
             "type": "Ext.Panel",
@@ -112,27 +143,26 @@
             ]
         },
         {
-            "type": "basiceventbinding",
+            "type": "fixedfunction",
             "reference": {
-                "name": "listeners",
+                "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onNewsDetailsViewInitialize",
+                "fn": "initialize",
                 "implHandler": [
+                    "this.callParent();",
                     "",
-                    " this.down('#lblTitle').setHtml(this.Data.NewsTitle);",
-                    " this.down('#lblDate').setHtml(this.Data.NewsDate);",
-                    " this.down('#lblDetails').setHtml(this.Data.NewsDetails);",
-                    " this.down('#imgNews').setSrc(this.Data.NewsImgUrl);",
-                    "",
+                    "this.down('#lblTitle').setHtml(this.getData().NewsTitle);",
+                    "this.down('#lblDate').setHtml(this.getData().NewsDate);",
+                    "this.down('#lblDetails').setHtml(this.getData().NewsDetails);",
+                    "this.down('#imgNews').setSrc(this.getData().NewsImgUrl);",
                     ""
-                ],
-                "name": "initialize"
+                ]
             },
-            "name": "onNewsDetailsViewInitialize",
-            "designerId": "0e44d331-f094-4cbe-9206-a4becde63f3b"
+            "name": "initialize",
+            "designerId": "ff25660b-c5bf-48d4-967c-5cea68c38595"
         }
     ]
 }

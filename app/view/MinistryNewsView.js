@@ -20,15 +20,13 @@ Ext.define('MEC_App.view.MinistryNewsView', {
     requires: [
         'Ext.Panel',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.PullRefresh'
     ],
 
     config: {
         layout: 'vbox',
         items: [
-            {
-                xtype: 'panel'
-            },
             {
                 xtype: 'panel',
                 flex: 1,
@@ -45,21 +43,20 @@ Ext.define('MEC_App.view.MinistryNewsView', {
                         id: 'lstNews',
                         itemTpl: [
                             '<div>',
-                            '    ',
-                            '    ',
                             '     {NewsTitle}',
-                            '    ',
-                            '',
-                            '',
-                            '</div>',
-                            '',
-                            '',
-                            '',
-                            '',
-                            ''
+                            '</div>'
                         ],
                         store: 'MinistryNewsStore',
-                        onItemDisclosure: false
+                        infinite: true,
+                        onItemDisclosure: false,
+                        plugins: [
+                            {
+                                lastUpdatedDateFormat: 'd M Y h:iA',
+                                loadingText: 'جاري التحميل...',
+                                scrollerAutoRefresh: true,
+                                type: 'pullrefresh'
+                            }
+                        ]
                     }
                 ]
             }

@@ -26,14 +26,14 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
     onLstNewsItemTap: function(dataview, index, target, record, e, eOpts) {
 
-                    //alert(record.data.NewsDate);
+        //alert(record.data.NewsDate);
 
-               dataview.up('MainNavView').push({
-                    xtype: 'NewsDetailsView',
-                    title: Ext.Global.GetViewTitle('NewsDetails'),
-                   Data: record.data
+        dataview.up('MainNavView').push({
+            xtype: 'NewsDetailsView',
+            title: Ext.Global.GetViewTitle('NewsDetails'),
+            data: record.data
 
-                });
+        });
 
 
 

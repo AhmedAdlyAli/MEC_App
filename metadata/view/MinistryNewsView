@@ -23,16 +23,6 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "MyPanel",
-            "designerId": "179012fe-53a0-4dcc-90ce-59332767344c"
-        },
-        {
-            "type": "Ext.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
             "userConfig": {
                 "layout": null,
                 "layout|flex": 1,
@@ -60,6 +50,7 @@
                         "docked": "top",
                         "height": "100%",
                         "id": "lstNews",
+                        "infinite": true,
                         "onItemDisclosure": false,
                         "store": "MinistryNewsStore"
                     },
@@ -77,22 +68,28 @@
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
                                     "<div>",
-                                    "    ",
-                                    "    ",
                                     "     {NewsTitle}",
-                                    "    ",
-                                    "",
-                                    "",
-                                    "</div>",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    ""
+                                    "</div>"
                                 ]
                             },
                             "name": "itemTpl",
                             "designerId": "5e33634e-ce11-445d-82bd-ba1382ae11df"
+                        },
+                        {
+                            "type": "Ext.plugin.PullRefresh",
+                            "reference": {
+                                "name": "plugins",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "lastUpdatedDateFormat": "d M Y h:iA",
+                                "loadingText": "جاري التحميل...",
+                                "scrollerAutoRefresh": true,
+                                "ui": null
+                            },
+                            "name": "MyPullRefreshPlugin",
+                            "designerId": "22fa0672-42a0-40b2-b901-ff0691955751"
                         }
                     ]
                 }

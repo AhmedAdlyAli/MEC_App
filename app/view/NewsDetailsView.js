@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
     requires: [
         'Ext.Panel',
+        'Ext.XTemplate',
         'Ext.Label',
         'Ext.Img'
     ],
@@ -29,7 +30,11 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         layout: 'vbox',
         items: [
             {
-                xtype: 'panel'
+                xtype: 'panel',
+                cls: 'hatem',
+                tpl: [
+                    '{NewsTitle}'
+                ]
             },
             {
                 xtype: 'panel',
@@ -62,22 +67,16 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                     }
                 ]
             }
-        ],
-        listeners: [
-            {
-                fn: 'onNewsDetailsViewInitialize',
-                event: 'initialize'
-            }
         ]
     },
 
-    onNewsDetailsViewInitialize: function(component, eOpts) {
+    initialize: function() {
+        this.callParent();
 
-         this.down('#lblTitle').setHtml(this.Data.NewsTitle);
-         this.down('#lblDate').setHtml(this.Data.NewsDate);
-         this.down('#lblDetails').setHtml(this.Data.NewsDetails);
-         this.down('#imgNews').setSrc(this.Data.NewsImgUrl);
-
+        this.down('#lblTitle').setHtml(this.getData().NewsTitle);
+        this.down('#lblDate').setHtml(this.getData().NewsDate);
+        this.down('#lblDetails').setHtml(this.getData().NewsDetails);
+        this.down('#imgNews').setSrc(this.getData().NewsImgUrl);
 
     }
 
