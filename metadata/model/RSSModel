@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RSSModel"
+    },
+    "name": "MyModel",
+    "designerId": "359c1cd3-9f69-4499-8d5a-a1f1e6fd3c7f",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "title"
+            },
+            "name": "field6",
+            "designerId": "5988b695-e8c5-4052-90e3-da4a3a8af7f7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "link"
+            },
+            "name": "field7",
+            "designerId": "17c3bcad-4f2f-4bbc-80a5-c2a7defbff42"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "description"
+            },
+            "name": "field8",
+            "designerId": "cd2ccc8c-60dc-4d68-be97-f85766dfa46b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "author"
+            },
+            "name": "field9",
+            "designerId": "43f99517-429d-43e2-89f8-e3770f81607e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pubDate"
+            },
+            "name": "field10",
+            "designerId": "51961d0a-b1f0-43e3-89eb-5f7202bade93"
+        }
+    ]
+}

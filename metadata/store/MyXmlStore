@@ -1,0 +1,30 @@
+{
+    "type": "xmlstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyXmlStore",
+        "model": "RSSModel",
+        "storeId": "MyXmlStore"
+    },
+    "name": "MyXmlStore",
+    "designerId": "fb3ed7bd-2dec-444a-9963-7e986422b192",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "dffd78f8-f7a0-4547-89fe-2a5d395a65ca"
+        }
+    ]
+}

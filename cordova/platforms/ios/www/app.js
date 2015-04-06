@@ -16913,7 +16913,7 @@ Ext.define('Ext.util.Format', {
                     if (Ext.os.is.Android && Ext.os.version.isLessThan("3.0")) {
                         /**
                          * This code is modified from the following source: <https://github.com/csnover/js-iso8601>
-                         * � 2011 Colin Snover <http://zetafleet.com>
+                         * © 2011 Colin Snover <http://zetafleet.com>
                          * Released under MIT license.
                          */
                         var potentialUndefinedKeys = [
@@ -16936,7 +16936,7 @@ Ext.define('Ext.util.Format', {
                         // 6 ss (optional)
                         // 7 msec (optional)
                         // 8 Z (optional)
-                        // 9 � (optional)
+                        // 9 ± (optional)
                         // 10 tzHH (optional)
                         // 11 tzmm (optional)
                         if ((dateParsed = /^(\d{4}|[+\-]\d{6})(?:-(\d{2})(?:-(\d{2}))?)?(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3}))?)?(?:(Z)|([+\-])(\d{2})(?::(\d{2}))?)?)?$/.exec(value))) {
@@ -50135,6 +50135,287 @@ Ext.define('Ext.direct.Manager', {
 });
 
 /**
+ * @aside guide ajax
+ * @singleton
+ *
+ * This class is used to create JsonP requests. JsonP is a mechanism that allows for making requests for data cross
+ * domain. More information is available [here](http://en.wikipedia.org/wiki/JSONP).
+ *
+ * ## Example
+ *
+ *     @example preview
+ *     Ext.Viewport.add({
+ *         xtype: 'button',
+ *         text: 'Make JsonP Request',
+ *         centered: true,
+ *         handler: function(button) {
+ *             // Mask the viewport
+ *             Ext.Viewport.mask();
+ *
+ *             // Remove the button
+ *             button.destroy();
+ *
+ *             // Make the JsonP request
+ *             Ext.data.JsonP.request({
+ *                 url: 'http://free.worldweatheronline.com/feed/weather.ashx',
+ *                 callbackKey: 'callback',
+ *                 params: {
+ *                     key: '23f6a0ab24185952101705',
+ *                     q: '94301', // Palo Alto
+ *                     format: 'json',
+ *                     num_of_days: 5
+ *                 },
+ *                 success: function(result, request) {
+ *                     // Unmask the viewport
+ *                     Ext.Viewport.unmask();
+ *
+ *                     // Get the weather data from the json object result
+ *                     var weather = result.data.weather;
+ *                     if (weather) {
+ *                         // Style the viewport html, and set the html of the max temperature
+ *                         Ext.Viewport.setStyleHtmlContent(true);
+ *                         Ext.Viewport.setHtml('The temperature in Palo Alto is <b>' + weather[0].tempMaxF + '¡ F</b>');
+ *                     }
+ *                 }
+ *             });
+ *         }
+ *     });
+ *
+ * See the {@link #request} method for more details on making a JsonP request.
+ */
+Ext.define('Ext.data.JsonP', {
+    alternateClassName: 'Ext.util.JSONP',
+    /* Begin Definitions */
+    singleton: true,
+    /* End Definitions */
+    /**
+     * Number of requests done so far.
+     * @private
+     */
+    requestCount: 0,
+    /**
+     * Hash of pending requests.
+     * @private
+     */
+    requests: {},
+    /**
+     * @property {Number} [timeout=30000]
+     * A default timeout (in milliseconds) for any JsonP requests. If the request has not completed in this time the failure callback will
+     * be fired.
+     */
+    timeout: 30000,
+    /**
+     * @property {Boolean} disableCaching
+     * `true` to add a unique cache-buster param to requests.
+     */
+    disableCaching: true,
+    /**
+     * @property {String} disableCachingParam
+     * Change the parameter which is sent went disabling caching through a cache buster.
+     */
+    disableCachingParam: '_dc',
+    /**
+     * @property {String} callbackKey
+     * Specifies the GET parameter that will be sent to the server containing the function name to be executed when the
+     * request completes. Thus, a common request will be in the form of:
+     * `url?callback=Ext.data.JsonP.callback1`
+     */
+    callbackKey: 'callback',
+    /**
+     * Makes a JSONP request.
+     * @param {Object} options An object which may contain the following properties. Note that options will take
+     * priority over any defaults that are specified in the class.
+     *
+     * @param {String} options.url  The URL to request.
+     * @param {Object} [options.params]  An object containing a series of key value pairs that will be sent along with the request.
+     * @param {Number} [options.timeout]  See {@link #timeout}
+     * @param {String} [options.callbackKey]  See {@link #callbackKey}
+     * @param {String} [options.callbackName]  See {@link #callbackKey}
+     *   The function name to use for this request. By default this name will be auto-generated: Ext.data.JsonP.callback1,
+     *   Ext.data.JsonP.callback2, etc. Setting this option to "my_name" will force the function name to be
+     *   Ext.data.JsonP.my_name. Use this if you want deterministic behavior, but be careful - the callbackName should be
+     *   different in each JsonP request that you make.
+     * @param {Boolean}  [options.disableCaching]  See {@link #disableCaching}
+     * @param {String}   [options.disableCachingParam]  See {@link #disableCachingParam}
+     * @param {Function} [options.success]  A function to execute if the request succeeds.
+     * @param {Function} [options.failure]  A function to execute if the request fails.
+     * @param {Function} [options.callback]  A function to execute when the request completes, whether it is a success or failure.
+     * @param {Object}   [options.scope]  The scope in which to execute the callbacks: The "this" object for the
+     *   callback function. Defaults to the browser window.
+     *
+     * @return {Object}  request An object containing the request details.
+     */
+    request: function(options) {
+        options = Ext.apply({}, options);
+        if (!options.url) {
+            Ext.Logger.error('A url must be specified for a JSONP request.');
+        }
+        var me = this,
+            disableCaching = Ext.isDefined(options.disableCaching) ? options.disableCaching : me.disableCaching,
+            cacheParam = options.disableCachingParam || me.disableCachingParam,
+            id = ++me.requestCount,
+            callbackName = options.callbackName || 'callback' + id,
+            callbackKey = options.callbackKey || me.callbackKey,
+            timeout = Ext.isDefined(options.timeout) ? options.timeout : me.timeout,
+            params = Ext.apply({}, options.params),
+            url = options.url,
+            name = Ext.isSandboxed ? Ext.getUniqueGlobalNamespace() : 'Ext',
+            request, script;
+        params[callbackKey] = name + '.data.JsonP.' + callbackName;
+        if (disableCaching) {
+            params[cacheParam] = new Date().getTime();
+        }
+        script = me.createScript(url, params, options);
+        me.requests[id] = request = {
+            url: url,
+            params: params,
+            script: script,
+            id: id,
+            scope: options.scope,
+            success: options.success,
+            failure: options.failure,
+            callback: options.callback,
+            callbackKey: callbackKey,
+            callbackName: callbackName
+        };
+        if (timeout > 0) {
+            request.timeout = setTimeout(Ext.bind(me.handleTimeout, me, [
+                request
+            ]), timeout);
+        }
+        me.setupErrorHandling(request);
+        me[callbackName] = Ext.bind(me.handleResponse, me, [
+            request
+        ], true);
+        me.loadScript(request);
+        return request;
+    },
+    /**
+     * Abort a request. If the request parameter is not specified all open requests will be aborted.
+     * @param {Object/String} request The request to abort.
+     */
+    abort: function(request) {
+        var requests = this.requests,
+            key;
+        if (request) {
+            if (!request.id) {
+                request = requests[request];
+            }
+            this.handleAbort(request);
+        } else {
+            for (key in requests) {
+                if (requests.hasOwnProperty(key)) {
+                    this.abort(requests[key]);
+                }
+            }
+        }
+    },
+    /**
+     * Sets up error handling for the script.
+     * @private
+     * @param {Object} request The request.
+     */
+    setupErrorHandling: function(request) {
+        request.script.onerror = Ext.bind(this.handleError, this, [
+            request
+        ]);
+    },
+    /**
+     * Handles any aborts when loading the script.
+     * @private
+     * @param {Object} request The request.
+     */
+    handleAbort: function(request) {
+        request.errorType = 'abort';
+        this.handleResponse(null, request);
+    },
+    /**
+     * Handles any script errors when loading the script.
+     * @private
+     * @param {Object} request The request.
+     */
+    handleError: function(request) {
+        request.errorType = 'error';
+        this.handleResponse(null, request);
+    },
+    /**
+     * Cleans up any script handling errors.
+     * @private
+     * @param {Object} request The request.
+     */
+    cleanupErrorHandling: function(request) {
+        request.script.onerror = null;
+    },
+    /**
+     * Handle any script timeouts.
+     * @private
+     * @param {Object} request The request.
+     */
+    handleTimeout: function(request) {
+        request.errorType = 'timeout';
+        this.handleResponse(null, request);
+    },
+    /**
+     * Handle a successful response
+     * @private
+     * @param {Object} result The result from the request
+     * @param {Object} request The request
+     */
+    handleResponse: function(result, request) {
+        var success = true;
+        if (request.timeout) {
+            clearTimeout(request.timeout);
+        }
+        delete this[request.callbackName];
+        delete this.requests[request.id];
+        this.cleanupErrorHandling(request);
+        Ext.fly(request.script).destroy();
+        if (request.errorType) {
+            success = false;
+            Ext.callback(request.failure, request.scope, [
+                request.errorType,
+                request
+            ]);
+        } else {
+            Ext.callback(request.success, request.scope, [
+                result,
+                request
+            ]);
+        }
+        Ext.callback(request.callback, request.scope, [
+            success,
+            result,
+            request.errorType,
+            request
+        ]);
+    },
+    /**
+     * Create the script tag given the specified url, params and options. The options
+     * parameter is passed to allow an override to access it.
+     * @private
+     * @param {String} url The url of the request
+     * @param {Object} params Any extra params to be sent
+     * @param {Object} options The object passed to {@link #request}.
+     */
+    createScript: function(url, params, options) {
+        var script = document.createElement('script');
+        script.setAttribute("src", Ext.urlAppend(url, Ext.Object.toQueryString(params)));
+        script.setAttribute("async", true);
+        script.setAttribute("type", "text/javascript");
+        return script;
+    },
+    /**
+     * Loads the script for the given request by appending it to the HEAD element. This is
+     * its own method so that users can override it (as well as {@link #createScript}).
+     * @private
+     * @param {Object} request The request object.
+     */
+    loadScript: function(request) {
+        Ext.getHead().appendChild(request.script);
+    }
+});
+
+/**
  * @author Ed Spencer
  * @aside guide models
  *
@@ -50286,6 +50567,270 @@ Ext.define('Ext.data.Validations', {
      */
     exclusion: function(config, value) {
         return config.list && Ext.Array.indexOf(config.list, value) == -1;
+    }
+});
+
+/**
+ * @author Ed Spencer
+ * @aside guide proxies
+ *
+ * The JsonP proxy is useful when you need to load data from a domain other than the one your application is running on. If
+ * your application is running on http://domainA.com it cannot use {@link Ext.data.proxy.Ajax Ajax} to load its data
+ * from http://domainB.com because cross-domain ajax requests are prohibited by the browser.
+ *
+ * We can get around this using a JsonP proxy. JsonP proxy injects a `<script>` tag into the DOM whenever an AJAX request
+ * would usually be made. Let's say we want to load data from http://domainB.com/users - the script tag that would be
+ * injected might look like this:
+ *
+ *     <script src="http://domainB.com/users?callback=someCallback"></script>
+ *
+ * When we inject the tag above, the browser makes a request to that url and includes the response as if it was any
+ * other type of JavaScript include. By passing a callback in the url above, we're telling domainB's server that we want
+ * to be notified when the result comes in and that it should call our callback function with the data it sends back. So
+ * long as the server formats the response to look like this, everything will work:
+ *
+ *     someCallback({
+ *         users: [
+ *             {
+ *                 id: 1,
+ *                 name: "Ed Spencer",
+ *                 email: "ed@sencha.com"
+ *             }
+ *         ]
+ *     });
+ *
+ * As soon as the script finishes loading, the 'someCallback' function that we passed in the url is called with the JSON
+ * object that the server returned.
+ *
+ * JsonP proxy takes care of all of this automatically. It formats the url you pass, adding the callback parameter
+ * automatically. It even creates a temporary callback function, waits for it to be called and then puts the data into
+ * the Proxy making it look just like you loaded it through a normal {@link Ext.data.proxy.Ajax AjaxProxy}. Here's how
+ * we might set that up:
+ *
+ *     Ext.define('User', {
+ *         extend: 'Ext.data.Model',
+ *         config: {
+ *             fields: ['id', 'name', 'email']
+ *         }
+ *     });
+ *
+ *     var store = Ext.create('Ext.data.Store', {
+ *         model: 'User',
+ *         proxy: {
+ *             type: 'jsonp',
+ *             url : 'http://domainB.com/users'
+ *         }
+ *     });
+ *
+ *     store.load();
+ *
+ * That's all we need to do - JsonP proxy takes care of the rest. In this case the Proxy will have injected a script tag
+ * like this:
+ *
+ *     <script src="http://domainB.com/users?callback=callback1"></script>
+ *
+ * # Customization
+ *
+ * This script tag can be customized using the {@link #callbackKey} configuration. For example:
+ *
+ *     var store = Ext.create('Ext.data.Store', {
+ *         model: 'User',
+ *         proxy: {
+ *             type: 'jsonp',
+ *             url : 'http://domainB.com/users',
+ *             callbackKey: 'theCallbackFunction'
+ *         }
+ *     });
+ *
+ *     store.load();
+ *
+ * Would inject a script tag like this:
+ *
+ *     <script src="http://domainB.com/users?theCallbackFunction=callback1"></script>
+ *
+ * # Implementing on the server side
+ *
+ * The remote server side needs to be configured to return data in this format. Here are suggestions for how you might
+ * achieve this using Java, PHP and ASP.net:
+ *
+ * Java:
+ *
+ *     boolean jsonP = false;
+ *     String cb = request.getParameter("callback");
+ *     if (cb != null) {
+ *         jsonP = true;
+ *         response.setContentType("text/javascript");
+ *     } else {
+ *         response.setContentType("application/x-json");
+ *     }
+ *     Writer out = response.getWriter();
+ *     if (jsonP) {
+ *         out.write(cb + "(");
+ *     }
+ *     out.print(dataBlock.toJsonString());
+ *     if (jsonP) {
+ *         out.write(");");
+ *     }
+ *
+ * PHP:
+ *
+ *     $callback = $_REQUEST['callback'];
+ *
+ *     // Create the output object.
+ *     $output = array('a' => 'Apple', 'b' => 'Banana');
+ *
+ *     //start output
+ *     if ($callback) {
+ *         header('Content-Type: text/javascript');
+ *         echo $callback . '(' . json_encode($output) . ');';
+ *     } else {
+ *         header('Content-Type: application/x-json');
+ *         echo json_encode($output);
+ *     }
+ *
+ * ASP.net:
+ *
+ *     String jsonString = "{success: true}";
+ *     String cb = Request.Params.Get("callback");
+ *     String responseString = "";
+ *     if (!String.IsNullOrEmpty(cb)) {
+ *         responseString = cb + "(" + jsonString + ")";
+ *     } else {
+ *         responseString = jsonString;
+ *     }
+ *     Response.Write(responseString);
+ */
+Ext.define('Ext.data.proxy.JsonP', {
+    extend: Ext.data.proxy.Server,
+    alternateClassName: 'Ext.data.ScriptTagProxy',
+    alias: [
+        'proxy.jsonp',
+        'proxy.scripttag'
+    ],
+    config: {
+        defaultWriterType: 'base',
+        /**
+         * @cfg {String} callbackKey
+         * See {@link Ext.data.JsonP#callbackKey}.
+         * @accessor
+         */
+        callbackKey: 'callback',
+        /**
+         * @cfg {String} recordParam
+         * The param name to use when passing records to the server (e.g. 'records=someEncodedRecordString').
+         * @accessor
+         */
+        recordParam: 'records',
+        /**
+         * @cfg {Boolean} autoAppendParams
+         * `true` to automatically append the request's params to the generated url.
+         * @accessor
+         */
+        autoAppendParams: true
+    },
+    /**
+     * Performs the read request to the remote domain. JsonP proxy does not actually create an Ajax request,
+     * instead we write out a `<script>` tag based on the configuration of the internal Ext.data.Request object
+     * @param {Ext.data.Operation} operation The {@link Ext.data.Operation Operation} object to execute.
+     * @param {Function} callback A callback function to execute when the Operation has been completed.
+     * @param {Object} scope The scope to execute the callback in.
+     * @return {Object}
+     * @protected
+     */
+    doRequest: function(operation, callback, scope) {
+        var action = operation.getAction();
+        if (action !== 'read') {
+            Ext.Logger.error('JsonP proxies can only be used to read data.');
+        }
+        //generate the unique IDs for this request
+        var me = this,
+            request = me.buildRequest(operation),
+            params = request.getParams();
+        // apply JsonP proxy-specific attributes to the Request
+        request.setConfig({
+            callbackKey: me.getCallbackKey(),
+            timeout: me.getTimeout(),
+            scope: me,
+            callback: me.createRequestCallback(request, operation, callback, scope)
+        });
+        // Prevent doubling up because the params are already added to the url in buildUrl
+        if (me.getAutoAppendParams()) {
+            request.setParams({});
+        }
+        request.setJsonP(Ext.data.JsonP.request(request.getCurrentConfig()));
+        // Set the params back once we have made the request though
+        request.setParams(params);
+        operation.setStarted();
+        me.lastRequest = request;
+        return request;
+    },
+    /**
+     * @private
+     * Creates and returns the function that is called when the request has completed. The returned function
+     * should accept a Response object, which contains the response to be read by the configured Reader.
+     * The third argument is the callback that should be called after the request has been completed and the Reader has decoded
+     * the response. This callback will typically be the callback passed by a store, e.g. in proxy.read(operation, theCallback, scope)
+     * theCallback refers to the callback argument received by this function.
+     * See {@link #doRequest} for details.
+     * @param {Ext.data.Request} request The Request object.
+     * @param {Ext.data.Operation} operation The Operation being executed.
+     * @param {Function} callback The callback function to be called when the request completes. This is usually the callback
+     * passed to doRequest.
+     * @param {Object} scope The scope in which to execute the callback function.
+     * @return {Function} The callback function.
+     */
+    createRequestCallback: function(request, operation, callback, scope) {
+        var me = this;
+        return function(success, response, errorType) {
+            delete me.lastRequest;
+            me.processResponse(success, operation, request, response, callback, scope);
+        };
+    },
+    // @inheritdoc
+    setException: function(operation, response) {
+        operation.setException(operation.getRequest().getJsonP().errorType);
+    },
+    /**
+     * Generates a url based on a given Ext.data.Request object. Adds the params and callback function name to the url
+     * @param {Ext.data.Request} request The request object.
+     * @return {String} The url.
+     */
+    buildUrl: function(request) {
+        var me = this,
+            url = me.callParent(arguments),
+            params = Ext.apply({}, request.getParams()),
+            filters = params.filters,
+            filter, i, value;
+        delete params.filters;
+        if (me.getAutoAppendParams()) {
+            url = Ext.urlAppend(url, Ext.Object.toQueryString(params));
+        }
+        if (filters && filters.length) {
+            for (i = 0; i < filters.length; i++) {
+                filter = filters[i];
+                value = filter.getValue();
+                if (value) {
+                    url = Ext.urlAppend(url, filter.getProperty() + "=" + value);
+                }
+            }
+        }
+        return url;
+    },
+    /**
+     * @inheritdoc
+     */
+    destroy: function() {
+        this.abort();
+        this.callParent(arguments);
+    },
+    /**
+     * Aborts the current server request if one is currently running.
+     */
+    abort: function() {
+        var lastRequest = this.lastRequest;
+        if (lastRequest) {
+            Ext.data.JsonP.abort(lastRequest.getJsonP());
+        }
     }
 });
 
@@ -63882,71 +64427,111 @@ Ext.define('MEC_App.controller.LocAr', {
     config: {},
     Load: function(g) {
         g.ViewTitles = {
-            'Home': '????????',
-            'PublicServices': '??????? ??????',
-            'MediaCenter': ' ?????? ????????',
-            'Inquiries': '??????????? ?????????? ',
-            'ContactUs': '???? ???',
-            'Projects': '????????? ?????????',
-            'Reports': '???????? ?????????',
-            'Settings': '?????????',
-            'LogivForm': '????? ??????',
-            //media center
-            'MinistryPublications': '??????? ???????',
-            'MinistryNews': '????? ???????',
-            'EconomyNews': '????? ???????',
-            'NewsDetails': '?????? ?????',
-            //services
-            'PrintOffs': ' ????? ??????????',
-            'MyBusiness': ' ??????? ??????',
-            'RequestFollowup': ' ?????? ?????????',
-            'Complaints': ' ????? ?? ????',
-            'SupplyService': ' ????? ???????',
-            'InvestorServices': ' ????? ????????',
-            'ConsumerServices': ' ????? ????????',
-            // inq
-            'SearchTradeName': '????? ?? ??? ?????',
-            'SearchAct': '????? ?? ???? ?????',
-            'Recalls': '???????????',
-            'ConsulerEdu': '????? ????????',
-            'InvestorEdu': '????? ????????',
-            'Violations': '????????? ??????????',
-            //reports
-            'EcoReports': '?????? ????????',
-            'BizReports': '?????? ???????',
-            'ConsumerReports': '?????? ?????????',
-            'TradeReports': '????? ???????? ????????',
-            //contact
-            'AboutMinistry': '?? ???????',
-            'Branches': '??????',
-            'Suggestions': '???????',
-            'ContactUs2': '????? ????',
-            'Employees': '????? ???????'
-        };
-        g.ComplaintsLabels = {
-            'shopName': '??? ??????',
-            'shopLocation': ' ???? ??????',
-            'ComplaintType': ' ??? ??????',
-            'txtComplaint': ' ?? ??????',
-            'fullName': ' ????? ???????',
-            'email': ' ?????? ??????????',
-            'mobile': ' ??? ??????',
-            'barcode': '?????? ??????',
-            'AttachImg': ' ???? ??? ??????',
-            'Submit': '????'
-        };
-        g.ValidationMsg = {
-            errShopName: '???? ???? ??? ??????\n',
-            errComplaintType: '???? ???? ??? ??????\n',
-            errComplaintText: '???? ???? ?? ??????\n',
-            errFullName: '???? ???? ????? ???????\n',
-            errMobile: '???? ???? ??? ??????\n'
-        };
-        g.ConfirmationMsg = {
-            msgConfirmComplaints: '?? ????? ?????? ?????'
+           
+
+           Home: "الرئيسية",
+    PublicServices:"الخدمات العامة",
+    MediaCenter: " المركز الاعلامي",
+    Inquiries: "الاستعلامات والاصدارات ",
+    ContactUs: "اتصل بنا",
+    Projects : "المبادرات والمشاريع",
+    Reports: "المؤشرات والتقارير",
+    Settings: "الاعدادات",
+    LogivForm : "تسجيل الدخول",
+
+    //media center
+
+    MinistryPublications : 'اصدارات الوزارة',
+    MinistryNews  : 'اخبار الوزارة',
+    EconomyNews : 'اخبار الوزارة',
+    NewsDetails : 'تفاصيل الخبر',
+
+
+
+    //services
+
+    PrintOffs :' خدمات المستخرجات',
+    MyBusiness :' بياناتي الخاصة',
+    RequestFollowup :' متابعة المعاملات',
+    Complaints :' ابلاغ عن شكوي',
+    SupplyService :' خدمات التموين',
+    InvestorServices :' خدمات المستثمر',
+    ConsumerServices :' خدمات المستهلك',
+
+
+
+
+    // inq
+
+    SearchTradeName :    'البحث عن اسم تجاري',
+    SearchAct :'البحث عن نشاط تجاري',
+    Recalls :'الاستدعاءات',
+    ConsulerEdu :'ثقافة المستهلك',
+    InvestorEdu :'ثقافة المستثمر',
+    Violations :'المخالفات والاغلاقات',
+
+
+
+    //reports
+
+
+
+    EcoReports :'مؤشرات اقتصادية',
+    BizReports :'مؤشرات الاعمال',
+    ConsumerReports :'مؤشرات استهلاكية',
+    TradeReports :'تقرير العلامات التجارية',
+
+
+    //contact
+
+    AboutMinistry :'عن الوزارة',
+    Branches :'الفروع',
+    Suggestions :'مقترحات',
+    ContactUs2 :'تواصل معنا',
+    Employees :'موظفو الوزارة'
+
+};
+
+
+g.ComplaintsLabels ={
+
+    shopName: 'اسم المتجر',
+    shopLocation: ' موقع المتجر',
+    ComplaintType: ' نوع الشكوي',
+    txtComplaint: ' نص الشكوي',
+    fullName: ' الاسم بالكامل',
+    email: ' البريد الالكتدوني',
+    mobile: ' رقم الهاتف',
+    barcode:  'باركود المنتج',
+    AttachImg: ' ارفق صور المنتج',
+    Submit: 'ارسل'
+
+};
+
+
+
+g.ValidationMsg ={
+
+    errShopName:'فضلا ادخل اسم المتجر\n',
+    errComplaintType:'فضلا اختر نوع الشكوي\n',
+    errComplaintText:'فضلا ادخل نص الشكوي\n',
+    errFullName:'فضلا ادخل الاسم بالكامل\n',
+    errMobile:'فضلا ادخل رقم الجوال\n',
+
+
+};
+
+
+g.ConfirmationMsg ={
+
+    msgConfirmComplaints:'تم ارسال الشكوي بنجاح'
+
+
         };
         g.GenericContent = {
-            HomeNews: '<div class="header-text-bg"><b>????? ????? ????? ????? ????? ?????</b><br />????? ????? ????? ?????  </div>'
+            HomeNews:'<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
+
+
         };
     }
 });
@@ -64091,6 +64676,43 @@ Ext.define('MEC_App.model.MinistryNewsModel', {
 });
 
 /*
+ * File: app/model/RSSModel.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.model.RSSModel', {
+    extend: Ext.data.Model,
+    config: {
+        fields: [
+            {
+                name: 'title'
+            },
+            {
+                name: 'link'
+            },
+            {
+                name: 'description'
+            },
+            {
+                name: 'author'
+            },
+            {
+                name: 'pubDate'
+            }
+        ]
+    }
+});
+
+/*
  * File: app/view/MainNavView.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -64115,7 +64737,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: '????????',
+                title: 'وزارة الاقتصاد والتجارة',
                 id: 'pnlMain',
                 itemId: 'pnlMain',
                 layout: 'vbox',
@@ -65200,7 +65822,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
         dataview.up('MainNavView').push({
             xtype: 'NewsDetailsView',
             title: Ext.Global.GetViewTitle('NewsDetails'),
-            Data: record.data
+            theData: record.data
         });
     }
 });
@@ -65510,29 +66132,31 @@ Ext.define('MEC_App.store.override.MinistryNewsStore', {
     config: {
         data: [
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 1,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 2,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails:  'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 3,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             }
+
+
         ]
     }
 });
@@ -65683,6 +66307,32 @@ Ext.define('MEC_App.store.MinistryNewsStore', {
             reader: {
                 type: 'array'
             }
+        }
+    }
+});
+
+/*
+ * File: app/store/MyXmlStore.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.store.MyXmlStore', {
+    extend: Ext.data.Store,
+    config: {
+        model: 'MEC_App.model.RSSModel',
+        storeId: 'MyXmlStore',
+        proxy: {
+            type: 'jsonp',
+            url: 'http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D'
         }
     }
 });
@@ -66652,12 +67302,12 @@ Ext.define('MEC_App.controller.DeviceController', {
     config: {},
     CaptureImage: function(image) {
         var options = {
-                'title': 'Chose a method to add Photo',
+                'title': 'اختر طريقة ارفاق الصورة',
                 'buttonLabels': [
-                    'Camera',
-                    'Library'
+                    'من الكاميرا',
+                    'من مكتبة الصور'
                 ],
-                'addCancelButtonWithLabel': 'Cancel',
+                'addCancelButtonWithLabel': 'الغاء',
                 'androidEnableCancelButton': true,
                 // default false
                 'winphoneEnableCancelButton': true
@@ -66773,36 +67423,36 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                     me.element.on('tap', function() {
                                         var btn = this;
                                         var config = {
-                                                title: "??? ??????",
+                                                title: "نوع الشكوي",
                                                 items: [
                                                     {
-                                                        text: "Type 1",
-                                                        value: "Type 1"
+                                                        text: "نوع 1",
+                                                        value: "نوع 1"
                                                     },
                                                     {
-                                                        text: "Type 2",
-                                                        value: "Type 2"
+                                                        text: "نوع 2",
+                                                        value: "نوع 2"
                                                     },
                                                     {
-                                                        text: "Type 3",
-                                                        value: "Type 3"
+                                                        text: "نوع 3",
+                                                        value: "نوع 3"
                                                     },
                                                     {
-                                                        text: "Type 4",
-                                                        value: "Type 4"
+                                                        text: "نوع 4",
+                                                        value: "نوع 4"
                                                     },
                                                     {
-                                                        text: "Type 5",
-                                                        value: "Type 5"
+                                                        text: "نوع 5",
+                                                        value: "نوع 5"
                                                     },
                                                     {
-                                                        text: "Type 6",
-                                                        value: "Type 6"
+                                                        text: "نوع 6",
+                                                        value: "نوع 6"
                                                     }
                                                 ],
                                                 selectedValue: "2",
-                                                doneButtonLabel: "??????",
-                                                cancelButtonLabel: "?????"
+                                                 doneButtonLabel: "اختيار",
+                                                cancelButtonLabel: "الغاء"
                                             };
                                         Ext.DeviceController.ShowNativePicker(me, config);
                                     }, me);
@@ -67888,7 +68538,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
         items: [
             {
                 xtype: 'panel',
-                html: '<h2 class="contact-us">????? ????</h2>'
+                html: '<h2 class="contact-us">تواصل معنا</h2>'
             },
             {
                 xtype: 'panel',
@@ -67896,7 +68546,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
             },
             {
                 xtype: 'panel',
-                html: '<h2 class="branches">??????</h2>'
+                html: '<h2 class="branches">الفروع</h2>'
             },
             {
                 xtype: 'panel',
@@ -67980,7 +68630,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
         var gMap = mapPanel.getMap();
         Ext.Function.defer(function() {
             if (gMap === null) {
-                Ext.Function.defer(this.initMap, 250, this);
+                Ext.Function.defer(this.initMap, 500, this);
             } else {
                 // ready to start calling google map methods
                 // alert('not null');
@@ -67992,7 +68642,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                         icon: 'resources/images/drop-pin.png'
                     });
             }
-        }, 100, this);
+        }, 300, this);
         mapPanel.element.on({
             tap: this.domEvent,
             touchstart: this.domEvent,
@@ -68093,10 +68743,12 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         ]
     },
     onNewsDetailsViewInitialize: function(component, eOpts) {
-        this.down('#lblTitle').setHtml(this.Data.NewsTitle);
-        this.down('#lblDate').setHtml(this.Data.NewsDate);
-        this.down('#lblDetails').setHtml(this.Data.NewsDetails);
-        this.down('#imgNews').setSrc(this.Data.NewsImgUrl);
+
+    	 
+        //this.down('#lblTitle').setHtml(this.theData.NewsTitle);
+        //this.down('#lblDate').setHtml('this.Data.NewsDate');
+        //this.down('#lblDetails').setHtml('this.Data.NewsDetails');
+        //this.down('#imgNews').setSrc('this.Data.NewsImgUrl');
     }
 });
 
@@ -68121,12 +68773,14 @@ Ext.application({
         'PrintOffice',
         'MenuModel',
         'ComplaintsModel',
-        'MinistryNewsModel'
+        'MinistryNewsModel',
+        'RSSModel'
     ],
     stores: [
         'MenuArrayStore',
         'PrintOffices',
-        'MinistryNewsStore'
+        'MinistryNewsStore',
+        'MyXmlStore'
     ],
     views: [
         'HomeView',

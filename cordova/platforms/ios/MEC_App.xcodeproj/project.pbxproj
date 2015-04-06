@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		068EDDC5FA4C4E7883768150 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C51051A1BF04A319C612C5B /* CDVDevice.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -52,6 +53,7 @@
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		87A852FCEA81416392596D65 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BE073B128C489CB8BAA343 /* libiconv.dylib */; };
 		92879C2D0AAC40A78986E8E7 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B119578AE64645833E8425 /* CoreVideo.framework */; };
+		9B68F64B94494F2687373A0B /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */; };
 		A83DA4F76A714CA9905878CF /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = C5585392160E4EC4979E611F /* CDVNotification.m */; };
 		AB48C9E1EF2E499CB6009A9F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C10CBAEE5DB04B6FB4EEED98 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B3E43AE47F124C38AA98BAC3 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4A0174A90F1C498E96B9AB1B /* CDVBarcodeScanner.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -59,7 +61,6 @@
 		CAFF29CC8A714DC5BE41C21A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE3733BFA9C45288E14CB33 /* QuartzCore.framework */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		DAE9A9A3E4654DBDB9C24B22 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3BCFCC7B1443F5A9DB5633 /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9B68F64B94494F2687373A0B /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,8 +140,10 @@
 		8D95E8041859418584411873 /* CDVExif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVExif.h; path = "cordova-plugin-camera/CDVExif.h"; sourceTree = "<group>"; };
 		8DE3733BFA9C45288E14CB33 /* QuartzCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		95744412E3C94CAC9215F88B /* CDVVibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVVibration.h; path = "cordova-plugin-vibration/CDVVibration.h"; sourceTree = "<group>"; };
+		95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ActionSheet.m; path = "nl.x-services.plugins.actionsheet/ActionSheet.m"; sourceTree = "<group>"; };
 		95C71AF8AD9D40B0AA33B3CB /* CDVNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVNotification.h; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; };
 		96029240549F4157AF641079 /* CoreLocation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A631F66F81794ACBA6A19846 /* ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ActionSheet.h; path = "nl.x-services.plugins.actionsheet/ActionSheet.h"; sourceTree = "<group>"; };
 		AABA91CE826541ED89E71005 /* UIImage+CropScaleOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CropScaleOrientation.m"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.m"; sourceTree = "<group>"; };
 		BD037EFC484A4E0E808F3686 /* CDVVibration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVVibration.m; path = "cordova-plugin-vibration/CDVVibration.m"; sourceTree = "<group>"; };
 		BE29E111050741A099886127 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVJpegHeaderWriter.m; path = "cordova-plugin-camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; };
@@ -154,8 +157,6 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F2B119578AE64645833E8425 /* CoreVideo.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MEC_App/config.xml; sourceTree = "<group>"; };
-		95B94423CAAF4EDF9DA1EF38 /* ActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ActionSheet.m"; path = "nl.x-services.plugins.actionsheet/ActionSheet.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		A631F66F81794ACBA6A19846 /* ActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ActionSheet.h"; path = "nl.x-services.plugins.actionsheet/ActionSheet.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -548,7 +549,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "8742ce1e-b640-48fe-a695-d35cbde70707";
+				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -583,7 +584,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "8742ce1e-b640-48fe-a695-d35cbde70707";
+				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

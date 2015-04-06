@@ -140,7 +140,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
         Ext.Function.defer(function(){
 
             if (gMap === null) {
-                Ext.Function.defer(this.initMap,250,this);
+                Ext.Function.defer(this.initMap,500,this);
             } else {
                 // ready to start calling google map methods
 
@@ -158,7 +158,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                 });
 
             }
-        } ,100,this);
+        } ,300,this);
 
         mapPanel.element.on({
             tap: this.domEvent,

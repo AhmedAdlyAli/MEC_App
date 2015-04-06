@@ -32,12 +32,14 @@ Ext.application({
         'PrintOffice',
         'MenuModel',
         'ComplaintsModel',
-        'MinistryNewsModel'
+        'MinistryNewsModel',
+        'RSSModel'
     ],
     stores: [
         'MenuArrayStore',
         'PrintOffices',
-        'MinistryNewsStore'
+        'MinistryNewsStore',
+        'MyXmlStore'
     ],
     views: [
         'HomeView',

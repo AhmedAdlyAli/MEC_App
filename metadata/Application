@@ -23,7 +23,8 @@
             "PrintOffice",
             "MenuModel",
             "ComplaintsModel",
-            "MinistryNewsModel"
+            "MinistryNewsModel",
+            "RSSModel"
         ],
         "name": "MEC_App",
         "requires": [
@@ -36,7 +37,8 @@
         "stores": [
             "MenuArrayStore",
             "PrintOffices",
-            "MinistryNewsStore"
+            "MinistryNewsStore",
+            "MyXmlStore"
         ],
         "views": [
             "HomeView",

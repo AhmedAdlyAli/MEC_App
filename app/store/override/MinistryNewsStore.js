@@ -1,7 +1,7 @@
 Ext.define('MEC_App.store.override.MinistryNewsStore', {
     override: 'MEC_App.store.MinistryNewsStore',
-    
-    
+
+
     config: {
         data: [
             {
@@ -28,11 +28,11 @@ Ext.define('MEC_App.store.override.MinistryNewsStore', {
                 NewsID: 3,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             }
-            
 
-            
-            ]
+
+
+        ]
     }
-     
-    
+
+
 });

@@ -22,48 +22,46 @@ Ext.define('MEC_App.controller.LocAr', {
     Load: function(g) {
         g.ViewTitles = {
 
-            'Home': 'الرئيسية',
-            'PublicServices':'الخدمات العامة',
-            'MediaCenter': ' المركز الاعلامي',
-            'Inquiries': 'الاستعلامات والاصدارات ',
-            'ContactUs': 'اتصل بنا',
-            'Projects' : 'المبادرات والمشاريع',
-            'Reports': 'المؤشرات والتقارير',
-            'Settings': 'الاعدادات',
-            'LogivForm' : 'تسجيل الدخول',
+            Home: "الرئيسية",
+            PublicServices:"الخدمات العامة",
+            MediaCenter: " المركز الاعلامي",
+            Inquiries: "الاستعلامات والاصدارات ",
+            ContactUs: "اتصل بنا",
+            Projects : "المبادرات والمشاريع",
+            Reports: "المؤشرات والتقارير",
+            Settings: "الاعدادات",
+            LogivForm : "تسجيل الدخول",
 
             //media center
 
-
-
-            'MinistryPublications' : 'اصدارات الوزارة',
-            'MinistryNews'  : 'اخبار الوزارة',
-            'EconomyNews' : 'اخبار الوزارة',
-            'NewsDetails' : 'تفاصيل الخبر',
+            MinistryPublications : 'اصدارات الوزارة',
+            MinistryNews  : 'اخبار الوزارة',
+            EconomyNews : 'اخبار الوزارة',
+            NewsDetails : 'تفاصيل الخبر',
 
 
 
             //services
 
-            'PrintOffs' :' خدمات المستخرجات',
-            'MyBusiness' :' بياناتي الخاصة',
-            'RequestFollowup' :' متابعة المعاملات',
-            'Complaints' :' ابلاغ عن شكوي',
-            'SupplyService' :' خدمات التموين',
-            'InvestorServices' :' خدمات المستثمر',
-            'ConsumerServices' :' خدمات المستهلك',
+            PrintOffs :' خدمات المستخرجات',
+            MyBusiness :' بياناتي الخاصة',
+            RequestFollowup :' متابعة المعاملات',
+            Complaints :' ابلاغ عن شكوي',
+            SupplyService :' خدمات التموين',
+            InvestorServices :' خدمات المستثمر',
+            ConsumerServices :' خدمات المستهلك',
 
 
 
 
             // inq
 
-            'SearchTradeName' :    'البحث عن اسم تجاري',
-            'SearchAct' :'البحث عن نشاط تجاري',
-            'Recalls' :'الاستدعاءات',
-            'ConsulerEdu' :'ثقافة المستهلك',
-            'InvestorEdu' :'ثقافة المستثمر',
-            'Violations' :'المخالفات والاغلاقات',
+            SearchTradeName :    'البحث عن اسم تجاري',
+            SearchAct :'البحث عن نشاط تجاري',
+            Recalls :'الاستدعاءات',
+            ConsulerEdu :'ثقافة المستهلك',
+            InvestorEdu :'ثقافة المستثمر',
+            Violations :'المخالفات والاغلاقات',
 
 
 
@@ -71,39 +69,35 @@ Ext.define('MEC_App.controller.LocAr', {
 
 
 
-            'EcoReports' :'مؤشرات اقتصادية',
-            'BizReports' :'مؤشرات الاعمال',
-            'ConsumerReports' :'مؤشرات استهلاكية',
-            'TradeReports' :'تقرير العلامات التجارية',
+            EcoReports :'مؤشرات اقتصادية',
+            BizReports :'مؤشرات الاعمال',
+            ConsumerReports :'مؤشرات استهلاكية',
+            TradeReports :'تقرير العلامات التجارية',
 
 
             //contact
 
-            'AboutMinistry' :'عن الوزارة',
-            'Branches' :'الفروع',
-            'Suggestions' :'مقترحات',
-            'ContactUs2' :'تواصل معنا',
-            'Employees' :'موظفو الوزارة'
-
-
-
-
+            AboutMinistry :'عن الوزارة',
+            Branches :'الفروع',
+            Suggestions :'مقترحات',
+            ContactUs2 :'تواصل معنا',
+            Employees :'موظفو الوزارة'
 
         };
 
 
         g.ComplaintsLabels ={
 
-            'shopName': 'اسم المتجر',
-            'shopLocation': ' موقع المتجر',
-            'ComplaintType': ' نوع الشكوي',
-            'txtComplaint': ' نص الشكوي',
-            'fullName': ' الاسم بالكامل',
-            'email': ' البريد الالكتدوني',
-            'mobile': ' رقم الهاتف',
-            'barcode':  'باركود المنتج',
-            'AttachImg': ' ارفق صور المنتج',
-            'Submit': 'ارسل'
+            shopName: 'اسم المتجر',
+            shopLocation: ' موقع المتجر',
+            ComplaintType: ' نوع الشكوي',
+            txtComplaint: ' نص الشكوي',
+            fullName: ' الاسم بالكامل',
+            email: ' البريد الالكتدوني',
+            mobile: ' رقم الهاتف',
+            barcode:  'باركود المنتج',
+            AttachImg: ' ارفق صور المنتج',
+            Submit: 'ارسل'
 
         };
 
@@ -121,8 +115,6 @@ Ext.define('MEC_App.controller.LocAr', {
         };
 
 
-
-
         g.ConfirmationMsg ={
 
             msgConfirmComplaints:'تم ارسال الشكوي بنجاح'
@@ -130,10 +122,6 @@ Ext.define('MEC_App.controller.LocAr', {
 
 
         };
-
-
-
-
 
 
 

@@ -689,8 +689,10 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.model.MenuModel": [],
   "MEC_App.model.MinistryNewsModel": [],
   "MEC_App.model.PrintOffice": [],
+  "MEC_App.model.RSSModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.MinistryNewsStore": [],
+  "MEC_App.store.MyXmlStore": [],
   "MEC_App.store.PrintOffices": [],
   "MEC_App.store.override.MenuArrayStore": [],
   "MEC_App.store.override.MinistryNewsStore": [],
@@ -1500,8 +1502,10 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.model.PrintOffice": [
     "model.printoffice"
   ],
+  "MEC_App.model.RSSModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.MinistryNewsStore": [],
+  "MEC_App.store.MyXmlStore": [],
   "MEC_App.store.PrintOffices": [
     "store.printoffices"
   ],
