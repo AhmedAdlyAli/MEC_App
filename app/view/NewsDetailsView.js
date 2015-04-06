@@ -79,6 +79,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
          this.down('#imgNews').setSrc(this.Data.NewsImgUrl);
 
 
+
     }
 
 });

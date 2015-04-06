@@ -127,6 +127,7 @@
                     " this.down('#lblDetails').setHtml(this.Data.NewsDetails);",
                     " this.down('#imgNews').setSrc(this.Data.NewsImgUrl);",
                     "",
+                    "",
                     ""
                 ],
                 "name": "initialize"
