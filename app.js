@@ -85,8 +85,9 @@ Ext.application({
         'MenuModelDetails',
         'MenuModelForm',
         'ContactUs2View',
-        'MyPanel',
-        'NewsDetailsView'
+        'NewsDetailsView',
+        'MinistryNewsView',
+        'NewsListItem'
     ],
     controllers: [
         'HomeController',

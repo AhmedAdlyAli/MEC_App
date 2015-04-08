@@ -2,13 +2,14 @@
 $alert-color: rgba(35,31,32,1);
 $base-color: rgba(255,255,255,1);
 $base-gradient: flat;
+$list-rounded-radius: 0;
 
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
 
 
 /* _arch-other-start */
-    body {
+body {
     background-color: #671f48;
 }
 
@@ -33,7 +34,6 @@ $base-gradient: flat;
 @font-face {font-family: 'pf_din_text_universallight';src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
 @font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium_gdi.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
 
 
 .x-toolbar-dark {
@@ -508,7 +508,14 @@ $base-gradient: flat;
     }
 }
 
+.news-lstng{
+    direction:rtl;
 
+    .img{
+        width:100px;
+        height:100px;
+    }
+}
 
 .newsDetails {
     direction:rtl;
@@ -526,33 +533,3 @@ $base-gradient: flat;
         margin:20px 0 20px 0
     }
 }
-
-
-.newsListing{
-
-    direction:rtl;
-clear:both
-    
-    
-    
-    .title{
-        
-        float:right
-    }
-    .img{
-        width:100px;
-        height:100px;
-        float:right
-    }
-
-}
-
-
-
-
-
-
-
-
-
-

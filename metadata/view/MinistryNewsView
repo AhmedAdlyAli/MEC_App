@@ -1,99 +1,87 @@
 {
-    "type": "Ext.Panel",
+    "type": "Ext.dataview.List",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "news-lstng"
+        ],
+        "defaultType": "NewsListItem",
         "designer|userAlias": "MinistryNewsView",
         "designer|userClassName": "MinistryNewsView",
-        "layout": "vbox"
+        "fullscreen": true,
+        "height": "100%",
+        "infinite": true,
+        "itemHeight": 80,
+        "itemId": "NewsList",
+        "onItemDisclosure": true,
+        "padding": 10,
+        "pinHeaders": false,
+        "store": "MinistryNewsStore",
+        "useSimpleItems": false,
+        "variableHeights": true
     },
-    "name": "MyPanel",
+    "name": "MyList1",
     "configAlternates": {
-        "scrollable": "object"
+        "useComponents": "boolean"
     },
-    "designerId": "aadc0863-390a-4bd8-a9e1-47959a487335",
+    "designerId": "70eb2d5a-44d2-49dd-840b-68a4f90f6ee4",
     "cn": [
         {
-            "type": "Ext.Panel",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "layout": null,
-                "layout|flex": 1,
-                "scrollable": [
-                    "{ direction: 'vertical', directionLock: true }"
+                "docked": "top",
+                "html": "اخبار الوزارة"
+            },
+            "name": "MyLabel5",
+            "designerId": "1bc33006-b2c1-4957-b966-46e7045f0a11"
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{text}</div>"
                 ]
             },
-            "name": "MyPanel1",
-            "configAlternates": {
-                "scrollable": "object"
+            "name": "itemTpl",
+            "designerId": "9a8ae2fd-c7af-4712-a486-9a39aee8d81f"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
             },
-            "designerId": "200f88e9-b002-4723-8170-5f081751ec22",
-            "cn": [
-                {
-                    "type": "Ext.dataview.List",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "newsListing"
-                        ],
-                        "docked": "top",
-                        "height": "100%",
-                        "id": "lstNews",
-                        "infinite": true,
-                        "onItemDisclosure": false,
-                        "store": "MinistryNewsStore"
-                    },
-                    "name": "MyList",
-                    "designerId": "f985141e-f266-41c7-a13d-9e624cb91843",
-                    "cn": [
-                        {
-                            "type": "Ext.XTemplate",
-                            "reference": {
-                                "name": "itemTpl",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|displayName": "itemTpl",
-                                "implHandler": [
-                                    "<div>",
-                                    "     {NewsTitle}",
-                                    "</div>"
-                                ]
-                            },
-                            "name": "itemTpl",
-                            "designerId": "5e33634e-ce11-445d-82bd-ba1382ae11df"
-                        },
-                        {
-                            "type": "Ext.plugin.PullRefresh",
-                            "reference": {
-                                "name": "plugins",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "lastUpdatedDateFormat": "d M Y h:iA",
-                                "loadingText": "جاري التحميل...",
-                                "scrollerAutoRefresh": true,
-                                "ui": null
-                            },
-                            "name": "MyPullRefreshPlugin",
-                            "designerId": "22fa0672-42a0-40b2-b901-ff0691955751"
-                        }
-                    ]
-                }
-            ]
+            "codeClass": null,
+            "name": "MyPullRefreshPlugin1",
+            "designerId": "17c6cf7a-87a6-4275-9e76-9ba386424c40"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true
+            },
+            "name": "MyListPagingPlugin",
+            "designerId": "deb1b49d-2e14-49cb-aa7a-62cba6aaf165"
         }
     ]
 }

@@ -18,27 +18,19 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
     config: {
         control: {
-            "list#lstNews": {
-                itemtap: 'onLstNewsItemTap'
+            "list#NewsList": {
+                itemtap: 'onNewsListItemTap'
             }
         }
     },
 
-    onLstNewsItemTap: function(dataview, index, target, record, e, eOpts) {
-
-        //alert(record.data.NewsDate);
-
+    onNewsListItemTap: function(dataview, index, target, record, e, eOpts) {
         dataview.up('MainNavView').push({
             xtype: 'NewsDetailsView',
             title: Ext.Global.GetViewTitle('NewsDetails'),
             data: record.data
 
         });
-
-
-
-
-
     }
 
 });

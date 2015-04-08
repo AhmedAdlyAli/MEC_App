@@ -14,51 +14,47 @@
  */
 
 Ext.define('MEC_App.view.MinistryNewsView', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.dataview.List',
     alias: 'widget.MinistryNewsView',
 
     requires: [
-        'Ext.Panel',
-        'Ext.dataview.List',
+        'Ext.Label',
         'Ext.XTemplate',
-        'Ext.plugin.PullRefresh'
+        'Ext.plugin.PullRefresh',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
-        layout: 'vbox',
+        cls: 'news-lstng',
+        fullscreen: true,
+        height: '100%',
+        itemId: 'NewsList',
+        padding: 10,
+        defaultType: 'NewsListItem',
+        store: 'MinistryNewsStore',
+        infinite: true,
+        itemHeight: 80,
+        onItemDisclosure: true,
+        pinHeaders: false,
+        useSimpleItems: false,
+        variableHeights: true,
+        itemTpl: [
+            '<div>{text}</div>'
+        ],
         items: [
             {
-                xtype: 'panel',
-                flex: 1,
-                scrollable: {
-                    direction: 'vertical',
-                    directionLock: true
-                },
-                items: [
-                    {
-                        xtype: 'list',
-                        cls: 'newsListing',
-                        docked: 'top',
-                        height: '100%',
-                        id: 'lstNews',
-                        itemTpl: [
-                            '<div>',
-                            '     {NewsTitle}',
-                            '</div>'
-                        ],
-                        store: 'MinistryNewsStore',
-                        infinite: true,
-                        onItemDisclosure: false,
-                        plugins: [
-                            {
-                                lastUpdatedDateFormat: 'd M Y h:iA',
-                                loadingText: 'جاري التحميل...',
-                                scrollerAutoRefresh: true,
-                                type: 'pullrefresh'
-                            }
-                        ]
-                    }
-                ]
+                xtype: 'label',
+                docked: 'top',
+                html: 'اخبار الوزارة'
+            }
+        ],
+        plugins: [
+            {
+                type: 'pullrefresh'
+            },
+            {
+                autoPaging: true,
+                type: 'listpaging'
             }
         ]
     }

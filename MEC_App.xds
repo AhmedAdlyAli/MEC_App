@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
+            "value": "webBuild",
+            "display": "Build web app"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -39,7 +39,6 @@
     "framework": "touch24",
     "viewOrderMap": {
         "view": [
-            "aadc0863-390a-4bd8-a9e1-47959a487335",
             "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "7b23aef6-db2d-4685-9251-d9486597a989",
             "4120aa2a-0201-4867-b1b7-de774744c5df",
@@ -84,7 +83,8 @@
             "23e1548e-26b7-4c14-82c3-7df6940cedee",
             "020152b0-6c67-42a9-a552-1f580220e176",
             "af50c861-2e74-49ff-b8eb-247d83453b48",
-            "a1331846-d900-4d10-ba7f-6618c494ec94"
+            "70eb2d5a-44d2-49dd-840b-68a4f90f6ee4",
+            "c333e866-53ec-42a8-839a-5c68c751bab7"
         ],
         "store": [
             "d1421f7d-5956-46cb-bdef-8f48b519450a",

@@ -84,8 +84,9 @@
             "MenuModelDetails",
             "MenuModelForm",
             "ContactUs2View",
-            "MyPanel",
-            "NewsDetailsView"
+            "NewsDetailsView",
+            "MinistryNewsView",
+            "NewsListItem"
         ]
     },
     "name": "Application",

@@ -1,0 +1,121 @@
+{
+    "type": "Ext.dataview.component.ListItem",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "NewsListItem",
+        "designer|userClassName": "NewsListItem",
+        "id": null,
+        "itemId": null,
+        "layout": "hbox",
+        "padding": 20
+    },
+    "name": "MyListItem",
+    "designerId": "c333e866-53ec-42a8-839a-5c68c751bab7",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "updateRecord",
+                "implHandler": [
+                    "// Provide an implementation to update this container's child items",
+                    "",
+                    "var me = this;",
+                    "",
+                    "me.down('image').setSrc(record.get('NewsImgUrl'));",
+                    "me.down('#textCmp').setHtml(record.get('NewsTitle'));",
+                    "me.down('label').setHtml(record.get('NewsBrief'));",
+                    "",
+                    "me.callParent(arguments);"
+                ]
+            },
+            "name": "updateRecord",
+            "designerId": "72d604be-53b2-4dad-95aa-df7262a4e059"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "src": "NewsImgUrl",
+                "width": null
+            },
+            "name": "MyImg3",
+            "designerId": "957434fe-d5bb-4096-801d-5cd51c7e1379"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "vbox",
+                "layout|flex": 5
+            },
+            "name": "MyPanel7",
+            "designerId": "b270e392-005d-43f6-b1c0-81da3bdf79c6",
+            "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "NewsTitle",
+                        "itemId": "textCmp",
+                        "layout|flex": 2
+                    },
+                    "name": "MyComponent2",
+                    "designerId": "e605b750-7d7e-4aa5-b548-ae12e9bcafc0"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "NewsBrief",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel6",
+                    "designerId": "a6a88dd8-a266-401b-8700-2d72ae3a3441"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1,
+                "text": null
+            },
+            "name": "MyButton2",
+            "designerId": "947edac6-7676-41a7-b8d4-eed1b96a1270"
+        }
+    ]
+}

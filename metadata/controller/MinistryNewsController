@@ -19,7 +19,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "list#lstNews",
+                "designer|controlQuery": "list#NewsList",
                 "designer|params": [
                     "dataview",
                     "index",
@@ -29,27 +29,19 @@
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.dataview.List",
-                "fn": "onLstNewsItemTap",
+                "fn": "onNewsListItemTap",
                 "implHandler": [
-                    "",
-                    "//alert(record.data.NewsDate);",
-                    "",
                     "dataview.up('MainNavView').push({",
                     "    xtype: 'NewsDetailsView',",
                     "    title: Ext.Global.GetViewTitle('NewsDetails'),",
                     "    data: record.data",
                     "",
-                    "});",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
+                    "});"
                 ],
                 "name": "itemtap"
             },
-            "name": "onLstNewsItemTap",
-            "designerId": "d4a745f4-79a0-46d9-8901-acb7cdd14631"
+            "name": "onNewsListItemTap",
+            "designerId": "5809fc16-5d36-429d-8cae-f83a05ee6d20"
         }
     ]
 }

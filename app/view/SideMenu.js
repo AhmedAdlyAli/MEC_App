@@ -24,7 +24,7 @@ Ext.define('MEC_App.view.SideMenu', {
 
     config: {
         height: '100%',
-        width: '85%',
+        width: '75%',
         items: [
             {
                 xtype: 'panel',
