@@ -11,7 +11,7 @@
         "id": null,
         "itemId": null,
         "layout": "hbox",
-        "padding": 20
+        "padding": 10
     },
     "name": "MyListItem",
     "designerId": "c333e866-53ec-42a8-839a-5c68c751bab7",
@@ -51,6 +51,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "lstng-img"
+                ],
                 "layout|flex": 2,
                 "src": "NewsImgUrl",
                 "width": null
@@ -67,7 +70,7 @@
             "codeClass": null,
             "userConfig": {
                 "layout": "vbox",
-                "layout|flex": 5
+                "layout|flex": 7
             },
             "name": "MyPanel7",
             "designerId": "b270e392-005d-43f6-b1c0-81da3bdf79c6",
@@ -80,6 +83,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "lstng-title"
+                        ],
                         "html": "NewsTitle",
                         "itemId": "textCmp",
                         "layout|flex": 2
@@ -95,6 +101,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "lstng-brief"
+                        ],
                         "html": "NewsBrief",
                         "layout|flex": 1
                     },
@@ -102,20 +111,6 @@
                     "designerId": "a6a88dd8-a266-401b-8700-2d72ae3a3441"
                 }
             ]
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "layout|flex": 1,
-                "text": null
-            },
-            "name": "MyButton2",
-            "designerId": "947edac6-7676-41a7-b8d4-eed1b96a1270"
         }
     ]
 }

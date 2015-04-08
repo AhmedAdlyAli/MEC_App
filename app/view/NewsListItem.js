@@ -20,40 +20,38 @@ Ext.define('MEC_App.view.NewsListItem', {
     requires: [
         'Ext.Img',
         'Ext.Panel',
-        'Ext.Label',
-        'Ext.Button'
+        'Ext.Label'
     ],
 
     config: {
-        padding: 20,
+        padding: 10,
         layout: 'hbox',
         items: [
             {
                 xtype: 'image',
                 flex: 2,
+                cls: 'lstng-img',
                 src: 'NewsImgUrl'
             },
             {
                 xtype: 'panel',
-                flex: 5,
+                flex: 7,
                 layout: 'vbox',
                 items: [
                     {
                         xtype: 'component',
                         flex: 2,
+                        cls: 'lstng-title',
                         html: 'NewsTitle',
                         itemId: 'textCmp'
                     },
                     {
                         xtype: 'label',
                         flex: 1,
+                        cls: 'lstng-brief',
                         html: 'NewsBrief'
                     }
                 ]
-            },
-            {
-                xtype: 'button',
-                flex: 1
             }
         ]
     },

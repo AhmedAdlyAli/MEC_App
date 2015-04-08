@@ -19,9 +19,8 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
     requires: [
         'Ext.Panel',
-        'Ext.XTemplate',
-        'Ext.Label',
-        'Ext.Img'
+        'Ext.Img',
+        'Ext.Label'
     ],
 
     config: {
@@ -31,23 +30,9 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         items: [
             {
                 xtype: 'panel',
-                cls: 'hatem',
-                tpl: [
-                    '{NewsTitle}'
-                ]
-            },
-            {
-                xtype: 'panel',
                 flex: 1,
                 cls: 'newsDetails',
                 items: [
-                    {
-                        xtype: 'label',
-                        cls: 'title',
-                        height: 40,
-                        html: '',
-                        id: 'lblTitle'
-                    },
                     {
                         xtype: 'image',
                         cls: 'img',
@@ -55,10 +40,21 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                         id: 'imgNews'
                     },
                     {
-                        xtype: 'label',
-                        cls: 'date',
-                        height: 40,
-                        id: 'lblDate'
+                        xtype: 'panel',
+                        cls: 'title-date-container',
+                        items: [
+                            {
+                                xtype: 'label',
+                                cls: 'title',
+                                html: '',
+                                id: 'lblTitle'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'date',
+                                id: 'lblDate'
+                            }
+                        ]
                     },
                     {
                         xtype: 'label',

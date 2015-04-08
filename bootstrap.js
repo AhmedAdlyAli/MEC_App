@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -737,7 +726,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
   "MEC_App.view.SideMenu": [],
-  "MEC_App.view.SideMenuView": [],
   "MEC_App.view.SupplyServiceView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
   "MEC_App.view.TrademarkReportView": [],
@@ -1323,17 +1311,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1629,9 +1606,6 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SideMenu": [
     "widget.SideMenu"
-  ],
-  "MEC_App.view.SideMenuView": [
-    "widget.SideMenuView"
   ],
   "MEC_App.view.SupplyServiceView": [
     "widget.SupplyServiceView"

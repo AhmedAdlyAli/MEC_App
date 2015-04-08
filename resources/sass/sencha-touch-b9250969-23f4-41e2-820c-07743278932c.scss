@@ -509,25 +509,132 @@ body {
 .news-lstng{
     direction:rtl;
 
-    .img{
-        width:100px;
-        height:100px;
+    .x-layout-box-item {
+        padding: 0 !important;
+    }
+
+    .lstng-img {
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        background-position: center top;
+        margin: 0 0 0 10px;
+    }
+
+    .lstng-title {
+        font-size: 14px;
+    }
+
+    .lstng-brief {
+        .x-innerhtml {
+            font-size: 13px;
+            color: #898989;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .x-list-disclosure {
+        background: #fff !important;
+        margin: 23px 4px 0 10px;
+
+        &:before {
+            color: #898989;
+        }
+
+        &:after {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            left:4px;
+            content:']';
+            font-family:'Pictos';
+            color:#fff;
+            font-size:24px;
+            text-align:center;
+            line-height:35px;
+            text-shadow:0 0 0
+        }
+    }
+
+    .x-item-pressed,
+    .x-item-selected {
+        .x-dock-horizontal {
+            background: #711b44 !important;
+        }
+
+        .lstng-title,
+        .lstng-brief {
+            color: #fff;
+
+            .x-innerhtml {
+                color: #fff;
+            }
+        }
+
+        .x-list-disclosure {
+            background: #711b44 !important;
+
+            &:before {
+                color: #fff;
+            }
+
+            &:after {
+                color: #711b44;
+            }
+        }
     }
 }
 
 .newsDetails {
     direction:rtl;
-    margin: 10px;
+    background: #fff;
 
-    .title{
-        font-weight:bold
-
-    }
-    .img{
-    margin:10px
+    .x-img {
+        background-size: cover;
+        background-position: center top;
     }
 
-    .date{
-        margin:20px 0 20px 0
+    .title-date-container {
+        background: #f5f5f5;
+        padding: 15px 35px;
+
+        .title{
+            font-weight:bold
+        }
+
+        .date{
+            color: #7a7a7a;
+            position: relative;
+
+            &:before {
+                position:absolute;
+                top:0;
+                right:-25px;
+                bottom:0;
+                content:'t';
+                font-family:'Pictos';
+                color:#7a7a7a;
+                font-size:21px;
+                text-align:center;
+                text-shadow:0 0 0
+            }
+        }
     }
+    
+    .details {
+        padding: 20px;
+    }
+
 }
+
+.inners-title {
+    text-align: center;
+    background: #f5f5f5;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 50px;
+}
+

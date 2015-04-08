@@ -32,39 +32,6 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "hatem"
-                ]
-            },
-            "name": "MyPanel2",
-            "designerId": "ccecec3b-8617-48df-aada-e52db4529aa8",
-            "cn": [
-                {
-                    "type": "Ext.XTemplate",
-                    "reference": {
-                        "name": "tpl",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "tpl",
-                        "implHandler": [
-                            "{NewsTitle}"
-                        ]
-                    },
-                    "name": "tpl",
-                    "designerId": "01cd87d0-8de9-417e-a64b-80fa892364f0"
-                }
-            ]
-        },
-        {
-            "type": "Ext.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
                     "newsDetails"
                 ],
                 "layout|flex": 1
@@ -72,24 +39,6 @@
             "name": "MyPanel3",
             "designerId": "e1713cbf-df44-44eb-910b-8ff034c9fcd1",
             "cn": [
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "title"
-                        ],
-                        "height": 40,
-                        "html": "",
-                        "id": "lblTitle"
-                    },
-                    "name": "MyLabel",
-                    "designerId": "67a0cb63-b32a-403c-a1de-3869a2b30248"
-                },
                 {
                     "type": "Ext.Img",
                     "reference": {
@@ -108,7 +57,7 @@
                     "designerId": "02fe8cdf-2680-474f-a82c-54e37ce20156"
                 },
                 {
-                    "type": "Ext.Label",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -116,13 +65,48 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "date"
-                        ],
-                        "height": 40,
-                        "id": "lblDate"
+                            "title-date-container"
+                        ]
                     },
-                    "name": "MyLabel1",
-                    "designerId": "7341e5e3-a50d-4453-93ca-cdc02aa82730"
+                    "name": "MyPanel",
+                    "designerId": "9e033d4f-6bb0-40b9-9e3b-c4f02d92a412",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "title"
+                                ],
+                                "height": null,
+                                "html": "",
+                                "id": "lblTitle"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "67a0cb63-b32a-403c-a1de-3869a2b30248"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "date"
+                                ],
+                                "height": null,
+                                "id": "lblDate"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "7341e5e3-a50d-4453-93ca-cdc02aa82730"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Label",

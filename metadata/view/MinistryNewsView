@@ -18,7 +18,7 @@
         "itemHeight": 80,
         "itemId": "NewsList",
         "onItemDisclosure": true,
-        "padding": 10,
+        "padding": null,
         "pinHeaders": false,
         "store": "MinistryNewsStore",
         "useSimpleItems": false,
@@ -38,6 +38,9 @@
             },
             "codeClass": null,
             "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
                 "docked": "top",
                 "html": "اخبار الوزارة"
             },

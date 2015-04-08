@@ -76,7 +76,6 @@ Ext.application({
         'MonthlyFruitView',
         'TrademarkReportView',
         'MainNavView',
-        'SideMenuView',
         'SideMenu',
         'PrintOffices',
         'PrintOfficeDetails',
