@@ -41,9 +41,13 @@ Ext.define('MEC_App.controller.InquiriesController', {
 
     onInquiriesBtn1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    xtype: 'TradeNameAvailabilityView',
+                    title: 'البحث عن اسم تجاري'
                 });
+
+
+
+
     },
 
     onInquiriesBtn2Tap: function(button, e, eOpts) {

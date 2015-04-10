@@ -1,0 +1,26 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "TradeNameEstablishmentDetails",
+        "designer|userClassName": "TradeNameEstablishmentDetails"
+    },
+    "name": "MyPanel",
+    "designerId": "04d591ce-3733-43e5-955b-4a6f53175d21",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel",
+            "designerId": "332dd965-47c8-4245-9016-605437311538"
+        }
+    ]
+}

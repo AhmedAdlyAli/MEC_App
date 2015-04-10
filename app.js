@@ -28,12 +28,16 @@ Ext.application({
         'Ext.device.Notification',
         'Ext.Img'
     ],
+    uses: [
+        'Ext.Ajax'
+    ],
     models: [
         'PrintOffice',
         'MenuModel',
         'ComplaintsModel',
         'MinistryNewsModel',
-        'RSSModel'
+        'RSSModel',
+        'TradeNameResultModel'
     ],
     stores: [
         'MenuArrayStore',
@@ -86,7 +90,8 @@ Ext.application({
         'ContactUs2View',
         'NewsDetailsView',
         'MinistryNewsView',
-        'NewsListItem'
+        'NewsListItem',
+        'TradeNameEstablishmentDetails'
     ],
     controllers: [
         'HomeController',
@@ -99,7 +104,8 @@ Ext.application({
         'ReportsController',
         'ContactController',
         'ComplaintsController',
-        'MinistryNewsController'
+        'MinistryNewsController',
+        'TradeNameAvailabilityController'
     ],
     name: 'MEC_App',
 

@@ -17,14 +17,16 @@
             "ReportsController",
             "ContactController",
             "ComplaintsController",
-            "MinistryNewsController"
+            "MinistryNewsController",
+            "TradeNameAvailabilityController"
         ],
         "models": [
             "PrintOffice",
             "MenuModel",
             "ComplaintsModel",
             "MinistryNewsModel",
-            "RSSModel"
+            "RSSModel",
+            "TradeNameResultModel"
         ],
         "name": "MEC_App",
         "requires": [
@@ -39,6 +41,9 @@
             "PrintOffices",
             "MinistryNewsStore",
             "MyXmlStore"
+        ],
+        "uses": [
+            "Ext.Ajax"
         ],
         "views": [
             "HomeView",
@@ -85,7 +90,8 @@
             "ContactUs2View",
             "NewsDetailsView",
             "MinistryNewsView",
-            "NewsListItem"
+            "NewsListItem",
+            "TradeNameEstablishmentDetails"
         ]
     },
     "name": "Application",

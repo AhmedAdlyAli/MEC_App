@@ -288,6 +288,28 @@ body {
 }
 
 
+
+
+.CompanyList {
+    direction: rtl;
+    .x-innerhtml {
+        background: #fff;
+    }
+
+    .CompanyListItem {
+        background: url(../images/HListIcon.png) no-repeat right;
+        padding: 0 35px 0 0;
+        line-height: 35px;
+    }
+
+}
+
+
+
+
+
+
+
 .x-menu {
     background-color: #671f48;
 }
@@ -500,6 +522,7 @@ body {
     .btn-send {
         background: #691e49;
         margin: 10px;
+
 
         .x-button-label {
             text-align: center;

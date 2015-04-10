@@ -286,6 +286,28 @@ body {
 }
 
 
+
+
+.CompanyList {
+    direction: rtl;
+    .x-innerhtml {
+        background: #fff;
+    }
+
+    .CompanyListItem {
+        background: url(../images/HListIcon.png) no-repeat right;
+        padding: 0 35px 0 0;
+        line-height: 35px;
+    }
+
+}
+
+
+
+
+
+
+
 .x-menu {
     background-color: #671f48;
 }
@@ -481,9 +503,9 @@ body {
 
     .x-label{
 
-    margin: 5px 10px 15px 0;
-    font-size: 1em;
-    font-weight: bold;
+        margin: 5px 10px 15px 0;
+        font-size: 1em;
+        font-weight: bold;
 
 
     }
@@ -499,7 +521,8 @@ body {
         background: #691e49;
         margin: 10px;
 
-         .x-button-label {
+
+        .x-button-label {
             text-align: center;
             color: #fff;
         }
@@ -623,7 +646,7 @@ body {
             }
         }
     }
-    
+
     .details {
         padding: 20px;
     }

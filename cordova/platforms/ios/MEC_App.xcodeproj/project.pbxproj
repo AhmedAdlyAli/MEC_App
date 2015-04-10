@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		068EDDC5FA4C4E7883768150 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C51051A1BF04A319C612C5B /* CDVDevice.m */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
@@ -525,8 +524,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -549,7 +548,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
+				PROVISIONING_PROFILE = "ce9e0aeb-13d2-4486-a84f-1dd1587e45ed";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -562,8 +561,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_ENTITLEMENTS = MEC_App/MEC_App.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MEC_App/MEC_App-Prefix.pch";
@@ -584,7 +583,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
+				PROVISIONING_PROFILE = "ce9e0aeb-13d2-4486-a84f-1dd1587e45ed";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

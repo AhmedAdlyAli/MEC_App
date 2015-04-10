@@ -1,14 +1,124 @@
 {
-    "type": "Ext.Panel",
+    "type": "Ext.form.Panel",
     "reference": {
         "name": "items",
         "type": "array"
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "TradeNameAvailabilityView",
-        "designer|userClassName": "TradeNameAvailabilityView"
+        "designer|userClassName": "TradeNameAvailabilityView",
+        "itemId": "",
+        "layout": "fit",
+        "scrollable": false
     },
-    "name": "MyPanel",
-    "designerId": "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4"
+    "designerId": "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "2581a60c-c99c-4842-b857-28678b2e64eb",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtGroupName",
+                        "label": "مجموعة النشاط",
+                        "name": "txtGroupName",
+                        "placeHolder": "مجموعة النشاط"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "4de38e4e-f80a-4c36-98d1-eb132771fdba"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtActivityName",
+                        "label": "الاسم التجاري",
+                        "name": "txtActivityName",
+                        "placeHolder": "الاسم التجاري"
+                    },
+                    "name": "MyTextField8",
+                    "designerId": "585f7ca2-bdeb-4fd2-a533-df90fac42fba"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "designer|displayName": null,
+                        "itemId": "btnSubmit",
+                        "text": "بحث"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "5a5ec6cd-3f54-45ac-95b0-459fecbf81b5"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": "lstTradeNameResults",
+                "itemId": null,
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "582a1ab6-a161-44e1-b481-130a91527694",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='CompanyListItem'>{businessActivityArabicName}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "5d34c00f-78bd-45ef-83c3-ee82b0e89510"
+                }
+            ]
+        }
+    ]
 }

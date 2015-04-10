@@ -14,10 +14,59 @@
  */
 
 Ext.define('MEC_App.view.TradeNameAvailabilityView', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.form.Panel',
     alias: 'widget.TradeNameAvailabilityView',
 
+    requires: [
+        'Ext.form.FieldSet',
+        'Ext.field.Text',
+        'Ext.Button',
+        'Ext.dataview.List',
+        'Ext.XTemplate'
+    ],
+
     config: {
+        cls: 'complaint-view',
+        itemId: '',
+        layout: 'fit',
+        scrollable: false,
+        items: [
+            {
+                xtype: 'fieldset',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        id: 'txtGroupName',
+                        label: 'مجموعة النشاط',
+                        name: 'txtGroupName',
+                        placeHolder: 'مجموعة النشاط'
+                    },
+                    {
+                        xtype: 'textfield',
+                        id: 'txtActivityName',
+                        label: 'الاسم التجاري',
+                        name: 'txtActivityName',
+                        placeHolder: 'الاسم التجاري'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'btn-send',
+                        itemId: 'btnSubmit',
+                        text: 'بحث'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                cls: 'CompanyList',
+                height: '100%',
+                id: 'lstTradeNameResults',
+                itemTpl: [
+                    '<div class=\'CompanyListItem\'>{businessActivityArabicName}</div>'
+                ]
+            }
+        ]
     }
 
 });

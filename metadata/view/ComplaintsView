@@ -21,7 +21,7 @@
             "Ext.device.Notification",
             "MEC_App.controller.DeviceController"
         ],
-        "url": "http://www.google.com"
+        "url": null
     },
     "name": "MyFormPanel",
     "configAlternates": {

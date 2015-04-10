@@ -33,7 +33,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
         cls: 'complaint-view',
         layout: 'vbox',
         enableSubmissionForm: false,
-        url: 'http://www.google.com',
         items: [
             {
                 xtype: 'fieldset',

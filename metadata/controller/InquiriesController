@@ -29,9 +29,13 @@
                 "fn": "onInquiriesBtn1Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
+                    "            xtype: 'TradeNameAvailabilityView',",
+                    "            title: 'البحث عن اسم تجاري'",
+                    "        });",
+                    "",
+                    "",
+                    "",
+                    ""
                 ],
                 "name": "tap"
             },

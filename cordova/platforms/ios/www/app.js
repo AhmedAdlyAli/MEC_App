@@ -50174,7 +50174,7 @@ Ext.define('Ext.direct.Manager', {
  *                     if (weather) {
  *                         // Style the viewport html, and set the html of the max temperature
  *                         Ext.Viewport.setStyleHtmlContent(true);
- *                         Ext.Viewport.setHtml('The temperature in Palo Alto is <b>' + weather[0].tempMaxF + '¡ F</b>');
+ *                         Ext.Viewport.setHtml('The temperature in Palo Alto is <b>' + weather[0].tempMaxF + '° F</b>');
  *                     }
  *                 }
  *             });
@@ -62839,6 +62839,711 @@ Ext.define('Ext.navigation.View', {
 });
 
 /**
+ * Adds a Load More button at the bottom of the list. When the user presses this button,
+ * the next page of data will be loaded into the store and appended to the List.
+ *
+ * By specifying `{@link #autoPaging}: true`, an 'infinite scroll' effect can be achieved,
+ * i.e., the next page of content will load automatically when the user scrolls to the
+ * bottom of the list.
+ *
+ * ## Example
+ *
+ *     Ext.create('Ext.dataview.List', {
+ *
+ *         store: Ext.create('TweetStore'),
+ *
+ *         plugins: [
+ *             {
+ *                 xclass: 'Ext.plugin.ListPaging',
+ *                 autoPaging: true
+ *             }
+ *         ],
+ *
+ *         itemTpl: [
+ *             '<img src="{profile_image_url}" />',
+ *             '<div class="tweet">{text}</div>'
+ *         ]
+ *     });
+ */
+Ext.define('Ext.plugin.ListPaging', {
+    extend: Ext.Component,
+    alias: 'plugin.listpaging',
+    config: {
+        /**
+         * @cfg {Boolean} autoPaging
+         * True to automatically load the next page when you scroll to the bottom of the list.
+         */
+        autoPaging: false,
+        /**
+         * @cfg {String} loadMoreText The text used as the label of the Load More button.
+         */
+        loadMoreText: 'Load More...',
+        /**
+         * @cfg {String} noMoreRecordsText The text used as the label of the Load More button when the Store's
+         * {@link Ext.data.Store#totalCount totalCount} indicates that all of the records available on the server are
+         * already loaded
+         */
+        noMoreRecordsText: 'No More Records',
+        /**
+         * @private
+         * @cfg {String} loadTpl The template used to render the load more text
+         */
+        loadTpl: [
+            '<div class="{cssPrefix}loading-spinner" style="font-size: 180%; margin: 10px auto;">',
+            '<span class="{cssPrefix}loading-top"></span>',
+            '<span class="{cssPrefix}loading-right"></span>',
+            '<span class="{cssPrefix}loading-bottom"></span>',
+            '<span class="{cssPrefix}loading-left"></span>',
+            '</div>',
+            '<div class="{cssPrefix}list-paging-msg">{message}</div>'
+        ].join(''),
+        /**
+         * @cfg {Object} loadMoreCmp
+         * @private
+         */
+        loadMoreCmp: {
+            xtype: 'component',
+            baseCls: Ext.baseCSSPrefix + 'list-paging',
+            scrollDock: 'bottom',
+            hidden: true
+        },
+        /**
+         * @private
+         * @cfg {Boolean} loadMoreCmpAdded Indicates whether or not the load more component has been added to the List
+         * yet.
+         */
+        loadMoreCmpAdded: false,
+        /**
+         * @private
+         * @cfg {String} loadingCls The CSS class that is added to the {@link #loadMoreCmp} while the Store is loading
+         */
+        loadingCls: Ext.baseCSSPrefix + 'loading',
+        /**
+         * @private
+         * @cfg {Ext.List} list Local reference to the List this plugin is bound to
+         */
+        list: null,
+        /**
+         * @private
+         * @cfg {Ext.scroll.Scroller} scroller Local reference to the List's Scroller
+         */
+        scroller: null,
+        /**
+         * @private
+         * @cfg {Boolean} loading True if the plugin has initiated a Store load that has not yet completed
+         */
+        loading: false
+    },
+    /**
+     * @private
+     * Sets up all of the references the plugin needs
+     */
+    init: function(list) {
+        var scroller = list.getScrollable().getScroller(),
+            store = list.getStore();
+        this.setList(list);
+        this.setScroller(scroller);
+        this.bindStore(list.getStore());
+        this.addLoadMoreCmp();
+        // The List's Store could change at any time so make sure we are informed when that happens
+        list.updateStore = Ext.Function.createInterceptor(list.updateStore, this.bindStore, this);
+        if (this.getAutoPaging()) {
+            scroller.on({
+                scrollend: this.onScrollEnd,
+                scope: this
+            });
+        }
+    },
+    /**
+     * @private
+     */
+    bindStore: function(newStore, oldStore) {
+        if (oldStore) {
+            oldStore.un({
+                beforeload: this.onStoreBeforeLoad,
+                load: this.onStoreLoad,
+                filter: this.onFilter,
+                scope: this
+            });
+        }
+        if (newStore) {
+            newStore.on({
+                beforeload: this.onStoreBeforeLoad,
+                load: this.onStoreLoad,
+                filter: this.onFilter,
+                scope: this
+            });
+        }
+    },
+    /**
+     * @private
+     * Removes the List/DataView's loading mask because we show our own in the plugin. The logic here disables the
+     * loading mask immediately if the store is autoloading. If it's not autoloading, allow the mask to show the first
+     * time the Store loads, then disable it and use the plugin's loading spinner.
+     * @param {Ext.data.Store} store The store that is bound to the DataView
+     */
+    disableDataViewMask: function() {
+        var list = this.getList();
+        this._listMask = list.getLoadingText();
+        list.setLoadingText(null);
+    },
+    enableDataViewMask: function() {
+        if (this._listMask) {
+            var list = this.getList();
+            list.setLoadingText(this._listMask);
+            delete this._listMask;
+        }
+    },
+    /**
+     * @private
+     */
+    applyLoadTpl: function(config) {
+        return (Ext.isObject(config) && config.isTemplate) ? config : new Ext.XTemplate(config);
+    },
+    /**
+     * @private
+     */
+    applyLoadMoreCmp: function(config) {
+        config = Ext.merge(config, {
+            html: this.getLoadTpl().apply({
+                cssPrefix: Ext.baseCSSPrefix,
+                message: this.getLoadMoreText()
+            }),
+            scrollDock: 'bottom',
+            listeners: {
+                tap: {
+                    fn: this.loadNextPage,
+                    scope: this,
+                    element: 'element'
+                }
+            }
+        });
+        return Ext.factory(config, Ext.Component, this.getLoadMoreCmp());
+    },
+    /**
+     * @private
+     * If we're using autoPaging and detect that the user has scrolled to the bottom, kick off loading of the next page
+     */
+    onScrollEnd: function(scroller, x, y) {
+        var list = this.getList();
+        if (!this.getLoading() && y >= scroller.maxPosition.y) {
+            this.currentScrollToTopOnRefresh = list.getScrollToTopOnRefresh();
+            list.setScrollToTopOnRefresh(false);
+            this.loadNextPage();
+        }
+    },
+    /**
+     * @private
+     * Makes sure we add/remove the loading CSS class while the Store is loading
+     */
+    updateLoading: function(isLoading) {
+        var loadMoreCmp = this.getLoadMoreCmp(),
+            loadMoreCls = this.getLoadingCls();
+        if (isLoading) {
+            loadMoreCmp.addCls(loadMoreCls);
+        } else {
+            loadMoreCmp.removeCls(loadMoreCls);
+        }
+    },
+    /**
+     * @private
+     * If the Store is just about to load but it's currently empty, we hide the load more button because this is
+     * usually an outcome of setting a new Store on the List so we don't want the load more button to flash while
+     * the new Store loads
+     */
+    onStoreBeforeLoad: function(store) {
+        if (store.getCount() === 0) {
+            this.getLoadMoreCmp().hide();
+        }
+    },
+    /**
+     * @private
+     */
+    onStoreLoad: function(store) {
+        var loadCmp = this.getLoadMoreCmp(),
+            template = this.getLoadTpl(),
+            message = this.storeFullyLoaded() ? this.getNoMoreRecordsText() : this.getLoadMoreText();
+        if (store.getCount()) {
+            loadCmp.show();
+        }
+        this.setLoading(false);
+        //if we've reached the end of the data set, switch to the noMoreRecordsText
+        loadCmp.setHtml(template.apply({
+            cssPrefix: Ext.baseCSSPrefix,
+            message: message
+        }));
+        if (this.currentScrollToTopOnRefresh !== undefined) {
+            this.getList().setScrollToTopOnRefresh(this.currentScrollToTopOnRefresh);
+            delete this.currentScrollToTopOnRefresh;
+        }
+        this.enableDataViewMask();
+    },
+    onFilter: function(store) {
+        if (store.getCount() === 0) {
+            this.getLoadMoreCmp().hide();
+        } else {
+            this.getLoadMoreCmp().show();
+        }
+    },
+    /**
+     * @private
+     * Because the attached List's inner list element is rendered after our init function is called,
+     * we need to dynamically add the loadMoreCmp later. This does this once and caches the result.
+     */
+    addLoadMoreCmp: function() {
+        var list = this.getList(),
+            cmp = this.getLoadMoreCmp();
+        if (!this.getLoadMoreCmpAdded()) {
+            list.add(cmp);
+            /**
+             * @event loadmorecmpadded  Fired when the Load More component is added to the list. Fires on the List.
+             * @param {Ext.plugin.ListPaging} this The list paging plugin
+             * @param {Ext.List} list The list
+             */
+            list.fireEvent('loadmorecmpadded', this, list);
+            this.setLoadMoreCmpAdded(true);
+        }
+        return cmp;
+    },
+    /**
+     * @private
+     * Returns true if the Store is detected as being fully loaded, or the server did not return a total count, which
+     * means we're in 'infinite' mode
+     * @return {Boolean}
+     */
+    storeFullyLoaded: function() {
+        var store = this.getList().getStore(),
+            total = store.getTotalCount();
+        return total !== null ? store.getTotalCount() <= (store.currentPage * store.getPageSize()) : false;
+    },
+    /**
+     * @private
+     */
+    loadNextPage: function() {
+        var me = this;
+        if (!me.storeFullyLoaded()) {
+            me.disableDataViewMask();
+            me.setLoading(true);
+            me.getList().getStore().nextPage({
+                addRecords: true
+            });
+        }
+    }
+});
+
+/**
+ * This plugin adds pull to refresh functionality to the List.
+ *
+ * ## Example
+ *
+ *     @example
+ *     var store = Ext.create('Ext.data.Store', {
+ *         fields: ['name', 'img', 'text'],
+ *         data: [
+ *             {
+ *                 name: 'rdougan',
+ *                 img: 'http://a0.twimg.com/profile_images/1261180556/171265_10150129602722922_727937921_7778997_8387690_o_reasonably_small.jpg',
+ *                 text: 'JavaScript development'
+ *             }
+ *         ]
+ *     });
+ *
+ *     Ext.create('Ext.dataview.List', {
+ *         fullscreen: true,
+ *
+ *         store: store,
+ *
+ *         plugins: [
+ *             {
+ *                 xclass: 'Ext.plugin.PullRefresh',
+ *                 pullText: 'Pull down for more new Tweets!'
+ *             }
+ *         ],
+ *
+ *         itemTpl: [
+ *             '<img src="{img}" alt="{name} photo" />',
+ *             '<div class="tweet"><b>{name}:</b> {text}</div>'
+ *         ]
+ *     });
+ */
+Ext.define('Ext.plugin.PullRefresh', {
+    extend: Ext.Component,
+    alias: 'plugin.pullrefresh',
+    config: {
+        /**
+         * @cfg {Ext.dataview.List} list
+         * The list to which this PullRefresh plugin is connected.
+         * This will usually by set automatically when configuring the list with this plugin.
+         * @accessor
+         */
+        list: null,
+        /**
+         * @cfg {String} pullText The text that will be shown while you are pulling down.
+         * @accessor
+         */
+        pullText: 'Pull down to refresh...',
+        /**
+         * @cfg {String} releaseText The text that will be shown after you have pulled down enough to show the release message.
+         * @accessor
+         */
+        releaseText: 'Release to refresh...',
+        /**
+         * @cfg {String} loadingText The text that will be shown while the list is refreshing.
+         * @accessor
+         */
+        loadingText: 'Loading...',
+        /**
+         * @cfg {String} loadedText The text that will be when data has been loaded.
+         * @accessor
+         */
+        loadedText: 'Loaded.',
+        /**
+         * @cfg {String} lastUpdatedText The text to be shown in front of the last updated time.
+         * @accessor
+         */
+        lastUpdatedText: 'Last Updated:&nbsp;',
+        /**
+         * @cfg {Boolean} scrollerAutoRefresh Determines whether the attached scroller should automatically track size changes of its container.
+         * Enabling this will have performance impacts but will be necessary if your list size changes dynamically. For example if your list contains images
+         * that will be loading and have unspecified heights.
+         */
+        scrollerAutoRefresh: false,
+        /**
+         * @cfg {Boolean} autoSnapBack Determines whether the pulldown should automatically snap back after data has been loaded.
+         * If false call {@link #snapBack}() to manually snap the pulldown back.
+         */
+        autoSnapBack: true,
+        /**
+         * @cfg {Number} snappingAnimationDuration The duration for snapping back animation after the data has been refreshed
+         * @accessor
+         */
+        snappingAnimationDuration: 300,
+        /**
+         * @cfg {String} lastUpdatedDateFormat The format to be used on the last updated date.
+         */
+        lastUpdatedDateFormat: 'm/d/Y h:iA',
+        /**
+         * @cfg {Number} overpullSnapBackDuration The duration for snapping back when pulldown has been lowered further then its height.
+         */
+        overpullSnapBackDuration: 300,
+        /**
+         * @cfg {Ext.XTemplate/String/Array} pullTpl The template being used for the pull to refresh markup.
+         * Will be passed a config object with properties state, message and updated
+         *
+         * @accessor
+         */
+        pullTpl: [
+            '<div class="x-list-pullrefresh-arrow"></div>',
+            '<div class="x-loading-spinner">',
+            '<span class="x-loading-top"></span>',
+            '<span class="x-loading-right"></span>',
+            '<span class="x-loading-bottom"></span>',
+            '<span class="x-loading-left"></span>',
+            '</div>',
+            '<div class="x-list-pullrefresh-wrap">',
+            '<h3 class="x-list-pullrefresh-message">{message}</h3>',
+            '<div class="x-list-pullrefresh-updated">{updated}</div>',
+            '</div>'
+        ].join(''),
+        translatable: true
+    },
+    // @private
+    $state: "pull",
+    // @private
+    getState: function() {
+        return this.$state;
+    },
+    // @private
+    setState: function(value) {
+        this.$state = value;
+        this.updateView();
+    },
+    // @private
+    $isSnappingBack: false,
+    // @private
+    getIsSnappingBack: function() {
+        return this.$isSnappingBack;
+    },
+    // @private
+    setIsSnappingBack: function(value) {
+        this.$isSnappingBack = value;
+    },
+    // @private
+    init: function(list) {
+        var me = this;
+        me.setList(list);
+        me.initScrollable();
+    },
+    getElementConfig: function() {
+        return {
+            reference: 'element',
+            classList: [
+                'x-unsized'
+            ],
+            children: [
+                {
+                    reference: 'innerElement',
+                    className: Ext.baseCSSPrefix + 'list-pullrefresh'
+                }
+            ]
+        };
+    },
+    // @private
+    initScrollable: function() {
+        var me = this,
+            list = me.getList(),
+            scrollable = list.getScrollable(),
+            scroller;
+        if (!scrollable) {
+            return;
+        }
+        scroller = scrollable.getScroller();
+        scroller.setAutoRefresh(this.getScrollerAutoRefresh());
+        me.lastUpdated = new Date();
+        list.insert(0, me);
+        scroller.on({
+            scroll: me.onScrollChange,
+            scope: me
+        });
+        this.updateView();
+    },
+    // @private
+    applyPullTpl: function(config) {
+        if (config instanceof Ext.XTemplate) {
+            return config;
+        } else {
+            return new Ext.XTemplate(config);
+        }
+    },
+    // @private
+    updateList: function(newList, oldList) {
+        var me = this;
+        if (newList && newList != oldList) {
+            newList.on({
+                order: 'after',
+                scrollablechange: me.initScrollable,
+                scope: me
+            });
+        } else if (oldList) {
+            oldList.un({
+                order: 'after',
+                scrollablechange: me.initScrollable,
+                scope: me
+            });
+        }
+    },
+    // @private
+    getPullHeight: function() {
+        return this.innerElement.getHeight();
+    },
+    /**
+     * @private
+     * Attempts to load the newest posts via the attached List's Store's Proxy
+     */
+    fetchLatest: function() {
+        var store = this.getList().getStore(),
+            proxy = store.getProxy(),
+            operation;
+        operation = Ext.create('Ext.data.Operation', {
+            page: 1,
+            start: 0,
+            model: store.getModel(),
+            limit: store.getPageSize(),
+            action: 'read',
+            sorters: store.getSorters(),
+            filters: store.getRemoteFilter() ? store.getFilters() : []
+        });
+        proxy.read(operation, this.onLatestFetched, this);
+    },
+    /**
+     * @private
+     * Called after fetchLatest has finished grabbing data. Matches any returned records against what is already in the
+     * Store. If there is an overlap, updates the existing records with the new data and inserts the new items at the
+     * front of the Store. If there is no overlap, insert the new records anyway and record that there's a break in the
+     * timeline between the new and the old records.
+     */
+    onLatestFetched: function(operation) {
+        var store = this.getList().getStore(),
+            oldRecords = store.getData(),
+            newRecords = operation.getRecords(),
+            length = newRecords.length,
+            toInsert = [],
+            newRecord, oldRecord, i;
+        for (i = 0; i < length; i++) {
+            newRecord = newRecords[i];
+            oldRecord = oldRecords.getByKey(newRecord.getId());
+            if (oldRecord) {
+                oldRecord.set(newRecord.getData());
+            } else {
+                toInsert.push(newRecord);
+            }
+            oldRecord = undefined;
+        }
+        store.insert(0, toInsert);
+        this.setState("loaded");
+        this.fireEvent('latestfetched', this, toInsert);
+        if (this.getAutoSnapBack()) {
+            this.snapBack();
+        }
+    },
+    /**
+     * Snaps the List back to the top after a pullrefresh is complete
+     * @param {Boolean=} force Force the snapback to occur regardless of state {optional}
+     */
+    snapBack: function(force) {
+        if (this.getState() !== "loaded" && force !== true)  {
+            return;
+        }
+        
+        var list = this.getList(),
+            scroller = list.getScrollable().getScroller();
+        scroller.refresh();
+        scroller.minPosition.y = 0;
+        scroller.on({
+            scrollend: this.onSnapBackEnd,
+            single: true,
+            scope: this
+        });
+        this.setIsSnappingBack(true);
+        scroller.scrollTo(null, 0, {
+            duration: this.getSnappingAnimationDuration()
+        });
+    },
+    /**
+     * @private
+     * Called when PullRefresh has been snapped back to the top
+     */
+    onSnapBackEnd: function() {
+        this.setState("pull");
+        this.setIsSnappingBack(false);
+    },
+    /**
+     * @private
+     * Called when the Scroller updates from the list
+     * @param scroller
+     * @param x
+     * @param y
+     */
+    onScrollChange: function(scroller, x, y) {
+        if (y <= 0) {
+            var pullHeight = this.getPullHeight(),
+                isSnappingBack = this.getIsSnappingBack();
+            if (this.getState() === "loaded" && !isSnappingBack) {
+                this.snapBack();
+            }
+            if (this.getState() !== "loading" && this.getState() !== "loaded") {
+                if (-y >= pullHeight + 10) {
+                    this.setState("release");
+                    scroller.getContainer().onBefore({
+                        dragend: 'onScrollerDragEnd',
+                        single: true,
+                        scope: this
+                    });
+                } else if ((this.getState() === "release") && (-y < pullHeight + 10)) {
+                    this.setState("pull");
+                    scroller.getContainer().unBefore({
+                        dragend: 'onScrollerDragEnd',
+                        single: true,
+                        scope: this
+                    });
+                }
+            }
+            this.getTranslatable().translate(0, -y);
+        }
+    },
+    /**
+     * @private
+     * Called when the user is done dragging, this listener is only added when the user has pulled far enough for a refresh
+     */
+    onScrollerDragEnd: function() {
+        if (this.getState() !== "loading") {
+            var list = this.getList(),
+                scroller = list.getScrollable().getScroller(),
+                translateable = scroller.getTranslatable();
+            this.setState("loading");
+            translateable.setEasingY({
+                duration: this.getOverpullSnapBackDuration()
+            });
+            scroller.minPosition.y = -this.getPullHeight();
+            scroller.on({
+                scrollend: 'fetchLatest',
+                single: true,
+                scope: this
+            });
+        }
+    },
+    /**
+     * @private
+     * Updates the content based on the PullRefresh Template
+     */
+    updateView: function() {
+        var state = this.getState(),
+            lastUpdatedText = this.getLastUpdatedText() + Ext.util.Format.date(this.lastUpdated, this.getLastUpdatedDateFormat()),
+            templateConfig = {
+                state: state,
+                updated: lastUpdatedText
+            },
+            stateFn = state.charAt(0).toUpperCase() + state.slice(1).toLowerCase(),
+            fn = "get" + stateFn + "Text";
+        if (this[fn] && Ext.isFunction(this[fn])) {
+            templateConfig.message = this[fn].call(this);
+        }
+        this.innerElement.removeCls([
+            "loaded",
+            "loading",
+            "release",
+            "pull"
+        ], Ext.baseCSSPrefix + "list-pullrefresh");
+        this.innerElement.addCls(this.getState(), Ext.baseCSSPrefix + "list-pullrefresh");
+        this.getPullTpl().overwrite(this.innerElement, templateConfig);
+    }
+}, function() {
+    /**
+     * Updates the PullRefreshText.
+     * @method setPullRefreshText
+     * @param {String} text
+     * @deprecated 2.3.0 Please use {@link #setPullText} instead.
+     */
+    Ext.deprecateClassMethod(this, 'setPullRefreshText', 'setPullText');
+    /**
+     * Updates the ReleaseRefreshText.
+     * @method setReleaseRefreshText
+     * @param {String} text
+     * @deprecated 2.3.0 Please use {@link #setReleaseText} instead.
+     */
+    Ext.deprecateClassMethod(this, 'setReleaseRefreshText', 'setReleaseText');
+    this.override({
+        constructor: function(config) {
+            if (config) {
+                /**
+                 * @cfg {String} pullReleaseText
+                 * Optional Text during the Release State.
+                 * @deprecated 2.3.0 Please use {@link #releaseText} instead
+                 */
+                if (config.hasOwnProperty('pullReleaseText')) {
+                    Ext.Logger.deprecate("'pullReleaseText' config is deprecated, please use 'releaseText' config instead", this);
+                    config.releaseText = config.pullReleaseText;
+                    delete config.pullReleaseText;
+                }
+                /**
+                 * @cfg {String} pullRefreshText
+                 * Optional Text during the Pull State.
+                 * @deprecated 2.3.0 Please use {@link #pullText} instead
+                 */
+                if (config.hasOwnProperty('pullRefreshText')) {
+                    Ext.Logger.deprecate("'pullRefreshText' config is deprecated, please use 'pullText' config instead", this);
+                    config.pullText = config.pullRefreshText;
+                    delete config.pullRefreshText;
+                }
+            }
+            this.callParent([
+                config
+            ]);
+        }
+    });
+});
+
+/**
  * @private
  * Base class for iOS and Android viewports.
  */
@@ -64427,111 +65132,71 @@ Ext.define('MEC_App.controller.LocAr', {
     config: {},
     Load: function(g) {
         g.ViewTitles = {
-           
-
-           Home: "الرئيسية",
-    PublicServices:"الخدمات العامة",
-    MediaCenter: " المركز الاعلامي",
-    Inquiries: "الاستعلامات والاصدارات ",
-    ContactUs: "اتصل بنا",
-    Projects : "المبادرات والمشاريع",
-    Reports: "المؤشرات والتقارير",
-    Settings: "الاعدادات",
-    LogivForm : "تسجيل الدخول",
-
-    //media center
-
-    MinistryPublications : 'اصدارات الوزارة',
-    MinistryNews  : 'اخبار الوزارة',
-    EconomyNews : 'اخبار الوزارة',
-    NewsDetails : 'تفاصيل الخبر',
-
-
-
-    //services
-
-    PrintOffs :' خدمات المستخرجات',
-    MyBusiness :' بياناتي الخاصة',
-    RequestFollowup :' متابعة المعاملات',
-    Complaints :' ابلاغ عن شكوي',
-    SupplyService :' خدمات التموين',
-    InvestorServices :' خدمات المستثمر',
-    ConsumerServices :' خدمات المستهلك',
-
-
-
-
-    // inq
-
-    SearchTradeName :    'البحث عن اسم تجاري',
-    SearchAct :'البحث عن نشاط تجاري',
-    Recalls :'الاستدعاءات',
-    ConsulerEdu :'ثقافة المستهلك',
-    InvestorEdu :'ثقافة المستثمر',
-    Violations :'المخالفات والاغلاقات',
-
-
-
-    //reports
-
-
-
-    EcoReports :'مؤشرات اقتصادية',
-    BizReports :'مؤشرات الاعمال',
-    ConsumerReports :'مؤشرات استهلاكية',
-    TradeReports :'تقرير العلامات التجارية',
-
-
-    //contact
-
-    AboutMinistry :'عن الوزارة',
-    Branches :'الفروع',
-    Suggestions :'مقترحات',
-    ContactUs2 :'تواصل معنا',
-    Employees :'موظفو الوزارة'
-
-};
-
-
-g.ComplaintsLabels ={
-
-    shopName: 'اسم المتجر',
-    shopLocation: ' موقع المتجر',
-    ComplaintType: ' نوع الشكوي',
-    txtComplaint: ' نص الشكوي',
-    fullName: ' الاسم بالكامل',
-    email: ' البريد الالكتدوني',
-    mobile: ' رقم الهاتف',
-    barcode:  'باركود المنتج',
-    AttachImg: ' ارفق صور المنتج',
-    Submit: 'ارسل'
-
-};
-
-
-
-g.ValidationMsg ={
-
-    errShopName:'فضلا ادخل اسم المتجر\n',
-    errComplaintType:'فضلا اختر نوع الشكوي\n',
-    errComplaintText:'فضلا ادخل نص الشكوي\n',
-    errFullName:'فضلا ادخل الاسم بالكامل\n',
-    errMobile:'فضلا ادخل رقم الجوال\n',
-
-
-};
-
-
-g.ConfirmationMsg ={
-
-    msgConfirmComplaints:'تم ارسال الشكوي بنجاح'
-
-
+            Home: "الرئيسية",
+            PublicServices: "الخدمات العامة",
+            MediaCenter: " المركز الاعلامي",
+            Inquiries: "الاستعلامات والاصدارات ",
+            ContactUs: "اتصل بنا",
+            Projects: "المبادرات والمشاريع",
+            Reports: "المؤشرات والتقارير",
+            Settings: "الاعدادات",
+            LogivForm: "تسجيل الدخول",
+            //media center
+            MinistryPublications: 'اصدارات الوزارة',
+            MinistryNews: 'اخبار الوزارة',
+            EconomyNews: 'اخبار الوزارة',
+            NewsDetails: 'تفاصيل الخبر',
+            //services
+            PrintOffs: ' خدمات المستخرجات',
+            MyBusiness: ' بياناتي الخاصة',
+            RequestFollowup: ' متابعة المعاملات',
+            Complaints: ' ابلاغ عن شكوي',
+            SupplyService: ' خدمات التموين',
+            InvestorServices: ' خدمات المستثمر',
+            ConsumerServices: ' خدمات المستهلك',
+            // inq
+            SearchTradeName: 'البحث عن اسم تجاري',
+            SearchAct: 'البحث عن نشاط تجاري',
+            Recalls: 'الاستدعاءات',
+            ConsulerEdu: 'ثقافة المستهلك',
+            InvestorEdu: 'ثقافة المستثمر',
+            Violations: 'المخالفات والاغلاقات',
+            //reports
+            EcoReports: 'مؤشرات اقتصادية',
+            BizReports: 'مؤشرات الاعمال',
+            ConsumerReports: 'مؤشرات استهلاكية',
+            TradeReports: 'تقرير العلامات التجارية',
+            //contact
+            AboutMinistry: 'عن الوزارة',
+            Branches: 'الفروع',
+            Suggestions: 'مقترحات',
+            ContactUs2: 'تواصل معنا',
+            Employees: 'موظفو الوزارة'
+        };
+        g.ComplaintsLabels = {
+            shopName: 'اسم المتجر',
+            shopLocation: ' موقع المتجر',
+            ComplaintType: ' نوع الشكوي',
+            txtComplaint: ' نص الشكوي',
+            fullName: ' الاسم بالكامل',
+            email: ' البريد الالكتدوني',
+            mobile: ' رقم الهاتف',
+            barcode: 'باركود المنتج',
+            AttachImg: ' ارفق صور المنتج',
+            Submit: 'ارسل'
+        };
+        g.ValidationMsg = {
+            errShopName: 'فضلا ادخل اسم المتجر\n',
+            errComplaintType: 'فضلا اختر نوع الشكوي\n',
+            errComplaintText: 'فضلا ادخل نص الشكوي\n',
+            errFullName: 'فضلا ادخل الاسم بالكامل\n',
+            errMobile: 'فضلا ادخل رقم الجوال\n'
+        };
+        g.ConfirmationMsg = {
+            msgConfirmComplaints: 'تم ارسال الشكوي بنجاح'
         };
         g.GenericContent = {
-            HomeNews:'<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
-
-
+            HomeNews: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
         };
     }
 });
@@ -64713,6 +65378,55 @@ Ext.define('MEC_App.model.RSSModel', {
 });
 
 /*
+ * File: app/model/TradeNameResultModel.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.model.TradeNameResultModel', {
+    extend: Ext.data.Model,
+    config: {
+        fields: [
+            {
+                name: 'approvingAgency'
+            },
+            {
+                name: 'businessActivityCode'
+            },
+            {
+                name: 'businessActivityGroupCode'
+            },
+            {
+                name: 'businessActivityArabicName'
+            },
+            {
+                name: 'businessActivityGroupArabicName'
+            },
+            {
+                name: 'businessActivityEnglishName'
+            },
+            {
+                name: 'businessActivityGroupEnglishName'
+            },
+            {
+                name: 'fees'
+            },
+            {
+                name: 'companyCapitalDependency'
+            }
+        ]
+    }
+});
+
+/*
  * File: app/view/MainNavView.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -64737,7 +65451,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: 'وزارة الاقتصاد والتجارة',
+                title: 'الرئيسية',
                 id: 'pnlMain',
                 itemId: 'pnlMain',
                 layout: 'vbox',
@@ -64746,7 +65460,7 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'home-header',
-                        html: '<div class="header-text-bg"><b>????? ????? ????? ????? ????? ?????</b><br />????? ????? ????? ?????  </div>',
+                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                         id: 'pnlNews',
                         itemId: 'pnlNews'
                     },
@@ -64776,7 +65490,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????? ??????',
+                                                html: 'الخدمات العامة',
                                                 id: 'homeServices',
                                                 itemId: 'homeServices'
                                             },
@@ -64807,7 +65521,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '?????? ????????',
+                                                html: 'المركز الاعلامي',
                                                 itemId: 'btnMediaCenter'
                                             },
                                             {
@@ -64844,7 +65558,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????????? ?????????? ',
+                                                html: 'الاستعلامات والاصدارات ',
                                                 itemId: 'homeInquire'
                                             },
                                             {
@@ -64875,7 +65589,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????? ?????????',
+                                                html: 'المؤشرات والتقارير',
                                                 itemId: 'homeReports'
                                             },
                                             {
@@ -64913,7 +65627,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '????????? ?????????',
+                                                html: 'المبادرات والمشاريع',
                                                 itemId: 'btnProjects'
                                             },
                                             {
@@ -64944,7 +65658,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????',
+                                                html: 'التواصل',
                                                 itemId: 'homeContact'
                                             },
                                             {
@@ -65093,43 +65807,43 @@ Ext.define('MEC_App.controller.HomeController', {
     onHomeServicesTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'PublicServiceView',
-            title: '??????? ??????'
+            title: 'الخدمات العامة'
         });
     },
     onHomeNewsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'MediaCenterView',
-            title: '?????? ????????'
+            title: 'المركز الاعلامي'
         });
     },
     onHomeInquireTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????????? ? ?????????"
+            title: "الاستعلامات و الاصدارات"
         });
     },
     onHomeGeneralInfoTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????? ????"
+            title: "معلومات عامة"
         });
     },
     onHomeReportsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ReportsView',
-            title: "???????? ? ????????"
+            title: "المؤشرات و التقارير"
         });
     },
     onHomeProjectsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ProjectsView',
-            title: "????????? ? ????????"
+            title: "المبادرات و المشاريع"
         });
     },
     onHomeeContactTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
-            title: "???????"
+            title: "التواصل"
         });
     },
     onHomeServices1Tap: function(button, e, eOpts) {
@@ -65209,7 +65923,7 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     onPrintOfficeBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'PrintOffsView',
-            title: "????? ??????????"
+            title: "خدمات المستخرجات"
         });
     },
     onMyServiceBtnTap: function(button, e, eOpts) {
@@ -65607,8 +66321,8 @@ Ext.define('MEC_App.controller.InquiriesController', {
     },
     onInquiriesBtn1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-            xtype: 'BusinessIndicatorsReport',
-            title: Ext.Global.GetViewTitle('ContactUs')
+            xtype: 'TradeNameAvailabilityView',
+            title: 'البحث عن اسم تجاري'
         });
     },
     onInquiriesBtn2Tap: function(button, e, eOpts) {
@@ -65812,17 +66526,86 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
     extend: Ext.app.Controller,
     config: {
         control: {
-            "list#lstNews": {
-                itemtap: 'onLstNewsItemTap'
+            "list#NewsList": {
+                itemtap: 'onNewsListItemTap'
             }
         }
     },
-    onLstNewsItemTap: function(dataview, index, target, record, e, eOpts) {
-        //alert(record.data.NewsDate);
+    onNewsListItemTap: function(dataview, index, target, record, e, eOpts) {
         dataview.up('MainNavView').push({
             xtype: 'NewsDetailsView',
             title: Ext.Global.GetViewTitle('NewsDetails'),
-            theData: record.data
+            data: record.data
+        });
+    }
+});
+
+/*
+ * File: app/controller/TradeNameAvailabilityController.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
+    extend: Ext.app.Controller,
+    config: {
+        refs: {
+            txtActivityName: '#txtActivityName',
+            lstResults: '#lstResults'
+        },
+        control: {
+            "button#btnSubmit": {
+                tap: 'onBtnSubmitTap'
+            },
+            "list#lstTradeNameResults": {
+                itemtap: 'onLstTradeNameResultsItemTap'
+            }
+        }
+    },
+    onBtnSubmitTap: function(button, e, eOpts) {
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'جاري التحم...'
+        });
+        Ext.Ajax.request({
+            url: 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+            method: 'POST',
+            // useDefaultXhrHeader: false,
+            jsonData: {
+                "serviceId": "5",
+                "language": "ARA",
+                "englishSearchClause": "",
+                "arabicSearchClause": this.getTxtActivityName().getValue()
+            },
+            success: function(response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+                var store = new Ext.data.Store({
+                        //model: 'MEC_App.model.TradeNameResultModel',
+                        data: json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
+                    });
+                var lst = Ext.getCmp('lstTradeNameResults');
+                lst.setStore(store);
+                Ext.Viewport.setMasked(false);
+            },
+            // hide the load screen
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
+    },
+    onLstTradeNameResultsItemTap: function(dataview, index, target, record, e, eOpts) {
+        dataview.up('MainNavView').push({
+            xtype: 'TradeNameEstablishmentDetails',
+            title: 'تفاصيل الشركة',
+            data: record.data
         });
     }
 });
@@ -65832,47 +66615,47 @@ Ext.define('MEC_App.store.override.MenuArrayStore', {
     config: {
         data: [
             {
-                ItemName: '????????',
+                ItemName: 'الرئيسية',
                 ItemView: 'MainNavView',
                 ItemIconURL: 'resources/images/m-home.png'
             },
             {
-                ItemName: '??????? ??????',
+                ItemName: 'الخدمات العامة',
                 ItemView: 'PublicServiceView',
                 ItemIconURL: 'resources/images/m-services.png'
             },
             {
-                ItemName: '?????? ????????',
+                ItemName: 'المركز الاعلامي',
                 ItemView: 'MediaCenterView',
                 ItemIconURL: 'resources/images/m-media.png'
             },
             {
-                ItemName: '??????????? ?????????? ',
+                ItemName: 'الاستعلامات والاصدارات ',
                 ItemView: 'InquiriesView',
                 ItemIconURL: 'resources/images/m-inq.png'
             },
             {
-                ItemName: '???????',
+                ItemName: 'التواصل',
                 ItemView: 'ContactUsView',
                 ItemIconURL: 'resources/images/m-contact.png'
             },
             {
-                ItemName: '????????? ?????????',
+                ItemName: 'المبادرات والمشاريع',
                 ItemView: 'ProjectsView',
                 ItemIconURL: 'resources/images/m-projects.png'
             },
             {
-                ItemName: '???????? ?????????',
+                ItemName: 'المؤشرات والتقارير',
                 ItemView: 'ReportsView',
                 ItemIconURL: 'resources/images/m-reports.png'
             },
             {
-                ItemName: '?????????',
+                ItemName: 'الاعدادات',
                 ItemView: 'SettingsView',
                 ItemIconURL: 'resources/images/m-settings.png'
             },
             {
-                ItemName: '????? ??????',
+                ItemName: 'تسجيل الدخول',
                 ItemView: 'LogivFormView',
                 ItemIconURL: 'resources/images/m-login.png'
             }
@@ -65960,19 +66743,19 @@ Ext.define('MEC_App.store.override.PrintOffices', {
     config: {
         data: [
             {
-                ItemName: '????? ??????? ?????? ???????',
+                ItemName: 'نموذج التسجيل باللغة العربية',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??????? ?????? ??????????',
+                ItemName: 'نموذج التسجيل باللغة الانكليزية',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??? ?????',
+                ItemName: 'نموذج سجل تجاري',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??? ????? ?? ?????? ?? ??? ????? ',
+                ItemName: 'شهادة عدم ملكية او مشاركة في سجل تجاري ',
                 ItemView: 'BusinessIndicatorsReport'
             }
         ]
@@ -66151,12 +66934,106 @@ Ext.define('MEC_App.store.override.MinistryNewsStore', {
                 NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
                 NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
-                NewsDetails:  'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 3,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
+                NewsID: 4,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
+                NewsID: 5,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
+            },
+            {
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
+                NewsDate: '02 April 2015',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
+                NewsID: 6,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
+                NewsID: 7,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
+                NewsID: 8,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
+            },
+            {
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
+                NewsDate: '02 April 2015',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
+                NewsID: 9,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
+                NewsID: 10,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
+                NewsID: 11,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
+            },
+            {
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
+                NewsDate: '02 April 2015',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
+                NewsID: 12,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
+                NewsID: 13,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
+            },
+            {
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
+                NewsDate: '05 April 2015',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
+                NewsID: 14,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
+            },
+            {
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
+                NewsDate: '02 April 2015',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
+                NewsID: 15,
+                NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             }
-
-
         ]
     }
 });
@@ -66416,7 +67293,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????? ??????',
+                                        html: 'الخدمات العامة',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -66440,7 +67317,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????',
+                                        html: 'خدمات المستثمر',
                                         id: 'lblInvestor',
                                         itemId: 'lblInvestor'
                                     },
@@ -66455,7 +67332,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '??????? ??????'
+                                                text: 'بياناتي الخاصة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66463,7 +67340,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ??????????'
+                                                text: 'خدمات المستخرجات'
                                             }
                                         ]
                                     },
@@ -66478,7 +67355,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: 'متابعة المعاملات'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -66495,7 +67372,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????',
+                                        html: 'خدمات المستهلك',
                                         id: 'lblConsumer',
                                         itemId: 'lblConsumer'
                                     },
@@ -66510,7 +67387,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ?? ????'
+                                                text: 'ابلاغ عن شكوي'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66518,7 +67395,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'supplyServicesBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????'
+                                                text: 'خدمات التموين'
                                             }
                                         ]
                                     }
@@ -66591,7 +67468,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '?????? ????????',
+                                        html: 'المركز الاعلامي',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -66623,7 +67500,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnPublications',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '??????? ???????'
+                                                text: 'اصدارات الوزارة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66631,7 +67508,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnMinistryNews',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ?? ???????'
+                                                text: 'اصداء عن الوزارة'
                                             }
                                         ]
                                     },
@@ -66646,7 +67523,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnNews',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '????? ????????'
+                                                text: 'اخبار اقتصادية'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -66718,7 +67595,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????????? ??????????',
+                                        html: 'الاستعلامات والاصدارات',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -66750,7 +67627,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '????? ?? ??? ?????'
+                                                text: 'البحث عن اسم تجاري'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66758,7 +67635,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ?? ???? ?????'
+                                                text: 'البحث عن نشاط تجاري'
                                             }
                                         ]
                                     },
@@ -66773,7 +67650,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????????'
+                                                text: 'الاستدعاءات'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66781,7 +67658,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '????? ????????'
+                                                text: 'ثقافة المستهلك'
                                             }
                                         ]
                                     },
@@ -66796,7 +67673,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ????????'
+                                                text: 'ثقافة المستثمر'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66804,7 +67681,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn6',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????????? ??????????'
+                                                text: 'المخالفات والاغلاقات'
                                             }
                                         ]
                                     }
@@ -66875,7 +67752,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????',
+                                        html: 'التواصل',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -66907,7 +67784,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?? ???????'
+                                                text: 'عن الوزارة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66915,7 +67792,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '??????'
+                                                text: 'الفروع'
                                             }
                                         ]
                                     },
@@ -66930,7 +67807,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????'
+                                                text: 'مقترحات'
                                             },
                                             {
                                                 xtype: 'button',
@@ -66938,7 +67815,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ????'
+                                                text: 'تواصل معنا'
                                             }
                                         ]
                                     },
@@ -66953,7 +67830,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ???????'
+                                                text: 'موظفو الوزارة'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -67047,7 +67924,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????? ?????????',
+                                        html: 'المؤشرات والتقارير',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -67079,7 +67956,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?????? ????????'
+                                                text: 'مؤشرات اقتصادية'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67087,7 +67964,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '?????? ???????'
+                                                text: 'مؤشرات الاعمال'
                                             }
                                         ]
                                     },
@@ -67102,7 +67979,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: 'مؤشرات استهلاكية'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67110,7 +67987,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????? ????????'
+                                                text: 'تقرير العلامات التجارية'
                                             }
                                         ]
                                     }
@@ -67233,7 +68110,7 @@ Ext.define('MEC_App.view.PrintOffsView', {
                                 flex: 1,
                                 cls: 'print-office-header-title',
                                 docked: 'bottom',
-                                html: '????? ??????????'
+                                html: 'خدمات المستخرجات'
                             }
                         ]
                     }
@@ -67302,12 +68179,12 @@ Ext.define('MEC_App.controller.DeviceController', {
     config: {},
     CaptureImage: function(image) {
         var options = {
-                'title': 'اختر طريقة ارفاق الصورة',
+                'title': 'Chose a method to add Photo',
                 'buttonLabels': [
-                    'من الكاميرا',
-                    'من مكتبة الصور'
+                    'Camera',
+                    'Library'
                 ],
-                'addCancelButtonWithLabel': 'الغاء',
+                'addCancelButtonWithLabel': 'Cancel',
                 'androidEnableCancelButton': true,
                 // default false
                 'winphoneEnableCancelButton': true
@@ -67381,7 +68258,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
         cls: 'complaint-view',
         layout: 'vbox',
         enableSubmissionForm: false,
-        url: 'http://www.google.com',
         items: [
             {
                 xtype: 'fieldset',
@@ -67398,14 +68274,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'shopName',
                         required: true,
-                        placeHolder: '??? ?????'
+                        placeHolder: 'اسم المحل'
                     },
                     {
                         xtype: 'textfield',
                         id: 'shopLocation',
                         label: '',
                         name: 'shopLocation',
-                        placeHolder: '???? ??????'
+                        placeHolder: 'موقع المتجر'
                     },
                     {
                         xtype: 'textfield',
@@ -67413,7 +68289,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'txtCategory',
                         itemId: 'txtCategory',
                         name: 'txtCategory',
-                        placeHolder: '??? ??????',
+                        placeHolder: 'نوع الشكوي',
                         readOnly: true,
                         listeners: [
                             {
@@ -67426,32 +68302,32 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                                 title: "نوع الشكوي",
                                                 items: [
                                                     {
-                                                        text: "نوع 1",
-                                                        value: "نوع 1"
+                                                        text: "Type 1",
+                                                        value: "Type 1"
                                                     },
                                                     {
-                                                        text: "نوع 2",
-                                                        value: "نوع 2"
+                                                        text: "Type 2",
+                                                        value: "Type 2"
                                                     },
                                                     {
-                                                        text: "نوع 3",
-                                                        value: "نوع 3"
+                                                        text: "Type 3",
+                                                        value: "Type 3"
                                                     },
                                                     {
-                                                        text: "نوع 4",
-                                                        value: "نوع 4"
+                                                        text: "Type 4",
+                                                        value: "Type 4"
                                                     },
                                                     {
-                                                        text: "نوع 5",
-                                                        value: "نوع 5"
+                                                        text: "Type 5",
+                                                        value: "Type 5"
                                                     },
                                                     {
-                                                        text: "نوع 6",
-                                                        value: "نوع 6"
+                                                        text: "Type 6",
+                                                        value: "Type 6"
                                                     }
                                                 ],
                                                 selectedValue: "2",
-                                                 doneButtonLabel: "اختيار",
+                                                doneButtonLabel: "ٌختيار",
                                                 cancelButtonLabel: "الغاء"
                                             };
                                         Ext.DeviceController.ShowNativePicker(me, config);
@@ -67467,7 +68343,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'txtComplaint',
                         required: true,
-                        placeHolder: '?? ??????'
+                        placeHolder: 'نص الشكوي'
                     },
                     {
                         xtype: 'textfield',
@@ -67475,14 +68351,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'fullName',
                         required: true,
-                        placeHolder: '????? ???????'
+                        placeHolder: 'الاسم بالكامل'
                     },
                     {
                         xtype: 'textfield',
                         id: 'email',
                         label: '',
                         name: 'email',
-                        placeHolder: '?????? ??????????'
+                        placeHolder: 'البريد الالكتدوني'
                     },
                     {
                         xtype: 'textfield',
@@ -67490,7 +68366,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'mobile',
                         required: true,
-                        placeHolder: '??? ??????'
+                        placeHolder: 'رقم الهاتف'
                     },
                     {
                         xtype: 'textfield',
@@ -67516,7 +68392,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'label',
-                        html: '???? ????',
+                        html: 'ارفق صورة',
                         id: 'lblAttachImage'
                     },
                     {
@@ -67609,7 +68485,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         },
                         cls: 'btn-send',
                         id: 'btnSubmit',
-                        text: '?????'
+                        text: 'ارسال'
                     }
                 ]
             }
@@ -67763,9 +68639,51 @@ Ext.define('MEC_App.view.EconomyNewsView', {
  * Do NOT hand edit this file.
  */
 Ext.define('MEC_App.view.TradeNameAvailabilityView', {
-    extend: Ext.Panel,
+    extend: Ext.form.Panel,
     alias: 'widget.TradeNameAvailabilityView',
-    config: {}
+    config: {
+        cls: 'complaint-view',
+        itemId: '',
+        layout: 'vbox',
+        items: [
+            {
+                xtype: 'fieldset',
+                docked: 'top',
+                items: [
+                    {
+                        xtype: 'textfield',
+                        id: 'txtGroupName',
+                        label: 'مجموعة النشاط',
+                        name: 'txtGroupName',
+                        placeHolder: 'مجموعة النشاط'
+                    },
+                    {
+                        xtype: 'textfield',
+                        id: 'txtActivityName',
+                        label: 'الاسم التجاري',
+                        name: 'txtActivityName',
+                        placeHolder: 'الاسم التجاري'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'btn-send',
+                        itemId: 'btnSubmit',
+                        text: 'بحث'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                flex: 1,
+                cls: 'CompanyList',
+                height: '100%',
+                id: 'lstTradeNameResults',
+                itemTpl: [
+                    '<div class=\'CompanyListItem\'>{businessActivityArabicName}</div>'
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -68068,26 +68986,6 @@ Ext.define('MEC_App.view.TrademarkReportView', {
 });
 
 /*
- * File: app/view/SideMenuView.js
- *
- * This file was generated by Sencha Architect version 3.2.0.
- * http://www.sencha.com/products/architect/
- *
- * This file requires use of the Sencha Touch 2.4.x library, under independent license.
- * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
- * details see http://www.sencha.com/license or contact license@sencha.com.
- *
- * This file will be auto-generated each and everytime you save your project.
- *
- * Do NOT hand edit this file.
- */
-Ext.define('MEC_App.view.SideMenuView', {
-    extend: Ext.Panel,
-    alias: 'widget.SideMenuView',
-    config: {}
-});
-
-/*
  * File: app/view/SideMenu.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -68106,7 +69004,7 @@ Ext.define('MEC_App.view.SideMenu', {
     alias: 'widget.SideMenu',
     config: {
         height: '100%',
-        width: '85%',
+        width: '75%',
         items: [
             {
                 xtype: 'panel',
@@ -68140,7 +69038,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
-                                text: '????????'
+                                text: 'الرئيسية'
                             },
                             {
                                 xtype: 'button',
@@ -68148,7 +69046,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnServices',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon2',
-                                text: '??????? ??????'
+                                text: 'الخدمات العامة'
                             },
                             {
                                 xtype: 'button',
@@ -68157,7 +69055,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnMedai',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon3',
-                                text: '?????? ????????'
+                                text: 'المركز الاعلامي'
                             },
                             {
                                 xtype: 'button',
@@ -68166,7 +69064,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnInquiry',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon4',
-                                text: '??????????? ?????????? '
+                                text: 'الاستعلامات والاصدارات '
                             },
                             {
                                 xtype: 'button',
@@ -68175,7 +69073,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnContact',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon5',
-                                text: '???????'
+                                text: 'التواصل'
                             },
                             {
                                 xtype: 'button',
@@ -68184,7 +69082,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnProjects',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon6',
-                                text: '????????? ?????????'
+                                text: 'المبادرات والمشاريع'
                             },
                             {
                                 xtype: 'button',
@@ -68193,7 +69091,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnReports',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon7',
-                                text: '???????? ?????????'
+                                text: 'المؤشرات والتقارير'
                             },
                             {
                                 xtype: 'button',
@@ -68202,7 +69100,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnSettings',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon8',
-                                text: '?????????'
+                                text: 'الاعدادات'
                             },
                             {
                                 xtype: 'button',
@@ -68211,7 +69109,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnLogin',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon9',
-                                text: '????? ??????'
+                                text: 'تسجيل الدخول'
                             }
                         ]
                     }
@@ -68660,25 +69558,6 @@ Ext.define('MEC_App.view.ContactUs2View', {
 });
 
 /*
- * File: app/view/MyPanel.js
- *
- * This file was generated by Sencha Architect version 3.2.0.
- * http://www.sencha.com/products/architect/
- *
- * This file requires use of the Sencha Touch 2.4.x library, under independent license.
- * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
- * details see http://www.sencha.com/license or contact license@sencha.com.
- *
- * This file will be auto-generated each and everytime you save your project.
- *
- * Do NOT hand edit this file.
- */
-Ext.define('MEC_App.view.MyPanel', {
-    extend: Ext.Panel,
-    config: {}
-});
-
-/*
  * File: app/view/NewsDetailsView.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -68701,20 +69580,10 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         layout: 'vbox',
         items: [
             {
-                xtype: 'panel'
-            },
-            {
                 xtype: 'panel',
                 flex: 1,
                 cls: 'newsDetails',
                 items: [
-                    {
-                        xtype: 'label',
-                        cls: 'title',
-                        height: 40,
-                        html: '',
-                        id: 'lblTitle'
-                    },
                     {
                         xtype: 'image',
                         cls: 'img',
@@ -68722,10 +69591,21 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                         id: 'imgNews'
                     },
                     {
-                        xtype: 'label',
-                        cls: 'date',
-                        height: 40,
-                        id: 'lblDate'
+                        xtype: 'panel',
+                        cls: 'title-date-container',
+                        items: [
+                            {
+                                xtype: 'label',
+                                cls: 'title',
+                                html: '',
+                                id: 'lblTitle'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'date',
+                                id: 'lblDate'
+                            }
+                        ]
                     },
                     {
                         xtype: 'label',
@@ -68734,22 +69614,149 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                     }
                 ]
             }
+        ]
+    },
+    initialize: function() {
+        this.callParent();
+        this.down('#lblTitle').setHtml(this.getData().NewsTitle);
+        this.down('#lblDate').setHtml(this.getData().NewsDate);
+        this.down('#lblDetails').setHtml(this.getData().NewsDetails);
+        this.down('#imgNews').setSrc(this.getData().NewsImgUrl);
+    }
+});
+
+/*
+ * File: app/view/MinistryNewsView.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.view.MinistryNewsView', {
+    extend: Ext.dataview.List,
+    alias: 'widget.MinistryNewsView',
+    config: {
+        cls: 'news-lstng',
+        fullscreen: true,
+        height: '100%',
+        itemId: 'NewsList',
+        defaultType: 'NewsListItem',
+        store: 'MinistryNewsStore',
+        infinite: true,
+        itemHeight: 80,
+        onItemDisclosure: true,
+        pinHeaders: false,
+        useSimpleItems: false,
+        variableHeights: true,
+        itemTpl: [
+            '<div>{text}</div>'
         ],
-        listeners: [
+        items: [
             {
-                fn: 'onNewsDetailsViewInitialize',
-                event: 'initialize'
+                xtype: 'label',
+                cls: 'inners-title',
+                docked: 'top',
+                html: 'اخبار الوزارة'
+            }
+        ],
+        plugins: [
+            {
+                type: 'pullrefresh'
+            },
+            {
+                autoPaging: true,
+                type: 'listpaging'
+            }
+        ]
+    }
+});
+
+/*
+ * File: app/view/NewsListItem.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.view.NewsListItem', {
+    extend: Ext.dataview.component.ListItem,
+    alias: 'widget.NewsListItem',
+    config: {
+        padding: 10,
+        layout: 'hbox',
+        items: [
+            {
+                xtype: 'image',
+                flex: 2,
+                cls: 'lstng-img',
+                src: 'NewsImgUrl'
+            },
+            {
+                xtype: 'panel',
+                flex: 7,
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'component',
+                        flex: 2,
+                        cls: 'lstng-title',
+                        html: 'NewsTitle',
+                        itemId: 'textCmp'
+                    },
+                    {
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'lstng-brief',
+                        html: 'NewsBrief'
+                    }
+                ]
             }
         ]
     },
-    onNewsDetailsViewInitialize: function(component, eOpts) {
-
-    	 
-        //this.down('#lblTitle').setHtml(this.theData.NewsTitle);
-        //this.down('#lblDate').setHtml('this.Data.NewsDate');
-        //this.down('#lblDetails').setHtml('this.Data.NewsDetails');
-        //this.down('#imgNews').setSrc('this.Data.NewsImgUrl');
+    updateRecord: function(record) {
+        // Provide an implementation to update this container's child items
+        var me = this;
+        me.down('image').setSrc(record.get('NewsImgUrl'));
+        me.down('#textCmp').setHtml(record.get('NewsTitle'));
+        me.down('label').setHtml(record.get('NewsBrief'));
+        me.callParent(arguments);
     }
+});
+
+/*
+ * File: app/view/TradeNameEstablishmentDetails.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
+    extend: Ext.Panel,
+    alternateClassName: [
+        'TradeNameEstablishmentDetails'
+    ],
+    config: {}
 });
 
 /*
@@ -68774,7 +69781,8 @@ Ext.application({
         'MenuModel',
         'ComplaintsModel',
         'MinistryNewsModel',
-        'RSSModel'
+        'RSSModel',
+        'TradeNameResultModel'
     ],
     stores: [
         'MenuArrayStore',
@@ -68817,7 +69825,6 @@ Ext.application({
         'MonthlyFruitView',
         'TrademarkReportView',
         'MainNavView',
-        'SideMenuView',
         'SideMenu',
         'PrintOffices',
         'PrintOfficeDetails',
@@ -68826,8 +69833,10 @@ Ext.application({
         'MenuModelDetails',
         'MenuModelForm',
         'ContactUs2View',
-        'MyPanel',
-        'NewsDetailsView'
+        'NewsDetailsView',
+        'MinistryNewsView',
+        'NewsListItem',
+        'TradeNameEstablishmentDetails'
     ],
     controllers: [
         'HomeController',
@@ -68840,7 +69849,8 @@ Ext.application({
         'ReportsController',
         'ContactController',
         'ComplaintsController',
-        'MinistryNewsController'
+        'MinistryNewsController',
+        'TradeNameAvailabilityController'
     ],
     name: 'MEC_App',
     launch: function() {
@@ -68857,67 +69867,6 @@ Ext.application({
     }
 });
 
-/*
- * File: app/view/MinistryNewsView.js
- *
- * This file was generated by Sencha Architect version 3.2.0.
- * http://www.sencha.com/products/architect/
- *
- * This file requires use of the Sencha Touch 2.4.x library, under independent license.
- * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
- * details see http://www.sencha.com/license or contact license@sencha.com.
- *
- * This file will be auto-generated each and everytime you save your project.
- *
- * Do NOT hand edit this file.
- */
-Ext.define('MEC_App.view.MinistryNewsView', {
-    extend: Ext.Panel,
-    alias: 'widget.MinistryNewsView',
-    config: {
-        layout: 'vbox',
-        items: [
-            {
-                xtype: 'panel'
-            },
-            {
-                xtype: 'panel',
-                flex: 1,
-                scrollable: {
-                    direction: 'vertical',
-                    directionLock: true
-                },
-                items: [
-                    {
-                        xtype: 'list',
-                        cls: 'newsListing',
-                        docked: 'top',
-                        height: '100%',
-                        id: 'lstNews',
-                        itemTpl: [
-                            '<div>',
-                            '    ',
-                            '    ',
-                            '     {NewsTitle}',
-                            '    ',
-                            '',
-                            '',
-                            '</div>',
-                            '',
-                            '',
-                            '',
-                            '',
-                            ''
-                        ],
-                        store: 'MinistryNewsStore',
-                        onItemDisclosure: false
-                    }
-                ]
-            }
-        ]
-    }
-});
-
 // @tag full-page
-// @require /sencha/MEC_App/app.js
+// @require /untitled folder/MEC_App/app.js
 
