@@ -1,0 +1,52 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "Ext.AnimationHelper"
+        ],
+        "designer|userClassName": "AnimationHelper",
+        "singleton": true
+    },
+    "name": "MyClass",
+    "designerId": "f5a99d96-a126-4791-be3b-8b12dbddd1c7",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "element",
+                    "panelID"
+                ],
+                "fn": "HandleShowHidePanel",
+                "implHandler": [
+                    "element.on('tap', function () {",
+                    "    var panel = Ext.getCmp(panelID);",
+                    "",
+                    "    if (panel.isHidden()) {",
+                    "        panel.show({type: 'slide', direction: 'down'});",
+                    "    }",
+                    "    else {",
+                    "        panel.hide({type: 'slide', direction: 'up'});",
+                    "    }",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "HandleShowHidePanel",
+            "designerId": "6dd294ed-7c33-4653-bc60-bb07333e4ed9"
+        }
+    ]
+}

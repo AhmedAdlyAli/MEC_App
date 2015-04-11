@@ -1,0 +1,17 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "Ext.AjaxHelper"
+        ],
+        "designer|userClassName": "AjaxHelper",
+        "singleton": true
+    },
+    "name": "MyClass",
+    "designerId": "22a2c68d-2f55-4537-9a81-2b763e52d073"
+}

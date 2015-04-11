@@ -7,7 +7,12 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "TradeNameEstablishmentDetails",
-        "designer|userClassName": "TradeNameEstablishmentDetails"
+        "designer|userClassName": "TradeNameEstablishmentDetails",
+        "fullscreen": true,
+        "layout": "vbox",
+        "requires": [
+            "MEC_App.controller.AnimationHelper"
+        ]
     },
     "name": "MyPanel",
     "designerId": "04d591ce-3733-43e5-955b-4a6f53175d21",
@@ -19,8 +24,101 @@
                 "type": "array"
             },
             "codeClass": null,
-            "name": "MyPanel",
-            "designerId": "332dd965-47c8-4245-9016-605437311538"
+            "name": "MyPanel1",
+            "designerId": "8d0b9851-a60f-4962-8045-ea361d6bd1e1",
+            "cn": [
+                {
+                    "type": "Ext.TitleBar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "itemId": "mytitlebar",
+                        "title": "Panel 1"
+                    },
+                    "name": "MyTitleBar",
+                    "designerId": "602995b4-b3de-48a3-b480-4d5a0e24e3d3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMytitlebarPainted",
+                                "implHandler": [
+                                    "Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData');",
+                                    ""
+                                ],
+                                "name": "painted"
+                            },
+                            "name": "onMytitlebarPainted",
+                            "designerId": "090e2211-a54e-4de8-aefe-a1df874e89d0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|createAlias": null,
+                        "id": "pnlData",
+                        "itemId": "pnlData"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "d3c8e577-639c-4105-8417-b84854a2fac1",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "label1"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "cf63af27-007c-4578-9b63-ceff553f7cbb"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "label1"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "ac79c8d7-21fa-45d7-bb40-ec5dad5eac0b"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "label1"
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "129ae1c6-5d45-4de6-aec8-19f5652e36d8"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

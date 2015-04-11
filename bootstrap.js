@@ -667,6 +667,12 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.viewport.WindowsPhone": [
     "Ext.viewport.WP"
   ],
+  "MEC_App.controller.AjaxHelper": [
+    "Ext.AjaxHelper"
+  ],
+  "MEC_App.controller.AnimationHelper": [
+    "Ext.AnimationHelper"
+  ],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [
@@ -694,7 +700,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.model.TradeNameResultModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.MinistryNewsStore": [],
-  "MEC_App.store.MyXmlStore": [],
   "MEC_App.store.PrintOffices": [],
   "MEC_App.store.override.MenuArrayStore": [],
   "MEC_App.store.override.MinistryNewsStore": [],
@@ -1476,6 +1481,8 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.Ios": [],
   "Ext.viewport.Viewport": [],
   "Ext.viewport.WindowsPhone": [],
+  "MEC_App.controller.AjaxHelper": [],
+  "MEC_App.controller.AnimationHelper": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [],
@@ -1509,7 +1516,6 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.model.TradeNameResultModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.MinistryNewsStore": [],
-  "MEC_App.store.MyXmlStore": [],
   "MEC_App.store.PrintOffices": [
     "store.printoffices"
   ],

@@ -112,7 +112,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='CompanyListItem'>{businessActivityArabicName}</div>"
+                            "<div class='CompanyListItem'>{tradeName}</div>"
                         ]
                     },
                     "name": "itemTpl",

@@ -132,6 +132,33 @@
             },
             "name": "GetConfirmationMsg",
             "designerId": "5efa3be2-c8e5-467e-bbf9-c833af8da070"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "key"
+                ],
+                "fn": "GetConfig",
+                "implHandler": [
+                    "",
+                    "var config={",
+                    "",
+                    "    webServiceUrl : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept'",
+                    "",
+                    "};",
+                    "",
+                    "",
+                    "return config[key];"
+                ]
+            },
+            "name": "GetConfig",
+            "designerId": "3243ead4-4c45-483d-9329-4adf3b4d6a88"
         }
     ]
 }

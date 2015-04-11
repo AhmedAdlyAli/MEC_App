@@ -33,39 +33,43 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     },
 
     onBtnSubmitTap: function(button, e, eOpts) {
+        var url = Ext.Global.GetConfig('webServiceUrl');
+
+
+        var requestData = {
+            "serviceId":"6",
+            "language":"ARA",
+            "tradeNameLanguage":"ARA",
+            "tradeName":this.getTxtActivityName().getValue()
+        };
+
+
+
 
         Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: 'جاري التحم...'
-            });
+            xtype: 'loadmask',
+            message: 'جاري التحم...'
+        });
 
 
         Ext.Ajax.request({
 
-            url : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+            url : url,
             method : 'POST',
             // useDefaultXhrHeader: false,
-            jsonData :
-            {"serviceId":"5",
-             "language":"ARA",
-             "englishSearchClause":"",
-             "arabicSearchClause":this.getTxtActivityName().getValue()
-            },
+            jsonData :requestData,
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
+                var store = new Ext.data.Store({
+                    //model: 'MEC_App.model.TradeNameResultModel',
+                    data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
+                });
+
+                var lst = Ext.getCmp('lstTradeNameResults');
+                lst.setStore(store);
 
 
-           var store = new Ext.data.Store({
-                        //model: 'MEC_App.model.TradeNameResultModel',
-                        data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
-                        });
-
-
-            var lst = Ext.getCmp('lstTradeNameResults');
-            lst.setStore(store);
-
-
-              Ext.Viewport.setMasked(false); // hide the load screen
+                Ext.Viewport.setMasked(false); // hide the load screen
 
 
             },
@@ -76,14 +80,17 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
+
+
+
     },
 
     onLstTradeNameResultsItemTap: function(dataview, index, target, record, e, eOpts) {
 
         dataview.up('MainNavView').push({
             xtype: 'TradeNameEstablishmentDetails',
-            title: 'تفاصيل الشركة',
-            data: record.data
+            title: 'تفاصيل الشركة'
+           // data: record.data
 
         });
 

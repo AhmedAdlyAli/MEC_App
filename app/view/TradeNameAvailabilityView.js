@@ -63,7 +63,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                 height: '100%',
                 id: 'lstTradeNameResults',
                 itemTpl: [
-                    '<div class=\'CompanyListItem\'>{businessActivityArabicName}</div>'
+                    '<div class=\'CompanyListItem\'>{tradeName}</div>'
                 ]
             }
         ]

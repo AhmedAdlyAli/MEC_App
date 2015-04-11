@@ -43,7 +43,7 @@ Ext.application({
         'MenuArrayStore',
         'PrintOffices',
         'MinistryNewsStore',
-        'MyXmlStore'
+        null
     ],
     views: [
         'HomeView',

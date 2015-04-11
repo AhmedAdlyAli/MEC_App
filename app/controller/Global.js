@@ -52,6 +52,18 @@ Ext.define('MEC_App.controller.Global', {
     GetConfirmationMsg: function(msg) {
                  return this.ConfirmationMsg[msg];
 
+    },
+
+    GetConfig: function(key) {
+
+        var config={
+
+            webServiceUrl : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept'
+
+        };
+
+
+        return config[key];
     }
 
 });

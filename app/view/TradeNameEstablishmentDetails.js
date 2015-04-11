@@ -18,13 +18,54 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
     alias: 'widget.TradeNameEstablishmentDetails',
 
     requires: [
-        'Ext.Panel'
+        'Ext.Panel',
+        'Ext.TitleBar',
+        'Ext.Label',
+        'MEC_App.controller.AnimationHelper'
     ],
 
     config: {
+        fullscreen: true,
+        layout: 'vbox',
         items: [
             {
-                xtype: 'panel'
+                xtype: 'panel',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'Panel 1',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData');
+
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        id: 'pnlData',
+                        itemId: 'pnlData',
+                        items: [
+                            {
+                                xtype: 'label',
+                                html: 'label1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'label1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'label1'
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
