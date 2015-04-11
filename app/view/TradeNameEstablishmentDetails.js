@@ -21,21 +21,25 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
         'Ext.Panel',
         'Ext.TitleBar',
         'Ext.Label',
+        'Ext.dataview.List',
+        'Ext.XTemplate',
         'MEC_App.controller.AnimationHelper'
     ],
 
     config: {
         fullscreen: true,
+        id: 'TradeNameEstablishmentDetails',
         layout: 'vbox',
         items: [
             {
                 xtype: 'panel',
+                itemId: 'EstablishmentInfo',
                 items: [
                     {
                         xtype: 'titlebar',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: 'Panel 1',
+                        title: 'بيانات المنشاة',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -53,15 +57,181 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'label',
-                                html: 'label1'
+                                html: ' رقم السجل التجاري',
+                                id: 'commercialRegistration'
                             },
                             {
                                 xtype: 'label',
-                                html: 'label1'
+                                html: 'تاريخ التسجيل',
+                                id: 'commercialRegistrationIssueDate'
                             },
                             {
                                 xtype: 'label',
-                                html: 'label1'
+                                html: 'تاريخ الانتهاء',
+                                id: 'commercialRegistrationExpiryDate'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة السجل التجاري',
+                                id: 'commercialRegistrationStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'اسم السجل التجاري بالإنجليزية',
+                                id: 'establishmentEnglishName'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'اسم السجل التجاري بالعربية',
+                                id: 'establishmentArabicName'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'راس مال الشركة',
+                                id: 'companyCapital'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم الرخصة التجارية',
+                                id: 'commercialPermit'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة الرخصة التجارية',
+                                id: 'commercialPermitStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ انتهاء الرخصة التجارية',
+                                id: 'commercialPermitExpiryDate'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ التاسيس',
+                                id: 'establishmentDate'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'نوع المنشاة',
+                                id: 'establishmentType'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'الشكل القانوني',
+                                id: 'establishmentLegalForm'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة المنشاة',
+                                id: 'establishmentStatus'
+                            },
+                            {
+                                xtype: 'label'
+                            },
+                            {
+                                xtype: 'label'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                itemId: 'BusinessActivities',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'الانشطة التجارية',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData2');
+
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        id: 'pnlData2',
+                        itemId: 'pnlData2',
+                        items: [
+                            {
+                                xtype: 'list',
+                                itemTpl: [
+                                    '<div>List Item {string}</div>'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                itemId: 'Branches',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'الفروع',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData3');
+
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        id: 'pnlData3',
+                        itemId: 'pnlData3',
+                        items: [
+                            {
+                                xtype: 'list',
+                                itemTpl: [
+                                    '<div>List Item {string}</div>'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                itemId: 'Signatories',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'المخولين بالتوقيع',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData4');
+
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        id: 'pnlData4',
+                        itemId: 'pnlData4',
+                        items: [
+                            {
+                                xtype: 'list',
+                                itemTpl: [
+                                    '<div>List Item {string}</div>'
+                                ]
                             }
                         ]
                     }
