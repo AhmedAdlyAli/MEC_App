@@ -107,7 +107,9 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeNewsTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
+
+
+        button.up('MainNavView').push({
                     xtype: 'MediaCenterView',
                     title: 'المركز الاعلامي'
                 });

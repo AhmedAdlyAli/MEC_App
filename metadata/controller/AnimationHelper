@@ -50,6 +50,41 @@
             },
             "name": "HandleShowHidePanel",
             "designerId": "6dd294ed-7c33-4653-bc60-bb07333e4ed9"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ShowLoading",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    message: 'جاري التحميل ..'",
+                    "});"
+                ]
+            },
+            "name": "ShowLoading",
+            "designerId": "a52ff163-ae37-455d-8105-a0122b4705c2"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "HideLoading",
+                "implHandler": [
+                    "Ext.Viewport.setMasked(false); // hide the load screen"
+                ]
+            },
+            "name": "HideLoading",
+            "designerId": "5d3d5d10-cbab-44da-87d1-22f0b8eb1e5e"
         }
     ]
 }

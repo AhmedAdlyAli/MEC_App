@@ -279,16 +279,36 @@ Ext.define('MEC_App.view.MainNavView', {
 
 
 
-        Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar().add({
+
+
+
+        // Add Menu button
+
+        var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
+        navBar.add({
             xtype:'button',
             iconCls: 'list',
             align:'right',
             handler: function(){
                 Ext.Viewport.toggleMenu('right');
             }
-
-
         });
+
+        // add middle image
+        navBar.setTitle('<div class="toplogo"></div>');
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

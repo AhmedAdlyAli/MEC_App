@@ -19,7 +19,8 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
     config: {
         control: {
             "list#NewsList": {
-                itemtap: 'onNewsListItemTap'
+                itemtap: 'onNewsListItemTap',
+                initialize: 'onNewsListInitialize'
             }
         }
     },
@@ -31,6 +32,16 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
             data: record.data
 
         });
+    },
+
+    onNewsListInitialize: function(component, eOpts) {
+        //alert('good to go');
+
+        Ext.AnimationHelper.ShowLoading();
+
+
+
+
     }
 
 });

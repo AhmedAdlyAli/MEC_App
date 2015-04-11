@@ -42,6 +42,17 @@ Ext.define('MEC_App.controller.AnimationHelper', {
 
 
 
+    },
+
+    ShowLoading: function() {
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'جاري التحميل ..'
+        });
+    },
+
+    HideLoading: function() {
+        Ext.Viewport.setMasked(false); // hide the load screen
     }
 
 });

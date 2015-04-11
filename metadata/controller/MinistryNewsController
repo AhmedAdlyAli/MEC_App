@@ -42,6 +42,35 @@
             },
             "name": "onNewsListItemTap",
             "designerId": "5809fc16-5d36-429d-8cae-f83a05ee6d20"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#NewsList",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onNewsListInitialize",
+                "implHandler": [
+                    "//alert('good to go');",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onNewsListInitialize",
+            "designerId": "536cec40-8e74-4f71-bdb9-667005476d98"
         }
     ]
 }

@@ -721,15 +721,15 @@ body {
 
 
     .tpl-signatory-1{
-       color: #010101;
-       font-weight:bold;
+        color: #010101;
+        font-weight:bold;
     }
 
-     .tpl-signatory-2{
-         color: #6f2f51;
-             padding:0.5em 0 0.5em 0.5em;
-             font-weight:500;
-         }
+    .tpl-signatory-2{
+        color: #6f2f51;
+        padding:0.5em 0 0.5em 0.5em;
+        font-weight:500;
+    }
     .FA{
         float:right
     }
@@ -739,7 +739,12 @@ body {
 
 }
 
+.toplogo{
+    background: url(../images/toplogo.png) no-repeat center top;
+    width: 13em;
+    height:2em;
 
+}
 
 
 

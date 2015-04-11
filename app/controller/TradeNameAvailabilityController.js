@@ -48,11 +48,10 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
+        Ext.AnimationHelper.ShowLoading();
 
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: 'جاري التحميل ..'
-        });
+
+
 
 
         Ext.Ajax.request({
@@ -72,7 +71,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 lst.setStore(store);
 
 
-                Ext.Viewport.setMasked(false); // hide the load screen
+                Ext.AnimationHelper.HideLoading();
 
 
             },
@@ -119,12 +118,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         }
 
 
-            Ext.Viewport.setMasked({
-                xtype: 'loadmask',
-                message: 'جاري التحميل ..'
-            });
-
-
+           Ext.AnimationHelper.ShowLoading();
 
 
 
@@ -232,19 +226,11 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                             lst.setScrollable(false);
 
 
-                         Ext.Viewport.setMasked(false); // hide the load screen
-
+                        Ext.AnimationHelper.HideLoading();
 
 
                     }
                 });
-
-
-
-
-
-
-
 
 
 
