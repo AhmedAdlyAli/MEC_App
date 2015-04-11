@@ -661,3 +661,94 @@ body {
     line-height: 50px;
 }
 
+
+
+
+
+
+
+/*Establishment Detials*/
+
+
+.acc-container{
+    direction:rtl;
+}
+
+
+.acc-header{
+    background:#e1e1e1 url(../images/arrow-down.png) no-repeat 5% center;
+    min-height:2.2em !important;
+    padding:0;
+    border-bottom: solid 1px #fff !important;
+
+
+    .x-title{
+        color: #6f2f51 !important;
+        font-size:1em;
+
+    }
+}
+
+
+.acc-group{
+
+    background-color:#fff;
+    .x-label{
+        padding-right:1.5em;
+        color: #6f2f51;
+        padding-top:1em;
+        font-weight:bold;
+    }
+
+    .label-value{
+        color:#010101;
+        padding-top:0;
+        padding-bottom:0.5em;
+        border-bottom: solid 1px #eeeeee;
+        font-weight:500;
+        min-height:1em;
+    }
+
+}
+
+.item-signatory{
+
+    //background
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-right:3em;
+    background: url(../images/person.png) no-repeat 96% center;
+
+
+    .tpl-signatory-1{
+       color: #010101;
+       font-weight:bold;
+    }
+
+     .tpl-signatory-2{
+         color: #6f2f51;
+             padding:0.5em 0 0.5em 0.5em;
+             font-weight:500;
+         }
+    .FA{
+        float:right
+    }
+    .FB{
+        float:left
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

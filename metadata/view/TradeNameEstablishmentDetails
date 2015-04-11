@@ -14,9 +14,18 @@
         "layout": "vbox",
         "requires": [
             "MEC_App.controller.AnimationHelper"
+        ],
+        "scrollable": [
+            "{",
+            "            direction: 'vertical',",
+            "            directionLock: true",
+            "        }"
         ]
     },
     "name": "MyPanel",
+    "configAlternates": {
+        "scrollable": "object"
+    },
     "designerId": "04d591ce-3733-43e5-955b-4a6f53175d21",
     "cn": [
         {
@@ -27,7 +36,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "EstablishmentInfo"
+                "cls": [
+                    "acc-container"
+                ],
+                "height": null,
+                "itemId": "EstablishmentInfo",
+                "layout|flex": null
             },
             "name": "MyPanel1",
             "designerId": "8d0b9851-a60f-4962-8045-ea361d6bd1e1",
@@ -40,9 +54,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-header"
+                        ],
                         "docked": "top",
                         "itemId": "mytitlebar",
-                        "title": "بيانات المنشاة"
+                        "title": "بيانات المنشاة",
+                        "titleAlign": "right"
                     },
                     "name": "MyTitleBar",
                     "designerId": "602995b4-b3de-48a3-b480-4d5a0e24e3d3",
@@ -75,6 +93,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-group"
+                        ],
                         "designer|createAlias": null,
                         "id": "pnlData",
                         "itemId": "pnlData"
@@ -107,11 +128,48 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "designer|createAlias": null,
+                                "designer|displayName": null,
+                                "html": " ",
+                                "id": "commercialRegistration1",
+                                "itemId": null
+                            },
+                            "name": "MyLabel6",
+                            "designerId": "efdde0d2-2302-4f11-a338-13305cebd9f8"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "تاريخ التسجيل",
                                 "id": "commercialRegistrationIssueDate"
                             },
                             "name": "MyLabel2",
                             "designerId": "129ae1c6-5d45-4de6-aec8-19f5652e36d8"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialRegistrationIssueDate1"
+                            },
+                            "name": "MyLabel17",
+                            "designerId": "83d95f9a-906a-4bf1-8d32-d63ea6b4d759"
                         },
                         {
                             "type": "Ext.Label",
@@ -135,11 +193,45 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialRegistrationExpiryDate1"
+                            },
+                            "name": "MyLabel19",
+                            "designerId": "4a534bfb-ac3d-4877-adcb-d8e6cd0ed8b7"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "حالة السجل التجاري",
                                 "id": "commercialRegistrationStatus"
                             },
                             "name": "MyLabel8",
                             "designerId": "3e43a020-7a95-4c74-bf98-222e30201af1"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialRegistrationStatus1"
+                            },
+                            "name": "MyLabel20",
+                            "designerId": "de8a0667-498e-4183-a804-67a6a7292d6a"
                         },
                         {
                             "type": "Ext.Label",
@@ -163,11 +255,45 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentEnglishName1"
+                            },
+                            "name": "MyLabel21",
+                            "designerId": "60d680ba-65e6-4d96-837f-b825b1eca159"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "اسم السجل التجاري بالعربية",
                                 "id": "establishmentArabicName"
                             },
                             "name": "MyLabel15",
                             "designerId": "e5144a90-e807-42af-89db-dece165e0089"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentArabicName1"
+                            },
+                            "name": "MyLabel22",
+                            "designerId": "f4b3882b-bc96-4d1a-9c61-88c63891956d"
                         },
                         {
                             "type": "Ext.Label",
@@ -191,11 +317,45 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "companyCapital1"
+                            },
+                            "name": "MyLabel23",
+                            "designerId": "c19d6705-d03c-4a62-84f8-1192f34398cb"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "رقم الرخصة التجارية",
                                 "id": "commercialPermit"
                             },
                             "name": "MyLabel5",
                             "designerId": "ddbb1581-ea09-41e2-ab3b-aac7133436b9"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialPermit1"
+                            },
+                            "name": "MyLabel24",
+                            "designerId": "6144f9cb-d59a-4e53-bce5-00386d50c416"
                         },
                         {
                             "type": "Ext.Label",
@@ -219,11 +379,45 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialPermitStatus1"
+                            },
+                            "name": "MyLabel25",
+                            "designerId": "420cb354-3925-4d9b-b005-cdab3252eae0"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "تاريخ انتهاء الرخصة التجارية",
                                 "id": "commercialPermitExpiryDate"
                             },
                             "name": "MyLabel16",
                             "designerId": "53fc2abf-db57-4100-be74-2b286edd4164"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "commercialPermitExpiryDate1"
+                            },
+                            "name": "MyLabel26",
+                            "designerId": "f58e8568-6aec-422e-aa9a-d571dee264b5"
                         },
                         {
                             "type": "Ext.Label",
@@ -247,11 +441,45 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentDate1"
+                            },
+                            "name": "MyLabel27",
+                            "designerId": "8a9170ea-c444-43bb-94d1-fc1a1d84048e"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "نوع المنشاة",
                                 "id": "establishmentType"
                             },
                             "name": "MyLabel10",
                             "designerId": "b13990da-3875-465f-9e77-8b6c2169c005"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentType1"
+                            },
+                            "name": "MyLabel28",
+                            "designerId": "59f08dad-0da6-45a7-900a-dbdc12905e76"
                         },
                         {
                             "type": "Ext.Label",
@@ -275,6 +503,23 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentLegalForm1"
+                            },
+                            "name": "MyLabel13",
+                            "designerId": "f3007907-599f-4865-b8be-71ffca4fa490"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "حالة المنشاة",
                                 "id": "establishmentStatus"
                             },
@@ -288,18 +533,15 @@
                                 "type": "array"
                             },
                             "codeClass": null,
-                            "name": "MyLabel13",
-                            "designerId": "3ca34a0b-3808-4bc3-8d47-985b5b70bb91"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentStatus1"
                             },
-                            "codeClass": null,
-                            "name": "MyLabel14",
-                            "designerId": "04be41bb-e574-4dda-85e6-d5d3dca36472"
+                            "name": "MyLabel29",
+                            "designerId": "e6b1d5ee-d2d5-4533-a2de-167faa58a995"
                         }
                     ]
                 }
@@ -313,7 +555,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "BusinessActivities"
+                "cls": [
+                    "acc-container"
+                ],
+                "hidden": false,
+                "itemId": "BusinessActivities",
+                "layout|flex": null
             },
             "name": "MyPanel2",
             "designerId": "cfc2833a-0e9d-4d9b-86f0-d36976162268",
@@ -326,9 +573,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-header"
+                        ],
                         "docked": "top",
                         "itemId": "mytitlebar",
-                        "title": "الانشطة التجارية"
+                        "title": "الانشطة التجارية",
+                        "titleAlign": "right"
                     },
                     "name": "MyTitleBar",
                     "designerId": "c70bffb6-1474-42c6-93bc-6e3f0fe2e0a4",
@@ -361,6 +612,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-group"
+                        ],
                         "designer|createAlias": null,
                         "id": "pnlData2",
                         "itemId": "pnlData2"
@@ -375,6 +629,9 @@
                                 "type": "array"
                             },
                             "codeClass": null,
+                            "userConfig": {
+                                "id": "lstBizActivities"
+                            },
                             "name": "MyList",
                             "designerId": "7a86ca00-4c41-4419-803f-3caec54e69a5",
                             "cn": [
@@ -408,7 +665,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "Branches"
+                "cls": [
+                    "acc-container"
+                ],
+                "hidden": false,
+                "itemId": "Branches",
+                "layout|flex": null
             },
             "name": "MyPanel3",
             "designerId": "3f4043fd-3ae9-43f4-be5d-e4abbac405f2",
@@ -421,9 +683,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-header"
+                        ],
                         "docked": "top",
                         "itemId": "mytitlebar",
-                        "title": "الفروع"
+                        "title": "الفروع",
+                        "titleAlign": "right"
                     },
                     "name": "MyTitleBar",
                     "designerId": "f8f42bb5-31a1-46de-91be-6af3a53699c8",
@@ -456,6 +722,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-group"
+                        ],
                         "designer|createAlias": null,
                         "id": "pnlData3",
                         "itemId": "pnlData3"
@@ -503,7 +772,13 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "Signatories"
+                "cls": [
+                    "acc-container"
+                ],
+                "height": null,
+                "itemId": "Signatories",
+                "layout|flex": null,
+                "scrollable": null
             },
             "name": "MyPanel4",
             "designerId": "242fb661-e01f-4124-9363-8c5e29f8de16",
@@ -516,9 +791,13 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "acc-header"
+                        ],
                         "docked": "top",
                         "itemId": "mytitlebar",
-                        "title": "المخولين بالتوقيع"
+                        "title": "المخولين بالتوقيع",
+                        "titleAlign": "right"
                     },
                     "name": "MyTitleBar",
                     "designerId": "935d23bb-236b-4469-8689-ad159660ae5f",
@@ -533,7 +812,7 @@
                             "userConfig": {
                                 "fn": "onMytitlebarPainted111",
                                 "implHandler": [
-                                    "Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData4');",
+                                    "Ext.AnimationHelper.HandleShowHidePanel(element,'lstSignatories');",
                                     ""
                                 ],
                                 "name": "painted"
@@ -544,47 +823,44 @@
                     ]
                 },
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.dataview.List",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|createAlias": null,
-                        "id": "pnlData4",
-                        "itemId": "pnlData4"
+                        "height": null,
+                        "id": "lstSignatories",
+                        "itemCls": "item-signatory",
+                        "itemId": "mylist",
+                        "scrollToTopOnRefresh": false
                     },
-                    "name": "MyPanel",
-                    "designerId": "0f0d7b7f-98bc-4251-a1ac-3f6f954cfad7",
+                    "name": "MyList",
+                    "configAlternates": {
+                        "inline": "boolean"
+                    },
+                    "designerId": "8c4a0d23-fa8e-4922-8568-bc6599626109",
                     "cn": [
                         {
-                            "type": "Ext.dataview.List",
+                            "type": "Ext.XTemplate",
                             "reference": {
-                                "name": "items",
-                                "type": "array"
+                                "name": "itemTpl",
+                                "type": "object"
                             },
                             "codeClass": null,
-                            "name": "MyList",
-                            "designerId": "8c4a0d23-fa8e-4922-8568-bc6599626109",
-                            "cn": [
-                                {
-                                    "type": "Ext.XTemplate",
-                                    "reference": {
-                                        "name": "itemTpl",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|displayName": "itemTpl",
-                                        "implHandler": [
-                                            "<div>List Item {string}</div>"
-                                        ]
-                                    },
-                                    "name": "itemTpl",
-                                    "designerId": "febc605e-d22f-4067-9931-371cc131bb68"
-                                }
-                            ]
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "",
+                                    "    <div class='tpl-signatory-1'>{fullNameARA}</div>",
+                                    "    <div class='tpl-signatory-2'><span class='FA'>{type}</span> <span class='FB'>{nationality}</span></div>",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "febc605e-d22f-4067-9931-371cc131bb68"
                         }
                     ]
                 }

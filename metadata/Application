@@ -39,8 +39,7 @@
         "stores": [
             "MenuArrayStore",
             "PrintOffices",
-            "MinistryNewsStore",
-            "MyXmlStore"
+            "MinistryNewsStore"
         ],
         "uses": [
             "Ext.Ajax"

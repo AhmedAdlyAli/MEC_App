@@ -32,7 +32,10 @@ Ext.define('MEC_App.controller.AnimationHelper', {
                 panel.show({type: 'slide', direction: 'down'});
             }
             else {
-                panel.hide({type: 'slide', direction: 'up'});
+                panel.hide();
+
+                //{type: 'slide', direction: 'up'}
+
             }
 
         });

@@ -196,12 +196,43 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                         //Bind Data to controls
                         var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 
-                        Ext.getCmp('commercialRegistration').setHtml(company.commercialRegistration);
+
+
+                        console.log(company.listOfCRBusinessActivities);
+                        console.log(company.listOfBranches);
+
+                        console.log(company.listOfSignatories);
+
+
+                        Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
+                        Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(company.commercialRegistrationExpiryDate);
+                        Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
+                        Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
+                        Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
+                        Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
+                        Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
+                        Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
+                        Ext.getCmp('commercialPermitExpiryDate1').setHtml(company.commercialPermitExpiryDate);
+                        Ext.getCmp('establishmentDate1').setHtml(company.establishmentDate);
+                        Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
+                        Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
+                        Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
 
 
 
+                        //signatories
+                        var store = new Ext.data.Store({
+                            data : company.listOfSignatories.signatories
+                        });
+
+                        var lst = Ext.getCmp('lstSignatories');
+                        lst.setStore(store);
+
+                        lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                            lst.setScrollable(false);
 
 
+                         Ext.Viewport.setMasked(false); // hide the load screen
 
 
 
@@ -213,7 +244,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
-                        Ext.Viewport.setMasked(false); // hide the load screen
 
 
 

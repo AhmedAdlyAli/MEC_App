@@ -42,8 +42,7 @@ Ext.application({
     stores: [
         'MenuArrayStore',
         'PrintOffices',
-        'MinistryNewsStore',
-        null
+        'MinistryNewsStore'
     ],
     views: [
         'HomeView',

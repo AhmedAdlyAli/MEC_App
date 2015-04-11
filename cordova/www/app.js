@@ -66044,7 +66044,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             };
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
-            message: 'جاري التحم...'
+            message: 'جاري التحميل ..'
         });
         Ext.Ajax.request({
             url: url,
@@ -66086,8 +66086,83 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             });
             return;
         }
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'جاري التحميل ..'
+        });
+        // login
+        var token = '';
+        var url = Ext.Global.GetConfig('webServiceUrl');
+        var requestData = {
+                "serviceId": "1",
+                "userName": "Sadmin",
+                "password": "Sadmin#123"
+            };
+        Ext.Ajax.request({
+            url: url,
+            method: 'POST',
+            // useDefaultXhrHeader: false,
+            jsonData: requestData,
+            success: function(response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+                token = json.token;
+                /**********************************************************/
+                // get establishment details
+                requestData = {
+                    "serviceId": "8",
+                    "token": token,
+                    "language": "ar",
+                    "commercialRegistrationNum": cr,
+                    "moiEstablishmentNum": "",
+                    "siebelSpcOperationSpcObjectSpcId": "",
+                    "qatarChamberNum": "",
+                    "statusMsg": "",
+                    "commercialPermitNum": "",
+                    "numOutputObjects": "",
+                    "economicalNum": ""
+                };
+                Ext.Ajax.request({
+                    url: url,
+                    method: 'POST',
+                    // useDefaultXhrHeader: false,
+                    jsonData: requestData,
+                    success: function(response) {
+                        var json = Ext.util.JSON.decode(response.responseText);
+                        //Bind Data to controls
+                        var company = json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+                        console.log(company.listOfCRBusinessActivities);
+                        console.log(company.listOfBranches);
+                        console.log(company.listOfSignatories);
+                        Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
+                        Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(company.commercialRegistrationExpiryDate);
+                        Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
+                        Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
+                        Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
+                        Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
+                        Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
+                        Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
+                        Ext.getCmp('commercialPermitExpiryDate1').setHtml(company.commercialPermitExpiryDate);
+                        Ext.getCmp('establishmentDate1').setHtml(company.establishmentDate);
+                        Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
+                        Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
+                        Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
+                        //signatories
+                        var store = new Ext.data.Store({
+                                data: company.listOfSignatories.signatories
+                            });
+                        var lst = Ext.getCmp('lstSignatories');
+                        lst.setStore(store);
+                        lst.setHeight(company.listOfSignatories.signatories.length * 6 + 'em');
+                        lst.setScrollable(false);
+                        Ext.Viewport.setMasked(false);
+                    }
+                });
+            }
+        });
     }
 });
+// hide the load screen
+/****************************************/
 
 Ext.define('MEC_App.store.override.MenuArrayStore', {
     override: 'MEC_App.store.MenuArrayStore',
@@ -69250,16 +69325,23 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
         fullscreen: true,
         id: 'TradeNameEstablishmentDetails',
         layout: 'vbox',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
         items: [
             {
                 xtype: 'panel',
+                cls: 'acc-container',
                 itemId: 'EstablishmentInfo',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'بيانات المنشاة',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -69271,62 +69353,150 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
                         id: 'pnlData',
                         itemId: 'pnlData',
                         items: [
                             {
                                 xtype: 'label',
-                                html: ' رقم السجل التجاري'
+                                html: ' رقم السجل التجاري',
+                                id: 'commercialRegistration'
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التسجيل'
+                                cls: 'label-value',
+                                html: ' ',
+                                id: 'commercialRegistration1'
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ الانتهاء'
+                                html: 'تاريخ التسجيل',
+                                id: 'commercialRegistrationIssueDate'
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة السجل التجاري'
+                                cls: 'label-value',
+                                id: 'commercialRegistrationIssueDate1'
                             },
                             {
                                 xtype: 'label',
-                                html: 'اسم السجل التجاري بالإنجليزية'
+                                html: 'تاريخ الانتهاء',
+                                id: 'commercialRegistrationExpiryDate'
                             },
                             {
                                 xtype: 'label',
-                                html: 'راس مال الشركة'
+                                cls: 'label-value',
+                                id: 'commercialRegistrationExpiryDate1'
                             },
                             {
                                 xtype: 'label',
-                                html: 'رقم الرخصة التجارية'
+                                html: 'حالة السجل التجاري',
+                                id: 'commercialRegistrationStatus'
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة الرخصة التجارية'
+                                cls: 'label-value',
+                                id: 'commercialRegistrationStatus1'
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس'
+                                html: 'اسم السجل التجاري بالإنجليزية',
+                                id: 'establishmentEnglishName'
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشاة'
+                                cls: 'label-value',
+                                id: 'establishmentEnglishName1'
                             },
                             {
                                 xtype: 'label',
-                                html: 'الشكل القانوني'
+                                html: 'اسم السجل التجاري بالعربية',
+                                id: 'establishmentArabicName'
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة المنشاة'
+                                cls: 'label-value',
+                                id: 'establishmentArabicName1'
                             },
                             {
-                                xtype: 'label'
+                                xtype: 'label',
+                                html: 'راس مال الشركة',
+                                id: 'companyCapital'
                             },
                             {
-                                xtype: 'label'
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'companyCapital1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم الرخصة التجارية',
+                                id: 'commercialPermit'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermit1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة الرخصة التجارية',
+                                id: 'commercialPermitStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitStatus1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ انتهاء الرخصة التجارية',
+                                id: 'commercialPermitExpiryDate'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitExpiryDate1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ التاسيس',
+                                id: 'establishmentDate'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentDate1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'نوع المنشاة',
+                                id: 'establishmentType'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentType1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'الشكل القانوني',
+                                id: 'establishmentLegalForm'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentLegalForm1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة المنشاة',
+                                id: 'establishmentStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentStatus1'
                             }
                         ]
                     }
@@ -69334,13 +69504,17 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
+                cls: 'acc-container',
+                hidden: false,
                 itemId: 'BusinessActivities',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'الانشطة التجارية',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -69352,10 +69526,13 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
+                        id: 'pnlData2',
                         itemId: 'pnlData2',
                         items: [
                             {
                                 xtype: 'list',
+                                id: 'lstBizActivities',
                                 itemTpl: [
                                     '<div>List Item {string}</div>'
                                 ]
@@ -69366,13 +69543,17 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
-                itemId: 'BusinessActivities1',
+                cls: 'acc-container',
+                hidden: false,
+                itemId: 'Branches',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'الفروع',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -69384,6 +69565,8 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
+                        id: 'pnlData3',
                         itemId: 'pnlData3',
                         items: [
                             {
@@ -69398,33 +69581,38 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
-                itemId: 'BusinessActivities2',
+                cls: 'acc-container',
+                itemId: 'Signatories',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'المخولين بالتوقيع',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
-                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'pnlData4');
+                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'lstSignatories');
                                 },
                                 event: 'painted'
                             }
                         ]
                     },
                     {
-                        xtype: 'panel',
-                        itemId: 'pnlData4',
-                        items: [
-                            {
-                                xtype: 'list',
-                                itemTpl: [
-                                    '<div>List Item {string}</div>'
-                                ]
-                            }
-                        ]
+                        xtype: 'list',
+                        id: 'lstSignatories',
+                        itemId: 'mylist',
+                        itemCls: 'item-signatory',
+                        itemTpl: [
+                            '',
+                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                            '',
+                            ''
+                        ],
+                        scrollToTopOnRefresh: false
                     }
                 ]
             }
@@ -69460,8 +69648,7 @@ Ext.application({
     stores: [
         'MenuArrayStore',
         'PrintOffices',
-        'MinistryNewsStore',
-        null
+        'MinistryNewsStore'
     ],
     views: [
         'HomeView',

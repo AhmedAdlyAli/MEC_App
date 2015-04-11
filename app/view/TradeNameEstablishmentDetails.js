@@ -30,16 +30,23 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
         fullscreen: true,
         id: 'TradeNameEstablishmentDetails',
         layout: 'vbox',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
         items: [
             {
                 xtype: 'panel',
+                cls: 'acc-container',
                 itemId: 'EstablishmentInfo',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'بيانات المنشاة',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -52,6 +59,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
                         id: 'pnlData',
                         itemId: 'pnlData',
                         items: [
@@ -62,8 +70,19 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                html: ' ',
+                                id: 'commercialRegistration1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'تاريخ التسجيل',
                                 id: 'commercialRegistrationIssueDate'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationIssueDate1'
                             },
                             {
                                 xtype: 'label',
@@ -72,8 +91,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationExpiryDate1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'حالة السجل التجاري',
                                 id: 'commercialRegistrationStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationStatus1'
                             },
                             {
                                 xtype: 'label',
@@ -82,8 +111,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentEnglishName1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'اسم السجل التجاري بالعربية',
                                 id: 'establishmentArabicName'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentArabicName1'
                             },
                             {
                                 xtype: 'label',
@@ -92,8 +131,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'companyCapital1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'رقم الرخصة التجارية',
                                 id: 'commercialPermit'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermit1'
                             },
                             {
                                 xtype: 'label',
@@ -102,8 +151,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitStatus1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'تاريخ انتهاء الرخصة التجارية',
                                 id: 'commercialPermitExpiryDate'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitExpiryDate1'
                             },
                             {
                                 xtype: 'label',
@@ -112,8 +171,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentDate1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'نوع المنشاة',
                                 id: 'establishmentType'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentType1'
                             },
                             {
                                 xtype: 'label',
@@ -122,14 +191,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentLegalForm1'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'حالة المنشاة',
                                 id: 'establishmentStatus'
                             },
                             {
-                                xtype: 'label'
-                            },
-                            {
-                                xtype: 'label'
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentStatus1'
                             }
                         ]
                     }
@@ -137,13 +210,17 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
+                cls: 'acc-container',
+                hidden: false,
                 itemId: 'BusinessActivities',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'الانشطة التجارية',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -156,11 +233,13 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
                         id: 'pnlData2',
                         itemId: 'pnlData2',
                         items: [
                             {
                                 xtype: 'list',
+                                id: 'lstBizActivities',
                                 itemTpl: [
                                     '<div>List Item {string}</div>'
                                 ]
@@ -171,13 +250,17 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
+                cls: 'acc-container',
+                hidden: false,
                 itemId: 'Branches',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'الفروع',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
@@ -190,6 +273,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     },
                     {
                         xtype: 'panel',
+                        cls: 'acc-group',
                         id: 'pnlData3',
                         itemId: 'pnlData3',
                         items: [
@@ -205,17 +289,20 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
             },
             {
                 xtype: 'panel',
+                cls: 'acc-container',
                 itemId: 'Signatories',
                 items: [
                     {
                         xtype: 'titlebar',
+                        cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
                         title: 'المخولين بالتوقيع',
+                        titleAlign: 'right',
                         listeners: [
                             {
                                 fn: function(element, eOpts) {
-                                    Ext.AnimationHelper.HandleShowHidePanel(element,'pnlData4');
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'lstSignatories');
 
                                 },
                                 event: 'painted'
@@ -223,17 +310,18 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         ]
                     },
                     {
-                        xtype: 'panel',
-                        id: 'pnlData4',
-                        itemId: 'pnlData4',
-                        items: [
-                            {
-                                xtype: 'list',
-                                itemTpl: [
-                                    '<div>List Item {string}</div>'
-                                ]
-                            }
-                        ]
+                        xtype: 'list',
+                        id: 'lstSignatories',
+                        itemId: 'mylist',
+                        itemCls: 'item-signatory',
+                        itemTpl: [
+                            '',
+                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                            '',
+                            ''
+                        ],
+                        scrollToTopOnRefresh: false
                     }
                 ]
             }
