@@ -726,8 +726,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MinistryBranchesView": [],
   "MEC_App.view.MinistryEmployeesView": [],
   "MEC_App.view.MinistryInThePressView": [],
+  "MEC_App.view.MinistryNewsSection3View": [],
+  "MEC_App.view.MinistryNewsSection4View": [],
+  "MEC_App.view.MinistryNewsSection5View": [],
+  "MEC_App.view.MinistryNewsSection6View": [],
   "MEC_App.view.MinistryNewsView": [],
   "MEC_App.view.MinistryPublicationView": [],
+  "MEC_App.view.MinistryReflectionsView": [],
   "MEC_App.view.MonthlyFruitView": [],
   "MEC_App.view.MyBusinessView": [],
   "MEC_App.view.MyRequestsView": [],
@@ -1586,11 +1591,26 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MinistryInThePressView": [
     "widget.MinistryInThePressView"
   ],
+  "MEC_App.view.MinistryNewsSection3View": [
+    "widget.MinistryNewsSection3View"
+  ],
+  "MEC_App.view.MinistryNewsSection4View": [
+    "widget.MinistryNewsSection4View"
+  ],
+  "MEC_App.view.MinistryNewsSection5View": [
+    "widget.MinistryNewsSection5View"
+  ],
+  "MEC_App.view.MinistryNewsSection6View": [
+    "widget.MinistryNewsSection6View"
+  ],
   "MEC_App.view.MinistryNewsView": [
     "widget.MinistryNewsView"
   ],
   "MEC_App.view.MinistryPublicationView": [
     "widget.MinistryPublicationView"
+  ],
+  "MEC_App.view.MinistryReflectionsView": [
+    "widget.MinistryReflectionsView"
   ],
   "MEC_App.view.MonthlyFruitView": [
     "widget.MonthlyFruitView"

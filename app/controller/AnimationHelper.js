@@ -30,10 +30,12 @@ Ext.define('MEC_App.controller.AnimationHelper', {
 
             if (panel.isHidden()) {
                 panel.show({type: 'slide', direction: 'down'});
+
+                element.removeCls('acc-header2');
             }
             else {
                 panel.hide();
-
+                element.addCls('acc-header2');
                 //{type: 'slide', direction: 'up'}
 
             }

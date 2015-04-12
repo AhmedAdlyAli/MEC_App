@@ -18,6 +18,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
     alias: 'widget.TradeNameAvailabilityView',
 
     requires: [
+        'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.Text',
         'Ext.Button',
@@ -31,6 +32,12 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
         layout: 'fit',
         scrollable: false,
         items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                docked: 'top',
+                html: 'البحث عن اسم تجاري'
+            },
             {
                 xtype: 'fieldset',
                 docked: 'top',

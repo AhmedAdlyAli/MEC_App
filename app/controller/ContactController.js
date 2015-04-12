@@ -39,35 +39,35 @@ Ext.define('MEC_App.controller.ContactController', {
     onContactBtn1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onContactBtn2Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('Branches')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onContactBtn3Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onContactBtn4Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ContactUs2View',
-            title: Ext.Global.GetViewTitle('ContactUs2')
+            title: Ext.Global.GetFixedTitle()
         });
     },
 
     onContactBtn5Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     }
 

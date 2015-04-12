@@ -21,6 +21,7 @@
             "Ext.device.Notification",
             "MEC_App.controller.DeviceController"
         ],
+        "scrollable": null,
         "url": null
     },
     "name": "MyFormPanel",
@@ -38,6 +39,22 @@
     ],
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "ابلغ عن شكوي"
+            },
+            "name": "MyLabel3",
+            "designerId": "8a1f3b8e-3fa5-4382-8b71-5f5c6373991d"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",
@@ -49,7 +66,10 @@
                 "layout|flex": 1,
                 "modal": null,
                 "scrollable": [
-                    "{ direction: 'vertical', directionLock: true }"
+                    "{",
+                    "                    direction: 'vertical',",
+                    "                    directionLock: true",
+                    "                }"
                 ],
                 "title": null
             },
@@ -564,16 +584,16 @@
                                     "if(err.length>0){",
                                     "",
                                     "    Ext.device.Notification.show({",
-                                    "        title: 'Error',",
-                                    "        buttons: [\"OK\"],",
+                                    "        title: 'خطأ',",
+                                    "        buttons:[\"موافق\"],",
                                     "        message: err",
                                     "    });",
                                     "}else{",
                                     "",
                                     "",
                                     "    Ext.device.Notification.show({",
-                                    "        title: 'Ok',",
-                                    "        buttons: [\"OK\"],",
+                                    "        title: 'رسالة',",
+                                    "        buttons: [\"موافق\"],",
                                     "        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),",
                                     "        callback: function(button) {",
                                     "",

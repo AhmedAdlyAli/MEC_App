@@ -90,7 +90,12 @@ Ext.application({
         'NewsDetailsView',
         'MinistryNewsView',
         'NewsListItem',
-        'TradeNameEstablishmentDetails'
+        'TradeNameEstablishmentDetails',
+        'MinistryReflectionsView',
+        'MinistryNewsSection3View',
+        'MinistryNewsSection4View',
+        'MinistryNewsSection5View',
+        'MinistryNewsSection6View'
     ],
     controllers: [
         'HomeController',

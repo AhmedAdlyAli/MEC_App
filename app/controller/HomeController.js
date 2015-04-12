@@ -155,24 +155,24 @@ Ext.define('MEC_App.controller.HomeController', {
 
         button.up('MainNavView').push({
                             xtype: 'PublicServiceView',
-                            title: Ext.Global.GetViewTitle('PublicServices')
+                            title: Ext.Global.GetFixedTitle()
                         });
 
 
     },
 
     onBtnMediaCenter1Tap: function(button, e, eOpts) {
-         button.up('MainNavView').push({
-                            xtype: 'MediaCenterView',
-                            title: Ext.Global.GetViewTitle('MediaCenter')
-                        });
+        button.up('MainNavView').push({
+            xtype: 'MediaCenterView',
+            title: Ext.Global.GetFixedTitle()
+        });
 
     },
 
     onHomeInquire1Tap: function(button, e, eOpts) {
          button.up('MainNavView').push({
                              xtype: 'InquiriesView',
-                             title: Ext.Global.GetViewTitle('Inquiries')
+                             title: Ext.Global.GetFixedTitle()
                          });
 
     },
@@ -180,7 +180,7 @@ Ext.define('MEC_App.controller.HomeController', {
     onHomeReports1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                         xtype: 'ReportsView',
-                        title: Ext.Global.GetViewTitle('Reports')
+                        title: Ext.Global.GetFixedTitle()
                     });
 
 
@@ -189,7 +189,7 @@ Ext.define('MEC_App.controller.HomeController', {
     onBtnProjects1Tap: function(button, e, eOpts) {
          button.up('MainNavView').push({
                         xtype: 'ProjectsView',
-                        title: Ext.Global.GetViewTitle('Projects')
+                        title: Ext.Global.GetFixedTitle()
                     });
 
     },
@@ -197,7 +197,7 @@ Ext.define('MEC_App.controller.HomeController', {
     onHomeContact1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
-            title: Ext.Global.GetViewTitle('ContactUs')
+            title: Ext.Global.GetFixedTitle()
         });
 
     }

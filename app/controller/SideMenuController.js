@@ -58,7 +58,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'PublicServiceView',
-            title: Ext.Global.GetViewTitle('PublicServices')
+            title: Ext.Global.GetFixedTitle()
         });
 
 
@@ -84,7 +84,8 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'MediaCenterView',
-            title: Ext.Global.GetViewTitle('MediaCenter')
+            title: Ext.Global.GetFixedTitle()
+
         });
 
 
@@ -96,7 +97,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                 Ext.Viewport.getActiveItem().push({
                     xtype: 'InquiriesView',
-                    title: Ext.Global.GetViewTitle('Inquiries')
+                    title: Ext.Global.GetFixedTitle()
                 });
 
 
@@ -109,7 +110,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'ContactUsView',
-            title:  Ext.Global.GetViewTitle('ContactUs')
+            title:  Ext.Global.GetFixedTitle()
         });
 
 
@@ -121,7 +122,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                 Ext.Viewport.getActiveItem().push({
                                     xtype: 'ProjectsView',
-                                    title: Ext.Global.GetViewTitle('Projects')
+                                    title: Ext.Global.GetFixedTitle()
                                 });
     },
 
@@ -131,7 +132,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                         Ext.Viewport.getActiveItem().push({
                                             xtype: 'ReportsView',
-                                            title:  Ext.Global.GetViewTitle('Reports')
+                                            title:  Ext.Global.GetFixedTitle()
                                         });
 
 
@@ -143,7 +144,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                                 Ext.Viewport.getActiveItem().push({
                                                     xtype: 'SettingsView',
-                                                    title: Ext.Global.GetViewTitle('Settings')
+                                                    title: Ext.Global.GetFixedTitle()
                                                 });
 
 
@@ -156,7 +157,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
                                                         Ext.Viewport.getActiveItem().push({
                                                             xtype: 'LogivFormView',
-                                                            title:  Ext.Global.GetViewTitle('LogivForm')
+                                                            title:  Ext.Global.GetFixedTitle()
                                                         });
 
 

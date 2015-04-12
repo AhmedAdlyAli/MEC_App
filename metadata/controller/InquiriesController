@@ -30,7 +30,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'TradeNameAvailabilityView',",
-                    "            title: 'البحث عن اسم تجاري'",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });",
                     "",
                     "",
@@ -61,7 +61,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });"
                 ],
                 "name": "tap"
@@ -88,7 +88,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });"
                 ],
                 "name": "tap"
@@ -115,7 +115,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });"
                 ],
                 "name": "tap"
@@ -142,7 +142,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });"
                 ],
                 "name": "tap"
@@ -169,7 +169,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle() ",
                     "        });"
                 ],
                 "name": "tap"

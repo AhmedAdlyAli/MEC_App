@@ -313,7 +313,7 @@
                     "",
                     "button.up('MainNavView').push({",
                     "                    xtype: 'PublicServiceView',",
-                    "                    title: Ext.Global.GetViewTitle('PublicServices')",
+                    "                    title: Ext.Global.GetFixedTitle()",
                     "                });",
                     "",
                     ""
@@ -340,10 +340,10 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnMediaCenter1Tap",
                 "implHandler": [
-                    " button.up('MainNavView').push({",
-                    "                    xtype: 'MediaCenterView',",
-                    "                    title: Ext.Global.GetViewTitle('MediaCenter')",
-                    "                });",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'MediaCenterView',",
+                    "    title: Ext.Global.GetFixedTitle() ",
+                    "});",
                     ""
                 ],
                 "name": "tap"
@@ -370,7 +370,7 @@
                 "implHandler": [
                     " button.up('MainNavView').push({",
                     "                     xtype: 'InquiriesView',",
-                    "                     title: Ext.Global.GetViewTitle('Inquiries') ",
+                    "                     title: Ext.Global.GetFixedTitle()",
                     "                 });",
                     ""
                 ],
@@ -398,7 +398,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "                xtype: 'ReportsView',",
-                    "                title: Ext.Global.GetViewTitle('Reports')",
+                    "                title: Ext.Global.GetFixedTitle()",
                     "            });",
                     "",
                     ""
@@ -427,7 +427,7 @@
                 "implHandler": [
                     " button.up('MainNavView').push({",
                     "                xtype: 'ProjectsView',",
-                    "                title: Ext.Global.GetViewTitle('Projects')",
+                    "                title: Ext.Global.GetFixedTitle()",
                     "            });",
                     ""
                 ],
@@ -455,7 +455,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "    xtype: 'ContactUsView',",
-                    "    title: Ext.Global.GetViewTitle('ContactUs')",
+                    "    title: Ext.Global.GetFixedTitle()",
                     "});",
                     ""
                 ],

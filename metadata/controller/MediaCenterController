@@ -30,7 +30,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "    xtype: 'MinistryNewsView',",
-                    "    title: Ext.Global.GetViewTitle('MinistryNews')",
+                    "    title: Ext.Global.GetFixedTitle()  ",
                     "});",
                     "",
                     ""
@@ -39,6 +39,150 @@
             },
             "name": "onBtnMinistryNewsTap",
             "designerId": "42f06caa-2633-4d2d-b235-a992d4c3d0d0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnReflections",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnReflectionsTap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'MinistryReflectionsView',",
+                    "    title: Ext.Global.GetFixedTitle()  ",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnReflectionsTap",
+            "designerId": "eee0ef18-cb32-44e8-aedc-557b1f5835e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnNews1",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnNews1Tap",
+                "implHandler": [
+                    " button.up('MainNavView').push({",
+                    "            xtype: 'MinistryNewsSection3View',",
+                    "            title: Ext.Global.GetFixedTitle()  ",
+                    "        });",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnNews1Tap",
+            "designerId": "e4ded142-1eb4-4603-a3f2-0a9317da549c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnNews2",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnNews2Tap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "                    xtype: 'MinistryNewsSection4View',",
+                    "                    title: Ext.Global.GetFixedTitle()  ",
+                    "                });",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnNews2Tap",
+            "designerId": "1cb822a1-345b-469d-a172-6433b37c0f55"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnNews3",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnNews3Tap",
+                "implHandler": [
+                    "    button.up('MainNavView').push({",
+                    "                    xtype: 'MinistryNewsSection5View',",
+                    "                    title: Ext.Global.GetFixedTitle()  ",
+                    "                });",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnNews3Tap",
+            "designerId": "7420d031-bb1f-4eb3-b17d-ac7981b5c0fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnNews4",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnNews4Tap",
+                "implHandler": [
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'MinistryNewsSection6View',",
+                    "    title: Ext.Global.GetFixedTitle()  ",
+                    "});",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnNews4Tap",
+            "designerId": "776d18da-51cb-4d9e-8028-19a6691971fc"
         }
     ]
 }

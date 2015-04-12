@@ -47,7 +47,9 @@
                 ],
                 "fn": "GetViewTitle",
                 "implHandler": [
-                    "          return this.ViewTitles[view];"
+                    "//return '<div class=toplogo></div>';",
+                    "",
+                    "return this.ViewTitles[view];"
                 ]
             },
             "name": "GetViewTitle",
@@ -159,6 +161,22 @@
             },
             "name": "GetConfig",
             "designerId": "3243ead4-4c45-483d-9329-4adf3b4d6a88"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "GetFixedTitle",
+                "implHandler": [
+                    "        return '<img src=\"resources/images/toplogo.png\" />';"
+                ]
+            },
+            "name": "GetFixedTitle",
+            "designerId": "773e14eb-da0d-4e5e-8d81-81a222325b77"
         }
     ]
 }

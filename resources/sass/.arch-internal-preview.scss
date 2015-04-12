@@ -522,6 +522,7 @@ body {
     .btn-send {
         background: #691e49;
         margin: 10px;
+        height:2em;
 
 
         .x-button-label {
@@ -661,6 +662,7 @@ body {
     font-weight: bold;
     font-size: 22px;
     line-height: 50px;
+    margin:0 !important;
 }
 
 
@@ -690,6 +692,44 @@ body {
 
     }
 }
+
+
+.acc-header2{
+    background:#e1e1e1 url(../images/arrow-up.png) no-repeat 5% center;
+    min-height:2.2em !important;
+    padding:0;
+    border-bottom: solid 1px #fff !important;
+
+
+    .x-title{
+        color: #6f2f51 !important;
+        font-size:1em;
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .acc-group{
@@ -743,10 +783,24 @@ body {
 
 .toplogo{
     background: url(../images/toplogo.png) no-repeat center top;
-    width: 13em;
+    width:13em;
     height:2em;
 
+
 }
+
+/*
+
+.x-toolbar-inner{
+
+background: url(../images/toplogo.png) no-repeat center top;
+
+
+}*/
+
+
+
+
 
 
 

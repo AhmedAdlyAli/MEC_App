@@ -18,9 +18,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
     alias: 'widget.ComplaintsView',
 
     requires: [
+        'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.TextArea',
-        'Ext.Label',
         'Ext.Panel',
         'Ext.Img',
         'Ext.Button',
@@ -34,6 +34,11 @@ Ext.define('MEC_App.view.ComplaintsView', {
         layout: 'vbox',
         enableSubmissionForm: false,
         items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'ابلغ عن شكوي'
+            },
             {
                 xtype: 'fieldset',
                 flex: 1,
@@ -262,16 +267,16 @@ Ext.define('MEC_App.view.ComplaintsView', {
                             if(err.length>0){
 
                                 Ext.device.Notification.show({
-                                    title: 'Error',
-                                    buttons: ["OK"],
+                                    title: 'خطأ',
+                                    buttons:["موافق"],
                                     message: err
                                 });
                             }else{
 
 
                                 Ext.device.Notification.show({
-                                    title: 'Ok',
-                                    buttons: ["OK"],
+                                    title: 'رسالة',
+                                    buttons: ["موافق"],
                                     message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
                                     callback: function(button) {
 

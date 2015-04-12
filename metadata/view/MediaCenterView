@@ -166,10 +166,10 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "btnPublications",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "btnMinistryNews",
                                                 "layout|flex": 1,
-                                                "text": "اصدارات الوزارة"
+                                                "text": "اخبار الوزارة"
                                             },
                                             "name": "MyButton7",
                                             "designerId": "a1fa29a4-10c0-43cc-8430-2d9100a63958"
@@ -184,9 +184,9 @@
                                             "userConfig": {
                                                 "iconAlign": "top",
                                                 "iconCls": "icon-print-office",
-                                                "itemId": "btnMinistryNews",
+                                                "itemId": "btnReflections",
                                                 "layout|flex": 1,
-                                                "text": "اصداء عن الوزارة"
+                                                "text": "انعكاسات"
                                             },
                                             "name": "MyButton8",
                                             "designerId": "620d7720-ee6b-476b-9860-95410bc140fa"
@@ -218,26 +218,82 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "btnNews",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "btnNews1",
                                                 "layout|flex": 1,
-                                                "text": "اخبار اقتصادية"
+                                                "text": "اخبار جهات رسمية اقليمية مشابهة"
                                             },
                                             "name": "MyButton9",
                                             "designerId": "d72db07f-0c55-4d35-a794-d7795013d647"
                                         },
                                         {
-                                            "type": "Ext.Spacer",
+                                            "type": "Ext.Button",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "layout|flex": 1
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "btnNews2",
+                                                "layout|flex": 1,
+                                                "text": "اخبار اقتصادية اقليمية"
                                             },
-                                            "name": "MySpacer",
-                                            "designerId": "c1b5f3ca-3959-4614-8487-d2894d14a12f"
+                                            "name": "MyButton1",
+                                            "designerId": "238d0f4e-73e7-4499-bcaa-e22f5ab0b4a1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "services-list-panel"
+                                        ],
+                                        "layout": "hbox"
+                                    },
+                                    "name": "MyPanel2",
+                                    "designerId": "23a03fd6-3d1c-4db8-baa6-9dfd36328f61",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "btnNews3",
+                                                "layout|flex": 1,
+                                                "text": "اخبار جهات رسمية دولية مشابهة"
+                                            },
+                                            "name": "MyButton9",
+                                            "designerId": "181e790b-9590-4f40-808c-b747bcf38e6b"
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "btnNews4",
+                                                "layout|flex": 1,
+                                                "text": "اخبار اقتصادية دولية"
+                                            },
+                                            "name": "MyButton",
+                                            "designerId": "4486199f-c7c5-41c2-b396-b2b2ecc88661"
                                         }
                                     ]
                                 }
@@ -258,13 +314,13 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
-                    "",
+                    "/*",
                     "this.down('#btnPublications').setHtml(Ext.Global.GetViewTitle('MinistryPublications'));",
                     "this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));",
                     "this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));",
                     "",
                     "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('MediaCenter'));",
-                    "",
+                    "*/",
                     "",
                     "",
                     "",

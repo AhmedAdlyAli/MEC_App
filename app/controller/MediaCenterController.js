@@ -20,6 +20,21 @@ Ext.define('MEC_App.controller.MediaCenterController', {
         control: {
             "button#btnMinistryNews": {
                 tap: 'onBtnMinistryNewsTap'
+            },
+            "button#btnReflections": {
+                tap: 'onBtnReflectionsTap'
+            },
+            "button#btnNews1": {
+                tap: 'onBtnNews1Tap'
+            },
+            "button#btnNews2": {
+                tap: 'onBtnNews2Tap'
+            },
+            "button#btnNews3": {
+                tap: 'onBtnNews3Tap'
+            },
+            "button#btnNews4": {
+                tap: 'onBtnNews4Tap'
             }
         }
     },
@@ -27,9 +42,53 @@ Ext.define('MEC_App.controller.MediaCenterController', {
     onBtnMinistryNewsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'MinistryNewsView',
-            title: Ext.Global.GetViewTitle('MinistryNews')
+            title: Ext.Global.GetFixedTitle()
         });
 
+
+    },
+
+    onBtnReflectionsTap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'MinistryReflectionsView',
+            title: Ext.Global.GetFixedTitle()
+        });
+
+
+
+    },
+
+    onBtnNews1Tap: function(button, e, eOpts) {
+         button.up('MainNavView').push({
+                    xtype: 'MinistryNewsSection3View',
+                    title: Ext.Global.GetFixedTitle()
+                });
+
+    },
+
+    onBtnNews2Tap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                            xtype: 'MinistryNewsSection4View',
+                            title: Ext.Global.GetFixedTitle()
+                        });
+
+
+    },
+
+    onBtnNews3Tap: function(button, e, eOpts) {
+            button.up('MainNavView').push({
+                            xtype: 'MinistryNewsSection5View',
+                            title: Ext.Global.GetFixedTitle()
+                        });
+
+
+    },
+
+    onBtnNews4Tap: function(button, e, eOpts) {
+        button.up('MainNavView').push({
+            xtype: 'MinistryNewsSection6View',
+            title: Ext.Global.GetFixedTitle()
+        });
 
     }
 

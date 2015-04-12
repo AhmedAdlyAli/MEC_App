@@ -39,35 +39,35 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     onPrintOfficeBtnTap: function(button, e, eOpts) {
                 button.up('MainNavView').push({
                     xtype: 'PrintOffsView',
-                    title: "خدمات المستخرجات"
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onMyServiceBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'BusinessIndicatorsReport',
-            title: Ext.Global.GetViewTitle('ContactUs')
+            title: Ext.Global.GetFixedTitle()
         });
     },
 
     onMyRequestsBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onComplainsBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'ComplaintsView',
-                    title: Ext.Global.GetViewTitle('Complaints')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onSupplyServicesBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     }
 

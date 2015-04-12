@@ -1327,3 +1327,43 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-04-06 02:10:42.273 MEC_App[13037:2382972] Resetting plugins due to page load.
 2015-04-06 02:10:43.352 MEC_App[13037:2382972] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/E55FE4E9-C6CA-4C07-9BD4-42103C1F29A5/MEC_App.app/www/index.html
+2015-04-12 04:23:15.072 MEC_App[1972:588230] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-12 04:23:15.077 MEC_App[1972:588230] Multi-tasking -> Device: YES, App: YES
+2015-04-12 04:23:15.103 MEC_App[1972:588230] Unlimited access to network resources
+2015-04-12 04:23:15.122 MEC_App[1972:588230] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-12 04:23:16.044 MEC_App[1972:588230] Resetting plugins due to page load.
+2015-04-12 04:23:17.044 MEC_App[1972:588230] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/CB249B80-B370-4D46-A367-6EC860059FB7/MEC_App.app/www/index.html
+2015-04-12 04:31:33.223 MEC_App[2271:649442] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-12 04:31:33.223 MEC_App[2271:649442] Multi-tasking -> Device: YES, App: YES
+2015-04-12 04:31:33.239 MEC_App[2271:649442] Unlimited access to network resources
+2015-04-12 04:31:33.260 MEC_App[2271:649442] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-12 04:31:33.579 MEC_App[2271:649442] Resetting plugins due to page load.
+2015-04-12 04:31:34.297 MEC_App[2271:649442] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/273ACAF0-07B2-4659-9D29-61152775D788/MEC_App.app/www/index.html
+2015-04-12 04:31:40.997 MEC_App[2271:650591] Terminating since there is no system app.
+2015-04-12 04:53:00.276 MEC_App[2884:786496] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-12 04:53:00.310 MEC_App[2884:786496] Multi-tasking -> Device: YES, App: YES
+2015-04-12 04:53:00.327 MEC_App[2884:786496] Unlimited access to network resources
+2015-04-12 04:53:00.340 MEC_App[2884:786496] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-12 04:53:00.667 MEC_App[2884:786496] Resetting plugins due to page load.
+2015-04-12 04:53:01.371 MEC_App[2884:786496] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/A6D3C517-A2C8-44CC-93F1-A1FE59D7B5C1/MEC_App.app/www/index.html

@@ -20,8 +20,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button',
-        'Ext.Spacer'
+        'Ext.Button'
     ],
 
     config: {
@@ -84,18 +83,18 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'btnPublications',
+                                                itemId: 'btnMinistryNews',
                                                 iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'اصدارات الوزارة'
+                                                iconCls: 'icon-print-office',
+                                                text: 'اخبار الوزارة'
                                             },
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'btnMinistryNews',
+                                                itemId: 'btnReflections',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: 'اصداء عن الوزارة'
+                                                text: 'انعكاسات'
                                             }
                                         ]
                                     },
@@ -107,14 +106,41 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'btnNews',
+                                                itemId: 'btnNews1',
                                                 iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'اخبار اقتصادية'
+                                                iconCls: 'icon-print-office',
+                                                text: 'اخبار جهات رسمية اقليمية مشابهة'
                                             },
                                             {
-                                                xtype: 'spacer',
-                                                flex: 1
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'btnNews2',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'اخبار اقتصادية اقليمية'
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        xtype: 'panel',
+                                        cls: 'services-list-panel',
+                                        layout: 'hbox',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'btnNews3',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'اخبار جهات رسمية دولية مشابهة'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'btnNews4',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'اخبار اقتصادية دولية'
                                             }
                                         ]
                                     }
@@ -129,13 +155,13 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
     initialize: function() {
         this.callParent();
-
+        /*
         this.down('#btnPublications').setHtml(Ext.Global.GetViewTitle('MinistryPublications'));
         this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));
         this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));
 
         this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('MediaCenter'));
-
+        */
 
 
 

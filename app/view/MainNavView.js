@@ -32,7 +32,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: 'الرئيسية',
+                title: '<img src="resources/images/toplogo.png" />',
                 id: 'pnlMain',
                 itemId: 'pnlMain',
                 layout: 'vbox',
@@ -284,7 +284,8 @@ Ext.define('MEC_App.view.MainNavView', {
 
         // Add Menu button
 
-        var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
+         var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
+
         navBar.add({
             xtype:'button',
             iconCls: 'list',
@@ -294,12 +295,9 @@ Ext.define('MEC_App.view.MainNavView', {
             }
         });
 
-        // add middle image
-        navBar.setTitle('<div class="toplogo"></div>');
 
-
-
-
+        // add title
+        //navBar.setTitle('<div class=toplogo></div>');
 
 
 
@@ -323,7 +321,6 @@ Ext.define('MEC_App.view.MainNavView', {
         this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
         this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
         this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
-
 
         this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
 

@@ -18,6 +18,23 @@
     "designerId": "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4",
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "البحث عن اسم تجاري"
+            },
+            "name": "MyLabel3",
+            "designerId": "fc12e5ec-38bf-40cc-814b-8352f26bd7ee"
+        },
+        {
             "type": "Ext.form.FieldSet",
             "reference": {
                 "name": "items",

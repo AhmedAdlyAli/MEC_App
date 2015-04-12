@@ -1,0 +1,90 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "news-lstng"
+        ],
+        "defaultType": "NewsListItem",
+        "designer|userAlias": "MinistryNewsSection5View",
+        "designer|userClassName": "MinistryNewsSection5View",
+        "fullscreen": true,
+        "height": "100%",
+        "infinite": true,
+        "itemHeight": 80,
+        "itemId": "NewsList",
+        "onItemDisclosure": true,
+        "padding": null,
+        "pinHeaders": false,
+        "store": "MinistryNewsStore",
+        "useSimpleItems": false,
+        "variableHeights": true
+    },
+    "name": "MinistryNewsSection4View1",
+    "configAlternates": {
+        "useComponents": "boolean"
+    },
+    "designerId": "aa0b2cec-3b5d-4564-ba9b-df1cd7d62c99",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "اخبار جهات رسمية دولية مشابهة"
+            },
+            "name": "MyLabel5",
+            "designerId": "9c13ba0c-d044-4d1e-abbf-21f890d40103"
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{text}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "fd20b3e3-dae3-4563-9bd8-308fca81367a"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPullRefreshPlugin1",
+            "designerId": "073c0b7a-c304-4eee-a6b3-b34cec47495c"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true
+            },
+            "name": "MyListPagingPlugin",
+            "designerId": "214a53ac-7435-496c-ac7a-57bc26ba9573"
+        }
+    ]
+}

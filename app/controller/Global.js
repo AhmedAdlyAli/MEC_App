@@ -31,7 +31,9 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     GetViewTitle: function(view) {
-                  return this.ViewTitles[view];
+        //return '<div class=toplogo></div>';
+
+        return this.ViewTitles[view];
     },
 
     GetGenericContent: function(content) {
@@ -64,6 +66,10 @@ Ext.define('MEC_App.controller.Global', {
 
 
         return config[key];
+    },
+
+    GetFixedTitle: function() {
+                return '<img src="resources/images/toplogo.png" />';
     }
 
 });

@@ -42,7 +42,7 @@ Ext.define('MEC_App.controller.InquiriesController', {
     onInquiriesBtn1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'TradeNameAvailabilityView',
-                    title: 'البحث عن اسم تجاري'
+                    title: Ext.Global.GetFixedTitle()
                 });
 
 
@@ -53,35 +53,35 @@ Ext.define('MEC_App.controller.InquiriesController', {
     onInquiriesBtn2Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn3Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn4Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn5Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn6Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     }
 

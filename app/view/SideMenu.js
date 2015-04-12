@@ -141,6 +141,7 @@ Ext.define('MEC_App.view.SideMenu', {
     initialize: function() {
         this.callParent();
 
+
         this.down('#btnHome').setText(Ext.Global.GetViewTitle('Home'));
         this.down('#btnServices').setText(Ext.Global.GetViewTitle('PublicServices'));
 

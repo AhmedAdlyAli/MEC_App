@@ -39,6 +39,15 @@ Ext.define('MEC_App.controller.LocAr', {
             EconomyNews : 'اخبار الوزارة',
             NewsDetails : 'تفاصيل الخبر',
 
+            MinistryReflections  : 'انعكاسات',
+            MinistryNewsSection3 : 'اخبار جهات رسمية اقليمية مشابهة',
+            MinistryNewsSection4 : 'اخبار اقتصادية اقليمية',
+            MinistryNewsSection5 : 'اخبار جهات رسمية دولية مشابهة',
+            MinistryNewsSection6 : 'اخبار اقتصادية دولية',
+
+
+
+
 
 
             //services

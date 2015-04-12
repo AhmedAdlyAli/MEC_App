@@ -36,6 +36,34 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     },
 
     onBtnSubmitTap: function(button, e, eOpts) {
+
+
+        //validation
+
+
+        var searchKeyword= this.getTxtActivityName().getValue();
+
+
+        if(searchKeyword===''){
+
+
+            Ext.device.Notification.show({
+                title: 'خطأ',
+                buttons:["موافق"],
+                message: 'يجب إدخال كلمة البحث'
+            });
+
+            return;
+
+        }
+
+
+
+
+
+
+
+
         var url = Ext.Global.GetConfig('webServiceUrl');
 
 
@@ -43,7 +71,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             "serviceId":"6",
             "language":"ARA",
             "tradeNameLanguage":"ARA",
-            "tradeName":this.getTxtActivityName().getValue()
+            "tradeName":searchKeyword
         };
 
 
