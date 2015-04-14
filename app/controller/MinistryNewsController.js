@@ -44,19 +44,19 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
 
 
-                Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                    url : 'http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D',
-                    method : 'GET',
+            url : 'http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D',
+            method : 'GET',
 
-                    success : function (response) {
-
-
-                        //console.log(response.responseXML);
+            success : function (response) {
 
 
+                //console.log(response.responseXML);
 
-                        /*var json = Ext.util.JSON.decode(response.responseText);
+
+
+                /*var json = Ext.util.JSON.decode(response.responseText);
                         var store = new Ext.data.Store({
                             //model: 'MEC_App.model.TradeNameResultModel',
                             data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
@@ -66,14 +66,14 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
                         lst.setStore(store);
         */
 
-                        Ext.AnimationHelper.HideLoading();
+                Ext.AnimationHelper.HideLoading();
 
 
-                    },
-                    failure: function(request, resp) {
-                        alert("in failure");
-                    }
-                });
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
 
 
 

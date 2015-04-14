@@ -95,7 +95,8 @@ Ext.application({
         'MinistryNewsSection3View',
         'MinistryNewsSection4View',
         'MinistryNewsSection5View',
-        'MinistryNewsSection6View'
+        'MinistryNewsSection6View',
+        'TradeActivityAvailabilityView'
     ],
     controllers: [
         'HomeController',
@@ -109,7 +110,8 @@ Ext.application({
         'ContactController',
         'ComplaintsController',
         'MinistryNewsController',
-        'TradeNameAvailabilityController'
+        'TradeNameAvailabilityController',
+        'TradeActivityAvailabilityController'
     ],
     name: 'MEC_App',
 

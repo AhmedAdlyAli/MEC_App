@@ -15,7 +15,7 @@
             },
             "viewportOrientation": "portrait"
         },
-        "urlPrefix": "http://localhost:1843",
+        "urlPrefix": "http://localhost:1841",
         "exportPath": "/sencha/MEC_App_Publish",
         "spacesToIndent": 4,
         "sdkPath": "",
@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "webBuild",
-            "display": "Build web app"
+            "value": "nativeBuild",
+            "display": "Native Build"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -57,6 +57,7 @@
             "f2ba1ad2-316c-442d-83bd-a9eb892e100e",
             "7bb9b1f3-41c9-4d55-993b-b3343ace8ef2",
             "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4",
+            "06b96292-0ddf-4d7a-98c6-c8ccd1c18664",
             "92fa4b1a-fa0d-4b1b-92eb-736b1968dc69",
             "c43db057-385d-4208-8b21-34af833644df",
             "bb82c435-9c52-4e6a-b0f5-8a3541f12416",
@@ -113,7 +114,8 @@
             "38a44a64-39c7-44e0-9642-02d0a4777313",
             "7440baa3-86b6-4e24-898f-76e8eb5ab8c7",
             "22a2c68d-2f55-4537-9a81-2b763e52d073",
-            "f5a99d96-a126-4791-be3b-8b12dbddd1c7"
+            "f5a99d96-a126-4791-be3b-8b12dbddd1c7",
+            "07aa8fe2-7c54-409a-9978-00ff42f0b186"
         ],
         "model": [
             "1eedff92-788e-4de6-862c-b4c7207d377d",

@@ -18,7 +18,8 @@
             "ContactController",
             "ComplaintsController",
             "MinistryNewsController",
-            "TradeNameAvailabilityController"
+            "TradeNameAvailabilityController",
+            "TradeActivityAvailabilityController"
         ],
         "models": [
             "PrintOffice",
@@ -95,7 +96,8 @@
             "MinistryNewsSection3View",
             "MinistryNewsSection4View",
             "MinistryNewsSection5View",
-            "MinistryNewsSection6View"
+            "MinistryNewsSection6View",
+            "TradeActivityAvailabilityView"
         ]
     },
     "name": "Application",

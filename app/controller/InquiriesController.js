@@ -52,7 +52,7 @@ Ext.define('MEC_App.controller.InquiriesController', {
 
     onInquiriesBtn2Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
+                    xtype: 'TradeActivityAvailabilityView',
                     title: Ext.Global.GetFixedTitle()
                 });
     },

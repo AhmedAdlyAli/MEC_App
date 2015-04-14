@@ -1,0 +1,128 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "TradeActivityAvailabilityView",
+        "designer|userClassName": "TradeActivityAvailabilityView",
+        "itemId": "",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "TradeNameAvailabilityView1",
+    "designerId": "06b96292-0ddf-4d7a-98c6-c8ccd1c18664",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "البحث عن نشاط تجاري"
+            },
+            "name": "MyLabel3",
+            "designerId": "27da172a-d420-4568-8287-310bc8bfa1b6"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "9341e4b3-f7e8-4719-a18c-3cf77252735e",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtActivity",
+                        "label": "اسم النشاط",
+                        "name": "txtActivity",
+                        "placeHolder": "اسم النشاط"
+                    },
+                    "name": "MyTextField8",
+                    "designerId": "9cafc0e1-66d9-43ec-a44e-05b2a936ffd1"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "designer|displayName": null,
+                        "itemId": "btnSubmitActivity",
+                        "text": "بحث"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "6581d88c-b1cf-48da-9202-10d74778fa89"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": "lstTradeActivityResults",
+                "itemCls": "item-activity",
+                "itemId": null,
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "033db461-5f32-44fb-bf2b-e18ffbcba9ff",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tpl-activity-1'>{businessActivityArabicName}</div>",
+                            "<div class='tpl-activity-2'>{fees} ر.ق</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "e61ac0d1-b73b-4358-a3a3-e0afc6e7232a"
+                }
+            ]
+        }
+    ]
+}

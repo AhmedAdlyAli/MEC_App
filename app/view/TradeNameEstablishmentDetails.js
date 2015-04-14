@@ -279,8 +279,14 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'list',
+                                id: 'lstBranches',
+                                itemCls: 'item-branch',
                                 itemTpl: [
-                                    '<div>List Item {string}</div>'
+                                    '<div class=\'tpl-branch-1\'>{branchName}</div>',
+                                    '',
+                                    '<div class=\'tpl-branch-2\'>{status}</div>',
+                                    '',
+                                    ''
                                 ]
                             }
                         ]
@@ -312,7 +318,6 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                     {
                         xtype: 'list',
                         id: 'lstSignatories',
-                        itemId: 'mylist',
                         itemCls: 'item-signatory',
                         itemTpl: [
                             '',

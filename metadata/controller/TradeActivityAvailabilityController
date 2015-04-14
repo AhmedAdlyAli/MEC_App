@@ -1,0 +1,114 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "TradeActivityAvailabilityController"
+    },
+    "name": "MyController",
+    "designerId": "07aa8fe2-7c54-409a-9978-00ff42f0b186",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "txtActivity",
+                "selector": "#txtActivity"
+            },
+            "name": "txtActivity",
+            "designerId": "b259e159-5c85-4597-bf2f-c1ac2486fdcc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnSubmitActivity",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnSubmitActivityTap",
+                "implHandler": [
+                    "//validation",
+                    "",
+                    "",
+                    "var searchKeyword= this.getTxtActivity().getValue();",
+                    "",
+                    "",
+                    "if(searchKeyword===''){",
+                    "",
+                    "",
+                    "    Ext.device.Notification.show({",
+                    "        title: 'خطأ',",
+                    "        buttons:[\"موافق\"],",
+                    "        message: 'يجب إدخال اسم النشاط'",
+                    "    });",
+                    "",
+                    "    return;",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var url = Ext.Global.GetConfig('webServiceUrl');",
+                    "",
+                    "",
+                    "var requestData = {",
+                    "    \"serviceId\":\"5\",",
+                    "    \"language\":\"ARA\",",
+                    "    \"englishSearchClause\":\"\",",
+                    "    \"arabicSearchClause\":searchKeyword",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : url,",
+                    "    method : 'POST',",
+                    "    jsonData :requestData,",
+                    "    success : function (response) {",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo",
+                    "        });",
+                    "",
+                    "        var lst = Ext.getCmp('lstTradeActivityResults');",
+                    "        lst.setStore(store);",
+                    "",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "",
+                    "",
+                    "    },",
+                    "    failure: function(request, resp) {",
+                    "        alert(\"in failure\");",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnSubmitActivityTap",
+            "designerId": "645b0c90-7332-4afa-8f8e-1d5838322b8c"
+        }
+    ]
+}

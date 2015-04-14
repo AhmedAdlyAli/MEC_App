@@ -739,6 +739,10 @@
                                 "type": "array"
                             },
                             "codeClass": null,
+                            "userConfig": {
+                                "id": "lstBranches",
+                                "itemCls": "item-branch"
+                            },
                             "name": "MyList",
                             "designerId": "97ec3bc6-294b-4a54-8248-210e3a1148e1",
                             "cn": [
@@ -752,7 +756,11 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div>List Item {string}</div>"
+                                            "<div class='tpl-branch-1'>{branchName}</div>",
+                                            "",
+                                            "<div class='tpl-branch-2'>{status}</div>",
+                                            "",
+                                            ""
                                         ]
                                     },
                                     "name": "itemTpl",
@@ -833,7 +841,7 @@
                         "height": null,
                         "id": "lstSignatories",
                         "itemCls": "item-signatory",
-                        "itemId": "mylist",
+                        "itemId": null,
                         "scrollToTopOnRefresh": false
                     },
                     "name": "MyList",

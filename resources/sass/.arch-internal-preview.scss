@@ -753,6 +753,26 @@ body {
 
 }
 
+
+
+.item-branch{
+    padding-right:3em;
+    background: url(../images/branch.png) no-repeat 96% center;
+
+
+    .tpl-branch-1{
+        color: #010101;
+        font-weight:bold;
+    }
+
+    .tpl-branch-2{
+        color: #8b8b8b;
+        font-weight:500;
+    }
+
+
+}
+
 .item-signatory{
 
     //background
@@ -780,6 +800,39 @@ body {
     }
 
 }
+
+
+
+.item-activity{
+    padding-right:3em;
+    padding-bottom:2em;
+    background: #fff url(../images/activity.png) no-repeat 96% center;
+
+
+    .tpl-activity-1{
+        color: #010101;
+        font-weight:bold;
+    }
+
+    .tpl-activity-2{
+        color: #8b8b8b;
+        font-weight:500;
+        float:left;
+        padding-left:0.5em;
+        padding-top:0.5em;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
 
 .toplogo{
     background: url(../images/toplogo.png) no-repeat center top;

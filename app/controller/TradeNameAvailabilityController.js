@@ -243,15 +243,46 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                         //signatories
-                        var store = new Ext.data.Store({
+                        var storeSignatories = new Ext.data.Store({
                             data : company.listOfSignatories.signatories
                         });
 
                         var lst = Ext.getCmp('lstSignatories');
-                        lst.setStore(store);
+                        lst.setStore(storeSignatories);
 
                         lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
                             lst.setScrollable(false);
+
+
+
+                        //Branches
+
+                        if(company.listOfBranches.branches.length > 0){
+                        var storeBranches = new Ext.data.Store({
+                            data : company.listOfBranches.branches
+                        });
+
+
+
+                        var lstBranches = Ext.getCmp('lstBranches');
+                        lstBranches.setStore(storeBranches);
+
+                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
+                        lstBranches.setScrollable(false);
+
+
+                        }
+
+
+
+
+
+
+
+
+
+
+
 
 
                         Ext.AnimationHelper.HideLoading();
