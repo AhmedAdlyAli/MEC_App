@@ -66,7 +66,7 @@ Ext.define('MEC_App.controller.PublicServicesController', {
 
     onSupplyServicesBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
+                    xtype: 'SupplyServiceView1',
                     title: Ext.Global.GetFixedTitle()
                 });
     }

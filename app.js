@@ -58,7 +58,7 @@ Ext.application({
         'PrintOffsView',
         'MyRequestsView',
         'ComplaintsView',
-        'SupplyServiceView',
+        null,
         'MinistryPublicationView',
         'MinistryInThePressView',
         'EconomyNewsView',
@@ -96,7 +96,9 @@ Ext.application({
         'MinistryNewsSection4View',
         'MinistryNewsSection5View',
         'MinistryNewsSection6View',
-        'TradeActivityAvailabilityView'
+        'TradeActivityAvailabilityView',
+        'SupplyServiceView1',
+        'SupplyServiceView2'
     ],
     controllers: [
         'HomeController',
@@ -111,7 +113,8 @@ Ext.application({
         'ComplaintsController',
         'MinistryNewsController',
         'TradeNameAvailabilityController',
-        'TradeActivityAvailabilityController'
+        'TradeActivityAvailabilityController',
+        'SupplyServiceController'
     ],
     name: 'MEC_App',
 

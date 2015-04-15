@@ -60,7 +60,9 @@ Ext.define('MEC_App.controller.Global', {
 
         var config={
 
-            webServiceUrl : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept'
+            webServiceUrl : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+            supplyWebServiceUrl: 'http://ctc.vivensas.com/MService.svc'
+
 
         };
 

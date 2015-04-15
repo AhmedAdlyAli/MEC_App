@@ -137,7 +137,7 @@
                 "fn": "onSupplyServicesBtnTap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
+                    "            xtype: 'SupplyServiceView1',",
                     "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],

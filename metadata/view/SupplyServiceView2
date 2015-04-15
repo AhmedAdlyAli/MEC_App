@@ -1,0 +1,93 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "SupplyServiceView2",
+        "designer|userClassName": "SupplyServiceView2",
+        "itemId": "SupplyServiceView1",
+        "layout": null,
+        "requires": [
+            "Ext.Map"
+        ],
+        "scrollable": null
+    },
+    "name": "SupplyServiceView2",
+    "designerId": "f6c84ffa-9010-493f-85e3-911b6aeabb66",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "نموذج طلب تموين"
+            },
+            "name": "MyLabel",
+            "designerId": "2ebaa5a4-26f5-4b5d-a10b-0f6d4136abb9"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel",
+            "designerId": "ac5efce5-d942-45e6-a68a-e31a9e3ce9b5",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 350,
+                        "id": "mapSuppliers",
+                        "itemId": "mapSuppliers",
+                        "mapOptions": [
+                            "{center: new google.maps.LatLng (25.321283,51.528329),",
+                            "mapTypeId: google.maps.MapTypeId.ROADMAP,",
+                            "zoom: 11}",
+                            "",
+                            ""
+                        ]
+                    },
+                    "name": "MyMap1",
+                    "designerId": "daeca3bc-8624-4edd-b418-24a881a3100a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "btn-send"
+                ],
+                "height": null,
+                "itemId": "btnSupplyNext2",
+                "text": "التالي"
+            },
+            "name": "MyButton",
+            "designerId": "cdadabe4-34b3-4975-96e6-a44928792ed8"
+        }
+    ]
+}

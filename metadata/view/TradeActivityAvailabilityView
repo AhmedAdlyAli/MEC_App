@@ -32,8 +32,8 @@
                 "docked": "top",
                 "html": "البحث عن نشاط تجاري"
             },
-            "name": "MyLabel3",
-            "designerId": "27da172a-d420-4568-8287-310bc8bfa1b6"
+            "name": "MyLabel1",
+            "designerId": "23a29c8e-e229-4a8d-9e54-21aa89735d5b"
         },
         {
             "type": "Ext.form.FieldSet",

@@ -532,6 +532,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -680,6 +691,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
+  "MEC_App.controller.SupplyServiceController": [],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
   "MEC_App.model.ComplaintsModel": [],
@@ -739,7 +751,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
   "MEC_App.view.SideMenu": [],
-  "MEC_App.view.SupplyServiceView": [],
+  "MEC_App.view.SupplyServiceView1": [],
+  "MEC_App.view.SupplyServiceView2": [],
   "MEC_App.view.TradeActivityAvailabilityView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
   "MEC_App.view.TradeNameEstablishmentDetails": [],
@@ -1326,6 +1339,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1484,6 +1508,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
+  "MEC_App.controller.SupplyServiceController": [
+    "controller.SupplyServiceController"
+  ],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
   "MEC_App.model.ComplaintsModel": [
@@ -1641,8 +1668,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.SideMenu": [
     "widget.SideMenu"
   ],
-  "MEC_App.view.SupplyServiceView": [
-    "widget.SupplyServiceView"
+  "MEC_App.view.SupplyServiceView1": [
+    "widget.SupplyServiceView1"
+  ],
+  "MEC_App.view.SupplyServiceView2": [
+    "widget.SupplyServiceView2"
   ],
   "MEC_App.view.TradeActivityAvailabilityView": [
     "widget.TradeActivityAvailabilityView"
