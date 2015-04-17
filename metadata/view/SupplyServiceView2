@@ -59,9 +59,9 @@
                         "id": "mapSuppliers",
                         "itemId": "mapSuppliers",
                         "mapOptions": [
-                            "{center: new google.maps.LatLng (25.321283,51.528329),",
-                            "mapTypeId: google.maps.MapTypeId.ROADMAP,",
-                            "zoom: 11}",
+                            "//{center: new google.maps.LatLng (25.321283,51.528329),",
+                            "//mapTypeId: google.maps.MapTypeId.ROADMAP,",
+                            "//zoom: 11}",
                             "",
                             ""
                         ]

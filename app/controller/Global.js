@@ -72,6 +72,34 @@ Ext.define('MEC_App.controller.Global', {
 
     GetFixedTitle: function() {
                 return '<img src="resources/images/toplogo.png" />';
+    },
+
+    LoadSessionVariables: function() {
+                this.isLogged = false;
+                this.userToken ='';
+                this.identityType  ='';
+                this.identityNum  ='';
+                this.identityNationality  ='';
+
+
+
+    },
+
+    RedirectLoggedUser: function(view) {
+        if(Ext.Global.isLogged){
+            Ext.Viewport.getActiveItem().push({
+                xtype: view,
+                title: Ext.Global.GetFixedTitle()
+            });
+        }else{
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'LoginFomView',
+                title: Ext.Global.GetFixedTitle(),
+                data: view
+            });
+
+
+        }
     }
 
 });

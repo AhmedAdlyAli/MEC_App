@@ -28,10 +28,9 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onPrintOfficeBtnTap",
                 "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "            xtype: 'PrintOffsView',",
-                    "            title: Ext.Global.GetFixedTitle()",
-                    "        });"
+                    "",
+                    "        Ext.Global.RedirectLoggedUser('PrintOffsView1');",
+                    ""
                 ],
                 "name": "tap"
             },

@@ -93,7 +93,7 @@
                     "",
                     "                                         txtField.setValue(item);",
                     "",
-                    "",
+                    "                                    ",
                     "                                     },",
                     "                                     //cancel",
                     "                                     function() {",
@@ -107,6 +107,48 @@
             },
             "name": "ShowNativePicker",
             "designerId": "e7209fac-1f4c-4e7f-9c05-a3979ebad487"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "txtField",
+                    "hiddenField",
+                    "config"
+                ],
+                "fn": "ShowNativePickerWithValue",
+                "implHandler": [
+                    "        // Show the picker",
+                    "        window.plugins.listpicker.showPicker(config,",
+                    "                                             //select item",
+                    "                                             function(selectedValue) {",
+                    "                                                 ",
+                    "                                                 hiddenField.setValue(selectedValue);",
+                    "",
+                    "                                                 Ext.each(config.items, function(item){",
+                    "         ",
+                    "                                                    if(item.value==selectedValue){",
+                    "                                                        txtField.setValue(item.text);",
+                    "                                                    }",
+                    "",
+                    "                                                });",
+                    "                                                 ",
+                    "",
+                    "                                             },",
+                    "                                             //cancel",
+                    "                                             function() {",
+                    "                                                 //  alert(\"You have cancelled\");",
+                    "                                             }",
+                    "                                            );"
+                ]
+            },
+            "name": "ShowNativePickerWithValue",
+            "designerId": "348ead8c-5170-4327-afe5-f0f4aacb0363"
         },
         {
             "type": "basicfunction",

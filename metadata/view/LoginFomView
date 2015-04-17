@@ -1,0 +1,202 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "LoginFomView",
+        "designer|userClassName": "LoginFomView",
+        "itemId": "LoginFomView",
+        "layout": "vbox"
+    },
+    "designerId": "ee788c50-330e-4972-a16a-88b7981051a1",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "print-office-header"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyPanel6",
+            "designerId": "7e52033e-4de6-4e2c-94aa-1a52e96ff5a6",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "print-office-header-overlay"
+                        ],
+                        "height": "100%",
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel15",
+                    "designerId": "19729bb7-51c6-49a1-a3a1-79cad1afca42",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "print-office-header-icon"
+                                ],
+                                "layout|flex": 2
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "48a74a69-f496-4090-827c-8142e3ca3371"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": null,
+                                "cls": [
+                                    "print-office-header-title"
+                                ],
+                                "docked": "bottom",
+                                "html": "تسجيل الدخول",
+                                "layout|flex": 1
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "e15cf61b-fb86-4180-a939-dbabdde06ebc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2.2
+            },
+            "name": "MyPanel7",
+            "designerId": "15799ff3-1832-4307-8157-a969d5102b99",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": null
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "11856e6e-ce2f-4fcd-9222-e2ee9ad6edda",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "txtUserName",
+                                "label": "اسم المستخدم",
+                                "placeHolder": "اسم المستخدم"
+                            },
+                            "name": "MyTextField",
+                            "designerId": "b200a8b6-5d53-4210-afc7-a693b2a0a0ce"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "txtPassword",
+                                "label": "كلمة المرور",
+                                "placeHolder": "كلمة المرور"
+                            },
+                            "name": "MyPasswordField",
+                            "designerId": "21eeec9a-b1f4-4d8a-811e-6e13beebf59a"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "login-links"
+                                ],
+                                "html": "نسيت كلمة السر",
+                                "itemId": "lblForgotPassword"
+                            },
+                            "name": "MyLabel14",
+                            "designerId": "174c990f-6389-4c76-9a7e-14cae29495bd"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-send"
+                                ],
+                                "id": "btnSubmitLogin",
+                                "text": "تسجيل الدخول"
+                            },
+                            "name": "MyButton",
+                            "designerId": "3e4ad74e-de41-4338-a780-f9c70242e791"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-send"
+                                ],
+                                "text": "مستخدم جديد"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "25ad4357-94c4-4a63-a55d-dd51319aafd1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

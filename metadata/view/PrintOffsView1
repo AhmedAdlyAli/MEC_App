@@ -1,0 +1,423 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "PrintOffsView1",
+        "designer|userClassName": "PrintOffsView1",
+        "enableSubmissionForm": false,
+        "fullscreen": null,
+        "itemId": "PrintOffsView1",
+        "layout": "vbox",
+        "pinHeaders": null,
+        "requires": [
+            "MEC_App.controller.DeviceController"
+        ],
+        "scrollable": null,
+        "url": null
+    },
+    "name": "ComplaintsView1",
+    "configAlternates": {
+        "scrollable": "object",
+        "pinHeaders": "boolean"
+    },
+    "designerId": "99f35d15-f4bb-45b7-ba83-452bed8bf276",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "pinHeaders",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "طلب مستخرجات"
+            },
+            "name": "MyLabel3",
+            "designerId": "02889198-f1c8-4429-a949-a05aea44bcc4"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout|flex": 1,
+                "modal": null,
+                "scrollable": [
+                    "{",
+                    "                    direction: 'vertical',",
+                    "                    directionLock: true",
+                    "                }"
+                ],
+                "title": null
+            },
+            "name": "MyFieldSet1",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "04319e39-ab4f-42a3-8723-6a1c13cba9c0",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "companyName",
+                        "label": "اسم الشركة",
+                        "labelAlign": null,
+                        "name": null,
+                        "placeHolder": "اسم الشركة",
+                        "required": true
+                    },
+                    "name": "MyTextField2",
+                    "designerId": "13212168-3710-4c5f-a507-22f5f46ba05f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCompanyNameInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// Create Native drop down",
+                                    "var me = this;",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "        title: \"نوع الشكوي\",",
+                                    "        items: [",
+                                    "            { text: \"Type 1\", value: \"Type 1\" },",
+                                    "            { text: \"Type 2\", value: \"Type 2\" },",
+                                    "            { text: \"Type 3\", value: \"Type 3\" },",
+                                    "            { text: \"Type 4\", value: \"Type 4\" },",
+                                    "            { text: \"Type 5\", value: \"Type 5\" },",
+                                    "            { text: \"Type 6\", value: \"Type 6\" }",
+                                    "",
+                                    "",
+                                    "        ],",
+                                    "        selectedValue: \"2\",",
+                                    "        doneButtonLabel: \"ٌختيار\",",
+                                    "        cancelButtonLabel: \"الغاء\"",
+                                    "    };",
+                                    "",
+                                    "    Ext.DeviceController.ShowNativePicker(me,config);",
+                                    "",
+                                    "",
+                                    "}, me);",
+                                    "",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onCompanyNameInitialize",
+                            "designerId": "d7853177-ae7c-41b9-9b0b-e8dc838fb439"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "hiddenCompanyCR",
+                        "value": [
+                            "39193",
+                            ""
+                        ]
+                    },
+                    "name": "MyHiddenField2",
+                    "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtPrintoutType",
+                        "label": "نوع المستخرج",
+                        "labelAlign": null,
+                        "name": null,
+                        "placeHolder": "نوع المستخرج",
+                        "value": [
+                            "50"
+                        ]
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "04b46beb-3f69-4317-b9c8-8b540546b639",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtPrintoutTypeInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// Create Native drop down",
+                                    "var me = this;",
+                                    "",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "        title: \"نوع المستخرج\",",
+                                    "        items: [",
+                                    "            { text: \"شهادة عدم ملكية\", value: \"50\" },",
+                                    "            { text: \"مستخرج سجل تجاري - العربية\", value: \"51\" },",
+                                    "            { text: \"مستخرج سجل تجاري - انجليزي\", value: \"52\" },",
+                                    "            { text: \"شهادة عن رخصة تجارية\", value: \"53\" }",
+                                    "",
+                                    "",
+                                    "        ],",
+                                    "        selectedValue: \"\",",
+                                    "        doneButtonLabel: \"ٌختيار\",",
+                                    "        cancelButtonLabel: \"الغاء\"",
+                                    "    };",
+                                    "",
+                                    "    var hiddenPrintType = Ext.ComponentQuery.query(\"#hiddenPrintoutType\")[0];",
+                                    "",
+                                    "    Ext.DeviceController.ShowNativePickerWithValue(me,hiddenPrintType, config);",
+                                    "",
+                                    "}, me);",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtPrintoutTypeInitialize",
+                            "designerId": "357ededa-be7c-4696-9129-822af8a2361b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "hiddenPrintoutType",
+                        "value": [
+                            "50"
+                        ]
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "hidden": false,
+                        "id": null,
+                        "itemId": "txtDeliveryMethod",
+                        "label": "طريقة الاستلام",
+                        "name": null,
+                        "placeHolder": "طريقة الاستلام",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField4",
+                    "designerId": "0182cc95-0e5d-41ad-b6a3-564b8a37fda1",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtCategoryInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// add tab function on text field",
+                                    "    var me = this;",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "    title: \"طريقة التسليم\",",
+                                    "    items: [",
+                                    "        { text: \"شخصي\", value: \"1\" },",
+                                    "        { text: \"البريد\", value: \"2\" },",
+                                    "        { text: \"البريد الالكتروني\", value: \"3\" }",
+                                    "",
+                                    "",
+                                    "",
+                                    "    ],",
+                                    "    selectedValue: \"\",",
+                                    "    doneButtonLabel: \"ٌختيار\",",
+                                    "    cancelButtonLabel: \"الغاء\"",
+                                    "    };",
+                                    "",
+                                    "",
+                                    "    var hiddenDeliveryMethod = Ext.ComponentQuery.query(\"#hiddenDeliveryMethod\")[0];",
+                                    "",
+                                    "    Ext.DeviceController.ShowNativePickerWithValue(me,hiddenDeliveryMethod, config);",
+                                    "",
+                                    "",
+                                    "}, me);",
+                                    "",
+                                    "",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtCategoryInitialize",
+                            "designerId": "7bd52c3e-2470-4b63-9f41-03f5ade53ff3"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "hiddenDeliveryMethod"
+                    },
+                    "name": "MyHiddenField1",
+                    "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtNoOfCopies",
+                        "label": "عدد النسخ",
+                        "labelAlign": null,
+                        "name": null,
+                        "placeHolder": "عدد النسخ"
+                    },
+                    "name": "MyTextField1",
+                    "designerId": "636a93be-291f-46bb-967d-7895e60ada0f"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "id": null,
+                        "itemId": "btnPrintoffsNext",
+                        "text": "التالي"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "e0346d7a-ccfb-4a75-a82c-f631da38e939"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "/*",
+                    "this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('shopName'));",
+                    "",
+                    "",
+                    "this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('shopLocation'));",
+                    "",
+                    "this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('ComplaintType'));",
+                    "",
+                    "this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('txtComplaint'));",
+                    "",
+                    "this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('fullName'));",
+                    "",
+                    "this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('email'));",
+                    "",
+                    "this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('mobile'));",
+                    "",
+                    "",
+                    "this.down('#txtBarCode').setPlaceHolder(Ext.Global.GetComplaintsTitle('barcode'))",
+                    ".setLabel(Ext.Global.GetComplaintsTitle('barcode'));",
+                    "",
+                    "",
+                    "this.down('#lblAttachImage').setHtml(Ext.Global.GetComplaintsTitle('AttachImg'));",
+                    "",
+                    "this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));",
+                    "",
+                    "*/",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "bcbf3a29-ec41-4881-9649-6f012d5c5c8c"
+        }
+    ]
+}

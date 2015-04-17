@@ -684,6 +684,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.PrintOffices": [],
@@ -718,7 +719,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.HomeView": [],
   "MEC_App.view.InquiriesView": [],
   "MEC_App.view.InvestorEducationView": [],
-  "MEC_App.view.LogivFormView": [],
+  "MEC_App.view.LoginFomView": [],
   "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [],
   "MEC_App.view.MenuModelDetails": [],
@@ -744,7 +745,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.PrintOfficeDetails": [],
   "MEC_App.view.PrintOfficeForm": [],
   "MEC_App.view.PrintOffices": [],
-  "MEC_App.view.PrintOffsView": [],
+  "MEC_App.view.PrintOffsView1": [],
+  "MEC_App.view.PrintOffsView2": [],
   "MEC_App.view.ProjectsView": [],
   "MEC_App.view.PublicServiceView": [],
   "MEC_App.view.RecallsView": [],
@@ -1499,6 +1501,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.PrintOffices": [
@@ -1569,8 +1572,8 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.InvestorEducationView": [
     "widget.InvestorEducationView"
   ],
-  "MEC_App.view.LogivFormView": [
-    "widget.LogivFormView"
+  "MEC_App.view.LoginFomView": [
+    "widget.LoginFomView"
   ],
   "MEC_App.view.MainNavView": [
     "widget.MainNavView"
@@ -1647,8 +1650,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.PrintOffices": [
     "widget.printoffices"
   ],
-  "MEC_App.view.PrintOffsView": [
-    "widget.PrintOffsView"
+  "MEC_App.view.PrintOffsView1": [
+    "widget.PrintOffsView1"
+  ],
+  "MEC_App.view.PrintOffsView2": [
+    "widget.PrintOffsView2"
   ],
   "MEC_App.view.ProjectsView": [
     "widget.ProjectsView"

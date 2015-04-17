@@ -53,12 +53,9 @@ Ext.application({
         'ProjectsView',
         'ReportsView',
         'SettingsView',
-        'LogivFormView',
         'MyBusinessView',
-        'PrintOffsView',
         'MyRequestsView',
         'ComplaintsView',
-        null,
         'MinistryPublicationView',
         'MinistryInThePressView',
         'EconomyNewsView',
@@ -98,7 +95,10 @@ Ext.application({
         'MinistryNewsSection6View',
         'TradeActivityAvailabilityView',
         'SupplyServiceView1',
-        'SupplyServiceView2'
+        'SupplyServiceView2',
+        'LoginFomView',
+        'PrintOffsView1',
+        'PrintOffsView2'
     ],
     controllers: [
         'HomeController',
@@ -114,7 +114,8 @@ Ext.application({
         'MinistryNewsController',
         'TradeNameAvailabilityController',
         'TradeActivityAvailabilityController',
-        'SupplyServiceController'
+        'SupplyServiceController',
+        'LoginController'
     ],
     name: 'MEC_App',
 
@@ -125,13 +126,8 @@ Ext.application({
         //var loc = Ext.create('MEC_App.controller.LocAr');
         Ext.Global.LoadLocalization();
 
-        //this.Loc = loc;
+        Ext.Global.LoadSessionVariables();
 
-
-        //var Loc;
-
-        //Loc = this.getController('MEC_App.controller.Locale.Ar');
-        //   Loc.Load();
         Ext.create('MEC_App.view.MainNavView', {fullscreen: true});
     }
 

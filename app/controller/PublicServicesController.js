@@ -37,10 +37,9 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     },
 
     onPrintOfficeBtnTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
-                    xtype: 'PrintOffsView',
-                    title: Ext.Global.GetFixedTitle()
-                });
+
+                Ext.Global.RedirectLoggedUser('PrintOffsView1');
+
     },
 
     onMyServiceBtnTap: function(button, e, eOpts) {

@@ -90,9 +90,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                             { text: "Type 5", value: "Type 5" },
                                             { text: "Type 6", value: "Type 6" }
 
-
                                             ],
-                                            selectedValue: "2",
+                                            selectedValue: "1",
                                             doneButtonLabel: "ٌختيار",
                                             cancelButtonLabel: "الغاء"
                                         };
@@ -293,7 +292,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                         },
                         cls: 'btn-send',
-                        id: 'btnSubmit',
+                        id: 'btnSubmitComplaint',
                         text: 'ارسال'
                     }
                 ]
@@ -384,7 +383,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
         this.down('#lblAttachImage').setHtml(Ext.Global.GetComplaintsTitle('AttachImg'));
 
-        this.down('#btnSubmit').setText(Ext.Global.GetComplaintsTitle('Submit'));
+        this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));
 
 
 

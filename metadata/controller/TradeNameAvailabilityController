@@ -251,7 +251,7 @@
                     "// get establishment details",
                     "",
                     "",
-                    "",
+                    "console.log(cr);",
                     "",
                     "         requestData = {",
                     "  \"serviceId\": \"8\",",

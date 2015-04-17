@@ -484,7 +484,14 @@ body {
     }
 }
 
+
+.rtl {direction:rtl}
+
+
+
 .complaint-view {
+
+    
     .x-form-fieldset  {
         direction: rtl;
         margin: 0;
@@ -521,7 +528,7 @@ body {
 
 
 
- .btn-send {
+    .btn-send {
         background: #691e49;
         margin: 10px;
         height:2em;
@@ -799,12 +806,12 @@ body {
 
 .item-quantity{
 
- padding:0.5em 0 0.5em 0;
+    padding:0.5em 0 0.5em 0;
 
-  div{
+    div{
 
-      float:right;
-  }
+        float:right;
+    }
     input{
 
         float:left;

@@ -548,7 +548,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "ce9e0aeb-13d2-4486-a84f-1dd1587e45ed";
+				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -583,7 +583,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "ce9e0aeb-13d2-4486-a84f-1dd1587e45ed";
+				PROVISIONING_PROFILE = "f23066c1-fd13-4114-8daf-9aed59b0157c";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

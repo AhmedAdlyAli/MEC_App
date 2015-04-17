@@ -1367,3 +1367,322 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2015-04-12 04:53:00.667 MEC_App[2884:786496] Resetting plugins due to page load.
 2015-04-12 04:53:01.371 MEC_App[2884:786496] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/039D28DF-EDC1-4AAC-A879-251C7B0EE6AB/data/Containers/Bundle/Application/A6D3C517-A2C8-44CC-93F1-A1FE59D7B5C1/MEC_App.app/www/index.html
+2015-04-16 23:32:46.663 MEC_App[4541:1891719] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/EFE3562B-EBF9-40DD-A935-62B8CE72E07E/Library/Cookies/Cookies.binarycookies
+2015-04-16 23:32:47.356 MEC_App[4541:1891719] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 23:32:47.357 MEC_App[4541:1891719] Multi-tasking -> Device: YES, App: YES
+2015-04-16 23:32:47.373 MEC_App[4541:1891719] Unlimited access to network resources
+2015-04-16 23:32:47.416 MEC_App[4541:1891719] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-04-16 23:32:48.254 MEC_App[4541:1891719] Resetting plugins due to page load.
+2015-04-16 23:32:48.771 MEC_App[4541:1891719] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/17477D45-57F7-4421-8D3A-CE0289B9B5FC/MEC_App.app/www/index.html
+2015-04-16 23:53:49.192 MEC_App[5479:1987179] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC545441-A1DE-40B9-B321-9888F7CE6E6C/Library/Cookies/Cookies.binarycookies
+2015-04-16 23:53:49.354 MEC_App[5479:1987179] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-16 23:53:49.354 MEC_App[5479:1987179] Multi-tasking -> Device: YES, App: YES
+2015-04-16 23:53:49.356 MEC_App[5479:1987179] Unlimited access to network resources
+2015-04-16 23:53:49.374 MEC_App[5479:1987179] Restoring old webstorage backup. From: '/Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC545441-A1DE-40B9-B321-9888F7CE6E6C/Library/WebKit/LocalStorage/file__0.localstorage' To: '/Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC545441-A1DE-40B9-B321-9888F7CE6E6C/Library/Caches/file__0.localstorage'.
+2015-04-16 23:53:49.400 MEC_App[5479:1987179] Removing old webstorage backup: '/Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC545441-A1DE-40B9-B321-9888F7CE6E6C/Library/WebKit/LocalStorage/file__0.localstorage'.
+2015-04-16 23:53:49.954 MEC_App[5479:1987179] Resetting plugins due to page load.
+2015-04-16 23:53:50.394 MEC_App[5479:1987179] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/F8498FF2-8879-41EB-8B69-92F2000B82EE/MEC_App.app/www/index.html
+2015-04-16 23:53:50.408 MEC_App[5479:1987179] THREAD WARNING: ['Device'] took '12.361084' ms. Plugin should use a background thread.
+2015-04-17 00:04:19.996 MEC_App[6572:2036990] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/97454B40-0C56-4B67-9A75-7EF238ADD4E1/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:04:20.163 MEC_App[6572:2036990] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:04:20.163 MEC_App[6572:2036990] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:04:20.165 MEC_App[6572:2036990] Unlimited access to network resources
+2015-04-17 00:04:20.463 MEC_App[6572:2036990] Resetting plugins due to page load.
+2015-04-17 00:04:20.866 MEC_App[6572:2036990] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/8B935E53-5C23-46A5-A15B-467767D70B8B/MEC_App.app/www/index.html
+2015-04-17 00:08:23.500 MEC_App[7007:2057018] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/B8FDFB8E-BF6A-4A42-9196-B02B99B4978F/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:08:23.626 MEC_App[7007:2057018] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:08:23.627 MEC_App[7007:2057018] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:08:23.628 MEC_App[7007:2057018] Unlimited access to network resources
+2015-04-17 00:08:23.991 MEC_App[7007:2057018] Resetting plugins due to page load.
+2015-04-17 00:08:24.499 MEC_App[7007:2057018] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/D02D18C9-DCD1-4AB5-B7F1-D77CC40357F6/MEC_App.app/www/index.html
+2015-04-17 00:08:32.818 MEC_App[7007:2057018] THREAD WARNING: ['Notification'] took '131.012939' ms. Plugin should use a background thread.
+2015-04-17 00:16:19.440 MEC_App[7333:2104496] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CDB68D29-0A3B-4200-923A-724C310CEE92/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:16:19.868 MEC_App[7333:2104496] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:16:19.868 MEC_App[7333:2104496] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:16:19.879 MEC_App[7333:2104496] Unlimited access to network resources
+2015-04-17 00:16:20.924 MEC_App[7333:2104496] Resetting plugins due to page load.
+2015-04-17 00:16:22.345 MEC_App[7333:2104496] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/C8F7CF5E-D7D5-477F-BE5B-5267E594506B/MEC_App.app/www/index.html
+2015-04-17 00:18:38.601 MEC_App[7333:2104496] THREAD WARNING: ['Notification'] took '129.495117' ms. Plugin should use a background thread.
+2015-04-17 00:21:40.291 MEC_App[7778:2142389] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/7CB38B5C-ABFE-4FCD-9E5A-C5833B5B56CF/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:21:40.484 MEC_App[7778:2142389] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:21:40.484 MEC_App[7778:2142389] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:21:40.486 MEC_App[7778:2142389] Unlimited access to network resources
+2015-04-17 00:21:40.774 MEC_App[7778:2142389] Resetting plugins due to page load.
+2015-04-17 00:21:41.207 MEC_App[7778:2142389] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/B3BA6D74-28C2-4175-B9EF-3095B622A381/MEC_App.app/www/index.html
+2015-04-17 00:22:08.269 MEC_App[7778:2142389] THREAD WARNING: ['ListPicker'] took '55.562012' ms. Plugin should use a background thread.
+2015-04-17 00:29:58.379 MEC_App[8080:2193038] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC4F7479-BBB0-4948-B432-4198E66BE83C/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:29:58.638 MEC_App[8080:2193038] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:29:58.638 MEC_App[8080:2193038] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:29:58.640 MEC_App[8080:2193038] Unlimited access to network resources
+2015-04-17 00:29:59.197 MEC_App[8080:2193038] Resetting plugins due to page load.
+2015-04-17 00:29:59.693 MEC_App[8080:2193038] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/D54C66BC-23F6-4A39-A627-703E4A23867D/MEC_App.app/www/index.html
+2015-04-17 00:29:59.720 MEC_App[8080:2193038] THREAD WARNING: ['Device'] took '25.069824' ms. Plugin should use a background thread.
+2015-04-17 00:30:26.720 MEC_App[8080:2193038] -[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7c672660
+2015-04-17 00:30:26.776 MEC_App[8080:2193038] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7c672660'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x003b6746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0308ca97 objc_exception_throw + 44
+	2   CoreFoundation                      0x003be705 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x00305287 ___forwarding___ + 1047
+	4   CoreFoundation                      0x00304e4e _CF_forwarding_prep_0 + 14
+	5   MEC_App                             0x00083e2c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	6   MEC_App                             0x0008396b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	7   MEC_App                             0x00083450 -[ListPicker didDismissWithDoneButton:] + 272
+	8   libobjc.A.dylib                     0x030a27cd -[NSObject performSelector:withObject:withObject:] + 84
+	9   UIKit                               0x00776a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	10  UIKit                               0x00afcbba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	11  libobjc.A.dylib                     0x030a27cd -[NSObject performSelector:withObject:withObject:] + 84
+	12  UIKit                               0x00776a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	13  UIKit                               0x00776a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	14  UIKit                               0x008b718a -[UIControl sendAction:to:forEvent:] + 69
+	15  UIKit                               0x008b75a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	16  UIKit                               0x008b6811 -[UIControl touchesEnded:withEvent:] + 660
+	17  UIKit                               0x007cecfa -[UIWindow _sendTouchesForEvent:] + 874
+	18  UIKit                               0x007cf7d6 -[UIWindow sendEvent:] + 792
+	19  UIKit                               0x0078d6d1 -[UIApplication sendEvent:] + 242
+	20  UIKit                               0x0079db08 _UIApplicationHandleEventFromQueueEvent + 21484
+	21  UIKit                               0x00771337 _UIApplicationHandleEventQueue + 2300
+	22  CoreFoundation                      0x002d806f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	23  CoreFoundation                      0x002cdb7d __CFRunLoopDoSources0 + 253
+	24  CoreFoundation                      0x002cd0d8 __CFRunLoopRun + 952
+	25  CoreFoundation                      0x002cca5b CFRunLoopRunSpecific + 443
+	26  CoreFoundation                      0x002cc88b CFRunLoopRunInMode + 123
+	27  GraphicsServices                    0x045fb2c9 GSEventRunModal + 192
+	28  GraphicsServices                    0x045fb106 GSEventRun + 104
+	29  UIKit                               0x00775106 UIApplicationMain + 1526
+	30  MEC_App                             0x000701d9 main + 89
+	31  libdyld.dylib                       0x0375aac9 start + 1
+	32  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-04-17 00:32:14.770 MEC_App[8343:2208532] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/8BDD4D6E-2206-4C50-818D-BDE8037CC540/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:32:14.960 MEC_App[8343:2208532] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:32:14.960 MEC_App[8343:2208532] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:32:14.962 MEC_App[8343:2208532] Unlimited access to network resources
+2015-04-17 00:32:15.420 MEC_App[8343:2208532] Resetting plugins due to page load.
+2015-04-17 00:32:15.955 MEC_App[8343:2208532] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/A80BCA30-4360-4C26-8F31-804087E290BE/MEC_App.app/www/index.html
+2015-04-17 00:32:15.977 MEC_App[8343:2208532] THREAD WARNING: ['Device'] took '19.682861' ms. Plugin should use a background thread.
+2015-04-17 00:32:32.045 MEC_App[8343:2208532] THREAD WARNING: ['ListPicker'] took '30.664062' ms. Plugin should use a background thread.
+2015-04-17 00:32:34.821 MEC_App[8343:2208532] -[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7bf50550
+2015-04-17 00:32:34.845 MEC_App[8343:2208532] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7bf50550'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00364746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0303aa97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0036c705 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x002b3287 ___forwarding___ + 1047
+	4   CoreFoundation                      0x002b2e4e _CF_forwarding_prep_0 + 14
+	5   MEC_App                             0x00031e2c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	6   MEC_App                             0x0003196b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	7   MEC_App                             0x00031450 -[ListPicker didDismissWithDoneButton:] + 272
+	8   libobjc.A.dylib                     0x030507cd -[NSObject performSelector:withObject:withObject:] + 84
+	9   UIKit                               0x00724a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	10  UIKit                               0x00aaabba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	11  libobjc.A.dylib                     0x030507cd -[NSObject performSelector:withObject:withObject:] + 84
+	12  UIKit                               0x00724a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	13  UIKit                               0x00724a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	14  UIKit                               0x0086518a -[UIControl sendAction:to:forEvent:] + 69
+	15  UIKit                               0x008655a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	16  UIKit                               0x00864811 -[UIControl touchesEnded:withEvent:] + 660
+	17  UIKit                               0x0077ccfa -[UIWindow _sendTouchesForEvent:] + 874
+	18  UIKit                               0x0077d7d6 -[UIWindow sendEvent:] + 792
+	19  UIKit                               0x0073b6d1 -[UIApplication sendEvent:] + 242
+	20  UIKit                               0x0074bb08 _UIApplicationHandleEventFromQueueEvent + 21484
+	21  UIKit                               0x0071f337 _UIApplicationHandleEventQueue + 2300
+	22  CoreFoundation                      0x0028606f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	23  CoreFoundation                      0x0027bb7d __CFRunLoopDoSources0 + 253
+	24  CoreFoundation                      0x0027b0d8 __CFRunLoopRun + 952
+	25  CoreFoundation                      0x0027aa5b CFRunLoopRunSpecific + 443
+	26  CoreFoundation                      0x0027a88b CFRunLoopRunInMode + 123
+	27  GraphicsServices                    0x045a92c9 GSEventRunModal + 192
+	28  GraphicsServices                    0x045a9106 GSEventRun + 104
+	29  UIKit                               0x00723106 UIApplicationMain + 1526
+	30  MEC_App                             0x0001e1d9 main + 89
+	31  libdyld.dylib                       0x03708ac9 start + 1
+	32  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-04-17 00:37:44.990 MEC_App[8619:2239130] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/BBC31FBB-D4B2-4E18-A13B-9CC8A136D056/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:37:45.107 MEC_App[8619:2239130] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:37:45.108 MEC_App[8619:2239130] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:37:45.120 MEC_App[8619:2239130] Unlimited access to network resources
+2015-04-17 00:37:45.748 MEC_App[8619:2239130] Resetting plugins due to page load.
+2015-04-17 00:37:46.426 MEC_App[8619:2239130] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/1F90010B-32D7-47FD-9FE4-47271260B948/MEC_App.app/www/index.html
+2015-04-17 00:38:32.624 MEC_App[8619:2239130] THREAD WARNING: ['Notification'] took '58.187988' ms. Plugin should use a background thread.
+2015-04-17 00:42:16.446 MEC_App[8893:2268680] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CAB42343-DA61-416C-9F18-10BADDB00183/Library/Cookies/Cookies.binarycookies
+2015-04-17 00:42:16.553 MEC_App[8893:2268680] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 00:42:16.553 MEC_App[8893:2268680] Multi-tasking -> Device: YES, App: YES
+2015-04-17 00:42:16.555 MEC_App[8893:2268680] Unlimited access to network resources
+2015-04-17 00:42:16.664 MEC_App[8893:2268680] Resetting plugins due to page load.
+2015-04-17 00:42:17.039 MEC_App[8893:2268680] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/18AD8C58-85B7-48A7-AB69-7F74A88E16C6/MEC_App.app/www/index.html
+2015-04-17 01:04:33.765 MEC_App[9307:2353773] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/00582FC1-3B24-4778-B9EC-84227756623E/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:04:33.949 MEC_App[9307:2353773] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:04:33.949 MEC_App[9307:2353773] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:04:33.951 MEC_App[9307:2353773] Unlimited access to network resources
+2015-04-17 01:04:34.506 MEC_App[9307:2353773] Resetting plugins due to page load.
+2015-04-17 01:04:35.008 MEC_App[9307:2353773] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/16A81DB2-2457-46C0-B73B-86CEF8F9991F/MEC_App.app/www/index.html
+2015-04-17 01:04:54.811 MEC_App[9307:2353773] -[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x79c79e00
+2015-04-17 01:04:54.873 MEC_App[9307:2353773] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x79c79e00'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00353746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x03029a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0035b705 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x002a2287 ___forwarding___ + 1047
+	4   CoreFoundation                      0x002a1e4e _CF_forwarding_prep_0 + 14
+	5   MEC_App                             0x00020e2c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	6   MEC_App                             0x0002096b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	7   MEC_App                             0x00020450 -[ListPicker didDismissWithDoneButton:] + 272
+	8   libobjc.A.dylib                     0x0303f7cd -[NSObject performSelector:withObject:withObject:] + 84
+	9   UIKit                               0x00713a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	10  UIKit                               0x00a99bba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	11  libobjc.A.dylib                     0x0303f7cd -[NSObject performSelector:withObject:withObject:] + 84
+	12  UIKit                               0x00713a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	13  UIKit                               0x00713a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	14  UIKit                               0x0085418a -[UIControl sendAction:to:forEvent:] + 69
+	15  UIKit                               0x008545a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	16  UIKit                               0x00853811 -[UIControl touchesEnded:withEvent:] + 660
+	17  UIKit                               0x0076bcfa -[UIWindow _sendTouchesForEvent:] + 874
+	18  UIKit                               0x0076c7d6 -[UIWindow sendEvent:] + 792
+	19  UIKit                               0x0072a6d1 -[UIApplication sendEvent:] + 242
+	20  UIKit                               0x0073ab08 _UIApplicationHandleEventFromQueueEvent + 21484
+	21  UIKit                               0x0070e337 _UIApplicationHandleEventQueue + 2300
+	22  CoreFoundation                      0x0027506f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	23  CoreFoundation                      0x0026ab7d __CFRunLoopDoSources0 + 253
+	24  CoreFoundation                      0x0026a0d8 __CFRunLoopRun + 952
+	25  CoreFoundation                      0x00269a5b CFRunLoopRunSpecific + 443
+	26  CoreFoundation                      0x0026988b CFRunLoopRunInMode + 123
+	27  GraphicsServices                    0x045982c9 GSEventRunModal + 192
+	28  GraphicsServices                    0x04598106 GSEventRun + 104
+	29  UIKit                               0x00712106 UIApplicationMain + 1526
+	30  MEC_App                             0x0000d1d9 main + 89
+	31  libdyld.dylib                       0x036f7ac9 start + 1
+	32  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-04-17 01:05:41.470 MEC_App[9565:2362531] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/D5870F5D-0BC9-41CD-B1F7-1DA86D45DF1D/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:05:41.577 MEC_App[9565:2362531] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:05:41.578 MEC_App[9565:2362531] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:05:41.579 MEC_App[9565:2362531] Unlimited access to network resources
+2015-04-17 01:05:42.052 MEC_App[9565:2362531] Resetting plugins due to page load.
+2015-04-17 01:05:42.299 MEC_App[9565:2362531] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/3EB8763E-C30A-4462-A1F1-43FEC61C6947/MEC_App.app/www/index.html
+2015-04-17 01:09:15.827 MEC_App[9831:2386481] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/D84176BC-5941-495F-881C-F774DDB8CD7E/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:09:15.900 MEC_App[9831:2386481] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:09:15.901 MEC_App[9831:2386481] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:09:15.903 MEC_App[9831:2386481] Unlimited access to network resources
+2015-04-17 01:09:16.004 MEC_App[9831:2386481] Resetting plugins due to page load.
+2015-04-17 01:09:16.387 MEC_App[9831:2386481] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/C19FA882-D422-40D9-9CEA-23B945CE55EC/MEC_App.app/www/index.html
+2015-04-17 01:09:30.289 MEC_App[9831:2386481] THREAD WARNING: ['Notification'] took '86.281738' ms. Plugin should use a background thread.
+2015-04-17 01:11:19.835 MEC_App[10097:2400312] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/F7B24DA8-712B-42F7-BDFB-4A5AD8B0B4EC/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:11:19.983 MEC_App[10097:2400312] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:11:19.983 MEC_App[10097:2400312] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:11:19.985 MEC_App[10097:2400312] Unlimited access to network resources
+2015-04-17 01:11:20.572 MEC_App[10097:2400312] Resetting plugins due to page load.
+2015-04-17 01:11:20.844 MEC_App[10097:2400312] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/55763291-6998-44AD-B06F-0E9EC266A1B8/MEC_App.app/www/index.html
+2015-04-17 01:13:14.299 MEC_App[10356:2411368] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/D7CD76F6-FE72-49BE-AE1B-CF222D1C6ACC/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:13:14.359 MEC_App[10356:2411368] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:13:14.359 MEC_App[10356:2411368] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:13:14.361 MEC_App[10356:2411368] Unlimited access to network resources
+2015-04-17 01:13:14.454 MEC_App[10356:2411368] Resetting plugins due to page load.
+2015-04-17 01:13:14.819 MEC_App[10356:2411368] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/B9769E13-24DD-4229-B8A0-CADD534045DA/MEC_App.app/www/index.html
+2015-04-17 01:14:30.903 MEC_App[10617:2422470] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/A6056A73-47D9-4451-95AA-77BE57AF0908/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:14:30.954 MEC_App[10617:2422470] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:14:30.954 MEC_App[10617:2422470] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:14:30.956 MEC_App[10617:2422470] Unlimited access to network resources
+2015-04-17 01:14:31.050 MEC_App[10617:2422470] Resetting plugins due to page load.
+2015-04-17 01:14:31.448 MEC_App[10617:2422470] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/9D2B0CB8-ED9D-47B0-A84B-1660C4623BA9/MEC_App.app/www/index.html
+2015-04-17 01:18:33.110 MEC_App[10928:2449377] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/E9B0BAD4-7C99-4DDA-86D6-7CC9CFE44F5C/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:18:33.181 MEC_App[10928:2449377] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:18:33.181 MEC_App[10928:2449377] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:18:33.183 MEC_App[10928:2449377] Unlimited access to network resources
+2015-04-17 01:18:33.276 MEC_App[10928:2449377] Resetting plugins due to page load.
+2015-04-17 01:18:33.644 MEC_App[10928:2449377] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/438230EB-9C5A-41D8-9EF9-78393C53F6B6/MEC_App.app/www/index.html
+2015-04-17 01:19:42.954 MEC_App[11188:2454858] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/CC0F8B66-2EAD-44FC-9F21-7C118C32CC03/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:19:43.016 MEC_App[11188:2454858] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:19:43.016 MEC_App[11188:2454858] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:19:43.018 MEC_App[11188:2454858] Unlimited access to network resources
+2015-04-17 01:19:43.127 MEC_App[11188:2454858] Resetting plugins due to page load.
+2015-04-17 01:19:43.327 MEC_App[11188:2454858] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/88FF3EE4-B507-4C05-B5FF-C8FBC0A42B3F/MEC_App.app/www/index.html
+2015-04-17 01:19:43.379 MEC_App[11188:2454858] THREAD WARNING: ['Device'] took '49.951172' ms. Plugin should use a background thread.
+2015-04-17 01:22:51.983 MEC_App[11450:2475471] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/A8F482AC-5527-4D75-B03F-546F30D0783C/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:22:52.033 MEC_App[11450:2475471] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:22:52.033 MEC_App[11450:2475471] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:22:52.035 MEC_App[11450:2475471] Unlimited access to network resources
+2015-04-17 01:22:52.142 MEC_App[11450:2475471] Resetting plugins due to page load.
+2015-04-17 01:22:52.513 MEC_App[11450:2475471] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/17F620B5-2C62-4288-B91D-FFE1BBABD496/MEC_App.app/www/index.html
+2015-04-17 01:24:06.048 MEC_App[11716:2481627] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/2D7B6F3E-52D6-48BD-AF22-5195CEDC57A1/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:24:06.086 MEC_App[11716:2481627] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:24:06.086 MEC_App[11716:2481627] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:24:06.087 MEC_App[11716:2481627] Unlimited access to network resources
+2015-04-17 01:24:06.174 MEC_App[11716:2481627] Resetting plugins due to page load.
+2015-04-17 01:24:06.628 MEC_App[11716:2481627] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/2D543E34-C246-4700-9A51-89EF56C9BC40/MEC_App.app/www/index.html
+2015-04-17 01:24:51.560 MEC_App[11975:2486069] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/959D0BCE-35C2-41DB-BDE9-FC78B29ED683/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:24:51.650 MEC_App[11975:2486069] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:24:51.650 MEC_App[11975:2486069] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:24:51.652 MEC_App[11975:2486069] Unlimited access to network resources
+2015-04-17 01:24:52.033 MEC_App[11975:2486069] Resetting plugins due to page load.
+2015-04-17 01:24:52.257 MEC_App[11975:2486069] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/1F65D5A4-AFDA-4E85-9DBC-A5C5BE8166C7/MEC_App.app/www/index.html
+2015-04-17 01:25:15.008 MEC_App[11975:2489432] Communications error: <OS_xpc_error: <error: 0x3a7b5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x3a7b83c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-04-17 01:29:07.562 MEC_App[12418:2508447] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/D3383CF8-221F-42B7-8CE9-2768B8699B8D/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:29:07.861 MEC_App[12418:2508447] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:29:07.861 MEC_App[12418:2508447] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:29:07.863 MEC_App[12418:2508447] Unlimited access to network resources
+2015-04-17 01:29:08.383 MEC_App[12418:2508447] Resetting plugins due to page load.
+2015-04-17 01:29:08.919 MEC_App[12418:2508447] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/18232434-346B-485C-89C9-340B01DE9E67/MEC_App.app/www/index.html
+2015-04-17 01:29:32.169 MEC_App[12418:2508447] THREAD WARNING: ['ListPicker'] took '24.165039' ms. Plugin should use a background thread.
+2015-04-17 01:49:36.105 MEC_App[12741:2607011] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/0E3B7B7B-81E6-4FB0-BB58-AD079D80B602/Library/Cookies/Cookies.binarycookies
+2015-04-17 01:49:36.271 MEC_App[12741:2607011] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-17 01:49:36.272 MEC_App[12741:2607011] Multi-tasking -> Device: YES, App: YES
+2015-04-17 01:49:36.273 MEC_App[12741:2607011] Unlimited access to network resources
+2015-04-17 01:49:36.852 MEC_App[12741:2607011] Resetting plugins due to page load.
+2015-04-17 01:49:37.341 MEC_App[12741:2607011] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/175A1092-19D7-410A-8A05-37D74BC0A9E1/MEC_App.app/www/index.html
+2015-04-17 01:49:37.390 MEC_App[12741:2607011] THREAD WARNING: ['Device'] took '48.066650' ms. Plugin should use a background thread.
+2015-04-17 01:49:57.060 MEC_App[12741:2607011] -[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7d19cf80
+2015-04-17 01:49:57.081 MEC_App[12741:2607011] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryM objectAtIndex:]: unrecognized selector sent to instance 0x7d19cf80'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x00413746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x030e9a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0041b705 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x00362287 ___forwarding___ + 1047
+	4   CoreFoundation                      0x00361e4e _CF_forwarding_prep_0 + 14
+	5   MEC_App                             0x000e0e2c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	6   MEC_App                             0x000e096b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	7   MEC_App                             0x000e0450 -[ListPicker didDismissWithDoneButton:] + 272
+	8   libobjc.A.dylib                     0x030ff7cd -[NSObject performSelector:withObject:withObject:] + 84
+	9   UIKit                               0x007d3a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	10  UIKit                               0x00b59bba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	11  libobjc.A.dylib                     0x030ff7cd -[NSObject performSelector:withObject:withObject:] + 84
+	12  UIKit                               0x007d3a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	13  UIKit                               0x007d3a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	14  UIKit                               0x0091418a -[UIControl sendAction:to:forEvent:] + 69
+	15  UIKit                               0x009145a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	16  UIKit                               0x00913811 -[UIControl touchesEnded:withEvent:] + 660
+	17  UIKit                               0x0082bcfa -[UIWindow _sendTouchesForEvent:] + 874
+	18  UIKit                               0x0082c7d6 -[UIWindow sendEvent:] + 792
+	19  UIKit                               0x007ea6d1 -[UIApplication sendEvent:] + 242
+	20  UIKit                               0x007fab08 _UIApplicationHandleEventFromQueueEvent + 21484
+	21  UIKit                               0x007ce337 _UIApplicationHandleEventQueue + 2300
+	22  CoreFoundation                      0x0033506f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	23  CoreFoundation                      0x0032ab7d __CFRunLoopDoSources0 + 253
+	24  CoreFoundation                      0x0032a0d8 __CFRunLoopRun + 952
+	25  CoreFoundation                      0x00329a5b CFRunLoopRunSpecific + 443
+	26  CoreFoundation                      0x0032988b CFRunLoopRunInMode + 123
+	27  GraphicsServices                    0x046582c9 GSEventRunModal + 192
+	28  GraphicsServices                    0x04658106 GSEventRun + 104
+	29  UIKit                               0x007d2106 UIApplicationMain + 1526
+	30  MEC_App                             0x000cd1d9 main + 89
+	31  libdyld.dylib                       0x037b7ac9 start + 1
+	32  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException

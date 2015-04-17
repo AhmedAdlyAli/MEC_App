@@ -41,12 +41,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                         height: 350,
                         id: 'mapSuppliers',
                         itemId: 'mapSuppliers',
-                        mapOptions: {
-                            center: new google.maps.LatLng(25.321283,
-                            51.528329),
-                            mapTypeId: google.maps.MapTypeId.ROADMAP,
-                            zoom: 11
-                        }
+                        mapOptions: '//{center: new google.maps.LatLng (25.321283,51.528329),\n//mapTypeId: google.maps.MapTypeId.ROADMAP,\n//zoom: 11}'
                     }
                 ]
             },

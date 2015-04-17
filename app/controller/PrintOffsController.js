@@ -17,24 +17,162 @@ Ext.define('MEC_App.controller.PrintOffsController', {
     extend: 'Ext.app.Controller',
 
     config: {
+        refs: {
+            PrintOffsView1: '#PrintOffsView1',
+            PrintOffsView2: '#PrintOffsView2'
+        },
+
         control: {
-            "list#PrintOffsList": {
-                itemsingletap: 'onPrintOffsListItemSingletap',
-                itemtap: 'onPrintOffsListItemTap'
+            "button#btnPrintoffsNext": {
+                tap: 'onBtnPrintoffsNextTap'
+            },
+            "panel#PrintOffsView2": {
+                initialize: 'onPrintOffsView2Initialize'
+            },
+            "button#btnPrintoffs2Next": {
+                tap: 'onBtnPrintoffs2NextTap'
             }
         }
     },
 
-    onPrintOffsListItemSingletap: function(dataview, index, target, record, e, eOpts) {
-        dataview.up('MainNavView').push({
-                     xtype: record.data.ItemView,
-                    title: record.data.ItemName
+    onBtnPrintoffsNextTap: function(button, e, eOpts) {
+
+        // Create Case with Form Values
+
+
+        var view = this.getPrintOffsView1();
+
+        Ext.AnimationHelper.ShowLoading();
+
+        var requestData = {
+            "serviceId": "9",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "identityType": 'QID',//Ext.Global.identityType,
+            "identityNum": '120699',//Ext.Global.identityNum,
+            "identityNationality": Ext.Global.identityNationality,
+            "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
+            "caseType":view.down('#hiddenPrintoutType').getValue(),
+            "establishmentSpcId":"",
+            "caseSubType":"01",
+            "contactId":"",
+            "numOfCopies":view.down('#txtNoOfCopies').getValue(),
+            "moiEstablishmentNum":"",
+            "qatarChamberNum":"",
+            "commercialPermitNum":"",
+            "economicalNum":""
+        };
+
+
+
+
+        Ext.Ajax.request({
+
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+
+                //console.log(json);
+                Ext.Viewport.getActiveItem().push({
+                    xtype: 'PrintOffsView2',
+                    title: Ext.Global.GetFixedTitle(),
+                    data: json
                 });
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
 
 
     },
 
-    onPrintOffsListItemTap: function(dataview, index, target, record, e, eOpts) {
+    onPrintOffsView2Initialize: function(component, eOpts) {
+                 var view = this.getPrintOffsView2();
+                var json = view.getData();
+
+        view.down('#lblRequestType').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].type);
+        view.down('#lblNoCopies').setHtml('');
+        view.down('#lblCompanyName').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].orgNameARA);
+        view.down('#lblTotalFees').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecCaseFees.mecCaseFees[0].feesTotalValue);
+
+
+        view.down('#lblRequestNo').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].serialNumber);
+        view.down('#hiddenSerialNo').setValue(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].recordID);
+
+        view.down('#lblRequestStatus').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].status);
+
+        var noOfAttachments = json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecUnifiedAttachmentParameters.mecUnifiedAttachmentParameters.length;
+
+        if(noOfAttachments===0){
+            view.down('#lblRequiredAttachments').setHtml('لا يوجد');
+            }
+
+
+
+
+
+    },
+
+    onBtnPrintoffs2NextTap: function(button, e, eOpts) {
+                 Ext.AnimationHelper.ShowLoading();
+
+                         var view = this.getPrintOffsView2();
+                         var serialNo =  view.down('#hiddenSerialNo').getValue();
+
+
+
+                        var requestData = {
+          "serviceId": "10",
+          "token": Ext.Global.userToken,
+          "objectSpcId": serialNo,
+          "caseSerialNum":""
+        };
+
+
+                        Ext.Ajax.request({
+
+                            url : Ext.Global.GetConfig('webServiceUrl'),
+                            method : 'POST',
+                            jsonData :requestData,
+                            success : function (response) {
+                               var json = Ext.util.JSON.decode(response.responseText);
+
+
+                                alert('Show Confirmation');
+
+
+                                console.log(json);
+
+
+                                Ext.AnimationHelper.HideLoading();
+
+
+                            }
+                        });
+
+
+
+
+
+
+
+
 
     }
 

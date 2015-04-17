@@ -20,7 +20,8 @@
             "MinistryNewsController",
             "TradeNameAvailabilityController",
             "TradeActivityAvailabilityController",
-            "SupplyServiceController"
+            "SupplyServiceController",
+            "LoginController"
         ],
         "models": [
             "PrintOffice",
@@ -55,12 +56,9 @@
             "ProjectsView",
             "ReportsView",
             "SettingsView",
-            "LogivFormView",
             "MyBusinessView",
-            "PrintOffsView",
             "MyRequestsView",
             "ComplaintsView",
-            "SupplyServiceView",
             "MinistryPublicationView",
             "MinistryInThePressView",
             "EconomyNewsView",
@@ -100,7 +98,10 @@
             "MinistryNewsSection6View",
             "TradeActivityAvailabilityView",
             "SupplyServiceView1",
-            "SupplyServiceView2"
+            "SupplyServiceView2",
+            "LoginFomView",
+            "PrintOffsView1",
+            "PrintOffsView2"
         ]
     },
     "name": "Application",
@@ -122,13 +123,8 @@
                     "//var loc = Ext.create('MEC_App.controller.LocAr');",
                     "Ext.Global.LoadLocalization();",
                     "",
-                    "//this.Loc = loc;",
-                    "",
-                    "",
-                    "//var Loc;",
-                    "",
-                    "//Loc = this.getController('MEC_App.controller.Locale.Ar');",
-                    "//   Loc.Load();"
+                    "Ext.Global.LoadSessionVariables();",
+                    ""
                 ]
             },
             "name": "launch",

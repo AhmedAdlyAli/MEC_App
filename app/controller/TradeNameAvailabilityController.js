@@ -186,7 +186,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         // get establishment details
 
 
-
+        console.log(cr);
 
                  requestData = {
           "serviceId": "8",
