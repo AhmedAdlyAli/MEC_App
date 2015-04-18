@@ -54,10 +54,8 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onMyServiceBtnTap",
                 "implHandler": [
-                    "button.up('MainNavView').push({",
-                    "    xtype: 'BusinessIndicatorsReport',",
-                    "    title: Ext.Global.GetFixedTitle()",
-                    "});"
+                    "         Ext.Global.RedirectLoggedUser('MyBusinessView');",
+                    ""
                 ],
                 "name": "tap"
             },

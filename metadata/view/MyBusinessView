@@ -6,9 +6,74 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "MyBusinessView",
-        "designer|userClassName": "MyBusinessView"
+        "designer|userClassName": "MyBusinessView",
+        "itemId": "MyBusinessView",
+        "scrollable": [
+            "{",
+            "            direction: 'vertical',",
+            "            directionLock: true",
+            "        }"
+        ]
     },
     "name": "MyPanel",
-    "designerId": "4872b1ad-f612-4a9b-a8cc-b610878f1115"
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "4872b1ad-f612-4a9b-a8cc-b610878f1115",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "بياناتي الخاصة"
+            },
+            "name": "MyLabel",
+            "designerId": "9aae0f08-8d70-4243-a09f-4ddad8c08aa0"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "item-company",
+                "itemId": "lstMyCompanies"
+            },
+            "name": "MyList",
+            "designerId": "8236bac8-764a-41d6-9a0d-531cc802a0eb",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "    <div class='tpl-signatory-1'>{fullNameARA}</div>",
+                            "    <div class='tpl-signatory-2'><span class='FA'>{type}</span> <span class='FB'>{nationality}</span></div>",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "f9d449fc-b922-4b9b-a687-7e5308a28998"
+                }
+            ]
+        }
+    ]
 }

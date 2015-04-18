@@ -98,7 +98,8 @@ Ext.application({
         'SupplyServiceView2',
         'LoginFomView',
         'PrintOffsView1',
-        'PrintOffsView2'
+        'PrintOffsView2',
+        'MyEstablishmentDetails'
     ],
     controllers: [
         'HomeController',
@@ -115,7 +116,8 @@ Ext.application({
         'TradeNameAvailabilityController',
         'TradeActivityAvailabilityController',
         'SupplyServiceController',
-        'LoginController'
+        'LoginController',
+        'MyBusinessController'
     ],
     name: 'MEC_App',
 

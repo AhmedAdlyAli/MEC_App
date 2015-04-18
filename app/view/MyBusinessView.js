@@ -17,7 +17,36 @@ Ext.define('MEC_App.view.MyBusinessView', {
     extend: 'Ext.Panel',
     alias: 'widget.MyBusinessView',
 
+    requires: [
+        'Ext.Label',
+        'Ext.dataview.List',
+        'Ext.XTemplate'
+    ],
+
     config: {
+        cls: 'complaint-view',
+        itemId: 'MyBusinessView',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'بياناتي الخاصة'
+            },
+            {
+                xtype: 'list',
+                itemId: 'lstMyCompanies',
+                itemCls: 'item-company',
+                itemTpl: [
+                    '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                    ''
+                ]
+            }
+        ]
     }
 
 });

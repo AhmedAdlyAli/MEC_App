@@ -1,6 +1,80 @@
 (: Temp code :)
+==================================
+
+                var requestData = {
+          "serviceId": "1",
+          "userName": "Sadmin",
+          "password": "Sadmin#123"
+        };
 
 
+                Ext.Ajax.request({
+
+                    url : url,
+                    method : 'POST',
+                    // useDefaultXhrHeader: false,
+                    jsonData :requestData,
+                    success : function (response) {
+                       var json = Ext.util.JSON.decode(response.responseText);
+                       token = json.token;
+
+
+
+
+                        Ext.AnimationHelper.HideLoading();
+
+
+                    }
+                });
+ 
+
+
+
+
+    Ext.device.Notification.show({
+        title: 'رسالة',
+        buttons: ["موافق"],
+        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
+        callback: function(button) {
+
+            //return user to home page
+
+            Ext.Viewport.getActiveItem().reset();
+
+        }
+    });
+
+
+button.up('MainNavView').push({
+            xtype: 'LoginFomView',
+            title: Ext.Global.GetFixedTitle()
+        });
+
+
+
+
+
+- Request Type 
+- No of copies
+- Est Name 
+- Total Fees
+
+- Request Number 
+- Request Status
+- required Attachments
+
+- pay 
+
+
+
+
+lblNoCopies
+lblRequestType
+lblCompanyName
+lblTotalFees
+lblRequestNo
+lblRequestStatus
+lblRequiredAttachments
 
 
 

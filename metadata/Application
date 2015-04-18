@@ -21,7 +21,8 @@
             "TradeNameAvailabilityController",
             "TradeActivityAvailabilityController",
             "SupplyServiceController",
-            "LoginController"
+            "LoginController",
+            "MyBusinessController"
         ],
         "models": [
             "PrintOffice",
@@ -101,7 +102,8 @@
             "SupplyServiceView2",
             "LoginFomView",
             "PrintOffsView1",
-            "PrintOffsView2"
+            "PrintOffsView2",
+            "MyEstablishmentDetails"
         ]
     },
     "name": "Application",
