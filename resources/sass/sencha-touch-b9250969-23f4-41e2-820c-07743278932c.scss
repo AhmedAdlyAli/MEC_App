@@ -851,6 +851,36 @@ body {
 }
 
 
+.item-request{
+
+    //background
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-right:3em;
+    background: url(../images/request.png) no-repeat 96% center;
+
+
+    .tpl-request-1{
+        color: #010101;
+        font-weight:bold;
+    }
+
+    .tpl-request-2{
+        color: #6f2f51;
+        padding:0.5em 0 0.5em 0.5em;
+        font-weight:500;
+    }
+    .FA{
+        float:right
+    }
+    .FB{
+        float:left
+    }
+
+}
+
+
+
 
 
 .item-signatory{

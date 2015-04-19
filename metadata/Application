@@ -22,7 +22,8 @@
             "TradeActivityAvailabilityController",
             "SupplyServiceController",
             "LoginController",
-            "MyBusinessController"
+            "MyBusinessController",
+            "MyRequestsController"
         ],
         "models": [
             "PrintOffice",
@@ -58,7 +59,6 @@
             "ReportsView",
             "SettingsView",
             "MyBusinessView",
-            "MyRequestsView",
             "ComplaintsView",
             "MinistryPublicationView",
             "MinistryInThePressView",
@@ -105,7 +105,9 @@
             "PrintOffsView2",
             "MyEstablishmentDetails",
             "MyBranchDetails",
-            "TradeNameBranchDetails"
+            "TradeNameBranchDetails",
+            "MyRequestsView",
+            "MyRequestDetails"
         ]
     },
     "name": "Application",

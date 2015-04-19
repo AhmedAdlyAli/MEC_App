@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -688,6 +677,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.MyBusinessController": [],
+  "MEC_App.controller.MyRequestsController": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
@@ -741,6 +731,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MyBranchDetails": [],
   "MEC_App.view.MyBusinessView": [],
   "MEC_App.view.MyEstablishmentDetails": [],
+  "MEC_App.view.MyRequestDetails": [],
   "MEC_App.view.MyRequestsView": [],
   "MEC_App.view.NewsDetailsView": [],
   "MEC_App.view.NewsListItem": [],
@@ -1345,17 +1336,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1509,6 +1489,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.MyBusinessController": [],
+  "MEC_App.controller.MyRequestsController": [
+    "controller.MyRequestsController"
+  ],
   "MEC_App.controller.PrintOffices": [
     "controller.printoffices"
   ],
@@ -1640,8 +1623,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MyEstablishmentDetails": [
     "widget.MyEstablishmentDetails"
   ],
+  "MEC_App.view.MyRequestDetails": [
+    "widget.MyRequestDetails"
+  ],
   "MEC_App.view.MyRequestsView": [
-    "widget.MYRequestsView"
+    "widget.MyRequestsView"
   ],
   "MEC_App.view.NewsDetailsView": [
     "widget.NewsDetailsView"

@@ -54,7 +54,6 @@ Ext.application({
         'ReportsView',
         'SettingsView',
         'MyBusinessView',
-        'MyRequestsView',
         'ComplaintsView',
         'MinistryPublicationView',
         'MinistryInThePressView',
@@ -101,7 +100,9 @@ Ext.application({
         'PrintOffsView2',
         'MyEstablishmentDetails',
         'MyBranchDetails',
-        'TradeNameBranchDetails'
+        'TradeNameBranchDetails',
+        'MyRequestsView',
+        'MyRequestDetails'
     ],
     controllers: [
         'HomeController',
@@ -119,7 +120,8 @@ Ext.application({
         'TradeActivityAvailabilityController',
         'SupplyServiceController',
         'LoginController',
-        'MyBusinessController'
+        'MyBusinessController',
+        'MyRequestsController'
     ],
     name: 'MEC_App',
 

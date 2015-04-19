@@ -15,9 +15,41 @@
 
 Ext.define('MEC_App.view.MyRequestsView', {
     extend: 'Ext.Panel',
-    alias: 'widget.MYRequestsView',
+    alias: 'widget.MyRequestsView',
+
+    requires: [
+        'Ext.Label',
+        'Ext.dataview.List',
+        'Ext.XTemplate'
+    ],
 
     config: {
+        itemId: 'MyRequestsView',
+        layout: 'vbox',
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                docked: 'top',
+                html: 'متابعة المعاملات'
+            },
+            {
+                xtype: 'list',
+                flex: 1,
+                height: '100%',
+                itemId: 'lstMyRequests',
+                itemCls: 'item-request',
+                itemTpl: [
+                    '    <div class=\'tpl-request-1\'>{requestCaseType}</div>',
+                    '    <div class=\'tpl-request-2\'><span class=\'FA\'> {requestCaseDate}</span> <span class=\'FB\'>{requestCaseStatus}</span></div>',
+                    ''
+                ]
+            }
+        ]
     }
 
 });

@@ -48,10 +48,8 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     },
 
     onMyRequestsBtnTap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetFixedTitle()
-                });
+                        Ext.Global.RedirectLoggedUser('MyRequestsView');
+
     },
 
     onComplainsBtnTap: function(button, e, eOpts) {
