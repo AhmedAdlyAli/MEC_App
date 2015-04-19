@@ -16913,7 +16913,7 @@ Ext.define('Ext.util.Format', {
                     if (Ext.os.is.Android && Ext.os.version.isLessThan("3.0")) {
                         /**
                          * This code is modified from the following source: <https://github.com/csnover/js-iso8601>
-                         * � 2011 Colin Snover <http://zetafleet.com>
+                         * © 2011 Colin Snover <http://zetafleet.com>
                          * Released under MIT license.
                          */
                         var potentialUndefinedKeys = [
@@ -16936,7 +16936,7 @@ Ext.define('Ext.util.Format', {
                         // 6 ss (optional)
                         // 7 msec (optional)
                         // 8 Z (optional)
-                        // 9 � (optional)
+                        // 9 ± (optional)
                         // 10 tzHH (optional)
                         // 11 tzmm (optional)
                         if ((dateParsed = /^(\d{4}|[+\-]\d{6})(?:-(\d{2})(?:-(\d{2}))?)?(?:T(\d{2}):(\d{2})(?::(\d{2})(?:\.(\d{3}))?)?(?:(Z)|([+\-])(\d{2})(?::(\d{2}))?)?)?$/.exec(value))) {
@@ -64871,76 +64871,76 @@ Ext.define('MEC_App.controller.LocAr', {
     config: {},
     Load: function(g) {
         g.ViewTitles = {
-            Home: "????????",
-            PublicServices: "??????? ??????",
-            MediaCenter: " ?????? ????????",
-            Inquiries: "??????????? ?????????? ",
-            ContactUs: "???? ???",
-            Projects: "????????? ?????????",
-            Reports: "???????? ?????????",
-            Settings: "?????????",
-            LogivForm: "????? ??????",
+            Home: "الرئيسية",
+            PublicServices: "الخدمات العامة",
+            MediaCenter: " المركز الاعلامي",
+            Inquiries: "الاستعلامات والاصدارات ",
+            ContactUs: "اتصل بنا",
+            Projects: "المبادرات والمشاريع",
+            Reports: "المؤشرات والتقارير",
+            Settings: "الاعدادات",
+            LogivForm: "تسجيل الدخول",
             //media center
-            MinistryPublications: '??????? ???????',
-            MinistryNews: '????? ???????',
-            EconomyNews: '????? ???????',
-            NewsDetails: '?????? ?????',
-            MinistryReflections: '????????',
-            MinistryNewsSection3: '????? ???? ????? ??????? ??????',
-            MinistryNewsSection4: '????? ???????? ???????',
-            MinistryNewsSection5: '????? ???? ????? ????? ??????',
-            MinistryNewsSection6: '????? ???????? ?????',
+            MinistryPublications: 'اصدارات الوزارة',
+            MinistryNews: 'اخبار الوزارة',
+            EconomyNews: 'اخبار الوزارة',
+            NewsDetails: 'تفاصيل الخبر',
+            MinistryReflections: 'انعكاسات',
+            MinistryNewsSection3: 'اخبار جهات رسمية اقليمية مشابهة',
+            MinistryNewsSection4: 'اخبار اقتصادية اقليمية',
+            MinistryNewsSection5: 'اخبار جهات رسمية دولية مشابهة',
+            MinistryNewsSection6: 'اخبار اقتصادية دولية',
             //services
-            PrintOffs: ' ????? ??????????',
-            MyBusiness: ' ??????? ??????',
-            RequestFollowup: ' ?????? ?????????',
-            Complaints: ' ????? ?? ????',
-            SupplyService: ' ????? ???????',
-            InvestorServices: ' ????? ????????',
-            ConsumerServices: ' ????? ????????',
+            PrintOffs: ' خدمات المستخرجات',
+            MyBusiness: ' بياناتي الخاصة',
+            RequestFollowup: ' متابعة المعاملات',
+            Complaints: ' ابلاغ عن شكوي',
+            SupplyService: ' خدمات التموين',
+            InvestorServices: ' خدمات المستثمر',
+            ConsumerServices: ' خدمات المستهلك',
             // inq
-            SearchTradeName: '????? ?? ??? ?????',
-            SearchAct: '????? ?? ???? ?????',
-            Recalls: '???????????',
-            ConsulerEdu: '????? ????????',
-            InvestorEdu: '????? ????????',
-            Violations: '????????? ??????????',
+            SearchTradeName: 'البحث عن اسم تجاري',
+            SearchAct: 'البحث عن نشاط تجاري',
+            Recalls: 'الاستدعاءات',
+            ConsulerEdu: 'ثقافة المستهلك',
+            InvestorEdu: 'ثقافة المستثمر',
+            Violations: 'المخالفات والاغلاقات',
             //reports
-            EcoReports: '?????? ????????',
-            BizReports: '?????? ???????',
-            ConsumerReports: '?????? ?????????',
-            TradeReports: '????? ???????? ????????',
+            EcoReports: 'مؤشرات اقتصادية',
+            BizReports: 'مؤشرات الاعمال',
+            ConsumerReports: 'مؤشرات استهلاكية',
+            TradeReports: 'تقرير العلامات التجارية',
             //contact
-            AboutMinistry: '?? ???????',
-            Branches: '??????',
-            Suggestions: '???????',
-            ContactUs2: '????? ????',
-            Employees: '????? ???????'
+            AboutMinistry: 'عن الوزارة',
+            Branches: 'الفروع',
+            Suggestions: 'مقترحات',
+            ContactUs2: 'تواصل معنا',
+            Employees: 'موظفو الوزارة'
         };
         g.ComplaintsLabels = {
-            shopName: '??? ??????',
-            shopLocation: ' ???? ??????',
-            ComplaintType: ' ??? ??????',
-            txtComplaint: ' ?? ??????',
-            fullName: ' ????? ???????',
-            email: ' ?????? ??????????',
-            mobile: ' ??? ??????',
-            barcode: '?????? ??????',
-            AttachImg: ' ???? ??? ??????',
-            Submit: '????'
+            shopName: 'اسم المتجر',
+            shopLocation: ' موقع المتجر',
+            ComplaintType: ' نوع الشكوي',
+            txtComplaint: ' نص الشكوي',
+            fullName: ' الاسم بالكامل',
+            email: ' البريد الالكتدوني',
+            mobile: ' رقم الهاتف',
+            barcode: 'باركود المنتج',
+            AttachImg: ' ارفق صور المنتج',
+            Submit: 'ارسل'
         };
         g.ValidationMsg = {
-            errShopName: '???? ???? ??? ??????\n',
-            errComplaintType: '???? ???? ??? ??????\n',
-            errComplaintText: '???? ???? ?? ??????\n',
-            errFullName: '???? ???? ????? ???????\n',
-            errMobile: '???? ???? ??? ??????\n'
+            errShopName: 'فضلا ادخل اسم المتجر\n',
+            errComplaintType: 'فضلا اختر نوع الشكوي\n',
+            errComplaintText: 'فضلا ادخل نص الشكوي\n',
+            errFullName: 'فضلا ادخل الاسم بالكامل\n',
+            errMobile: 'فضلا ادخل رقم الجوال\n'
         };
         g.ConfirmationMsg = {
-            msgConfirmComplaints: '?? ????? ?????? ?????'
+            msgConfirmComplaints: 'تم ارسال الشكوي بنجاح'
         };
         g.GenericContent = {
-            HomeNews: '<div class="header-text-bg"><b>????? ????? ????? ????? ????? ?????</b><br />????? ????? ????? ?????  </div>'
+            HomeNews: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>'
         };
     }
 });
@@ -65204,7 +65204,7 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 1,
                         cls: 'home-header',
-                        html: '<div class="header-text-bg"><b>????? ????? ????? ????? ????? ?????</b><br />????? ????? ????? ?????  </div>',
+                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                         id: 'pnlNews',
                         itemId: 'pnlNews'
                     },
@@ -65234,7 +65234,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????? ??????',
+                                                html: 'الخدمات العامة',
                                                 id: 'homeServices',
                                                 itemId: 'homeServices'
                                             },
@@ -65265,7 +65265,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '?????? ????????',
+                                                html: 'المركز الاعلامي',
                                                 itemId: 'btnMediaCenter'
                                             },
                                             {
@@ -65302,7 +65302,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '??????????? ?????????? ',
+                                                html: 'الاستعلامات والاصدارات ',
                                                 itemId: 'homeInquire'
                                             },
                                             {
@@ -65333,7 +65333,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????? ?????????',
+                                                html: 'المؤشرات والتقارير',
                                                 itemId: 'homeReports'
                                             },
                                             {
@@ -65371,7 +65371,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '????????? ?????????',
+                                                html: 'المبادرات والمشاريع',
                                                 itemId: 'btnProjects'
                                             },
                                             {
@@ -65402,7 +65402,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: '???????',
+                                                html: 'التواصل',
                                                 itemId: 'homeContact'
                                             },
                                             {
@@ -65555,43 +65555,43 @@ Ext.define('MEC_App.controller.HomeController', {
     onHomeServicesTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'PublicServiceView',
-            title: '??????? ??????'
+            title: 'الخدمات العامة'
         });
     },
     onHomeNewsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'MediaCenterView',
-            title: '?????? ????????'
+            title: 'المركز الاعلامي'
         });
     },
     onHomeInquireTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????????? ? ?????????"
+            title: "الاستعلامات و الاصدارات"
         });
     },
     onHomeGeneralInfoTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'InquiriesView',
-            title: "??????? ????"
+            title: "معلومات عامة"
         });
     },
     onHomeReportsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ReportsView',
-            title: "???????? ? ????????"
+            title: "المؤشرات و التقارير"
         });
     },
     onHomeProjectsTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ProjectsView',
-            title: "????????? ? ????????"
+            title: "المبادرات و المشاريع"
         });
     },
     onHomeeContactTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
-            title: "???????"
+            title: "التواصل"
         });
     },
     onHomeServices1Tap: function(button, e, eOpts) {
@@ -65672,10 +65672,7 @@ Ext.define('MEC_App.controller.PublicServicesController', {
         Ext.Global.RedirectLoggedUser('PrintOffsView1');
     },
     onMyServiceBtnTap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-            xtype: 'BusinessIndicatorsReport',
-            title: Ext.Global.GetFixedTitle()
-        });
+        Ext.Global.RedirectLoggedUser('MyBusinessView');
     },
     onMyRequestsBtnTap: function(button, e, eOpts) {
         button.up('MainNavView').push({
@@ -65864,7 +65861,8 @@ Ext.define('MEC_App.controller.PrintOffsController', {
     extend: Ext.app.Controller,
     config: {
         refs: {
-            PrintOffsView1: '#PrintOffsView1'
+            PrintOffsView1: '#PrintOffsView1',
+            PrintOffsView2: '#PrintOffsView2'
         },
         control: {
             "button#btnPrintoffsNext": {
@@ -65872,6 +65870,9 @@ Ext.define('MEC_App.controller.PrintOffsController', {
             },
             "panel#PrintOffsView2": {
                 initialize: 'onPrintOffsView2Initialize'
+            },
+            "button#btnPrintoffs2Next": {
+                tap: 'onBtnPrintoffs2NextTap'
             }
         }
     },
@@ -65899,25 +65900,58 @@ Ext.define('MEC_App.controller.PrintOffsController', {
                 "commercialPermitNum": "",
                 "economicalNum": ""
             };
-        console.log(requestData);
         Ext.Ajax.request({
             url: Ext.Global.GetConfig('webServiceUrl'),
             method: 'POST',
             jsonData: requestData,
             success: function(response) {
                 var json = Ext.util.JSON.decode(response.responseText);
+                //console.log(json);
                 Ext.Viewport.getActiveItem().push({
                     xtype: 'PrintOffsView2',
                     title: Ext.Global.GetFixedTitle(),
-                    Data: json
+                    data: json
                 });
                 Ext.AnimationHelper.HideLoading();
             }
         });
     },
     onPrintOffsView2Initialize: function(component, eOpts) {
-        var view = component;
-        console.log(view.getData);
+        var view = this.getPrintOffsView2();
+        var json = view.getData();
+        view.down('#lblRequestType').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].type);
+        view.down('#lblNoCopies').setHtml('');
+        view.down('#lblCompanyName').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].orgNameARA);
+        view.down('#lblTotalFees').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecCaseFees.mecCaseFees[0].feesTotalValue);
+        view.down('#lblRequestNo').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].serialNumber);
+        view.down('#hiddenSerialNo').setValue(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].recordID);
+        view.down('#lblRequestStatus').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].status);
+        var noOfAttachments = json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecUnifiedAttachmentParameters.mecUnifiedAttachmentParameters.length;
+        if (noOfAttachments === 0) {
+            view.down('#lblRequiredAttachments').setHtml('لا يوجد');
+        }
+    },
+    onBtnPrintoffs2NextTap: function(button, e, eOpts) {
+        Ext.AnimationHelper.ShowLoading();
+        var view = this.getPrintOffsView2();
+        var serialNo = view.down('#hiddenSerialNo').getValue();
+        var requestData = {
+                "serviceId": "10",
+                "token": Ext.Global.userToken,
+                "objectSpcId": serialNo,
+                "caseSerialNum": ""
+            };
+        Ext.Ajax.request({
+            url: Ext.Global.GetConfig('webServiceUrl'),
+            method: 'POST',
+            jsonData: requestData,
+            success: function(response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+                alert('Show Confirmation');
+                console.log(json);
+                Ext.AnimationHelper.HideLoading();
+            }
+        });
     }
 });
 
@@ -66436,11 +66470,11 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         var searchKeyword = this.getTxtActivityName().getValue();
         if (searchKeyword === '') {
             Ext.device.Notification.show({
-                title: '???',
+                title: 'خطأ',
                 buttons: [
-                    "?????"
+                    "موافق"
                 ],
-                message: '??? ????? ???? ?????'
+                message: 'يجب إدخال كلمة البحث'
             });
             return;
         }
@@ -66475,7 +66509,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     onLstTradeNameResultsItemTap: function(dataview, index, target, record, e, eOpts) {
         dataview.up('MainNavView').push({
             xtype: 'TradeNameEstablishmentDetails',
-            title: '?????? ??????',
+            title: 'بيانات الشركة',
             data: record.data
         });
     },
@@ -66487,7 +66521,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 buttons: [
                     "OK"
                 ],
-                message: '??? ????? ??????? ??? ????? ????? ?????? ??????? ???? ????'
+                message: 'رقم السجل التجاري غير صحيح٫ برجاء العودة واختيار شركة اخرى'
             });
             return;
         }
@@ -66607,11 +66641,11 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
         var searchKeyword = this.getTxtActivity().getValue();
         if (searchKeyword === '') {
             Ext.device.Notification.show({
-                title: '???',
+                title: 'خطأ',
                 buttons: [
-                    "?????"
+                    "موافق"
                 ],
-                message: '??? ????? ??? ??????'
+                message: 'يجب إدخال اسم النشاط'
             });
             return;
         }
@@ -66818,12 +66852,156 @@ Ext.define('MEC_App.controller.LoginController', {
                     });
                 } else {
                     Ext.device.Notification.show({
-                        title: '???',
+                        title: 'خطأ',
                         buttons: [
-                            "?????"
+                            "موافق"
                         ],
-                        message: '??? ???????? ?? ???? ?????? ???'
+                        message: 'إسم المستخدم أو كلمة المرور خطأ'
                     });
+                }
+                Ext.AnimationHelper.HideLoading();
+            }
+        });
+    }
+});
+
+/*
+ * File: app/controller/MyBusinessController.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.controller.MyBusinessController', {
+    extend: Ext.app.Controller,
+    config: {
+        refs: {
+            MyBusinessView: '#MyBusinessView'
+        },
+        control: {
+            "panel#MyBusinessView": {
+                initialize: 'onMyBusinessViewInitialize'
+            },
+            "list#lstMyCompanies": {
+                itemtap: 'onLstMyCompaniesItemTap'
+            },
+            "panel#MyEstablishmentDetails": {
+                initialize: 'onMyEstablishmentDetailsInitialize'
+            }
+        }
+    },
+    onMyBusinessViewInitialize: function(component, eOpts) {
+        requestData = {
+            "serviceId": "2",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "identityType": "QID",
+            //Ext.Global.identityType,
+            "identityNum": "20000158588",
+            //Ext.Global.identityNum,
+            "identityNationality": Ext.Global.identityNationality
+        };
+        Ext.Ajax.request({
+            url: url,
+            method: 'POST',
+            // useDefaultXhrHeader: false,
+            jsonData: requestData,
+            success: function(response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+                //Companies
+                var storeBranches = new Ext.data.Store({
+                        data: company.listOfBranches.branches
+                    });
+                var view = this.getMyBusinessView();
+                var lstComapnies = Ext.getCmp('lstBranches');
+                lstBranches.setStore(json.test);
+                lstBranches.setHeight(company.listOfBranches.branches.length * 6 + 'em');
+                lstBranches.setScrollable(false);
+                Ext.AnimationHelper.HideLoading();
+            }
+        });
+    },
+    onLstMyCompaniesItemTap: function(dataview, index, target, record, e, eOpts) {
+        dataview.up('MainNavView').push({
+            xtype: 'MyEstablishmentDetails',
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data
+        });
+    },
+    onMyEstablishmentDetailsInitialize: function(component, eOpts) {
+        var cr = component.getData().listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
+        if (cr === '') {
+            Ext.device.Notification.show({
+                title: 'Data Issue ',
+                buttons: [
+                    "OK"
+                ],
+                message: 'رقم السجل التجاري غير صحيح٫ برجاء العودة واختيار شركة اخرى'
+            });
+            return;
+        }
+        Ext.AnimationHelper.ShowLoading();
+        // get establishment details
+        console.log(cr);
+        requestData = {
+            "serviceId": "8",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "commercialRegistrationNum": cr,
+            "moiEstablishmentNum": "",
+            "siebelSpcOperationSpcObjectSpcId": "",
+            "qatarChamberNum": "",
+            "statusMsg": "",
+            "commercialPermitNum": "",
+            "numOutputObjects": "",
+            "economicalNum": ""
+        };
+        Ext.Ajax.request({
+            url: Ext.Global.GetConfig('webServiceUrl'),
+            method: 'POST',
+            // useDefaultXhrHeader: false,
+            jsonData: requestData,
+            success: function(response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+                //Bind Data to controls
+                var company = json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+                Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
+                Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(company.commercialRegistrationExpiryDate);
+                Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
+                Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
+                Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
+                Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
+                Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
+                Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
+                Ext.getCmp('commercialPermitExpiryDate1').setHtml(company.commercialPermitExpiryDate);
+                Ext.getCmp('establishmentDate1').setHtml(company.establishmentDate);
+                Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
+                Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
+                Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
+                //signatories
+                var storeSignatories = new Ext.data.Store({
+                        data: company.listOfSignatories.signatories
+                    });
+                var lst = Ext.getCmp('lstSignatories');
+                lst.setStore(storeSignatories);
+                lst.setHeight(company.listOfSignatories.signatories.length * 6 + 'em');
+                lst.setScrollable(false);
+                //Branches
+                if (company.listOfBranches.branches.length > 0) {
+                    var storeBranches = new Ext.data.Store({
+                            data: company.listOfBranches.branches
+                        });
+                    var lstBranches = Ext.getCmp('lstBranches');
+                    lstBranches.setStore(storeBranches);
+                    lstBranches.setHeight(company.listOfBranches.branches.length * 6 + 'em');
+                    lstBranches.setScrollable(false);
                 }
                 Ext.AnimationHelper.HideLoading();
             }
@@ -66836,47 +67014,47 @@ Ext.define('MEC_App.store.override.MenuArrayStore', {
     config: {
         data: [
             {
-                ItemName: '????????',
+                ItemName: 'الرئيسية',
                 ItemView: 'MainNavView',
                 ItemIconURL: 'resources/images/m-home.png'
             },
             {
-                ItemName: '??????? ??????',
+                ItemName: 'الخدمات العامة',
                 ItemView: 'PublicServiceView',
                 ItemIconURL: 'resources/images/m-services.png'
             },
             {
-                ItemName: '?????? ????????',
+                ItemName: 'المركز الاعلامي',
                 ItemView: 'MediaCenterView',
                 ItemIconURL: 'resources/images/m-media.png'
             },
             {
-                ItemName: '??????????? ?????????? ',
+                ItemName: 'الاستعلامات والاصدارات ',
                 ItemView: 'InquiriesView',
                 ItemIconURL: 'resources/images/m-inq.png'
             },
             {
-                ItemName: '???????',
+                ItemName: 'التواصل',
                 ItemView: 'ContactUsView',
                 ItemIconURL: 'resources/images/m-contact.png'
             },
             {
-                ItemName: '????????? ?????????',
+                ItemName: 'المبادرات والمشاريع',
                 ItemView: 'ProjectsView',
                 ItemIconURL: 'resources/images/m-projects.png'
             },
             {
-                ItemName: '???????? ?????????',
+                ItemName: 'المؤشرات والتقارير',
                 ItemView: 'ReportsView',
                 ItemIconURL: 'resources/images/m-reports.png'
             },
             {
-                ItemName: '?????????',
+                ItemName: 'الاعدادات',
                 ItemView: 'SettingsView',
                 ItemIconURL: 'resources/images/m-settings.png'
             },
             {
-                ItemName: '????? ??????',
+                ItemName: 'تسجيل الدخول',
                 ItemView: 'LogivFormView',
                 ItemIconURL: 'resources/images/m-login.png'
             }
@@ -66964,19 +67142,19 @@ Ext.define('MEC_App.store.override.PrintOffices', {
     config: {
         data: [
             {
-                ItemName: '????? ??????? ?????? ???????',
+                ItemName: 'نموذج التسجيل باللغة العربية',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??????? ?????? ??????????',
+                ItemName: 'نموذج التسجيل باللغة الانكليزية',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??? ?????',
+                ItemName: 'نموذج سجل تجاري',
                 ItemView: 'BusinessIndicatorsReport'
             },
             {
-                ItemName: '????? ??? ????? ?? ?????? ?? ??? ????? ',
+                ItemName: 'شهادة عدم ملكية او مشاركة في سجل تجاري ',
                 ItemView: 'BusinessIndicatorsReport'
             }
         ]
@@ -67136,122 +67314,122 @@ Ext.define('MEC_App.store.override.MinistryNewsStore', {
     config: {
         data: [
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 1,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 2,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 3,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 4,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 5,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 6,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 7,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 8,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 9,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 10,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 11,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 12,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???? ?? ??????? ???? ???????-??? ????? ?????? ????? 2011- 2014',
+                NewsTitle: 'وزارة الاقتصاد تعلن عن استدعاء دودج دورانجو-جيب جراند شيروكي موديل 2011- 2014',
                 NewsDate: '05 April 2015',
-                NewsBrief: '????? ????? ???????? ???????? ???????? ?? ???? ??????? ???????? - ?????? ???? ?????? ???? ???? ?? ??????? ???? ??????? ? ??? ????? ?????? ????? 2011- 2014 ? ???? ??? ?? ????? ??????? ?????????? ?????? ????? ?????.',
-                NewsDetails: '????? ??? ??????? ?? ???? ??????? ????????? ???????? ?? ????? ???????? ???????? ?????? ?? ??? ?????? ????? ????? ???????? ??????? ???? ???????? ???????? ?????? ???? ?????????? .',
+                NewsBrief: 'اعلنت وزارة الاقتصاد والتجارة بالتعاون مع شركة المتحدة للسيارات - المانع وكيل سيارات دودج وجيب عن استدعاء دودج دورانجو و جيب جراند شيروكي موديل 2011- 2014 ، بسبب خلل في توصيل الاسلاك الكهربائية لأنوار حاجبة الشمس.',
+                NewsDetails: 'ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين .',
                 NewsID: 13,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/dodge-jeep.jpg'
             },
             {
-                NewsTitle: '????? ???????? ???????? ???? 152 ?????? ???? ??? ????',
+                NewsTitle: 'وزارة الاقتصاد والتجارة تضبط 152 مخالفة خلال شهر مارس',
                 NewsDate: '05 April 2015',
-                NewsBrief: '???? ????? ???????? ???????? ???? ??? ???? 2015 ?????? ??????? ????? ??????? ??? ???? ???????? ( ?????? ???????? ) ??????????? ??????? ????? ???????? ??? (8) ???? 2008 ???? ????? ???????? ? ???? ??? ?? ???? ??? ??????? ??? ?????? ??????? ???????? ???????? ??????? ???? ??? ??????? ?????? ?? ????????? ?????? ??? ????? ???? ??????????',
-                NewsDetails: '??? ??????? ???????? ??? ??????? ???????? ?? ??? ??????? ??????? ????????? ??????? ???? ?????? ?? ??? 5000 ???? ??? 30000 ???? ??? ???????? ????????? ??????? ???? ?????? ????? ???????? .',
+                NewsBrief: 'قامت وزارة الاقتصاد والتجارة خلال شهر مارس 2015 بحملات تفتيشية مكثفة لمراقبة مدى تقيد المزودين ( المحال التجارية ) بالتزاماتهم المنصوص عليها بالقانون رقم (8) لسنة 2008 بشأن حماية المستهلك ، يأتي ذلك في إطار حرص الوزارة على مراقبة الأسواق والانشطة التجارية بالدولة بهدف ضبط الأسعار والكشف عن التجاوزات حفاظاً على حماية حقوق المستهلكين',
+                NewsDetails: 'هذا وتتراوح العقوبات على المحلات المخالفة ما بين الإغلاق الإداري والغرامات المالية التي تراوحت ما بين 5000 ريال الى 30000 ريال حسب القوانين والقرارات المنظمة لعمل إدارات حماية المستهلك .',
                 NewsID: 14,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/%D8%A7%D9%84%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D9%85%D8%B9%D8%AA%D9%85%D8%AF%D8%A9.jpg'
             },
             {
-                NewsTitle: '???? ???????? ???????? ????? ???? ??????? ??????',
+                NewsTitle: 'وزير الاقتصاد والتجارة يلتقي وزير المالية التركي',
                 NewsDate: '02 April 2015',
-                NewsBrief: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ????? ???? ??????? ?????? ',
-                NewsDetails: '???? ???? ??????? ????????? ?????? ?????? ????? ????? ????? ???? ?? ???? ?? ???? ?? ???? ???? ???????? ???????? ?? ????? ?????/ ???? ?????  ???? ??????? ?????? .',
+                NewsBrief: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك وزير المالية التركي ',
+                NewsDetails: 'وعلى هامش الملتقى الاقتصادي التركي العربي التقى سعادة الشيخ أحمد بن جاسم بن محمد آل ثاني وزير الاقتصاد والتجارة مع سعادة السيد/ محمد شمشيك  وزير المالية التركي .',
                 NewsID: 15,
                 NewsImgUrl: 'http://www.mec.gov.qa/Arabic/Site%20Collection%20Images/copy-8677-2.jpg%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9%20%D8%A7%D9%84%D8%AA%D8%B1%D9%83%D9%8A.jpg'
             }
@@ -67488,7 +67666,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????? ??????',
+                                        html: 'الخدمات العامة',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -67512,7 +67690,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????',
+                                        html: 'خدمات المستثمر',
                                         id: 'lblInvestor',
                                         itemId: 'lblInvestor'
                                     },
@@ -67527,7 +67705,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myServiceBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '??????? ??????'
+                                                text: 'بياناتي الخاصة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67535,7 +67713,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'printOfficeBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ??????????'
+                                                text: 'خدمات المستخرجات'
                                             }
                                         ]
                                     },
@@ -67550,7 +67728,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'myRequestsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: 'متابعة المعاملات'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -67567,7 +67745,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                     {
                                         xtype: 'label',
                                         cls: 'service-title',
-                                        html: '????? ????????',
+                                        html: 'خدمات المستهلك',
                                         id: 'lblConsumer',
                                         itemId: 'lblConsumer'
                                     },
@@ -67582,7 +67760,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'complainsBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ?? ????'
+                                                text: 'ابلاغ عن شكوي'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67590,7 +67768,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 itemId: 'supplyServicesBtn',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????'
+                                                text: 'خدمات التموين'
                                             }
                                         ]
                                     }
@@ -67663,7 +67841,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '?????? ????????',
+                                        html: 'المركز الاعلامي',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -67695,7 +67873,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnMinistryNews',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ???????'
+                                                text: 'اخبار الوزارة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67703,7 +67881,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnReflections',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????????'
+                                                text: 'انعكاسات'
                                             }
                                         ]
                                     },
@@ -67718,7 +67896,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnNews1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ???? ????? ??????? ??????'
+                                                text: 'اخبار جهات رسمية اقليمية مشابهة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67726,7 +67904,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnNews2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ???????? ???????'
+                                                text: 'اخبار اقتصادية اقليمية'
                                             }
                                         ]
                                     },
@@ -67741,7 +67919,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnNews3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ???? ????? ????? ??????'
+                                                text: 'اخبار جهات رسمية دولية مشابهة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67749,7 +67927,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                                 itemId: 'btnNews4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ???????? ?????'
+                                                text: 'اخبار اقتصادية دولية'
                                             }
                                         ]
                                     }
@@ -67820,7 +67998,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '??????????? ??????????',
+                                        html: 'الاستعلامات والاصدارات',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -67852,7 +68030,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '????? ?? ??? ?????'
+                                                text: 'البحث عن اسم تجاري'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67860,7 +68038,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '????? ?? ???? ?????'
+                                                text: 'البحث عن نشاط تجاري'
                                             }
                                         ]
                                     },
@@ -67875,7 +68053,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????????'
+                                                text: 'الاستدعاءات'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67883,7 +68061,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '????? ????????'
+                                                text: 'ثقافة المستهلك'
                                             }
                                         ]
                                     },
@@ -67898,7 +68076,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ????????'
+                                                text: 'ثقافة المستثمر'
                                             },
                                             {
                                                 xtype: 'button',
@@ -67906,7 +68084,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                                 itemId: 'inquiriesBtn6',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????????? ??????????'
+                                                text: 'المخالفات والاغلاقات'
                                             }
                                         ]
                                     }
@@ -67977,7 +68155,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????',
+                                        html: 'التواصل',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -68009,7 +68187,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?? ???????'
+                                                text: 'عن الوزارة'
                                             },
                                             {
                                                 xtype: 'button',
@@ -68017,7 +68195,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '??????'
+                                                text: 'الفروع'
                                             }
                                         ]
                                     },
@@ -68032,7 +68210,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '???????'
+                                                text: 'مقترحات'
                                             },
                                             {
                                                 xtype: 'button',
@@ -68040,7 +68218,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ????'
+                                                text: 'تواصل معنا'
                                             }
                                         ]
                                     },
@@ -68055,7 +68233,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                                 itemId: 'contactBtn5',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-complain',
-                                                text: '????? ???????'
+                                                text: 'موظفو الوزارة'
                                             },
                                             {
                                                 xtype: 'spacer',
@@ -68149,7 +68327,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'service-header-title',
-                                        html: '???????? ?????????',
+                                        html: 'المؤشرات والتقارير',
                                         itemId: 'viewLbl'
                                     }
                                 ]
@@ -68181,7 +68359,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn1',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-business',
-                                                text: '?????? ????????'
+                                                text: 'مؤشرات اقتصادية'
                                             },
                                             {
                                                 xtype: 'button',
@@ -68189,7 +68367,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn2',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-print-office',
-                                                text: '?????? ???????'
+                                                text: 'مؤشرات الاعمال'
                                             }
                                         ]
                                     },
@@ -68204,7 +68382,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn3',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-my-request',
-                                                text: '?????? ?????????'
+                                                text: 'مؤشرات استهلاكية'
                                             },
                                             {
                                                 xtype: 'button',
@@ -68212,7 +68390,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                                 itemId: 'reportsBtn4',
                                                 iconAlign: 'top',
                                                 iconCls: 'icon-supply',
-                                                text: '????? ???????? ????????'
+                                                text: 'تقرير العلامات التجارية'
                                             }
                                         ]
                                     }
@@ -68271,7 +68449,31 @@ Ext.define('MEC_App.view.SettingsView', {
 Ext.define('MEC_App.view.MyBusinessView', {
     extend: Ext.Panel,
     alias: 'widget.MyBusinessView',
-    config: {}
+    config: {
+        cls: 'complaint-view',
+        itemId: 'MyBusinessView',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'بياناتي الخاصة'
+            },
+            {
+                xtype: 'list',
+                itemId: 'lstMyCompanies',
+                itemCls: 'item-company',
+                itemTpl: [
+                    '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                    ''
+                ]
+            }
+        ]
+    }
 });
 
 /*
@@ -68414,7 +68616,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: '???? ?? ????'
+                html: 'ابلغ عن شكوي'
             },
             {
                 xtype: 'fieldset',
@@ -68431,14 +68633,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'shopName',
                         required: true,
-                        placeHolder: '??? ?????'
+                        placeHolder: 'اسم المحل'
                     },
                     {
                         xtype: 'textfield',
                         id: 'shopLocation',
                         label: '',
                         name: 'shopLocation',
-                        placeHolder: '???? ??????'
+                        placeHolder: 'موقع المتجر'
                     },
                     {
                         xtype: 'textfield',
@@ -68446,7 +68648,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'txtCategory',
                         itemId: 'txtCategory',
                         name: 'txtCategory',
-                        placeHolder: '??? ??????',
+                        placeHolder: 'نوع الشكوي',
                         readOnly: true,
                         listeners: [
                             {
@@ -68456,7 +68658,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                     me.element.on('tap', function() {
                                         var btn = this;
                                         var config = {
-                                                title: "??? ??????",
+                                                title: "نوع الشكوي",
                                                 items: [
                                                     {
                                                         text: "Type 1",
@@ -68484,8 +68686,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                                     }
                                                 ],
                                                 selectedValue: "1",
-                                                doneButtonLabel: "??????",
-                                                cancelButtonLabel: "?????"
+                                                doneButtonLabel: "ٌختيار",
+                                                cancelButtonLabel: "الغاء"
                                             };
                                         Ext.DeviceController.ShowNativePicker(me, config);
                                     }, me);
@@ -68500,7 +68702,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'txtComplaint',
                         required: true,
-                        placeHolder: '?? ??????'
+                        placeHolder: 'نص الشكوي'
                     },
                     {
                         xtype: 'textfield',
@@ -68508,14 +68710,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'fullName',
                         required: true,
-                        placeHolder: '????? ???????'
+                        placeHolder: 'الاسم بالكامل'
                     },
                     {
                         xtype: 'textfield',
                         id: 'email',
                         label: '',
                         name: 'email',
-                        placeHolder: '?????? ??????????'
+                        placeHolder: 'البريد الالكتدوني'
                     },
                     {
                         xtype: 'textfield',
@@ -68523,7 +68725,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         name: 'mobile',
                         required: true,
-                        placeHolder: '??? ??????'
+                        placeHolder: 'رقم الهاتف'
                     },
                     {
                         xtype: 'textfield',
@@ -68549,7 +68751,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'label',
-                        html: '???? ????',
+                        html: 'ارفق صورة',
                         id: 'lblAttachImage'
                     },
                     {
@@ -68620,17 +68822,17 @@ Ext.define('MEC_App.view.ComplaintsView', {
                             }
                             if (err.length > 0) {
                                 Ext.device.Notification.show({
-                                    title: '???',
+                                    title: 'خطأ',
                                     buttons: [
-                                        "?????"
+                                        "موافق"
                                     ],
                                     message: err
                                 });
                             } else {
                                 Ext.device.Notification.show({
-                                    title: '?????',
+                                    title: 'رسالة',
                                     buttons: [
-                                        "?????"
+                                        "موافق"
                                     ],
                                     message: Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
                                     callback: function(button) {
@@ -68642,7 +68844,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         },
                         cls: 'btn-send',
                         id: 'btnSubmitComplaint',
-                        text: '?????'
+                        text: 'ارسال'
                     }
                 ]
             }
@@ -68788,7 +68990,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ?? ??? ?????'
+                html: 'البحث عن اسم تجاري'
             },
             {
                 xtype: 'fieldset',
@@ -68797,22 +68999,22 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                     {
                         xtype: 'textfield',
                         id: 'txtGroupName',
-                        label: '?????? ??????',
+                        label: 'مجموعة النشاط',
                         name: 'txtGroupName',
-                        placeHolder: '?????? ??????'
+                        placeHolder: 'مجموعة النشاط'
                     },
                     {
                         xtype: 'textfield',
                         id: 'txtActivityName',
-                        label: '????? ???????',
+                        label: 'الاسم التجاري',
                         name: 'txtActivityName',
-                        placeHolder: '????? ???????'
+                        placeHolder: 'الاسم التجاري'
                     },
                     {
                         xtype: 'button',
                         cls: 'btn-send',
                         itemId: 'btnSubmit',
-                        text: '???'
+                        text: 'بحث'
                     }
                 ]
             },
@@ -69181,7 +69383,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnHome',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon1',
-                                text: '????????'
+                                text: 'الرئيسية'
                             },
                             {
                                 xtype: 'button',
@@ -69189,7 +69391,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnServices',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon2',
-                                text: '??????? ??????'
+                                text: 'الخدمات العامة'
                             },
                             {
                                 xtype: 'button',
@@ -69198,7 +69400,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnMedai',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon3',
-                                text: '?????? ????????'
+                                text: 'المركز الاعلامي'
                             },
                             {
                                 xtype: 'button',
@@ -69207,7 +69409,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnInquiry',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon4',
-                                text: '??????????? ?????????? '
+                                text: 'الاستعلامات والاصدارات '
                             },
                             {
                                 xtype: 'button',
@@ -69216,7 +69418,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnContact',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon5',
-                                text: '???????'
+                                text: 'التواصل'
                             },
                             {
                                 xtype: 'button',
@@ -69225,7 +69427,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnProjects',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon6',
-                                text: '????????? ?????????'
+                                text: 'المبادرات والمشاريع'
                             },
                             {
                                 xtype: 'button',
@@ -69234,7 +69436,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnReports',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon7',
-                                text: '???????? ?????????'
+                                text: 'المؤشرات والتقارير'
                             },
                             {
                                 xtype: 'button',
@@ -69243,7 +69445,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnSettings',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon8',
-                                text: '?????????'
+                                text: 'الاعدادات'
                             },
                             {
                                 xtype: 'button',
@@ -69252,7 +69454,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 itemId: 'btnLogin',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon9',
-                                text: '????? ??????'
+                                text: 'تسجيل الدخول'
                             }
                         ]
                     }
@@ -69579,7 +69781,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
         items: [
             {
                 xtype: 'panel',
-                html: '<h2 class="contact-us">????? ????</h2>'
+                html: '<h2 class="contact-us">تواصل معنا</h2>'
             },
             {
                 xtype: 'panel',
@@ -69587,7 +69789,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
             },
             {
                 xtype: 'panel',
-                html: '<h2 class="branches">??????</h2>'
+                html: '<h2 class="branches">الفروع</h2>'
             },
             {
                 xtype: 'panel',
@@ -69806,7 +70008,7 @@ Ext.define('MEC_App.view.MinistryNewsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ???????'
+                html: 'اخبار الوزارة'
             }
         ],
         plugins: [
@@ -69920,7 +70122,7 @@ Ext.define('MEC_App.controller.AnimationHelper', {
     ShowLoading: function() {
         Ext.Viewport.setMasked({
             xtype: 'loadmask',
-            message: '???? ??????? ..'
+            message: 'جاري التحميل ..'
         });
     },
     HideLoading: function() {
@@ -69965,7 +70167,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: '?????? ???????',
+                        title: 'بيانات المنشاة',
                         titleAlign: 'right',
                         listeners: [
                             {
@@ -69984,7 +70186,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'label',
-                                html: ' ??? ????? ???????',
+                                html: ' رقم السجل التجاري',
                                 id: 'commercialRegistration'
                             },
                             {
@@ -69995,7 +70197,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '????? ???????',
+                                html: 'تاريخ التسجيل',
                                 id: 'commercialRegistrationIssueDate'
                             },
                             {
@@ -70005,7 +70207,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '????? ????????',
+                                html: 'تاريخ الانتهاء',
                                 id: 'commercialRegistrationExpiryDate'
                             },
                             {
@@ -70015,7 +70217,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '???? ????? ???????',
+                                html: 'حالة السجل التجاري',
                                 id: 'commercialRegistrationStatus'
                             },
                             {
@@ -70025,7 +70227,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '??? ????? ??????? ???????????',
+                                html: 'اسم السجل التجاري بالإنجليزية',
                                 id: 'establishmentEnglishName'
                             },
                             {
@@ -70035,7 +70237,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '??? ????? ??????? ????????',
+                                html: 'اسم السجل التجاري بالعربية',
                                 id: 'establishmentArabicName'
                             },
                             {
@@ -70045,7 +70247,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '??? ??? ??????',
+                                html: 'راس مال الشركة',
                                 id: 'companyCapital'
                             },
                             {
@@ -70055,7 +70257,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '??? ?????? ????????',
+                                html: 'رقم الرخصة التجارية',
                                 id: 'commercialPermit'
                             },
                             {
@@ -70065,7 +70267,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '???? ?????? ????????',
+                                html: 'حالة الرخصة التجارية',
                                 id: 'commercialPermitStatus'
                             },
                             {
@@ -70075,7 +70277,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '????? ?????? ?????? ????????',
+                                html: 'تاريخ انتهاء الرخصة التجارية',
                                 id: 'commercialPermitExpiryDate'
                             },
                             {
@@ -70085,7 +70287,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '????? ???????',
+                                html: 'تاريخ التاسيس',
                                 id: 'establishmentDate'
                             },
                             {
@@ -70095,7 +70297,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '??? ???????',
+                                html: 'نوع المنشاة',
                                 id: 'establishmentType'
                             },
                             {
@@ -70105,7 +70307,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '????? ????????',
+                                html: 'الشكل القانوني',
                                 id: 'establishmentLegalForm'
                             },
                             {
@@ -70115,7 +70317,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: '???? ???????',
+                                html: 'حالة المنشاة',
                                 id: 'establishmentStatus'
                             },
                             {
@@ -70138,7 +70340,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: '??????? ????????',
+                        title: 'الانشطة التجارية',
                         titleAlign: 'right',
                         listeners: [
                             {
@@ -70177,7 +70379,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: '??????',
+                        title: 'الفروع',
                         titleAlign: 'right',
                         listeners: [
                             {
@@ -70220,7 +70422,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: '???????? ????????',
+                        title: 'المخولين بالتوقيع',
                         titleAlign: 'right',
                         listeners: [
                             {
@@ -70288,7 +70490,7 @@ Ext.define('MEC_App.view.MinistryReflectionsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????????'
+                html: 'انعكاسات'
             }
         ],
         plugins: [
@@ -70341,7 +70543,7 @@ Ext.define('MEC_App.view.MinistryNewsSection3View', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ???? ????? ??????? ??????'
+                html: 'اخبار جهات رسمية اقليمية مشابهة'
             }
         ],
         plugins: [
@@ -70394,7 +70596,7 @@ Ext.define('MEC_App.view.MinistryNewsSection4View', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ???????? ???????'
+                html: 'اخبار اقتصادية اقليمية'
             }
         ],
         plugins: [
@@ -70447,7 +70649,7 @@ Ext.define('MEC_App.view.MinistryNewsSection5View', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ???? ????? ????? ??????'
+                html: 'اخبار جهات رسمية دولية مشابهة'
             }
         ],
         plugins: [
@@ -70500,7 +70702,7 @@ Ext.define('MEC_App.view.MinistryNewsSection6View', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ???????? ?????'
+                html: 'اخبار اقتصادية دولية'
             }
         ],
         plugins: [
@@ -70542,7 +70744,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: '????? ?? ???? ?????'
+                html: 'البحث عن نشاط تجاري'
             },
             {
                 xtype: 'fieldset',
@@ -70551,15 +70753,15 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                     {
                         xtype: 'textfield',
                         id: 'txtActivity',
-                        label: '??? ??????',
+                        label: 'اسم النشاط',
                         name: 'txtActivity',
-                        placeHolder: '??? ??????'
+                        placeHolder: 'اسم النشاط'
                     },
                     {
                         xtype: 'button',
                         cls: 'btn-send',
                         itemId: 'btnSubmitActivity',
-                        text: '???'
+                        text: 'بحث'
                     }
                 ]
             },
@@ -70571,7 +70773,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 itemCls: 'item-activity',
                 itemTpl: [
                     '<div class=\'tpl-activity-1\'>{businessActivityArabicName}</div>',
-                    '<div class=\'tpl-activity-2\'>{fees} ?.?</div>'
+                    '<div class=\'tpl-activity-2\'>{fees} ر.ق</div>'
                 ]
             }
         ]
@@ -70603,7 +70805,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: '????? ??? ?????'
+                html: 'نموذج طلب تموين'
             },
             {
                 xtype: 'panel',
@@ -70611,7 +70813,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                 items: [
                     {
                         xtype: 'label',
-                        html: '??? ??????? ?????????',
+                        html: 'عدد الآفراد المستحقين',
                         id: 'lblFamilyTitle'
                     },
                     {
@@ -70630,7 +70832,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                         xtype: 'titlebar',
                         cls: 'acc-header3',
                         docked: 'top',
-                        title: '??????? ????????',
+                        title: 'الاصناف والكميات',
                         titleAlign: 'right'
                     },
                     {
@@ -70652,7 +70854,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                 xtype: 'button',
                 cls: 'btn-send',
                 itemId: 'btnSupplyNext1',
-                text: '??????'
+                text: 'التالي'
             }
         ]
     }
@@ -70682,7 +70884,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: '????? ??? ?????'
+                html: 'نموذج طلب تموين'
             },
             {
                 xtype: 'panel',
@@ -70700,7 +70902,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 xtype: 'button',
                 cls: 'btn-send',
                 itemId: 'btnSupplyNext2',
-                text: '??????'
+                text: 'التالي'
             }
         ]
     }
@@ -70749,7 +70951,7 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 flex: 1,
                                 cls: 'print-office-header-title',
                                 docked: 'bottom',
-                                html: '????? ??????'
+                                html: 'تسجيل الدخول'
                             }
                         ]
                     }
@@ -70765,31 +70967,31 @@ Ext.define('MEC_App.view.LoginFomView', {
                             {
                                 xtype: 'textfield',
                                 itemId: 'txtUserName',
-                                label: '??? ????????',
-                                placeHolder: '??? ????????'
+                                label: 'اسم المستخدم',
+                                placeHolder: 'اسم المستخدم'
                             },
                             {
                                 xtype: 'passwordfield',
                                 itemId: 'txtPassword',
-                                label: '???? ??????',
-                                placeHolder: '???? ??????'
+                                label: 'كلمة المرور',
+                                placeHolder: 'كلمة المرور'
                             },
                             {
                                 xtype: 'label',
                                 cls: 'login-links',
-                                html: '???? ???? ????',
+                                html: 'نسيت كلمة السر',
                                 itemId: 'lblForgotPassword'
                             },
                             {
                                 xtype: 'button',
                                 cls: 'btn-send',
                                 id: 'btnSubmitLogin',
-                                text: '????? ??????'
+                                text: 'تسجيل الدخول'
                             },
                             {
                                 xtype: 'button',
                                 cls: 'btn-send',
-                                text: '?????? ????'
+                                text: 'مستخدم جديد'
                             }
                         ]
                     }
@@ -70825,7 +71027,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: '??? ????????'
+                html: 'طلب مستخرجات'
             },
             {
                 xtype: 'fieldset',
@@ -70838,9 +71040,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'textfield',
                         itemId: 'companyName',
-                        label: '??? ??????',
+                        label: 'اسم الشركة',
                         required: true,
-                        placeHolder: '??? ??????',
+                        placeHolder: 'اسم الشركة',
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
@@ -70849,7 +71051,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     me.element.on('tap', function() {
                                         var btn = this;
                                         var config = {
-                                                title: "??? ??????",
+                                                title: "نوع الشكوي",
                                                 items: [
                                                     {
                                                         text: "Type 1",
@@ -70877,8 +71079,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                                     }
                                                 ],
                                                 selectedValue: "2",
-                                                doneButtonLabel: "??????",
-                                                cancelButtonLabel: "?????"
+                                                doneButtonLabel: "ٌختيار",
+                                                cancelButtonLabel: "الغاء"
                                             };
                                         Ext.DeviceController.ShowNativePicker(me, config);
                                     }, me);
@@ -70895,9 +71097,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'textfield',
                         itemId: 'txtPrintoutType',
-                        label: '??? ????????',
+                        label: 'نوع المستخرج',
                         value: 50,
-                        placeHolder: '??? ????????',
+                        placeHolder: 'نوع المستخرج',
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
@@ -70906,28 +71108,28 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     me.element.on('tap', function() {
                                         var btn = this;
                                         var config = {
-                                                title: "??? ????????",
+                                                title: "نوع المستخرج",
                                                 items: [
                                                     {
-                                                        text: "????? ??? ?????",
+                                                        text: "شهادة عدم ملكية",
                                                         value: "50"
                                                     },
                                                     {
-                                                        text: "?????? ??? ????? - ???????",
+                                                        text: "مستخرج سجل تجاري - العربية",
                                                         value: "51"
                                                     },
                                                     {
-                                                        text: "?????? ??? ????? - ???????",
+                                                        text: "مستخرج سجل تجاري - انجليزي",
                                                         value: "52"
                                                     },
                                                     {
-                                                        text: "????? ?? ???? ??????",
+                                                        text: "شهادة عن رخصة تجارية",
                                                         value: "53"
                                                     }
                                                 ],
                                                 selectedValue: "",
-                                                doneButtonLabel: "??????",
-                                                cancelButtonLabel: "?????"
+                                                doneButtonLabel: "ٌختيار",
+                                                cancelButtonLabel: "الغاء"
                                             };
                                         var hiddenPrintType = Ext.ComponentQuery.query("#hiddenPrintoutType")[0];
                                         Ext.DeviceController.ShowNativePickerWithValue(me, hiddenPrintType, config);
@@ -70946,8 +71148,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         xtype: 'textfield',
                         hidden: false,
                         itemId: 'txtDeliveryMethod',
-                        label: '????? ????????',
-                        placeHolder: '????? ????????',
+                        label: 'طريقة الاستلام',
+                        placeHolder: 'طريقة الاستلام',
                         readOnly: true,
                         listeners: [
                             {
@@ -70957,24 +71159,24 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     me.element.on('tap', function() {
                                         var btn = this;
                                         var config = {
-                                                title: "????? ???????",
+                                                title: "طريقة التسليم",
                                                 items: [
                                                     {
-                                                        text: "????",
+                                                        text: "شخصي",
                                                         value: "1"
                                                     },
                                                     {
-                                                        text: "??????",
+                                                        text: "البريد",
                                                         value: "2"
                                                     },
                                                     {
-                                                        text: "?????? ??????????",
+                                                        text: "البريد الالكتروني",
                                                         value: "3"
                                                     }
                                                 ],
                                                 selectedValue: "",
-                                                doneButtonLabel: "??????",
-                                                cancelButtonLabel: "?????"
+                                                doneButtonLabel: "ٌختيار",
+                                                cancelButtonLabel: "الغاء"
                                             };
                                         var hiddenDeliveryMethod = Ext.ComponentQuery.query("#hiddenDeliveryMethod")[0];
                                         Ext.DeviceController.ShowNativePickerWithValue(me, hiddenDeliveryMethod, config);
@@ -70991,14 +71193,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'textfield',
                         itemId: 'txtNoOfCopies',
-                        label: '??? ?????',
-                        placeHolder: '??? ?????'
+                        label: 'عدد النسخ',
+                        placeHolder: 'عدد النسخ'
                     },
                     {
                         xtype: 'button',
                         cls: 'btn-send',
                         itemId: 'btnPrintoffsNext',
-                        text: '??????'
+                        text: 'التالي'
                     }
                 ]
             }
@@ -71074,7 +71276,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: '??? ????????'
+                html: 'طلب مستخرجات'
             },
             {
                 xtype: 'panel',
@@ -71082,7 +71284,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                 items: [
                     {
                         xtype: 'label',
-                        html: '??? ????????'
+                        html: 'نوع المستخرج'
                     },
                     {
                         xtype: 'label',
@@ -71091,7 +71293,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: '??? ?????'
+                        html: 'عدد النسخ'
                     },
                     {
                         xtype: 'label',
@@ -71100,7 +71302,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: '??? ???????'
+                        html: 'اسم المنشأة'
                     },
                     {
                         xtype: 'label',
@@ -71109,7 +71311,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: '?????? ??????'
+                        html: 'إجمالي الرسوم'
                     },
                     {
                         xtype: 'label',
@@ -71118,7 +71320,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: '??? ?????'
+                        html: 'رقم الطلب'
                     },
                     {
                         xtype: 'label',
@@ -71127,24 +71329,355 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: '???? ?????'
+                        html: 'حالة الطلب'
                     },
                     {
                         xtype: 'label',
-                        cls: 'label-value'
+                        cls: 'label-value',
+                        itemId: 'lblRequestStatus'
                     },
                     {
                         xtype: 'label',
-                        html: '???????? ????????'
+                        html: 'المرفقات المطلوبة'
                     },
                     {
                         xtype: 'label',
-                        cls: 'label-value'
+                        cls: 'label-value',
+                        itemId: 'lblRequiredAttachments'
                     },
                     {
                         xtype: 'button',
                         cls: 'btn-send',
-                        text: '????? ????'
+                        itemId: 'btnPrintoffs2Next',
+                        text: 'تأكيد ودفع'
+                    },
+                    {
+                        xtype: 'hiddenfield',
+                        itemId: 'hiddenSerialNo'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'test'
+                    }
+                ]
+            }
+        ]
+    }
+});
+
+/*
+ * File: app/view/MyEstablishmentDetails.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.view.MyEstablishmentDetails', {
+    extend: Ext.Panel,
+    config: {
+        fullscreen: true,
+        itemId: 'MyEstablishmentDetails',
+        layout: 'vbox',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
+        items: [
+            {
+                xtype: 'panel',
+                cls: 'acc-container',
+                itemId: 'EstablishmentInfo',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'بيانات المنشاة',
+                        titleAlign: 'right',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'pnlData');
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        cls: 'acc-group',
+                        id: 'pnlData1',
+                        itemId: 'pnlData',
+                        items: [
+                            {
+                                xtype: 'label',
+                                html: ' رقم السجل التجاري',
+                                id: 'commercialRegistration2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                html: ' ',
+                                id: 'commercialRegistration3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ التسجيل',
+                                id: 'commercialRegistrationIssueDate2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationIssueDate3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ الانتهاء',
+                                id: 'commercialRegistrationExpiryDate2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationExpiryDate3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة السجل التجاري',
+                                id: 'commercialRegistrationStatus2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialRegistrationStatus3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'اسم السجل التجاري بالإنجليزية',
+                                id: 'establishmentEnglishName2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentEnglishName3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'اسم السجل التجاري بالعربية',
+                                id: 'establishmentArabicName2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentArabicName3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'راس مال الشركة',
+                                id: 'companyCapital2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'companyCapital3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم الرخصة التجارية',
+                                id: 'commercialPermit2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermit3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة الرخصة التجارية',
+                                id: 'commercialPermitStatus2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitStatus3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ انتهاء الرخصة التجارية',
+                                id: 'commercialPermitExpiryDate2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'commercialPermitExpiryDate3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'تاريخ التاسيس',
+                                id: 'establishmentDate2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentDate3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'نوع المنشاة',
+                                id: 'establishmentType2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentType3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'الشكل القانوني',
+                                id: 'establishmentLegalForm2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentLegalForm3'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'حالة المنشاة',
+                                id: 'establishmentStatus2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentStatus3'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'acc-container',
+                hidden: false,
+                itemId: 'BusinessActivities',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'الانشطة التجارية',
+                        titleAlign: 'right',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'pnlData2');
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        cls: 'acc-group',
+                        id: 'pnlData4',
+                        itemId: 'pnlData2',
+                        items: [
+                            {
+                                xtype: 'list',
+                                id: 'lstBizActivities1',
+                                itemTpl: [
+                                    '<div>List Item {string}</div>'
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'acc-container',
+                hidden: false,
+                itemId: 'Branches',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'الفروع',
+                        titleAlign: 'right',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'pnlData3');
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        cls: 'acc-group',
+                        id: 'pnlData5',
+                        itemId: 'pnlData3',
+                        items: [
+                            {
+                                xtype: 'list',
+                                id: 'lstBranches1',
+                                itemCls: 'item-branch',
+                                itemTpl: [
+                                    '<div class=\'tpl-branch-1\'>{branchName}</div>',
+                                    '',
+                                    '<div class=\'tpl-branch-2\'>{status}</div>',
+                                    '',
+                                    ''
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'acc-container',
+                itemId: 'Signatories',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header',
+                        docked: 'top',
+                        itemId: 'mytitlebar',
+                        title: 'المخولين بالتوقيع',
+                        titleAlign: 'right',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element, 'lstSignatories');
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'list',
+                        id: 'lstSignatories1',
+                        itemCls: 'item-signatory',
+                        itemTpl: [
+                            '',
+                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                            '',
+                            ''
+                        ],
+                        scrollToTopOnRefresh: false
                     }
                 ]
             }
@@ -71236,7 +71769,8 @@ Ext.application({
         'SupplyServiceView2',
         'LoginFomView',
         'PrintOffsView1',
-        'PrintOffsView2'
+        'PrintOffsView2',
+        'MyEstablishmentDetails'
     ],
     controllers: [
         'HomeController',
@@ -71253,7 +71787,8 @@ Ext.application({
         'TradeNameAvailabilityController',
         'TradeActivityAvailabilityController',
         'SupplyServiceController',
-        'LoginController'
+        'LoginController',
+        'MyBusinessController'
     ],
     name: 'MEC_App',
     launch: function() {
@@ -71268,5 +71803,5 @@ Ext.application({
 });
 
 // @tag full-page
-// @require /sencha/MEC_App/app.js
+// @require /untitled folder/MEC_App/app.js
 

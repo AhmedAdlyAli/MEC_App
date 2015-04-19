@@ -31,6 +31,12 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             },
             "panel#TradeNameEstablishmentDetails": {
                 initialize: 'onTradeNameEstablishmentDetailsInitialize'
+            },
+            "list#lstBranches": {
+                itemtap: 'onLstBranchesItemTap'
+            },
+            "panel#TradeNameBranchDetails": {
+                initialize: 'onTradeNameBranchDetailsInitialize'
             }
         }
     },
@@ -334,6 +340,136 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
+
+    },
+
+    onLstBranchesItemTap: function(dataview, index, target, record, e, eOpts) {
+        dataview.up('MainNavView').push({
+            xtype: 'TradeNameBranchDetails',
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data
+
+        });
+
+    },
+
+    onTradeNameBranchDetailsInitialize: function(component, eOpts) {
+        var view = component; //me.getMyEstablishmentDetails();
+
+        var cr = view.getData().branchCR;
+
+        //alert(cr);
+
+
+        if(cr===''){
+
+            Ext.device.Notification.show({
+                title: 'Data Issue ',
+                buttons: ["OK"],
+                message: 'رقم السجل التجاري غير صحيح٫ برجاء العودة واختيار شركة اخرى'
+            });
+
+            return;
+
+        }
+
+
+           Ext.AnimationHelper.ShowLoading();
+
+
+
+
+        // get establishment details
+
+        var me = this;
+
+        console.log(cr);
+
+         requestData = {
+          "serviceId": "8",
+          "token": Ext.Global.userToken,
+          "language": "ar",
+          "commercialRegistrationNum":cr,
+          "moiEstablishmentNum":"",
+          "siebelSpcOperationSpcObjectSpcId":"",
+          "qatarChamberNum":"",
+          "statusMsg":"",
+          "commercialPermitNum":"",
+          "numOutputObjects":"",
+          "economicalNum":""
+        };
+
+
+                Ext.Ajax.request({
+
+                    url : Ext.Global.GetConfig('webServiceUrl'),
+                    method : 'POST',
+                    // useDefaultXhrHeader: false,
+                    jsonData :requestData,
+                    success : function (response) {
+                       var json = Ext.util.JSON.decode(response.responseText);
+
+
+                        //Bind Data to controls
+                        var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+
+
+
+                        view.down('#commercialRegistration').setHtml(company.commercialRegistration);
+                        view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                        view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
+                        view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
+                        view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
+                        view.down('#companyCapital').setHtml(company.companyCapital);
+                        view.down('#commercialPermit').setHtml(company.commercialPermit);
+                        view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
+                        view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
+                        view.down('#establishmentDate').setHtml(company.establishmentDate);
+                        view.down('#establishmentType').setHtml(company.establishmentType);
+                        view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
+                        view.down('#establishmentStatus').setHtml(company.establishmentStatus);
+
+
+
+                        //signatories
+                        var storeSignatories = new Ext.data.Store({
+                            data : company.listOfSignatories.signatories
+                        });
+
+                        var lst = view.down('#lstSignatories');
+                        lst.setStore(storeSignatories);
+
+                        lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                            lst.setScrollable(false);
+
+
+
+                        //Branches
+
+                        if(company.listOfBranches.branches.length > 0){
+                        var storeBranches = new Ext.data.Store({
+                            data : company.listOfBranches.branches
+                        });
+
+
+
+                        var lstBranches = view.down('#lstBranches');
+                        lstBranches.setStore(storeBranches);
+
+                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
+                        lstBranches.setScrollable(false);
+
+
+                        }
+
+
+
+
+                        Ext.AnimationHelper.HideLoading();
+
+
+                    }
+                });
 
     }
 

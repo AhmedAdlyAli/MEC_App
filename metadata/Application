@@ -103,7 +103,9 @@
             "LoginFomView",
             "PrintOffsView1",
             "PrintOffsView2",
-            "MyEstablishmentDetails"
+            "MyEstablishmentDetails",
+            "MyBranchDetails",
+            "TradeNameBranchDetails"
         ]
     },
     "name": "Application",

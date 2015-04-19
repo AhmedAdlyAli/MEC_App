@@ -99,7 +99,9 @@ Ext.application({
         'LoginFomView',
         'PrintOffsView1',
         'PrintOffsView2',
-        'MyEstablishmentDetails'
+        'MyEstablishmentDetails',
+        'MyBranchDetails',
+        'TradeNameBranchDetails'
     ],
     controllers: [
         'HomeController',

@@ -7,17 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "cls": [
-            "complaint-view"
+            "complaint-view",
+            "rtl"
         ],
         "designer|userAlias": "MyBusinessView",
         "designer|userClassName": "MyBusinessView",
         "itemId": "MyBusinessView",
-        "scrollable": [
-            "{",
-            "            direction: 'vertical',",
-            "            directionLock: true",
-            "        }"
-        ]
+        "layout": "vbox"
     },
     "name": "MyPanel",
     "configAlternates": {
@@ -36,6 +32,7 @@
                 "cls": [
                     "inners-title"
                 ],
+                "docked": "top",
                 "html": "بياناتي الخاصة"
             },
             "name": "MyLabel",
@@ -49,8 +46,10 @@
             },
             "codeClass": null,
             "userConfig": {
+                "height": "100%",
                 "itemCls": "item-company",
-                "itemId": "lstMyCompanies"
+                "itemId": "lstMyCompanies",
+                "layout|flex": 1
             },
             "name": "MyList",
             "designerId": "8236bac8-764a-41d6-9a0d-531cc802a0eb",
@@ -65,8 +64,8 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "    <div class='tpl-signatory-1'>{fullNameARA}</div>",
-                            "    <div class='tpl-signatory-2'><span class='FA'>{type}</span> <span class='FB'>{nationality}</span></div>",
+                            "    <div class='tpl-signatory-1'>{establishmentArabicName}</div>",
+                            "    <div class='tpl-signatory-2'><span class='FA'>سجل تجاري: {commercialRegistration}</span> <span class='FB'>{companyStatus}</span></div>",
                             ""
                         ]
                     },

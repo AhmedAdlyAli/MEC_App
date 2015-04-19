@@ -22,7 +22,8 @@ Ext.define('MEC_App.view.LoginFomView', {
         'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.Password',
-        'Ext.Button'
+        'Ext.Button',
+        'Ext.device.Notification'
     ],
 
     config: {

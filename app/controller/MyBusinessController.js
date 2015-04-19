@@ -16,9 +16,14 @@
 Ext.define('MEC_App.controller.MyBusinessController', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'Ext.Date'
+    ],
+
     config: {
         refs: {
-            MyBusinessView: '#MyBusinessView'
+            MyBusinessView: '#MyBusinessView',
+            MyEstablishmentDetails: '#MyEstablishmentDetails'
         },
 
         control: {
@@ -30,55 +35,56 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             },
             "panel#MyEstablishmentDetails": {
                 initialize: 'onMyEstablishmentDetailsInitialize'
+            },
+            "list#lstBranches-c1": {
+                itemtap: 'onLstBranchesc1ItemTap'
+            },
+            "panel#MyBranchDetails": {
+                initialize: 'onMyBranchDetailsInitialize'
             }
         }
     },
 
     onMyBusinessViewInitialize: function(component, eOpts) {
+                Ext.AnimationHelper.ShowLoading();
 
-                 requestData = {
-          "serviceId": "2",
-          "token": Ext.Global.userToken,
-          "language": "ar",
-          "identityType": "QID",//Ext.Global.identityType,
-          "identityNum": "20000158588",//Ext.Global.identityNum,
-          "identityNationality":  Ext.Global.identityNationality
-        };
 
+                var requestData = {
+                      "serviceId": "2",
+                      "token": Ext.Global.userToken,
+                      "language": "ar",
+                      "identityType": "QID",//Ext.Global.identityType,
+                      "identityNum": "28881809077",//Ext.Global.identityNum,
+                      "identityNationality":  Ext.Global.identityNationality
+                    };
+
+
+                var me = this;
 
                 Ext.Ajax.request({
 
-                    url : url,
+                    url : Ext.Global.GetConfig('webServiceUrl'),
                     method : 'POST',
-                    // useDefaultXhrHeader: false,
                     jsonData :requestData,
                     success : function (response) {
+
                        var json = Ext.util.JSON.decode(response.responseText);
 
-
-
                         //Companies
-
-                        var storeBranches = new Ext.data.Store({
-                            data : company.listOfBranches.branches
+                        var storeCompanies = new Ext.data.Store({
+                            data : json.listOfPrimaryEstablishment.primaryEstablishment
                         });
 
 
-                        var view = this.getMyBusinessView();
+                        var view = me.getMyBusinessView();
 
-                        var lstComapnies = Ext.getCmp('lstBranches');
-                        lstBranches.setStore(json.test);
-
-                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
-                        lstBranches.setScrollable(false);
-
+                        var lstComapnies = view.down('#lstMyCompanies');
+                        lstComapnies.setStore(storeCompanies);
 
                         Ext.AnimationHelper.HideLoading();
 
                     }
                 });
-
-
 
 
     },
@@ -97,7 +103,9 @@ Ext.define('MEC_App.controller.MyBusinessController', {
     },
 
     onMyEstablishmentDetailsInitialize: function(component, eOpts) {
-        var cr = component.getData().listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
+        var view = component; //me.getMyEstablishmentDetails();
+
+        var cr = view.getData().commercialRegistration;
 
         if(cr===''){
 
@@ -119,10 +127,11 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         // get establishment details
 
+        var me = this;
 
         console.log(cr);
 
-                 requestData = {
+         requestData = {
           "serviceId": "8",
           "token": Ext.Global.userToken,
           "language": "ar",
@@ -147,26 +156,24 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                        var json = Ext.util.JSON.decode(response.responseText);
 
 
-
-
                         //Bind Data to controls
                         var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 
 
 
-                        Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
-                        Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(company.commercialRegistrationExpiryDate);
-                        Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
-                        Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
-                        Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
-                        Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
-                        Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
-                        Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
-                        Ext.getCmp('commercialPermitExpiryDate1').setHtml(company.commercialPermitExpiryDate);
-                        Ext.getCmp('establishmentDate1').setHtml(company.establishmentDate);
-                        Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
-                        Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
-                        Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
+                        view.down('#commercialRegistration').setHtml(company.commercialRegistration);
+                        view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                        view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
+                        view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
+                        view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
+                        view.down('#companyCapital').setHtml(company.companyCapital);
+                        view.down('#commercialPermit').setHtml(company.commercialPermit);
+                        view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
+                        view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
+                        view.down('#establishmentDate').setHtml(company.establishmentDate);
+                        view.down('#establishmentType').setHtml(company.establishmentType);
+                        view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
+                        view.down('#establishmentStatus').setHtml(company.establishmentStatus);
 
 
 
@@ -175,7 +182,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                             data : company.listOfSignatories.signatories
                         });
 
-                        var lst = Ext.getCmp('lstSignatories');
+                        var lst = view.down('#lstSignatories');
                         lst.setStore(storeSignatories);
 
                         lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
@@ -192,7 +199,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-                        var lstBranches = Ext.getCmp('lstBranches');
+                        var lstBranches = view.down('#lstBranches');
                         lstBranches.setStore(storeBranches);
 
                         lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
@@ -211,6 +218,138 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 });
 
 
+
+    },
+
+    onLstBranchesc1ItemTap: function(dataview, index, target, record, e, eOpts) {
+        dataview.up('MainNavView').push({
+            xtype: 'MyBranchDetails',
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data
+
+        });
+
+
+
+    },
+
+    onMyBranchDetailsInitialize: function(component, eOpts) {
+        var view = component; //me.getMyEstablishmentDetails();
+
+        var cr = view.getData().branchCR;
+
+        //alert(cr);
+
+
+        if(cr===''){
+
+            Ext.device.Notification.show({
+                title: 'Data Issue ',
+                buttons: ["OK"],
+                message: 'رقم السجل التجاري غير صحيح٫ برجاء العودة واختيار شركة اخرى'
+            });
+
+            return;
+
+        }
+
+
+           Ext.AnimationHelper.ShowLoading();
+
+
+
+
+        // get establishment details
+
+        var me = this;
+
+        console.log(cr);
+
+         requestData = {
+          "serviceId": "8",
+          "token": Ext.Global.userToken,
+          "language": "ar",
+          "commercialRegistrationNum":cr,
+          "moiEstablishmentNum":"",
+          "siebelSpcOperationSpcObjectSpcId":"",
+          "qatarChamberNum":"",
+          "statusMsg":"",
+          "commercialPermitNum":"",
+          "numOutputObjects":"",
+          "economicalNum":""
+        };
+
+
+                Ext.Ajax.request({
+
+                    url : Ext.Global.GetConfig('webServiceUrl'),
+                    method : 'POST',
+                    // useDefaultXhrHeader: false,
+                    jsonData :requestData,
+                    success : function (response) {
+                       var json = Ext.util.JSON.decode(response.responseText);
+
+
+                        //Bind Data to controls
+                        var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+
+
+
+                        view.down('#commercialRegistration').setHtml(company.commercialRegistration);
+                        view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                        view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
+                        view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
+                        view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
+                        view.down('#companyCapital').setHtml(company.companyCapital);
+                        view.down('#commercialPermit').setHtml(company.commercialPermit);
+                        view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
+                        view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
+                        view.down('#establishmentDate').setHtml(company.establishmentDate);
+                        view.down('#establishmentType').setHtml(company.establishmentType);
+                        view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
+                        view.down('#establishmentStatus').setHtml(company.establishmentStatus);
+
+
+
+                        //signatories
+                        var storeSignatories = new Ext.data.Store({
+                            data : company.listOfSignatories.signatories
+                        });
+
+                        var lst = view.down('#lstSignatories');
+                        lst.setStore(storeSignatories);
+
+                        lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                            lst.setScrollable(false);
+
+
+
+                        //Branches
+
+                        if(company.listOfBranches.branches.length > 0){
+                        var storeBranches = new Ext.data.Store({
+                            data : company.listOfBranches.branches
+                        });
+
+
+
+                        var lstBranches = view.down('#lstBranches');
+                        lstBranches.setStore(storeBranches);
+
+                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
+                        lstBranches.setScrollable(false);
+
+
+                        }
+
+
+
+
+                        Ext.AnimationHelper.HideLoading();
+
+
+                    }
+                });
 
     }
 

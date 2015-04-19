@@ -24,25 +24,28 @@ Ext.define('MEC_App.view.MyBusinessView', {
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'MyBusinessView',
-        scrollable: {
-            direction: 'vertical',
-            directionLock: true
-        },
+        layout: 'vbox',
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
                 cls: 'inners-title',
+                docked: 'top',
                 html: 'بياناتي الخاصة'
             },
             {
                 xtype: 'list',
+                flex: 1,
+                height: '100%',
                 itemId: 'lstMyCompanies',
                 itemCls: 'item-company',
                 itemTpl: [
-                    '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
-                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                    '    <div class=\'tpl-signatory-1\'>{establishmentArabicName}</div>',
+                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>سجل تجاري: {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
                     ''
                 ]
             }

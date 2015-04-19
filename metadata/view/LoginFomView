@@ -12,7 +12,10 @@
         "designer|userAlias": "LoginFomView",
         "designer|userClassName": "LoginFomView",
         "itemId": "LoginFomView",
-        "layout": "vbox"
+        "layout": "vbox",
+        "requires": [
+            "Ext.device.Notification"
+        ]
     },
     "designerId": "ee788c50-330e-4972-a16a-88b7981051a1",
     "cn": [

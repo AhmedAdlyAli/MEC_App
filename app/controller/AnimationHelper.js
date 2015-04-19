@@ -25,8 +25,14 @@ Ext.define('MEC_App.controller.AnimationHelper', {
     },
 
     HandleShowHidePanel: function(element, panelID) {
+        var panel = Ext.getCmp(panelID); //Ext.ComponentQuery.Query(panelID);
+
+
+
+
         element.on('tap', function () {
-            var panel = Ext.getCmp(panelID);
+
+
 
             if (panel.isHidden()) {
                 panel.show({type: 'slide', direction: 'down'});

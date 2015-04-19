@@ -687,6 +687,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
+  "MEC_App.controller.MyBusinessController": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
@@ -737,7 +738,9 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MinistryPublicationView": [],
   "MEC_App.view.MinistryReflectionsView": [],
   "MEC_App.view.MonthlyFruitView": [],
+  "MEC_App.view.MyBranchDetails": [],
   "MEC_App.view.MyBusinessView": [],
+  "MEC_App.view.MyEstablishmentDetails": [],
   "MEC_App.view.MyRequestsView": [],
   "MEC_App.view.NewsDetailsView": [],
   "MEC_App.view.NewsListItem": [],
@@ -757,6 +760,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.SupplyServiceView2": [],
   "MEC_App.view.TradeActivityAvailabilityView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
+  "MEC_App.view.TradeNameBranchDetails": [],
   "MEC_App.view.TradeNameEstablishmentDetails": [],
   "MEC_App.view.TrademarkReportView": [],
   "MEC_App.view.ViolationsView": [],
@@ -1504,6 +1508,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
   "MEC_App.controller.MinistryNewsController": [],
+  "MEC_App.controller.MyBusinessController": [],
   "MEC_App.controller.PrintOffices": [
     "controller.printoffices"
   ],
@@ -1626,8 +1631,14 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MonthlyFruitView": [
     "widget.MonthlyFruitView"
   ],
+  "MEC_App.view.MyBranchDetails": [
+    "widget.MyBranchDetails"
+  ],
   "MEC_App.view.MyBusinessView": [
     "widget.MyBusinessView"
+  ],
+  "MEC_App.view.MyEstablishmentDetails": [
+    "widget.MyEstablishmentDetails"
   ],
   "MEC_App.view.MyRequestsView": [
     "widget.MYRequestsView"
@@ -1685,6 +1696,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.TradeNameAvailabilityView": [
     "widget.TradeNameAvailabilityView"
+  ],
+  "MEC_App.view.TradeNameBranchDetails": [
+    "widget.TradeNameBranchDetails"
   ],
   "MEC_App.view.TradeNameEstablishmentDetails": [
     "widget.TradeNameEstablishmentDetails"
