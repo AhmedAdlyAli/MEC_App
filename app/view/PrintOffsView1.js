@@ -58,6 +58,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     var me = this;
                                     me.element.on('tap', function(){
 
+
+                                        //    alert(this.up('PrintOffsView1').getData());
+
                                         var btn = this;
                                         var config = {
                                             title: "نوع الشكوي",
@@ -248,6 +251,10 @@ Ext.define('MEC_App.view.PrintOffsView1', {
         this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));
 
         */
+
+
+        //this.setData('test');
+
 
     }
 

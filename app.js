@@ -102,7 +102,9 @@ Ext.application({
         'MyBranchDetails',
         'TradeNameBranchDetails',
         'MyRequestsView',
-        'MyRequestDetails'
+        'MyRequestDetails',
+        'PrintOffsView3',
+        null
     ],
     controllers: [
         'HomeController',

@@ -633,7 +633,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "id": "lstBizActivities"
+                                "id": null,
+                                "itemId": "lstBizActivities"
                             },
                             "name": "MyList",
                             "designerId": "7a86ca00-4c41-4419-803f-3caec54e69a5",
@@ -648,7 +649,7 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div>List Item {string}</div>"
+                                            "<div>{businessActivityName}</div>"
                                         ]
                                     },
                                     "name": "itemTpl",

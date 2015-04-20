@@ -53,8 +53,8 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                       "serviceId": "2",
                       "token": Ext.Global.userToken,
                       "language": "ar",
-                      "identityType": "QID",//Ext.Global.identityType,
-                      "identityNum": "28881809077",//Ext.Global.identityNum,
+                      "identityType":'QID', //Ext.Global.identityType,
+                      "identityNum": Ext.Global.identityNum,
                       "identityNationality":  Ext.Global.identityNationality
                     };
 
@@ -82,6 +82,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                         lstComapnies.setStore(storeCompanies);
 
                         Ext.AnimationHelper.HideLoading();
+
 
                     }
                 });

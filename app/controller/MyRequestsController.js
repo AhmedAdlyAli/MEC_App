@@ -44,8 +44,8 @@ Ext.define('MEC_App.controller.MyRequestsController', {
                       "serviceId": "3",
                       "token": Ext.Global.userToken,
                       "language": "ar",
-                      "identityType": "QID",//Ext.Global.identityType,
-                      "identityNum": "28881809077",//Ext.Global.identityNum,
+                      "identityType": 'QID',//Ext.Global.identityType,
+                      "identityNum": Ext.Global.identityNum,
                       "identityNationality":  Ext.Global.identityNationality
                     };
 
@@ -105,7 +105,7 @@ Ext.define('MEC_App.controller.MyRequestsController', {
         }
 
 
-           Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
 
 
@@ -115,49 +115,49 @@ Ext.define('MEC_App.controller.MyRequestsController', {
         var me = this;
 
 
-         requestData = {
-          "serviceId": "4",
-          "token": Ext.Global.userToken,
-          "language": "ar",
-          "requestNumber":serial
+        requestData = {
+            "serviceId": "4",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "requestNumber":serial
         };
 
 
-                Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                    url : Ext.Global.GetConfig('webServiceUrl'),
-                    method : 'POST',
-                    jsonData :requestData,
-                    success : function (response) {
-                       var json = Ext.util.JSON.decode(response.responseText);
-
-
-
-                        //Bind Data to controls
-                        var request = json.listOfMecBssOneRequest.request[0];
-
-                        view.down('#serialNumber').setHtml(request.serialNumber);
-                        view.down('#caseStatus').setHtml(request.caseStatus);
-                        view.down('#caseType').setHtml(request.caseType);
-                        view.down('#caseEstablishmentCRN').setHtml(request.caseEstablishmentCRN);
-                        view.down('#caseSubmissionDate').setHtml(request.caseSubmissionDate);
-                        view.down('#caseLastUpdateDate').setHtml(request.caseLastUpdateDate);
-                        view.down('#caseRepresentativeIDNum').setHtml(request.caseRepresentativeIDNum);
-                        view.down('#caseRepresentativeName').setHtml(request.caseRepresentativeName);
-                        view.down('#caseRepresentativeNameENU').setHtml(request.caseRepresentativeNameENU);
-                        view.down('#caseEstablishmentName').setHtml(request.caseEstablishmentName);
-                        view.down('#caseEstablishmentNameENU').setHtml(request.caseEstablishmentNameENU);
-                        view.down('#totlaRemainingFees').setHtml(request.totlaRemainingFees);
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+                var json = Ext.util.JSON.decode(response.responseText);
 
 
 
-                        Ext.AnimationHelper.HideLoading();
+                //Bind Data to controls
+                var request = json.listOfMecBssOneRequest.request[0];
+
+                view.down('#serialNumber').setHtml(request.serialNumber);
+                view.down('#caseStatus').setHtml(request.caseStatus);
+                view.down('#caseType').setHtml(request.caseType);
+                view.down('#caseEstablishmentCRN').setHtml(request.caseEstablishmentCRN);
+                view.down('#caseSubmissionDate').setHtml(request.caseSubmissionDate);
+                view.down('#caseLastUpdateDate').setHtml(request.caseLastUpdateDate);
+                view.down('#caseRepresentativeIDNum').setHtml(request.caseRepresentativeIDNum);
+                view.down('#caseRepresentativeName').setHtml(request.caseRepresentativeName);
+                view.down('#caseRepresentativeNameENU').setHtml(request.caseRepresentativeNameENU);
+                view.down('#caseEstablishmentName').setHtml(request.caseEstablishmentName);
+                view.down('#caseEstablishmentNameENU').setHtml(request.caseEstablishmentNameENU);
+                view.down('#totlaRemainingFees').setHtml(request.totlaRemainingFees);
+
+
+
+                Ext.AnimationHelper.HideLoading();
 
 
 
 
-                    }
-                });
+            }
+        });
 
 
     }

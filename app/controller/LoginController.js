@@ -69,6 +69,9 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.Global.identityNationality = json.listOfMecContactInfoIo.contact[0].identityNationality;
 
 
+                    Ext.AnimationHelper.HideLoading();
+
+
                     Ext.Viewport.getActiveItem().push({
                         xtype: view.getData(),
                         title: Ext.Global.GetFixedTitle()
@@ -77,6 +80,8 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
                 }else{
+
+                    Ext.AnimationHelper.HideLoading();
 
                     Ext.device.Notification.show({
                         title: 'خطأ',
@@ -88,7 +93,7 @@ Ext.define('MEC_App.controller.LoginController', {
                 }
 
 
-                Ext.AnimationHelper.HideLoading();
+
 
             }
         });

@@ -302,19 +302,6 @@
                     },
                     "name": "MyHiddenField3",
                     "designerId": "0bcc9676-9bf5-41a7-acf6-801b9e0701b8"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "test"
-                    },
-                    "name": "MyLabel44",
-                    "designerId": "37a72904-bb11-410e-9c0f-dc175d6bd4db"
                 }
             ]
         }

@@ -38,7 +38,14 @@ Ext.define('MEC_App.controller.PublicServicesController', {
 
     onPrintOfficeBtnTap: function(button, e, eOpts) {
 
-                Ext.Global.RedirectLoggedUser('PrintOffsView1');
+              Ext.Global.RedirectLoggedUser('PrintOffsView1');
+
+
+
+
+
+
+
 
     },
 

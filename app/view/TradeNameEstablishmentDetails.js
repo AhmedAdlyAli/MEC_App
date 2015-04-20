@@ -240,9 +240,9 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'list',
-                                id: 'lstBizActivities',
+                                itemId: 'lstBizActivities',
                                 itemTpl: [
-                                    '<div>List Item {string}</div>'
+                                    '<div>{businessActivityName}</div>'
                                 ]
                             }
                         ]

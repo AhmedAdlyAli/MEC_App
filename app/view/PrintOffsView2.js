@@ -118,10 +118,6 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenSerialNo'
-                    },
-                    {
-                        xtype: 'label',
-                        html: 'test'
                     }
                 ]
             }

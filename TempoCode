@@ -80,3 +80,103 @@ lblRequiredAttachments
 
 
 
+{
+          "serviceId": "1",
+          "userName": "28881809077",
+          "password": "34567"
+        }
+
+
+
+
+
+
+TODO:
+- proposal ==
+- tamween
+
+- Payment
+- web view 
+- BC & Reuests
+
+
+
+
+
+
+
+
+    {
+          "serviceId": "1",
+          "userName": "28881809077",
+          "password": "34567"
+        }
+
+
+
+
+
+"listOfCRBusinessActivities": {
+                    "crBusinessActivities": [
+                        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- estiamte
+- tamween 
+- payment 
+
+
+
+
+
+===================
+payment
+
+
+<iframe name="paymentframe" id="paymentframe" width="400px" height="400px" src="http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx" id="paymentframe"></iframe>
+
+
+
+
+
+
+        var form = Ext.create('Ext.form.Panel', {
+                standardSubmit: true,
+                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                method: 'POST',
+            items: [
+                {xtype: 'textfield',name: 'vpc_MerchTxnRef'},
+                {xtype: 'textfield',name: 'vpc_OrderInfo'},
+                {xtype: 'textfield',name: 'vpc_Amount'},
+                {xtype: 'textfield',name: 'vpc_Locale'}
+            ],
+            });
+
+
+form.setValues({
+                    vpc_MerchTxnRef: 'Ahmed Adly Ali',
+                    vpc_OrderInfo: 'Test',
+                    vpc_Amount: '100',
+                    vpc_Locale : 'ar'
+
+                });
+
+form.element.dom.target = 'paymentframe';
+
+
+form.submit(); //{target: 'paymentframe'}
+
+
+

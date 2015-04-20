@@ -29,7 +29,14 @@
                 "fn": "onPrintOfficeBtnTap",
                 "implHandler": [
                     "",
-                    "        Ext.Global.RedirectLoggedUser('PrintOffsView1');",
+                    "      Ext.Global.RedirectLoggedUser('PrintOffsView1');",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
                     ""
                 ],
                 "name": "tap"

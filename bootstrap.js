@@ -532,6 +532,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -741,6 +752,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.PrintOffices": [],
   "MEC_App.view.PrintOffsView1": [],
   "MEC_App.view.PrintOffsView2": [],
+  "MEC_App.view.PrintOffsView3": [],
   "MEC_App.view.ProjectsView": [],
   "MEC_App.view.PublicServiceView": [],
   "MEC_App.view.RecallsView": [],
@@ -1336,6 +1348,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1652,6 +1675,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.PrintOffsView2": [
     "widget.PrintOffsView2"
+  ],
+  "MEC_App.view.PrintOffsView3": [
+    "widget.PrintOffsView3"
   ],
   "MEC_App.view.ProjectsView": [
     "widget.ProjectsView"

@@ -137,6 +137,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     },
 
     onTradeNameEstablishmentDetailsInitialize: function(component, eOpts) {
+
+
+
         var cr = component.getData().listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
 
         if(cr===''){
@@ -152,39 +155,17 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         }
 
 
+        var view = component;
+
            Ext.AnimationHelper.ShowLoading();
 
 
-
-        // login
-        var token='';
 
 
 
         var url = Ext.Global.GetConfig('webServiceUrl');
 
 
-                var requestData = {
-          "serviceId": "1",
-          "userName": "Sadmin",
-          "password": "Sadmin#123"
-        };
-
-
-                Ext.Ajax.request({
-
-                    url : url,
-                    method : 'POST',
-                    // useDefaultXhrHeader: false,
-                    jsonData :requestData,
-                    success : function (response) {
-                       var json = Ext.util.JSON.decode(response.responseText);
-                       token = json.token;
-
-
-
-
-                        /**********************************************************/
 
 
 
@@ -195,8 +176,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         console.log(cr);
 
                  requestData = {
-          "serviceId": "8",
-          "token": token,
+          "serviceId": "88",
           "language": "ar",
           "commercialRegistrationNum":cr,
           "moiEstablishmentNum":"",
@@ -280,13 +260,23 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                         }
 
 
+                       // business activities
+
+
+                      if(company.listOfCRBusinessActivities.crBusinessActivities.length > 0){
+                        var storActivities = new Ext.data.Store({
+                            data : company.listOfCRBusinessActivities.crBusinessActivities
+                        });
 
 
 
+                        var lstBizActivities = view.down('#lstBizActivities');
+                        lstBizActivities.setStore(storActivities);
 
+                        lstBizActivities.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*6 + 'em');
+                        lstBizActivities.setScrollable(false);
 
-
-
+                        }
 
 
 
@@ -296,48 +286,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
                     }
                 });
-
-
-
-                        /****************************************/
-
-
-                    }
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

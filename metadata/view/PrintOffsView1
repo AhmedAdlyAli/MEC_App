@@ -111,6 +111,9 @@
                                     "var me = this;",
                                     "me.element.on('tap', function(){",
                                     "",
+                                    "",
+                                    "//    alert(this.up('PrintOffsView1').getData());",
+                                    "",
                                     "    var btn = this;",
                                     "    var config = {",
                                     "        title: \"نوع الشكوي\",",
@@ -413,6 +416,10 @@
                     "this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));",
                     "",
                     "*/",
+                    "",
+                    "",
+                    "//this.setData('test');",
+                    "",
                     ""
                 ]
             },

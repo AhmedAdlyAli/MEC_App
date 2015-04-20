@@ -31,6 +31,9 @@ Ext.define('MEC_App.controller.PrintOffsController', {
             },
             "button#btnPrintoffs2Next": {
                 tap: 'onBtnPrintoffs2NextTap'
+            },
+            "panel#PrintOffsView3": {
+                initialize: 'onPrintOffsView3Initialize'
             }
         }
     },
@@ -49,7 +52,7 @@ Ext.define('MEC_App.controller.PrintOffsController', {
             "token": Ext.Global.userToken,
             "language": "ar",
             "identityType": 'QID',//Ext.Global.identityType,
-            "identityNum": '120699',//Ext.Global.identityNum,
+            "identityNum": Ext.Global.identityNum,
             "identityNationality": Ext.Global.identityNationality,
             "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
             "caseType":view.down('#hiddenPrintoutType').getValue(),
@@ -154,10 +157,17 @@ Ext.define('MEC_App.controller.PrintOffsController', {
                                var json = Ext.util.JSON.decode(response.responseText);
 
 
-                                alert('Show Confirmation');
+                                //alert('Show Confirmation');
 
 
                                 console.log(json);
+
+                                Ext.Viewport.getActiveItem().push({
+                                xtype: 'PrintOffsView3',
+                                title: Ext.Global.GetFixedTitle(),
+                                data: json
+                                });
+
 
 
                                 Ext.AnimationHelper.HideLoading();
@@ -172,6 +182,63 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
 
 
+
+
+    },
+
+    onPrintOffsView3Initialize: function(component, eOpts) {
+            var view  = component;
+
+
+        var data = view.getData();
+
+
+                var body = Ext.getBody();
+
+
+
+        /*
+
+                // create a hidden frame
+        var        iframe = body.createChild({
+                    tag: 'iframe',
+                    width: '500',
+                    height: '300',
+                    id: 'paymentframe',
+                    //url:'',
+                    name: 'paymentframe'
+                });
+
+        */
+
+
+        var form = Ext.create('Ext.form.Panel', {
+                standardSubmit: true,
+                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                method: 'POST',
+            width:'400',
+            height:'300'
+            });
+
+
+        form.setValues({
+                    vpc_MerchTxnRef: 'Ahmed Adly Ali',
+                    vpc_OrderInfo: 'Test',
+                    vpc_Amount: '100',
+                    vpc_Locale : 'ar'
+
+                });
+
+
+        view.add(form);
+
+        form.submit({
+          url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                method: 'POST',
+            success: function() {
+                alert('form submitted successfully!');
+            }
+        });
 
 
     }

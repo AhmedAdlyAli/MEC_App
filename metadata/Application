@@ -107,7 +107,9 @@
             "MyBranchDetails",
             "TradeNameBranchDetails",
             "MyRequestsView",
-            "MyRequestDetails"
+            "MyRequestDetails",
+            "PrintOffsView3",
+            "testform"
         ]
     },
     "name": "Application",
