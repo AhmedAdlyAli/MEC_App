@@ -1686,3 +1686,10 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 	32  ???                                 0x00000001 0x0 + 1
 )
 libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-04-23 02:41:15.146 MEC_App[2798:149673] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Data/Application/C8510BF4-65C2-4CCC-B9EC-C78A05F2D301/Library/Cookies/Cookies.binarycookies
+2015-04-23 02:41:15.582 MEC_App[2798:149673] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-23 02:41:15.582 MEC_App[2798:149673] Multi-tasking -> Device: YES, App: YES
+2015-04-23 02:41:15.608 MEC_App[2798:149673] Unlimited access to network resources
+2015-04-23 02:41:16.431 MEC_App[2798:149673] Resetting plugins due to page load.
+2015-04-23 02:41:16.887 MEC_App[2798:149673] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/774A5A23-4E00-4B82-8DBE-2B3D9E008913/data/Containers/Bundle/Application/3C29A0F2-0B7A-4B78-A32B-C52717CAB92A/MEC_App.app/www/index.html
+2015-04-23 02:41:17.094 MEC_App[2798:149673] This app uses phonegap-googlemaps-plugin version 1.2.5

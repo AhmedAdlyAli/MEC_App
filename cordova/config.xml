@@ -30,7 +30,7 @@
         <icon src="resources/icons/icon-76@2x.png"         gap:platform="ios"        width="152" height="152" />
         
         
-        
+            
         
         
         <splash src="resources/splash/splash.png" width="320" height="480"/>
