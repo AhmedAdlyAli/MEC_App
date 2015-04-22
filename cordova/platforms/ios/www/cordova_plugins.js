@@ -70,6 +70,20 @@ module.exports = [
         "clobbers": [
             "window.plugins.actionsheet"
         ]
+    },
+    {
+        "file": "plugins/plugin.google.maps/www/googlemaps-cdv-plugin.js",
+        "id": "plugin.google.maps.phonegap-googlemaps-plugin",
+        "clobbers": [
+            "plugin.google.maps"
+        ]
+    },
+    {
+        "file": "plugins/plugin.http.request/www/http-request.js",
+        "id": "plugin.http.request.phonegap-http-requst",
+        "clobbers": [
+            "cordova.plugins.http-request"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -81,7 +95,10 @@ module.exports.metadata =
     "cordova-plugin-dialogs": "0.3.1-dev",
     "am.armsoft.plugins.ListPicker": "2.2.0",
     "com.phonegap.plugins.barcodescanner": "2.0.1",
-    "nl.x-services.plugins.actionsheet": "1.1.4"
+    "nl.x-services.plugins.actionsheet": "1.1.4",
+    "plugin.google.maps": "1.2.5",
+    "plugin.http.request": "1.0.4",
+    "com.googlemaps.ios": "1.9.2"
 }
 // BOTTOM OF METADATA
 });

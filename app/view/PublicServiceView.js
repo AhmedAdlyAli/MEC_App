@@ -181,7 +181,6 @@ Ext.define('MEC_App.view.PublicServiceView', {
         this.down('#supplyServicesBtn').setHtml(Ext.Global.GetViewTitle('SupplyService'));
 
 
-
         this.down('#lblInvestor').setHtml(Ext.Global.GetViewTitle('InvestorServices'));
         this.down('#lblConsumer').setHtml(Ext.Global.GetViewTitle('ConsumerServices'));
 

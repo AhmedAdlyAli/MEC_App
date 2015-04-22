@@ -17,8 +17,22 @@ Ext.define('MEC_App.view.PrintOffsView3', {
     extend: 'Ext.Panel',
     alias: 'widget.PrintOffsView3',
 
+    requires: [
+        'Ext.Panel'
+    ],
+
     config: {
-        itemId: 'PrintOffsView3'
+        itemId: 'PrintOffsView3',
+        layout: 'vbox',
+        scrollable: false,
+        items: [
+            {
+                xtype: 'panel',
+                flex: 1,
+                html: ' <iframe name="paymentframe"  width="400" height="500"  class="paymentframe" ></iframe>',
+                itemId: 'pnlIframe'
+            }
+        ]
     }
 
 });

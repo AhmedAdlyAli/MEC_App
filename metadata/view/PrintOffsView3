@@ -8,8 +8,27 @@
     "userConfig": {
         "designer|userAlias": "PrintOffsView3",
         "designer|userClassName": "PrintOffsView3",
-        "itemId": "PrintOffsView3"
+        "itemId": "PrintOffsView3",
+        "layout": "vbox",
+        "scrollable": false
     },
     "name": "MyPanel5",
-    "designerId": "25fd70a8-f9e7-4be3-a52b-0867484b6ed3"
+    "designerId": "25fd70a8-f9e7-4be3-a52b-0867484b6ed3",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": " <iframe name=\"paymentframe\"  width=\"400\" height=\"500\"  class=\"paymentframe\" ></iframe>",
+                "itemId": "pnlIframe",
+                "layout|flex": 1
+            },
+            "name": "MyPanel5",
+            "designerId": "7f6f5c4c-7dcf-434f-bb78-d4e0b69a93ff"
+        }
+    ]
 }

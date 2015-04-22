@@ -14,44 +14,29 @@
  */
 
 Ext.define('MEC_App.view.SupplyServiceView1', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.form.Panel',
     alias: 'widget.SupplyServiceView1',
 
     requires: [
         'Ext.Label',
         'Ext.Panel',
         'Ext.TitleBar',
-        'Ext.dataview.List',
-        'Ext.XTemplate',
+        'Ext.form.FieldSet',
         'Ext.Button'
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'SupplyServiceView1',
         scrollable: 'vertical',
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
                 cls: 'inners-title',
                 html: 'نموذج طلب تموين'
-            },
-            {
-                xtype: 'panel',
-                cls: 'acc-group',
-                items: [
-                    {
-                        xtype: 'label',
-                        html: 'عدد الآفراد المستحقين',
-                        id: 'lblFamilyTitle'
-                    },
-                    {
-                        xtype: 'label',
-                        cls: 'label-value',
-                        html: 'test',
-                        id: 'lblFamilyCount'
-                    }
-                ]
             },
             {
                 xtype: 'panel',
@@ -65,17 +50,8 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                         titleAlign: 'right'
                     },
                     {
-                        xtype: 'list',
-                        id: 'lstSuppyItems',
-                        itemId: 'lstSuppyItems',
-                        itemCls: 'item-quantity',
-                        itemTpl: [
-                            '<div>{Name}</div>',
-                            '<input type= text value={AllocatedQty} />',
-                            '',
-                            '',
-                            ''
-                        ]
+                        xtype: 'fieldset',
+                        itemId: 'fsItems'
                     }
                 ]
             },

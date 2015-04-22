@@ -19,7 +19,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     config: {
         refs: {
-            lblFamilyCount: '#lblFamilyCount'
+            lblFamilyCount: '#lblFamilyCount',
+            fsItems: '#fsItems',
+            SupplyServiceView1: 'SupplyServiceView1',
+            SupplyServiceView2: 'SupplyServiceView2'
         },
 
         control: {
@@ -29,53 +32,20 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             "button#btnSupplyNext1": {
                 tap: 'onBtnSupplyNext1Tap'
             },
-            "map#mapSuppliers": {
-                initialize: 'onMapSuppliersInitialize'
+            "panel#SupplyServiceView2": {
+                initialize: 'onSupplyServiceView2Initialize'
             }
         }
     },
 
     onSupplyServiceView1Initialize: function(component, eOpts) {
 
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
-        var requestData = {"qid":"24263400239", "languageID":"2", "mobileDeviceID":"1231"};
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-        Ext.Ajax.request({
-
-            url : url,
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
-
-                var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
-
-
-                Ext.ComponentQuery.query("#lblFamilyCount")[0].setHtml(json2.Data.FamilyMembers.length);
-
-                //console.log(json2);
-
-
-                //Ext.AnimationHelper.HideLoading();
-
-
-            },
-            failure: function(request, resp) {
-                alert("in failure");
-            }
-        });
-
-
-
-        ///////////////////////////
-
+        var me = this;
 
 
         var url2 = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyItemDetails';
-        var requestData2 = {"qid":"24263400239", "languageID":"1", "mobileDeviceID":"1231"};
+
+        var requestData2 = {"qid":"21463400042", "languageID":"2", "mobileDeviceID":"1231"};
 
 
         Ext.AnimationHelper.ShowLoading();
@@ -91,21 +61,37 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json2 = Ext.util.JSON.decode(json1.d);
 
 
+                var fsItems = me.getFsItems();
+
+
+                 Ext.each(json2.Data.Items, function(item){
+
+                        fsItems.add(
+
+                            {
+                                xtype: 'spinnerfield',
+                                label: item.Name,
+                                placeholder: item.Name,
+                                value: item.AllocatedQty,
+                                name: 'item-'+item.ItemID,
+                                stepValue: 1,
+                                minValue: 0,
+                                maxValue:100,
+                                listeners : {
+                                    spin : function(spinnerfield, newValue, direction, eOpts) {
+                                        if(newValue>item.AllocatedQty){
+                                            this.setValue(item.AllocatedQty);
+                                        }
+                                    }
+                                }
 
 
 
-                var store = new Ext.data.Store({
-                    data : json2.Data.Items
-                });
+                             }
 
-               // console.log(json2);
+                        );
 
-                var lst = Ext.getCmp('lstSuppyItems');
-                lst.setStore(store);
-
-
-                lst.setHeight(json2.Data.Items.length * 4 + 'em');
-                lst.setScrollable(false);
+                    });
 
 
 
@@ -133,61 +119,155 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     onBtnSupplyNext1Tap: function(button, e, eOpts) {
 
+
+        var view = this.getSupplyServiceView1();
+
+
           Ext.Viewport.getActiveItem().push({
                     xtype: 'SupplyServiceView2',
-                    title:  Ext.Global.GetFixedTitle()
+                    title:  Ext.Global.GetFixedTitle(),
+                    data: view.getValues()
                 });
-
-
 
 
 
     },
 
-    onMapSuppliersInitialize: function(component, eOpts) {
+    onSupplyServiceView2Initialize: function(component, eOpts) {
 
-        var map = component.getMap();
+        // initialize google maps
+        var view = component;
 
+        var pnlMap = view.down('#pnlMap');
 
-        console.log(map.getCenter());
+        Ext.Function.defer(function(){
 
+            var map = plugin.google.maps.Map.getMap(pnlMap.element.dom);
 
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
+            map.getMyLocation(function(location){
 
+                //map.setMyLocationEnabled(true);
 
-        var requestData =  {"qid":"24263400239", "languageID":"2",
-                            "mobileDeviceID":"1231",
-                            "latitude":map.getCenter().k,
-                            "longtitude":map.getCenter().D};
+                // alert(location.latLng.lat);
 
+                //map.setCenter(location.latLng);
 
-
-
-                Ext.AnimationHelper.ShowLoading();
-
-                Ext.Ajax.request({
-
-                    url : url,
-                    method : 'POST',
-                    jsonData :requestData,
-                    success : function (response) {
-
-                        var json1 = Ext.util.JSON.decode(response.responseText);
-                        var json2 = Ext.util.JSON.decode(json1.d);
-
-
-
-                        console.log(json2);
-
-
-                        //Ext.AnimationHelper.HideLoading();
-
-
-                    },
-                    failure: function(request, resp) {
-                        alert("in failure");
-                    }
+                map.animateCamera({
+                    'target': location.latLng,
+                    'tilt': 60,
+                    'zoom': 8,
+                    'bearing': 140
                 });
+
+
+            }, function(){
+
+                alert("error: " + msg);
+
+            });
+
+
+
+
+            // get dealers
+
+            var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
+
+
+            var requestData =  {"qid":"24263400239", "languageID":"2",
+                                "mobileDeviceID":"1231",
+                                "latitude":location.lat,
+                                "longtitude":location.lng};
+
+
+
+            Ext.AnimationHelper.ShowLoading();
+
+            Ext.Ajax.request({
+
+                url : url,
+                method : 'POST',
+                jsonData :requestData,
+                success : function (response) {
+
+                    var json1 = Ext.util.JSON.decode(response.responseText);
+                    var json2 = Ext.util.JSON.decode(json1.d);
+
+
+                    Ext.AnimationHelper.HideLoading();
+
+
+
+
+                    // add markers
+
+
+
+                    map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
+
+
+
+
+                        map.addMarker({
+                            'position': new plugin.google.maps.LatLng(25.3033825, 51.5092886),
+                            'title': "الميرة",
+                            'snippet': "فرع فريج بن عمران",
+                            animation: plugin.google.maps.Animation.DROP
+                        }, function(marker) {
+
+                            //marker.showInfoWindow();
+
+
+                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
+                                alert("Marker is clicked");
+                            });
+
+
+
+
+
+
+                        });
+
+
+
+
+
+
+
+
+                    });
+
+
+
+
+
+
+                },
+                failure: function(request, resp) {
+                    alert("in failure");
+                }
+            });
+
+
+
+
+
+
+
+
+
+        }, 100,this);
+
+
+
+
+
+
+
+
+
+
 
 
 

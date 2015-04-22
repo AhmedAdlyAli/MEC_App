@@ -68,7 +68,6 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
 
 
-
         Ext.Ajax.request({
 
             url : Ext.Global.GetConfig('webServiceUrl'),
@@ -139,6 +138,12 @@ Ext.define('MEC_App.controller.PrintOffsController', {
                          var serialNo =  view.down('#hiddenSerialNo').getValue();
 
 
+        console.log(serialNo);
+
+        var formData = view.getData();
+
+
+
 
                         var requestData = {
           "serviceId": "10",
@@ -157,20 +162,39 @@ Ext.define('MEC_App.controller.PrintOffsController', {
                                var json = Ext.util.JSON.decode(response.responseText);
 
 
-                                //alert('Show Confirmation');
-
-
-                                console.log(json);
-
-                                Ext.Viewport.getActiveItem().push({
-                                xtype: 'PrintOffsView3',
-                                title: Ext.Global.GetFixedTitle(),
-                                data: json
-                                });
-
 
 
                                 Ext.AnimationHelper.HideLoading();
+
+
+                                if(json.statusMsg!='success')
+                                {
+
+                                    var company = formData.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0];
+                                    json.recordID = company.caseNum;
+                                    json.typeCode = company.typeCode;
+                                    json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;
+                                    json.locale = 'ar';
+
+
+
+
+                                    Ext.Viewport.getActiveItem().push({
+                                    xtype: 'PrintOffsView3',
+                                    title: Ext.Global.GetFixedTitle(),
+                                    data: json
+                                    });
+                                }else{
+
+
+                                Ext.device.Notification.show({
+                                    title: 'خطأ',
+                                    buttons: ["موافق"],
+                                    message:  'json.statusMsg'
+                                    });
+
+                                }
+
 
 
                             }
@@ -180,67 +204,43 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
 
 
-
-
-
-
     },
 
     onPrintOffsView3Initialize: function(component, eOpts) {
-            var view  = component;
-
-
+        var view = component;
         var data = view.getData();
 
+        console.log(data);
 
-                var body = Ext.getBody();
+         Ext.Function.defer(function(){
+        // payment gateway redirection
 
-
-
-        /*
-
-                // create a hidden frame
-        var        iframe = body.createChild({
-                    tag: 'iframe',
-                    width: '500',
-                    height: '300',
-                    id: 'paymentframe',
-                    //url:'',
-                    name: 'paymentframe'
-                });
-
-        */
+                var form = Ext.create('Ext.form.Panel', {
+                        standardSubmit: true,
+                        url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                        method: 'POST',
+                    items: [
+                        {xtype: 'textfield',name: 'vpc_MerchTxnRef'},
+                        {xtype: 'textfield',name: 'vpc_OrderInfo'},
+                        {xtype: 'textfield',name: 'vpc_Amount'},
+                        {xtype: 'textfield',name: 'vpc_Locale'}
+                    ],
+                    });
 
 
-        var form = Ext.create('Ext.form.Panel', {
-                standardSubmit: true,
-                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
-                method: 'POST',
-            width:'400',
-            height:'300'
-            });
+                form.setValues({
+                            vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',
+                            vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',
+                            vpc_Amount: data.fees,
+                            vpc_Locale : data.locale
+
+                        });
+
+                form.element.dom.target = 'paymentframe';
+                form.submit(); //{target: 'paymentframe'}
 
 
-        form.setValues({
-                    vpc_MerchTxnRef: 'Ahmed Adly Ali',
-                    vpc_OrderInfo: 'Test',
-                    vpc_Amount: '100',
-                    vpc_Locale : 'ar'
-
-                });
-
-
-        view.add(form);
-
-        form.submit({
-          url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
-                method: 'POST',
-            success: function() {
-                alert('form submitted successfully!');
-            }
-        });
-
-
+         } ,	400,this);
     }
 
 });

@@ -11,12 +11,13 @@
         ],
         "designer|userAlias": "SupplyServiceView2",
         "designer|userClassName": "SupplyServiceView2",
-        "itemId": "SupplyServiceView1",
+        "itemId": "SupplyServiceView2",
         "layout": null,
         "requires": [
             "Ext.Map"
         ],
-        "scrollable": null
+        "scrollable": null,
+        "zIndex": 1000
     },
     "name": "SupplyServiceView2",
     "designerId": "f6c84ffa-9010-493f-85e3-911b6aeabb66",
@@ -44,32 +45,17 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "mapview"
+                ],
+                "height": 400,
+                "id": "pnlMapDealers",
+                "itemId": "pnlMap",
+                "zIndex": 1000
+            },
             "name": "MyPanel",
-            "designerId": "ac5efce5-d942-45e6-a68a-e31a9e3ce9b5",
-            "cn": [
-                {
-                    "type": "Ext.Map",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": 350,
-                        "id": "mapSuppliers",
-                        "itemId": "mapSuppliers",
-                        "mapOptions": [
-                            "//{center: new google.maps.LatLng (25.321283,51.528329),",
-                            "//mapTypeId: google.maps.MapTypeId.ROADMAP,",
-                            "//zoom: 11}",
-                            "",
-                            ""
-                        ]
-                    },
-                    "name": "MyMap1",
-                    "designerId": "daeca3bc-8624-4edd-b418-24a881a3100a"
-                }
-            ]
+            "designerId": "ac5efce5-d942-45e6-a68a-e31a9e3ce9b5"
         },
         {
             "type": "Ext.Button",

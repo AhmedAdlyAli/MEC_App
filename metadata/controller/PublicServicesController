@@ -138,10 +138,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onSupplyServicesBtnTap",
                 "implHandler": [
-                    "button.up('MainNavView').push({",
-                    "            xtype: 'SupplyServiceView1',",
-                    "            title: Ext.Global.GetFixedTitle()",
-                    "        });"
+                    "      //  Ext.Global.RedirectLoggedUser('SupplyServiceView1');",
+                    "",
+                    " button.up('MainNavView').push({",
+                    "                    xtype: 'SupplyServiceView1',",
+                    "                    title: Ext.Global.GetFixedTitle()",
+                    "                });",
+                    ""
                 ],
                 "name": "tap"
             },

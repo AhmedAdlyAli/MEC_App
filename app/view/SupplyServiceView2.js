@@ -20,13 +20,14 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.Map',
-        'Ext.Button'
+        'Ext.Button',
+        'Ext.Map'
     ],
 
     config: {
         cls: 'complaint-view',
-        itemId: 'SupplyServiceView1',
+        itemId: 'SupplyServiceView2',
+        zIndex: 1000,
         items: [
             {
                 xtype: 'label',
@@ -35,15 +36,11 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
             },
             {
                 xtype: 'panel',
-                items: [
-                    {
-                        xtype: 'map',
-                        height: 350,
-                        id: 'mapSuppliers',
-                        itemId: 'mapSuppliers',
-                        mapOptions: '//{center: new google.maps.LatLng (25.321283,51.528329),\n//mapTypeId: google.maps.MapTypeId.ROADMAP,\n//zoom: 11}'
-                    }
-                ]
+                cls: 'mapview',
+                height: 400,
+                id: 'pnlMapDealers',
+                itemId: 'pnlMap',
+                zIndex: 1000
             },
             {
                 xtype: 'button',

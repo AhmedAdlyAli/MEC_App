@@ -108,8 +108,7 @@
             "TradeNameBranchDetails",
             "MyRequestsView",
             "MyRequestDetails",
-            "PrintOffsView3",
-            "testform"
+            "PrintOffsView3"
         ]
     },
     "name": "Application",

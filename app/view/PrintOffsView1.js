@@ -99,7 +99,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         xtype: 'textfield',
                         itemId: 'txtPrintoutType',
                         label: 'نوع المستخرج',
-                        value: 50,
+                        value: 52,
                         placeHolder: 'نوع المستخرج',
                         listeners: [
                             {

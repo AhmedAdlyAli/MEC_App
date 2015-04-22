@@ -67,10 +67,13 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     },
 
     onSupplyServicesBtnTap: function(button, e, eOpts) {
-        button.up('MainNavView').push({
-                    xtype: 'SupplyServiceView1',
-                    title: Ext.Global.GetFixedTitle()
-                });
+              //  Ext.Global.RedirectLoggedUser('SupplyServiceView1');
+
+         button.up('MainNavView').push({
+                            xtype: 'SupplyServiceView1',
+                            title: Ext.Global.GetFixedTitle()
+                        });
+
     }
 
 });
