@@ -155,7 +155,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 map.animateCamera({
                     'target': location.latLng,
                     'tilt': 60,
-                    'zoom': 8,
+                    'zoom': 9,
                     'bearing': 140
                 });
 
@@ -201,8 +201,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                     // add markers
 
-
-
                     map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
 
 
@@ -214,21 +212,46 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             'snippet': "فرع فريج بن عمران",
                             animation: plugin.google.maps.Animation.DROP
                         }, function(marker) {
-
-                            //marker.showInfoWindow();
-
-
+                            marker.showInfoWindow();
                             marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
                                 alert("Marker is clicked");
                             });
 
+                        });
 
 
 
 
+                        map.addMarker({
+                            'position': new plugin.google.maps.LatLng(25.3033825, 51.529458),
+                            'title': "الميرة",
+                            'snippet': "فرع الدفنة",
+                            animation: plugin.google.maps.Animation.DROP
+                        }, function(marker) {
+                            marker.showInfoWindow();
+                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
+                                alert("Marker is clicked");
+                            });
 
                         });
 
+
+
+
+
+
+                        map.addMarker({
+                            'position': new plugin.google.maps.LatLng(25.3040033,51.5294588),
+                            'title': "الميرة",
+                            'snippet': "فرع المنتزه",
+                            animation: plugin.google.maps.Animation.DROP
+                        }, function(marker) {
+                            marker.showInfoWindow();
+                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
+                                alert("Marker is clicked");
+                            });
+
+                        });
 
 
 

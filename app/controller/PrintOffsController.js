@@ -34,6 +34,9 @@ Ext.define('MEC_App.controller.PrintOffsController', {
             },
             "panel#PrintOffsView3": {
                 initialize: 'onPrintOffsView3Initialize'
+            },
+            "formpanel#PrintOffsView1": {
+                initialize: 'onPrintOffsView1Initialize'
             }
         }
     },
@@ -241,6 +244,46 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
 
          } ,	400,this);
+    },
+
+    onPrintOffsView1Initialize: function(component, eOpts) {
+        Ext.AnimationHelper.ShowLoading();
+
+
+        var requestData = {
+            "serviceId": "2",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "identityType":'QID', //Ext.Global.identityType,
+            "identityNum": Ext.Global.identityNum,
+            "identityNationality":  Ext.Global.identityNationality
+        };
+
+
+        var me = this;
+
+        Ext.Ajax.request({
+
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json = Ext.util.JSON.decode(response.responseText);
+
+
+                var view = me.getPrintOffsView1();
+
+                view.setData(json.listOfPrimaryEstablishment.primaryEstablishment);
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
+
+            }
+        });
+
     }
 
 });

@@ -86,28 +86,28 @@ Ext.define('MEC_App.controller.DeviceController', {
     },
 
     ShowNativePickerWithValue: function(txtField, hiddenField, config) {
-                // Show the picker
-                window.plugins.listpicker.showPicker(config,
-                                                     //select item
-                                                     function(selectedValue) {
+        // Show the picker
+        window.plugins.listpicker.showPicker(config,
+                                             //select item
+                                             function(selectedValue) {
 
-                                                         hiddenField.setValue(selectedValue);
+                                                 hiddenField.setValue(selectedValue);
 
-                                                         Ext.each(config.items, function(item){
+                                                 Ext.each(config.items, function(item){
 
-                                                            if(item.value==selectedValue){
-                                                                txtField.setValue(item.text);
-                                                            }
-
-                                                        });
-
-
-                                                     },
-                                                     //cancel
-                                                     function() {
-                                                         //  alert("You have cancelled");
+                                                     if(item.value==selectedValue){
+                                                         txtField.setValue(item.text);
                                                      }
-                                                    );
+
+                                                 });
+
+
+                                             },
+                                             //cancel
+                                             function() {
+                                                 //  alert("You have cancelled");
+                                             }
+                                            );
     },
 
     GetBarcode: function(txtField) {

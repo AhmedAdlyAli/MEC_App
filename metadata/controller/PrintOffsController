@@ -321,6 +321,65 @@
             },
             "name": "onPrintOffsView3Initialize",
             "designerId": "647c726d-2517-45b3-b9e8-3f9f26df1274"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "formpanel#PrintOffsView1",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onPrintOffsView1Initialize",
+                "implHandler": [
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "var requestData = {",
+                    "    \"serviceId\": \"2\",",
+                    "    \"token\": Ext.Global.userToken,",
+                    "    \"language\": \"ar\",",
+                    "    \"identityType\":'QID', //Ext.Global.identityType,",
+                    "    \"identityNum\": Ext.Global.identityNum,",
+                    "    \"identityNationality\":  Ext.Global.identityNationality",
+                    "};",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('webServiceUrl'),",
+                    "    method : 'POST',",
+                    "    jsonData :requestData,",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var view = me.getPrintOffsView1();",
+                    "",
+                    "        view.setData(json.listOfPrimaryEstablishment.primaryEstablishment);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onPrintOffsView1Initialize",
+            "designerId": "044f28fe-ecd9-4b15-a79d-30d61b9e00c7"
         }
     ]
 }

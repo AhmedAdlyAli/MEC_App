@@ -50,36 +50,45 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         label: 'اسم الشركة',
                         required: true,
                         placeHolder: 'اسم الشركة',
+                        readOnly: true,
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
 
                                     // Create Native drop down
                                     var me = this;
+
+
+
                                     me.element.on('tap', function(){
 
 
-                                        //    alert(this.up('PrintOffsView1').getData());
+                                        var data = me.up('PrintOffsView1').getData();
+
+
+
+                                        var items = [];
+
+                                        Ext.each(data, function(item){
+                                            items.push({ text: item.establishmentArabicName, value: item.commercialRegistration });
+                                        });
+
+
+
 
                                         var btn = this;
                                         var config = {
                                             title: "نوع الشكوي",
-                                            items: [
-                                            { text: "Type 1", value: "Type 1" },
-                                            { text: "Type 2", value: "Type 2" },
-                                            { text: "Type 3", value: "Type 3" },
-                                            { text: "Type 4", value: "Type 4" },
-                                            { text: "Type 5", value: "Type 5" },
-                                            { text: "Type 6", value: "Type 6" }
-
-
-                                            ],
-                                            selectedValue: "2",
-                                            doneButtonLabel: "ٌختيار",
+                                            items: items,
+                                            //selectedValue: "2",
+                                            doneButtonLabel: "اختيار",
                                             cancelButtonLabel: "الغاء"
                                         };
 
-                                        Ext.DeviceController.ShowNativePicker(me,config);
+
+                                        var hiddenCompanyCR = Ext.ComponentQuery.query("#hiddenCompanyCR")[0];
+
+                                        Ext.DeviceController.ShowNativePickerWithValue(me, hiddenCompanyCR,config);
 
 
                                     }, me);
@@ -93,7 +102,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        value: 39193
+                        value: '//39193'
                     },
                     {
                         xtype: 'textfield',
@@ -101,6 +110,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         label: 'نوع المستخرج',
                         value: 52,
                         placeHolder: 'نوع المستخرج',
+                        readOnly: true,
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
@@ -114,15 +124,15 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         var config = {
                                             title: "نوع المستخرج",
                                             items: [
-                                            { text: "شهادة عدم ملكية", value: "50" },
+
                                             { text: "مستخرج سجل تجاري - العربية", value: "51" },
                                             { text: "مستخرج سجل تجاري - انجليزي", value: "52" },
-                                            { text: "شهادة عن رخصة تجارية", value: "53" }
-
+                                            { text: "شهادة عن رخصة تجارية", value: "53" },
+                                            { text: "شهادة عدم ملكية", value: "50" }
 
                                             ],
                                             selectedValue: "",
-                                            doneButtonLabel: "ٌختيار",
+                                            doneButtonLabel: "اختيار",
                                             cancelButtonLabel: "الغاء"
                                         };
 
@@ -146,7 +156,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        value: 50
+                        value: '//50'
                     },
                     {
                         xtype: 'textfield',
@@ -165,7 +175,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "طريقة التسليم",
+                                            title: "طريقة الاستلام",
                                             items: [
                                             { text: "شخصي", value: "1" },
                                             { text: "البريد", value: "2" },
@@ -175,7 +185,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                             ],
                                             selectedValue: "",
-                                            doneButtonLabel: "ٌختيار",
+                                            doneButtonLabel: "اختيار",
                                             cancelButtonLabel: "الغاء"
                                         };
 
