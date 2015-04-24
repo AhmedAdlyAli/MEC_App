@@ -6,9 +6,74 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "ProjectsView",
-        "designer|userClassName": "ProjectsView"
+        "designer|userClassName": "ProjectsView",
+        "itemId": "ProjectsView",
+        "layout": "fit",
+        "scrollable": false
     },
-    "name": "MyPanel",
-    "designerId": "107aadea-0be2-4848-b613-91a9dbc488dc"
+    "name": "RecallsView1",
+    "designerId": "0bf09413-bb62-4895-b4c8-e4209deef44e",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "المبادرات والمشاريع"
+            },
+            "name": "MyLabel3",
+            "designerId": "8e61c6c0-9514-4fde-9c36-efc63600516a"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemCls": "item-recall",
+                "itemId": "lstProjects",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "79cde96e-9865-4403-8e37-4d3a7558df50",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tpl-recall-1 FA'><img src=\"http://196.205.5.28:333/MEC/api//Recall/image/11\" /></div>",
+                            "<div class='tpl-recall-2 FA'><span>{ProjectTitle}</span></div>",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "6cacf226-f754-4a17-b860-0112e29951c7"
+                }
+            ]
+        }
+    ]
 }

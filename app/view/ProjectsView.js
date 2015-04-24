@@ -17,7 +17,37 @@ Ext.define('MEC_App.view.ProjectsView', {
     extend: 'Ext.Panel',
     alias: 'widget.ProjectsView',
 
+    requires: [
+        'Ext.Label',
+        'Ext.dataview.List',
+        'Ext.XTemplate'
+    ],
+
     config: {
+        cls: 'complaint-view',
+        itemId: 'ProjectsView',
+        layout: 'fit',
+        scrollable: false,
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                docked: 'top',
+                html: 'المبادرات والمشاريع'
+            },
+            {
+                xtype: 'list',
+                cls: 'CompanyList',
+                height: '100%',
+                itemId: 'lstProjects',
+                itemCls: 'item-recall',
+                itemTpl: [
+                    '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
+                    '<div class=\'tpl-recall-2 FA\'><span>{ProjectTitle}</span></div>',
+                    ''
+                ]
+            }
+        ]
     }
 
 });

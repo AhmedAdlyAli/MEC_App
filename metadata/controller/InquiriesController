@@ -114,8 +114,8 @@
                 "fn": "onInquiriesBtn4Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetFixedTitle() ",
+                    "            xtype: 'ConsumerEducationView',",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"
@@ -141,8 +141,8 @@
                 "fn": "onInquiriesBtn5Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetFixedTitle() ",
+                    "            xtype: 'InvestorEducationView',",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"
@@ -168,8 +168,8 @@
                 "fn": "onInquiriesBtn6Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetFixedTitle() ",
+                    "            xtype: 'ViolationsView',",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"

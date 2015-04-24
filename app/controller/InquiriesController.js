@@ -66,21 +66,21 @@ Ext.define('MEC_App.controller.InquiriesController', {
 
     onInquiriesBtn4Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
+                    xtype: 'ConsumerEducationView',
                     title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn5Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
+                    xtype: 'InvestorEducationView',
                     title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onInquiriesBtn6Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
+                    xtype: 'ViolationsView',
                     title: Ext.Global.GetFixedTitle()
                 });
     }

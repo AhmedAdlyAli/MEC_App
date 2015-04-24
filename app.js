@@ -50,7 +50,6 @@ Ext.application({
         'MediaCenterView',
         'InquiriesView',
         'ContactUsView',
-        'ProjectsView',
         'ReportsView',
         'SettingsView',
         'MyBusinessView',
@@ -59,9 +58,6 @@ Ext.application({
         'MinistryInThePressView',
         'EconomyNewsView',
         'TradeNameAvailabilityView',
-        'ConsumerEducationView',
-        'InvestorEducationView',
-        'ViolationsView',
         'AboutMinistryView',
         'MinistryBranchesView',
         'FeedbackFormView',
@@ -106,7 +102,13 @@ Ext.application({
         'AdminServicesView',
         'WebFrameView',
         'RecallsView',
-        'RecallDetailsView'
+        'RecallDetailsView',
+        'ViolationsView',
+        'ViolationsDetailsView',
+        'ConsumerEducationView',
+        'InvestorEducationView',
+        'ProjectsView',
+        'ProjectDetailsView'
     ],
     controllers: [
         'HomeController',
@@ -127,15 +129,16 @@ Ext.application({
         'MyBusinessController',
         'MyRequestsController',
         'WebformViewController',
-        'RecallsController'
+        'RecallsController',
+        'ViolationsController',
+        'ConsumerEducationController',
+        'InvestorEducationController',
+        'ProjectsController'
     ],
     name: 'MEC_App',
 
     launch: function() {
-        //Ext.Viewport.add(Ext.create('HelloWorld.view.Main'));
 
-
-        //var loc = Ext.create('MEC_App.controller.LocAr');
         Ext.Global.LoadLocalization();
 
         Ext.Global.LoadSessionVariables();

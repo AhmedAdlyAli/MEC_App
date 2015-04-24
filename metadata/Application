@@ -25,7 +25,11 @@
             "MyBusinessController",
             "MyRequestsController",
             "WebformViewController",
-            "RecallsController"
+            "RecallsController",
+            "ViolationsController",
+            "ConsumerEducationController",
+            "InvestorEducationController",
+            "ProjectsController"
         ],
         "models": [
             "PrintOffice",
@@ -57,7 +61,6 @@
             "MediaCenterView",
             "InquiriesView",
             "ContactUsView",
-            "ProjectsView",
             "ReportsView",
             "SettingsView",
             "MyBusinessView",
@@ -66,9 +69,6 @@
             "MinistryInThePressView",
             "EconomyNewsView",
             "TradeNameAvailabilityView",
-            "ConsumerEducationView",
-            "InvestorEducationView",
-            "ViolationsView",
             "AboutMinistryView",
             "MinistryBranchesView",
             "FeedbackFormView",
@@ -113,7 +113,13 @@
             "AdminServicesView",
             "WebFrameView",
             "RecallsView",
-            "RecallDetailsView"
+            "RecallDetailsView",
+            "ViolationsView",
+            "ViolationsDetailsView",
+            "ConsumerEducationView",
+            "InvestorEducationView",
+            "ProjectsView",
+            "ProjectDetailsView"
         ]
     },
     "name": "Application",
@@ -129,10 +135,7 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "//Ext.Viewport.add(Ext.create('HelloWorld.view.Main'));",
                     "",
-                    "",
-                    "//var loc = Ext.create('MEC_App.controller.LocAr');",
                     "Ext.Global.LoadLocalization();",
                     "",
                     "Ext.Global.LoadSessionVariables();",

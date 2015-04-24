@@ -674,6 +674,7 @@ Ext.ClassManager.addNameAlternateMappings({
     "Ext.AnimationHelper"
   ],
   "MEC_App.controller.ComplaintsController": [],
+  "MEC_App.controller.ConsumerEducationController": [],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [
     "Ext.DeviceController"
@@ -683,6 +684,7 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
+  "MEC_App.controller.InvestorEducationController": [],
   "MEC_App.controller.LocAr": [],
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
@@ -691,6 +693,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.MyRequestsController": [],
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
+  "MEC_App.controller.ProjectsController": [],
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
@@ -698,6 +701,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.SupplyServiceController": [],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
+  "MEC_App.controller.ViolationsController": [],
   "MEC_App.controller.WebformViewController": [],
   "MEC_App.model.ComplaintsModel": [],
   "MEC_App.model.MenuModel": [],
@@ -756,6 +760,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.PrintOffsView1": [],
   "MEC_App.view.PrintOffsView2": [],
   "MEC_App.view.PrintOffsView3": [],
+  "MEC_App.view.ProjectDetailsView": [],
   "MEC_App.view.ProjectsView": [],
   "MEC_App.view.PublicServiceView": [],
   "MEC_App.view.RecallDetailsView": [],
@@ -770,6 +775,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.TradeNameBranchDetails": [],
   "MEC_App.view.TradeNameEstablishmentDetails": [],
   "MEC_App.view.TrademarkReportView": [],
+  "MEC_App.view.ViolationsDetailsView": [],
   "MEC_App.view.ViolationsView": [],
   "MEC_App.view.WebFrameView": [],
   "MEC_App.view.WhereToShopView": []
@@ -1507,11 +1513,17 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.AjaxHelper": [],
   "MEC_App.controller.AnimationHelper": [],
   "MEC_App.controller.ComplaintsController": [],
+  "MEC_App.controller.ConsumerEducationController": [
+    "controller.ConsumerEducationController"
+  ],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [],
   "MEC_App.controller.Global": [],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
+  "MEC_App.controller.InvestorEducationController": [
+    "controller.InvestorEducationController"
+  ],
   "MEC_App.controller.LocAr": [],
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MediaCenterController": [],
@@ -1524,6 +1536,7 @@ Ext.ClassManager.addNameAliasMappings({
     "controller.printoffices"
   ],
   "MEC_App.controller.PrintOffsController": [],
+  "MEC_App.controller.ProjectsController": [],
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
@@ -1533,6 +1546,7 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
+  "MEC_App.controller.ViolationsController": [],
   "MEC_App.controller.WebformViewController": [
     "controller.WebformViewController"
   ],
@@ -1691,6 +1705,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.PrintOffsView3": [
     "widget.PrintOffsView3"
   ],
+  "MEC_App.view.ProjectDetailsView": [
+    "widget.ProjectDetailsView"
+  ],
   "MEC_App.view.ProjectsView": [
     "widget.ProjectsView"
   ],
@@ -1732,6 +1749,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.TrademarkReportView": [
     "widget.TrademarkReportView"
+  ],
+  "MEC_App.view.ViolationsDetailsView": [
+    "widget.ViolationsDetailsView"
   ],
   "MEC_App.view.ViolationsView": [
     "widget.ViolationsView"

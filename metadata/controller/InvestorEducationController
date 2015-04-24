@@ -1,0 +1,69 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "InvestorEducationController",
+        "designer|userClassName": "InvestorEducationController"
+    },
+    "name": "MyController",
+    "designerId": "0c495f16-71a2-48cf-bbdb-c1ab0cec4a73",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#InvestorEducationView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onInvestorEducationViewInitialize",
+                "implHandler": [
+                    "var view = component;//me.getMyBusinessView();",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/InvestorEducation/GetAllInvestorEducations?culture=ar&pageSize=20&pageIndex=0',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        console.log(json);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstEducation = view.down('#lstEducation');",
+                    "        lstEducation.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onInvestorEducationViewInitialize",
+            "designerId": "adf48a9a-5db3-4f59-a929-20a954bf1fdc"
+        }
+    ]
+}

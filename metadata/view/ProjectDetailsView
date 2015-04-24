@@ -1,0 +1,146 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ProjectDetailsView",
+        "designer|userClassName": "ProjectDetailsView",
+        "id": null,
+        "itemId": "ProjectDetailsView",
+        "layout": "vbox",
+        "xtype": null
+    },
+    "name": "RecallDetailsView1",
+    "designerId": "54c3c531-1bfa-42f3-847d-5ae4d41868af",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "xtype",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "newsDetails"
+                ],
+                "layout|flex": 1
+            },
+            "name": "MyPanel3",
+            "designerId": "5bcb7a45-2401-4097-abe1-a4027e8a2773",
+            "cn": [
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "img"
+                        ],
+                        "height": 201,
+                        "id": null,
+                        "itemId": "imgDetails"
+                    },
+                    "name": "MyImg",
+                    "designerId": "ac5f9f75-e78c-4eed-b5bd-cacee366c508"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyPanel1",
+                    "designerId": "90220579-179e-43f8-9f02-20d1513ef4d5",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "title"
+                                ],
+                                "height": null,
+                                "html": "",
+                                "id": null,
+                                "itemId": "lblTitle"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "1423546e-4675-4e6d-86e9-4238dc792308"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyPanel2",
+                    "designerId": "459e26ab-52fc-4d5b-8c03-19878c5801c5",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null,
+                                "itemId": "lblDescription"
+                            },
+                            "name": "MyLabel4",
+                            "designerId": "3249fdbf-5813-4eae-9c9b-f49d389b76ca"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyPanel4",
+                    "designerId": "5c54de6a-5176-4cc7-9c67-da3b984fe18f",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": null,
+                                "itemId": "lblUrl"
+                            },
+                            "name": "MyLabel5",
+                            "designerId": "44834be8-4ed9-46ff-bdf0-6f2347678de5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

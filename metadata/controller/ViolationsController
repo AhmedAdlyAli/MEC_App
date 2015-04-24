@@ -1,0 +1,131 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ViolationsController"
+    },
+    "name": "MyController",
+    "designerId": "398a769e-fe90-4de9-9ed9-d230513e61ce",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ViolationsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onViolationsViewInitialize",
+                "implHandler": [
+                    "var view = component;//me.getMyBusinessView();",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Violation/GetAllViolations?culture=ar&pageSize=20&pageIndex=0',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        console.log(json);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstViolations = view.down('#lstViolations');",
+                    "        lstViolations.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onViolationsViewInitialize",
+            "designerId": "2790a938-8ee5-4eeb-916f-c3e784f143e0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ViolationsDetailsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onViolationsDetailsViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "var data = view.getData();",
+                    "view.down('#lblCompanyName').setHtml(data.CompanyName);",
+                    "view.down('#lblViolations').setHtml(data.Violations);",
+                    "view.down('#lblPunishment').setHtml(data.Punishment);",
+                    "view.down('#lblDecisionNumber').setHtml(data.DecisionNumber);",
+                    "view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onViolationsDetailsViewInitialize",
+            "designerId": "807b8a9e-648a-4ce2-b046-6e53e9985355"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstViolations",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstViolationsItemTap",
+                "implHandler": [
+                    "dataview.up('MainNavView').push({",
+                    "    xtype: 'ViolationsDetailsView',",
+                    "    title: Ext.Global.GetFixedTitle(),",
+                    "    data: record.data",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstViolationsItemTap",
+            "designerId": "1fe9cd26-9877-4eb7-a58f-96772e7dd0dd"
+        }
+    ]
+}

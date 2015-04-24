@@ -17,7 +17,37 @@ Ext.define('MEC_App.view.ViolationsView', {
     extend: 'Ext.Panel',
     alias: 'widget.ViolationsView',
 
+    requires: [
+        'Ext.Label',
+        'Ext.dataview.List',
+        'Ext.XTemplate'
+    ],
+
     config: {
+        cls: 'complaint-view',
+        itemId: 'ViolationsView',
+        layout: 'fit',
+        scrollable: false,
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                docked: 'top',
+                html: 'الاغلاقات الادارية'
+            },
+            {
+                xtype: 'list',
+                cls: 'CompanyList',
+                height: '100%',
+                itemId: 'lstViolations',
+                itemCls: 'item-recall',
+                itemTpl: [
+                    '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
+                    '<div class=\'tpl-recall-2 FA\'><span>{CompanyName}</span><br /><span class="brief">{PublishDate}</span></div>',
+                    ''
+                ]
+            }
+        ]
     }
 
 });

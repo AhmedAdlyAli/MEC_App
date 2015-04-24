@@ -6,9 +6,74 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "InvestorEducationView",
-        "designer|userClassName": "InvestorEducationView"
+        "designer|userClassName": "InvestorEducationView",
+        "itemId": "InvestorEducationView",
+        "layout": "fit",
+        "scrollable": false
     },
-    "name": "MyPanel",
-    "designerId": "bb82c435-9c52-4e6a-b0f5-8a3541f12416"
+    "name": "ConsumerEducationView1",
+    "designerId": "07e753ce-ef0f-4bb1-ab04-991a10e7228c",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "ثقافة المستثمر"
+            },
+            "name": "MyLabel3",
+            "designerId": "31b3a8b6-773f-43b9-8afc-ffb5728008ef"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemCls": "item-recall",
+                "itemId": "lstEducation",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "14ef935d-f636-4459-a626-36829404d65c",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tpl-recall-1 FA'><img src=\"http://196.205.5.28:333/MEC/api//Recall/image/11\" /></div>",
+                            "<div class='tpl-recall-2 FA'><span>{ArticleBrief}</span></div>",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "9efc2f7b-064c-4a3d-ae6c-dff0e4e7dff7"
+                }
+            ]
+        }
+    ]
 }
