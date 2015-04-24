@@ -1,0 +1,69 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "WebFrameView",
+        "designer|userClassName": "WebFrameView",
+        "itemId": "WebFrameView",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "AdminServicesView1",
+    "designerId": "b608afb4-e842-4562-bff4-21e598e6663c",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "Test",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "a69e99df-287f-4821-8f80-74efe2da3d3d"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 1
+            },
+            "name": "MyPanel1",
+            "designerId": "fe24340b-0365-4dfe-aca7-2be52585432c",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "100%",
+                        "itemId": "pnlFrame"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "ac049faa-2043-43c7-8849-646327a81db5"
+                }
+            ]
+        }
+    ]
+}

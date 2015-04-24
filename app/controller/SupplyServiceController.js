@@ -48,7 +48,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData2 = {"qid":"21463400042", "languageID":"2", "mobileDeviceID":"1231"};
 
 
-        Ext.AnimationHelper.ShowLoading();
+        //Ext.AnimationHelper.ShowLoading();
 
         Ext.Ajax.request({
 
@@ -123,11 +123,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view = this.getSupplyServiceView1();
 
 
-          Ext.Viewport.getActiveItem().push({
-                    xtype: 'SupplyServiceView2',
-                    title:  Ext.Global.GetFixedTitle(),
-                    data: view.getValues()
-                });
+        Ext.Viewport.getActiveItem().push({
+            xtype: 'SupplyServiceView2',
+            title:  Ext.Global.GetFixedTitle(),
+            data: view.getValues()
+        });
 
 
 
@@ -143,6 +143,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Function.defer(function(){
 
             var map = plugin.google.maps.Map.getMap(pnlMap.element.dom);
+
+            map.setClickable(true);
+
 
             map.getMyLocation(function(location){
 
@@ -167,7 +170,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             });
 
 
-
+        /*
 
             // get dealers
 
@@ -274,7 +277,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-
+        */
 
 
 

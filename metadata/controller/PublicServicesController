@@ -138,18 +138,142 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onSupplyServicesBtnTap",
                 "implHandler": [
-                    "      //  Ext.Global.RedirectLoggedUser('SupplyServiceView1');",
+                    "Ext.Global.RedirectLoggedUser('SupplyServiceView1');",
                     "",
-                    " button.up('MainNavView').push({",
-                    "                    xtype: 'SupplyServiceView1',",
-                    "                    title: Ext.Global.GetFixedTitle()",
-                    "                });",
+                    "//button.up('MainNavView').push({",
+                    "//                 xtype: 'SupplyServiceView1',",
+                    "//               title: Ext.Global.GetFixedTitle()",
+                    "//         });",
                     ""
                 ],
                 "name": "tap"
             },
             "name": "onSupplyServicesBtnTap",
             "designerId": "01e34edc-0e1c-413a-82e2-1ac2fc34ebaa"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#adminServiceBtn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdminServiceBtnTap",
+                "name": "tap"
+            },
+            "name": "onAdminServiceBtnTap",
+            "designerId": "21231184-43a2-4506-8ff1-9be646e5ea0d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#adminServiceBtn",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onAdminServiceBtnTap",
+                "implHandler": [
+                    "        //Ext.Global.RedirectLoggedUser('AdminServicesView');",
+                    "",
+                    "",
+                    "        button.up('MainNavView').push({",
+                    "                         xtype: 'AdminServicesView',",
+                    "                       title: Ext.Global.GetFixedTitle()",
+                    "                 });"
+                ],
+                "name": "tap"
+            },
+            "name": "onAdminServiceBtnTap",
+            "designerId": "e6ab0eba-066d-49cd-b55a-a25f6a33e048"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AdminServicesView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onAdminServicesViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "",
+                    "var links = [{Name:'تجديد السجل التجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},",
+                    "             {Name:'تجديد الرخصة التجارية',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},",
+                    "             {Name:'تغيير الإسم التجارى',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},",
+                    "             {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},",
+                    "             {Name:'محو فرع',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},",
+                    "             {Name:'محو سجل رئيسي',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}             ",
+                    "             ",
+                    "            ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "                    data : links",
+                    "                });",
+                    "",
+                    "        var lst = view.down('#lstLinks');",
+                    "        lst.setStore(store);",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onAdminServicesViewInitialize",
+            "designerId": "96cbd3d2-9052-46e8-9a56-79890ede19b2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstLinks",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstLinksItemTap",
+                "implHandler": [
+                    "Ext.Viewport.getActiveItem().push({",
+                    "    xtype: 'WebFrameView',",
+                    "    title: Ext.Global.GetFixedTitle(),",
+                    "    data: record.data",
+                    "});",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstLinksItemTap",
+            "designerId": "97fa60f3-704c-4143-bb9d-43ea840aba7d"
         }
     ]
 }

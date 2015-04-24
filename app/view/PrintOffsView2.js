@@ -61,7 +61,10 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        cls: 'label-value',
+                        cls: [
+                            'label-value',
+                            'lblNoCopies'
+                        ],
                         itemId: 'lblNoCopies'
                     },
                     {

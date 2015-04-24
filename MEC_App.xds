@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
+            "value": "webBuild",
+            "display": "Build web app"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -57,8 +57,10 @@
             "f2ba1ad2-316c-442d-83bd-a9eb892e100e",
             "7bb9b1f3-41c9-4d55-993b-b3343ace8ef2",
             "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4",
+            "530397e4-091b-4dbc-90f1-03400424ac21",
+            "c85da1e8-84b4-4f06-a867-c60c5382f409",
+            "b608afb4-e842-4562-bff4-21e598e6663c",
             "06b96292-0ddf-4d7a-98c6-c8ccd1c18664",
-            "92fa4b1a-fa0d-4b1b-92eb-736b1968dc69",
             "c43db057-385d-4208-8b21-34af833644df",
             "bb82c435-9c52-4e6a-b0f5-8a3541f12416",
             "4d5d49a7-4702-4301-babf-817f28a34bbc",
@@ -83,6 +85,7 @@
             "23e1548e-26b7-4c14-82c3-7df6940cedee",
             "020152b0-6c67-42a9-a552-1f580220e176",
             "af50c861-2e74-49ff-b8eb-247d83453b48",
+            "b3e30364-d256-4118-af99-450f38b6c6d4",
             "70eb2d5a-44d2-49dd-840b-68a4f90f6ee4",
             "d9747862-977d-46fe-88a3-3b31bbe23010",
             "a2e8e36b-ee51-41f3-b15f-aa7b7c08bf7a",
@@ -126,7 +129,9 @@
             "d8a2aa82-54b8-4881-85df-6ce7ae4aa4af",
             "8369e830-859a-4f4b-84de-6b60e78b4278",
             "7511b616-f930-4f5a-9399-45bf064394c2",
-            "c663afb4-c6d2-42bc-84cc-f812f9620efc"
+            "c663afb4-c6d2-42bc-84cc-f812f9620efc",
+            "069d8706-abbd-4666-80f6-ed947b07d748",
+            "ffc59232-c6f1-4fae-95af-e3bd7a1be4ab"
         ],
         "model": [
             "1eedff92-788e-4de6-862c-b4c7207d377d",

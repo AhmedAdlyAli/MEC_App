@@ -32,6 +32,16 @@ Ext.define('MEC_App.controller.PublicServicesController', {
             },
             "button#supplyServicesBtn": {
                 tap: 'onSupplyServicesBtnTap'
+            },
+            "button#adminServiceBtn": {
+                tap: 'onAdminServiceBtnTap',
+                tap: 'onAdminServiceBtnTap'
+            },
+            "panel#AdminServicesView": {
+                initialize: 'onAdminServicesViewInitialize'
+            },
+            "list#lstLinks": {
+                itemtap: 'onLstLinksItemTap'
             }
         }
     },
@@ -67,12 +77,57 @@ Ext.define('MEC_App.controller.PublicServicesController', {
     },
 
     onSupplyServicesBtnTap: function(button, e, eOpts) {
-              //  Ext.Global.RedirectLoggedUser('SupplyServiceView1');
+        Ext.Global.RedirectLoggedUser('SupplyServiceView1');
 
-         button.up('MainNavView').push({
-                            xtype: 'SupplyServiceView1',
-                            title: Ext.Global.GetFixedTitle()
+        //button.up('MainNavView').push({
+        //                 xtype: 'SupplyServiceView1',
+        //               title: Ext.Global.GetFixedTitle()
+        //         });
+
+    },
+
+    onAdminServiceBtnTap: function(button, e, eOpts) {
+
+    },
+
+    onAdminServiceBtnTap: function(button, e, eOpts) {
+                //Ext.Global.RedirectLoggedUser('AdminServicesView');
+
+
+                button.up('MainNavView').push({
+                                 xtype: 'AdminServicesView',
+                               title: Ext.Global.GetFixedTitle()
+                         });
+    },
+
+    onAdminServicesViewInitialize: function(component, eOpts) {
+        var view = component;
+
+        var links = [{Name:'تجديد السجل التجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},
+                     {Name:'تجديد الرخصة التجارية',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},
+                     {Name:'تغيير الإسم التجارى',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+                     {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+                     {Name:'محو فرع',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
+                     {Name:'محو سجل رئيسي',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
+
+                    ];
+
+        var store = new Ext.data.Store({
+                            data : links
                         });
+
+                var lst = view.down('#lstLinks');
+                lst.setStore(store);
+
+
+    },
+
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
+        Ext.Viewport.getActiveItem().push({
+            xtype: 'WebFrameView',
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data
+        });
 
     }
 

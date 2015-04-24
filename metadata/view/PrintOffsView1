@@ -89,7 +89,7 @@
                         "itemId": "companyName",
                         "label": "اسم الشركة",
                         "labelAlign": null,
-                        "name": null,
+                        "name": "companyName",
                         "placeHolder": "اسم الشركة",
                         "readOnly": true,
                         "required": true
@@ -164,10 +164,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenCompanyCR",
-                        "value": [
-                            "//39193",
-                            ""
-                        ]
+                        "name": "hiddenCompanyCR"
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
@@ -184,12 +181,9 @@
                         "itemId": "txtPrintoutType",
                         "label": "نوع المستخرج",
                         "labelAlign": null,
-                        "name": null,
+                        "name": "txtPrintoutType",
                         "placeHolder": "نوع المستخرج",
-                        "readOnly": true,
-                        "value": [
-                            "52"
-                        ]
+                        "readOnly": true
                     },
                     "name": "MyTextField3",
                     "designerId": "04b46beb-3f69-4317-b9c8-8b540546b639",
@@ -255,9 +249,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenPrintoutType",
-                        "value": [
-                            "//50"
-                        ]
+                        "name": "hiddenPrintoutType"
                     },
                     "name": "MyHiddenField",
                     "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
@@ -274,7 +266,7 @@
                         "id": null,
                         "itemId": "txtDeliveryMethod",
                         "label": "طريقة الاستلام",
-                        "name": null,
+                        "name": "txtDeliveryMethod",
                         "placeHolder": "طريقة الاستلام",
                         "readOnly": true
                     },
@@ -338,7 +330,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "itemId": "hiddenDeliveryMethod"
+                        "itemId": "hiddenDeliveryMethod",
+                        "name": "hiddenDeliveryMethod"
                     },
                     "name": "MyHiddenField1",
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
@@ -355,7 +348,7 @@
                         "itemId": "txtNoOfCopies",
                         "label": "عدد النسخ",
                         "labelAlign": null,
-                        "name": null,
+                        "name": "txtNoOfCopies",
                         "placeHolder": "عدد النسخ"
                     },
                     "name": "MyTextField1",

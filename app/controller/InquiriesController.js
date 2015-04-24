@@ -59,9 +59,9 @@ Ext.define('MEC_App.controller.InquiriesController', {
 
     onInquiriesBtn3Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetFixedTitle()
-                });
+            xtype: 'RecallsView',
+            title: Ext.Global.GetFixedTitle()
+        });
     },
 
     onInquiriesBtn4Tap: function(button, e, eOpts) {

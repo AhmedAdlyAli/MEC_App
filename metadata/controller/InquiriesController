@@ -87,9 +87,9 @@
                 "fn": "onInquiriesBtn3Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetFixedTitle() ",
-                    "        });"
+                    "    xtype: 'RecallsView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});"
                 ],
                 "name": "tap"
             },

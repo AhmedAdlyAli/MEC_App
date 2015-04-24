@@ -1,0 +1,60 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "WebformViewController",
+        "designer|userClassName": "WebformViewController"
+    },
+    "name": "MyController",
+    "designerId": "069d8706-abbd-4666-80f6-ed947b07d748",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#WebFrameView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onWebFrameViewInitialize",
+                "implHandler": [
+                    "",
+                    "var view = component;",
+                    "",
+                    "var data  = view.getData();",
+                    "view.down('#lblTitle').setHtml(data.Name);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var html = '<iframe src=\"'+data.Url+'\" class=\"web-frame\"></iframe>';",
+                    "",
+                    "",
+                    "view.down('#pnlFrame').setHtml(html);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onWebFrameViewInitialize",
+            "designerId": "8f8feb1e-a4ec-48cb-862d-98918f73cb62"
+        }
+    ]
+}

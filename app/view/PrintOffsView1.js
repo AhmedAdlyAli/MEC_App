@@ -48,6 +48,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         xtype: 'textfield',
                         itemId: 'companyName',
                         label: 'اسم الشركة',
+                        name: 'companyName',
                         required: true,
                         placeHolder: 'اسم الشركة',
                         readOnly: true,
@@ -102,13 +103,13 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        value: '//39193'
+                        name: 'hiddenCompanyCR'
                     },
                     {
                         xtype: 'textfield',
                         itemId: 'txtPrintoutType',
                         label: 'نوع المستخرج',
-                        value: 52,
+                        name: 'txtPrintoutType',
                         placeHolder: 'نوع المستخرج',
                         readOnly: true,
                         listeners: [
@@ -156,13 +157,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        value: '//50'
+                        name: 'hiddenPrintoutType'
                     },
                     {
                         xtype: 'textfield',
                         hidden: false,
                         itemId: 'txtDeliveryMethod',
                         label: 'طريقة الاستلام',
+                        name: 'txtDeliveryMethod',
                         placeHolder: 'طريقة الاستلام',
                         readOnly: true,
                         listeners: [
@@ -206,12 +208,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     },
                     {
                         xtype: 'hiddenfield',
-                        itemId: 'hiddenDeliveryMethod'
+                        itemId: 'hiddenDeliveryMethod',
+                        name: 'hiddenDeliveryMethod'
                     },
                     {
                         xtype: 'textfield',
                         itemId: 'txtNoOfCopies',
                         label: 'عدد النسخ',
+                        name: 'txtNoOfCopies',
                         placeHolder: 'عدد النسخ'
                     },
                     {

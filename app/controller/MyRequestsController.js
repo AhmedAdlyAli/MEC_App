@@ -32,48 +32,48 @@ Ext.define('MEC_App.controller.MyRequestsController', {
     },
 
     onMyRequestsViewInitialize: function(component, eOpts) {
-                var view = component;//me.getMyBusinessView();
+        var view = component;//me.getMyBusinessView();
 
 
-                Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
         //alert('loading');
 
 
-                var requestData = {
-                      "serviceId": "3",
-                      "token": Ext.Global.userToken,
-                      "language": "ar",
-                      "identityType": 'QID',//Ext.Global.identityType,
-                      "identityNum": Ext.Global.identityNum,
-                      "identityNationality":  Ext.Global.identityNationality
-                    };
+        var requestData = {
+            "serviceId": "3",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "identityType": 'QID',//Ext.Global.identityType,
+            "identityNum": Ext.Global.identityNum,
+            "identityNationality":  Ext.Global.identityNationality
+        };
 
 
-                var me = this;
+        var me = this;
 
-                Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                    url : Ext.Global.GetConfig('webServiceUrl'),
-                    method : 'POST',
-                    jsonData :requestData,
-                    success : function (response) {
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
 
-                       var json = Ext.util.JSON.decode(response.responseText);
+                var json = Ext.util.JSON.decode(response.responseText);
 
-                        //Requests
-                        var storeRequests = new Ext.data.Store({
-                            data : json.listOfMecBssAllRequestsWs.mecLlcEstablishment
-                        });
-
-
-                        var lstRequests = view.down('#lstMyRequests');
-                        lstRequests.setStore(storeRequests);
-
-                        Ext.AnimationHelper.HideLoading();
-
-                    }
+                //Requests
+                var storeRequests = new Ext.data.Store({
+                    data : json.listOfMecBssAllRequestsWs.mecLlcEstablishment
                 });
+
+
+                var lstRequests = view.down('#lstMyRequests');
+                lstRequests.setStore(storeRequests);
+
+                Ext.AnimationHelper.HideLoading();
+
+            }
+        });
 
     },
 

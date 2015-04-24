@@ -23,7 +23,9 @@
             "SupplyServiceController",
             "LoginController",
             "MyBusinessController",
-            "MyRequestsController"
+            "MyRequestsController",
+            "WebformViewController",
+            "RecallsController"
         ],
         "models": [
             "PrintOffice",
@@ -64,7 +66,6 @@
             "MinistryInThePressView",
             "EconomyNewsView",
             "TradeNameAvailabilityView",
-            "RecallsView",
             "ConsumerEducationView",
             "InvestorEducationView",
             "ViolationsView",
@@ -108,7 +109,11 @@
             "TradeNameBranchDetails",
             "MyRequestsView",
             "MyRequestDetails",
-            "PrintOffsView3"
+            "PrintOffsView3",
+            "AdminServicesView",
+            "WebFrameView",
+            "RecallsView",
+            "RecallDetailsView"
         ]
     },
     "name": "Application",

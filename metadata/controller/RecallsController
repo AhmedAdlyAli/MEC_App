@@ -1,0 +1,132 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "RecallsController"
+    },
+    "name": "MyController",
+    "designerId": "ffc59232-c6f1-4fae-95af-e3bd7a1be4ab",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#RecallsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onRecallsViewInitialize",
+                "implHandler": [
+                    "var view = component;//me.getMyBusinessView();",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Recall/GetAllRecalls?culture=ar&pageSize=20&pageIndex=0',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        console.log(json);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstRecalls = view.down('#lstRecalls');",
+                    "        lstRecalls.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onRecallsViewInitialize",
+            "designerId": "200728f6-3986-4d5d-ba45-dc8b403942f1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#RecallDetailsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onRecallDetailsViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "var data = view.getData();",
+                    "view.down('#lblTitle').setHtml(data.ProductTitle);",
+                    "view.down('#lblDetails').setHtml(data.ProductIssue);",
+                    "view.down('#lblProdcedure').setHtml(data.ConsumerProcedure);",
+                    "view.down('#lblContact').setHtml(data.ContactSupplier);",
+                    "view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onRecallDetailsViewInitialize",
+            "designerId": "08839fc8-205c-4201-9634-ff02430e05e7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstRecalls",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstRecallsItemTap",
+                "implHandler": [
+                    "dataview.up('MainNavView').push({",
+                    "    xtype: 'RecallDetailsView',",
+                    "    title: Ext.Global.GetFixedTitle(),",
+                    "    data: record.data",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstRecallsItemTap",
+            "designerId": "d9f56a6a-7440-44da-83df-fb2b1fee82cc"
+        }
+    ]
+}

@@ -532,6 +532,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -681,11 +692,13 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PrintOffices": [],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
+  "MEC_App.controller.WebformViewController": [],
   "MEC_App.model.ComplaintsModel": [],
   "MEC_App.model.MenuModel": [],
   "MEC_App.model.MinistryNewsModel": [],
@@ -699,6 +712,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.store.override.MinistryNewsStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.AdminServicesView": [],
   "MEC_App.view.BusinessIndicatorsReport": [],
   "MEC_App.view.ComplaintsView": [],
   "MEC_App.view.ConsumerEducationView": [],
@@ -744,6 +758,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.PrintOffsView3": [],
   "MEC_App.view.ProjectsView": [],
   "MEC_App.view.PublicServiceView": [],
+  "MEC_App.view.RecallDetailsView": [],
   "MEC_App.view.RecallsView": [],
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
@@ -756,6 +771,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.TradeNameEstablishmentDetails": [],
   "MEC_App.view.TrademarkReportView": [],
   "MEC_App.view.ViolationsView": [],
+  "MEC_App.view.WebFrameView": [],
   "MEC_App.view.WhereToShopView": []
 });
 
@@ -1337,6 +1353,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1498,6 +1525,7 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.PublicServicesController": [],
+  "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [
@@ -1505,6 +1533,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
+  "MEC_App.controller.WebformViewController": [
+    "controller.WebformViewController"
+  ],
   "MEC_App.model.ComplaintsModel": [
     "model.ComplaintsModel"
   ],
@@ -1528,6 +1559,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.store.override.MinistryNewsStore": [],
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.AdminServicesView": [
+    "widget.AdminServicesView"
+  ],
   "MEC_App.view.BusinessIndicatorsReport": [
     "widget.BusinessIndicatorsReport"
   ],
@@ -1663,6 +1697,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.PublicServiceView": [
     "widget.PublicServiceView"
   ],
+  "MEC_App.view.RecallDetailsView": [
+    "widget.RecallDetailsView"
+  ],
   "MEC_App.view.RecallsView": [
     "widget.RecallsView"
   ],
@@ -1698,6 +1735,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.ViolationsView": [
     "widget.ViolationsView"
+  ],
+  "MEC_App.view.WebFrameView": [
+    "widget.WebFrameView"
   ],
   "MEC_App.view.WhereToShopView": [
     "widget.WhereToShopView"

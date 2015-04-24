@@ -152,7 +152,7 @@
                                             "service-title"
                                         ],
                                         "html": "خدمات المستثمر",
-                                        "id": "lblInvestor",
+                                        "id": null,
                                         "itemId": "lblInvestor"
                                     },
                                     "name": "MyLabel",
@@ -200,13 +200,13 @@
                                             "codeClass": null,
                                             "userConfig": {
                                                 "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
+                                                "iconCls": "icon-my-business",
+                                                "itemId": "adminServiceBtn",
                                                 "layout|flex": 1,
-                                                "text": "خدمات المستخرجات"
+                                                "text": "الخدمات الإدارية"
                                             },
-                                            "name": "MyButton8",
-                                            "designerId": "767ac0a1-a6e3-4ecd-8f9e-d228db3b6cca"
+                                            "name": "MyButton",
+                                            "designerId": "0d55397b-1343-45ca-b1b0-ae28545cafca"
                                         }
                                     ]
                                 },
@@ -244,17 +244,21 @@
                                             "designerId": "655fd2cc-4649-4727-994f-b5d1c116322d"
                                         },
                                         {
-                                            "type": "Ext.Spacer",
+                                            "type": "Ext.Button",
                                             "reference": {
                                                 "name": "items",
                                                 "type": "array"
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "layout|flex": 1
+                                                "iconAlign": "top",
+                                                "iconCls": "icon-print-office",
+                                                "itemId": "printOfficeBtn",
+                                                "layout|flex": 1,
+                                                "text": "خدمات المستخرجات"
                                             },
-                                            "name": "MySpacer",
-                                            "designerId": "5bc7a899-3889-462e-8252-c94f92c6c00b"
+                                            "name": "MyButton8",
+                                            "designerId": "767ac0a1-a6e3-4ecd-8f9e-d228db3b6cca"
                                         }
                                     ]
                                 }
@@ -285,7 +289,7 @@
                                             "service-title"
                                         ],
                                         "html": "خدمات المستهلك",
-                                        "id": "lblConsumer",
+                                        "id": null,
                                         "itemId": "lblConsumer"
                                     },
                                     "name": "MyLabel1",

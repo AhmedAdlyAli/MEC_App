@@ -9,14 +9,13 @@
         "cls": [
             "complaint-view"
         ],
-        "designer|userAlias": "RecallsView",
-        "designer|userClassName": "RecallsView",
-        "itemId": "RecallsView",
+        "designer|userAlias": "AdminServicesView",
+        "designer|userClassName": "AdminServicesView",
+        "itemId": "AdminServicesView",
         "layout": "fit",
         "scrollable": false
     },
-    "name": "AdminServicesView1",
-    "designerId": "c85da1e8-84b4-4f06-a867-c60c5382f409",
+    "designerId": "530397e4-091b-4dbc-90f1-03400424ac21",
     "cn": [
         {
             "type": "Ext.Label",
@@ -30,10 +29,10 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "الاستدعاءات"
+                "html": "الخدمات الإدارية"
             },
             "name": "MyLabel3",
-            "designerId": "c3af772a-6390-4275-963e-dc528f614aea"
+            "designerId": "a5a87d9f-bf72-4f15-ac2f-bf3815805c67"
         },
         {
             "type": "Ext.dataview.List",
@@ -48,12 +47,11 @@
                 ],
                 "height": "100%",
                 "id": null,
-                "itemCls": "item-recall",
-                "itemId": "lstRecalls",
+                "itemId": "lstLinks",
                 "store": null
             },
             "name": "MyList1",
-            "designerId": "19b73b3d-01cd-400d-82c2-124d88e525da",
+            "designerId": "fd1b34f1-0b1c-4d58-b110-3beb53c451d0",
             "cn": [
                 {
                     "type": "Ext.XTemplate",
@@ -65,13 +63,11 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tpl-recall-1 FA'><img src=\"http://196.205.5.28:333/MEC/api//Recall/image/11\" /></div>",
-                            "<div class='tpl-recall-2 FA'><span>{ProductTitle}</span><br /><span class=\"brief\">{PublishDate}</span></div>",
-                            ""
+                            "<div class='CompanyListItem'>{Name}</div>"
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "b5e4288c-56e9-4405-b2ba-3e5cf7d6b186"
+                    "designerId": "1c4dfa3d-4432-4837-93fa-950b273fc93e"
                 }
             ]
         }

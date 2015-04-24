@@ -20,8 +20,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button',
-        'Ext.Spacer'
+        'Ext.Button'
     ],
 
     config: {
@@ -79,7 +78,6 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         cls: 'service-title',
                                         html: 'خدمات المستثمر',
-                                        id: 'lblInvestor',
                                         itemId: 'lblInvestor'
                                     },
                                     {
@@ -98,10 +96,10 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                             {
                                                 xtype: 'button',
                                                 flex: 1,
-                                                itemId: 'printOfficeBtn',
+                                                itemId: 'adminServiceBtn',
                                                 iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'خدمات المستخرجات'
+                                                iconCls: 'icon-my-business',
+                                                text: 'الخدمات الإدارية'
                                             }
                                         ]
                                     },
@@ -119,8 +117,12 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                                 text: 'متابعة المعاملات'
                                             },
                                             {
-                                                xtype: 'spacer',
-                                                flex: 1
+                                                xtype: 'button',
+                                                flex: 1,
+                                                itemId: 'printOfficeBtn',
+                                                iconAlign: 'top',
+                                                iconCls: 'icon-print-office',
+                                                text: 'خدمات المستخرجات'
                                             }
                                         ]
                                     }
@@ -134,7 +136,6 @@ Ext.define('MEC_App.view.PublicServiceView', {
                                         xtype: 'label',
                                         cls: 'service-title',
                                         html: 'خدمات المستهلك',
-                                        id: 'lblConsumer',
                                         itemId: 'lblConsumer'
                                     },
                                     {

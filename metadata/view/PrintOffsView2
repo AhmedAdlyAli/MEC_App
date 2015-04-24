@@ -121,8 +121,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "label-value"
+                            "label-value",
+                            "lblNoCopies"
                         ],
+                        "html": null,
                         "itemId": "lblNoCopies"
                     },
                     "name": "MyLabel33",

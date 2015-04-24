@@ -27,7 +27,8 @@ Ext.define('MEC_App.controller.PrintOffsController', {
                 tap: 'onBtnPrintoffsNextTap'
             },
             "panel#PrintOffsView2": {
-                initialize: 'onPrintOffsView2Initialize'
+                initialize: 'onPrintOffsView2Initialize',
+                show: 'onPrintOffsView2Show'
             },
             "button#btnPrintoffs2Next": {
                 tap: 'onBtnPrintoffs2NextTap'
@@ -46,55 +47,105 @@ Ext.define('MEC_App.controller.PrintOffsController', {
         // Create Case with Form Values
 
 
+        // validation
+
         var view = this.getPrintOffsView1();
 
-        Ext.AnimationHelper.ShowLoading();
 
-        var requestData = {
-            "serviceId": "9",
-            "token": Ext.Global.userToken,
-            "language": "ar",
-            "identityType": 'QID',//Ext.Global.identityType,
-            "identityNum": Ext.Global.identityNum,
-            "identityNationality": Ext.Global.identityNationality,
-            "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
-            "caseType":view.down('#hiddenPrintoutType').getValue(),
-            "establishmentSpcId":"",
-            "caseSubType":"01",
-            "contactId":"",
-            "numOfCopies":view.down('#txtNoOfCopies').getValue(),
-            "moiEstablishmentNum":"",
-            "qatarChamberNum":"",
-            "commercialPermitNum":"",
-            "economicalNum":""
-        };
+        var formData = view.getValues();
+
+
+        console.log(formData);
+
+
+        var err='';
+
+
+        if(formData.hiddenCompanyCR===''){
+
+            err+="برجاء اختيار الشركة \n";
+        }
 
 
 
-        Ext.Ajax.request({
+        if(formData.hiddenPrintoutType===''){
 
-            url : Ext.Global.GetConfig('webServiceUrl'),
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
-                var json = Ext.util.JSON.decode(response.responseText);
-
-                //console.log(json);
-                Ext.Viewport.getActiveItem().push({
-                    xtype: 'PrintOffsView2',
-                    title: Ext.Global.GetFixedTitle(),
-                    data: json
-                });
+            err+="برجاء اختيار طريقة الاستلام";
+        }
 
 
-                Ext.AnimationHelper.HideLoading();
+        if(formData.txtNoOfCopies===''){
 
-
-            }
-        });
+            err+="برجاء اختيار عدد النسخ";
+        }
 
 
 
+
+
+        if(err.length>0){
+
+            Ext.device.Notification.show({
+                title: 'خطأ',
+                buttons:["موافق"],
+                message: err
+            });
+        }else{
+
+
+
+
+
+
+            Ext.AnimationHelper.ShowLoading();
+
+            var requestData = {
+                "serviceId": "9",
+                "token": Ext.Global.userToken,
+                "language": "ar",
+                "identityType": 'QID',//Ext.Global.identityType,
+                "identityNum": Ext.Global.identityNum,
+                "identityNationality": Ext.Global.identityNationality,
+                "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
+                "caseType":view.down('#hiddenPrintoutType').getValue(),
+                "establishmentSpcId":"",
+                "caseSubType":"01",
+                "contactId":"",
+                "numOfCopies":view.down('#txtNoOfCopies').getValue(),
+                "moiEstablishmentNum":"",
+                "qatarChamberNum":"",
+                "commercialPermitNum":"",
+                "economicalNum":""
+            };
+
+
+
+            Ext.Ajax.request({
+
+                url : Ext.Global.GetConfig('webServiceUrl'),
+                method : 'POST',
+                jsonData :requestData,
+                success : function (response) {
+                    var json = Ext.util.JSON.decode(response.responseText);
+                    json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
+                    //console.log(json);
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: 'PrintOffsView2',
+                        title: Ext.Global.GetFixedTitle(),
+                        data: json
+                    });
+
+
+
+
+                    Ext.AnimationHelper.HideLoading();
+
+
+                }
+            });
+
+
+        }
 
 
 
@@ -108,13 +159,18 @@ Ext.define('MEC_App.controller.PrintOffsController', {
     },
 
     onPrintOffsView2Initialize: function(component, eOpts) {
-                 var view = this.getPrintOffsView2();
-                var json = view.getData();
+
+        var view = this.getPrintOffsView2();
+        var json = view.getData();
+
 
         view.down('#lblRequestType').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].type);
-        view.down('#lblNoCopies').setHtml('');
+
+        view.down('#lblNoCopies').setHtml(json.NoOfCopies);
+
         view.down('#lblCompanyName').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].orgNameARA);
         view.down('#lblTotalFees').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecCaseFees.mecCaseFees[0].feesTotalValue);
+
 
 
         view.down('#lblRequestNo').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].serialNumber);
@@ -124,21 +180,26 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
         var noOfAttachments = json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecUnifiedAttachmentParameters.mecUnifiedAttachmentParameters.length;
 
+
         if(noOfAttachments===0){
             view.down('#lblRequiredAttachments').setHtml('لا يوجد');
-            }
+        }
 
 
+        console.log('data assigned for case: ' + json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].recordID );
+        console.log(view.down('#lblNoCopies'));
 
+    },
 
+    onPrintOffsView2Show: function(component, eOpts) {
 
     },
 
     onBtnPrintoffs2NextTap: function(button, e, eOpts) {
-                 Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
-                         var view = this.getPrintOffsView2();
-                         var serialNo =  view.down('#hiddenSerialNo').getValue();
+        var view = this.getPrintOffsView2();
+        var serialNo =  view.down('#hiddenSerialNo').getValue();
 
 
         console.log(serialNo);
@@ -148,60 +209,60 @@ Ext.define('MEC_App.controller.PrintOffsController', {
 
 
 
-                        var requestData = {
-          "serviceId": "10",
-          "token": Ext.Global.userToken,
-          "objectSpcId": serialNo,
-          "caseSerialNum":""
+        var requestData = {
+            "serviceId": "10",
+            "token": Ext.Global.userToken,
+            "objectSpcId": serialNo,
+            "caseSerialNum":""
         };
 
 
-                        Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                            url : Ext.Global.GetConfig('webServiceUrl'),
-                            method : 'POST',
-                            jsonData :requestData,
-                            success : function (response) {
-                               var json = Ext.util.JSON.decode(response.responseText);
-
-
-
-
-                                Ext.AnimationHelper.HideLoading();
-
-
-                                if(json.statusMsg!='success')
-                                {
-
-                                    var company = formData.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0];
-                                    json.recordID = company.caseNum;
-                                    json.typeCode = company.typeCode;
-                                    json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;
-                                    json.locale = 'ar';
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+                var json = Ext.util.JSON.decode(response.responseText);
 
 
 
 
-                                    Ext.Viewport.getActiveItem().push({
-                                    xtype: 'PrintOffsView3',
-                                    title: Ext.Global.GetFixedTitle(),
-                                    data: json
-                                    });
-                                }else{
+                Ext.AnimationHelper.HideLoading();
 
 
-                                Ext.device.Notification.show({
-                                    title: 'خطأ',
-                                    buttons: ["موافق"],
-                                    message:  'json.statusMsg'
-                                    });
+                if(json.statusMsg!='success')
+                {
 
-                                }
+                    var company = formData.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0];
+                    json.recordID = company.caseNum;
+                    json.typeCode = company.typeCode;
+                    json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;
+                    json.locale = 'ar';
 
 
 
-                            }
-                        });
+
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: 'PrintOffsView3',
+                        title: Ext.Global.GetFixedTitle(),
+                        data: json
+                    });
+                }else{
+
+
+                    Ext.device.Notification.show({
+                        title: 'خطأ',
+                        buttons: ["موافق"],
+                        message:  'json.statusMsg'
+                    });
+
+                }
+
+
+
+            }
+        });
 
 
 
