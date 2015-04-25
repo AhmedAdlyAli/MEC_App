@@ -673,12 +673,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.AnimationHelper": [
     "Ext.AnimationHelper"
   ],
+  "MEC_App.controller.BusinessIndicatorsController": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ConsumerEducationController": [],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [
     "Ext.DeviceController"
   ],
+  "MEC_App.controller.EconomicIndicatorsController": [],
   "MEC_App.controller.Global": [
     "Ext.Global"
   ],
@@ -717,12 +719,15 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.store.override.PrintOffices": [],
   "MEC_App.view.AboutMinistryView": [],
   "MEC_App.view.AdminServicesView": [],
-  "MEC_App.view.BusinessIndicatorsReport": [],
+  "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
   "MEC_App.view.ConsumerEducationView": [],
   "MEC_App.view.ConsumerIndicatorsView": [],
   "MEC_App.view.ContactUs2View": [],
   "MEC_App.view.ContactUsView": [],
+  "MEC_App.view.EconomicIndicatorsDetailsView": [],
+  "MEC_App.view.EconomicIndicatorsListing": [],
+  "MEC_App.view.EconomicIndicatorsView": [],
   "MEC_App.view.EconomyNewsView": [],
   "MEC_App.view.FeedbackFormView": [],
   "MEC_App.view.HomeView": [],
@@ -1512,12 +1517,14 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.AjaxHelper": [],
   "MEC_App.controller.AnimationHelper": [],
+  "MEC_App.controller.BusinessIndicatorsController": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ConsumerEducationController": [
     "controller.ConsumerEducationController"
   ],
   "MEC_App.controller.ContactController": [],
   "MEC_App.controller.DeviceController": [],
+  "MEC_App.controller.EconomicIndicatorsController": [],
   "MEC_App.controller.Global": [],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
@@ -1576,8 +1583,8 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.AdminServicesView": [
     "widget.AdminServicesView"
   ],
-  "MEC_App.view.BusinessIndicatorsReport": [
-    "widget.BusinessIndicatorsReport"
+  "MEC_App.view.BusinessIndicatorsView": [
+    "widget.BusinessIndicatorsView"
   ],
   "MEC_App.view.ComplaintsView": [
     "widget.ComplaintsView"
@@ -1593,6 +1600,15 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.ContactUsView": [
     "widget.ContactUsView"
+  ],
+  "MEC_App.view.EconomicIndicatorsDetailsView": [
+    "widget.EconomicIndicatorsDetailsView"
+  ],
+  "MEC_App.view.EconomicIndicatorsListing": [
+    "widget.EconomicIndicatorsListing"
+  ],
+  "MEC_App.view.EconomicIndicatorsView": [
+    "widget.EconomicIndicatorsView"
   ],
   "MEC_App.view.EconomyNewsView": [
     "widget.EconomyNewsView"

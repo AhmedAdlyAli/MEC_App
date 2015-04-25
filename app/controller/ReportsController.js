@@ -35,29 +35,31 @@ Ext.define('MEC_App.controller.ReportsController', {
 
     onReportsBtn1Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    xtype: 'EconomicIndicatorsListing',
+                    title: Ext.Global.GetFixedTitle()
                 });
+
+
     },
 
     onReportsBtn2Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    xtype: 'BusinessIndicatorsView',
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onReportsBtn3Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    xtype: 'ConsumerIndicatorsView',
+                    title: Ext.Global.GetFixedTitle()
                 });
     },
 
     onReportsBtn4Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
                     xtype: 'BusinessIndicatorsReport',
-                    title: Ext.Global.GetViewTitle('ContactUs')
+                    title: Ext.Global.GetFixedTitle()
                 });
     }
 

@@ -1,0 +1,138 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "EconomicIndicatorsListing",
+        "designer|userClassName": "EconomicIndicatorsListing",
+        "itemId": "EconomicIndicatorsListing",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "AdminServicesView1",
+    "designerId": "cba26cdf-32df-48aa-b397-93e46c211308",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "مؤشرات إقتصادية"
+            },
+            "name": "MyLabel3",
+            "designerId": "a362e077-30e0-4ea3-95d5-e91254005470"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemId": "lstItems",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "d9347bcb-f87f-49d2-b0d2-87fa3e46feff",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='CompanyListItem'>{Name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "c0cb3edf-1a3f-4fad-8eea-db1e08497725"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstItemsItemTap",
+                        "implHandler": [
+                            "Ext.Viewport.getActiveItem().push({",
+                            "    xtype: record.data.Url,",
+                            "    title: Ext.Global.GetFixedTitle()",
+                            "});",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstItemsItemTap",
+                    "designerId": "82149503-3ce7-4444-8909-11dd14aa8243"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var links = [{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView'},",
+                    "             {Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView'},",
+                    "             {Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView'}",
+                    "            ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "                    data : links",
+                    "                });",
+                    "",
+                    "        var lst = this.down('#lstItems');",
+                    "        lst.setStore(store);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "5d42a4a3-0d9a-4c69-b82a-5eccc341ad5d"
+        }
+    ]
+}

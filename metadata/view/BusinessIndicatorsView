@@ -1,0 +1,78 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "BusinessIndicatorsView",
+        "designer|userClassName": "BusinessIndicatorsView",
+        "itemId": "BusinessIndicatorsView",
+        "layout": "vbox"
+    },
+    "name": "MyRequestsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "c2f4b6a1-c490-416c-9120-a30efddbf97c",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "مؤشرات اقتصادية"
+            },
+            "name": "MyLabel",
+            "designerId": "7505b7f7-5832-453e-8513-eb32e9822d09"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "itemCls": "item-request",
+                "itemId": "lstIndicators",
+                "layout|flex": 1
+            },
+            "name": "MyList",
+            "designerId": "78171777-8cd3-4246-8744-ad71778a35b0",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "    <div class='tpl-request-1'>{requestCaseType}</div>",
+                            "    <div class='tpl-request-2'><span class='FA'> {requestCaseDate}</span> <span class='FB'>{requestCaseStatus}</span></div>",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "e85653cc-a453-4876-9f0b-5a77d859bbc3"
+                }
+            ]
+        }
+    ]
+}

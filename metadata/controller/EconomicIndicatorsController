@@ -1,0 +1,149 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "EconomicIndicatorsController"
+    },
+    "name": "MyController",
+    "designerId": "0fa596b5-b707-41ca-9164-59f3e010b963",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EconomicIndicatorsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEconomicIndicatorsViewInitialize",
+                "implHandler": [
+                    "var view = component;//me.getMyBusinessView();",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture=ar&pageIndex=0&pageSize=20',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        console.log(json);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstIndicators = view.down('#lstIndicators');",
+                    "        lstIndicators.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEconomicIndicatorsViewInitialize",
+            "designerId": "eb2f753a-f41f-43cf-b0de-e3af60c6bbf5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstIndicators",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstIndicatorsItemTap",
+                "implHandler": [
+                    "dataview.up('MainNavView').push({",
+                    "    xtype: 'EconomicIndicatorsDetailsView',",
+                    "    title: Ext.Global.GetFixedTitle(),",
+                    "    data: record.data",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstIndicatorsItemTap",
+            "designerId": "3b315ad1-10cb-409b-8fa5-0ac181d62cfa"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EconomicIndicatorsDetailsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEconomicIndicatorsDetailsViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "var data = view.getData();",
+                    "",
+                    "view.down('#lblTitle').setHtml(data.Title);",
+                    "view.down('#lblValue').setHtml(data.Value);",
+                    "",
+                    "view.down('#lblValue').setHtml(data.Value);",
+                    "",
+                    "if(data.ChangePercent>0){",
+                    "    //alert('plus');",
+                    "}else{",
+                    "//    alert('plus2222');",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    "view.down('#lblPercentOfChange').setHtml(data.ChangePercent);",
+                    "",
+                    "",
+                    "view.down('#lblLastUpdate2').setHtml(data.LastUpdated);",
+                    "view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);",
+                    "",
+                    "view.down('#lblLink').element.on('tap', function () {",
+                    "      window.open(\"http://www.google.com\", \"_blank\");",
+                    "  });",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEconomicIndicatorsDetailsViewInitialize",
+            "designerId": "452b4e53-c341-47b2-8b24-78bba7684d5c"
+        }
+    ]
+}

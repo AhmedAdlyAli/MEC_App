@@ -29,9 +29,11 @@
                 "fn": "onReportsBtn1Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
-                    "        });"
+                    "            xtype: 'EconomicIndicatorsListing',",
+                    "            title: Ext.Global.GetFixedTitle()",
+                    "        });",
+                    "",
+                    ""
                 ],
                 "name": "tap"
             },
@@ -56,8 +58,8 @@
                 "fn": "onReportsBtn2Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            xtype: 'BusinessIndicatorsView',",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"
@@ -83,8 +85,8 @@
                 "fn": "onReportsBtn3Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            xtype: 'ConsumerIndicatorsView',",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"
@@ -111,7 +113,7 @@
                 "implHandler": [
                     "button.up('MainNavView').push({",
                     "            xtype: 'BusinessIndicatorsReport',",
-                    "            title: Ext.Global.GetViewTitle('ContactUs')",
+                    "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],
                 "name": "tap"

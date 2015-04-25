@@ -29,7 +29,9 @@
             "ViolationsController",
             "ConsumerEducationController",
             "InvestorEducationController",
-            "ProjectsController"
+            "ProjectsController",
+            "BusinessIndicatorsController",
+            "EconomicIndicatorsController"
         ],
         "models": [
             "PrintOffice",
@@ -74,7 +76,6 @@
             "FeedbackFormView",
             "MinistryEmployeesView",
             "MicroEconomicReport",
-            "BusinessIndicatorsReport",
             "ConsumerIndicatorsView",
             "PricingView",
             "WhereToShopView",
@@ -119,7 +120,9 @@
             "ConsumerEducationView",
             "InvestorEducationView",
             "ProjectsView",
-            "ProjectDetailsView"
+            "ProjectDetailsView",
+            "BusinessIndicatorsView",
+            "EconomicIndicatorsListing"
         ]
     },
     "name": "Application",

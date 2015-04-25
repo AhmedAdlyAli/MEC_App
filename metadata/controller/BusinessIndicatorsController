@@ -1,0 +1,35 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "BusinessIndicatorsController"
+    },
+    "name": "MyController",
+    "designerId": "8854b412-5617-4ff3-96b0-ac84bddac30f",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#BusinessIndicatorsView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onBusinessIndicatorsViewInitialize",
+                "name": "initialize"
+            },
+            "name": "onBusinessIndicatorsViewInitialize",
+            "designerId": "25e5cc56-93fe-4125-962c-c154cfef2f18"
+        }
+    ]
+}

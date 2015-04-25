@@ -1,0 +1,103 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "EconomicIndicatorsView",
+        "designer|userClassName": "EconomicIndicatorsView",
+        "itemId": "EconomicIndicatorsView",
+        "layout": "vbox"
+    },
+    "name": "BusinessIndicatorsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "f77dc186-4b09-40f0-88f7-2ae095b50ebb",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "مؤشرات اقتصادية"
+            },
+            "name": "MyLabel",
+            "designerId": "1609d9f4-da2e-4c17-8de3-a4d805938782"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "itemCls": "item-Indicator",
+                "itemId": "lstIndicators",
+                "layout|flex": 1
+            },
+            "name": "MyList",
+            "designerId": "434822de-927e-469b-8a16-e2956839018f",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class=\"tpl-indicator-1\"><span>{Title}</span><br/><span>{Value}</span></div>",
+                            "    <div class=\"{[this.CheckPercentOfChange(values.ChangePercent)]}\"> {ChangePercent}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "c8ec85c7-4faa-443d-acd1-4d531f986e71",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "changePercent"
+                                ],
+                                "fn": "CheckPercentOfChange",
+                                "implHandler": [
+                                    "if(changePercent>0){",
+                                    "    return 'arrow-up';",
+                                    "}else{",
+                                    "    return 'arrow-down';",
+                                    "",
+                                    "}"
+                                ]
+                            },
+                            "name": "CheckPercentOfChange",
+                            "designerId": "4aa9b926-098b-4e9a-889b-8b8a78c59262"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
