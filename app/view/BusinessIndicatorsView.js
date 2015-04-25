@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -35,18 +36,105 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'مؤشرات اقتصادية'
+                html: 'مؤشرات اقتصادية',
+                itemId: 'lblViewTitle'
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-header',
+                itemId: 'GridHeader',
+                items: [
+                    {
+                        xtype: 'label'
+                    },
+                    {
+                        xtype: 'label'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-subheader',
+                itemId: 'GridSubHeader',
+                items: [
+                    {
+                        xtype: 'label'
+                    }
+                ]
             },
             {
                 xtype: 'list',
-                flex: 1,
-                height: '100%',
-                itemId: 'lstIndicators',
-                itemCls: 'item-request',
+                itemId: 'grdMainCRs',
+                itemCls: 'grid-table',
                 itemTpl: [
-                    '    <div class=\'tpl-request-1\'>{requestCaseType}</div>',
-                    '    <div class=\'tpl-request-2\'><span class=\'FA\'> {requestCaseDate}</span> <span class=\'FB\'>{requestCaseStatus}</span></div>',
-                    ''
+                    '<div>List Item {string}</div>'
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-subheader',
+                itemId: 'GridSubHeader1',
+                items: [
+                    {
+                        xtype: 'label'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                itemId: 'grdSubCRs',
+                itemCls: 'grid-table',
+                itemTpl: [
+                    '<div>List Item {string}</div>'
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-header',
+                itemId: 'GridHeader1',
+                items: [
+                    {
+                        xtype: 'label'
+                    },
+                    {
+                        xtype: 'label'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-subheader',
+                itemId: 'GridSubHeader2',
+                items: [
+                    {
+                        xtype: 'label'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                itemId: 'grdMainCRs2',
+                itemCls: 'grid-table',
+                itemTpl: [
+                    '<div>List Item {string}</div>'
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'grid-subheader',
+                itemId: 'GridSubHeader3',
+                items: [
+                    {
+                        xtype: 'label'
+                    }
+                ]
+            },
+            {
+                xtype: 'list',
+                itemId: 'grdSubCRs2',
+                itemCls: 'grid-table',
+                itemTpl: [
+                    '<div>List Item {string}</div>'
                 ]
             }
         ]

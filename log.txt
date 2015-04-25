@@ -1,0 +1,1 @@
+Sencha Cmd folder (/untitled folder/mec_app) is missing sencha.cfg - aborting!

@@ -33,10 +33,77 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "مؤشرات اقتصادية"
+                "html": "مؤشرات اقتصادية",
+                "itemId": "lblViewTitle"
             },
             "name": "MyLabel",
             "designerId": "7505b7f7-5832-453e-8513-eb32e9822d09"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-header"
+                ],
+                "itemId": "GridHeader"
+            },
+            "name": "MyPanel",
+            "designerId": "d9190c5a-58b6-4e07-a0cf-a474b076dac7",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel1",
+                    "designerId": "590cbcb0-3989-4606-aa2c-0e9a24789b4b"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel2",
+                    "designerId": "4869259c-c5d4-4556-aadb-51ab76d7001b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-subheader"
+                ],
+                "itemId": "GridSubHeader"
+            },
+            "name": "MyPanel1",
+            "designerId": "888a3921-b3a2-4dce-bf2b-58dca1871506",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel3",
+                    "designerId": "b648b61e-5859-4b49-8fac-6d9065bf0695"
+                }
+            ]
         },
         {
             "type": "Ext.dataview.List",
@@ -46,13 +113,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "100%",
-                "itemCls": "item-request",
-                "itemId": "lstIndicators",
-                "layout|flex": 1
+                "itemCls": "grid-table",
+                "itemId": "grdMainCRs"
             },
             "name": "MyList",
-            "designerId": "78171777-8cd3-4246-8744-ad71778a35b0",
+            "designerId": "9f8494bf-bfc1-49e6-859b-137d05d9f717",
             "cn": [
                 {
                     "type": "Ext.XTemplate",
@@ -64,13 +129,229 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "    <div class='tpl-request-1'>{requestCaseType}</div>",
-                            "    <div class='tpl-request-2'><span class='FA'> {requestCaseDate}</span> <span class='FB'>{requestCaseStatus}</span></div>",
-                            ""
+                            "<div>List Item {string}</div>"
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "e85653cc-a453-4876-9f0b-5a77d859bbc3"
+                    "designerId": "194f9398-ea8d-4122-9924-826c5acfc796"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-subheader"
+                ],
+                "itemId": "GridSubHeader1"
+            },
+            "name": "MyPanel3",
+            "designerId": "8d1b847e-ad1f-49fe-81dd-be911f374558",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel3",
+                    "designerId": "b7009559-85f7-4cd5-a425-7bdeed69bf8f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "grid-table",
+                "itemId": "grdSubCRs"
+            },
+            "name": "MyList1",
+            "designerId": "48558f3e-74c9-418e-af29-ec098e105a2f",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>List Item {string}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "3eb03d9d-011f-4f22-8526-b53ebdc2d3ae"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-header"
+                ],
+                "itemId": "GridHeader1"
+            },
+            "name": "MyPanel6",
+            "designerId": "7b7c7555-b978-4f4d-a50b-dfbf80882c72",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel1",
+                    "designerId": "f6f24122-a174-459f-b608-c89e0be8731e"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel2",
+                    "designerId": "f0344d10-f15c-4a97-9e25-623cd507ba93"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-subheader"
+                ],
+                "itemId": "GridSubHeader2"
+            },
+            "name": "MyPanel4",
+            "designerId": "dd8b2988-7b18-4c36-8d95-fb0fe42c1c9a",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel3",
+                    "designerId": "db584cfa-5bf0-4793-911b-0030408be1b0"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "grid-table",
+                "itemId": "grdMainCRs2"
+            },
+            "name": "MyList2",
+            "designerId": "b13cfe7e-ce6f-45fd-9fba-ec95aee3b6d0",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>List Item {string}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "7b3104ac-d7a3-4913-a448-1d22e9bd4ff4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "grid-subheader"
+                ],
+                "itemId": "GridSubHeader3"
+            },
+            "name": "MyPanel5",
+            "designerId": "a29ac084-577d-4dde-87b8-02b200b9ee14",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "name": "MyLabel3",
+                    "designerId": "43bdc471-ead6-4e87-a95f-e9a484f1c2db"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "grid-table",
+                "itemId": "grdSubCRs2"
+            },
+            "name": "MyList3",
+            "designerId": "f36aa360-d0f5-447d-a648-5c34945b8077",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>List Item {string}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "d66f6f68-0357-4054-81cf-1d833d8f417e"
                 }
             ]
         }
