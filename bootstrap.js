@@ -666,6 +666,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ConsumerEducationController": [],
   "MEC_App.controller.ContactController": [],
+  "MEC_App.controller.DailyPricesController": [],
   "MEC_App.controller.DeviceController": [
     "Ext.DeviceController"
   ],
@@ -673,6 +674,8 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.Global": [
     "Ext.Global"
   ],
+  "MEC_App.controller.GoodPriceListController": [],
+  "MEC_App.controller.GoodsPricesController": [],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.InvestorEducationController": [],
@@ -688,12 +691,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
+  "MEC_App.controller.ShopPriceListController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [],
   "MEC_App.controller.TradeActivityAvailabilityController": [],
   "MEC_App.controller.TradeNameAvailabilityController": [],
   "MEC_App.controller.ViolationsController": [],
   "MEC_App.controller.WebformViewController": [],
+  "MEC_App.controller.WhereToShopController": [],
   "MEC_App.model.ComplaintsModel": [],
   "MEC_App.model.MenuModel": [],
   "MEC_App.model.MinistryNewsModel": [],
@@ -711,14 +716,18 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
   "MEC_App.view.ConsumerEducationView": [],
-  "MEC_App.view.ConsumerIndicatorsView": [],
+  "MEC_App.view.ConsumerIndicatorsListing": [],
   "MEC_App.view.ContactUs2View": [],
   "MEC_App.view.ContactUsView": [],
+  "MEC_App.view.DailyPricesView": [],
+  "MEC_App.view.DailyReportView": [],
   "MEC_App.view.EconomicIndicatorsDetailsView": [],
   "MEC_App.view.EconomicIndicatorsListing": [],
   "MEC_App.view.EconomicIndicatorsView": [],
   "MEC_App.view.EconomyNewsView": [],
   "MEC_App.view.FeedbackFormView": [],
+  "MEC_App.view.GoodPriceListView": [],
+  "MEC_App.view.GoodsPricesView": [],
   "MEC_App.view.HomeView": [],
   "MEC_App.view.InquiriesView": [],
   "MEC_App.view.InvestorEducationView": [],
@@ -761,6 +770,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.RecallsView": [],
   "MEC_App.view.ReportsView": [],
   "MEC_App.view.SettingsView": [],
+  "MEC_App.view.ShopPriceListView": [],
   "MEC_App.view.SideMenu": [],
   "MEC_App.view.SupplyServiceView1": [],
   "MEC_App.view.SupplyServiceView2": [],
@@ -1501,9 +1511,16 @@ Ext.ClassManager.addNameAliasMappings({
     "controller.ConsumerEducationController"
   ],
   "MEC_App.controller.ContactController": [],
+  "MEC_App.controller.DailyPricesController": [
+    "controller.DailyPricesController"
+  ],
   "MEC_App.controller.DeviceController": [],
   "MEC_App.controller.EconomicIndicatorsController": [],
   "MEC_App.controller.Global": [],
+  "MEC_App.controller.GoodPriceListController": [],
+  "MEC_App.controller.GoodsPricesController": [
+    "controller.GoodsPricesController"
+  ],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InquiriesController": [],
   "MEC_App.controller.InvestorEducationController": [
@@ -1525,6 +1542,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.PublicServicesController": [],
   "MEC_App.controller.RecallsController": [],
   "MEC_App.controller.ReportsController": [],
+  "MEC_App.controller.ShopPriceListController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [
     "controller.SupplyServiceController"
@@ -1534,6 +1552,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.ViolationsController": [],
   "MEC_App.controller.WebformViewController": [
     "controller.WebformViewController"
+  ],
+  "MEC_App.controller.WhereToShopController": [
+    "controller.WhereToShopController"
   ],
   "MEC_App.model.ComplaintsModel": [
     "model.ComplaintsModel"
@@ -1570,14 +1591,20 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.ConsumerEducationView": [
     "widget.ConsumerEducationView"
   ],
-  "MEC_App.view.ConsumerIndicatorsView": [
-    "widget.ConsumerIndicatorsView"
+  "MEC_App.view.ConsumerIndicatorsListing": [
+    "widget.ConsumerIndicatorsListing"
   ],
   "MEC_App.view.ContactUs2View": [
     "widget.ContactUs2View"
   ],
   "MEC_App.view.ContactUsView": [
     "widget.ContactUsView"
+  ],
+  "MEC_App.view.DailyPricesView": [
+    "widget.DailyPricesView"
+  ],
+  "MEC_App.view.DailyReportView": [
+    "widget.DailyReportView"
   ],
   "MEC_App.view.EconomicIndicatorsDetailsView": [
     "widget.EconomicIndicatorsDetailsView"
@@ -1593,6 +1620,12 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.FeedbackFormView": [
     "widget.FeedbackFormView"
+  ],
+  "MEC_App.view.GoodPriceListView": [
+    "widget.GoodPriceListView"
+  ],
+  "MEC_App.view.GoodsPricesView": [
+    "widget.GoodsPricesView"
   ],
   "MEC_App.view.HomeView": [
     "widget.HomeView"
@@ -1719,6 +1752,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SettingsView": [
     "widget.SettingsView"
+  ],
+  "MEC_App.view.ShopPriceListView": [
+    "widget.ShopPriceListView"
   ],
   "MEC_App.view.SideMenu": [
     "widget.SideMenu"

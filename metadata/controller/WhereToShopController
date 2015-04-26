@@ -1,0 +1,144 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "WhereToShopController",
+        "designer|userClassName": "WhereToShopController",
+        "requires": [
+            "MEC_App.view.WhereToShopView"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "9a83490f-2382-411d-be31-7905c6608d0c",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#WhereToShopView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onWhereToShopViewInitialize",
+                "implHandler": [
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "var me = this;",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture=ar&pageIndex=0&pageSize=20',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var view = me.getWhereToShopView();",
+                    "",
+                    "        view.setData(json);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onWhereToShopViewInitialize",
+            "designerId": "13369edf-b669-4ebf-a251-e0149f2ef66a"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "WhereToShopView",
+                "selector": "WhereToShopView"
+            },
+            "name": "WhereToShopView",
+            "designerId": "734715f0-fa90-46a0-9b33-9a58fce92f69"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "hiddenProductID",
+                "selector": "#hiddenProductID"
+            },
+            "name": "hiddenProductID",
+            "designerId": "f7e40ace-d1e8-4530-9386-8b1b0ae0330c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "hiddenfield#hiddenProductID",
+                "designer|params": [
+                    "textfield",
+                    "newValue",
+                    "oldValue",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Hidden",
+                "fn": "onHiddenProductIDChange",
+                "implHandler": [
+                    "",
+                    "var me = this;",
+                    "",
+                    "var view = me.getWhereToShopView();",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+newValue+'?culture=ar',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json.ProductPrices",
+                    "        });",
+                    "",
+                    "        var lstPrices = view.down('#lstPrices');",
+                    "        lstPrices.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "change"
+            },
+            "name": "onHiddenProductIDChange",
+            "designerId": "e7768e93-f341-43fa-b1df-ed46a670e230"
+        }
+    ]
+}

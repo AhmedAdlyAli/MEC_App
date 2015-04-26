@@ -1,0 +1,144 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "DailyReportView",
+        "designer|userClassName": "DailyReportView",
+        "itemId": "DailyReportView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "ConsumerIndicatorsListing1",
+    "designerId": "04c925b3-3a5d-43b8-948c-e6577c15d262",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "النشرة اليومية"
+            },
+            "name": "MyLabel3",
+            "designerId": "ed281021-39a4-48dd-8ccb-b56fedc6b8f4"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemId": "lstItems",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "e1a06975-cbe0-4b25-8f26-ec120ac85cbb",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='CompanyListItem'>{Name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "4c5730ec-b5bd-4eb9-bc92-664c3f5a7f2c"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstItemsItemTap",
+                        "implHandler": [
+                            "",
+                            "",
+                            "if (record.data.Url.indexOf('http')>0){",
+                            "        window.open(record.data.Url,'_blank');",
+                            "}else{",
+                            "        Ext.Viewport.getActiveItem().push({",
+                            "            xtype: record.data.Url,",
+                            "            title: Ext.Global.GetFixedTitle()",
+                            "        });",
+                            "    }",
+                            "",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstItemsItemTap",
+                    "designerId": "0249ac47-20e4-4701-a4d4-648e235a3af4"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var links = [{Name:'الاسعار اليومية',Url:'DailyPricesView'},",
+                    "             {Name:'أسعار السلع الاستهلاكية',Url:'GoodsPricesView'}",
+                    "            ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "                    data : links",
+                    "                });",
+                    "",
+                    "        var lst = this.down('#lstItems');",
+                    "        lst.setStore(store);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "c9437931-c34d-450d-9ce8-d1d2475c7414"
+        }
+    ]
+}

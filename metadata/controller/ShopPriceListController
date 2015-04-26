@@ -1,0 +1,67 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ShopPriceListController"
+    },
+    "name": "MyController",
+    "designerId": "a91e25dd-7860-4e3f-b27a-274216fd4239",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#ShopPriceListView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onShopPriceListViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "",
+                    "var data = view.getData();",
+                    "",
+                    "view.down('#lblTitle').setHtml(data.ShopName);",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetShop/'+data.Id+'?culture=ar',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json.ProductPrices",
+                    "        });",
+                    "",
+                    "        var lstProducts = view.down('#lstProducts');",
+                    "        lstProducts.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onShopPriceListViewInitialize",
+            "designerId": "d97e8470-26ab-4f7f-ae9e-df6641c2d825"
+        }
+    ]
+}

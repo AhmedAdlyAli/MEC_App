@@ -1,0 +1,65 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "GoodPriceListController"
+    },
+    "name": "MyController",
+    "designerId": "72e94b22-533d-41c8-aaa7-a7121cb49303",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#GoodPriceListView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onGoodPriceListViewInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "",
+                    "var data = view.getData();",
+                    "",
+                    "view.down('#lblTitle').setHtml(data.ProductName);",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+data.Id+'?culture=ar',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json.ProductPrices",
+                    "        });",
+                    "",
+                    "        var lstPrices = view.down('#lstPrices');",
+                    "        lstPrices.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onGoodPriceListViewInitialize",
+            "designerId": "877b6e37-8817-4d4b-9325-3c3d56b389aa"
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "GoodsPricesController",
+        "designer|userClassName": "GoodsPricesController"
+    },
+    "name": "MyController",
+    "designerId": "58fe29d2-f5ea-4d9a-8410-645231036315",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#ShopsContainer",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onShopsContainerShow",
+                "implHandler": [
+                    "var view = component;",
+                    "",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetAllShops?culture=ar&pageIndex=0&pageSize=20',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstShops = view.down('#lstShops');",
+                    "        lstShops.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onShopsContainerShow",
+            "designerId": "cb0c48f2-a06a-4b38-bb08-1367e1166f8d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#GoodsContainer",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onGoodsContainerShow",
+                "implHandler": [
+                    "var view = component;",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture=ar&pageIndex=0&pageSize=20',",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstProducts = view.down('#lstProducts');",
+                    "        lstProducts.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onGoodsContainerShow",
+            "designerId": "a6c0bc13-fdbf-4c29-b5d4-136cd8121676"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstShops",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstShopsItemTap",
+                "implHandler": [
+                    "    dataview.up('MainNavView').push({",
+                    "            xtype: 'ShopPriceListView',",
+                    "            title: Ext.Global.GetFixedTitle(),",
+                    "            data: record.data",
+                    "",
+                    "        });",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstShopsItemTap",
+            "designerId": "42c37a05-4271-4b6c-834e-7f0165b6c636"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#lstProducts",
+                "designer|params": [
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onLstProductsItemTap",
+                "implHandler": [
+                    "    dataview.up('MainNavView').push({",
+                    "            xtype: 'GoodPriceListView',",
+                    "            title: Ext.Global.GetFixedTitle(),",
+                    "            data: record.data",
+                    "",
+                    "        });",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onLstProductsItemTap",
+            "designerId": "0e75b393-ad00-4c61-adf9-0a80f0182b7d"
+        }
+    ]
+}

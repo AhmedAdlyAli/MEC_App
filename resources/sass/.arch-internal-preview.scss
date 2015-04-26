@@ -1022,6 +1022,46 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 
+.item-shop{
+
+    //background
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-right:3em;
+    background: url(../images/request.png) no-repeat 96% center;
+
+
+    .tpl-shop1-1{
+        color: #010101;
+        font-weight:bold;
+    }
+
+    .tpl-shope-2{
+        color: #6f2f51;
+        padding:0.5em 0 0.5em 0.5em;
+        font-weight:500;
+    }
+}
+
+.item-product{
+    //background
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-right:3em;
+    background: url(../images/request.png) no-repeat 96% center;
+
+    .tpl-product-1{
+        color: #010101;
+        font-weight:bold;
+    }
+
+    .tpl-product-2{
+        color: #6f2f51;
+        padding:0.5em 0 0.5em 0.5em;
+        font-weight:500;
+    }
+}
+
 
 
 

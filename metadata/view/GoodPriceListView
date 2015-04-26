@@ -1,0 +1,115 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "GoodPriceListView",
+        "designer|userClassName": "GoodPriceListView",
+        "itemId": "GoodPriceListView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "ShopPricesView1",
+    "designerId": "6cf9fdcb-bdf7-49da-874e-8829f83f5296",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "Test",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "672e3398-fa0e-4191-b799-c39bb662834c"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemCls": "item-product",
+                "itemId": "lstPrices",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "29ab6af2-3dff-451c-a7df-c8318203f418",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-header"
+                        ],
+                        "docked": "top",
+                        "html": "اسم المحل"
+                    },
+                    "name": "MyLabel34",
+                    "designerId": "18e105c2-578b-44c6-936e-49a0d3e10156"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-header"
+                        ],
+                        "docked": "top",
+                        "html": "السعر"
+                    },
+                    "name": "MyLabel14",
+                    "designerId": "329e6ae8-1b0c-4e48-907c-4ad74c2d9a15"
+                },
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tabl-row'>",
+                            "    <div class='tabl-cell'>{Shop.ShopName}</div>    ",
+                            "    <div class='tabl-cell'>{Price}</div>    ",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "803ec424-cf02-424a-a064-0f169da3d58e"
+                }
+            ]
+        }
+    ]
+}

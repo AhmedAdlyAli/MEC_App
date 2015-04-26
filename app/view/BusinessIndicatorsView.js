@@ -31,12 +31,16 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             'complaint-view',
             'rtl'
         ],
+        scrollable: {
+            direction: 'vertical',
+            directionlock: true
+        },
         items: [
             {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'مؤشرات اقتصادية',
+                html: 'مؤشرات الأعمال',
                 itemId: 'lblViewTitle'
             },
             {
@@ -45,7 +49,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridHeader',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات التجارية الجديدة'
                     },
                     {
                         xtype: 'label'
@@ -58,7 +63,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridSubHeader',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات الرئيسية'
                     }
                 ]
             },
@@ -67,7 +73,9 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdMainCRs',
                 itemCls: 'grid-table',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{MainNewBusinessRegisters.Value}</div>',
+                    '<div>{MainNewBusinessRegisters.Change}</div>',
+                    ''
                 ]
             },
             {
@@ -76,7 +84,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridSubHeader1',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات الفرعية'
                     }
                 ]
             },
@@ -85,7 +94,9 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdSubCRs',
                 itemCls: 'grid-table',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{MainRenewedBusinessRegisters.Value}</div>',
+                    '<div>{MainRenewedBusinessRegisters.Change}</div>',
+                    ''
                 ]
             },
             {
@@ -94,7 +105,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridHeader1',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات التجارية المجددة'
                     },
                     {
                         xtype: 'label'
@@ -107,7 +119,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridSubHeader2',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات الرئيسية'
                     }
                 ]
             },
@@ -116,7 +129,9 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdMainCRs2',
                 itemCls: 'grid-table',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{MainRenewedBusinessRegisters.Value}</div>',
+                    '<div>{MainRenewedBusinessRegisters.Change}</div>',
+                    ''
                 ]
             },
             {
@@ -125,7 +140,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'GridSubHeader3',
                 items: [
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        html: 'السجلات الفرعية'
                     }
                 ]
             },
@@ -134,7 +150,9 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdSubCRs2',
                 itemCls: 'grid-table',
                 itemTpl: [
-                    '<div>List Item {string}</div>'
+                    '<div>{BranchRenewedBusinessRegisters.Value}</div>',
+                    '<div>{BranchRenewedBusinessRegisters.Change}</div>',
+                    ''
                 ]
             }
         ]

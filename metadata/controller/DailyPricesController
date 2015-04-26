@@ -1,0 +1,133 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "DailyPricesController",
+        "designer|userClassName": "DailyPricesController"
+    },
+    "name": "MyController",
+    "designerId": "2b8c3f57-e3f7-4ff7-935f-f74c00e5ea4f",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#VegentsblesContainer",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onVegentsblesContainerShow",
+                "implHandler": [
+                    "        this.GetPrices(component,1);",
+                    "",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onVegentsblesContainerShow",
+            "designerId": "24b9bc83-445b-40b0-a5a1-acdd3b7247d3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#FruitsContainer",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onFruitsContainerShow",
+                "implHandler": [
+                    "        this.GetPrices(component,2);",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onFruitsContainerShow",
+            "designerId": "69d4b833-b1d8-48c0-9c0c-7ae5aa2a8f25"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "container#FishContainer",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Container",
+                "fn": "onFishContainerShow",
+                "implHandler": [
+                    "        this.GetPrices(component,3);",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onFishContainerShow",
+            "designerId": "8e55ce50-9046-45ce-ba35-4479463557d6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "typeID"
+                ],
+                "fn": "GetPrices",
+                "implHandler": [
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture=ar&pageIndex=0&pageSize=20&typeId='+typeID,",
+                    "    method : 'Get',",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        ",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
+                    "",
+                    "        var lstPrices = view.down('#lstPrices');",
+                    "        lstPrices.setStore(store);",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ]
+            },
+            "name": "GetPrices",
+            "designerId": "68229274-163f-4638-b284-fb9874b932d4"
+        }
+    ]
+}

@@ -85,7 +85,7 @@
                 "fn": "onReportsBtn3Tap",
                 "implHandler": [
                     "button.up('MainNavView').push({",
-                    "            xtype: 'ConsumerIndicatorsView',",
+                    "            xtype: 'ConsumerIndicatorsListing',",
                     "            title: Ext.Global.GetFixedTitle()",
                     "        });"
                 ],

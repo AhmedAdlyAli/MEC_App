@@ -63,9 +63,7 @@ Ext.application({
         'FeedbackFormView',
         'MinistryEmployeesView',
         'MicroEconomicReport',
-        'ConsumerIndicatorsView',
         'PricingView',
-        'WhereToShopView',
         'MonthlyFruitView',
         'TrademarkReportView',
         'MainNavView',
@@ -109,7 +107,12 @@ Ext.application({
         'ProjectsView',
         'ProjectDetailsView',
         'BusinessIndicatorsView',
-        'EconomicIndicatorsListing'
+        'EconomicIndicatorsListing',
+        'ConsumerIndicatorsListing',
+        'DailyReportView',
+        'DailyPricesView',
+        'GoodsPricesView',
+        'ShopPriceListView'
     ],
     controllers: [
         'HomeController',
@@ -136,7 +139,12 @@ Ext.application({
         'InvestorEducationController',
         'ProjectsController',
         'BusinessIndicatorsController',
-        'EconomicIndicatorsController'
+        'EconomicIndicatorsController',
+        'DailyPricesController',
+        'GoodsPricesController',
+        'GoodPriceListController',
+        'ShopPriceListController',
+        'WhereToShopController'
     ],
     name: 'MEC_App',
 

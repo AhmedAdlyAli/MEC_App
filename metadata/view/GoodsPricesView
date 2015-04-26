@@ -1,0 +1,171 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "GoodsPricesView",
+        "designer|userClassName": "GoodsPricesView",
+        "itemId": "GoodsPricesView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "DailyPricesView1",
+    "designerId": "1f3af3ec-2e82-403f-a07e-04a10de66770",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "أسعار السلع الاستهلاكية"
+            },
+            "name": "MyLabel3",
+            "designerId": "4be2aa30-3c04-49e3-b147-93b79a661d16"
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "rtl"
+                ]
+            },
+            "name": "MyTabPanel",
+            "designerId": "b84de7bf-b896-46c5-acfb-84f0a0f67b86",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "ShopsContainer",
+                        "title": "المحلات"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "bf2a713e-890e-482b-88a5-425c1844bf78",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": "100%",
+                                "id": null,
+                                "itemCls": "item-shop",
+                                "itemId": "lstShops",
+                                "store": null
+                            },
+                            "name": "MyList1",
+                            "designerId": "764c1918-831c-41fe-a16b-53e6693e4f82",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "",
+                                            "    <div class='tpl-shop1-1'>{ShopName}</div>    ",
+                                            "    <div class='tpl-shop1-2'>{ShopAddress}</div>    ",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "81e46e9c-8fbb-4bee-a81f-e9f02c92e7bf"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "GoodsContainer",
+                        "title": "المنتجات"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "c03c2347-e446-4c42-a2aa-27a6af305d2e",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": "100%",
+                                "id": null,
+                                "itemCls": "item-product",
+                                "itemId": "lstProducts",
+                                "store": null
+                            },
+                            "name": "MyList4",
+                            "designerId": "cd59a945-e413-4b7c-8559-baa54ed1fceb",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "",
+                                            "    <div class='tpl-product-1'>{ProductName}</div>    ",
+                                            "    <div class='tpl-product-2'>{ProductType}</div>    ",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "3774d315-463d-455c-a612-a1801ebe8d05"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

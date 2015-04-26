@@ -6,9 +6,208 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "WhereToShopView",
-        "designer|userClassName": "WhereToShopView"
+        "designer|userClassName": "WhereToShopView",
+        "id": "WhereToShopView",
+        "itemId": "WhereToShopView",
+        "layout": "fit",
+        "scrollable": false
     },
-    "name": "MyPanel1",
-    "designerId": "91e4ac1b-7f20-4822-b9d2-6f9dc3053071"
+    "name": "DailyPricesView3",
+    "designerId": "61ac0178-7f48-4f70-8280-c365ccca1374",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "أين تتسوق"
+            },
+            "name": "MyLabel3",
+            "designerId": "7c99b1ad-5d48-4cd2-a76c-2f1637fef5d8"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemId": "lstPrices",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "657e92a7-9d2b-439c-bdbf-7d6959f67b8f",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "itemId": "txtProductName",
+                        "label": "اختر منتج",
+                        "placeHolder": "اختر منتج",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField",
+                    "designerId": "a952f07d-2cfb-4ce5-a383-e7e6336a77e3",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtProductNameInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// Create Native drop down",
+                                    "var me = this;",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var data = me.up('WhereToShopView').getData();",
+                                    "",
+                                    "",
+                                    "    var items = [];",
+                                    "",
+                                    "    Ext.each(data, function(item){",
+                                    "        items.push({ text: item.ProductName, value: item.Id});",
+                                    "    });",
+                                    "",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "        title: \"المنتج\",",
+                                    "        items: items,",
+                                    "        //selectedValue: \"2\",",
+                                    "        doneButtonLabel: \"اختيار\",",
+                                    "        cancelButtonLabel: \"الغاء\"",
+                                    "    };",
+                                    "",
+                                    "",
+                                    " var hiddenProductID = Ext.ComponentQuery.query(\"#hiddenProductID\")[0];",
+                                    "",
+                                    "    Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);",
+                                    "",
+                                    "",
+                                    "}, me);",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtProductNameInitialize",
+                            "designerId": "ceaadd43-07fe-4ac7-bd18-5df5d6635466"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Hidden",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "hiddenProductID"
+                    },
+                    "name": "MyHiddenField",
+                    "designerId": "658fc1b7-f5c3-4bb9-9672-61f35618df36"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-cell"
+                        ],
+                        "docked": "top",
+                        "html": "اسم المحل"
+                    },
+                    "name": "MyLabel34",
+                    "designerId": "0cac6614-72b7-413c-b50a-ab37f2642d00"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-cell"
+                        ],
+                        "docked": "top",
+                        "html": "الكمية"
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "efb3b65d-82d0-42e8-ad7f-23031ad7a774"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-cell"
+                        ],
+                        "docked": "top",
+                        "html": "السعر"
+                    },
+                    "name": "MyLabel37",
+                    "designerId": "2a61b653-b54d-41c2-9b26-1c187f6de6ae"
+                },
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tabl-row'>",
+                            "    <div class='tabl-cell'>{Shop.ShopName}</div>    ",
+                            "    <div class='tabl-cell'>{Quantity}({Unit.Name})</div>    ",
+                            "    <div class='tabl-cell'>{Price}</div>    ",
+                            "",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "aadbe0a2-36a6-4161-9f15-ef189666185f"
+                }
+            ]
+        }
+    ]
 }

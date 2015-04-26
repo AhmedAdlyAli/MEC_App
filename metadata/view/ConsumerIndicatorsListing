@@ -1,0 +1,144 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "ConsumerIndicatorsListing",
+        "designer|userClassName": "ConsumerIndicatorsListing",
+        "itemId": "ConsumerIndicatorsListing",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "EconomicIndicatorsListing1",
+    "designerId": "ce572835-fa59-45b0-ac41-ab43301a7f20",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "مؤشرات استهلاكية"
+            },
+            "name": "MyLabel3",
+            "designerId": "475736b9-3be3-4d72-a5fb-a2ab712033e2"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemId": "lstItems",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "fa12526e-54b0-4a90-927a-1cf2ef8d0f89",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='CompanyListItem'>{Name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "0aaa4345-0d96-47f6-9161-cc259ffd06c3"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstItemsItemTap",
+                        "implHandler": [
+                            "",
+                            "if (record.data.Url.indexOf('http')>-1){",
+                            "       window.open(record.data.Url,'_blank');",
+                            "}else{",
+                            "    ",
+                            "   ",
+                            "        Ext.Viewport.getActiveItem().push({",
+                            "            xtype: record.data.Url,",
+                            "            title: Ext.Global.GetFixedTitle()",
+                            "        });",
+                            "    }"
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstItemsItemTap",
+                    "designerId": "6636ebd1-3e53-43ad-9497-ef9f29d39d13"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var links = [{Name:'النشرة اليومية',Url:'DailyReportView'},",
+                    "             {Name:'اين تتسوق',Url:'WhereToShopView'},",
+                    "             {Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com'}",
+                    "            ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstItems');",
+                    "lst.setStore(store);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "d6e92204-a69c-4f50-870f-0ee8576d5d0c"
+        }
+    ]
+}

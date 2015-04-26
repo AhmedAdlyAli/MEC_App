@@ -13,7 +13,11 @@
         "designer|userAlias": "BusinessIndicatorsView",
         "designer|userClassName": "BusinessIndicatorsView",
         "itemId": "BusinessIndicatorsView",
-        "layout": "vbox"
+        "layout": "vbox",
+        "scrollable": [
+            "{direction: 'vertical',",
+            "directionlock:true}"
+        ]
     },
     "name": "MyRequestsView1",
     "configAlternates": {
@@ -33,7 +37,7 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "مؤشرات اقتصادية",
+                "html": "مؤشرات الأعمال",
                 "itemId": "lblViewTitle"
             },
             "name": "MyLabel",
@@ -62,6 +66,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات التجارية الجديدة"
+                    },
                     "name": "MyLabel1",
                     "designerId": "590cbcb0-3989-4606-aa2c-0e9a24789b4b"
                 },
@@ -100,6 +107,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات الرئيسية"
+                    },
                     "name": "MyLabel3",
                     "designerId": "b648b61e-5859-4b49-8fac-6d9065bf0695"
                 }
@@ -113,6 +123,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "height": null,
                 "itemCls": "grid-table",
                 "itemId": "grdMainCRs"
             },
@@ -129,7 +140,9 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>List Item {string}</div>"
+                            "<div>{MainNewBusinessRegisters.Value}</div>",
+                            "<div>{MainNewBusinessRegisters.Change}</div>",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
@@ -160,6 +173,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات الفرعية"
+                    },
                     "name": "MyLabel3",
                     "designerId": "b7009559-85f7-4cd5-a425-7bdeed69bf8f"
                 }
@@ -189,7 +205,9 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>List Item {string}</div>"
+                            "<div>{MainRenewedBusinessRegisters.Value}</div>",
+                            "<div>{MainRenewedBusinessRegisters.Change}</div>",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
@@ -220,6 +238,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات التجارية المجددة"
+                    },
                     "name": "MyLabel1",
                     "designerId": "f6f24122-a174-459f-b608-c89e0be8731e"
                 },
@@ -258,6 +279,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات الرئيسية"
+                    },
                     "name": "MyLabel3",
                     "designerId": "db584cfa-5bf0-4793-911b-0030408be1b0"
                 }
@@ -287,7 +311,9 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>List Item {string}</div>"
+                            "<div>{MainRenewedBusinessRegisters.Value}</div>",
+                            "<div>{MainRenewedBusinessRegisters.Change}</div>",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
@@ -318,6 +344,9 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "html": "السجلات الفرعية"
+                    },
                     "name": "MyLabel3",
                     "designerId": "43bdc471-ead6-4e87-a95f-e9a484f1c2db"
                 }
@@ -347,7 +376,9 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>List Item {string}</div>"
+                            "<div>{BranchRenewedBusinessRegisters.Value}</div>",
+                            "<div>{BranchRenewedBusinessRegisters.Change}</div>",
+                            ""
                         ]
                     },
                     "name": "itemTpl",

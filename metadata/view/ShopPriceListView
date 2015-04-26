@@ -1,0 +1,114 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "ShopPriceListView",
+        "designer|userClassName": "ShopPriceListView",
+        "itemId": "ShopPriceListView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "DailyPricesView2",
+    "designerId": "965094a2-f33a-4d98-9445-875ac45eca83",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "Test",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "718ff666-b6e4-4c0d-963a-8c6390556719"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemId": "lstProducts",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "a66a6b2e-f42c-44c0-9da1-675ba005d46a",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='tabl-row'>",
+                            "    <div class='tabl-cell'>{Product.ProductName}</div>    ",
+                            "    <div class='tabl-cell'>{Price}</div>    ",
+                            "</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "b36dbede-847b-4317-9f8d-52971e2264e9"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-header"
+                        ],
+                        "docked": "top",
+                        "html": "اسم المنتج"
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "1e881821-f972-4670-aee0-665ed98e7e1c"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "table-header"
+                        ],
+                        "docked": "top",
+                        "html": "السعر"
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "ce637d0a-b28e-4b2b-bb6b-3ce42ac6c8af"
+                }
+            ]
+        }
+    ]
+}

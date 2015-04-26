@@ -31,7 +31,12 @@
             "InvestorEducationController",
             "ProjectsController",
             "BusinessIndicatorsController",
-            "EconomicIndicatorsController"
+            "EconomicIndicatorsController",
+            "DailyPricesController",
+            "GoodsPricesController",
+            "GoodPriceListController",
+            "ShopPriceListController",
+            "WhereToShopController"
         ],
         "models": [
             "PrintOffice",
@@ -76,9 +81,7 @@
             "FeedbackFormView",
             "MinistryEmployeesView",
             "MicroEconomicReport",
-            "ConsumerIndicatorsView",
             "PricingView",
-            "WhereToShopView",
             "MonthlyFruitView",
             "TrademarkReportView",
             "MainNavView",
@@ -122,7 +125,12 @@
             "ProjectsView",
             "ProjectDetailsView",
             "BusinessIndicatorsView",
-            "EconomicIndicatorsListing"
+            "EconomicIndicatorsListing",
+            "ConsumerIndicatorsListing",
+            "DailyReportView",
+            "DailyPricesView",
+            "GoodsPricesView",
+            "ShopPriceListView"
         ]
     },
     "name": "Application",

@@ -51,7 +51,7 @@ Ext.define('MEC_App.controller.ReportsController', {
 
     onReportsBtn3Tap: function(button, e, eOpts) {
         button.up('MainNavView').push({
-                    xtype: 'ConsumerIndicatorsView',
+                    xtype: 'ConsumerIndicatorsListing',
                     title: Ext.Global.GetFixedTitle()
                 });
     },

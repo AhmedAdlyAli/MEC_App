@@ -1,0 +1,401 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "DailyPricesView",
+        "designer|userClassName": "DailyPricesView",
+        "itemId": "DailyPricesView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "DailyReportView1",
+    "designerId": "fbe3614a-6aa8-4a62-9573-23f478101682",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "الاسعار اليومية"
+            },
+            "name": "MyLabel3",
+            "designerId": "696c6659-efca-4445-ad4d-7fcd6a90eb4f"
+        },
+        {
+            "type": "Ext.tab.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "rtl"
+                ]
+            },
+            "name": "MyTabPanel",
+            "designerId": "4bd61687-ac4b-491b-b604-fe007ea6e60c",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "VegentsblesContainer",
+                        "title": "الخضروات"
+                    },
+                    "name": "MyContainer",
+                    "designerId": "729a98da-66c9-42f5-908b-c008433414d5",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "اسم المنتج"
+                            },
+                            "name": "MyLabel14",
+                            "designerId": "f20dac1a-96f8-420b-93a2-a85e01d112e2"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "سعر الكيلو"
+                            },
+                            "name": "MyLabel32",
+                            "designerId": "e8131e42-8992-4202-beac-ec11790a7b59"
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": "100%",
+                                "id": null,
+                                "itemId": "lstPrices",
+                                "store": null
+                            },
+                            "name": "MyList1",
+                            "designerId": "afc925fe-340b-4451-96bd-5412ae8211c4",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='tabl-row'>",
+                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
+                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "165caebc-6fba-448f-8e53-4326629e36f3",
+                                    "cn": [
+                                        {
+                                            "type": "templatefunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "changePercent"
+                                                ],
+                                                "fn": "CheckPercentOfChange",
+                                                "implHandler": [
+                                                    "if(changePercent>0){",
+                                                    "    return 'arrow-up-cell';",
+                                                    "}else{",
+                                                    "    return 'arrow-down-cell';",
+                                                    "",
+                                                    "}",
+                                                    ""
+                                                ]
+                                            },
+                                            "name": "CheckPercentOfChange",
+                                            "designerId": "2e359cfb-5b58-40b0-9440-ba4b21411b90"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "FruitsContainer",
+                        "title": "الفاكهة"
+                    },
+                    "name": "MyContainer1",
+                    "designerId": "9f39846c-ba0c-49d9-bfce-b9f4b8ba6faa",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "اسم المنتج"
+                            },
+                            "name": "MyLabel30",
+                            "designerId": "cede1485-3c4a-47ca-ab25-f238eb1e2605"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "سعر الكيلو"
+                            },
+                            "name": "MyLabel18",
+                            "designerId": "ff4e5711-6b74-4b16-b6ae-28e5523bcee5"
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": "100%",
+                                "id": null,
+                                "itemId": "lstPrices",
+                                "store": null
+                            },
+                            "name": "MyList4",
+                            "designerId": "b73e41f5-648c-49cc-90b0-ab0d1bc27c7e",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='tabl-row'>",
+                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
+                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "23b89911-14a0-4607-80cd-01c34e4a52b2",
+                                    "cn": [
+                                        {
+                                            "type": "templatefunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "changePercent"
+                                                ],
+                                                "fn": "CheckPercentOfChange",
+                                                "implHandler": [
+                                                    "if(changePercent>0){",
+                                                    "    return 'arrow-up-cell';",
+                                                    "}else{",
+                                                    "    return 'arrow-down-cell';",
+                                                    "",
+                                                    "}",
+                                                    ""
+                                                ]
+                                            },
+                                            "name": "CheckPercentOfChange",
+                                            "designerId": "690f0bdd-81a2-4a35-a620-1b86b4ceaa71"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "FishContainer",
+                        "title": "الأسماك"
+                    },
+                    "name": "MyContainer2",
+                    "designerId": "a2aeab2f-d467-47fe-83dc-b61cd05d6e2e",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "سعر الكيلو"
+                            },
+                            "name": "MyLabel33",
+                            "designerId": "13549b52-5a4b-468e-9973-29345e99fed5"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "table-header"
+                                ],
+                                "html": "اسم المنتج"
+                            },
+                            "name": "MyLabel31",
+                            "designerId": "0fb9960c-856d-41c1-acde-c83d9194e457"
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": "100%",
+                                "id": null,
+                                "itemId": "lstPrices",
+                                "store": null
+                            },
+                            "name": "MyList5",
+                            "designerId": "6d92d4c1-cff3-4d98-aa4e-23dad8cedddd",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='tabl-row'>",
+                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
+                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "c4480714-d22f-4231-a1ac-d7ca97ecc7a0",
+                                    "cn": [
+                                        {
+                                            "type": "templatefunction",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|params": [
+                                                    "changePercent"
+                                                ],
+                                                "fn": "CheckPercentOfChange",
+                                                "implHandler": [
+                                                    "if(changePercent>0){",
+                                                    "    return 'arrow-up-cell';",
+                                                    "}else{",
+                                                    "    return 'arrow-down-cell';",
+                                                    "",
+                                                    "}",
+                                                    ""
+                                                ]
+                                            },
+                                            "name": "CheckPercentOfChange",
+                                            "designerId": "c7439fdf-bfe9-421e-a736-93ae0b11a7f9"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
