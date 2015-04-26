@@ -20,8 +20,8 @@ Ext.define('MEC_App.view.ContactUsView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button',
-        'Ext.Spacer'
+        'Ext.dataview.List',
+        'Ext.XTemplate'
     ],
 
     config: {
@@ -72,99 +72,50 @@ Ext.define('MEC_App.view.ContactUsView', {
                         },
                         items: [
                             {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'contactBtn1',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'عن الوزارة'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'contactBtn2',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'الفروع'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'contactBtn3',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'مقترحات'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'contactBtn4',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-supply',
-                                                text: 'تواصل معنا'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'contactBtn5',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-complain',
-                                                text: 'موظفو الوزارة'
-                                            },
-                                            {
-                                                xtype: 'spacer',
-                                                flex: 1
-                                            }
-                                        ]
-                                    }
+                                xtype: 'list',
+                                height: 300,
+                                itemId: 'lstViewLinks',
+                                itemCls: 'item-link',
+                                itemTpl: [
+                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onLstViewLinksItemTap',
+                event: 'itemtap',
+                delegate: '#lstViewLinks'
+            }
         ]
+    },
+
+    onLstViewLinksItemTap: function(dataview, index, target, record, e, eOpts) {
+                    Ext.Global.RedirectToView(record.data);
+
     },
 
     initialize: function() {
         this.callParent();
 
+        var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'HListIcon.png'},
+                            {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},
+                     {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'qqqqHListIcon.png'},
+                            {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},
+                            {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}
+                            ];
 
-        this.down('#contactBtn1').setHtml(Ext.Global.GetViewTitle('AboutMinistry'));
+        var store = new Ext.data.Store({
+            data : links
+        });
 
-        this.down('#contactBtn2').setHtml(Ext.Global.GetViewTitle('Branches'));
-
-        this.down('#contactBtn3').setHtml(Ext.Global.GetViewTitle('Suggestions'));
-
-        this.down('#contactBtn4').setHtml(Ext.Global.GetViewTitle('ContactUs2'));
-
-        this.down('#contactBtn5').setHtml(Ext.Global.GetViewTitle('Employees'));
-
-
-        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('ContactUs'));
+        var lst = this.down('#lstViewLinks');
+        lst.setStore(store);
+        lst.setScrollable(false);
 
 
     }

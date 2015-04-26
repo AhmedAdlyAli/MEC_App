@@ -315,14 +315,13 @@ Ext.define('MEC_App.view.MainNavView', {
 
         //Ext.Viewport.getActiveItem().getNavigationBar().titleComponent.setTitle(Ext.Global.GetViewTitle('Home'));
 
-        this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
-        this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
-        this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
-        this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
-        this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
-        this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
-
-        this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
+        //this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
+        //this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
+        //this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
+        //this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
+        //this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
+        //this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
+        //this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
 
 
 

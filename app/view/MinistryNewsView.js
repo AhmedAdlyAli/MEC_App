@@ -28,9 +28,8 @@ Ext.define('MEC_App.view.MinistryNewsView', {
         cls: 'news-lstng',
         fullscreen: true,
         height: '100%',
-        itemId: 'NewsList',
+        itemId: 'MinistryNewsView',
         defaultType: 'NewsListItem',
-        store: 'MinistryNewsStore',
         infinite: true,
         itemHeight: 80,
         onItemDisclosure: true,
@@ -45,7 +44,8 @@ Ext.define('MEC_App.view.MinistryNewsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'اخبار الوزارة'
+                html: 'اخبار الوزارة',
+                itemId: 'lblTitle'
             }
         ],
         plugins: [

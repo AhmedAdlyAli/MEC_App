@@ -32,17 +32,17 @@ Ext.application({
         'Ext.Ajax'
     ],
     models: [
-        'PrintOffice',
+        null,
         'MenuModel',
-        'ComplaintsModel',
-        'MinistryNewsModel',
-        'RSSModel',
-        'TradeNameResultModel'
+        null,
+        null,
+        null,
+        null
     ],
     stores: [
         'MenuArrayStore',
-        'PrintOffices',
-        'MinistryNewsStore'
+        null,
+        null
     ],
     views: [
         'HomeView',
@@ -58,8 +58,6 @@ Ext.application({
         'MinistryInThePressView',
         'EconomyNewsView',
         'TradeNameAvailabilityView',
-        'AboutMinistryView',
-        'MinistryBranchesView',
         'FeedbackFormView',
         'MinistryEmployeesView',
         'MicroEconomicReport',
@@ -79,11 +77,6 @@ Ext.application({
         'MinistryNewsView',
         'NewsListItem',
         'TradeNameEstablishmentDetails',
-        'MinistryReflectionsView',
-        'MinistryNewsSection3View',
-        'MinistryNewsSection4View',
-        'MinistryNewsSection5View',
-        'MinistryNewsSection6View',
         'TradeActivityAvailabilityView',
         'SupplyServiceView1',
         'SupplyServiceView2',
@@ -112,18 +105,13 @@ Ext.application({
         'DailyReportView',
         'DailyPricesView',
         'GoodsPricesView',
-        'ShopPriceListView'
+        'ShopPriceListView',
+        'AboutMinistryView',
+        'MinistryBranchesView'
     ],
     controllers: [
         'HomeController',
-        'PublicServicesController',
-        'PrintOffices',
-        'PrintOffsController',
         'SideMenuController',
-        'MediaCenterController',
-        'InquiriesController',
-        'ReportsController',
-        'ContactController',
         'ComplaintsController',
         'MinistryNewsController',
         'TradeNameAvailabilityController',

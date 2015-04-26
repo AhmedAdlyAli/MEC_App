@@ -235,6 +235,57 @@
             },
             "name": "RedirectLoggedUser",
             "designerId": "2abfead6-622c-4ad0-8f7d-3d01b8a845b4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "viewData"
+                ],
+                "fn": "RedirectToView",
+                "implHandler": [
+                    "console.log(viewData);",
+                    "",
+                    "",
+                    "if (viewData.Url.indexOf('http')>-1){",
+                    "",
+                    "",
+                    "        if(viewData.OpenExternalWindow){",
+                    "",
+                    "                window.open(viewData.Url,'_blank');",
+                    "",
+                    "        }else{",
+                    "                    Ext.Viewport.getActiveItem().push({",
+                    "                    xtype: 'WebFrameView',",
+                    "                    title: Ext.Global.GetFixedTitle(),",
+                    "                    data: viewData",
+                    "                });",
+                    "",
+                    "        }",
+                    "",
+                    "}else{",
+                    "",
+                    "        if(viewData.RequireLogin)",
+                    "        {",
+                    "            Ext.Global.RedirectLoggedUser(viewData.Url);",
+                    "",
+                    "        }else{",
+                    "            Ext.Viewport.getActiveItem().push({",
+                    "                xtype: viewData.Url,",
+                    "                title: Ext.Global.GetFixedTitle()",
+                    "            });",
+                    "        }",
+                    "",
+                    "}"
+                ]
+            },
+            "name": "RedirectToView",
+            "designerId": "36027d06-d226-40d0-b194-11cca50f4cf1"
         }
     ]
 }

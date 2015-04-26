@@ -30,14 +30,16 @@
                 "fn": "updateRecord",
                 "implHandler": [
                     "// Provide an implementation to update this container's child items",
-                    "",
                     "var me = this;",
                     "",
-                    "me.down('image').setSrc(record.get('NewsImgUrl'));",
+                    "",
+                    "me.down('#imgNews').setSrc('http://196.205.5.28:333/MEC/api/EconomyNews/Image/13');//record.get('NewsImgUrl'));",
                     "me.down('#textCmp').setHtml(record.get('NewsTitle'));",
                     "me.down('label').setHtml(record.get('NewsBrief'));",
                     "",
-                    "me.callParent(arguments);"
+                    "",
+                    "me.callParent(arguments);",
+                    ""
                 ]
             },
             "name": "updateRecord",
@@ -54,6 +56,7 @@
                 "cls": [
                     "lstng-img"
                 ],
+                "itemId": "imgNews",
                 "layout|flex": 2,
                 "src": "NewsImgUrl",
                 "width": null
@@ -86,7 +89,7 @@
                         "cls": [
                             "lstng-title"
                         ],
-                        "html": "NewsTitle",
+                        "html": null,
                         "itemId": "textCmp",
                         "layout|flex": 2
                     },
@@ -104,7 +107,7 @@
                         "cls": [
                             "lstng-brief"
                         ],
-                        "html": "NewsBrief",
+                        "html": null,
                         "layout|flex": 1
                     },
                     "name": "MyLabel6",

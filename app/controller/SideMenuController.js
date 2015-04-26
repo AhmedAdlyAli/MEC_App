@@ -117,13 +117,13 @@ Ext.define('MEC_App.controller.SideMenuController', {
     },
 
     onBtnProjectsTap: function(button, e, eOpts) {
-          Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
 
 
-                                Ext.Viewport.getActiveItem().push({
-                                    xtype: 'ProjectsView',
-                                    title: Ext.Global.GetFixedTitle()
-                                });
+        Ext.Viewport.getActiveItem().push({
+            xtype: 'ProjectsView',
+            title: Ext.Global.GetFixedTitle()
+        });
     },
 
     onBtnReportsTap: function(button, e, eOpts) {

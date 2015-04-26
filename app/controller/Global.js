@@ -101,6 +101,42 @@ Ext.define('MEC_App.controller.Global', {
 
 
         }
+    },
+
+    RedirectToView: function(viewData) {
+        console.log(viewData);
+
+
+        if (viewData.Url.indexOf('http')>-1){
+
+
+                if(viewData.OpenExternalWindow){
+
+                        window.open(viewData.Url,'_blank');
+
+                }else{
+                            Ext.Viewport.getActiveItem().push({
+                            xtype: 'WebFrameView',
+                            title: Ext.Global.GetFixedTitle(),
+                            data: viewData
+                        });
+
+                }
+
+        }else{
+
+                if(viewData.RequireLogin)
+                {
+                    Ext.Global.RedirectLoggedUser(viewData.Url);
+
+                }else{
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: viewData.Url,
+                        title: Ext.Global.GetFixedTitle()
+                    });
+                }
+
+        }
     }
 
 });

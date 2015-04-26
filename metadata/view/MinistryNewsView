@@ -16,11 +16,11 @@
         "height": "100%",
         "infinite": true,
         "itemHeight": 80,
-        "itemId": "NewsList",
+        "itemId": "MinistryNewsView",
         "onItemDisclosure": true,
         "padding": null,
         "pinHeaders": false,
-        "store": "MinistryNewsStore",
+        "store": null,
         "useSimpleItems": false,
         "variableHeights": true
     },
@@ -42,7 +42,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "اخبار الوزارة"
+                "html": "اخبار الوزارة",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel5",
             "designerId": "1bc33006-b2c1-4957-b966-46e7045f0a11"

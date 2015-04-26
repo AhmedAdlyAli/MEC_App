@@ -37,7 +37,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                         xtype: 'image',
                         cls: 'img',
                         height: 201,
-                        id: 'imgNews'
+                        itemId: 'imgNews'
                     },
                     {
                         xtype: 'panel',
@@ -68,11 +68,11 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
     initialize: function() {
         this.callParent();
-
-        this.down('#lblTitle').setHtml(this.getData().NewsTitle);
-        this.down('#lblDate').setHtml(this.getData().NewsDate);
-        this.down('#lblDetails').setHtml(this.getData().NewsDetails);
-        this.down('#imgNews').setSrc(this.getData().NewsImgUrl);
+        var data = this.getData();
+        this.down('#lblTitle').setHtml(data.NewsTitle);
+        this.down('#lblDate').setHtml(data.NewsDate);
+        this.down('#lblDetails').setHtml(data.NewsDescription);
+        this.down('#imgNews').setSrc("http://196.205.5.28:333/MEC/api/EconomyNews/Image/13");
 
     }
 

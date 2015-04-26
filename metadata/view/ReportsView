@@ -128,121 +128,56 @@
                     "designerId": "d42e4bab-0e1f-4130-999e-f9231ee194a0",
                     "cn": [
                         {
-                            "type": "Ext.Panel",
+                            "type": "Ext.dataview.List",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout": "vbox"
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": 200,
+                                "itemCls": "item-link",
+                                "itemId": "lstViewLinks"
                             },
-                            "name": "MyPanel9",
-                            "designerId": "b51412d4-1060-4817-8a47-1e7304ef8280",
+                            "name": "MyList5",
+                            "designerId": "efe9542d-a356-4faa-b017-f84271c44ae7",
                             "cn": [
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "Ext.XTemplate",
                                     "reference": {
-                                        "name": "items",
-                                        "type": "array"
+                                        "name": "itemTpl",
+                                        "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                        ]
                                     },
-                                    "name": "MyPanel11",
-                                    "designerId": "f5a852d0-f250-4534-acd2-484ae59744ec",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "reportsBtn1",
-                                                "layout|flex": 1,
-                                                "text": "مؤشرات اقتصادية"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "8d4a2b20-c513-4376-ae1e-942a0a3926f9"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "reportsBtn2",
-                                                "layout|flex": 1,
-                                                "text": "مؤشرات الاعمال"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "5ae08204-68d7-4233-94c6-1e03089ba749"
-                                        }
-                                    ]
+                                    "name": "itemTpl",
+                                    "designerId": "e92811cc-91c5-4295-be82-98bdd7c116cf"
                                 },
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "basiceventbinding",
                                     "reference": {
-                                        "name": "items",
+                                        "name": "listeners",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
+                                        "fn": "onLstLinksItemTap",
+                                        "implHandler": [
+                                            "            Ext.Global.RedirectToView(record.data);",
+                                            ""
                                         ],
-                                        "layout": "hbox"
+                                        "name": "itemtap"
                                     },
-                                    "name": "MyPanel12",
-                                    "designerId": "4d47849f-78e9-46e4-b036-298c9d180f78",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "reportsBtn3",
-                                                "layout|flex": 1,
-                                                "text": "مؤشرات استهلاكية"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "384b8694-8e68-46b7-9d59-0e0293b9584e"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-supply",
-                                                "itemId": "reportsBtn4",
-                                                "layout|flex": 1,
-                                                "text": "تقرير العلامات التجارية"
-                                            },
-                                            "name": "MyButton18",
-                                            "designerId": "fa7b68e7-aba9-444d-b5ff-95f0bf31d040"
-                                        }
-                                    ]
+                                    "name": "onLstLinksItemTap",
+                                    "designerId": "31aca384-63b6-4442-9f91-da8cf2d10007"
                                 }
                             ]
                         }
@@ -262,6 +197,26 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
+                    "",
+                    "var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', Icon:'HListIcon.png'},",
+                    "                    {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',Icon:'HListIcon.png'},",
+                    "                    {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,Icon:'HListIcon.png'},",
+                    "             {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',Icon:'HListIcon.png'}",
+                    "",
+                    "                    ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstViewLinks');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "/*",
                     "this.down('#reportsBtn1').setHtml(Ext.Global.GetViewTitle('EcoReports'));",
                     "this.down('#reportsBtn2').setHtml(Ext.Global.GetViewTitle('BizReports'));",
                     "this.down('#reportsBtn3').setHtml(Ext.Global.GetViewTitle('ConsumerReports'));",
@@ -271,7 +226,7 @@
                     "",
                     "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Reports'));",
                     "",
-                    "",
+                    "*/",
                     ""
                 ]
             },

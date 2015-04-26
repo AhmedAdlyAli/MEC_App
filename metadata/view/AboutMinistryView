@@ -6,8 +6,144 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "AboutMinistryView"
+        "designer|userAlias": "AboutMinistryView",
+        "designer|userClassName": "AboutMinistryView",
+        "fullscreen": true,
+        "itemId": "AboutMinistryView",
+        "layout": "fit",
+        "scrollable": null
     },
-    "name": "MyPanel",
-    "designerId": "730405cc-a2ff-42c9-a52c-18ec8a631a10"
+    "name": "ContactUsView1",
+    "designerId": "a9c7aa87-9a8b-4439-949b-858af548d3ed",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
+            },
+            "name": "MyPanel14",
+            "designerId": "dd65b875-8952-4eed-89f5-32ff2c224e06",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "8c616fb7-51cf-479a-92a1-685a3edaafb2",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "07473574-c0f3-45f5-a062-871957e8cc10",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-icon"
+                                        ],
+                                        "layout|flex": 2
+                                    },
+                                    "name": "MyPanel16",
+                                    "designerId": "ed31e5b7-75c2-48a8-8452-783e014297f3"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "عن الوزارة",
+                                        "itemId": "viewLbl",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel2",
+                                    "designerId": "9cdc1f13-b792-4602-ab1e-2adff1bf8b6a"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": [
+                            "{ direction: 'vertical', directionLock: true }"
+                        ]
+                    },
+                    "name": "MyPanel7",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
+                    "designerId": "12e82dd7-f066-4d2c-819e-b05aa09559fc",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text "
+                            },
+                            "name": "MyLabel4",
+                            "designerId": "ac964c57-cea7-4d06-903b-97ca05b32996"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

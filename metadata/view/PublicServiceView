@@ -9,12 +9,68 @@
         "designer|userAlias": "PublicServiceView",
         "designer|userClassName": "PublicServiceView",
         "fullscreen": true,
-        "layout": "fit",
+        "layout": "vbox",
         "scrollable": null
     },
     "name": "MyPanel",
     "designerId": "7b23aef6-db2d-4685-9251-d9486597a989",
     "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var links = [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'HListIcon.png'},",
+                    "                    {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'HListIcon.png'},",
+                    "                    {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'HListIcon.png'},",
+                    "                    {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'HListIcon.png'},",
+                    "                    {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'HListIcon.png'},",
+                    "                    {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'HListIcon.png'}",
+                    "                    ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstLinks1');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    " links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'HListIcon.png'},",
+                    "                    {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'HListIcon.png'}",
+                    "                    ];",
+                    "",
+                    " store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    " lst = this.down('#lstLinks2');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "bf2c8300-839d-4ec6-b6a6-f7124ce45be1"
+        },
         {
             "type": "Ext.Panel",
             "reference": {
@@ -23,12 +79,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": null,
+                "cls": [
+                    "services-header"
+                ],
+                "docked": null,
+                "height": "30%",
                 "layout": "vbox",
-                "scrollable": null
+                "layout|flex": 1
             },
-            "name": "MyPanel14",
-            "designerId": "3dd15f51-c6d1-4d68-9a91-4f73b451c0f9",
+            "name": "MyPanel6",
+            "designerId": "ee512d53-ebdf-4c1c-9218-91563fd64772",
             "cn": [
                 {
                     "type": "Ext.Panel",
@@ -39,15 +99,13 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "services-header"
+                            "services-header-overlay"
                         ],
-                        "docked": null,
-                        "height": "30%",
-                        "layout": "vbox",
-                        "layout|flex": 1
+                        "height": "100%",
+                        "layout": "vbox"
                     },
-                    "name": "MyPanel6",
-                    "designerId": "ee512d53-ebdf-4c1c-9218-91563fd64772",
+                    "name": "MyPanel8",
+                    "designerId": "dfef4166-178a-4ac5-bc74-7fe67b99e38a",
                     "cn": [
                         {
                             "type": "Ext.Panel",
@@ -58,47 +116,140 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "services-header-overlay"
+                                    "service-header-icon"
                                 ],
-                                "height": "100%",
-                                "layout": "vbox"
+                                "layout|flex": 2
                             },
-                            "name": "MyPanel8",
-                            "designerId": "dfef4166-178a-4ac5-bc74-7fe67b99e38a",
+                            "name": "MyPanel16",
+                            "designerId": "2ceba139-9583-4368-b507-68b37da894b5"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-header-title"
+                                ],
+                                "html": "الخدمات العامة",
+                                "itemId": "viewLbl",
+                                "layout|flex": 1
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "76b9eafc-acea-40f2-87b2-7e10400f3fca"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 2.2,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel9",
+                    "designerId": "ed673919-8367-4368-9767-e54df485072d",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-title"
+                                ],
+                                "html": "خدمات المستثمر",
+                                "id": null,
+                                "itemId": "lblInvestor"
+                            },
+                            "name": "MyLabel",
+                            "designerId": "3ef3c3cd-2e2f-4604-b0b0-df9c3103423b"
+                        },
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": 295,
+                                "itemCls": "item-link",
+                                "itemId": "lstLinks1"
+                            },
+                            "name": "MyList",
+                            "designerId": "0bbeed6a-7afe-4095-b4d2-393750984391",
                             "cn": [
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "Ext.XTemplate",
                                     "reference": {
-                                        "name": "items",
-                                        "type": "array"
+                                        "name": "itemTpl",
+                                        "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "service-header-icon"
-                                        ],
-                                        "layout|flex": 2
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                        ]
                                     },
-                                    "name": "MyPanel16",
-                                    "designerId": "2ceba139-9583-4368-b507-68b37da894b5"
+                                    "name": "itemTpl",
+                                    "designerId": "75e9c442-e2dc-4b12-aec7-e6ff5344c972"
                                 },
                                 {
-                                    "type": "Ext.Label",
+                                    "type": "basiceventbinding",
                                     "reference": {
-                                        "name": "items",
+                                        "name": "listeners",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "service-header-title"
+                                        "fn": "onLstLinks1ItemTap",
+                                        "implHandler": [
+                                            "            Ext.Global.RedirectToView(record.data);",
+                                            ""
                                         ],
-                                        "html": "الخدمات العامة",
-                                        "itemId": "viewLbl",
-                                        "layout|flex": 1
+                                        "name": "itemtap"
                                     },
-                                    "name": "MyLabel2",
-                                    "designerId": "76b9eafc-acea-40f2-87b2-7e10400f3fca"
+                                    "name": "onLstLinks1ItemTap",
+                                    "designerId": "41f4ecf5-fcf6-4b03-9b0c-343f02f68bcc"
                                 }
                             ]
                         }
@@ -112,281 +263,86 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": [
-                            "inner-panel"
-                        ],
-                        "height": "auto",
-                        "layout|flex": 2.2,
-                        "scrollable": [
-                            "{ direction: 'vertical', directionLock: true }"
-                        ]
+                        "layout": "vbox"
                     },
-                    "name": "MyPanel7",
-                    "configAlternates": {
-                        "scrollable": "object"
-                    },
-                    "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
+                    "name": "MyPanel10",
+                    "designerId": "9dc8387d-db98-4b0b-8054-aefc4bdc7c9a",
                     "cn": [
                         {
-                            "type": "Ext.Panel",
+                            "type": "Ext.Label",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout": "vbox"
+                                "cls": [
+                                    "service-title"
+                                ],
+                                "html": "خدمات المستهلك",
+                                "id": null,
+                                "itemId": "lblConsumer"
                             },
-                            "name": "MyPanel9",
-                            "designerId": "ed673919-8367-4368-9767-e54df485072d",
-                            "cn": [
-                                {
-                                    "type": "Ext.Label",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-title"
-                                        ],
-                                        "html": "خدمات المستثمر",
-                                        "id": null,
-                                        "itemId": "lblInvestor"
-                                    },
-                                    "name": "MyLabel",
-                                    "designerId": "3ef3c3cd-2e2f-4604-b0b0-df9c3103423b"
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel11",
-                                    "designerId": "a7cc08b5-ed6b-4158-8071-ca7cd362498e",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "myServiceBtn",
-                                                "layout|flex": 1,
-                                                "text": "بياناتي الخاصة"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "87962595-8bc9-43e6-b87c-8ec0f0fd235a"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "adminServiceBtn",
-                                                "layout|flex": 1,
-                                                "text": "الخدمات الإدارية"
-                                            },
-                                            "name": "MyButton",
-                                            "designerId": "0d55397b-1343-45ca-b1b0-ae28545cafca"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel12",
-                                    "designerId": "62f33f1e-5828-44da-a672-0408ff2cf10c",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "myRequestsBtn",
-                                                "layout|flex": 1,
-                                                "text": "متابعة المعاملات"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "655fd2cc-4649-4727-994f-b5d1c116322d"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "printOfficeBtn",
-                                                "layout|flex": 1,
-                                                "text": "خدمات المستخرجات"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "767ac0a1-a6e3-4ecd-8f9e-d228db3b6cca"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "name": "MyLabel1",
+                            "designerId": "9401d165-b5e6-4e21-8fcb-c8a6630fcb0b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "CompanyList"
+                        ],
+                        "height": 100,
+                        "itemCls": "item-link",
+                        "itemId": "lstLinks2"
+                    },
+                    "name": "MyList4",
+                    "designerId": "109393b3-074a-4042-a1d9-d9126560608d",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "6cd22926-e961-4d34-a1e4-cdadcdee3793"
                         },
                         {
-                            "type": "Ext.Panel",
+                            "type": "basiceventbinding",
                             "reference": {
-                                "name": "items",
+                                "name": "listeners",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout": "vbox"
+                                "fn": "onLstLinks1ItemTap1",
+                                "implHandler": [
+                                    "            Ext.Global.RedirectToView(record.data);",
+                                    ""
+                                ],
+                                "name": "itemtap"
                             },
-                            "name": "MyPanel10",
-                            "designerId": "9dc8387d-db98-4b0b-8054-aefc4bdc7c9a",
-                            "cn": [
-                                {
-                                    "type": "Ext.Label",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-title"
-                                        ],
-                                        "html": "خدمات المستهلك",
-                                        "id": null,
-                                        "itemId": "lblConsumer"
-                                    },
-                                    "name": "MyLabel1",
-                                    "designerId": "9401d165-b5e6-4e21-8fcb-c8a6630fcb0b"
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel13",
-                                    "designerId": "51764f53-fce8-402b-99d5-48a63823db9f",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-complain",
-                                                "itemId": "complainsBtn",
-                                                "layout|flex": 1,
-                                                "text": "ابلاغ عن شكوي"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "c4b8cd1e-dac5-4bc9-a755-d61e7f45c4bb"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-supply",
-                                                "itemId": "supplyServicesBtn",
-                                                "layout|flex": 1,
-                                                "text": "خدمات التموين"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "3997a5a9-bf2c-4a09-95f8-1bdfc3f47f3c"
-                                        }
-                                    ]
-                                }
-                            ]
+                            "name": "onLstLinks1ItemTap1",
+                            "designerId": "c9b55f6b-b82e-4560-b9ba-79d20d2474ed"
                         }
                     ]
                 }
             ]
-        },
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "initialize",
-                "implHandler": [
-                    "this.callParent();",
-                    "",
-                    "",
-                    "",
-                    "this.down('#myServiceBtn').setHtml(Ext.Global.GetViewTitle('MyBusiness'));",
-                    "this.down('#printOfficeBtn').setHtml(Ext.Global.GetViewTitle('PrintOffs'));",
-                    "this.down('#myRequestsBtn').setHtml(Ext.Global.GetViewTitle('RequestFollowup'));",
-                    "this.down('#complainsBtn').setHtml(Ext.Global.GetViewTitle('Complaints'));",
-                    "this.down('#supplyServicesBtn').setHtml(Ext.Global.GetViewTitle('SupplyService'));",
-                    "",
-                    "",
-                    "this.down('#lblInvestor').setHtml(Ext.Global.GetViewTitle('InvestorServices'));",
-                    "this.down('#lblConsumer').setHtml(Ext.Global.GetViewTitle('ConsumerServices'));",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('PublicServices'));",
-                    "",
-                    ""
-                ]
-            },
-            "name": "initialize",
-            "designerId": "bf2c8300-839d-4ec6-b6a6-f7124ce45be1"
         }
     ]
 }

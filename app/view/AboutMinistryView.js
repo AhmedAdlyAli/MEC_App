@@ -15,8 +15,70 @@
 
 Ext.define('MEC_App.view.AboutMinistryView', {
     extend: 'Ext.Panel',
+    alias: 'widget.AboutMinistryView',
+
+    requires: [
+        'Ext.Panel',
+        'Ext.Label'
+    ],
 
     config: {
+        fullscreen: true,
+        itemId: 'AboutMinistryView',
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'service-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'عن الوزارة',
+                                        itemId: 'viewLbl'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionLock: true
+                        },
+                        items: [
+                            {
+                                xtype: 'label',
+                                html: 'Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text '
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 
 });

@@ -128,169 +128,53 @@
                     "designerId": "1d0e7381-0354-477a-84b2-938b0c47dc81",
                     "cn": [
                         {
-                            "type": "Ext.Panel",
+                            "type": "Ext.dataview.List",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout": "vbox"
+                                "height": 300,
+                                "itemCls": "item-link",
+                                "itemId": "lstViewLinks"
                             },
-                            "name": "MyPanel9",
-                            "designerId": "7041a697-44ef-471a-b05f-cb9d6eac8eb5",
+                            "name": "MyList5",
+                            "designerId": "a274ccc6-1348-4049-932f-118a35ee4576",
                             "cn": [
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "Ext.XTemplate",
                                     "reference": {
-                                        "name": "items",
-                                        "type": "array"
+                                        "name": "itemTpl",
+                                        "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                        ]
                                     },
-                                    "name": "MyPanel11",
-                                    "designerId": "2271ac26-5ba1-450c-81b2-f839505f114e",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "contactBtn1",
-                                                "layout|flex": 1,
-                                                "text": "عن الوزارة"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "5e1dc546-6f7b-4d7c-990c-965bf2b97f3b"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "contactBtn2",
-                                                "layout|flex": 1,
-                                                "text": "الفروع"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "d1556927-d5f7-44c3-96d4-cea7da9f750c"
-                                        }
-                                    ]
+                                    "name": "itemTpl",
+                                    "designerId": "4f1854b3-b0e7-4e81-babf-01a20ebb94d1"
                                 },
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "basiceventbinding",
                                     "reference": {
-                                        "name": "items",
+                                        "name": "listeners",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
+                                        "fn": "onLstViewLinksItemTap",
+                                        "implHandler": [
+                                            "            Ext.Global.RedirectToView(record.data);",
+                                            ""
                                         ],
-                                        "layout": "hbox"
+                                        "name": "itemtap"
                                     },
-                                    "name": "MyPanel12",
-                                    "designerId": "3cd93c94-e830-42ea-b0ff-be1c2bad7933",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "contactBtn3",
-                                                "layout|flex": 1,
-                                                "text": "مقترحات"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "e02eda45-2039-4b77-a137-014fa40ee6d5"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-supply",
-                                                "itemId": "contactBtn4",
-                                                "layout|flex": 1,
-                                                "text": "تواصل معنا"
-                                            },
-                                            "name": "MyButton18",
-                                            "designerId": "60ee24a9-6102-4a19-996b-dbb55001f90b"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel13",
-                                    "designerId": "b3283929-ec42-4744-b297-c864b31e5ee7",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-complain",
-                                                "itemId": "contactBtn5",
-                                                "layout|flex": 1,
-                                                "text": "موظفو الوزارة"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "3eba76b4-e4fe-4b18-8c63-c1c361d05a6b"
-                                        },
-                                        {
-                                            "type": "Ext.Spacer",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "layout|flex": 1
-                                            },
-                                            "name": "MySpacer1",
-                                            "designerId": "4142f5d7-9214-439c-b7e4-cede35f42ba8"
-                                        }
-                                    ]
+                                    "name": "onLstViewLinksItemTap",
+                                    "designerId": "fbf8a135-33ef-403c-ae51-274166715172"
                                 }
                             ]
                         }
@@ -310,19 +194,20 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
+                    "var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'HListIcon.png'},",
+                    "                    {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},",
+                    "             {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'qqqqHListIcon.png'},",
+                    "                    {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},",
+                    "                    {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}",
+                    "                    ];",
                     "",
-                    "this.down('#contactBtn1').setHtml(Ext.Global.GetViewTitle('AboutMinistry'));",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
                     "",
-                    "this.down('#contactBtn2').setHtml(Ext.Global.GetViewTitle('Branches'));",
-                    "",
-                    "this.down('#contactBtn3').setHtml(Ext.Global.GetViewTitle('Suggestions'));",
-                    "",
-                    "this.down('#contactBtn4').setHtml(Ext.Global.GetViewTitle('ContactUs2'));",
-                    "",
-                    "this.down('#contactBtn5').setHtml(Ext.Global.GetViewTitle('Employees'));",
-                    "",
-                    "",
-                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('ContactUs'));",
+                    "var lst = this.down('#lstViewLinks');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
                     "",
                     ""
                 ]

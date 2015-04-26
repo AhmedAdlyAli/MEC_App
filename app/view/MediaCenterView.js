@@ -20,137 +20,92 @@ Ext.define('MEC_App.view.MediaCenterView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button'
+        'Ext.dataview.List',
+        'Ext.XTemplate'
     ],
 
     config: {
         fullscreen: true,
         itemId: 'publicserviceview1',
-        layout: 'fit',
+        layout: 'vbox',
         items: [
             {
                 xtype: 'panel',
+                flex: 1,
+                cls: 'services-header',
+                height: '30%',
                 layout: 'vbox',
                 items: [
                     {
                         xtype: 'panel',
-                        flex: 1,
-                        cls: 'services-header',
-                        height: '30%',
+                        cls: 'services-header-overlay',
+                        height: '100%',
                         layout: 'vbox',
                         items: [
                             {
                                 xtype: 'panel',
-                                cls: 'services-header-overlay',
-                                height: '100%',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        flex: 2,
-                                        cls: 'service-header-icon'
-                                    },
-                                    {
-                                        xtype: 'label',
-                                        flex: 1,
-                                        cls: 'service-header-title',
-                                        html: 'المركز الاعلامي',
-                                        itemId: 'viewLbl'
-                                    }
-                                ]
+                                flex: 2,
+                                cls: 'service-header-icon'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'service-header-title',
+                                html: 'المركز الاعلامي',
+                                itemId: 'viewLbl'
                             }
                         ]
-                    },
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                flex: 2.2,
+                cls: 'inner-panel',
+                height: 'auto',
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
+                items: [
                     {
                         xtype: 'panel',
-                        flex: 2.2,
-                        cls: 'inner-panel',
-                        height: 'auto',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionLock: true
-                        },
+                        layout: 'vbox',
                         items: [
                             {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnMinistryNews',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'اخبار الوزارة'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnReflections',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'انعكاسات'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnNews1',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'اخبار جهات رسمية اقليمية مشابهة'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnNews2',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'اخبار اقتصادية اقليمية'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnNews3',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'اخبار جهات رسمية دولية مشابهة'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'btnNews4',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'اخبار اقتصادية دولية'
-                                            }
-                                        ]
-                                    }
+                                xtype: 'list',
+                                cls: 'CompanyList',
+                                height: 300,
+                                itemId: 'lstViewLinks',
+                                itemCls: 'item-link',
+                                itemTpl: [
+                                    '<div>  {Name}</div>'
                                 ]
                             }
                         ]
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onLstLinksItemTap',
+                event: 'itemtap',
+                delegate: '#lstViewLinks'
+            }
         ]
+    },
+
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
+        var viewData = [{Title:record.data.Name, CatID:record.data.CatID}]; // CMS cat id
+
+
+        dataview.up('MainNavView').push({
+                    xtype: 'MinistryNewsView',
+                    title: Ext.Global.GetFixedTitle(),
+                    data: viewData
+                });
+
     },
 
     initialize: function() {
@@ -165,6 +120,21 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
 
 
+               var links = [{Name:'أخبار الوزارة', CatID:1,Icon:''},
+                            {Name:'إنعكاسات', CatID:8,Icon:''},
+                            {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:''},
+                            {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:''},
+                            {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:''},
+                            {Name:'أخبار اقتصادية دولية', CatID:9,Icon:''}
+                            ];
+
+        var store = new Ext.data.Store({
+            data : links
+        });
+
+        var lst = this.down('#lstViewLinks');
+        lst.setStore(store);
+        lst.setScrollable(false);
 
     }
 

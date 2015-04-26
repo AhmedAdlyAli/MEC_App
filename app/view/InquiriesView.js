@@ -20,7 +20,8 @@ Ext.define('MEC_App.view.InquiriesView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button'
+        'Ext.dataview.List',
+        'Ext.XTemplate'
     ],
 
     config: {
@@ -71,101 +72,53 @@ Ext.define('MEC_App.view.InquiriesView', {
                         },
                         items: [
                             {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn1',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'البحث عن اسم تجاري'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn2',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'البحث عن نشاط تجاري'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn3',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'الاستدعاءات'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn4',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'ثقافة المستهلك'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn5',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-complain',
-                                                text: 'ثقافة المستثمر'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'inquiriesBtn6',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-supply',
-                                                text: 'المخالفات والاغلاقات'
-                                            }
-                                        ]
-                                    }
+                                xtype: 'list',
+                                cls: 'CompanyList',
+                                height: 400,
+                                itemId: 'lstViewLinks',
+                                itemCls: 'item-link',
+                                itemTpl: [
+                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onLstLinksItemTap',
+                event: 'itemtap',
+                delegate: '#lstViewLinks'
+            }
         ]
+    },
+
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
+                    Ext.Global.RedirectToView(record.data);
+
     },
 
     initialize: function() {
         this.callParent();
 
 
+        var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'HListIcon.png'},
+                            {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'HListIcon.png'},
+                            {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'HListIcon.png'},
+                            {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'HListIcon.png'},
+                            {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'HListIcon.png'},
+                            {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'HListIcon.png'}
+                            ];
 
-        this.down('#inquiriesBtn1').setHtml(Ext.Global.GetViewTitle('SearchTradeName'));
-        this.down('#inquiriesBtn2').setHtml(Ext.Global.GetViewTitle('SearchAct'));
-        this.down('#inquiriesBtn3').setHtml(Ext.Global.GetViewTitle('Recalls'));
-        this.down('#inquiriesBtn4').setHtml(Ext.Global.GetViewTitle('ConsulerEdu'));
-        this.down('#inquiriesBtn5').setHtml(Ext.Global.GetViewTitle('InvestorEdu'));
-        this.down('#inquiriesBtn6').setHtml(Ext.Global.GetViewTitle('Violations'));
+        var store = new Ext.data.Store({
+            data : links
+        });
 
-
-        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Inquiries'));
+        var lst = this.down('#lstViewLinks');
+        lst.setStore(store);
+        lst.setScrollable(false);
 
 
 

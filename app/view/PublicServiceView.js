@@ -20,175 +20,164 @@ Ext.define('MEC_App.view.PublicServiceView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button'
+        'Ext.dataview.List',
+        'Ext.XTemplate'
     ],
 
     config: {
         fullscreen: true,
-        layout: 'fit',
+        layout: 'vbox',
         items: [
             {
                 xtype: 'panel',
+                flex: 1,
+                cls: 'services-header',
+                height: '30%',
                 layout: 'vbox',
                 items: [
                     {
                         xtype: 'panel',
-                        flex: 1,
-                        cls: 'services-header',
-                        height: '30%',
+                        cls: 'services-header-overlay',
+                        height: '100%',
                         layout: 'vbox',
                         items: [
                             {
                                 xtype: 'panel',
-                                cls: 'services-header-overlay',
-                                height: '100%',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        flex: 2,
-                                        cls: 'service-header-icon'
-                                    },
-                                    {
-                                        xtype: 'label',
-                                        flex: 1,
-                                        cls: 'service-header-title',
-                                        html: 'الخدمات العامة',
-                                        itemId: 'viewLbl'
-                                    }
+                                flex: 2,
+                                cls: 'service-header-icon'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'service-header-title',
+                                html: 'الخدمات العامة',
+                                itemId: 'viewLbl'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                flex: 2.2,
+                cls: 'inner-panel',
+                height: 'auto',
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
+                items: [
+                    {
+                        xtype: 'panel',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'label',
+                                cls: 'service-title',
+                                html: 'خدمات المستثمر',
+                                itemId: 'lblInvestor'
+                            },
+                            {
+                                xtype: 'list',
+                                cls: 'CompanyList',
+                                height: 295,
+                                itemId: 'lstLinks1',
+                                itemCls: 'item-link',
+                                itemTpl: [
+                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
                     },
                     {
                         xtype: 'panel',
-                        flex: 2.2,
-                        cls: 'inner-panel',
-                        height: 'auto',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionLock: true
-                        },
+                        layout: 'vbox',
                         items: [
                             {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'label',
-                                        cls: 'service-title',
-                                        html: 'خدمات المستثمر',
-                                        itemId: 'lblInvestor'
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'myServiceBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'بياناتي الخاصة'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'adminServiceBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'الخدمات الإدارية'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'myRequestsBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'متابعة المعاملات'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'printOfficeBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'خدمات المستخرجات'
-                                            }
-                                        ]
-                                    }
-                                ]
-                            },
-                            {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'label',
-                                        cls: 'service-title',
-                                        html: 'خدمات المستهلك',
-                                        itemId: 'lblConsumer'
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'complainsBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-complain',
-                                                text: 'ابلاغ عن شكوي'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'supplyServicesBtn',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-supply',
-                                                text: 'خدمات التموين'
-                                            }
-                                        ]
-                                    }
-                                ]
+                                xtype: 'label',
+                                cls: 'service-title',
+                                html: 'خدمات المستهلك',
+                                itemId: 'lblConsumer'
                             }
+                        ]
+                    },
+                    {
+                        xtype: 'list',
+                        cls: 'CompanyList',
+                        height: 100,
+                        itemId: 'lstLinks2',
+                        itemCls: 'item-link',
+                        itemTpl: [
+                            '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
                         ]
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onLstLinks1ItemTap',
+                event: 'itemtap',
+                delegate: '#lstLinks1'
+            },
+            {
+                fn: 'onLstLinks1ItemTap1',
+                event: 'itemtap',
+                delegate: '#lstLinks2'
+            }
         ]
+    },
+
+    onLstLinks1ItemTap: function(dataview, index, target, record, e, eOpts) {
+                    Ext.Global.RedirectToView(record.data);
+
+    },
+
+    onLstLinks1ItemTap1: function(dataview, index, target, record, e, eOpts) {
+                    Ext.Global.RedirectToView(record.data);
+
     },
 
     initialize: function() {
         this.callParent();
 
+        var links = [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'HListIcon.png'},
+                            {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'HListIcon.png'},
+                            {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'HListIcon.png'},
+                            {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'HListIcon.png'},
+                            {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'HListIcon.png'},
+                            {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'HListIcon.png'}
+                            ];
+
+        var store = new Ext.data.Store({
+            data : links
+        });
+
+        var lst = this.down('#lstLinks1');
+        lst.setStore(store);
+        lst.setScrollable(false);
 
 
-        this.down('#myServiceBtn').setHtml(Ext.Global.GetViewTitle('MyBusiness'));
-        this.down('#printOfficeBtn').setHtml(Ext.Global.GetViewTitle('PrintOffs'));
-        this.down('#myRequestsBtn').setHtml(Ext.Global.GetViewTitle('RequestFollowup'));
-        this.down('#complainsBtn').setHtml(Ext.Global.GetViewTitle('Complaints'));
-        this.down('#supplyServicesBtn').setHtml(Ext.Global.GetViewTitle('SupplyService'));
+
+         links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'HListIcon.png'},
+                            {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'HListIcon.png'}
+                            ];
+
+         store = new Ext.data.Store({
+            data : links
+        });
+
+         lst = this.down('#lstLinks2');
+        lst.setStore(store);
+        lst.setScrollable(false);
 
 
-        this.down('#lblInvestor').setHtml(Ext.Global.GetViewTitle('InvestorServices'));
-        this.down('#lblConsumer').setHtml(Ext.Global.GetViewTitle('ConsumerServices'));
 
 
 
 
-        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('PublicServices'));
+
+
 
 
     }

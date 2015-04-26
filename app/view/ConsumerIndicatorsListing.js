@@ -40,6 +40,7 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
                 cls: 'CompanyList',
                 height: '100%',
                 itemId: 'lstItems',
+                itemCls: 'item-request',
                 itemTpl: [
                     '<div class=\'CompanyListItem\'>{Name}</div>'
                 ]
@@ -57,15 +58,15 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
     onLstItemsItemTap: function(dataview, index, target, record, e, eOpts) {
 
         if (record.data.Url.indexOf('http')>-1){
-               window.open(record.data.Url,'_blank');
+            window.open(record.data.Url,'_blank');
         }else{
 
 
-                Ext.Viewport.getActiveItem().push({
-                    xtype: record.data.Url,
-                    title: Ext.Global.GetFixedTitle()
-                });
-            }
+            Ext.Viewport.getActiveItem().push({
+                xtype: record.data.Url,
+                title: Ext.Global.GetFixedTitle()
+            });
+        }
     },
 
     initialize: function() {

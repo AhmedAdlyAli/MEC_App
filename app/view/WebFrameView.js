@@ -23,9 +23,12 @@ Ext.define('MEC_App.view.WebFrameView', {
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'WebFrameView',
         layout: 'vbox',
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',

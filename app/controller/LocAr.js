@@ -26,7 +26,7 @@ Ext.define('MEC_App.controller.LocAr', {
             PublicServices:"الخدمات العامة",
             MediaCenter: " المركز الاعلامي",
             Inquiries: "الاستعلامات والاصدارات ",
-            ContactUs: "اتصل بنا",
+            ContactUs: "التواصل",
             Projects : "المبادرات والمشاريع",
             Reports: "المؤشرات والتقارير",
             Settings: "الاعدادات",

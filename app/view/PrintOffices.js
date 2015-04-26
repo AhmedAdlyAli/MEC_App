@@ -39,8 +39,7 @@ Ext.define('MEC_App.view.PrintOffices', {
                     '<div><label>Item Name: </label><span>{ItemName}</span></div>',
                     '<div><label>Item View: </label><span>{ItemView}</span></div>',
                     '</div>'
-                ],
-                store: 'PrintOffices'
+                ]
             }
         ],
         navigationBar: {

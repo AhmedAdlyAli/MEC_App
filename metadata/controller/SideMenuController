@@ -193,13 +193,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnProjectsTap",
                 "implHandler": [
-                    "  Ext.Viewport.toggleMenu('right');",
+                    "Ext.Viewport.toggleMenu('right');",
                     "",
                     "",
-                    "                        Ext.Viewport.getActiveItem().push({",
-                    "                            xtype: 'ProjectsView',",
-                    "                            title: Ext.Global.GetFixedTitle()",
-                    "                        });"
+                    "Ext.Viewport.getActiveItem().push({",
+                    "    xtype: 'ProjectsView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});"
                 ],
                 "name": "tap"
             },

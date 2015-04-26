@@ -128,173 +128,57 @@
                     "designerId": "1f60c941-f631-4bf4-a6ad-c855d5fb6711",
                     "cn": [
                         {
-                            "type": "Ext.Panel",
+                            "type": "Ext.dataview.List",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout": "vbox"
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": 400,
+                                "id": null,
+                                "itemCls": "item-link",
+                                "itemId": "lstViewLinks"
                             },
-                            "name": "MyPanel9",
-                            "designerId": "31b385a1-211a-43f0-8f76-3617210cee0c",
+                            "name": "MyList6",
+                            "designerId": "70eac02d-6b80-4ff1-bdd2-5da105092260",
                             "cn": [
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "Ext.XTemplate",
                                     "reference": {
-                                        "name": "items",
-                                        "type": "array"
+                                        "name": "itemTpl",
+                                        "type": "object"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                        ]
                                     },
-                                    "name": "MyPanel11",
-                                    "designerId": "198df3c6-0e41-4150-9560-faf8bdcb2cf8",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-business",
-                                                "itemId": "inquiriesBtn1",
-                                                "layout|flex": 1,
-                                                "text": "البحث عن اسم تجاري"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "da99fab8-07f7-4b77-baa3-68e426c9d035"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "inquiriesBtn2",
-                                                "layout|flex": 1,
-                                                "text": "البحث عن نشاط تجاري"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "bb27a4ed-f8c1-4da6-ad99-62337e194d32"
-                                        }
-                                    ]
+                                    "name": "itemTpl",
+                                    "designerId": "ddf093f8-8181-475d-88cd-a8a2631484f6"
                                 },
                                 {
-                                    "type": "Ext.Panel",
+                                    "type": "basiceventbinding",
                                     "reference": {
-                                        "name": "items",
+                                        "name": "listeners",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
+                                        "fn": "onLstLinksItemTap",
+                                        "implHandler": [
+                                            "            Ext.Global.RedirectToView(record.data);",
+                                            ""
                                         ],
-                                        "layout": "hbox"
+                                        "name": "itemtap"
                                     },
-                                    "name": "MyPanel12",
-                                    "designerId": "fa63aaa0-d5a3-45b9-974b-0172e0d3fdf8",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "inquiriesBtn3",
-                                                "layout|flex": 1,
-                                                "text": "الاستدعاءات"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "fbee1fed-b0e0-4696-88c6-2b8d35f54c3d"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-my-request",
-                                                "itemId": "inquiriesBtn4",
-                                                "layout|flex": 1,
-                                                "text": "ثقافة المستهلك"
-                                            },
-                                            "name": "MyButton18",
-                                            "designerId": "f90d60a7-86a8-4c90-a999-ce0435dbe922"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel13",
-                                    "designerId": "41bdaf6a-4982-4db6-9ca5-ffb262cfcb9f",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-complain",
-                                                "itemId": "inquiriesBtn5",
-                                                "layout|flex": 1,
-                                                "text": "ثقافة المستثمر"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "c5ef7d3f-f948-4d14-b1b3-6c254efac11f"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-supply",
-                                                "itemId": "inquiriesBtn6",
-                                                "layout|flex": 1,
-                                                "text": "المخالفات والاغلاقات"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "e91b991c-a3ec-4355-adaf-6b2b5c8958a2"
-                                        }
-                                    ]
+                                    "name": "onLstLinksItemTap",
+                                    "designerId": "52b0d478-4061-4f6a-89a5-5fa2f5aa25cf"
                                 }
                             ]
                         }
@@ -315,16 +199,21 @@
                     "this.callParent();",
                     "",
                     "",
+                    "var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'HListIcon.png'},",
+                    "                    {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'HListIcon.png'},",
+                    "                    {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'HListIcon.png'},",
+                    "                    {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'HListIcon.png'},",
+                    "                    {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'HListIcon.png'},",
+                    "                    {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'HListIcon.png'}",
+                    "                    ];",
                     "",
-                    "this.down('#inquiriesBtn1').setHtml(Ext.Global.GetViewTitle('SearchTradeName'));",
-                    "this.down('#inquiriesBtn2').setHtml(Ext.Global.GetViewTitle('SearchAct'));",
-                    "this.down('#inquiriesBtn3').setHtml(Ext.Global.GetViewTitle('Recalls'));",
-                    "this.down('#inquiriesBtn4').setHtml(Ext.Global.GetViewTitle('ConsulerEdu'));",
-                    "this.down('#inquiriesBtn5').setHtml(Ext.Global.GetViewTitle('InvestorEdu'));",
-                    "this.down('#inquiriesBtn6').setHtml(Ext.Global.GetViewTitle('Violations'));",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
                     "",
-                    "",
-                    "this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Inquiries'));",
+                    "var lst = this.down('#lstViewLinks');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
                     "",
                     "",
                     "",

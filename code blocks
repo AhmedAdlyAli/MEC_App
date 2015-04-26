@@ -75,6 +75,86 @@ if (!errs.isValid()) {
 
 
 
+grdMainCRs
+grdSubCRs
+grdMainCRs2
+grdSubCRs2
+
+
+
+
+
+<div class="tpl-indicator-1"><span>{Title}</span><br/><span>{Value}</span></div>
+    <div class="{[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}</div>
+
+
+if(changePercent>0){
+    return 'arrow-up';
+}else{
+    return 'arrow-down';
+
+}
+
+
+
+
+        dataview.up('MainNavView').push({
+            xtype: 'MyBranchDetails',
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data
+
+        });
+
+
+
+    Ext.Viewport.getActiveItem().push({
+    xtype: 'MediaCenterView',
+    title: Ext.Global.GetFixedTitle()
+
+    });
+
+
+
+
+this.GetNews(component,1);
+
+
+
+
+Ext.AnimationHelper.ShowLoading();
+
+
+Ext.Ajax.request({
+
+    url : Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture=ar&pageIndex=0&pageSize=20&typeId='+typeID,
+    method : 'Get',
+    success : function (response) {
+
+        var json = Ext.util.JSON.decode(response.responseText);
+
+
+        var store = new Ext.data.Store({
+            data : json
+        });
+
+        var lstPrices = view.down('#lstPrices');
+        lstPrices.setStore(store);
+
+        Ext.AnimationHelper.HideLoading();
+    }
+});
+
+
+
+
+
+
+       var links = [{Name:'',Url:'',Icon:''},
+                    {Name:'',Url:'',Icon:''},
+                    {Name:'',Url:'',Icon:''}
+                    ];
+
+
 
 
 

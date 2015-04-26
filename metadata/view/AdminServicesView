@@ -47,7 +47,7 @@
                 ],
                 "height": "100%",
                 "id": null,
-                "itemId": "lstLinks",
+                "itemId": "lstViewLinks",
                 "store": null
             },
             "name": "MyList1",
@@ -68,8 +68,66 @@
                     },
                     "name": "itemTpl",
                     "designerId": "1c4dfa3d-4432-4837-93fa-950b273fc93e"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinksItemTap",
+                        "implHandler": [
+                            "",
+                            "            Ext.Global.RedirectToView(record.data);",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinksItemTap",
+                    "designerId": "11844051-372f-4600-9726-3f74d74bdc33"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "var links = [{Name:'تجديد السجل التجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},",
+                    "             {Name:'تجديد الرخصة التجارية',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},",
+                    "             {Name:'تغيير الإسم التجارى',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},",
+                    "             {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},",
+                    "             {Name:'محو فرع',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},",
+                    "             {Name:'محو سجل رئيسي',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}",
+                    "",
+                    "            ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "                    data : links",
+                    "                });",
+                    "",
+                    "        var lst = this.down('#lstViewLinks');",
+                    "        lst.setStore(store);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "this.callParent();"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "c06ef844-dc77-4f0d-a238-f757720656d2"
         }
     ]
 }

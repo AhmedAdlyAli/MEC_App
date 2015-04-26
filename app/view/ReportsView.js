@@ -20,7 +20,8 @@ Ext.define('MEC_App.view.ReportsView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
-        'Ext.Button'
+        'Ext.dataview.List',
+        'Ext.XTemplate'
     ],
 
     config: {
@@ -71,67 +72,57 @@ Ext.define('MEC_App.view.ReportsView', {
                         },
                         items: [
                             {
-                                xtype: 'panel',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'reportsBtn1',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-business',
-                                                text: 'مؤشرات اقتصادية'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'reportsBtn2',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-print-office',
-                                                text: 'مؤشرات الاعمال'
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        xtype: 'panel',
-                                        cls: 'services-list-panel',
-                                        layout: 'hbox',
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'reportsBtn3',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-my-request',
-                                                text: 'مؤشرات استهلاكية'
-                                            },
-                                            {
-                                                xtype: 'button',
-                                                flex: 1,
-                                                itemId: 'reportsBtn4',
-                                                iconAlign: 'top',
-                                                iconCls: 'icon-supply',
-                                                text: 'تقرير العلامات التجارية'
-                                            }
-                                        ]
-                                    }
+                                xtype: 'list',
+                                cls: 'CompanyList',
+                                height: 200,
+                                itemId: 'lstViewLinks',
+                                itemCls: 'item-link',
+                                itemTpl: [
+                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
                     }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onLstLinksItemTap',
+                event: 'itemtap',
+                delegate: '#lstViewLinks'
+            }
         ]
+    },
+
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
+                    Ext.Global.RedirectToView(record.data);
+
     },
 
     initialize: function() {
         this.callParent();
 
+
+        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', Icon:'HListIcon.png'},
+                            {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',Icon:'HListIcon.png'},
+                            {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,Icon:'HListIcon.png'},
+                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',Icon:'HListIcon.png'}
+
+                            ];
+
+        var store = new Ext.data.Store({
+            data : links
+        });
+
+        var lst = this.down('#lstViewLinks');
+        lst.setStore(store);
+        lst.setScrollable(false);
+
+
+
+
+        /*
         this.down('#reportsBtn1').setHtml(Ext.Global.GetViewTitle('EcoReports'));
         this.down('#reportsBtn2').setHtml(Ext.Global.GetViewTitle('BizReports'));
         this.down('#reportsBtn3').setHtml(Ext.Global.GetViewTitle('ConsumerReports'));
@@ -141,7 +132,7 @@ Ext.define('MEC_App.view.ReportsView', {
 
         this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Reports'));
 
-
+        */
 
     }
 

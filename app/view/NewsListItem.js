@@ -31,6 +31,7 @@ Ext.define('MEC_App.view.NewsListItem', {
                 xtype: 'image',
                 flex: 2,
                 cls: 'lstng-img',
+                itemId: 'imgNews',
                 src: 'NewsImgUrl'
             },
             {
@@ -42,14 +43,12 @@ Ext.define('MEC_App.view.NewsListItem', {
                         xtype: 'component',
                         flex: 2,
                         cls: 'lstng-title',
-                        html: 'NewsTitle',
                         itemId: 'textCmp'
                     },
                     {
                         xtype: 'label',
                         flex: 1,
-                        cls: 'lstng-brief',
-                        html: 'NewsBrief'
+                        cls: 'lstng-brief'
                     }
                 ]
             }
@@ -58,14 +57,16 @@ Ext.define('MEC_App.view.NewsListItem', {
 
     updateRecord: function(record) {
         // Provide an implementation to update this container's child items
-
         var me = this;
 
-        me.down('image').setSrc(record.get('NewsImgUrl'));
+
+        me.down('#imgNews').setSrc('http://196.205.5.28:333/MEC/api/EconomyNews/Image/13');//record.get('NewsImgUrl'));
         me.down('#textCmp').setHtml(record.get('NewsTitle'));
         me.down('label').setHtml(record.get('NewsBrief'));
 
+
         me.callParent(arguments);
+
     }
 
 });

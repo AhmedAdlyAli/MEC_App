@@ -139,3 +139,8 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-04-26 05:28:53.461 MEC_App[10080:201182] Resetting plugins due to page load.
 2015-04-26 05:28:53.673 MEC_App[10080:201182] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8ACD2D9B-D53B-460D-9E80-2C08EF043C32/MEC_App.app/www/index.html
 2015-04-26 05:29:01.283 MEC_App[10080:201182] THREAD WARNING: ['ListPicker'] took '14.141113' ms. Plugin should use a background thread.
+2015-04-26 14:07:52.956 MEC_App[11816:274752] Apache Cordova native platform version 3.8.0 is starting.
+2015-04-26 14:07:52.961 MEC_App[11816:274752] Multi-tasking -> Device: YES, App: YES
+2015-04-26 14:07:52.978 MEC_App[11816:274752] Unlimited access to network resources
+2015-04-26 14:07:53.583 MEC_App[11816:274752] Resetting plugins due to page load.
+2015-04-26 14:07:53.977 MEC_App[11816:274752] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/EB098ED6-F973-4B40-B1C2-B759C1BFF02D/MEC_App.app/www/index.html

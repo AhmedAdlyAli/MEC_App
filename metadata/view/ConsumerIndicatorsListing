@@ -48,6 +48,7 @@
                 ],
                 "height": "100%",
                 "id": null,
+                "itemCls": "item-request",
                 "itemId": "lstItems",
                 "store": null
             },
@@ -82,15 +83,15 @@
                         "implHandler": [
                             "",
                             "if (record.data.Url.indexOf('http')>-1){",
-                            "       window.open(record.data.Url,'_blank');",
+                            "    window.open(record.data.Url,'_blank');",
                             "}else{",
-                            "    ",
-                            "   ",
-                            "        Ext.Viewport.getActiveItem().push({",
-                            "            xtype: record.data.Url,",
-                            "            title: Ext.Global.GetFixedTitle()",
-                            "        });",
-                            "    }"
+                            "",
+                            "",
+                            "    Ext.Viewport.getActiveItem().push({",
+                            "        xtype: record.data.Url,",
+                            "        title: Ext.Global.GetFixedTitle()",
+                            "    });",
+                            "}"
                         ],
                         "name": "itemtap"
                     },

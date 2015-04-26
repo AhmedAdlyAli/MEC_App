@@ -21,7 +21,7 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "list",
-                "store": "PrintOffices",
+                "store": null,
                 "title": "PrintOffices"
             },
             "name": "MyList1",

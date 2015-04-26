@@ -6,9 +6,143 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "contact-us-view"
+        ],
         "designer|userAlias": "MinistryBranchesView",
-        "designer|userClassName": "MinistryBranchesView"
+        "designer|userClassName": "MinistryBranchesView",
+        "itemId": "MinistryBranchesView",
+        "layout": "vbox",
+        "scrollable": [
+            "{ direction: 'vertical', directionLock: true }"
+        ]
     },
-    "name": "MyPanel",
-    "designerId": "1cb6e1c6-d95c-472a-bf0c-a6eb6e1cdc33"
+    "name": "ContactUs2View1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "83326af1-7026-41be-abb0-35d5803d3cd7",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<h2 class=\"branches\">الفروع</h2>"
+            },
+            "name": "MyPanel22",
+            "designerId": "4205cf42-99bd-4692-882f-bbede85c62df"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "map-panel"
+                ]
+            },
+            "name": "MyPanel24",
+            "designerId": "84597015-aea5-4907-a46c-cb7a2bd69bc4",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": null,
+                        "height": 250,
+                        "id": "mymap1",
+                        "itemId": "mymap",
+                        "width": null
+                    },
+                    "name": "MyMap",
+                    "designerId": "d5240c1d-d7c6-4da4-9caa-4ad9617c06fc"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var mapPanel = this.down('map');",
+                    "var gMap = mapPanel.getMap();",
+                    "",
+                    "Ext.Function.defer(function(){",
+                    "",
+                    "    if (gMap === null) {",
+                    "        Ext.Function.defer(this.initMap,500,this);",
+                    "    } else {",
+                    "        // ready to start calling google map methods",
+                    "",
+                    "        // alert('not null');",
+                    "",
+                    "",
+                    "        gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));",
+                    "",
+                    "",
+                    "        var marker = new google.maps.Marker({",
+                    "            map: gMap,",
+                    "            animation: google.maps.Animation.DROP,",
+                    "            position: new google.maps.LatLng (25.321283,51.528329),",
+                    "            icon: 'resources/images/drop-pin.png'",
+                    "        });",
+                    "",
+                    "    }",
+                    "} ,300,this);",
+                    "",
+                    "mapPanel.element.on({",
+                    "    tap: this.domEvent,",
+                    "    touchstart:this.domEvent,",
+                    "    touchmove:this.domEvent,",
+                    "    touchdown:this.domEvent,",
+                    "    scroll:this.domEvent,",
+                    "    pinch:this.domEvent,",
+                    "    pinchstart:this.domEvent,",
+                    "    pinchend:this.domEvent",
+                    "});"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "4dca1ce0-1150-4fb6-8cce-86967f14fb04"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "evt",
+                    "el",
+                    "o"
+                ],
+                "fn": "domEvent",
+                "implHandler": [
+                    "evt.stopPropagation();"
+                ]
+            },
+            "name": "domEvent",
+            "designerId": "90c5cd80-0217-47e0-b37b-cf6f434c0e55"
+        }
+    ]
 }

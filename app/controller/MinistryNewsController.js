@@ -18,70 +18,58 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
     config: {
         control: {
-            "list#NewsList": {
-                itemtap: 'onNewsListItemTap',
-                initialize: 'onNewsListInitialize'
+            "list#MinistryNewsView": {
+                initialize: 'onMinistryNewsViewInitialize',
+                itemtap: 'onMinistryNewsViewItemTap'
             }
         }
     },
 
-    onNewsListItemTap: function(dataview, index, target, record, e, eOpts) {
+    onMinistryNewsViewInitialize: function(component, eOpts) {
+
+        var data = component.getData()[0];
+
+        console.log(data);
+
+        component.down('#lblTitle').setHtml(data.Title);
+
+        this.GetNews(component,data.CatID);
+
+    },
+
+    onMinistryNewsViewItemTap: function(dataview, index, target, record, e, eOpts) {
         dataview.up('MainNavView').push({
             xtype: 'NewsDetailsView',
-            title: Ext.Global.GetViewTitle('NewsDetails'),
+            title: Ext.Global.GetFixedTitle(),
             data: record.data
 
         });
     },
 
-    onNewsListInitialize: function(component, eOpts) {
+    GetNews: function(view, categoryID) {
 
-        // show loading
         Ext.AnimationHelper.ShowLoading();
 
 
-        //Ajax Call
-
-
+        var me = this;
 
         Ext.Ajax.request({
 
-            url : 'http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D',
-            method : 'GET',
-
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture=ar&pageIndex=0&pageSize=20&categoryId='+categoryID,
+            method : 'Get',
             success : function (response) {
 
-
-                //console.log(response.responseXML);
-
+                var json = Ext.util.JSON.decode(response.responseText);
 
 
-                /*var json = Ext.util.JSON.decode(response.responseText);
-                        var store = new Ext.data.Store({
-                            //model: 'MEC_App.model.TradeNameResultModel',
-                            data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
-                        });
+                var store = new Ext.data.Store({
+                    data : json
+                });
 
-                        var lst = Ext.getCmp('lstTradeNameResults');
-                        lst.setStore(store);
-        */
-
+                view.setStore(store);
                 Ext.AnimationHelper.HideLoading();
-
-
-            },
-            failure: function(request, resp) {
-                alert("in failure");
             }
         });
-
-
-
-
-
-
-
-
 
 
 

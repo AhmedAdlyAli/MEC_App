@@ -31,21 +31,8 @@ Ext.define('MEC_App.controller.WebformViewController', {
 
         var data  = view.getData();
         view.down('#lblTitle').setHtml(data.Name);
-
-
-
-
         var html = '<iframe src="'+data.Url+'" class="web-frame"></iframe>';
-
-
         view.down('#pnlFrame').setHtml(html);
-
-
-
-
-
-
-
 
 
     }

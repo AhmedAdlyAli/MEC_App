@@ -10,299 +10,12 @@
         "designer|userClassName": "MediaCenterView",
         "fullscreen": true,
         "itemId": "publicserviceview1",
-        "layout": "fit",
+        "layout": "vbox",
         "scrollable": null
     },
     "name": "PublicServiceView1",
     "designerId": "05d7c039-6661-4fb5-ba60-169fb9b867d0",
     "cn": [
-        {
-            "type": "Ext.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "height": null,
-                "layout": "vbox",
-                "scrollable": null
-            },
-            "name": "MyPanel14",
-            "designerId": "485a09b3-5c7b-42b7-b797-99aae8b62285",
-            "cn": [
-                {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "services-header"
-                        ],
-                        "docked": null,
-                        "height": "30%",
-                        "layout": "vbox",
-                        "layout|flex": 1
-                    },
-                    "name": "MyPanel6",
-                    "designerId": "ab0d073a-cb9c-4a42-889f-750dafe303c9",
-                    "cn": [
-                        {
-                            "type": "Ext.Panel",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "services-header-overlay"
-                                ],
-                                "height": "100%",
-                                "layout": "vbox"
-                            },
-                            "name": "MyPanel8",
-                            "designerId": "4b4bd9ce-3e4b-45a7-9a6d-2f41c1ae7d0f",
-                            "cn": [
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-header-icon"
-                                        ],
-                                        "layout|flex": 2
-                                    },
-                                    "name": "MyPanel16",
-                                    "designerId": "3106b9ea-184f-4238-8b44-6306a144f4fb"
-                                },
-                                {
-                                    "type": "Ext.Label",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-header-title"
-                                        ],
-                                        "html": "المركز الاعلامي",
-                                        "itemId": "viewLbl",
-                                        "layout|flex": 1
-                                    },
-                                    "name": "MyLabel2",
-                                    "designerId": "80832ff3-7dbc-40c1-9dd3-4acf05951f47"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "inner-panel"
-                        ],
-                        "height": "auto",
-                        "layout|flex": 2.2,
-                        "scrollable": [
-                            "{ direction: 'vertical', directionLock: true }"
-                        ]
-                    },
-                    "name": "MyPanel7",
-                    "configAlternates": {
-                        "scrollable": "object"
-                    },
-                    "designerId": "efeda064-d93f-4241-b489-44b90b73eb57",
-                    "cn": [
-                        {
-                            "type": "Ext.Panel",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "layout": "vbox"
-                            },
-                            "name": "MyPanel9",
-                            "designerId": "124e32f0-ad2f-413e-80db-faf58c70b568",
-                            "cn": [
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel11",
-                                    "designerId": "c663ca88-0a7f-4d83-92fd-7fade4fc1848",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnMinistryNews",
-                                                "layout|flex": 1,
-                                                "text": "اخبار الوزارة"
-                                            },
-                                            "name": "MyButton7",
-                                            "designerId": "a1fa29a4-10c0-43cc-8430-2d9100a63958"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnReflections",
-                                                "layout|flex": 1,
-                                                "text": "انعكاسات"
-                                            },
-                                            "name": "MyButton8",
-                                            "designerId": "620d7720-ee6b-476b-9860-95410bc140fa"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel12",
-                                    "designerId": "67821a25-9fdd-4519-a039-383fec1c1dda",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnNews1",
-                                                "layout|flex": 1,
-                                                "text": "اخبار جهات رسمية اقليمية مشابهة"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "d72db07f-0c55-4d35-a794-d7795013d647"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnNews2",
-                                                "layout|flex": 1,
-                                                "text": "اخبار اقتصادية اقليمية"
-                                            },
-                                            "name": "MyButton1",
-                                            "designerId": "238d0f4e-73e7-4499-bcaa-e22f5ab0b4a1"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "services-list-panel"
-                                        ],
-                                        "layout": "hbox"
-                                    },
-                                    "name": "MyPanel2",
-                                    "designerId": "23a03fd6-3d1c-4db8-baa6-9dfd36328f61",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnNews3",
-                                                "layout|flex": 1,
-                                                "text": "اخبار جهات رسمية دولية مشابهة"
-                                            },
-                                            "name": "MyButton9",
-                                            "designerId": "181e790b-9590-4f40-808c-b747bcf38e6b"
-                                        },
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "iconAlign": "top",
-                                                "iconCls": "icon-print-office",
-                                                "itemId": "btnNews4",
-                                                "layout|flex": 1,
-                                                "text": "اخبار اقتصادية دولية"
-                                            },
-                                            "name": "MyButton",
-                                            "designerId": "4486199f-c7c5-41c2-b396-b2b2ecc88661"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
         {
             "type": "fixedfunction",
             "reference": {
@@ -324,11 +37,201 @@
                     "",
                     "",
                     "",
+                    "       var links = [{Name:'أخبار الوزارة', CatID:1,Icon:''},",
+                    "                    {Name:'إنعكاسات', CatID:8,Icon:''},",
+                    "                    {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:''},",
+                    "                    {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:''},",
+                    "                    {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:''},",
+                    "                    {Name:'أخبار اقتصادية دولية', CatID:9,Icon:''}",
+                    "                    ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstViewLinks');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
                     ""
                 ]
             },
             "name": "initialize",
             "designerId": "7c2bd592-85c8-4711-b427-c3930361af31"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "services-header"
+                ],
+                "docked": null,
+                "height": "30%",
+                "layout": "vbox",
+                "layout|flex": 1
+            },
+            "name": "MyPanel6",
+            "designerId": "ab0d073a-cb9c-4a42-889f-750dafe303c9",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header-overlay"
+                        ],
+                        "height": "100%",
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "4b4bd9ce-3e4b-45a7-9a6d-2f41c1ae7d0f",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-header-icon"
+                                ],
+                                "layout|flex": 2
+                            },
+                            "name": "MyPanel16",
+                            "designerId": "3106b9ea-184f-4238-8b44-6306a144f4fb"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-header-title"
+                                ],
+                                "html": "المركز الاعلامي",
+                                "itemId": "viewLbl",
+                                "layout|flex": 1
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "80832ff3-7dbc-40c1-9dd3-4acf05951f47"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 2.2,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "efeda064-d93f-4241-b489-44b90b73eb57",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel9",
+                    "designerId": "124e32f0-ad2f-413e-80db-faf58c70b568",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": 300,
+                                "itemCls": "item-link",
+                                "itemId": "lstViewLinks"
+                            },
+                            "name": "MyList5",
+                            "designerId": "06c50677-9b8c-4e68-b9b2-f640312634f4",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div>  {Name}</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "7fc6be75-76d6-40ef-bf34-f1bc42a38c42"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLstLinksItemTap",
+                                        "implHandler": [
+                                            "var viewData = [{Title:record.data.Name, CatID:record.data.CatID}]; // CMS cat id",
+                                            "",
+                                            "",
+                                            "dataview.up('MainNavView').push({",
+                                            "            xtype: 'MinistryNewsView',",
+                                            "            title: Ext.Global.GetFixedTitle(),",
+                                            "            data: viewData",
+                                            "        });",
+                                            ""
+                                        ],
+                                        "name": "itemtap"
+                                    },
+                                    "name": "onLstLinksItemTap",
+                                    "designerId": "bd84ab8d-6ce3-41ab-aed7-4d71075950eb"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

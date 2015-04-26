@@ -19,29 +19,28 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "list#NewsList",
+                "designer|controlQuery": "list#MinistryNewsView",
                 "designer|params": [
-                    "dataview",
-                    "index",
-                    "target",
-                    "record",
-                    "e",
+                    "component",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.dataview.List",
-                "fn": "onNewsListItemTap",
+                "fn": "onMinistryNewsViewInitialize",
                 "implHandler": [
-                    "dataview.up('MainNavView').push({",
-                    "    xtype: 'NewsDetailsView',",
-                    "    title: Ext.Global.GetViewTitle('NewsDetails'),",
-                    "    data: record.data",
                     "",
-                    "});"
+                    "var data = component.getData()[0];",
+                    "",
+                    "console.log(data);",
+                    "",
+                    "component.down('#lblTitle').setHtml(data.Title);",
+                    "",
+                    "this.GetNews(component,data.CatID);",
+                    ""
                 ],
-                "name": "itemtap"
+                "name": "initialize"
             },
-            "name": "onNewsListItemTap",
-            "designerId": "5809fc16-5d36-429d-8cae-f83a05ee6d20"
+            "name": "onMinistryNewsViewInitialize",
+            "designerId": "77cf84f5-4648-4c67-8f88-a37353450e08"
         },
         {
             "type": "controlleraction",
@@ -51,69 +50,74 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "list#NewsList",
+                "designer|controlQuery": "list#MinistryNewsView",
                 "designer|params": [
-                    "component",
+                    "dataview",
+                    "index",
+                    "target",
+                    "record",
+                    "e",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.dataview.List",
-                "fn": "onNewsListInitialize",
+                "fn": "onMinistryNewsViewItemTap",
+                "implHandler": [
+                    "dataview.up('MainNavView').push({",
+                    "    xtype: 'NewsDetailsView',",
+                    "    title: Ext.Global.GetFixedTitle(),",
+                    "    data: record.data",
+                    "",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onMinistryNewsViewItemTap",
+            "designerId": "dfebbc30-2258-41fa-8339-c4b3a2b5ed44"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "categoryID"
+                ],
+                "fn": "GetNews",
                 "implHandler": [
                     "",
-                    "// show loading",
                     "Ext.AnimationHelper.ShowLoading();",
                     "",
                     "",
-                    "//Ajax Call",
-                    "",
-                    "",
+                    "var me = this;",
                     "",
                     "Ext.Ajax.request({",
                     "",
-                    "    url : 'http://www.mec.gov.qa/Arabic/_layouts/listfeed.aspx?List=%7B0056A796-9F07-432D-BA31-2F1886AF94C8%7D',",
-                    "    method : 'GET',",
-                    "",
+                    "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture=ar&pageIndex=0&pageSize=20&categoryId='+categoryID,",
+                    "    method : 'Get',",
                     "    success : function (response) {",
                     "",
-                    "",
-                    "        //console.log(response.responseXML);",
-                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
                     "",
                     "",
-                    "        /*var json = Ext.util.JSON.decode(response.responseText);",
-                    "                var store = new Ext.data.Store({",
-                    "                    //model: 'MEC_App.model.TradeNameResultModel',",
-                    "                    data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames",
-                    "                });",
+                    "        var store = new Ext.data.Store({",
+                    "            data : json",
+                    "        });",
                     "",
-                    "                var lst = Ext.getCmp('lstTradeNameResults');",
-                    "                lst.setStore(store);",
-                    "*/",
-                    "",
+                    "        view.setStore(store);",
                     "        Ext.AnimationHelper.HideLoading();",
-                    "",
-                    "",
-                    "    },",
-                    "    failure: function(request, resp) {",
-                    "        alert(\"in failure\");",
                     "    }",
                     "});",
                     "",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
                     ""
-                ],
-                "name": "initialize"
+                ]
             },
-            "name": "onNewsListInitialize",
-            "designerId": "536cec40-8e74-4f71-bdb9-667005476d98"
+            "name": "GetNews",
+            "designerId": "d0247ed1-407c-4ab9-94ea-04c70c095d71"
         }
     ]
 }

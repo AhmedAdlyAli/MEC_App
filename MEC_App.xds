@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "emulate",
-            "display": "Native Build & Emulate"
+            "value": "webBuild",
+            "display": "Build web app"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -44,6 +44,7 @@
             "4120aa2a-0201-4867-b1b7-de774744c5df",
             "4a0cd04b-c28e-477e-a81a-e02be07018db",
             "9f841d86-496b-40a3-a5a1-0a1d6404185c",
+            "a9c7aa87-9a8b-4439-949b-858af548d3ed",
             "05d7c039-6661-4fb5-ba60-169fb9b867d0",
             "ad686a47-69e6-4c20-9e12-d2fa56c317c3",
             "4872b1ad-f612-4a9b-a8cc-b610878f1115",
@@ -74,8 +75,6 @@
             "ddcefd0a-5e9d-4fc7-86d3-2d696a530b0a",
             "b608afb4-e842-4562-bff4-21e598e6663c",
             "06b96292-0ddf-4d7a-98c6-c8ccd1c18664",
-            "730405cc-a2ff-42c9-a52c-18ec8a631a10",
-            "1cb6e1c6-d95c-472a-bf0c-a6eb6e1cdc33",
             "805d1b6c-754a-4996-8bdf-b5a12cd0ef72",
             "a6ec26ac-a65d-45a9-8726-1ed83f40224a",
             "acebd8ff-4a40-460a-b25f-c73cbdf5e5da",
@@ -91,17 +90,13 @@
             "dd8ef1c4-1e0a-414a-856e-6a08e0bcfc42",
             "23e1548e-26b7-4c14-82c3-7df6940cedee",
             "020152b0-6c67-42a9-a552-1f580220e176",
+            "83326af1-7026-41be-abb0-35d5803d3cd7",
             "af50c861-2e74-49ff-b8eb-247d83453b48",
             "b3e30364-d256-4118-af99-450f38b6c6d4",
             "c03a8ba1-0d32-41f1-9f81-06b03f0869b6",
             "54c3c531-1bfa-42f3-847d-5ae4d41868af",
             "b6929076-63b2-4b68-91b3-258099f9d0ce",
             "70eb2d5a-44d2-49dd-840b-68a4f90f6ee4",
-            "d9747862-977d-46fe-88a3-3b31bbe23010",
-            "a2e8e36b-ee51-41f3-b15f-aa7b7c08bf7a",
-            "2e1f30d6-90cf-4606-986b-e91ef248725d",
-            "aa0b2cec-3b5d-4564-ba9b-df1cd7d62c99",
-            "f43d0497-9f93-4ee8-853d-3a107a1045e8",
             "c333e866-53ec-42a8-839a-5c68c751bab7",
             "04d591ce-3733-43e5-955b-4a6f53175d21",
             "c8e42bf6-d574-44a3-9a82-2ba2d3d0ea49",
@@ -113,22 +108,14 @@
             "25fd70a8-f9e7-4be3-a52b-0867484b6ed3"
         ],
         "store": [
-            "d1421f7d-5956-46cb-bdef-8f48b519450a",
-            "ccc960be-070d-418b-ae65-bf898e8553e7",
-            "d9381a1f-9898-42ea-bc8b-b3f9c17b21af"
+            "ccc960be-070d-418b-ae65-bf898e8553e7"
         ],
         "controller": [
             "3dfa35d8-8ed3-47d7-87c2-c54669d036a1",
-            "a8b70d4c-ae46-473d-9f8d-72ae4c075d80",
-            "f00ba494-4f45-422a-a4aa-6031b0d1b2bc",
             "0368eb08-6654-4c62-a283-ee255be7364b",
             "838df556-7114-4a45-9136-513f8dc61168",
             "9ce4c185-2173-4269-af48-0fe93a6e6860",
             "ff7bca81-9dfb-46d5-b7c5-b61e9104e9ca",
-            "c529c1c6-243f-4945-b6db-00f7c7f4301c",
-            "9de3d747-63d5-4416-9da5-6548865c317a",
-            "d0f0e7b6-8a4e-43a9-8102-6fdeef86a65c",
-            "9fbf3bcb-9402-495a-ad7e-608966074178",
             "d795d76e-8b9e-461e-a672-d06c3253047b",
             "acbc0b75-7878-48ef-9abf-639135e3dfb3",
             "38a44a64-39c7-44e0-9642-02d0a4777313",
@@ -155,12 +142,7 @@
             "9a83490f-2382-411d-be31-7905c6608d0c"
         ],
         "model": [
-            "1eedff92-788e-4de6-862c-b4c7207d377d",
-            "852950f9-d75d-4a1f-b9c3-4aff04abef43",
-            "9e57893b-777f-4b16-a4e7-2da0e45fc1fe",
-            "43617f67-e2c9-4d40-8451-90bbf7811085",
-            "359c1cd3-9f69-4499-8d5a-a1f1e6fd3c7f",
-            "9f883818-23ce-46cc-ae8f-1d96f8187dcd"
+            "852950f9-d75d-4a1f-b9c3-4aff04abef43"
         ],
         "resource": [
             "7b6cd445-29cd-4010-b2e7-179f79b8b25b",
