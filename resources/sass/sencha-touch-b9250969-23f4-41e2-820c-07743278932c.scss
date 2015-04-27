@@ -33,6 +33,19 @@ body {
 
 @font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium_gdi.ttf') format('truetype');font-weight: normal;font-style: normal;}
 
+@font-face{font-family:'Droid Arabic Kufi';font-style:normal;font-weight:400;
+    src:url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot);
+    src:url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot?#iefix) format("embedded-opentype"),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff2) format("x-woff2"),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff) format("woff"),
+        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.ttf) format("truetype")}
+
+html,
+body {
+    font-family: 'Droid Arabic Kufi'; 
+    font-weight: 400; 
+    font-style: normal; 
+}
 
 .x-toolbar-dark {
     background-color: #fff;
@@ -561,12 +574,13 @@ body {
     }
 
     .lstng-title {
-        font-size: 14px;
+        font-size: 13px;
+        line-height: 20px;
     }
 
     .lstng-brief {
         .x-innerhtml {
-            font-size: 13px;
+            font-size: 12px;
             color: #898989;
             white-space: nowrap;
             overflow: hidden;
@@ -1154,19 +1168,19 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 .ctr{
-        text-align:center
+    text-align:center
 }
 
 
 .ind-details-title{
-        color:#6f2f51;
-        margin:2em 1em 0 0;
+    color:#6f2f51;
+    margin:2em 1em 0 0;
     font-weight:bold;
 }
 
 .ind-details-title2{
-        color:#000;
-        margin:2em 1em 0 0;
+    color:#000;
+    margin:2em 1em 0 0;
     font-weight:bold;
 }
 
@@ -1176,8 +1190,8 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin:0 1em 0 0
 }
 .ind-details-value2{
-     color:#000;
-     margin:0 1em 0 0
+    color:#000;
+    margin:0 1em 0 0
 }
 
 
@@ -1282,7 +1296,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .grid-row{
     .x-innerhtml{
-         padding:0 !important;
+        padding:0 !important;
     }
 }
 
@@ -1310,16 +1324,16 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 
-   .x-tabbar-dark.x-docked-top   .x-tab-active{
+    .x-tabbar-dark.x-docked-top   .x-tab-active{
 
-    background: #701d45;
-    color:#fff;
-    border:solid 1px #701d45;
+        background: #701d45;
+        color:#fff;
+        border:solid 1px #701d45;
 
 
-    .x-button-label{
-        color:#fff
-    }
+        .x-button-label{
+            color:#fff
+        }
 
 
 
@@ -1355,7 +1369,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .about-text{
-    
+
     padding:1em;
 }
 
