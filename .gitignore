@@ -6,3 +6,9 @@ touch/
 resources/sass/.sass-cache
 *.css.map
 .DS_Store
+cordova/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/malomatia.xcuserdatad/xcschemes/CordovaLib.xcscheme
+cordova/platforms/ios/CordovaLib/CordovaLib.xcodeproj/xcuserdata/malomatia.xcuserdatad/xcschemes/xcschememanagement.plist
+cordova/platforms/ios/MEC_App.xcodeproj/project.xcworkspace/xcshareddata/MEC_App.xccheckout
+cordova/platforms/ios/MEC_App.xcodeproj/project.xcworkspace/xcuserdata/malomatia.xcuserdatad/UserInterfaceState.xcuserstate
+cordova/platforms/ios/MEC_App.xcodeproj/xcuserdata/malomatia.xcuserdatad/xcschemes/MEC_App.xcscheme
+cordova/platforms/ios/MEC_App.xcodeproj/xcuserdata/malomatia.xcuserdatad/xcschemes/xcschememanagement.plist
