@@ -47,7 +47,10 @@ Ext.define('MEC_App.controller.GoodPriceListController', {
                 });
 
                 var lstPrices = view.down('#lstPrices');
-                lstPrices.setStore(store);
+                lstPrices.setStore(store).setHeight(json.ProductPrices.length * 2.5 + 'em');
+
+
+
 
                 Ext.AnimationHelper.HideLoading();
             }

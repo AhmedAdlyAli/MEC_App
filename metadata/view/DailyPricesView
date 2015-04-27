@@ -44,7 +44,8 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "rtl"
+                    "rtl",
+                    "tap-panel"
                 ]
             },
             "name": "MyTabPanel",
@@ -59,13 +60,20 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "VegentsblesContainer",
+                        "layout": "vbox",
+                        "scrollable": [
+                            "{direction:'vertical',directionlock:true}"
+                        ],
                         "title": "الخضروات"
                     },
                     "name": "MyContainer",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
                     "designerId": "729a98da-66c9-42f5-908b-c008433414d5",
                     "cn": [
                         {
-                            "type": "Ext.Label",
+                            "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -73,28 +81,48 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "table-header"
+                                    "grid-header"
                                 ],
-                                "html": "اسم المنتج"
+                                "layout": "hbox"
                             },
-                            "name": "MyLabel14",
-                            "designerId": "f20dac1a-96f8-420b-93a2-a85e01d112e2"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "table-header"
-                                ],
-                                "html": "سعر الكيلو"
-                            },
-                            "name": "MyLabel32",
-                            "designerId": "e8131e42-8992-4202-beac-ec11790a7b59"
+                            "name": "MyPanel2",
+                            "designerId": "b7d28be4-81b5-4720-9bee-fdbae86526b6",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell1"
+                                        ],
+                                        "html": "اسم المنتج",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel14",
+                                    "designerId": "f20dac1a-96f8-420b-93a2-a85e01d112e2"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell2"
+                                        ],
+                                        "html": "سعر الكيلو",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel32",
+                                    "designerId": "e8131e42-8992-4202-beac-ec11790a7b59"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.dataview.List",
@@ -104,11 +132,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": [
-                                    "CompanyList"
-                                ],
                                 "height": "100%",
                                 "id": null,
+                                "itemCls": "grid-row",
                                 "itemId": "lstPrices",
                                 "store": null
                             },
@@ -125,10 +151,10 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='tabl-row'>",
-                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
-                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
-                                            "</div>"
+                                            "",
+                                            "    <div class='row-cell1'>{ProductName}</div>    ",
+                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            ""
                                         ]
                                     },
                                     "name": "itemTpl",
@@ -174,13 +200,20 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "FruitsContainer",
+                        "layout": "vbox",
+                        "scrollable": [
+                            "{direction:'vertical',directionlock:true}"
+                        ],
                         "title": "الفاكهة"
                     },
                     "name": "MyContainer1",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
                     "designerId": "9f39846c-ba0c-49d9-bfce-b9f4b8ba6faa",
                     "cn": [
                         {
-                            "type": "Ext.Label",
+                            "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -188,28 +221,48 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "table-header"
+                                    "grid-header"
                                 ],
-                                "html": "اسم المنتج"
+                                "layout": "hbox"
                             },
-                            "name": "MyLabel30",
-                            "designerId": "cede1485-3c4a-47ca-ab25-f238eb1e2605"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "table-header"
-                                ],
-                                "html": "سعر الكيلو"
-                            },
-                            "name": "MyLabel18",
-                            "designerId": "ff4e5711-6b74-4b16-b6ae-28e5523bcee5"
+                            "name": "MyPanel7",
+                            "designerId": "baf8d378-2491-4fe6-b14e-f614d54d08ad",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell1"
+                                        ],
+                                        "html": "اسم المنتج",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel14",
+                                    "designerId": "93dcae39-2d96-449d-aa31-5dab18db8735"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell2"
+                                        ],
+                                        "html": "سعر الكيلو",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel32",
+                                    "designerId": "76b7c4ac-bfd5-49eb-bba3-c605ebd6fd8e"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.dataview.List",
@@ -219,16 +272,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": [
-                                    "CompanyList"
-                                ],
                                 "height": "100%",
                                 "id": null,
+                                "itemCls": "grid-row",
                                 "itemId": "lstPrices",
                                 "store": null
                             },
                             "name": "MyList4",
-                            "designerId": "b73e41f5-648c-49cc-90b0-ab0d1bc27c7e",
+                            "designerId": "ca2d33b5-c461-41ed-89f7-89f973fd2dd1",
                             "cn": [
                                 {
                                     "type": "Ext.XTemplate",
@@ -240,14 +291,14 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='tabl-row'>",
-                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
-                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
-                                            "</div>"
+                                            "",
+                                            "    <div class='row-cell1'>{ProductName}</div>    ",
+                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            ""
                                         ]
                                     },
                                     "name": "itemTpl",
-                                    "designerId": "23b89911-14a0-4607-80cd-01c34e4a52b2",
+                                    "designerId": "240a62ba-085f-45fd-b9ab-4df936a6fd3a",
                                     "cn": [
                                         {
                                             "type": "templatefunction",
@@ -272,7 +323,7 @@
                                                 ]
                                             },
                                             "name": "CheckPercentOfChange",
-                                            "designerId": "690f0bdd-81a2-4a35-a620-1b86b4ceaa71"
+                                            "designerId": "a5fcb236-d438-4a8b-964d-db2cd9801ac1"
                                         }
                                     ]
                                 }
@@ -289,13 +340,20 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "FishContainer",
+                        "layout": "vbox",
+                        "scrollable": [
+                            "{direction:'vertical',directionlock:true}"
+                        ],
                         "title": "الأسماك"
                     },
                     "name": "MyContainer2",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
                     "designerId": "a2aeab2f-d467-47fe-83dc-b61cd05d6e2e",
                     "cn": [
                         {
-                            "type": "Ext.Label",
+                            "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -303,28 +361,48 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "table-header"
+                                    "grid-header"
                                 ],
-                                "html": "سعر الكيلو"
+                                "layout": "hbox"
                             },
-                            "name": "MyLabel33",
-                            "designerId": "13549b52-5a4b-468e-9973-29345e99fed5"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "table-header"
-                                ],
-                                "html": "اسم المنتج"
-                            },
-                            "name": "MyLabel31",
-                            "designerId": "0fb9960c-856d-41c1-acde-c83d9194e457"
+                            "name": "MyPanel8",
+                            "designerId": "76010499-41d8-4a26-a5ba-6a103fc3f85d",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell1"
+                                        ],
+                                        "html": "اسم المنتج",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel14",
+                                    "designerId": "52d440c0-76b2-4956-9149-01b205ee28aa"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "header-cell2"
+                                        ],
+                                        "html": "سعر الكيلو",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel32",
+                                    "designerId": "22480b06-3a77-48cd-966d-1139e1451f39"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.dataview.List",
@@ -334,16 +412,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": [
-                                    "CompanyList"
-                                ],
                                 "height": "100%",
                                 "id": null,
+                                "itemCls": "grid-row",
                                 "itemId": "lstPrices",
                                 "store": null
                             },
                             "name": "MyList5",
-                            "designerId": "6d92d4c1-cff3-4d98-aa4e-23dad8cedddd",
+                            "designerId": "f4dc992e-0c12-42e2-b25e-d413124918a8",
                             "cn": [
                                 {
                                     "type": "Ext.XTemplate",
@@ -355,14 +431,14 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='tabl-row'>",
-                                            "    <div class='tabl-cell'>{ProductName}</div>    ",
-                                            "    <div class='tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
-                                            "</div>"
+                                            "",
+                                            "    <div class='row-cell1'>{ProductName}</div>    ",
+                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            ""
                                         ]
                                     },
                                     "name": "itemTpl",
-                                    "designerId": "c4480714-d22f-4231-a1ac-d7ca97ecc7a0",
+                                    "designerId": "137c16ad-9ec9-4f46-8ec2-915d75a53ed8",
                                     "cn": [
                                         {
                                             "type": "templatefunction",
@@ -387,7 +463,7 @@
                                                 ]
                                             },
                                             "name": "CheckPercentOfChange",
-                                            "designerId": "c7439fdf-bfe9-421e-a736-93ae0b11a7f9"
+                                            "designerId": "9cf1ee9a-1aa1-4deb-8aa3-800dbbf42998"
                                         }
                                     ]
                                 }

@@ -6,14 +6,23 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "rtl"
+        ],
         "designer|userAlias": "EconomicIndicatorsDetailsView",
         "designer|userClassName": "EconomicIndicatorsDetailsView",
         "id": null,
         "itemId": "EconomicIndicatorsDetailsView",
         "layout": "vbox",
+        "scrollable": [
+            "{direction:'vertical',directionlock:true}"
+        ],
         "xtype": null
     },
     "name": "RecallDetailsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
     "designerId": "c03a8ba1-0d32-41f1-9f81-06b03f0869b6",
     "customConfigs": [
         {
@@ -32,9 +41,10 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "newsDetails"
+                    "ind-details-item",
+                    "ctr"
                 ],
-                "layout|flex": 1
+                "layout|flex": null
             },
             "name": "MyPanel3",
             "designerId": "1dbcc56b-e4f0-4eab-802d-ed6cedbdd4cf",
@@ -48,7 +58,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "title"
+                            "ind-details-title"
                         ],
                         "height": null,
                         "html": "Title",
@@ -57,144 +67,185 @@
                     },
                     "name": "MyLabel",
                     "designerId": "b09d324e-4473-4866-91de-3cb907e939d6"
-                },
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "ind-details-item",
+                    "ctr"
+                ]
+            },
+            "name": "MyPanel1",
+            "designerId": "323b1a81-5c5b-4971-b010-04640f45d540",
+            "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel1",
-                    "designerId": "323b1a81-5c5b-4971-b010-04640f45d540",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "Test",
-                                "id": null,
-                                "itemId": "lblValue"
-                            },
-                            "name": "MyLabel2",
-                            "designerId": "a932de9a-c71f-4186-9ad2-108ca2bf7890"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "Test",
-                                "id": null,
-                                "itemId": "lblPercentOfChange"
-                            },
-                            "name": "MyLabel1",
-                            "designerId": "ff2a1fb9-19e7-418c-bcdd-fda175c94c3b"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-title"
+                        ],
+                        "html": "Test",
+                        "id": null,
+                        "itemId": "lblValue"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "a932de9a-c71f-4186-9ad2-108ca2bf7890"
                 },
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel2",
-                    "designerId": "086d2202-436d-42d0-91b4-bd98221adcd5",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "آخر تحديث",
-                                "id": null,
-                                "itemId": "lblLastUpdate1"
-                            },
-                            "name": "MyLabel4",
-                            "designerId": "40270f88-a66b-4769-88f2-0bf46621ab2c"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "Test",
-                                "id": null,
-                                "itemId": "lblLastUpdate2"
-                            },
-                            "name": "MyLabel6",
-                            "designerId": "8330681e-2681-4ac9-a536-57dc46cf8b4d"
-                        }
-                    ]
-                },
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-value"
+                        ],
+                        "html": "Test",
+                        "id": null,
+                        "itemId": "lblPercentOfChange"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "ff2a1fb9-19e7-418c-bcdd-fda175c94c3b"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "ind-details-item"
+                ]
+            },
+            "name": "MyPanel2",
+            "designerId": "086d2202-436d-42d0-91b4-bd98221adcd5",
+            "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel4",
-                    "designerId": "2663a9c5-2c85-4193-afc3-9ca53b3cf348",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "ما هو ",
-                                "id": null,
-                                "itemId": "lblWhatIS"
-                            },
-                            "name": "MyLabel5",
-                            "designerId": "c53d7448-2111-41fd-959b-ddc1cf794166"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-title"
+                        ],
+                        "html": "آخر تحديث",
+                        "id": null,
+                        "itemId": "lblLastUpdate1"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "40270f88-a66b-4769-88f2-0bf46621ab2c"
                 },
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel5",
-                    "designerId": "21bfd382-8c38-4f35-b44c-b1cb9c50ab4e",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "عرض التقرير (PDF)",
-                                "id": null,
-                                "itemId": "lblLink"
-                            },
-                            "name": "MyLabel5",
-                            "designerId": "ac5941c0-d021-4d76-8ff6-09b23e501ea2"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-value2"
+                        ],
+                        "html": "Test",
+                        "id": null,
+                        "itemId": "lblLastUpdate2"
+                    },
+                    "name": "MyLabel6",
+                    "designerId": "8330681e-2681-4ac9-a536-57dc46cf8b4d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "ind-details-item2"
+                ],
+                "itemId": "pnlBrief"
+            },
+            "name": "MyPanel4",
+            "designerId": "2663a9c5-2c85-4193-afc3-9ca53b3cf348",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-title"
+                        ],
+                        "html": "ما هو ",
+                        "id": null,
+                        "itemId": "lblWhatIS"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "c53d7448-2111-41fd-959b-ddc1cf794166"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "ind-details-item2"
+                ],
+                "itemId": "pnlPDF"
+            },
+            "name": "MyPanel5",
+            "designerId": "21bfd382-8c38-4f35-b44c-b1cb9c50ab4e",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "ind-details-title"
+                        ],
+                        "html": "عرض التقرير (PDF)",
+                        "id": null,
+                        "itemId": "lblLink"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "ac5941c0-d021-4d76-8ff6-09b23e501ea2"
                 }
             ]
         }

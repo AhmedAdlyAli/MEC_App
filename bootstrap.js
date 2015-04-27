@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -717,6 +706,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.ContactUsView": [],
   "MEC_App.view.DailyPricesView": [],
   "MEC_App.view.DailyReportView": [],
+  "MEC_App.view.EconomicIndicatorsBrief": [],
   "MEC_App.view.EconomicIndicatorsDetailsView": [],
   "MEC_App.view.EconomicIndicatorsListing": [],
   "MEC_App.view.EconomicIndicatorsView": [],
@@ -743,6 +733,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MyBranchDetails": [],
   "MEC_App.view.MyBusinessView": [],
   "MEC_App.view.MyEstablishmentDetails": [],
+  "MEC_App.view.MyLabel6": [],
   "MEC_App.view.MyRequestDetails": [],
   "MEC_App.view.MyRequestsView": [],
   "MEC_App.view.NewsDetailsView": [],
@@ -1354,17 +1345,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1585,6 +1565,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.DailyReportView": [
     "widget.DailyReportView"
   ],
+  "MEC_App.view.EconomicIndicatorsBrief": [
+    "widget.EconomicIndicatorsBrief"
+  ],
   "MEC_App.view.EconomicIndicatorsDetailsView": [
     "widget.EconomicIndicatorsDetailsView"
   ],
@@ -1663,6 +1646,7 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.MyEstablishmentDetails": [
     "widget.MyEstablishmentDetails"
   ],
+  "MEC_App.view.MyLabel6": [],
   "MEC_App.view.MyRequestDetails": [
     "widget.MyRequestDetails"
   ],

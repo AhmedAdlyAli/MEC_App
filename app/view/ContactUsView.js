@@ -103,11 +103,11 @@ Ext.define('MEC_App.view.ContactUsView', {
         this.callParent();
 
         var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'HListIcon.png'},
-                            {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},
+                     {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},
                      {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'qqqqHListIcon.png'},
-                            {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},
-                            {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}
-                            ];
+                     {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},
+                     {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}
+                    ];
 
         var store = new Ext.data.Store({
             data : links

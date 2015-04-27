@@ -32,17 +32,10 @@ Ext.application({
         'Ext.Ajax'
     ],
     models: [
-        null,
-        'MenuModel',
-        null,
-        null,
-        null,
-        null
+        'MenuModel'
     ],
     stores: [
-        'MenuArrayStore',
-        null,
-        null
+        'MenuArrayStore'
     ],
     views: [
         'HomeView',
@@ -107,7 +100,9 @@ Ext.application({
         'GoodsPricesView',
         'ShopPriceListView',
         'AboutMinistryView',
-        'MinistryBranchesView'
+        'MinistryBranchesView',
+        'EconomicIndicatorsBrief',
+        'MyLabel6'
     ],
     controllers: [
         'HomeController',

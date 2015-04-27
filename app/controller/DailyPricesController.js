@@ -68,6 +68,11 @@ Ext.define('MEC_App.controller.DailyPricesController', {
                 var lstPrices = view.down('#lstPrices');
                 lstPrices.setStore(store);
 
+                lstPrices.setHeight(json.length * 2.55 + 'em');
+
+                lstPrices.setScrollable(false);
+
+
                 Ext.AnimationHelper.HideLoading();
             }
         });

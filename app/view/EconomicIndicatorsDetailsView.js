@@ -23,69 +23,91 @@ Ext.define('MEC_App.view.EconomicIndicatorsDetailsView', {
     ],
 
     config: {
+        cls: 'rtl',
         itemId: 'EconomicIndicatorsDetailsView',
         layout: 'vbox',
+        scrollable: {
+            direction: 'vertical',
+            directionlock: true
+        },
         items: [
             {
                 xtype: 'panel',
-                flex: 1,
-                cls: 'newsDetails',
+                cls: [
+                    'ind-details-item',
+                    'ctr'
+                ],
                 items: [
                     {
                         xtype: 'label',
-                        cls: 'title',
+                        cls: 'ind-details-title',
                         html: 'Title',
                         itemId: 'lblTitle'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: [
+                    'ind-details-item',
+                    'ctr'
+                ],
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'ind-details-title',
+                        html: 'Test',
+                        itemId: 'lblValue'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                html: 'Test',
-                                itemId: 'lblValue'
-                            },
-                            {
-                                xtype: 'label',
-                                html: 'Test',
-                                itemId: 'lblPercentOfChange'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'ind-details-value',
+                        html: 'Test',
+                        itemId: 'lblPercentOfChange'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'ind-details-item',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'ind-details-title',
+                        html: 'آخر تحديث',
+                        itemId: 'lblLastUpdate1'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                html: 'آخر تحديث',
-                                itemId: 'lblLastUpdate1'
-                            },
-                            {
-                                xtype: 'label',
-                                html: 'Test',
-                                itemId: 'lblLastUpdate2'
-                            }
-                        ]
-                    },
+                        xtype: 'label',
+                        cls: 'ind-details-value2',
+                        html: 'Test',
+                        itemId: 'lblLastUpdate2'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'ind-details-item2',
+                itemId: 'pnlBrief',
+                items: [
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                html: 'ما هو ',
-                                itemId: 'lblWhatIS'
-                            }
-                        ]
-                    },
+                        xtype: 'label',
+                        cls: 'ind-details-title',
+                        html: 'ما هو ',
+                        itemId: 'lblWhatIS'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'ind-details-item2',
+                itemId: 'pnlPDF',
+                items: [
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                html: 'عرض التقرير (PDF)',
-                                itemId: 'lblLink'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'ind-details-title',
+                        html: 'عرض التقرير (PDF)',
+                        itemId: 'lblLink'
                     }
                 ]
             }

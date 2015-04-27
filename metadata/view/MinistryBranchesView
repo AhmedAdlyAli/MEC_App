@@ -24,17 +24,20 @@
     "designerId": "83326af1-7026-41be-abb0-35d5803d3cd7",
     "cn": [
         {
-            "type": "Ext.Panel",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "<h2 class=\"branches\">الفروع</h2>"
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "فروع الوزارة"
             },
-            "name": "MyPanel22",
-            "designerId": "4205cf42-99bd-4692-882f-bbede85c62df"
+            "name": "MyLabel",
+            "designerId": "141444f4-0d9e-4162-89c6-26a7188dd23c"
         },
         {
             "type": "Ext.Panel",

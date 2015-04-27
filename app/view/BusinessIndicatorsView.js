@@ -47,13 +47,19 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 xtype: 'panel',
                 cls: 'grid-header',
                 itemId: 'GridHeader',
+                layout: 'hbox',
                 items: [
                     {
                         xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell1',
                         html: 'السجلات التجارية الجديدة'
                     },
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell2',
+                        html: 'القيمة بالريال القطري'
                     }
                 ]
             },
@@ -64,6 +70,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 items: [
                     {
                         xtype: 'label',
+                        cls: 'subheader-cell1',
                         html: 'السجلات الرئيسية'
                     }
                 ]
@@ -71,12 +78,28 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             {
                 xtype: 'list',
                 itemId: 'grdMainCRs',
-                itemCls: 'grid-table',
-                itemTpl: [
-                    '<div>{MainNewBusinessRegisters.Value}</div>',
-                    '<div>{MainNewBusinessRegisters.Change}</div>',
-                    ''
-                ]
+                itemCls: 'grid-row',
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '',
+                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell2 {[this.CheckPercentOfChange(values.MainNewBusinessRegisters.Change)]}">{MainNewBusinessRegisters.Value}</div>',
+                    '',
+                    {
+                        CheckPercentOfChange: function(changePercent) {
+                            if(parseFloat(changePercent)===0){
+
+                                return '';
+
+                            }else if(parseFloat(changePercent)>0){
+                                return 'arrow-up-cell';
+                            }else{
+                                return 'arrow-down-cell';
+
+                            }
+
+                        }
+                    }
+                )
             },
             {
                 xtype: 'panel',
@@ -85,6 +108,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 items: [
                     {
                         xtype: 'label',
+                        cls: 'subheader-cell1',
                         html: 'السجلات الفرعية'
                     }
                 ]
@@ -92,24 +116,45 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             {
                 xtype: 'list',
                 itemId: 'grdSubCRs',
-                itemCls: 'grid-table',
-                itemTpl: [
-                    '<div>{MainRenewedBusinessRegisters.Value}</div>',
-                    '<div>{MainRenewedBusinessRegisters.Change}</div>',
-                    ''
-                ]
+                itemCls: 'grid-row',
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell2 {[this.CheckPercentOfChange(values.BranchNewBusinessRegisters.Change)]}">{BranchNewBusinessRegisters.Value}</div>',
+                    '',
+                    {
+                        CheckPercentOfChange: function(changePercent) {
+                            if(parseFloat(changePercent)===0){
+
+                                return '';
+
+                            }else if(parseFloat(changePercent)>0){
+                                return 'arrow-up-cell';
+                            }else{
+                                return 'arrow-down-cell';
+
+                            }
+
+                        }
+                    }
+                )
             },
             {
                 xtype: 'panel',
                 cls: 'grid-header',
                 itemId: 'GridHeader1',
+                layout: 'hbox',
                 items: [
                     {
                         xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell1',
                         html: 'السجلات التجارية المجددة'
                     },
                     {
-                        xtype: 'label'
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell2',
+                        html: 'القيمة بالريال القطري'
                     }
                 ]
             },
@@ -120,6 +165,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 items: [
                     {
                         xtype: 'label',
+                        cls: 'subheader-cell1',
                         html: 'السجلات الرئيسية'
                     }
                 ]
@@ -127,12 +173,27 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             {
                 xtype: 'list',
                 itemId: 'grdMainCRs2',
-                itemCls: 'grid-table',
-                itemTpl: [
-                    '<div>{MainRenewedBusinessRegisters.Value}</div>',
-                    '<div>{MainRenewedBusinessRegisters.Change}</div>',
-                    ''
-                ]
+                itemCls: 'grid-row',
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell2  {[this.CheckPercentOfChange(values.MainRenewedBusinessRegisters.Change)]}">{MainRenewedBusinessRegisters.Value}</div>',
+                    '',
+                    {
+                        CheckPercentOfChange: function(changePercent) {
+                            if(parseFloat(changePercent)===0){
+
+                                return '';
+
+                            }else if(parseFloat(changePercent)>0){
+                                return 'arrow-up-cell';
+                            }else{
+                                return 'arrow-down-cell';
+
+                            }
+
+                        }
+                    }
+                )
             },
             {
                 xtype: 'panel',
@@ -141,6 +202,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 items: [
                     {
                         xtype: 'label',
+                        cls: 'subheader-cell1',
                         html: 'السجلات الفرعية'
                     }
                 ]
@@ -148,12 +210,27 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             {
                 xtype: 'list',
                 itemId: 'grdSubCRs2',
-                itemCls: 'grid-table',
-                itemTpl: [
-                    '<div>{BranchRenewedBusinessRegisters.Value}</div>',
-                    '<div>{BranchRenewedBusinessRegisters.Change}</div>',
-                    ''
-                ]
+                itemCls: 'grid-row',
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class="row-cell1"> الربع {Quarter} - {Year}  </div>',
+                    '<div class="row-cell2 {[this.CheckPercentOfChange(values.BranchRenewedBusinessRegisters.Change)]}">{BranchRenewedBusinessRegisters.Value}</div>',
+                    '',
+                    {
+                        CheckPercentOfChange: function(changePercent) {
+                            if(parseFloat(changePercent)===0){
+
+                                return '';
+
+                            }else if(parseFloat(changePercent)>0){
+                                return 'arrow-up-cell';
+                            }else{
+                                return 'arrow-down-cell';
+
+                            }
+
+                        }
+                    }
+                )
             }
         ]
     }

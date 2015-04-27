@@ -12,7 +12,7 @@
         "designer|userAlias": "ShopPriceListView",
         "designer|userClassName": "ShopPriceListView",
         "itemId": "ShopPriceListView",
-        "layout": "fit",
+        "layout": "vbox",
         "scrollable": false
     },
     "name": "DailyPricesView2",
@@ -37,7 +37,7 @@
             "designerId": "718ff666-b6e4-4c0d-963a-8c6390556719"
         },
         {
-            "type": "Ext.dataview.List",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -45,10 +45,62 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "CompanyList"
+                    "grid-header"
                 ],
+                "layout": "hbox"
+            },
+            "name": "MyPanel1",
+            "designerId": "ff33ee7a-f9c3-4d5b-bc37-c5cf1f49dcb6",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "header-cell1"
+                        ],
+                        "docked": null,
+                        "html": "اسم المنتج",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "1e881821-f972-4670-aee0-665ed98e7e1c"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "header-cell2"
+                        ],
+                        "docked": null,
+                        "html": "السعر",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "ce637d0a-b28e-4b2b-bb6b-3ce42ac6c8af"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
                 "height": "100%",
                 "id": null,
+                "itemCls": "grid-row",
                 "itemId": "lstProducts",
                 "store": null
             },
@@ -65,48 +117,14 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tabl-row'>",
-                            "    <div class='tabl-cell'>{Product.ProductName}</div>    ",
-                            "    <div class='tabl-cell'>{Price}</div>    ",
-                            "</div>"
+                            "",
+                            "    <div class='row-cell1'>{Product.ProductName}</div>    ",
+                            "    <div class='row-cell2'>{Price}</div>    ",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
                     "designerId": "b36dbede-847b-4317-9f8d-52971e2264e9"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "table-header"
-                        ],
-                        "docked": "top",
-                        "html": "اسم المنتج"
-                    },
-                    "name": "MyLabel36",
-                    "designerId": "1e881821-f972-4670-aee0-665ed98e7e1c"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "table-header"
-                        ],
-                        "docked": "top",
-                        "html": "السعر"
-                    },
-                    "name": "MyLabel35",
-                    "designerId": "ce637d0a-b28e-4b2b-bb6b-3ce42ac6c8af"
                 }
             ]
         }

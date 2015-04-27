@@ -41,7 +41,10 @@ Ext.define('MEC_App.view.GoodsPricesView', {
             },
             {
                 xtype: 'tabpanel',
-                cls: 'rtl',
+                cls: [
+                    'rtl',
+                    'tap-panel'
+                ],
                 items: [
                     {
                         xtype: 'container',

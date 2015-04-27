@@ -24,10 +24,13 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'ConsumerIndicatorsListing',
         layout: 'fit',
         scrollable: false,
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
@@ -37,12 +40,11 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
             },
             {
                 xtype: 'list',
-                cls: 'CompanyList',
                 height: '100%',
                 itemId: 'lstItems',
-                itemCls: 'item-request',
+                itemCls: 'item-link',
                 itemTpl: [
-                    '<div class=\'CompanyListItem\'>{Name}</div>'
+                    '<div>{Name}</div>'
                 ]
             }
         ],

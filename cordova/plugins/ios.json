@@ -22,7 +22,7 @@
                     "AssetsLibrary.framework": [
                         {
                             "xml": false,
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "CoreVideo.framework": [
@@ -40,6 +40,30 @@
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
                             "count": 1
                         }
                     ]
@@ -67,6 +91,24 @@
                         {
                             "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
                         }
                     ]
                 }
@@ -91,6 +133,9 @@
         },
         "am.armsoft.plugins.ListPicker": {
             "PACKAGE_NAME": "com.domain.MEC_App"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "MEC.MECAPP"
         }
     },
     "dependent_plugins": {}

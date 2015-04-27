@@ -1,0 +1,13 @@
+{
+    "type": "Ext.Label",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyLabel6"
+    },
+    "name": "MyLabel6",
+    "designerId": "49d7e60b-4b7e-428f-8914-047e82ed82a2"
+}

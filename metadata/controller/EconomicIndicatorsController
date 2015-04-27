@@ -33,6 +33,8 @@
                     "Ext.AnimationHelper.ShowLoading();",
                     "",
                     "",
+                    "view.down('#lblTitle').setHtml(view.getData());",
+                    "",
                     "",
                     "",
                     "var me = this;",
@@ -116,15 +118,15 @@
                     "var view = component;",
                     "var data = view.getData();",
                     "",
-                    "view.down('#lblTitle').setHtml(data.Title);",
-                    "view.down('#lblValue').setHtml(data.Value);",
+                    "//console.log(data);",
                     "",
-                    "view.down('#lblValue').setHtml(data.Value);",
+                    "view.down('#lblTitle').setHtml(data.Title);",
+                    "view.down('#lblValue').setHtml(data.Value+ ' مليون (ر.ق)') ;",
                     "",
                     "if(data.ChangePercent>0){",
-                    "    //alert('plus');",
+                    "    view.down('#lblPercentOfChange').addCls('arrow-up-details');",
                     "}else{",
-                    "//    alert('plus2222');",
+                    "    view.down('#lblPercentOfChange').addCls('arrow-down-details');",
                     "}",
                     "",
                     "",
@@ -135,15 +137,60 @@
                     "view.down('#lblLastUpdate2').setHtml(data.LastUpdated);",
                     "view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);",
                     "",
-                    "view.down('#lblLink').element.on('tap', function () {",
+                    "view.down('#pnlPDF').element.on('tap', function () {",
                     "      window.open(\"http://www.google.com\", \"_blank\");",
                     "  });",
+                    "",
+                    "",
+                    "view.down('#pnlBrief').element.on('tap', function () {",
+                    "",
+                    "",
+                    "            Ext.Viewport.getActiveItem().push({",
+                    "            xtype: 'EconomicIndicatorsBrief',",
+                    "            title: Ext.Global.GetFixedTitle(),",
+                    "            data: data",
+                    "        });",
+                    "",
+                    "",
+                    "  });",
+                    "",
+                    "",
+                    "",
                     ""
                 ],
                 "name": "initialize"
             },
             "name": "onEconomicIndicatorsDetailsViewInitialize",
             "designerId": "452b4e53-c341-47b2-8b24-78bba7684d5c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#EconomicIndicatorsBrief",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onEconomicIndicatorsBriefInitialize",
+                "implHandler": [
+                    "var view = component;",
+                    "        var data = view.getData();",
+                    "",
+                    " view.down('#lblTitle').setHtml(data.Title);",
+                    "view.down('#lblBrief').setHtml(data.Description);",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onEconomicIndicatorsBriefInitialize",
+            "designerId": "bc7a090b-3ed1-4e7c-b1d2-e0f992b442f3"
         }
     ]
 }

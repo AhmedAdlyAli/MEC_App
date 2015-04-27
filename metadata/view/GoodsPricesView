@@ -45,7 +45,8 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "rtl"
+                    "rtl",
+                    "tap-panel"
                 ]
             },
             "name": "MyTabPanel",

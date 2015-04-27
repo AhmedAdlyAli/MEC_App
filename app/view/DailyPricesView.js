@@ -20,6 +20,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
     requires: [
         'Ext.Label',
         'Ext.tab.Panel',
+        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -38,33 +39,50 @@ Ext.define('MEC_App.view.DailyPricesView', {
             },
             {
                 xtype: 'tabpanel',
-                cls: 'rtl',
+                cls: [
+                    'rtl',
+                    'tap-panel'
+                ],
                 items: [
                     {
                         xtype: 'container',
                         title: 'الخضروات',
                         itemId: 'VegentsblesContainer',
+                        layout: 'vbox',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionlock: true
+                        },
                         items: [
                             {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'اسم المنتج'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'سعر الكيلو'
+                                xtype: 'panel',
+                                cls: 'grid-header',
+                                layout: 'hbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell1',
+                                        html: 'اسم المنتج'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell2',
+                                        html: 'سعر الكيلو'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'list',
-                                cls: 'CompanyList',
                                 height: '100%',
                                 itemId: 'lstPrices',
+                                itemCls: 'grid-row',
                                 itemTpl: Ext.create('Ext.XTemplate', 
-                                    '<div class=\'tabl-row\'>',
-                                    '    <div class=\'tabl-cell\'>{ProductName}</div>    ',
-                                    '    <div class=\'tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '</div>',
+                                    '',
+                                    '    <div class=\'row-cell1\'>{ProductName}</div>    ',
+                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
+                                    '',
                                     {
                                         CheckPercentOfChange: function(changePercent) {
                                             if(changePercent>0){
@@ -84,27 +102,41 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         xtype: 'container',
                         title: 'الفاكهة',
                         itemId: 'FruitsContainer',
+                        layout: 'vbox',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionlock: true
+                        },
                         items: [
                             {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'اسم المنتج'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'سعر الكيلو'
+                                xtype: 'panel',
+                                cls: 'grid-header',
+                                layout: 'hbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell1',
+                                        html: 'اسم المنتج'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell2',
+                                        html: 'سعر الكيلو'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'list',
-                                cls: 'CompanyList',
                                 height: '100%',
                                 itemId: 'lstPrices',
+                                itemCls: 'grid-row',
                                 itemTpl: Ext.create('Ext.XTemplate', 
-                                    '<div class=\'tabl-row\'>',
-                                    '    <div class=\'tabl-cell\'>{ProductName}</div>    ',
-                                    '    <div class=\'tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '</div>',
+                                    '',
+                                    '    <div class=\'row-cell1\'>{ProductName}</div>    ',
+                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
+                                    '',
                                     {
                                         CheckPercentOfChange: function(changePercent) {
                                             if(changePercent>0){
@@ -124,27 +156,41 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         xtype: 'container',
                         title: 'الأسماك',
                         itemId: 'FishContainer',
+                        layout: 'vbox',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionlock: true
+                        },
                         items: [
                             {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'سعر الكيلو'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'table-header',
-                                html: 'اسم المنتج'
+                                xtype: 'panel',
+                                cls: 'grid-header',
+                                layout: 'hbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell1',
+                                        html: 'اسم المنتج'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'header-cell2',
+                                        html: 'سعر الكيلو'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'list',
-                                cls: 'CompanyList',
                                 height: '100%',
                                 itemId: 'lstPrices',
+                                itemCls: 'grid-row',
                                 itemTpl: Ext.create('Ext.XTemplate', 
-                                    '<div class=\'tabl-row\'>',
-                                    '    <div class=\'tabl-cell\'>{ProductName}</div>    ',
-                                    '    <div class=\'tabl-cell {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '</div>',
+                                    '',
+                                    '    <div class=\'row-cell1\'>{ProductName}</div>    ',
+                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
+                                    '',
                                     {
                                         CheckPercentOfChange: function(changePercent) {
                                             if(changePercent>0){

@@ -29,6 +29,10 @@
     <feature name="ListPicker">
         <param name="ios-package" value="ListPicker" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
     <name>MEC_App</name>
     <description>
     </description>

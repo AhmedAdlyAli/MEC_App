@@ -20,16 +20,20 @@ Ext.define('MEC_App.view.WhereToShopView', {
     requires: [
         'Ext.Label',
         'Ext.dataview.List',
+        'Ext.Panel',
         'Ext.field.Hidden',
         'Ext.XTemplate'
     ],
 
     config: {
-        cls: 'complaint-view',
         id: 'WhereToShopView',
         itemId: 'WhereToShopView',
-        layout: 'fit',
+        layout: 'vbox',
         scrollable: false,
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
@@ -38,87 +42,94 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 html: 'أين تتسوق'
             },
             {
+                xtype: 'textfield',
+                docked: 'top',
+                itemId: 'txtProductName',
+                label: 'اختر منتج',
+                placeHolder: 'اختر منتج',
+                readOnly: true,
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+
+                            // Create Native drop down
+                            var me = this;
+                            me.element.on('tap', function(){
+
+                                var data = me.up('WhereToShopView').getData();
+
+
+                                var items = [];
+
+                                Ext.each(data, function(item){
+                                    items.push({ text: item.ProductName, value: item.Id});
+                                });
+
+
+                                var btn = this;
+                                var config = {
+                                    title: "المنتج",
+                                    items: items,
+                                    //selectedValue: "2",
+                                    doneButtonLabel: "اختيار",
+                                    cancelButtonLabel: "الغاء"
+                                };
+
+
+                                var hiddenProductID = Ext.ComponentQuery.query("#hiddenProductID")[0];
+
+                                Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);
+
+
+                            }, me);
+
+                        },
+                        event: 'initialize'
+                    }
+                ]
+            },
+            {
                 xtype: 'list',
-                cls: 'CompanyList',
-                height: '100%',
                 itemId: 'lstPrices',
+                itemCls: 'grid-row',
                 itemTpl: [
-                    '<div class=\'tabl-row\'>',
-                    '    <div class=\'tabl-cell\'>{Shop.ShopName}</div>    ',
-                    '    <div class=\'tabl-cell\'>{Quantity}({Unit.Name})</div>    ',
-                    '    <div class=\'tabl-cell\'>{Price}</div>    ',
                     '',
-                    '</div>'
+                    '    <div class=\'row-cell\'>{Shop.ShopName}</div>    ',
+                    '    <div class=\'row-cell\'>{Quantity}({Unit.Name})</div>    ',
+                    '    <div class=\'row-cell\'>{Price}</div>    ',
+                    '',
+                    ''
                 ],
                 items: [
                     {
-                        xtype: 'textfield',
+                        xtype: 'panel',
+                        cls: 'grid-header',
                         docked: 'top',
-                        itemId: 'txtProductName',
-                        label: 'اختر منتج',
-                        placeHolder: 'اختر منتج',
-                        readOnly: true,
-                        listeners: [
+                        layout: 'hbox',
+                        items: [
                             {
-                                fn: function(component, eOpts) {
-
-                                    // Create Native drop down
-                                    var me = this;
-                                    me.element.on('tap', function(){
-
-                                        var data = me.up('WhereToShopView').getData();
-
-
-                                        var items = [];
-
-                                        Ext.each(data, function(item){
-                                            items.push({ text: item.ProductName, value: item.Id});
-                                        });
-
-
-                                        var btn = this;
-                                        var config = {
-                                            title: "المنتج",
-                                            items: items,
-                                            //selectedValue: "2",
-                                            doneButtonLabel: "اختيار",
-                                            cancelButtonLabel: "الغاء"
-                                        };
-
-
-                                        var hiddenProductID = Ext.ComponentQuery.query("#hiddenProductID")[0];
-
-                                        Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);
-
-
-                                    }, me);
-
-                                },
-                                event: 'initialize'
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'header-cell1',
+                                html: 'اسم المحل'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'header-cell2',
+                                html: 'الكمية'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'header-cell2',
+                                html: 'السعر'
                             }
                         ]
                     },
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenProductID'
-                    },
-                    {
-                        xtype: 'label',
-                        cls: 'table-cell',
-                        docked: 'top',
-                        html: 'اسم المحل'
-                    },
-                    {
-                        xtype: 'label',
-                        cls: 'table-cell',
-                        docked: 'top',
-                        html: 'الكمية'
-                    },
-                    {
-                        xtype: 'label',
-                        cls: 'table-cell',
-                        docked: 'top',
-                        html: 'السعر'
                     }
                 ]
             }

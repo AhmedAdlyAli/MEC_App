@@ -51,10 +51,10 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
                 });
 
 
-                view.down('#grdMainCRs').setStore(store).setHeight(json.length * 3 +'em').setScrollable(false);
-                view.down('#grdSubCRs').setStore(store).setHeight(json.length * 3 +'em').setScrollable(false);
-                view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 3 +'em').setScrollable(false);
-                view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 3 +'em').setScrollable(false);
+                view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
 
 
 

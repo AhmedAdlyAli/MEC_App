@@ -35,17 +35,18 @@ Ext.define('MEC_App.view.EconomicIndicatorsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'مؤشرات اقتصادية'
+                html: 'مؤشرات اقتصادية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
                 flex: 1,
                 height: '100%',
                 itemId: 'lstIndicators',
-                itemCls: 'item-Indicator',
+                itemCls: 'item-indicator',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class="tpl-indicator-1"><span>{Title}</span><br/><span>{Value}</span></div>',
-                    '    <div class="{[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}</div>',
+                    '<div class="tpl-indicator-1"><span>{Title}</span><br/><span class="sub-title">{Value} مليون (ر.ق)</span></div>',
+                    '    <div class="tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}</div>',
                     {
                         CheckPercentOfChange: function(changePercent) {
                             if(changePercent>0){

@@ -19,7 +19,6 @@ Ext.define('MEC_App.view.ContactUs2View', {
 
     requires: [
         'Ext.Panel',
-        'Ext.Map',
         'Ext.Spacer',
         'Ext.Button'
     ],
@@ -39,22 +38,6 @@ Ext.define('MEC_App.view.ContactUs2View', {
             {
                 xtype: 'panel',
                 html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
-            },
-            {
-                xtype: 'panel',
-                html: '<h2 class="branches">الفروع</h2>'
-            },
-            {
-                xtype: 'panel',
-                cls: 'map-panel',
-                items: [
-                    {
-                        xtype: 'map',
-                        height: 250,
-                        id: 'mymap',
-                        itemId: 'mymap'
-                    }
-                ]
             },
             {
                 xtype: 'panel',
@@ -129,51 +112,6 @@ Ext.define('MEC_App.view.ContactUs2View', {
                 ]
             }
         ]
-    },
-
-    initialize: function() {
-        this.callParent();
-
-        var mapPanel = this.down('map');
-        var gMap = mapPanel.getMap();
-
-        Ext.Function.defer(function(){
-
-            if (gMap === null) {
-                Ext.Function.defer(this.initMap,500,this);
-            } else {
-                // ready to start calling google map methods
-
-                // alert('not null');
-
-
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-
-
-                var marker = new google.maps.Marker({
-                    map: gMap,
-                    animation: google.maps.Animation.DROP,
-                    position: new google.maps.LatLng (25.321283,51.528329),
-                    icon: 'resources/images/drop-pin.png'
-                });
-
-            }
-        } ,300,this);
-
-        mapPanel.element.on({
-            tap: this.domEvent,
-            touchstart:this.domEvent,
-            touchmove:this.domEvent,
-            touchdown:this.domEvent,
-            scroll:this.domEvent,
-            pinch:this.domEvent,
-            pinchstart:this.domEvent,
-            pinchend:this.domEvent
-        });
-    },
-
-    domEvent: function(evt, el, o) {
-        evt.stopPropagation();
     }
 
 });

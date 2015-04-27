@@ -7,7 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "cls": [
-            "complaint-view"
+            "complaint-view",
+            "rtl"
         ],
         "designer|userAlias": "ConsumerIndicatorsListing",
         "designer|userClassName": "ConsumerIndicatorsListing",
@@ -43,13 +44,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "cls": [
-                    "CompanyList"
-                ],
                 "height": "100%",
                 "id": null,
-                "itemCls": "item-request",
+                "itemCls": "item-link",
                 "itemId": "lstItems",
+                "pressedCls": null,
+                "selectedCls": null,
                 "store": null
             },
             "name": "MyList1",
@@ -65,7 +65,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='CompanyListItem'>{Name}</div>"
+                            "<div>{Name}</div>"
                         ]
                     },
                     "name": "itemTpl",

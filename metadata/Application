@@ -32,12 +32,7 @@
             "WhereToShopController"
         ],
         "models": [
-            "PrintOffice",
-            "MenuModel",
-            "ComplaintsModel",
-            "MinistryNewsModel",
-            "RSSModel",
-            "TradeNameResultModel"
+            "MenuModel"
         ],
         "name": "MEC_App",
         "requires": [
@@ -48,9 +43,7 @@
             "Ext.Img"
         ],
         "stores": [
-            "MenuArrayStore",
-            "PrintOffices",
-            "MinistryNewsStore"
+            "MenuArrayStore"
         ],
         "uses": [
             "Ext.Ajax"
@@ -118,7 +111,9 @@
             "GoodsPricesView",
             "ShopPriceListView",
             "AboutMinistryView",
-            "MinistryBranchesView"
+            "MinistryBranchesView",
+            "EconomicIndicatorsBrief",
+            "MyLabel6"
         ]
     },
     "name": "Application",

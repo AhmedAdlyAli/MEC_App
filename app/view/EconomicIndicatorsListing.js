@@ -40,8 +40,9 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
                 cls: 'CompanyList',
                 height: '100%',
                 itemId: 'lstItems',
+                itemCls: 'item-link',
                 itemTpl: [
-                    '<div class=\'CompanyListItem\'>{Name}</div>'
+                    '<div>{Name}</div>'
                 ]
             }
         ],
@@ -55,9 +56,12 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
     },
 
     onLstItemsItemTap: function(dataview, index, target, record, e, eOpts) {
+
+
         Ext.Viewport.getActiveItem().push({
             xtype: record.data.Url,
-            title: Ext.Global.GetFixedTitle()
+            title: Ext.Global.GetFixedTitle(),
+            data: record.data.Name
         });
 
     },

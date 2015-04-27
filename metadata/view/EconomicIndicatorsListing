@@ -48,6 +48,7 @@
                 ],
                 "height": "100%",
                 "id": null,
+                "itemCls": "item-link",
                 "itemId": "lstItems",
                 "store": null
             },
@@ -64,7 +65,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='CompanyListItem'>{Name}</div>"
+                            "<div>{Name}</div>"
                         ]
                     },
                     "name": "itemTpl",
@@ -80,9 +81,12 @@
                     "userConfig": {
                         "fn": "onLstItemsItemTap",
                         "implHandler": [
+                            "",
+                            "",
                             "Ext.Viewport.getActiveItem().push({",
                             "    xtype: record.data.Url,",
-                            "    title: Ext.Global.GetFixedTitle()",
+                            "    title: Ext.Global.GetFixedTitle(),",
+                            "    data: record.data.Name",
                             "});",
                             ""
                         ],

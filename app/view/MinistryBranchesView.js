@@ -18,6 +18,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
     alias: 'widget.MinistryBranchesView',
 
     requires: [
+        'Ext.Label',
         'Ext.Panel',
         'Ext.Map'
     ],
@@ -32,8 +33,9 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
         },
         items: [
             {
-                xtype: 'panel',
-                html: '<h2 class="branches">الفروع</h2>'
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'فروع الوزارة'
             },
             {
                 xtype: 'panel',

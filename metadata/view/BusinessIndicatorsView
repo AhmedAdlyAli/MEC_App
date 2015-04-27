@@ -54,7 +54,8 @@
                 "cls": [
                     "grid-header"
                 ],
-                "itemId": "GridHeader"
+                "itemId": "GridHeader",
+                "layout": "hbox"
             },
             "name": "MyPanel",
             "designerId": "d9190c5a-58b6-4e07-a0cf-a474b076dac7",
@@ -67,7 +68,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "السجلات التجارية الجديدة"
+                        "cls": [
+                            "header-cell1"
+                        ],
+                        "html": "السجلات التجارية الجديدة",
+                        "layout|flex": 1
                     },
                     "name": "MyLabel1",
                     "designerId": "590cbcb0-3989-4606-aa2c-0e9a24789b4b"
@@ -79,6 +84,13 @@
                         "type": "array"
                     },
                     "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "header-cell2"
+                        ],
+                        "html": "القيمة بالريال القطري",
+                        "layout|flex": 1
+                    },
                     "name": "MyLabel2",
                     "designerId": "4869259c-c5d4-4556-aadb-51ab76d7001b"
                 }
@@ -95,7 +107,8 @@
                 "cls": [
                     "grid-subheader"
                 ],
-                "itemId": "GridSubHeader"
+                "itemId": "GridSubHeader",
+                "layout": null
             },
             "name": "MyPanel1",
             "designerId": "888a3921-b3a2-4dce-bf2b-58dca1871506",
@@ -108,6 +121,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "subheader-cell1"
+                        ],
                         "html": "السجلات الرئيسية"
                     },
                     "name": "MyLabel3",
@@ -124,7 +140,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": null,
-                "itemCls": "grid-table",
+                "itemCls": "grid-row",
                 "itemId": "grdMainCRs"
             },
             "name": "MyList",
@@ -140,13 +156,45 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>{MainNewBusinessRegisters.Value}</div>",
-                            "<div>{MainNewBusinessRegisters.Change}</div>",
+                            "",
+                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.MainNewBusinessRegisters.Change)]}\">{MainNewBusinessRegisters.Value}</div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "194f9398-ea8d-4122-9924-826c5acfc796"
+                    "designerId": "194f9398-ea8d-4122-9924-826c5acfc796",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "changePercent"
+                                ],
+                                "fn": "CheckPercentOfChange",
+                                "implHandler": [
+                                    "if(parseFloat(changePercent)===0){",
+                                    "    ",
+                                    "    return '';",
+                                    "    ",
+                                    "}else if(parseFloat(changePercent)>0){",
+                                    "        return 'arrow-up-cell';",
+                                    "}else{",
+                                    "    return 'arrow-down-cell';",
+                                    "",
+                                    "}",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckPercentOfChange",
+                            "designerId": "84b4d004-6f4b-418f-9a17-7d70fbc007db"
+                        }
+                    ]
                 }
             ]
         },
@@ -174,6 +222,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "subheader-cell1"
+                        ],
                         "html": "السجلات الفرعية"
                     },
                     "name": "MyLabel3",
@@ -189,7 +240,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemCls": "grid-table",
+                "itemCls": "grid-row",
                 "itemId": "grdSubCRs"
             },
             "name": "MyList1",
@@ -205,13 +256,44 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>{MainRenewedBusinessRegisters.Value}</div>",
-                            "<div>{MainRenewedBusinessRegisters.Change}</div>",
+                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.BranchNewBusinessRegisters.Change)]}\">{BranchNewBusinessRegisters.Value}</div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "3eb03d9d-011f-4f22-8526-b53ebdc2d3ae"
+                    "designerId": "3eb03d9d-011f-4f22-8526-b53ebdc2d3ae",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "changePercent"
+                                ],
+                                "fn": "CheckPercentOfChange",
+                                "implHandler": [
+                                    "if(parseFloat(changePercent)===0){",
+                                    "    ",
+                                    "    return '';",
+                                    "    ",
+                                    "}else if(parseFloat(changePercent)>0){",
+                                    "        return 'arrow-up-cell';",
+                                    "}else{",
+                                    "    return 'arrow-down-cell';",
+                                    "",
+                                    "}",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckPercentOfChange",
+                            "designerId": "9d85a6b4-158c-41a5-b6cd-0c2f6c1dbed7"
+                        }
+                    ]
                 }
             ]
         },
@@ -226,7 +308,8 @@
                 "cls": [
                     "grid-header"
                 ],
-                "itemId": "GridHeader1"
+                "itemId": "GridHeader1",
+                "layout": "hbox"
             },
             "name": "MyPanel6",
             "designerId": "7b7c7555-b978-4f4d-a50b-dfbf80882c72",
@@ -239,7 +322,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "السجلات التجارية المجددة"
+                        "cls": [
+                            "header-cell1"
+                        ],
+                        "html": "السجلات التجارية المجددة",
+                        "layout|flex": 1
                     },
                     "name": "MyLabel1",
                     "designerId": "f6f24122-a174-459f-b608-c89e0be8731e"
@@ -251,8 +338,15 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyLabel2",
-                    "designerId": "f0344d10-f15c-4a97-9e25-623cd507ba93"
+                    "userConfig": {
+                        "cls": [
+                            "header-cell2"
+                        ],
+                        "html": "القيمة بالريال القطري",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "e1d42736-6098-448b-9528-e93e314deee0"
                 }
             ]
         },
@@ -280,6 +374,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "subheader-cell1"
+                        ],
                         "html": "السجلات الرئيسية"
                     },
                     "name": "MyLabel3",
@@ -295,7 +392,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemCls": "grid-table",
+                "itemCls": "grid-row",
                 "itemId": "grdMainCRs2"
             },
             "name": "MyList2",
@@ -311,13 +408,44 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>{MainRenewedBusinessRegisters.Value}</div>",
-                            "<div>{MainRenewedBusinessRegisters.Change}</div>",
+                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell2  {[this.CheckPercentOfChange(values.MainRenewedBusinessRegisters.Change)]}\">{MainRenewedBusinessRegisters.Value}</div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "7b3104ac-d7a3-4913-a448-1d22e9bd4ff4"
+                    "designerId": "7b3104ac-d7a3-4913-a448-1d22e9bd4ff4",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "changePercent"
+                                ],
+                                "fn": "CheckPercentOfChange",
+                                "implHandler": [
+                                    "if(parseFloat(changePercent)===0){",
+                                    "    ",
+                                    "    return '';",
+                                    "    ",
+                                    "}else if(parseFloat(changePercent)>0){",
+                                    "        return 'arrow-up-cell';",
+                                    "}else{",
+                                    "    return 'arrow-down-cell';",
+                                    "",
+                                    "}",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckPercentOfChange",
+                            "designerId": "94b7b8d2-2f0c-489e-b8c6-2f910b4bc735"
+                        }
+                    ]
                 }
             ]
         },
@@ -345,6 +473,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "subheader-cell1"
+                        ],
                         "html": "السجلات الفرعية"
                     },
                     "name": "MyLabel3",
@@ -360,7 +491,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "itemCls": "grid-table",
+                "itemCls": "grid-row",
                 "itemId": "grdSubCRs2"
             },
             "name": "MyList3",
@@ -376,13 +507,44 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>{BranchRenewedBusinessRegisters.Value}</div>",
-                            "<div>{BranchRenewedBusinessRegisters.Change}</div>",
+                            "<div class=\"row-cell1\"> الربع {Quarter} - {Year}  </div>",
+                            "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.BranchRenewedBusinessRegisters.Change)]}\">{BranchRenewedBusinessRegisters.Value}</div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "d66f6f68-0357-4054-81cf-1d833d8f417e"
+                    "designerId": "d66f6f68-0357-4054-81cf-1d833d8f417e",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "changePercent"
+                                ],
+                                "fn": "CheckPercentOfChange",
+                                "implHandler": [
+                                    "if(parseFloat(changePercent)===0){",
+                                    "    ",
+                                    "    return '';",
+                                    "    ",
+                                    "}else if(parseFloat(changePercent)>0){",
+                                    "        return 'arrow-up-cell';",
+                                    "}else{",
+                                    "    return 'arrow-down-cell';",
+                                    "",
+                                    "}",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckPercentOfChange",
+                            "designerId": "6f1766c0-431d-4bf5-ab64-479bc11fa941"
+                        }
+                    ]
                 }
             ]
         }

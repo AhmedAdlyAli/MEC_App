@@ -26,6 +26,9 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
             },
             "panel#EconomicIndicatorsDetailsView": {
                 initialize: 'onEconomicIndicatorsDetailsViewInitialize'
+            },
+            "panel#EconomicIndicatorsBrief": {
+                initialize: 'onEconomicIndicatorsBriefInitialize'
             }
         }
     },
@@ -36,6 +39,8 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
         Ext.AnimationHelper.ShowLoading();
 
+
+        view.down('#lblTitle').setHtml(view.getData());
 
 
 
@@ -78,15 +83,15 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;
         var data = view.getData();
 
-        view.down('#lblTitle').setHtml(data.Title);
-        view.down('#lblValue').setHtml(data.Value);
+        //console.log(data);
 
-        view.down('#lblValue').setHtml(data.Value);
+        view.down('#lblTitle').setHtml(data.Title);
+        view.down('#lblValue').setHtml(data.Value+ ' مليون (ر.ق)') ;
 
         if(data.ChangePercent>0){
-            //alert('plus');
+            view.down('#lblPercentOfChange').addCls('arrow-up-details');
         }else{
-        //    alert('plus2222');
+            view.down('#lblPercentOfChange').addCls('arrow-down-details');
         }
 
 
@@ -97,9 +102,35 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblLastUpdate2').setHtml(data.LastUpdated);
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
 
-        view.down('#lblLink').element.on('tap', function () {
+        view.down('#pnlPDF').element.on('tap', function () {
               window.open("http://www.google.com", "_blank");
           });
+
+
+        view.down('#pnlBrief').element.on('tap', function () {
+
+
+                    Ext.Viewport.getActiveItem().push({
+                    xtype: 'EconomicIndicatorsBrief',
+                    title: Ext.Global.GetFixedTitle(),
+                    data: data
+                });
+
+
+          });
+
+
+
+
+    },
+
+    onEconomicIndicatorsBriefInitialize: function(component, eOpts) {
+        var view = component;
+                var data = view.getData();
+
+         view.down('#lblTitle').setHtml(data.Title);
+        view.down('#lblBrief').setHtml(data.Description);
+
 
     }
 

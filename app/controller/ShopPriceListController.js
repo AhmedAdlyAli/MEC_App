@@ -48,7 +48,7 @@ Ext.define('MEC_App.controller.ShopPriceListController', {
                     data : json.ProductPrices
                 });
 
-                var lstProducts = view.down('#lstProducts');
+                var lstProducts = view.down('#lstProducts').setHeight(json.ProductPrices.length * 2.5 + 'em');
                 lstProducts.setStore(store);
 
                 Ext.AnimationHelper.HideLoading();

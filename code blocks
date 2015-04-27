@@ -156,6 +156,12 @@ Ext.Ajax.request({
 
 
 
+//hide sencha selected class
+.item-link, .item-link.x-list-item.x-item-selected.x-list-item-tpl{
+    padding-right:3em;
+    background: url(../images/request.png) no-repeat 96% center !important;
+    border-top:1px solid #dedede !important;
+}
 
 
 
@@ -163,3 +169,22 @@ Ext.Ajax.request({
 
 open -e  ~/.bashrc
 https://www.youtube.com/watch?v=QSj52p64is0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Default@2x~iphone
+Default-568h@2x~iphone
+Default-667h
+Default-736h
+Default@2x~iphone

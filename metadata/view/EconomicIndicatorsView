@@ -33,7 +33,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "مؤشرات اقتصادية"
+                "html": "مؤشرات اقتصادية",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel",
             "designerId": "1609d9f4-da2e-4c17-8de3-a4d805938782"
@@ -47,7 +48,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": "100%",
-                "itemCls": "item-Indicator",
+                "itemCls": "item-indicator",
                 "itemId": "lstIndicators",
                 "layout|flex": 1
             },
@@ -64,8 +65,8 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class=\"tpl-indicator-1\"><span>{Title}</span><br/><span>{Value}</span></div>",
-                            "    <div class=\"{[this.CheckPercentOfChange(values.ChangePercent)]}\"> {ChangePercent}</div>"
+                            "<div class=\"tpl-indicator-1\"><span>{Title}</span><br/><span class=\"sub-title\">{Value} مليون (ر.ق)</span></div>",
+                            "    <div class=\"tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}\"> {ChangePercent}</div>"
                         ]
                     },
                     "name": "itemTpl",

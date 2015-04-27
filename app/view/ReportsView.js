@@ -104,12 +104,12 @@ Ext.define('MEC_App.view.ReportsView', {
         this.callParent();
 
 
-        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', Icon:'HListIcon.png'},
-                            {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',Icon:'HListIcon.png'},
-                            {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,Icon:'HListIcon.png'},
-                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',Icon:'HListIcon.png'}
+        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'HListIcon.png'},
+                     {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'HListIcon.png'},
+                     {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'HListIcon.png'},
+                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'HListIcon.png'}
 
-                            ];
+                    ];
 
         var store = new Ext.data.Store({
             data : links
@@ -119,20 +119,6 @@ Ext.define('MEC_App.view.ReportsView', {
         lst.setStore(store);
         lst.setScrollable(false);
 
-
-
-
-        /*
-        this.down('#reportsBtn1').setHtml(Ext.Global.GetViewTitle('EcoReports'));
-        this.down('#reportsBtn2').setHtml(Ext.Global.GetViewTitle('BizReports'));
-        this.down('#reportsBtn3').setHtml(Ext.Global.GetViewTitle('ConsumerReports'));
-        this.down('#reportsBtn4').setHtml(Ext.Global.GetViewTitle('TradeReports'));
-
-
-
-        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('Reports'));
-
-        */
 
     }
 

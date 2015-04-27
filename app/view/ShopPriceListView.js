@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.ShopPriceListView', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -26,7 +27,7 @@ Ext.define('MEC_App.view.ShopPriceListView', {
     config: {
         cls: 'complaint-view',
         itemId: 'ShopPriceListView',
-        layout: 'fit',
+        layout: 'vbox',
         scrollable: false,
         items: [
             {
@@ -37,29 +38,34 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                 itemId: 'lblTitle'
             },
             {
-                xtype: 'list',
-                cls: 'CompanyList',
-                height: '100%',
-                itemId: 'lstProducts',
-                itemTpl: [
-                    '<div class=\'tabl-row\'>',
-                    '    <div class=\'tabl-cell\'>{Product.ProductName}</div>    ',
-                    '    <div class=\'tabl-cell\'>{Price}</div>    ',
-                    '</div>'
-                ],
+                xtype: 'panel',
+                cls: 'grid-header',
+                layout: 'hbox',
                 items: [
                     {
                         xtype: 'label',
-                        cls: 'table-header',
-                        docked: 'top',
+                        flex: 1,
+                        cls: 'header-cell1',
                         html: 'اسم المنتج'
                     },
                     {
                         xtype: 'label',
-                        cls: 'table-header',
-                        docked: 'top',
+                        flex: 1,
+                        cls: 'header-cell2',
                         html: 'السعر'
                     }
+                ]
+            },
+            {
+                xtype: 'list',
+                height: '100%',
+                itemId: 'lstProducts',
+                itemCls: 'grid-row',
+                itemTpl: [
+                    '',
+                    '    <div class=\'row-cell1\'>{Product.ProductName}</div>    ',
+                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                    ''
                 ]
             }
         ]

@@ -19,15 +19,19 @@ Ext.define('MEC_App.view.GoodPriceListView', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'GoodPriceListView',
-        layout: 'fit',
+        layout: 'vbox',
         scrollable: false,
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
@@ -37,30 +41,34 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                 itemId: 'lblTitle'
             },
             {
-                xtype: 'list',
-                cls: 'CompanyList',
-                height: '100%',
-                itemId: 'lstPrices',
-                itemCls: 'item-product',
-                itemTpl: [
-                    '<div class=\'tabl-row\'>',
-                    '    <div class=\'tabl-cell\'>{Shop.ShopName}</div>    ',
-                    '    <div class=\'tabl-cell\'>{Price}</div>    ',
-                    '</div>'
-                ],
+                xtype: 'panel',
+                cls: 'grid-header',
+                docked: 'top',
+                layout: 'hbox',
                 items: [
                     {
                         xtype: 'label',
-                        cls: 'table-header',
-                        docked: 'top',
+                        flex: 1,
+                        cls: 'header-cell1',
                         html: 'اسم المحل'
                     },
                     {
                         xtype: 'label',
-                        cls: 'table-header',
-                        docked: 'top',
+                        flex: 1,
+                        cls: 'header-cell1',
                         html: 'السعر'
                     }
+                ]
+            },
+            {
+                xtype: 'list',
+                itemId: 'lstPrices',
+                itemCls: 'grid-row',
+                itemTpl: [
+                    '',
+                    '    <div class=\'row-cell1\'>{Shop.ShopName}</div>    ',
+                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                    ''
                 ]
             }
         ]

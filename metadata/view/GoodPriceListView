@@ -7,12 +7,13 @@
     "codeClass": null,
     "userConfig": {
         "cls": [
-            "complaint-view"
+            "complaint-view",
+            "rtl"
         ],
         "designer|userAlias": "GoodPriceListView",
         "designer|userClassName": "GoodPriceListView",
         "itemId": "GoodPriceListView",
-        "layout": "fit",
+        "layout": "vbox",
         "scrollable": false
     },
     "name": "ShopPricesView1",
@@ -37,7 +38,7 @@
             "designerId": "672e3398-fa0e-4191-b799-c39bb662834c"
         },
         {
-            "type": "Ext.dataview.List",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
@@ -45,16 +46,13 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "CompanyList"
+                    "grid-header"
                 ],
-                "height": "100%",
-                "id": null,
-                "itemCls": "item-product",
-                "itemId": "lstPrices",
-                "store": null
+                "docked": "top",
+                "layout": "hbox"
             },
-            "name": "MyList1",
-            "designerId": "29ab6af2-3dff-451c-a7df-c8318203f418",
+            "name": "MyPanel",
+            "designerId": "3dcb24b0-0c6a-47c8-bfbf-f1a8f601f7db",
             "cn": [
                 {
                     "type": "Ext.Label",
@@ -65,10 +63,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "table-header"
+                            "header-cell1"
                         ],
-                        "docked": "top",
-                        "html": "اسم المحل"
+                        "docked": null,
+                        "html": "اسم المحل",
+                        "layout|flex": 1
                     },
                     "name": "MyLabel34",
                     "designerId": "18e105c2-578b-44c6-936e-49a0d3e10156"
@@ -82,14 +81,34 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "table-header"
+                            "header-cell1"
                         ],
-                        "docked": "top",
-                        "html": "السعر"
+                        "docked": null,
+                        "html": "السعر",
+                        "layout|flex": 1
                     },
                     "name": "MyLabel14",
                     "designerId": "329e6ae8-1b0c-4e48-907c-4ad74c2d9a15"
-                },
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "id": null,
+                "itemCls": "grid-row",
+                "itemId": "lstPrices",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "29ab6af2-3dff-451c-a7df-c8318203f418",
+            "cn": [
                 {
                     "type": "Ext.XTemplate",
                     "reference": {
@@ -100,10 +119,10 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tabl-row'>",
-                            "    <div class='tabl-cell'>{Shop.ShopName}</div>    ",
-                            "    <div class='tabl-cell'>{Price}</div>    ",
-                            "</div>"
+                            "",
+                            "    <div class='row-cell1'>{Shop.ShopName}</div>    ",
+                            "    <div class='row-cell2'>{Price}</div>    ",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
