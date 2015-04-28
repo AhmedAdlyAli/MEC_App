@@ -102,7 +102,9 @@ Ext.application({
         'AboutMinistryView',
         'MinistryBranchesView',
         'EconomicIndicatorsBrief',
-        'MyLabel6'
+        'MyLabel6',
+        'InvestorServiceView',
+        'ConsumerServiceView'
     ],
     controllers: [
         'HomeController',

@@ -5,48 +5,42 @@
     },
     "config_munge": {
         "files": {
-            "framework": {
+            "config.xml": {
                 "parents": {
-                    "ImageIO.framework": [
+                    "/*": [
                         {
-                            "xml": true,
+                            "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": false,
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         }
-                    ],
-                    "CoreLocation.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "AssetsLibrary.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "MobileCoreServices.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "AudioToolbox.framework": [
-                        {
-                            "xml": true,
-                            "count": 2
-                        }
-                    ],
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
                     "libiconv.dylib": [
                         {
                             "xml": false,
@@ -54,6 +48,12 @@
                         }
                     ],
                     "AVFoundation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AssetsLibrary.framework": [
                         {
                             "xml": false,
                             "count": 2
@@ -68,108 +68,36 @@
                     "QuartzCore.framework": [
                         {
                             "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
                             "count": 2
                         }
                     ],
-                    "CoreData.framework": [
+                    "MobileCoreServices.framework": [
                         {
                             "xml": false,
                             "count": 1
                         }
                     ],
-                    "CoreText.framework": [
+                    "AudioToolbox.framework": [
                         {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "GLKit.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "libc++.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "libicucore.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "libz.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "OpenGLES.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ]
-                }
-            },
-            "config.xml": {
-                "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"HttpRequest\"><param name=\"ios-package\" value=\"HttpRequest\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"GoogleMaps\"><param name=\"ios-package\" value=\"GoogleMaps\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"External\"><param name=\"ios-package\" value=\"External\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Geocoder\"><param name=\"ios-package\" value=\"Geocoder\" /></feature>",
+                            "xml": true,
                             "count": 1
                         }
                     ]
@@ -181,28 +109,6 @@
                         {
                             "xml": "<string />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<string>Show your location on the map</string>",
-                            "count": 1
-                        }
-                    ],
-                    "Google Maps API Key": [
-                        {
-                            "xml": "<string>AIzaSyCuOp-yWmouTftQpsFDTlxTFR4FBGDqgP4</string>",
-                            "count": 1
-                        }
-                    ],
-                    "NSLocationAlwaysUsageDescription": [
-                        {
-                            "xml": "<string>Trace your location on the map</string>",
-                            "count": 2
-                        }
-                    ],
-                    "CFBundleURLTypes": [
-                        {
-                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>MEC.MECAPP</string><key>CFBundleURLSchemes</key><array><string>MEC.MECAPP</string></array></dict></array>",
-                            "count": 1
                         }
                     ]
                 }
@@ -210,38 +116,27 @@
         }
     },
     "installed_plugins": {
+        "am.armsoft.plugins.ListPicker": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
+        },
+        "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
+        },
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "cordova-plugin-vibration": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
-        "am.armsoft.plugins.ListPicker": {
-            "PACKAGE_NAME": "MEC.MECAPP"
-        },
-        "com.phonegap.plugins.barcodescanner": {
-            "PACKAGE_NAME": "MEC.MECAPP"
-        },
         "nl.x-services.plugins.actionsheet": {
-            "PACKAGE_NAME": "MEC.MECAPP"
+            "PACKAGE_NAME": "com.domain.MEC_App"
         },
-        "plugin.google.maps": {
-            "API_KEY_FOR_IOS": "AIzaSyCuOp-yWmouTftQpsFDTlxTFR4FBGDqgP4",
-            "PACKAGE_NAME": "MEC.MECAPP"
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
         }
     },
-    "dependent_plugins": {
-        "plugin.http.request": {
-            "PACKAGE_NAME": "MEC.MECAPP"
-        },
-        "com.googlemaps.ios": {
-            "PACKAGE_NAME": "MEC.MECAPP"
-        }
-    }
+    "dependent_plugins": {}
 }

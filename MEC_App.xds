@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "webBuild",
-            "display": "Build web app"
+            "value": "nativeBuild",
+            "display": "Native Build"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
@@ -41,6 +41,8 @@
         "view": [
             "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "7b23aef6-db2d-4685-9251-d9486597a989",
+            "de8af37b-c568-427b-a133-80197b043d73",
+            "4db0d5ab-6e07-4ed3-9f2f-1c17b50b5d46",
             "4120aa2a-0201-4867-b1b7-de774744c5df",
             "4a0cd04b-c28e-477e-a81a-e02be07018db",
             "9f841d86-496b-40a3-a5a1-0a1d6404185c",

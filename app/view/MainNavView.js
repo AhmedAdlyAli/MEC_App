@@ -28,7 +28,7 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'mainNav',
-        defaultBackButtonText: ' ',
+        defaultBackButtonText: ' عودة',
         items: [
             {
                 xtype: 'panel',
@@ -284,7 +284,7 @@ Ext.define('MEC_App.view.MainNavView', {
 
         // Add Menu button
 
-         var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
+        var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
 
         navBar.add({
             xtype:'button',

@@ -1,9 +1,13 @@
 Plugins used in this project
 
-cordova-plugin-camera
+cordova plugin add cordova-plugin-camera
 cordova plugin add org.apache.cordova.device
 cordova plugin add am.armsoft.plugins.listpicker
+cordova plugin add cordova-plugin-dialogs
+cordova plugin add cordova-plugin-whitelist
+cordova plugin add plugin.google.maps
 
+cordova plugin add org.pbernasconi.progressindicator
 
 cordova plugin add com.phonegap.plugins.barcodescanner
 

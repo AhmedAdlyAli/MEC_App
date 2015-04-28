@@ -113,7 +113,9 @@
             "AboutMinistryView",
             "MinistryBranchesView",
             "EconomicIndicatorsBrief",
-            "MyLabel6"
+            "MyLabel6",
+            "InvestorServiceView",
+            "ConsumerServiceView"
         ]
     },
     "name": "Application",

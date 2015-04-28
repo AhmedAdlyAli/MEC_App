@@ -72,7 +72,9 @@
                     "Ext.Viewport.setMasked({",
                     "    xtype: 'loadmask',",
                     "    message: 'جاري التحميل ..'",
-                    "});"
+                    "});",
+                    "",
+                    "//ProgressIndicator.showSimple(true);"
                 ]
             },
             "name": "ShowLoading",
@@ -88,7 +90,9 @@
             "userConfig": {
                 "fn": "HideLoading",
                 "implHandler": [
-                    "Ext.Viewport.setMasked(false); // hide the load screen"
+                    "Ext.Viewport.setMasked(false); // hide the load screen",
+                    "//ProgressIndicator.hide();",
+                    ""
                 ]
             },
             "name": "HideLoading",

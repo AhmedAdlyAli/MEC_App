@@ -1,0 +1,165 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "InvestorServiceView",
+        "designer|userClassName": "InvestorServiceView",
+        "fullscreen": true,
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "PublicServiceView1",
+    "designerId": "4db0d5ab-6e07-4ed3-9f2f-1c17b50b5d46",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "var links = [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png'},",
+                    "                    {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png'},",
+                    "                    {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png'},",
+                    "                    {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png'},",
+                    "                    {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png'},",
+                    "                    {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png'}",
+                    "                    ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstLinks1');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "a2c7ced0-16bc-4373-8185-7b41a859cebb"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "service-title"
+                ],
+                "docked": "top",
+                "html": "خدمات المستثمر",
+                "id": null,
+                "itemId": "lblInvestor"
+            },
+            "name": "MyLabel",
+            "designerId": "2e906e5e-3b50-45c0-964f-515b0e168943"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 1,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "c497bf6b-62ea-4a8c-8d4d-667d2c6906bc",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel9",
+                    "designerId": "3c9986ac-442d-4a31-8b69-700edc9d5ab7",
+                    "cn": [
+                        {
+                            "type": "Ext.dataview.List",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "CompanyList"
+                                ],
+                                "height": 391,
+                                "itemCls": "item-link",
+                                "itemId": "lstLinks1"
+                            },
+                            "name": "MyList",
+                            "designerId": "96e0e04a-231d-4230-9aa9-12a4c91498e9",
+                            "cn": [
+                                {
+                                    "type": "Ext.XTemplate",
+                                    "reference": {
+                                        "name": "itemTpl",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|displayName": "itemTpl",
+                                        "implHandler": [
+                                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
+                                        ]
+                                    },
+                                    "name": "itemTpl",
+                                    "designerId": "b0cbd085-f7d8-4dcd-b56c-f36e099e65bb"
+                                },
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLstLinks1ItemTap",
+                                        "implHandler": [
+                                            "            Ext.Global.RedirectToView(record.data);",
+                                            ""
+                                        ],
+                                        "name": "itemtap"
+                                    },
+                                    "name": "onLstLinks1ItemTap",
+                                    "designerId": "bf2f7c56-0ccc-412b-ad56-c417c54efd42"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -5,6 +5,44 @@
     },
     "config_munge": {
         "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
             "framework": {
                 "parents": {
                     "libiconv.dylib": [
@@ -37,12 +75,6 @@
                             "count": 1
                         }
                     ],
-                    "AudioToolbox.framework": [
-                        {
-                            "xml": true,
-                            "count": 1
-                        }
-                    ],
                     "ImageIO.framework": [
                         {
                             "xml": true,
@@ -66,38 +98,10 @@
                             "xml": false,
                             "count": 1
                         }
-                    ]
-                }
-            },
-            "config.xml": {
-                "parents": {
-                    "/*": [
+                    ],
+                    "AudioToolbox.framework": [
                         {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ListPicker\"><param name=\"ios-package\" value=\"ListPicker\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "xml": true,
                             "count": 1
                         }
                     ]
@@ -116,10 +120,13 @@
         }
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "am.armsoft.plugins.ListPicker": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
         "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
+        },
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
         "cordova-plugin-dialogs": {
@@ -131,11 +138,11 @@
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
-        "am.armsoft.plugins.ListPicker": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "MEC.MECAPP"
+        "org.pbernasconi.progressindicator": {
+            "PACKAGE_NAME": "com.domain.MEC_App"
         }
     },
     "dependent_plugins": {}

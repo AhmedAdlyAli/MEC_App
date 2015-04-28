@@ -9,7 +9,7 @@
         "cls": [
             "home-wrapper"
         ],
-        "defaultBackButtonText": " ",
+        "defaultBackButtonText": " عودة",
         "designer|initialView": true,
         "designer|userAlias": "MainNavView",
         "designer|userClassName": "MainNavView",
@@ -605,7 +605,7 @@
                     "",
                     "// Add Menu button",
                     "",
-                    " var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();",
+                    "var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();",
                     "",
                     "navBar.add({",
                     "    xtype:'button',",

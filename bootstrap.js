@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -713,6 +702,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.ComplaintsView": [],
   "MEC_App.view.ConsumerEducationView": [],
   "MEC_App.view.ConsumerIndicatorsListing": [],
+  "MEC_App.view.ConsumerServiceView": [],
   "MEC_App.view.ContactUs2View": [],
   "MEC_App.view.ContactUsView": [],
   "MEC_App.view.DailyPricesView": [],
@@ -728,6 +718,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.HomeView": [],
   "MEC_App.view.InquiriesView": [],
   "MEC_App.view.InvestorEducationView": [],
+  "MEC_App.view.InvestorServiceView": [],
   "MEC_App.view.LoginFomView": [],
   "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [],
@@ -1356,17 +1347,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1575,6 +1555,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.view.ConsumerIndicatorsListing": [
     "widget.ConsumerIndicatorsListing"
   ],
+  "MEC_App.view.ConsumerServiceView": [
+    "widget.ConsumerServiceView"
+  ],
   "MEC_App.view.ContactUs2View": [
     "widget.ContactUs2View"
   ],
@@ -1619,6 +1602,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.InvestorEducationView": [
     "widget.InvestorEducationView"
+  ],
+  "MEC_App.view.InvestorServiceView": [
+    "widget.InvestorServiceView"
   ],
   "MEC_App.view.LoginFomView": [
     "widget.LoginFomView"

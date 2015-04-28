@@ -35,6 +35,34 @@ Ext.define('MEC_App.controller.LoginController', {
     onBtnSubmitLoginTap: function(button, e, eOpts) {
         var view = this.getLoginFormView();
 
+        var formData =view.getValues();
+
+        var err='';
+
+        if(formData.txtUserName===''){
+
+            err+=Ext.Global.GetValidationMsg('errUserName');
+        }
+
+
+        if(formData.txtPassword===''){
+
+            err+=Ext.Global.GetValidationMsg('errPassword');
+        }
+
+
+        if(err.length>0){
+
+            Ext.device.Notification.show({
+                title: 'خطأ',
+                buttons:["موافق"],
+                message: err
+            });
+
+            return;
+        }
+
+
 
 
         var requestData = {
@@ -92,17 +120,8 @@ Ext.define('MEC_App.controller.LoginController', {
 
                 }
 
-
-
-
             }
         });
-
-
-
-
-
-
 
 
 

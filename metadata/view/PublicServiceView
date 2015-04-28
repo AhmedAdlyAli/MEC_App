@@ -27,33 +27,16 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "var links = [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'HListIcon.png'},",
-                    "                    {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'HListIcon.png'},",
-                    "                    {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'HListIcon.png'},",
-                    "                    {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'HListIcon.png'},",
-                    "                    {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'HListIcon.png'},",
-                    "                    {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'HListIcon.png'}",
-                    "                    ];",
+                    "var links = [",
+                    "                {Name:'خدمات المستثمر',Url:'InvestorServiceView',RequireLogin:false,Icon:'ico-investorService.png'},",
+                    "                {Name:'خدمات المستهلك',Url:'ConsumerServiceView', RequireLogin:false, Icon:'ico-consumerService.png'}",
+                    "            ];",
                     "",
                     "var store = new Ext.data.Store({",
                     "    data : links",
                     "});",
                     "",
-                    "var lst = this.down('#lstLinks1');",
-                    "lst.setStore(store);",
-                    "lst.setScrollable(false);",
-                    "",
-                    "",
-                    "",
-                    " links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'HListIcon.png'},",
-                    "                    {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'HListIcon.png'}",
-                    "                    ];",
-                    "",
-                    " store = new Ext.data.Store({",
-                    "    data : links",
-                    "});",
-                    "",
-                    " lst = this.down('#lstLinks2');",
+                    "var lst = this.down('#lstLinks');",
                     "lst.setStore(store);",
                     "lst.setScrollable(false);",
                     "",
@@ -157,7 +140,7 @@
                     "inner-panel"
                 ],
                 "height": "auto",
-                "layout|flex": 2.2,
+                "layout|flex": 2.7,
                 "scrollable": [
                     "{ direction: 'vertical', directionLock: true }"
                 ]
@@ -169,126 +152,6 @@
             "designerId": "3adcd096-67fe-4879-836f-d6cc4d81e98b",
             "cn": [
                 {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout": "vbox"
-                    },
-                    "name": "MyPanel9",
-                    "designerId": "ed673919-8367-4368-9767-e54df485072d",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "service-title"
-                                ],
-                                "html": "خدمات المستثمر",
-                                "id": null,
-                                "itemId": "lblInvestor"
-                            },
-                            "name": "MyLabel",
-                            "designerId": "3ef3c3cd-2e2f-4604-b0b0-df9c3103423b"
-                        },
-                        {
-                            "type": "Ext.dataview.List",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "CompanyList"
-                                ],
-                                "height": 295,
-                                "itemCls": "item-link",
-                                "itemId": "lstLinks1"
-                            },
-                            "name": "MyList",
-                            "designerId": "0bbeed6a-7afe-4095-b4d2-393750984391",
-                            "cn": [
-                                {
-                                    "type": "Ext.XTemplate",
-                                    "reference": {
-                                        "name": "itemTpl",
-                                        "type": "object"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|displayName": "itemTpl",
-                                        "implHandler": [
-                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
-                                        ]
-                                    },
-                                    "name": "itemTpl",
-                                    "designerId": "75e9c442-e2dc-4b12-aec7-e6ff5344c972"
-                                },
-                                {
-                                    "type": "basiceventbinding",
-                                    "reference": {
-                                        "name": "listeners",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fn": "onLstLinks1ItemTap",
-                                        "implHandler": [
-                                            "            Ext.Global.RedirectToView(record.data);",
-                                            ""
-                                        ],
-                                        "name": "itemtap"
-                                    },
-                                    "name": "onLstLinks1ItemTap",
-                                    "designerId": "41f4ecf5-fcf6-4b03-9b0c-343f02f68bcc"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "layout": "vbox"
-                    },
-                    "name": "MyPanel10",
-                    "designerId": "9dc8387d-db98-4b0b-8054-aefc4bdc7c9a",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "service-title"
-                                ],
-                                "html": "خدمات المستهلك",
-                                "id": null,
-                                "itemId": "lblConsumer"
-                            },
-                            "name": "MyLabel1",
-                            "designerId": "9401d165-b5e6-4e21-8fcb-c8a6630fcb0b"
-                        }
-                    ]
-                },
-                {
                     "type": "Ext.dataview.List",
                     "reference": {
                         "name": "items",
@@ -299,9 +162,9 @@
                         "cls": [
                             "CompanyList"
                         ],
-                        "height": 100,
+                        "height": 131,
                         "itemCls": "item-link",
-                        "itemId": "lstLinks2"
+                        "itemId": "lstLinks"
                     },
                     "name": "MyList4",
                     "designerId": "109393b3-074a-4042-a1d9-d9126560608d",
@@ -316,7 +179,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                    "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
                                 ]
                             },
                             "name": "itemTpl",
@@ -330,14 +193,14 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onLstLinks1ItemTap1",
+                                "fn": "onLstLinksItemTap",
                                 "implHandler": [
                                     "            Ext.Global.RedirectToView(record.data);",
                                     ""
                                 ],
                                 "name": "itemtap"
                             },
-                            "name": "onLstLinks1ItemTap1",
+                            "name": "onLstLinksItemTap",
                             "designerId": "c9b55f6b-b82e-4560-b9ba-79d20d2474ed"
                         }
                     ]

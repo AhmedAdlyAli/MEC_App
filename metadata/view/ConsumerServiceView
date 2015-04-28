@@ -1,0 +1,170 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "ConsumerServiceView",
+        "designer|userClassName": "ConsumerServiceView",
+        "fullscreen": true,
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "PublicServiceView2",
+    "designerId": "de8af37b-c568-427b-a133-80197b043d73",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'ico-complaints.png'},",
+                    "                    {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'ico-supplyService.png'}",
+                    "                    ];",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstLinks2');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "c4c17136-c5fc-453a-a512-ccb62c2af8bc"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 2.2,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "0b9593bf-4f78-44f6-97a9-d6e84d3eb5ec",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel10",
+                    "designerId": "c827d791-8e86-4209-a8f5-8cf05cdb40aa",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-title"
+                                ],
+                                "html": "خدمات المستهلك",
+                                "id": null,
+                                "itemId": "lblConsumer"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "6d3a8181-5128-465d-a0a9-c0774661c0c5"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "CompanyList"
+                        ],
+                        "height": 131,
+                        "itemCls": "item-link",
+                        "itemId": "lstLinks2"
+                    },
+                    "name": "MyList4",
+                    "designerId": "490c38a9-5482-41b4-aef9-f20be543aad1",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "ece6d80f-837f-41a5-9794-c5bf7fc91d79"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLstLinks1ItemTap1",
+                                "implHandler": [
+                                    "            Ext.Global.RedirectToView(record.data);",
+                                    ""
+                                ],
+                                "name": "itemtap"
+                            },
+                            "name": "onLstLinks1ItemTap1",
+                            "designerId": "057ae2f2-dfcb-4d0f-97a8-579409b982a9"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

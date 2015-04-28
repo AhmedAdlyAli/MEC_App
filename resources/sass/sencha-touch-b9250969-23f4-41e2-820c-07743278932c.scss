@@ -7,49 +7,44 @@ $list-rounded-radius: 0;
 @import 'sencha-touch/default/all';
 
 
-body {
-    background-color: #671f48;
+@font-face {
+  font-family: 'PFDinTextUniversal';
+  src: url('fonts/PFDinTextUniversal.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal.otf')  format('opentype'),
+	     url('fonts/PFDinTextUniversal.woff') format('woff'), url('fonts/PFDinTextUniversal.ttf')  format('truetype'), url('fonts/PFDinTextUniversal.svg#PFDinTextUniversal') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face{font-family:'HelveticaNeueLTStd87HvCn';src:url('fonts/helveticaneueltstd-hvcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-@font-face{font-family:'HelveticaNeueLTStd47LtCn';src:url('fonts/helveticaneueltstd-ltcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-@font-face{font-family:'HelveticaNeueLTStd67MdCn';src:url('fonts/helveticaneueltstd-mdcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-@font-face{font-family:'HelveticaNeueLTStd37ThCn';src:url('fonts/helveticaneueltstd-thcn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-@font-face{font-family:'HelveticaNeueLTStd57Condensed';src:url('fonts/helveticaneueltstd-cn-webfont.ttf') format('truetype');font-weight:normal;font-style:normal}
-
-@font-face {font-family: 'pf_din_text_universalregular';src: url('fonts/PFDinTextUniversal-Regular-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universalthin';src: url('fonts/PFDinTextUniversal-Thin-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universalXBlk';src: url('fonts/PFDinTextUniversal-XBlack-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universalXTh';src: url('fonts/PFDinTextUniversal-XThin-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universalbold';src: url('fonts/PFDinTextUniversal-Bold-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universalhairline';src: url('fonts/PFDinTextUniversal-Hairline-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pf_din_text_universallight';src: url('fonts/PFDinTextUniversal-Light-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face {font-family: 'pfDinTextUniversalMedium';src: url('fonts/PFDinTextUniversal-Medium_gdi.ttf') format('truetype');font-weight: normal;font-style: normal;}
-
-@font-face{font-family:'Droid Arabic Kufi';font-style:normal;font-weight:400;
-    src:url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot);
-    src:url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.eot?#iefix) format("embedded-opentype"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff2) format("x-woff2"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.woff) format("woff"),
-        url(//themes.googleusercontent.com/static/fonts/earlyaccess/droidarabickufi/v3/DroidKufi-Regular.ttf) format("truetype")}
+@font-face {
+    font-family: 'PFDinTextUniversal-Medium';
+    src: url('fonts/PFDinTextUniversal-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal-Medium.otf')  format('opentype'),
+        url('fonts/PFDinTextUniversal-Medium.woff') format('woff'), url('fonts/PFDinTextUniversal-Medium.ttf')  format('truetype'), url('fonts/PFDinTextUniversal-Medium.svg#PFDinTextUniversal-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html,
 body {
-    font-family: 'Droid Arabic Kufi'; 
-    font-weight: 400; 
-    font-style: normal; 
+    background-color: #671f48;
+    font-family: 'PFDinTextUniversal' !important;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+}
+
+.x-button-label {
+    font-family: 'PFDinTextUniversal' !important;
+    font-weight: normal !important;
+    font-style: normal !important;
 }
 
 .x-toolbar-dark {
     background-color: #fff;
     padding-top: 18px;
+
+    .x-button {
+        color: #701d45;
+    }
 }
 
 .home-wrapper {
@@ -64,10 +59,19 @@ body {
 
         .x-button-back {
             margin-left: 1em;
-            background: url(../images/btn-back.png) no-repeat;
-            background-size: 15px 100%;
 
-            &:before,
+            .x-button-label {
+                font-size: 90%;
+                line-height: 1.8em;
+            }
+
+            &:before {
+                -webkit-mask: none;
+                background: url(../images/btn-back.png) no-repeat;
+                background-size: 15px 100%;
+                left: -9px;
+            }
+
             &:after {
                 -webkit-mask: none;
                 background: none;
@@ -93,6 +97,7 @@ body {
             background: rgba(255,255,255,0.7);
             padding: 10px;
             color: #000;
+            font-size: 85%;
         }
     }
 }
@@ -103,79 +108,80 @@ body {
     .home-icon-text {
         color: #fff;
         text-align: center;
-        margin: 2% 0 8%;
+        margin: 2% 0 15%;
+        font-size: 85%;
     }
 
     .btn-services {
-        background: #3a2639;
+        background: #362939;
     }
 
     .services {
         background: url(../images/home-icon-public-services.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 
     .btn-news {
-        background: #633054;
+        background: #701d45;
     }
 
     .media {
         background: url(../images/home-icon-media.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 
     .btn-reports {
-        background: #691648;
+        background: #701d45;
     }
 
     .reports {
         background: url(../images/home-icon-reports.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 
     .btn-inquire {
-        background: #3a2639;
+        background: #362939;
     }
 
     .inquiries {
         background: url(../images/home-icon-inquiries.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 
     .btn-projects {
-        background: #4f2440;
+        background: #362939;
     }
 
     .projects {
         background: url(../images/home-icon-projects.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 
     .btn-contact {
-        background: #691648;
+        background: #701d45;
     }
 
     .contact {
         background: url(../images/home-icon-contact.png) no-repeat center;
         background-size: contain;
-        margin: 10% 0 3%;
+        margin: 15% 0 3%;
     }
 }
 
 .services-header,
 .print-office-header {
     direction: rtl;
-    background: url(../images/home-header-bg.jpg);
+    background: url(../images/home-header-bg.jpg) bottom center;
     background-size: cover;
 
     .services-header-overlay,
     .print-office-header-overlay {
-        background: rgba(105,30,73,0.8);
+        background: rgba(112,29,69,0.93);
 
         .x-button {
             background: none;
@@ -212,10 +218,8 @@ body {
         .print-office-header-title,
         .service-header-title {
             color: #fff;
-            font-size: 26px;
-            font-weight: bold;
+            font-size: 115%;
             text-align: center;
-            margin: 0 0 5%;
         }
     }
 }
@@ -226,15 +230,15 @@ body {
 
 .inner-panel {
     direction: rtl;
-    background: #fff;
+    background: #f5f5f5;
 }
 
 .service-title {
-    direction: rtl;
-    background: #e1e1e1;
-    color: #661f46;
-    padding: 5px 20px;
-    font-size: 20px;
+    background: #f5f5f5;
+    color: #000;
+    padding: 15px 0;
+    font-family: 'PFDinTextUniversal-Medium' !important;
+    text-align: center;
 }
 
 .services-list-panel {
@@ -503,7 +507,7 @@ body {
 
 
 .complaint-view {
-
+    font-size: 90%;
 
     .x-form-fieldset  {
         direction: rtl;
@@ -538,18 +542,28 @@ body {
     }
 
 
-
-
-
     .btn-send {
         background: #691e49;
         margin: 10px;
-        height:2em;
-
+        height:2.5em;
 
         .x-button-label {
             text-align: center;
             color: #fff;
+        }
+    }
+
+
+    .btn-alt {
+        background: #fff;
+        margin: 0px 10px 10px;
+        height:2.5em;
+        border: solid 2px #691e49;
+        overflow: visible;
+
+        .x-button-label {
+            text-align: center;
+            color: #691e49;
         }
     }
 
@@ -1034,19 +1048,14 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 
-.item-shop, .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
+.item-shop,
+.item-shop.x-list-item.x-item-selected.x-list-item-tpl{
 
-    //background
     padding-top:1em;
     padding-bottom:1em;
     padding-right:3em;
     background: url(../images/request.png) no-repeat 96% center;
-
-
     border-top:1px solid #dedede !important;
-
-
-
 
     .tpl-shop1-1{
         color: #010101;
@@ -1087,10 +1096,21 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 
-.item-link, .item-link.x-list-item.x-item-selected.x-list-item-tpl{
-    padding-right:3em;
-    background: url(../images/request.png) no-repeat 96% center !important;
-    border-top:1px solid #dedede !important;
+.item-link,
+.item-link.x-list-item.x-item-selected.x-list-item-tpl {
+    background: none !important;
+    border-top: 1px solid #dedede !important;
+
+    .x-innerhtml {
+        padding: 16px 15px !important;
+    }
+
+    .nav-item {
+        background-position: right center !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        padding: 4px 3em 4px 0;
+    }
 }
 
 
@@ -1373,30 +1393,25 @@ background: url(../images/toplogo.png) no-repeat center top;
     padding:1em;
 }
 
+.sign-in-header-icon {
+    background: url(../images/sign-in-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
 
+.login-form {
+    background: #fff;
 
+    .x-form-fieldset-inner {
+        @include border-radius(0);
+        border-bottom: none;
+    }
 
+    .login-links {
+        text-align: left;
+        text-decoration: underline;
+        color: #691e49;
+        margin: 5px 10px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

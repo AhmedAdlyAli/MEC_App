@@ -15,7 +15,8 @@
         "layout": "vbox",
         "requires": [
             "Ext.device.Notification"
-        ]
+        ],
+        "scrollable": false
     },
     "designerId": "ee788c50-330e-4972-a16a-88b7981051a1",
     "cn": [
@@ -61,7 +62,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "print-office-header-icon"
+                                    "sign-in-header-icon"
                                 ],
                                 "layout|flex": 2
                             },
@@ -99,11 +100,50 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 2.2
+                "cls": [
+                    "login-form"
+                ],
+                "layout|flex": 2.7,
+                "padding": null
             },
             "name": "MyPanel7",
             "designerId": "15799ff3-1832-4307-8157-a969d5102b99",
             "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-alt"
+                        ],
+                        "docked": "bottom",
+                        "text": "مستخدم جديد"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "25ad4357-94c4-4a63-a55d-dd51319aafd1"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "docked": "bottom",
+                        "id": "btnSubmitLogin",
+                        "text": "تسجيل الدخول"
+                    },
+                    "name": "MyButton",
+                    "designerId": "3e4ad74e-de41-4338-a780-f9c70242e791"
+                },
                 {
                     "type": "Ext.form.FieldSet",
                     "reference": {
@@ -112,7 +152,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": null
+                        "centered": true,
+                        "title": null,
+                        "width": "100%"
                     },
                     "name": "MyFieldSet",
                     "designerId": "11856e6e-ce2f-4fcd-9222-e2ee9ad6edda",
@@ -127,6 +169,8 @@
                             "userConfig": {
                                 "itemId": "txtUserName",
                                 "label": "اسم المستخدم",
+                                "labelWidth": "35%",
+                                "name": "txtUserName",
                                 "placeHolder": "اسم المستخدم"
                             },
                             "name": "MyTextField",
@@ -142,6 +186,8 @@
                             "userConfig": {
                                 "itemId": "txtPassword",
                                 "label": "كلمة المرور",
+                                "labelWidth": "35%",
+                                "name": "txtPassword",
                                 "placeHolder": "كلمة المرور"
                             },
                             "name": "MyPasswordField",
@@ -163,39 +209,6 @@
                             },
                             "name": "MyLabel14",
                             "designerId": "174c990f-6389-4c76-9a7e-14cae29495bd"
-                        },
-                        {
-                            "type": "Ext.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "btn-send"
-                                ],
-                                "id": "btnSubmitLogin",
-                                "text": "تسجيل الدخول"
-                            },
-                            "name": "MyButton",
-                            "designerId": "3e4ad74e-de41-4338-a780-f9c70242e791"
-                        },
-                        {
-                            "type": "Ext.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "btn-send"
-                                ],
-                                "text": "مستخدم جديد"
-                            },
-                            "name": "MyButton1",
-                            "designerId": "25ad4357-94c4-4a63-a55d-dd51319aafd1"
                         }
                     ]
                 }

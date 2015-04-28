@@ -20,9 +20,9 @@ Ext.define('MEC_App.view.LoginFomView', {
     requires: [
         'Ext.Panel',
         'Ext.Label',
+        'Ext.Button',
         'Ext.form.FieldSet',
         'Ext.field.Password',
-        'Ext.Button',
         'Ext.device.Notification'
     ],
 
@@ -30,6 +30,7 @@ Ext.define('MEC_App.view.LoginFomView', {
         cls: 'complaint-view',
         itemId: 'LoginFomView',
         layout: 'vbox',
+        scrollable: false,
         items: [
             {
                 xtype: 'panel',
@@ -45,7 +46,7 @@ Ext.define('MEC_App.view.LoginFomView', {
                             {
                                 xtype: 'panel',
                                 flex: 2,
-                                cls: 'print-office-header-icon'
+                                cls: 'sign-in-header-icon'
                             },
                             {
                                 xtype: 'label',
@@ -60,21 +61,41 @@ Ext.define('MEC_App.view.LoginFomView', {
             },
             {
                 xtype: 'panel',
-                flex: 2.2,
+                flex: 2.7,
+                cls: 'login-form',
                 items: [
                     {
+                        xtype: 'button',
+                        cls: 'btn-alt',
+                        docked: 'bottom',
+                        text: 'مستخدم جديد'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'btn-send',
+                        docked: 'bottom',
+                        id: 'btnSubmitLogin',
+                        text: 'تسجيل الدخول'
+                    },
+                    {
                         xtype: 'fieldset',
+                        centered: true,
+                        width: '100%',
                         items: [
                             {
                                 xtype: 'textfield',
                                 itemId: 'txtUserName',
                                 label: 'اسم المستخدم',
+                                labelWidth: '35%',
+                                name: 'txtUserName',
                                 placeHolder: 'اسم المستخدم'
                             },
                             {
                                 xtype: 'passwordfield',
                                 itemId: 'txtPassword',
                                 label: 'كلمة المرور',
+                                labelWidth: '35%',
+                                name: 'txtPassword',
                                 placeHolder: 'كلمة المرور'
                             },
                             {
@@ -82,17 +103,6 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 cls: 'login-links',
                                 html: 'نسيت كلمة السر',
                                 itemId: 'lblForgotPassword'
-                            },
-                            {
-                                xtype: 'button',
-                                cls: 'btn-send',
-                                id: 'btnSubmitLogin',
-                                text: 'تسجيل الدخول'
-                            },
-                            {
-                                xtype: 'button',
-                                cls: 'btn-send',
-                                text: 'مستخدم جديد'
                             }
                         ]
                     }

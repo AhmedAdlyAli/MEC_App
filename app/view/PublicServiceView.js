@@ -59,7 +59,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
             },
             {
                 xtype: 'panel',
-                flex: 2.2,
+                flex: 2.7,
                 cls: 'inner-panel',
                 height: 'auto',
                 scrollable: {
@@ -68,47 +68,13 @@ Ext.define('MEC_App.view.PublicServiceView', {
                 },
                 items: [
                     {
-                        xtype: 'panel',
-                        layout: 'vbox',
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'service-title',
-                                html: 'خدمات المستثمر',
-                                itemId: 'lblInvestor'
-                            },
-                            {
-                                xtype: 'list',
-                                cls: 'CompanyList',
-                                height: 295,
-                                itemId: 'lstLinks1',
-                                itemCls: 'item-link',
-                                itemTpl: [
-                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'panel',
-                        layout: 'vbox',
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'service-title',
-                                html: 'خدمات المستهلك',
-                                itemId: 'lblConsumer'
-                            }
-                        ]
-                    },
-                    {
                         xtype: 'list',
                         cls: 'CompanyList',
-                        height: 100,
-                        itemId: 'lstLinks2',
+                        height: 131,
+                        itemId: 'lstLinks',
                         itemCls: 'item-link',
                         itemTpl: [
-                            '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
+                            '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                         ]
                     }
                 ]
@@ -116,24 +82,14 @@ Ext.define('MEC_App.view.PublicServiceView', {
         ],
         listeners: [
             {
-                fn: 'onLstLinks1ItemTap',
+                fn: 'onLstLinksItemTap',
                 event: 'itemtap',
-                delegate: '#lstLinks1'
-            },
-            {
-                fn: 'onLstLinks1ItemTap1',
-                event: 'itemtap',
-                delegate: '#lstLinks2'
+                delegate: '#lstLinks'
             }
         ]
     },
 
-    onLstLinks1ItemTap: function(dataview, index, target, record, e, eOpts) {
-                    Ext.Global.RedirectToView(record.data);
-
-    },
-
-    onLstLinks1ItemTap1: function(dataview, index, target, record, e, eOpts) {
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
                     Ext.Global.RedirectToView(record.data);
 
     },
@@ -141,33 +97,16 @@ Ext.define('MEC_App.view.PublicServiceView', {
     initialize: function() {
         this.callParent();
 
-        var links = [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'HListIcon.png'},
-                            {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'HListIcon.png'},
-                            {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'HListIcon.png'},
-                            {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'HListIcon.png'},
-                            {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'HListIcon.png'},
-                            {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'HListIcon.png'}
-                            ];
+        var links = [
+                        {Name:'خدمات المستثمر',Url:'InvestorServiceView',RequireLogin:false,Icon:'ico-investorService.png'},
+                        {Name:'خدمات المستهلك',Url:'ConsumerServiceView', RequireLogin:false, Icon:'ico-consumerService.png'}
+                    ];
 
         var store = new Ext.data.Store({
             data : links
         });
 
-        var lst = this.down('#lstLinks1');
-        lst.setStore(store);
-        lst.setScrollable(false);
-
-
-
-         links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'HListIcon.png'},
-                            {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'HListIcon.png'}
-                            ];
-
-         store = new Ext.data.Store({
-            data : links
-        });
-
-         lst = this.down('#lstLinks2');
+        var lst = this.down('#lstLinks');
         lst.setStore(store);
         lst.setScrollable(false);
 
