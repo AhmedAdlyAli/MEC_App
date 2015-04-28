@@ -69,12 +69,12 @@
             "userConfig": {
                 "fn": "ShowLoading",
                 "implHandler": [
-                    "Ext.Viewport.setMasked({",
-                    "    xtype: 'loadmask',",
-                    "    message: 'جاري التحميل ..'",
-                    "});",
+                    "//Ext.Viewport.setMasked({",
+                    "//    xtype: 'loadmask',",
+                    "//    message: 'جاري التحميل ..'",
+                    "//});",
                     "",
-                    "//ProgressIndicator.showSimple(true);"
+                    "ProgressIndicator.showSimple(true);"
                 ]
             },
             "name": "ShowLoading",
@@ -90,8 +90,8 @@
             "userConfig": {
                 "fn": "HideLoading",
                 "implHandler": [
-                    "Ext.Viewport.setMasked(false); // hide the load screen",
-                    "//ProgressIndicator.hide();",
+                    "//Ext.Viewport.setMasked(false); // hide the load screen",
+                    "ProgressIndicator.hide();",
                     ""
                 ]
             },
