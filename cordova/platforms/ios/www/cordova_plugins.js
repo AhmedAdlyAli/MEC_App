@@ -15,34 +15,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-        "id": "cordova-plugin-camera.Camera",
-        "clobbers": [
-            "Camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-        "id": "cordova-plugin-camera.CameraPopoverOptions",
-        "clobbers": [
-            "CameraPopoverOptions"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/Camera.js",
-        "id": "cordova-plugin-camera.camera",
-        "clobbers": [
-            "navigator.camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/ios/CameraPopoverHandle.js",
-        "id": "cordova-plugin-camera.CameraPopoverHandle",
-        "clobbers": [
-            "CameraPopoverHandle"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-dialogs/www/notification.js",
         "id": "cordova-plugin-dialogs.notification",
         "merges": [
@@ -76,7 +48,6 @@ module.exports.metadata =
 {
     "am.armsoft.plugins.ListPicker": "2.2.0",
     "com.phonegap.plugins.barcodescanner": "2.0.1",
-    "cordova-plugin-camera": "1.0.0",
     "cordova-plugin-dialogs": "1.0.0",
     "nl.x-services.plugins.actionsheet": "1.1.4",
     "org.apache.cordova.device": "0.3.0",

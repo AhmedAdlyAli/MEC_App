@@ -17,14 +17,6 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         },
@@ -60,7 +52,7 @@
                     "AssetsLibrary.framework": [
                         {
                             "xml": false,
-                            "count": 2
+                            "count": 1
                         }
                     ],
                     "CoreVideo.framework": [
@@ -75,30 +67,10 @@
                             "count": 1
                         }
                     ],
-                    "ImageIO.framework": [
-                        {
-                            "xml": true,
-                            "count": 1
-                        }
-                    ],
-                    "CoreLocation.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "CoreGraphics.framework": [
-                        {
-                            "xml": false,
-                            "count": 2
-                        }
-                    ],
-                    "MobileCoreServices.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
+                    "ImageIO.framework": [],
+                    "CoreLocation.framework": [],
+                    "CoreGraphics.framework": [],
+                    "MobileCoreServices.framework": [],
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
@@ -109,12 +81,7 @@
             },
             "*-Info.plist": {
                 "parents": {
-                    "NSLocationWhenInUseUsageDescription": [
-                        {
-                            "xml": "<string />",
-                            "count": 1
-                        }
-                    ]
+                    "NSLocationWhenInUseUsageDescription": []
                 }
             }
         }
@@ -124,9 +91,6 @@
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
         "com.phonegap.plugins.barcodescanner": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.domain.MEC_App"
         },
         "cordova-plugin-dialogs": {
