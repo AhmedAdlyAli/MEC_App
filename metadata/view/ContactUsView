@@ -135,7 +135,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "height": 300,
+                                "height": 326,
                                 "itemCls": "item-link",
                                 "itemId": "lstViewLinks"
                             },
@@ -152,7 +152,7 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
                                         ]
                                     },
                                     "name": "itemTpl",
@@ -194,11 +194,11 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'HListIcon.png'},",
-                    "             {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},",
-                    "             {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'qqqqHListIcon.png'},",
-                    "             {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},",
-                    "             {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}",
+                    "var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},",
+                    "             {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},",
+                    "             {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},",
+                    "             {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},",
+                    "             {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}",
                     "            ];",
                     "",
                     "var store = new Ext.data.Store({",

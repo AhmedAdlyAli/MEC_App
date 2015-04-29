@@ -73,11 +73,11 @@ Ext.define('MEC_App.view.ContactUsView', {
                         items: [
                             {
                                 xtype: 'list',
-                                height: 300,
+                                height: 326,
                                 itemId: 'lstViewLinks',
                                 itemCls: 'item-link',
                                 itemTpl: [
-                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
+                                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
@@ -102,11 +102,11 @@ Ext.define('MEC_App.view.ContactUsView', {
     initialize: function() {
         this.callParent();
 
-        var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'HListIcon.png'},
-                     {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'HListIcon.png'},
-                     {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'qqqqHListIcon.png'},
-                     {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'HListIcon.png'},
-                     {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'HListIcon.png'}
+        var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
+                     {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
+                     {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+                     {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
+                     {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
                     ];
 
         var store = new Ext.data.Store({
