@@ -171,7 +171,10 @@
                                 "label": "اسم المستخدم",
                                 "labelWidth": "35%",
                                 "name": "txtUserName",
-                                "placeHolder": "اسم المستخدم"
+                                "placeHolder": "اسم المستخدم",
+                                "value": [
+                                    "28881809077"
+                                ]
                             },
                             "name": "MyTextField",
                             "designerId": "b200a8b6-5d53-4210-afc7-a693b2a0a0ce"
@@ -188,7 +191,10 @@
                                 "label": "كلمة المرور",
                                 "labelWidth": "35%",
                                 "name": "txtPassword",
-                                "placeHolder": "كلمة المرور"
+                                "placeHolder": "كلمة المرور",
+                                "value": [
+                                    "34567"
+                                ]
                             },
                             "name": "MyPasswordField",
                             "designerId": "21eeec9a-b1f4-4d8a-811e-6e13beebf59a"

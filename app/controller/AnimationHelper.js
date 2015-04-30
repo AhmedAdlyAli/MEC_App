@@ -53,17 +53,38 @@ Ext.define('MEC_App.controller.AnimationHelper', {
     },
 
     ShowLoading: function() {
-        //Ext.Viewport.setMasked({
-        //    xtype: 'loadmask',
-        //    message: 'جاري التحميل ..'
-        //});
 
+
+        try {
         ProgressIndicator.showSimple(true);
+
+        }
+        catch(err) {
+
+        Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'جاري التحميل ..'
+        });
+
+
+        }
+
+
+
+
     },
 
     HideLoading: function() {
-        //Ext.Viewport.setMasked(false); // hide the load screen
-        ProgressIndicator.hide();
+
+          try {
+                ProgressIndicator.hide();
+
+               }
+                catch(err) {
+
+                    Ext.Viewport.setMasked(false);
+
+                }
 
     }
 

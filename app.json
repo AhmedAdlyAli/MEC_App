@@ -5,7 +5,7 @@
          "packager": "cordova",
          "cordova": {
             "config": {
-               "platforms": "ios android",
+               "platforms": "ios",
                "id": "MEC.MEC_App"
             }
          }
@@ -15,7 +15,7 @@
    "url": null,
    "js": [
       {
-         "path": "touch/sencha-touch.js",
+         "path": "touch/sencha-touch-all.js",
          "x-bootstrap": true
       },
       {
