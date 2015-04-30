@@ -63,7 +63,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                     },
                     {
                         xtype: 'panel',
-                        flex: 2.2,
+                        flex: 2.7,
                         cls: 'inner-panel',
                         height: 'auto',
                         scrollable: {

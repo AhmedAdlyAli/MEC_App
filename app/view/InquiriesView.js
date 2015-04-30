@@ -48,7 +48,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                                     {
                                         xtype: 'panel',
                                         flex: 2,
-                                        cls: 'service-header-icon'
+                                        cls: 'inquire-header-icon'
                                     },
                                     {
                                         xtype: 'label',
@@ -63,7 +63,7 @@ Ext.define('MEC_App.view.InquiriesView', {
                     },
                     {
                         xtype: 'panel',
-                        flex: 2.2,
+                        flex: 2.7,
                         cls: 'inner-panel',
                         height: 'auto',
                         scrollable: {
@@ -74,11 +74,11 @@ Ext.define('MEC_App.view.InquiriesView', {
                             {
                                 xtype: 'list',
                                 cls: 'CompanyList',
-                                height: 400,
+                                height: 391,
                                 itemId: 'lstViewLinks',
                                 itemCls: 'item-link',
                                 itemTpl: [
-                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
+                                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
@@ -104,12 +104,12 @@ Ext.define('MEC_App.view.InquiriesView', {
         this.callParent();
 
 
-        var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'HListIcon.png'},
-                            {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'HListIcon.png'},
-                            {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'HListIcon.png'},
-                            {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'HListIcon.png'},
-                            {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'HListIcon.png'},
-                            {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'HListIcon.png'}
+        var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'ico-search-trade-name.png'},
+                            {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'ico-search-trade-activity.png'},
+                            {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'ico-recall-item.png'},
+                            {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'ico-consumer-cultuer.png'},
+                            {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'ico-investor-culture.png'},
+                            {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'ico-violations.png'}
                             ];
 
         var store = new Ext.data.Store({

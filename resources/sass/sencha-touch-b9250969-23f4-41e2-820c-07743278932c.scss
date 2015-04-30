@@ -471,7 +471,7 @@ body {
     }
 
     .map-panel {
-        margin: 15px;
+        margin: 0 0 10px;
     }
 
     .x-button {
@@ -1395,6 +1395,24 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .sign-in-header-icon {
     background: url(../images/sign-in-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
+
+.media-header-icon {
+    background: url(../images/media-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
+
+.reports-header-icon {
+    background: url(../images/reports-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
+
+.inquire-header-icon {
+    background: url(../images/inquire-img.png) no-repeat center;
     background-size: contain;
     margin: 5% 0;
 }

@@ -37,12 +37,12 @@
                     "",
                     "",
                     "",
-                    "       var links = [{Name:'أخبار الوزارة', CatID:1,Icon:''},",
-                    "                    {Name:'إنعكاسات', CatID:8,Icon:''},",
-                    "                    {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:''},",
-                    "                    {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:''},",
-                    "                    {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:''},",
-                    "                    {Name:'أخبار اقتصادية دولية', CatID:9,Icon:''}",
+                    "       var links = [{Name:'أخبار الوزارة', CatID:1,Icon:'ico-ministry-news.png'},",
+                    "                    {Name:'إنعكاسات', CatID:8,Icon:'ico-news-about.png'},",
+                    "                    {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:'ico-news-local-similar.png'},",
+                    "                    {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:'ico-news-local-economic.png'},",
+                    "                    {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:'ico-news-international-similar.png'},",
+                    "                    {Name:'أخبار اقتصادية دولية', CatID:9,Icon:'ico-news-international-economic.png'}",
                     "                    ];",
                     "",
                     "var store = new Ext.data.Store({",
@@ -103,7 +103,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "service-header-icon"
+                                    "media-header-icon"
                                 ],
                                 "layout|flex": 2
                             },
@@ -144,7 +144,7 @@
                     "inner-panel"
                 ],
                 "height": "auto",
-                "layout|flex": 2.2,
+                "layout|flex": 2.7,
                 "scrollable": [
                     "{ direction: 'vertical', directionLock: true }"
                 ]
@@ -179,7 +179,7 @@
                                 "cls": [
                                     "CompanyList"
                                 ],
-                                "height": 300,
+                                "height": 391,
                                 "itemCls": "item-link",
                                 "itemId": "lstViewLinks"
                             },
@@ -196,7 +196,7 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div>  {Name}</div>"
+                                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
                                         ]
                                     },
                                     "name": "itemTpl",

@@ -48,7 +48,7 @@ Ext.define('MEC_App.view.ReportsView', {
                                     {
                                         xtype: 'panel',
                                         flex: 2,
-                                        cls: 'service-header-icon'
+                                        cls: 'reports-header-icon'
                                     },
                                     {
                                         xtype: 'label',
@@ -74,11 +74,11 @@ Ext.define('MEC_App.view.ReportsView', {
                             {
                                 xtype: 'list',
                                 cls: 'CompanyList',
-                                height: 200,
+                                height: 261,
                                 itemId: 'lstViewLinks',
                                 itemCls: 'item-link',
                                 itemTpl: [
-                                    '<div class=\'nav-item\' style=\'background:url(/images/{icon})\'>{Name}</div>'
+                                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
@@ -104,10 +104,10 @@ Ext.define('MEC_App.view.ReportsView', {
         this.callParent();
 
 
-        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'HListIcon.png'},
-                     {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'HListIcon.png'},
-                     {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'HListIcon.png'},
-                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'HListIcon.png'}
+        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
+                     {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
+                     {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
+                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}
 
                     ];
 

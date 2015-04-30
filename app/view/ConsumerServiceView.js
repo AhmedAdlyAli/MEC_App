@@ -33,10 +33,6 @@ Ext.define('MEC_App.view.ConsumerServiceView', {
                 flex: 2.2,
                 cls: 'inner-panel',
                 height: 'auto',
-                scrollable: {
-                    direction: 'vertical',
-                    directionLock: true
-                },
                 items: [
                     {
                         xtype: 'panel',

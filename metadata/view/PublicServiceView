@@ -141,9 +141,7 @@
                 ],
                 "height": "auto",
                 "layout|flex": 2.7,
-                "scrollable": [
-                    "{ direction: 'vertical', directionLock: true }"
-                ]
+                "scrollable": null
             },
             "name": "MyPanel7",
             "configAlternates": {

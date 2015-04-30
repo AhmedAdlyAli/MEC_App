@@ -116,7 +116,7 @@
                             "inner-panel"
                         ],
                         "height": "auto",
-                        "layout|flex": 2.2,
+                        "layout|flex": 2.7,
                         "scrollable": [
                             "{ direction: 'vertical', directionLock: true }"
                         ]

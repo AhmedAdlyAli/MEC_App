@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                             {
                                 xtype: 'panel',
                                 flex: 2,
-                                cls: 'service-header-icon'
+                                cls: 'media-header-icon'
                             },
                             {
                                 xtype: 'label',
@@ -60,7 +60,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
             },
             {
                 xtype: 'panel',
-                flex: 2.2,
+                flex: 2.7,
                 cls: 'inner-panel',
                 height: 'auto',
                 scrollable: {
@@ -75,11 +75,11 @@ Ext.define('MEC_App.view.MediaCenterView', {
                             {
                                 xtype: 'list',
                                 cls: 'CompanyList',
-                                height: 300,
+                                height: 391,
                                 itemId: 'lstViewLinks',
                                 itemCls: 'item-link',
                                 itemTpl: [
-                                    '<div>  {Name}</div>'
+                                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                                 ]
                             }
                         ]
@@ -120,12 +120,12 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
 
 
-               var links = [{Name:'أخبار الوزارة', CatID:1,Icon:''},
-                            {Name:'إنعكاسات', CatID:8,Icon:''},
-                            {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:''},
-                            {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:''},
-                            {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:''},
-                            {Name:'أخبار اقتصادية دولية', CatID:9,Icon:''}
+               var links = [{Name:'أخبار الوزارة', CatID:1,Icon:'ico-ministry-news.png'},
+                            {Name:'إنعكاسات', CatID:8,Icon:'ico-news-about.png'},
+                            {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:'ico-news-local-similar.png'},
+                            {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:'ico-news-local-economic.png'},
+                            {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:'ico-news-international-similar.png'},
+                            {Name:'أخبار اقتصادية دولية', CatID:9,Icon:'ico-news-international-economic.png'}
                             ];
 
         var store = new Ext.data.Store({

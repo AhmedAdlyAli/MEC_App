@@ -75,7 +75,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "cls": [
-                                            "service-header-icon"
+                                            "inquire-header-icon"
                                         ],
                                         "layout|flex": 2
                                     },
@@ -116,7 +116,7 @@
                             "inner-panel"
                         ],
                         "height": "auto",
-                        "layout|flex": 2.2,
+                        "layout|flex": 2.7,
                         "scrollable": [
                             "{ direction: 'vertical', directionLock: true }"
                         ]
@@ -138,7 +138,7 @@
                                 "cls": [
                                     "CompanyList"
                                 ],
-                                "height": 400,
+                                "height": 391,
                                 "id": null,
                                 "itemCls": "item-link",
                                 "itemId": "lstViewLinks"
@@ -156,7 +156,7 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
                                         ]
                                     },
                                     "name": "itemTpl",
@@ -199,12 +199,12 @@
                     "this.callParent();",
                     "",
                     "",
-                    "var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'HListIcon.png'},",
-                    "                    {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'HListIcon.png'},",
-                    "                    {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'HListIcon.png'},",
-                    "                    {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'HListIcon.png'},",
-                    "                    {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'HListIcon.png'},",
-                    "                    {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'HListIcon.png'}",
+                    "var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'ico-search-trade-name.png'},",
+                    "                    {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'ico-search-trade-activity.png'},",
+                    "                    {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'ico-recall-item.png'},",
+                    "                    {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'ico-consumer-cultuer.png'},",
+                    "                    {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'ico-investor-culture.png'},",
+                    "                    {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'ico-violations.png'}",
                     "                    ];",
                     "",
                     "var store = new Ext.data.Store({",

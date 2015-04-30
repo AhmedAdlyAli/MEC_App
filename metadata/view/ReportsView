@@ -75,7 +75,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "cls": [
-                                            "service-header-icon"
+                                            "reports-header-icon"
                                         ],
                                         "layout|flex": 2
                                     },
@@ -138,7 +138,7 @@
                                 "cls": [
                                     "CompanyList"
                                 ],
-                                "height": 200,
+                                "height": 261,
                                 "itemCls": "item-link",
                                 "itemId": "lstViewLinks"
                             },
@@ -155,7 +155,7 @@
                                     "userConfig": {
                                         "designer|displayName": "itemTpl",
                                         "implHandler": [
-                                            "<div class='nav-item' style='background:url(/images/{icon})'>{Name}</div>"
+                                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
                                         ]
                                     },
                                     "name": "itemTpl",
@@ -198,10 +198,10 @@
                     "this.callParent();",
                     "",
                     "",
-                    "var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'HListIcon.png'},",
-                    "             {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'HListIcon.png'},",
-                    "             {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'HListIcon.png'},",
-                    "             {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'HListIcon.png'}",
+                    "var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},",
+                    "             {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},",
+                    "             {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},",
+                    "             {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}",
                     "",
                     "            ];",
                     "",

@@ -45,7 +45,10 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         xtype: 'map',
                         height: 250,
                         id: 'mymap1',
-                        itemId: 'mymap'
+                        itemId: 'mymap',
+                        mapOptions: {
+                            disableDefaultUI: true
+                        }
                     }
                 ]
             }
@@ -75,7 +78,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                     map: gMap,
                     animation: google.maps.Animation.DROP,
                     position: new google.maps.LatLng (25.321283,51.528329),
-                    icon: 'resources/images/drop-pin.png'
+                    icon: 'resources/images/drop-pin.png',
                 });
 
             }
