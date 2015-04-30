@@ -156,7 +156,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
 
                                                         Ext.Viewport.getActiveItem().push({
-                                                            xtype: 'LogivFormView',
+                                                            xtype: 'LoginFomView',
                                                             title:  Ext.Global.GetFixedTitle()
                                                         });
 

@@ -130,6 +130,15 @@ Ext.define('MEC_App.view.SideMenu', {
                                 iconAlign: 'right',
                                 iconCls: 'm-icon9',
                                 text: 'تسجيل الدخول'
+                            },
+                            {
+                                xtype: 'button',
+                                flex: 1,
+                                cls: 'menuBtn',
+                                itemId: 'btnLogout',
+                                iconAlign: 'right',
+                                iconCls: 'm-icon9',
+                                text: 'تسجيل الخروج'
                             }
                         ]
                     }
@@ -144,7 +153,6 @@ Ext.define('MEC_App.view.SideMenu', {
 
         this.down('#btnHome').setText(Ext.Global.GetViewTitle('Home'));
         this.down('#btnServices').setText(Ext.Global.GetViewTitle('PublicServices'));
-
         this.down('#btnMedai').setText(Ext.Global.GetViewTitle('MediaCenter'));
         this.down('#btnInquiry').setText(Ext.Global.GetViewTitle('Inquiries'));
         this.down('#btnContact').setText(Ext.Global.GetViewTitle('ContactUs'));
@@ -155,7 +163,14 @@ Ext.define('MEC_App.view.SideMenu', {
 
 
 
+        if(Ext.Global.isLogged){
+            this.down('#btnLogin').show();
+            this.down('#btnLogout').hide();
 
+        }else{
+            this.down('#btnLogout').show();
+            this.down('#btnLogin').hide();
+        }
 
 
     }

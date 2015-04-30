@@ -16,6 +16,10 @@
 Ext.define('MEC_App.controller.PrintOffsController', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'MEC_App.view.PrintOffsView1'
+    ],
+
     config: {
         refs: {
             PrintOffsView1: '#PrintOffsView1',

@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "PrintOffsController"
+        "designer|userClassName": "PrintOffsController",
+        "requires": [
+            "MEC_App.view.PrintOffsView1"
+        ]
     },
     "name": "MyController",
     "designerId": "0368eb08-6654-4c62-a283-ee255be7364b",

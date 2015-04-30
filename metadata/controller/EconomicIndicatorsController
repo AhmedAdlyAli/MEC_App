@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "EconomicIndicatorsController"
+        "designer|userClassName": "EconomicIndicatorsController",
+        "requires": [
+            "MEC_App.view.EconomicIndicatorsView"
+        ]
     },
     "name": "MyController",
     "designerId": "0fa596b5-b707-41ca-9164-59f3e010b963",

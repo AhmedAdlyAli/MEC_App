@@ -16,6 +16,10 @@
 Ext.define('MEC_App.controller.EconomicIndicatorsController', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'MEC_App.view.EconomicIndicatorsView'
+    ],
+
     config: {
         control: {
             "panel#EconomicIndicatorsView": {

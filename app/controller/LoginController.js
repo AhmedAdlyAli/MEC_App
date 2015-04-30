@@ -28,6 +28,9 @@ Ext.define('MEC_App.controller.LoginController', {
         control: {
             "button#btnSubmitLogin": {
                 tap: 'onBtnSubmitLoginTap'
+            },
+            "button#btnLogout": {
+                tap: 'onBtnLogoutTap'
             }
         }
     },
@@ -100,11 +103,21 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.AnimationHelper.HideLoading();
 
 
-                    Ext.Viewport.getActiveItem().push({
-                        xtype: view.getData(),
-                        title: Ext.Global.GetFixedTitle()
-                    });
 
+                    // check if there is Return Url (view.getData)
+
+
+                    if(view.getData()!==null && view.getData()!=='')
+                    {
+                        Ext.Viewport.getActiveItem().push({
+                            xtype: view.getData(),
+                            title: Ext.Global.GetFixedTitle()
+                        });
+                    }else{
+
+                        Ext.Viewport.getActiveItem().reset();// redirect to home
+
+                    }
 
 
                 }else{
@@ -125,6 +138,20 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
 
+
+    },
+
+    onBtnLogoutTap: function(button, e, eOpts) {
+        Ext.Global.isLogged = false;
+        Ext.Global.userToken = '';
+
+        Ext.Global.identityType = '';
+        Ext.Global.identityNum = '';
+        Ext.Global.identityNationality = '';
+
+        Ext.Viewport.toggleMenu('right');
+
+        Ext.Viewport.getActiveItem().reset();
 
     }
 

@@ -292,7 +292,7 @@
                     "",
                     "",
                     "                                                Ext.Viewport.getActiveItem().push({",
-                    "                                                    xtype: 'LogivFormView',",
+                    "                                                    xtype: 'LoginFomView',",
                     "                                                    title:  Ext.Global.GetFixedTitle()",
                     "                                                });",
                     "",

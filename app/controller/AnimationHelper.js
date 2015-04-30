@@ -76,15 +76,15 @@ Ext.define('MEC_App.controller.AnimationHelper', {
 
     HideLoading: function() {
 
-          try {
-                ProgressIndicator.hide();
+        try {
+            ProgressIndicator.hide();
 
-               }
-                catch(err) {
+        }
+        catch(err) {
 
-                    Ext.Viewport.setMasked(false);
+            Ext.Viewport.setMasked(false);
 
-                }
+        }
 
     }
 

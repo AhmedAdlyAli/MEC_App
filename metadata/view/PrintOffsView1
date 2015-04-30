@@ -16,9 +16,6 @@
         "itemId": "PrintOffsView1",
         "layout": "vbox",
         "pinHeaders": null,
-        "requires": [
-            "MEC_App.controller.DeviceController"
-        ],
         "scrollable": null,
         "url": null
     },
@@ -373,61 +370,6 @@
                     "designerId": "e0346d7a-ccfb-4a75-a82c-f631da38e939"
                 }
             ]
-        },
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "initialize",
-                "implHandler": [
-                    "this.callParent();",
-                    "",
-                    "/*",
-                    "this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('shopName'));",
-                    "",
-                    "",
-                    "this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('shopLocation'));",
-                    "",
-                    "this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('ComplaintType'));",
-                    "",
-                    "this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('txtComplaint'));",
-                    "",
-                    "this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('fullName'));",
-                    "",
-                    "this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('email'));",
-                    "",
-                    "this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('mobile'));",
-                    "",
-                    "",
-                    "this.down('#txtBarCode').setPlaceHolder(Ext.Global.GetComplaintsTitle('barcode'))",
-                    ".setLabel(Ext.Global.GetComplaintsTitle('barcode'));",
-                    "",
-                    "",
-                    "this.down('#lblAttachImage').setHtml(Ext.Global.GetComplaintsTitle('AttachImg'));",
-                    "",
-                    "this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));",
-                    "",
-                    "*/",
-                    "",
-                    "",
-                    "//this.setData('test');",
-                    "",
-                    ""
-                ]
-            },
-            "name": "initialize",
-            "designerId": "bcbf3a29-ec41-4881-9649-6f012d5c5c8c"
         }
     ]
 }

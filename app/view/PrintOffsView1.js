@@ -21,8 +21,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
         'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.Hidden',
-        'Ext.Button',
-        'MEC_App.controller.DeviceController'
+        'Ext.Button'
     ],
 
     config: {
@@ -227,49 +226,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                 ]
             }
         ]
-    },
-
-    initialize: function() {
-        this.callParent();
-
-        /*
-        this.down('#shopName').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopName'))
-        .setLabel(Ext.Global.GetComplaintsTitle('shopName'));
-
-
-        this.down('#shopLocation').setPlaceHolder(Ext.Global.GetComplaintsTitle('shopLocation'))
-        .setLabel(Ext.Global.GetComplaintsTitle('shopLocation'));
-
-        this.down('#txtCategory').setPlaceHolder(Ext.Global.GetComplaintsTitle('ComplaintType'))
-        .setLabel(Ext.Global.GetComplaintsTitle('ComplaintType'));
-
-        this.down('#txtComplaint').setPlaceHolder(Ext.Global.GetComplaintsTitle('txtComplaint'))
-        .setLabel(Ext.Global.GetComplaintsTitle('txtComplaint'));
-
-        this.down('#fullName').setPlaceHolder(Ext.Global.GetComplaintsTitle('fullName'))
-        .setLabel(Ext.Global.GetComplaintsTitle('fullName'));
-
-        this.down('#email').setPlaceHolder(Ext.Global.GetComplaintsTitle('email'))
-        .setLabel(Ext.Global.GetComplaintsTitle('email'));
-
-        this.down('#mobile').setPlaceHolder(Ext.Global.GetComplaintsTitle('mobile'))
-        .setLabel(Ext.Global.GetComplaintsTitle('mobile'));
-
-
-        this.down('#txtBarCode').setPlaceHolder(Ext.Global.GetComplaintsTitle('barcode'))
-        .setLabel(Ext.Global.GetComplaintsTitle('barcode'));
-
-
-        this.down('#lblAttachImage').setHtml(Ext.Global.GetComplaintsTitle('AttachImg'));
-
-        this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));
-
-        */
-
-
-        //this.setData('test');
-
-
     }
 
 });
