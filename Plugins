@@ -17,3 +17,7 @@ cordova plugin add nl.x-services.plugins.actionsheet
 
 http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-app
 
+
+
+
+cordova plugin add plugin.google.maps --variable API_KEY_FOR_ANDROID="AIzaSyAeJHLXDPQvKF-_6SBzdBYOnzRHmn8soQ0" --variable API_KEY_FOR_IOS="AIzaSyCuOp-yWmouTftQpsFDTlxTFR4FBGDqgP4"
