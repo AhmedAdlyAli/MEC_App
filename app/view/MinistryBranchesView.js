@@ -119,7 +119,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
               var infowindow = new google.maps.InfoWindow();
 
 
-        var int = 0;
+        var i = 0;
 
                 Ext.each(branches,function(item){
 
@@ -145,13 +145,13 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         });
 
 
-                    if(int===0)
+                    if(i===0)
                     {
                         new google.maps.event.trigger( marker, 'click' );
 
                     }
 
-                    int++;
+                    i++;
                 });
 
 
