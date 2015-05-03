@@ -33,6 +33,47 @@ Ext.define('MEC_App.view.PrintOffsView3', {
                 itemId: 'pnlIframe'
             }
         ]
+    },
+
+    initialize: function() {
+        var view = this;
+        var data = view.getData();
+
+        console.log(data);
+
+        Ext.Function.defer(function(){
+            // payment gateway redirection
+
+            var form = Ext.create('Ext.form.Panel', {
+                standardSubmit: true,
+                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                method: 'POST',
+                items: [
+                    {xtype: 'textfield',name: 'vpc_MerchTxnRef'},
+                    {xtype: 'textfield',name: 'vpc_OrderInfo'},
+                    {xtype: 'textfield',name: 'vpc_Amount'},
+                    {xtype: 'textfield',name: 'vpc_Locale'}
+                ],
+            });
+
+            //alert(data.fees);
+
+            form.setValues({
+                vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',
+                vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',
+                vpc_Amount: data.fees+'00',
+                vpc_Locale : data.locale
+
+            });
+
+            form.element.dom.target = 'paymentframe';
+            form.submit(); //{target: 'paymentframe'}
+
+
+        } ,	400,this);
+
+
+        this.callParent();
     }
 
 });

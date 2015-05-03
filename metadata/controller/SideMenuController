@@ -327,6 +327,73 @@
             },
             "name": "onImgHomeTap",
             "designerId": "158bc6a2-182e-4a97-944b-8cef196fa618"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnLogout",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnLogoutTap",
+                "implHandler": [
+                    "Ext.Global.isLogged = false;",
+                    "Ext.Global.userToken = '';",
+                    "",
+                    "Ext.Global.identityType = '';",
+                    "Ext.Global.identityNum = '';",
+                    "Ext.Global.identityNationality = '';",
+                    "",
+                    "Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "Ext.Viewport.getActiveItem().reset();",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnLogoutTap",
+            "designerId": "c872f71a-65e6-477e-a4e4-d39817882a8c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "menu#SideMenu",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Menu",
+                "fn": "onSideMenuShow",
+                "implHandler": [
+                    "var menu = component;",
+                    "",
+                    "if(Ext.Global.isLogged){",
+                    "    menu.down('#btnLogout').show();",
+                    "    menu.down('#btnLogin').hide();",
+                    "",
+                    "}else{",
+                    "    menu.down('#btnLogin').show();",
+                    "    menu.down('#btnLogout').hide();",
+                    "}",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onSideMenuShow",
+            "designerId": "2ab3b88b-ddfa-430c-91b4-89c755b98dfc"
         }
     ]
 }

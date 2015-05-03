@@ -290,7 +290,99 @@
                         "text": "تأكيد ودفع"
                     },
                     "name": "MyButton3",
-                    "designerId": "d357e593-5e0b-49fb-9faf-2eaad95b62ae"
+                    "designerId": "d357e593-5e0b-49fb-9faf-2eaad95b62ae",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "Ext.AnimationHelper.ShowLoading();",
+                                    "",
+                                    "var view = button.up('PrintOffsView2'); //this.getPrintOffsView2();",
+                                    "var serialNo =  view.down('#hiddenSerialNo').getValue();",
+                                    "",
+                                    "",
+                                    "console.log(serialNo);",
+                                    "",
+                                    "var formData = view.getData();",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "var requestData = {",
+                                    "    \"serviceId\": \"10\",",
+                                    "    \"token\": Ext.Global.userToken,",
+                                    "    \"objectSpcId\": serialNo,",
+                                    "    \"caseSerialNum\":\"\"",
+                                    "};",
+                                    "",
+                                    "",
+                                    "Ext.Ajax.request({",
+                                    "",
+                                    "    url : Ext.Global.GetConfig('webServiceUrl'),",
+                                    "    method : 'POST',",
+                                    "    jsonData :requestData,",
+                                    "    success : function (response) {",
+                                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "        Ext.AnimationHelper.HideLoading();",
+                                    "",
+                                    "",
+                                    "        if(json.statusMsg!='success')",
+                                    "        {",
+                                    "",
+                                    "            var company = formData.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0];",
+                                    "            json.recordID = company.caseNum;",
+                                    "            json.typeCode = company.typeCode;",
+                                    "            json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;",
+                                    "            json.locale = 'ar';",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "            Ext.Viewport.getActiveItem().push({",
+                                    "                xtype: 'PrintOffsView3',",
+                                    "                title: Ext.Global.GetFixedTitle(),",
+                                    "                data: json",
+                                    "            });",
+                                    "        }else{",
+                                    "",
+                                    "",
+                                    "            Ext.device.Notification.show({",
+                                    "                title: 'خطأ',",
+                                    "                buttons: [\"موافق\"],",
+                                    "                message:  'json.statusMsg'",
+                                    "            });",
+                                    "",
+                                    "        }",
+                                    "",
+                                    "",
+                                    "",
+                                    "    }",
+                                    "});",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "62b9f319-11a0-49ee-b5ce-d54ba8f606e6"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.field.Hidden",
@@ -306,6 +398,55 @@
                     "designerId": "0bcc9676-9bf5-41a7-acf6-801b9e0701b8"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "var view = this; //this.getPrintOffsView2();",
+                    "var json = view.getData();",
+                    "",
+                    "",
+                    "view.down('#lblRequestType').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].type);",
+                    "",
+                    "view.down('#lblNoCopies').setHtml(json.NoOfCopies);",
+                    "",
+                    "view.down('#lblCompanyName').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].orgNameARA);",
+                    "view.down('#lblTotalFees').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecCaseFees.mecCaseFees[0].feesTotalValue);",
+                    "",
+                    "",
+                    "",
+                    "view.down('#lblRequestNo').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].serialNumber);",
+                    "view.down('#hiddenSerialNo').setValue(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].recordID);",
+                    "",
+                    "view.down('#lblRequestStatus').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].status);",
+                    "",
+                    "var noOfAttachments = json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecUnifiedAttachmentParameters.mecUnifiedAttachmentParameters.length;",
+                    "",
+                    "",
+                    "if(noOfAttachments===0){",
+                    "    view.down('#lblRequiredAttachments').setHtml('لا يوجد');",
+                    "}",
+                    "",
+                    "",
+                    "console.log('data assigned for case: ' + json);",
+                    "//console.log(view.down('#lblNoCopies'));",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "this.callParent();"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "050a4dc8-d58d-4153-bd8e-35f4128f1005"
         }
     ]
 }

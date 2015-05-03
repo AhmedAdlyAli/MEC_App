@@ -154,40 +154,6 @@
             },
             "name": "onBtnSubmitLoginTap",
             "designerId": "1e2b2f62-31c3-46be-9111-073fbc62d8d5"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "button#btnLogout",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onBtnLogoutTap",
-                "implHandler": [
-                    "Ext.Global.isLogged = false;",
-                    "Ext.Global.userToken = '';",
-                    "",
-                    "Ext.Global.identityType = '';",
-                    "Ext.Global.identityNum = '';",
-                    "Ext.Global.identityNationality = '';",
-                    "",
-                    "Ext.Viewport.toggleMenu('right');",
-                    "",
-                    "Ext.Viewport.getActiveItem().reset();",
-                    ""
-                ],
-                "name": "tap"
-            },
-            "name": "onBtnLogoutTap",
-            "designerId": "98b54b9f-ba38-46cd-afd4-6907beef6a89"
         }
     ]
 }

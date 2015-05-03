@@ -28,9 +28,6 @@ Ext.define('MEC_App.controller.LoginController', {
         control: {
             "button#btnSubmitLogin": {
                 tap: 'onBtnSubmitLoginTap'
-            },
-            "button#btnLogout": {
-                tap: 'onBtnLogoutTap'
             }
         }
     },
@@ -138,20 +135,6 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
 
-
-    },
-
-    onBtnLogoutTap: function(button, e, eOpts) {
-        Ext.Global.isLogged = false;
-        Ext.Global.userToken = '';
-
-        Ext.Global.identityType = '';
-        Ext.Global.identityNum = '';
-        Ext.Global.identityNationality = '';
-
-        Ext.Viewport.toggleMenu('right');
-
-        Ext.Viewport.getActiveItem().reset();
 
     }
 

@@ -29,6 +29,59 @@
             },
             "name": "MyPanel5",
             "designerId": "7f6f5c4c-7dcf-434f-bb78-d4e0b69a93ff"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "var view = this;",
+                    "var data = view.getData();",
+                    "",
+                    "console.log(data);",
+                    "",
+                    "Ext.Function.defer(function(){",
+                    "    // payment gateway redirection",
+                    "",
+                    "    var form = Ext.create('Ext.form.Panel', {",
+                    "        standardSubmit: true,",
+                    "        url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',",
+                    "        method: 'POST',",
+                    "        items: [",
+                    "            {xtype: 'textfield',name: 'vpc_MerchTxnRef'},",
+                    "            {xtype: 'textfield',name: 'vpc_OrderInfo'},",
+                    "            {xtype: 'textfield',name: 'vpc_Amount'},",
+                    "            {xtype: 'textfield',name: 'vpc_Locale'}",
+                    "        ],",
+                    "    });",
+                    "",
+                    "    //alert(data.fees);",
+                    "",
+                    "    form.setValues({",
+                    "        vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',",
+                    "        vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',",
+                    "        vpc_Amount: data.fees+'00',",
+                    "        vpc_Locale : data.locale",
+                    "",
+                    "    });",
+                    "",
+                    "    form.element.dom.target = 'paymentframe';",
+                    "    form.submit(); //{target: 'paymentframe'}",
+                    "",
+                    "",
+                    "} ,\t400,this);",
+                    "",
+                    "",
+                    "this.callParent();"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "4357c2c4-614e-4d11-9b3d-994bb6a48136"
         }
     ]
 }

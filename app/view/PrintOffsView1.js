@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
     config: {
         cls: 'complaint-view',
+        id: 'PrintOffsView1',
         itemId: 'PrintOffsView1',
         layout: 'vbox',
         enableSubmissionForm: false,
@@ -78,7 +79,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "نوع الشكوي",
+                                            title: "اسم الشركة",
                                             items: items,
                                             //selectedValue: "2",
                                             doneButtonLabel: "اختيار",
@@ -127,8 +128,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                             { text: "مستخرج سجل تجاري - العربية", value: "51" },
                                             { text: "مستخرج سجل تجاري - انجليزي", value: "52" },
-                                            { text: "شهادة عن رخصة تجارية", value: "53" },
-                                            { text: "شهادة عدم ملكية", value: "50" }
+                                            { text: "شهادة عن رخصة تجارية", value: "53" }//,
+                                            //{ text: "شهادة عدم ملكية", value: "50" }
 
                                             ],
                                             selectedValue: "",
@@ -219,6 +220,139 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+
+                            // Create Case with Form Values
+
+
+                            // validation
+
+                            var view = button.up('PrintOffsView1'); //this.getPrintOffsView1();
+
+
+                            var formData = view.getValues();
+
+
+                            console.log(formData);
+
+
+                            var err='';
+
+
+                            if(formData.hiddenCompanyCR===''){
+
+                                err+="برجاء اختيار الشركة \n";
+                            }
+
+
+
+                            if(formData.hiddenPrintoutType===''){
+
+                                err+="برجاء اختيار طريقة الاستلام";
+                            }
+
+
+                            if(formData.txtNoOfCopies===''){
+
+                                err+="برجاء اختيار عدد النسخ";
+                            }
+
+
+
+
+
+                            if(err.length>0){
+
+                                Ext.device.Notification.show({
+                                    title: 'خطأ',
+                                    buttons:["موافق"],
+                                    message: err
+                                });
+                            }else{
+
+
+
+
+
+
+                                Ext.AnimationHelper.ShowLoading();
+
+                                var requestData = {
+                                    "serviceId": "9",
+                                    "token": Ext.Global.userToken,
+                                    "language": "ar",
+                                    "identityType": 'QID',//Ext.Global.identityType,
+                                    "identityNum": Ext.Global.identityNum,
+                                    "identityNationality": Ext.Global.identityNationality,
+                                    "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
+                                    "caseType":view.down('#hiddenPrintoutType').getValue(),
+                                    "establishmentSpcId":"",
+                                    "caseSubType":"01",
+                                    "contactId":"",
+                                    "numOfCopies":view.down('#txtNoOfCopies').getValue(),
+                                    "moiEstablishmentNum":"",
+                                    "qatarChamberNum":"",
+                                    "commercialPermitNum":"",
+                                    "economicalNum":""
+                                };
+
+
+
+                                Ext.Ajax.request({
+
+                                    url : Ext.Global.GetConfig('webServiceUrl'),
+                                    method : 'POST',
+                                    jsonData :requestData,
+                                    success : function (response) {
+                                        var json = Ext.util.JSON.decode(response.responseText);
+
+                                        json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
+
+                                        console.log(json);
+
+                                        if(json.status==='Their is Active Cases for this account from the same case type !')
+                                        {
+
+                                            Ext.device.Notification.show({
+                                                title: 'خطأ',
+                                                buttons:["موافق"],
+                                                message: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة'
+                                            });
+
+
+                                        }else{
+
+
+                                            Ext.Viewport.getActiveItem().push({
+                                                xtype: 'PrintOffsView2',
+                                                title: Ext.Global.GetFixedTitle(),
+                                                data: json
+                                            });
+
+
+                                        }
+
+
+
+
+
+                                        Ext.AnimationHelper.HideLoading();
+
+
+                                    }
+                                });
+
+
+                            }
+
+
+
+
+
+
+
+
+                        },
                         cls: 'btn-send',
                         itemId: 'btnPrintoffsNext',
                         text: 'التالي'
@@ -226,6 +360,51 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        //alert('asd');
+
+        Ext.AnimationHelper.ShowLoading();
+
+
+        var requestData = {
+            "serviceId": "2",
+            "token": Ext.Global.userToken,
+            "language": "ar",
+            "identityType":'QID', //Ext.Global.identityType,
+            "identityNum": Ext.Global.identityNum,
+            "identityNationality":  Ext.Global.identityNationality
+        };
+
+
+        var me = this;
+
+        Ext.Ajax.request({
+
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json = Ext.util.JSON.decode(response.responseText);
+
+
+                //var view = me.getPrintOffsView1();
+
+                me.setData(json.listOfPrimaryEstablishment.primaryEstablishment);
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
+
+            }
+        });
+
+
+
+        this.callParent();
     }
 
 });

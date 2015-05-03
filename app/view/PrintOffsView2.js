@@ -114,6 +114,79 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'button',
+                        handler: function(button, e) {
+                            Ext.AnimationHelper.ShowLoading();
+
+                            var view = button.up('PrintOffsView2'); //this.getPrintOffsView2();
+                            var serialNo =  view.down('#hiddenSerialNo').getValue();
+
+
+                            console.log(serialNo);
+
+                            var formData = view.getData();
+
+
+
+
+                            var requestData = {
+                                "serviceId": "10",
+                                "token": Ext.Global.userToken,
+                                "objectSpcId": serialNo,
+                                "caseSerialNum":""
+                            };
+
+
+                            Ext.Ajax.request({
+
+                                url : Ext.Global.GetConfig('webServiceUrl'),
+                                method : 'POST',
+                                jsonData :requestData,
+                                success : function (response) {
+                                    var json = Ext.util.JSON.decode(response.responseText);
+
+
+
+
+                                    Ext.AnimationHelper.HideLoading();
+
+
+                                    if(json.statusMsg!='success')
+                                    {
+
+                                        var company = formData.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0];
+                                        json.recordID = company.caseNum;
+                                        json.typeCode = company.typeCode;
+                                        json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;
+                                        json.locale = 'ar';
+
+
+
+
+                                        Ext.Viewport.getActiveItem().push({
+                                            xtype: 'PrintOffsView3',
+                                            title: Ext.Global.GetFixedTitle(),
+                                            data: json
+                                        });
+                                    }else{
+
+
+                                        Ext.device.Notification.show({
+                                            title: 'خطأ',
+                                            buttons: ["موافق"],
+                                            message:  'json.statusMsg'
+                                        });
+
+                                    }
+
+
+
+                                }
+                            });
+
+
+
+
+                        },
                         cls: 'btn-send',
                         itemId: 'btnPrintoffs2Next',
                         text: 'تأكيد ودفع'
@@ -125,6 +198,43 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+
+        var view = this; //this.getPrintOffsView2();
+        var json = view.getData();
+
+
+        view.down('#lblRequestType').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].type);
+
+        view.down('#lblNoCopies').setHtml(json.NoOfCopies);
+
+        view.down('#lblCompanyName').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].orgNameARA);
+        view.down('#lblTotalFees').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecCaseFees.mecCaseFees[0].feesTotalValue);
+
+
+
+        view.down('#lblRequestNo').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].serialNumber);
+        view.down('#hiddenSerialNo').setValue(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].recordID);
+
+        view.down('#lblRequestStatus').setHtml(json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].status);
+
+        var noOfAttachments = json.listOfMecBssCreatedCaseIo.mecLlcEstablishment[0].listOfMecUnifiedAttachmentParameters.mecUnifiedAttachmentParameters.length;
+
+
+        if(noOfAttachments===0){
+            view.down('#lblRequiredAttachments').setHtml('لا يوجد');
+        }
+
+
+        console.log('data assigned for case: ' + json);
+        //console.log(view.down('#lblNoCopies'));
+
+
+
+
+        this.callParent();
     }
 
 });

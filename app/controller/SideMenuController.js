@@ -47,6 +47,12 @@ Ext.define('MEC_App.controller.SideMenuController', {
             },
             "image#imgHome": {
                 tap: 'onImgHomeTap'
+            },
+            "button#btnLogout": {
+                tap: 'onBtnLogoutTap'
+            },
+            "menu#SideMenu": {
+                show: 'onSideMenuShow'
             }
         }
     },
@@ -166,6 +172,34 @@ Ext.define('MEC_App.controller.SideMenuController', {
     onImgHomeTap: function(image, e, eOpts) {
         Ext.Viewport.toggleMenu('right');
         Ext.Viewport.getActiveItem().reset();
+    },
+
+    onBtnLogoutTap: function(button, e, eOpts) {
+        Ext.Global.isLogged = false;
+        Ext.Global.userToken = '';
+
+        Ext.Global.identityType = '';
+        Ext.Global.identityNum = '';
+        Ext.Global.identityNationality = '';
+
+        Ext.Viewport.toggleMenu('right');
+
+        Ext.Viewport.getActiveItem().reset();
+
+    },
+
+    onSideMenuShow: function(component, eOpts) {
+        var menu = component;
+
+        if(Ext.Global.isLogged){
+            menu.down('#btnLogout').show();
+            menu.down('#btnLogin').hide();
+
+        }else{
+            menu.down('#btnLogin').show();
+            menu.down('#btnLogout').hide();
+        }
+
     }
 
 });

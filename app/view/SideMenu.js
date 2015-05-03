@@ -24,6 +24,7 @@ Ext.define('MEC_App.view.SideMenu', {
 
     config: {
         height: '100%',
+        itemId: 'SideMenu',
         width: '75%',
         items: [
             {
@@ -160,17 +161,6 @@ Ext.define('MEC_App.view.SideMenu', {
         this.down('#btnReports').setText(Ext.Global.GetViewTitle('Reports'));
         this.down('#btnSettings').setText(Ext.Global.GetViewTitle('Settings'));
         this.down('#btnLogin').setText(Ext.Global.GetViewTitle('LogivForm'));
-
-
-
-        if(Ext.Global.isLogged){
-            this.down('#btnLogin').show();
-            this.down('#btnLogout').hide();
-
-        }else{
-            this.down('#btnLogout').show();
-            this.down('#btnLogin').hide();
-        }
 
 
     }
