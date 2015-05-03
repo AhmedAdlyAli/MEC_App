@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		02FF587D19724532BA9FAB0D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9506737AB24FB39381182F /* AVFoundation.framework */; };
 		031EDD45C93C4477B0023D94 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FC6CD60474159B3981E9C /* libiconv.dylib */; };
@@ -490,7 +491,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -513,6 +514,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
+				PROVISIONING_PROFILE = "2a0e4dae-31e3-4e28-8a77-1df4560f7952";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -522,7 +524,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Mohammed Al-Emadi (CBFE5XV3G5)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MEC_App/MEC_App-Prefix.pch";
@@ -543,6 +545,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
+				PROVISIONING_PROFILE = "2a0e4dae-31e3-4e28-8a77-1df4560f7952";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
