@@ -121,6 +121,7 @@
                             "btn-alt"
                         ],
                         "docked": "bottom",
+                        "itemId": "btnRegister",
                         "text": "مستخدم جديد"
                     },
                     "name": "MyButton1",

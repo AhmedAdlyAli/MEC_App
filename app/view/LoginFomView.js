@@ -68,6 +68,7 @@ Ext.define('MEC_App.view.LoginFomView', {
                         xtype: 'button',
                         cls: 'btn-alt',
                         docked: 'bottom',
+                        itemId: 'btnRegister',
                         text: 'مستخدم جديد'
                     },
                     {

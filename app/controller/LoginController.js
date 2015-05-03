@@ -28,6 +28,9 @@ Ext.define('MEC_App.controller.LoginController', {
         control: {
             "button#btnSubmitLogin": {
                 tap: 'onBtnSubmitLoginTap'
+            },
+            "button#btnRegister": {
+                tap: 'onBtnRegisterTap'
             }
         }
     },
@@ -132,6 +135,18 @@ Ext.define('MEC_App.controller.LoginController', {
 
             }
         });
+
+
+
+
+    },
+
+    onBtnRegisterTap: function(button, e, eOpts) {
+
+        var viewdata = {Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService', Name:'مستخدم جديد'};
+
+        Ext.Global.RedirectToView(viewdata);
+
 
 
 

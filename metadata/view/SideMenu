@@ -232,6 +232,7 @@
                                 "cls": [
                                     "menuBtn"
                                 ],
+                                "hidden": true,
                                 "iconAlign": "right",
                                 "iconCls": "m-icon8",
                                 "itemId": "btnSettings",

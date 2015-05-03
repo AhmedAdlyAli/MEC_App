@@ -154,6 +154,38 @@
             },
             "name": "onBtnSubmitLoginTap",
             "designerId": "1e2b2f62-31c3-46be-9111-073fbc62d8d5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnRegister",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnRegisterTap",
+                "implHandler": [
+                    "",
+                    "var viewdata = {Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService', Name:'مستخدم جديد'};",
+                    "",
+                    "Ext.Global.RedirectToView(viewdata);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnRegisterTap",
+            "designerId": "7e06534d-ec95-452b-829b-4611250027db"
         }
     ]
 }

@@ -118,6 +118,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 xtype: 'button',
                                 flex: 1,
                                 cls: 'menuBtn',
+                                hidden: true,
                                 itemId: 'btnSettings',
                                 iconAlign: 'right',
                                 iconCls: 'm-icon8',
