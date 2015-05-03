@@ -6,9 +6,459 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
         "designer|userAlias": "FeedbackFormView",
-        "designer|userClassName": "FeedbackFormView"
+        "designer|userClassName": "FeedbackFormView",
+        "enableSubmissionForm": false,
+        "fullscreen": null,
+        "itemId": "FeedbackFormView",
+        "layout": "vbox",
+        "pinHeaders": null,
+        "requires": [
+            "Ext.Img",
+            "Ext.device.Camera",
+            "Ext.device.Notification",
+            "MEC_App.controller.DeviceController"
+        ],
+        "scrollable": null,
+        "url": null
     },
-    "name": "MyFormPanel",
-    "designerId": "805d1b6c-754a-4996-8bdf-b5a12cd0ef72"
+    "name": "ComplaintsView1",
+    "configAlternates": {
+        "scrollable": "object",
+        "pinHeaders": "boolean"
+    },
+    "designerId": "43ad108c-b471-42b9-af04-d27034fbdc41",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "pinHeaders",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "مقترحات"
+            },
+            "name": "MyLabel3",
+            "designerId": "ae7b5d7d-326b-466b-b688-4228aca9dd37"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout|flex": 1,
+                "modal": null,
+                "scrollable": [
+                    "{",
+                    "                    direction: 'vertical',",
+                    "                    directionLock: true",
+                    "                }"
+                ],
+                "title": null
+            },
+            "name": "MyFieldSet1",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "8c9bdf03-a155-495e-bace-2a72734b71eb",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtFullName",
+                        "label": "",
+                        "labelAlign": null,
+                        "name": "fullName",
+                        "placeHolder": "الاسم بالكامل",
+                        "required": true
+                    },
+                    "name": "MyTextField5",
+                    "designerId": "4ca0b7bc-8915-4f0f-8513-8aebe8e63437"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtEmail",
+                        "label": "",
+                        "labelAlign": null,
+                        "name": "email",
+                        "placeHolder": "البريد الالكتدوني"
+                    },
+                    "name": "MyTextField6",
+                    "designerId": "121f821a-dab0-4bdd-9d09-5e4102ce201f"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtMobile",
+                        "label": "",
+                        "labelAlign": null,
+                        "name": "mobile",
+                        "placeHolder": "رقم الهاتف",
+                        "required": true
+                    },
+                    "name": "MyTextField7",
+                    "designerId": "1efe3af9-de93-43c5-9e21-5fe0208bf779"
+                },
+                {
+                    "type": "Ext.field.TextArea",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
+                        "itemId": "txtComment",
+                        "label": "",
+                        "labelAlign": null,
+                        "name": "suggestion",
+                        "placeHolder": "نص المقترح",
+                        "required": true
+                    },
+                    "name": "MyTextArea",
+                    "designerId": "322e08a5-b89a-44ad-824a-f5dbe009aeea"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "ارفق صورة",
+                        "id": "lblAttachImage1"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "8859afe2-d0ff-4d2a-8d36-645a67f7cf05"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "a5c936fc-8c13-4b14-8f4c-53a5a9789aa6",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 120,
+                                "id": "img5",
+                                "itemId": "img1",
+                                "layout|flex": 1,
+                                "src": "resources/images/logo.png",
+                                "width": null
+                            },
+                            "name": "MyImg",
+                            "designerId": "42e8ec86-7698-410b-8a98-e8fb6995bbf9",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onImg1Tap",
+                                        "implHandler": [
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "name": "onImg1Tap",
+                                    "designerId": "72406c0d-a0a5-40b5-bd90-4c5e38917b31"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": null,
+                                "id": "img6",
+                                "itemId": "img2",
+                                "layout|flex": 1,
+                                "src": "resources/images/logo.png",
+                                "width": null
+                            },
+                            "name": "MyImg1",
+                            "designerId": "3f893eed-2e36-451a-bc38-7947696522d6",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onImg2Tap",
+                                        "implHandler": [
+                                            "",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "name": "onImg2Tap",
+                                    "designerId": "760a3fb4-413c-4e35-b578-a99494494627"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel7",
+                    "designerId": "9a406520-67c0-4e55-aa58-dc7022815e3c",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 120,
+                                "id": "img7",
+                                "itemId": "img3",
+                                "layout|flex": 1,
+                                "src": "resources/images/logo.png",
+                                "width": null
+                            },
+                            "name": "MyImg2",
+                            "designerId": "9b3e9a59-63dd-4ccb-9f25-96aad329fe7f",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onImg3Tap",
+                                        "implHandler": [
+                                            "",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "name": "onImg3Tap",
+                                    "designerId": "444adddc-92e2-4ac1-b0ae-7bb528a503a2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 120,
+                                "id": "img8",
+                                "itemId": "img4",
+                                "layout|flex": 1,
+                                "src": "resources/images/logo.png",
+                                "width": 200
+                            },
+                            "name": "MyImg3",
+                            "designerId": "a6bdb51f-256c-4d56-993e-657736708cdc",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onImg4Tap",
+                                        "implHandler": [
+                                            "",
+                                            "        //custom class MEC_App.controller.DeviceController",
+                                            "        Ext.DeviceController.CaptureImage(image);",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "name": "onImg4Tap",
+                                    "designerId": "f352b937-4c7b-4fc7-a18a-00f87c9084cb"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "id": "btnSubmitComplaint1",
+                        "text": "ارسال"
+                    },
+                    "name": "MyButton20",
+                    "designerId": "02495b69-c9f3-407e-a1e1-09662f1ebace",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "var frm = button.up('FeedbackFormView');",
+                                    "",
+                                    "",
+                                    "",
+                                    "//alert(frm.getValues().shopName);",
+                                    "var formData =frm.getValues();",
+                                    "",
+                                    "",
+                                    "var err='';",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "if(formData.fullName===''){",
+                                    "",
+                                    "    err+=Ext.Global.GetValidationMsg('errFullName');",
+                                    "}",
+                                    "",
+                                    "",
+                                    "if(formData.mobile===''){",
+                                    "",
+                                    "    err+=Ext.Global.GetValidationMsg('errMobile');",
+                                    "}",
+                                    "",
+                                    "if(formData.suggestion===''){",
+                                    "",
+                                    "    err+=Ext.Global.GetValidationMsg('errSuggestion');",
+                                    "}",
+                                    "",
+                                    "",
+                                    "",
+                                    "if(err.length>0){",
+                                    "",
+                                    "    Ext.device.Notification.show({",
+                                    "        title: 'خطأ',",
+                                    "        buttons:[\"موافق\"],",
+                                    "        message: err",
+                                    "    });",
+                                    "}else{",
+                                    "",
+                                    "",
+                                    "    Ext.device.Notification.show({",
+                                    "        title: 'رسالة',",
+                                    "        buttons: [\"موافق\"],",
+                                    "        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),",
+                                    "        callback: function(button) {",
+                                    "",
+                                    "            //return user to home page",
+                                    "",
+                                    "            Ext.Viewport.getActiveItem().reset();",
+                                    "",
+                                    "        }",
+                                    "    });",
+                                    "",
+                                    "",
+                                    "}",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "ee796c1d-6fdf-4acc-8d44-1d9291bb69e4"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

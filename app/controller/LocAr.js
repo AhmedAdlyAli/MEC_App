@@ -121,6 +121,7 @@ Ext.define('MEC_App.controller.LocAr', {
             errMobile:'فضلا ادخل رقم الجوال\n',
             errUserName:'فضلا ادخل اسم المستخدم\n',
             errPassword:'فضلا ادخل كلمة السر\n',
+            errSuggestion : 'فضلا ادخل المقترح /n'
         };
 
 

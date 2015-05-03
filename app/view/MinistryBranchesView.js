@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 items: [
                     {
                         xtype: 'map',
-                        height: 250,
+                        height: 420,
                         id: 'mymap1',
                         itemId: 'mymap',
                         mapOptions: {
@@ -51,6 +51,31 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         }
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-title',
+                itemId: 'lblTitle'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-address',
+                itemId: 'lblAddress'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-goto',
+                itemId: 'lblGoTo'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-tel',
+                itemId: 'lblTel'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-fax',
+                itemId: 'lblFax'
             }
         ]
     },
@@ -58,13 +83,15 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
     initialize: function() {
         this.callParent();
 
+        var view = this;
+
         var mapPanel = this.down('map');
         var gMap = mapPanel.getMap();
 
         Ext.Function.defer(function(){
 
             if (gMap === null) {
-                Ext.Function.defer(this.initMap,500,this);
+                //Ext.Function.defer(this.initMap,500,this);
             } else {
                 // ready to start calling google map methods
 
@@ -72,17 +99,83 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
 
 
                 gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
 
 
-                var marker = new google.maps.Marker({
-                    map: gMap,
-                    animation: google.maps.Animation.DROP,
-                    position: new google.maps.LatLng (25.321283,51.528329),
-                    icon: 'resources/images/drop-pin.png',
+                var branches = [
+                    {Name:'الفرع الرئيسي',Lat:'25.321283',Lng:'51.528329',Address:'TBD',Tel:'123',Fax:'456'},
+
+                    {Name:'مركز جوازات الشحانيه',Lat:'25.3769',Lng:'51.23146',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'بلديه الريان',Lat:'25.30137',Lng:'51.43637',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'بلديه ام صلال لترخيص',Lat:'25.41506',Lng:'51.39724',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'ام صلال لتسجيل',Lat:'25.4679',Lng:'51.40586',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'مركز شرطه الزباره',Lat:'25.82954',Lng:'51.34425',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'مجمع خدمات الهلال',Lat:'25.26332',Lng:'51.53486',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'بلدية الظعاين',Lat:'25.5636',Lng:'51.45246',Address:'TBD',Tel:'123',Fax:'456'},
+                    {Name:'بلدية الوكرة',Lat:'25.16715',Lng:'51.59787',Address:'TBD',Tel:'123',Fax:'456'}
+                                ];
+
+
+              var infowindow = new google.maps.InfoWindow();
+
+
+        var int = 0;
+
+                Ext.each(branches,function(item){
+
+                        var marker = new google.maps.Marker({
+                            map: gMap,
+                            animation: google.maps.Animation.DROP,
+                            position: new google.maps.LatLng (item.Lat,item.Lng),
+                            icon: 'resources/images/drop-pin.png',
+                            data:item
+                        });
+
+                        google.maps.event.addListener(marker,'click',function(pos) {
+
+                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
+                               infowindow.setContent(info);
+                               infowindow.open(gMap,marker);
+
+                           view.down('#lblTitle').setHtml(marker.data.Name);
+                           view.down('#lblAddress').setHtml(marker.data.Address);
+                           view.down('#lblTel').setHtml(marker.data.Tel);
+                           view.down('#lblFax').setHtml(marker.data.Fax);
+
+                        });
+
+
+                    if(int===0)
+                    {
+                        new google.maps.event.trigger( marker, 'click' );
+
+                    }
+
+                    int++;
                 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             }
         } ,300,this);
+
+
+
+
 
         mapPanel.element.on({
             tap: this.domEvent,

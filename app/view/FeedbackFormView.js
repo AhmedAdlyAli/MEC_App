@@ -17,7 +17,239 @@ Ext.define('MEC_App.view.FeedbackFormView', {
     extend: 'Ext.form.Panel',
     alias: 'widget.FeedbackFormView',
 
+    requires: [
+        'Ext.Label',
+        'Ext.form.FieldSet',
+        'Ext.field.TextArea',
+        'Ext.Panel',
+        'Ext.Img',
+        'Ext.Button',
+        'Ext.device.Camera',
+        'Ext.device.Notification',
+        'MEC_App.controller.DeviceController'
+    ],
+
     config: {
+        cls: 'complaint-view',
+        itemId: 'FeedbackFormView',
+        layout: 'vbox',
+        enableSubmissionForm: false,
+        items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'مقترحات'
+            },
+            {
+                xtype: 'fieldset',
+                flex: 1,
+                scrollable: {
+                    direction: 'vertical',
+                    directionLock: true
+                },
+                items: [
+                    {
+                        xtype: 'textfield',
+                        itemId: 'txtFullName',
+                        label: '',
+                        name: 'fullName',
+                        required: true,
+                        placeHolder: 'الاسم بالكامل'
+                    },
+                    {
+                        xtype: 'textfield',
+                        itemId: 'txtEmail',
+                        label: '',
+                        name: 'email',
+                        placeHolder: 'البريد الالكتدوني'
+                    },
+                    {
+                        xtype: 'textfield',
+                        itemId: 'txtMobile',
+                        label: '',
+                        name: 'mobile',
+                        required: true,
+                        placeHolder: 'رقم الهاتف'
+                    },
+                    {
+                        xtype: 'textareafield',
+                        itemId: 'txtComment',
+                        label: '',
+                        name: 'suggestion',
+                        required: true,
+                        placeHolder: 'نص المقترح'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'ارفق صورة',
+                        id: 'lblAttachImage1'
+                    },
+                    {
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img5',
+                                itemId: 'img1',
+                                src: 'resources/images/logo.png'
+                            },
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                id: 'img6',
+                                itemId: 'img2',
+                                src: 'resources/images/logo.png'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img7',
+                                itemId: 'img3',
+                                src: 'resources/images/logo.png'
+                            },
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 120,
+                                id: 'img8',
+                                itemId: 'img4',
+                                width: 200,
+                                src: 'resources/images/logo.png'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+
+                            var frm = button.up('FeedbackFormView');
+
+
+
+                            //alert(frm.getValues().shopName);
+                            var formData =frm.getValues();
+
+
+                            var err='';
+
+
+
+
+
+
+                            if(formData.fullName===''){
+
+                                err+=Ext.Global.GetValidationMsg('errFullName');
+                            }
+
+
+                            if(formData.mobile===''){
+
+                                err+=Ext.Global.GetValidationMsg('errMobile');
+                            }
+
+                            if(formData.suggestion===''){
+
+                                err+=Ext.Global.GetValidationMsg('errSuggestion');
+                            }
+
+
+
+                            if(err.length>0){
+
+                                Ext.device.Notification.show({
+                                    title: 'خطأ',
+                                    buttons:["موافق"],
+                                    message: err
+                                });
+                            }else{
+
+
+                                Ext.device.Notification.show({
+                                    title: 'رسالة',
+                                    buttons: ["موافق"],
+                                    message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
+                                    callback: function(button) {
+
+                                        //return user to home page
+
+                                        Ext.Viewport.getActiveItem().reset();
+
+                                    }
+                                });
+
+
+                            }
+
+
+                        },
+                        cls: 'btn-send',
+                        id: 'btnSubmitComplaint1',
+                        text: 'ارسال'
+                    }
+                ]
+            }
+        ],
+        listeners: [
+            {
+                fn: 'onImg1Tap',
+                event: 'tap',
+                delegate: '#img5'
+            },
+            {
+                fn: 'onImg2Tap',
+                event: 'tap',
+                delegate: '#img6'
+            },
+            {
+                fn: 'onImg3Tap',
+                event: 'tap',
+                delegate: '#img7'
+            },
+            {
+                fn: 'onImg4Tap',
+                event: 'tap',
+                delegate: '#img8'
+            }
+        ]
+    },
+
+    onImg1Tap: function(image, e, eOpts) {
+                //custom class MEC_App.controller.DeviceController
+                Ext.DeviceController.CaptureImage(image);
+
+
+    },
+
+    onImg2Tap: function(image, e, eOpts) {
+
+                //custom class MEC_App.controller.DeviceController
+                Ext.DeviceController.CaptureImage(image);
+
+    },
+
+    onImg3Tap: function(image, e, eOpts) {
+
+                //custom class MEC_App.controller.DeviceController
+                Ext.DeviceController.CaptureImage(image);
+
+    },
+
+    onImg4Tap: function(image, e, eOpts) {
+
+                //custom class MEC_App.controller.DeviceController
+                Ext.DeviceController.CaptureImage(image);
+
     }
 
 });

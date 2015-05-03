@@ -51,7 +51,6 @@ Ext.application({
         'MinistryInThePressView',
         'EconomyNewsView',
         'TradeNameAvailabilityView',
-        'FeedbackFormView',
         'MinistryEmployeesView',
         'MicroEconomicReport',
         'PricingView',
@@ -102,9 +101,9 @@ Ext.application({
         'AboutMinistryView',
         'MinistryBranchesView',
         'EconomicIndicatorsBrief',
-        'MyLabel6',
         'InvestorServiceView',
-        'ConsumerServiceView'
+        'ConsumerServiceView',
+        'FeedbackFormView'
     ],
     controllers: [
         'HomeController',

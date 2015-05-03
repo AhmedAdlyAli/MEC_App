@@ -62,7 +62,6 @@
             "MinistryInThePressView",
             "EconomyNewsView",
             "TradeNameAvailabilityView",
-            "FeedbackFormView",
             "MinistryEmployeesView",
             "MicroEconomicReport",
             "PricingView",
@@ -113,9 +112,9 @@
             "AboutMinistryView",
             "MinistryBranchesView",
             "EconomicIndicatorsBrief",
-            "MyLabel6",
             "InvestorServiceView",
-            "ConsumerServiceView"
+            "ConsumerServiceView",
+            "FeedbackFormView"
         ]
     },
     "name": "Application",
