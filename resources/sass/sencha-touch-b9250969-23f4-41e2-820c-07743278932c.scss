@@ -1437,27 +1437,61 @@ background: url(../images/toplogo.png) no-repeat center top;
 .branch-title{
     color: #691e49;
     margin: 5px 10px;
-    
+
 }
 
 .branch-address{
     margin: 5px 10px;
     padding-right:40px;
-    background: url(../images/b-address.png) no-repeat right center;  
+    background: url(../images/b-address.png) no-repeat right center;
 }
 
 
 .branch-tel{
     margin: 5px 10px;
-    padding-right:40px; 
-    background: url(../images/b-tel.png) no-repeat right center;   
+    padding-right:40px;
+    background: url(../images/b-tel.png) no-repeat right center;
 }
 
 
 .branch-fax{
     margin: 5px 10px;
     padding-right:40px;
-    background: url(../images/b-fax.png) no-repeat right center;   
+    background: url(../images/b-fax.png) no-repeat right center;
 }
 
 
+.notify-icon{
+    background: url(../images/notify-icon.png) no-repeat !important;
+    width:16px;
+    heigt:22px;
+    margin-left:1em !important
+}
+
+.item-notification{
+
+height:3em;
+    padding:0.5em 2em 0.5em 0.5em;
+    background: url(../images/notify-item1.png) no-repeat 90% center;
+
+
+.notification-sub{
+        padding:0.5em 3em 0.5em 0.5em;
+    background: url(../images/notify-item2.png) no-repeat 90% center;
+
+}
+
+}
+
+
+.item-education{
+    color:#701d45!important;
+    height:19em;
+    font-size:1.2em;
+
+    .img{
+            margin-top:1em;
+            height:14em;
+            width:100%;
+        }
+    }

@@ -19,9 +19,7 @@ Ext.define('MEC_App.view.MinistryNewsView', {
 
     requires: [
         'Ext.Label',
-        'Ext.XTemplate',
-        'Ext.plugin.PullRefresh',
-        'Ext.plugin.ListPaging'
+        'Ext.XTemplate'
     ],
 
     config: {
@@ -46,15 +44,6 @@ Ext.define('MEC_App.view.MinistryNewsView', {
                 docked: 'top',
                 html: 'اخبار الوزارة',
                 itemId: 'lblTitle'
-            }
-        ],
-        plugins: [
-            {
-                type: 'pullrefresh'
-            },
-            {
-                autoPaging: true,
-                type: 'listpaging'
             }
         ]
     }

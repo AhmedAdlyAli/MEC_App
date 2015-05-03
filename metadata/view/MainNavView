@@ -572,6 +572,24 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onPnlMainPainted",
+                        "implHandler": [
+                            "              Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').show();",
+                            ""
+                        ],
+                        "name": "painted"
+                    },
+                    "name": "onPnlMainPainted",
+                    "designerId": "b342f58c-5d46-4ed2-9b98-9cb0d3b51e64"
                 }
             ]
         },
@@ -588,10 +606,8 @@
                     "this.callParent();",
                     "",
                     "",
-                    "//var me = this;",
+                    "//Create Menu",
                     "var theMenu = Ext.create('MEC_App.view.SideMenu');",
-                    "",
-                    "",
                     "Ext.Viewport.setMenu(theMenu,{",
                     "    side: 'right',",
                     "    reveal: false,",
@@ -603,10 +619,11 @@
                     "",
                     "",
                     "",
-                    "// Add Menu button",
                     "",
-                    "var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();",
                     "",
+                    "",
+                    "// Add menu button",
+                    "var navBar = this.getNavigationBar();",
                     "navBar.add({",
                     "    xtype:'button',",
                     "    iconCls: 'list',",
@@ -617,8 +634,24 @@
                     "});",
                     "",
                     "",
-                    "// add title",
-                    "//navBar.setTitle('<div class=toplogo></div>');",
+                    "// Add Notification Icon",
+                    "var me = this;",
+                    "navBar.add({",
+                    "    xtype:'button',",
+                    "    cls: 'notify-icon',",
+                    "    align:'left',",
+                    "    itemId:'btnNotofication',",
+                    "    handler: function(){",
+                    "",
+                    "  ",
+                    "        ",
+                    "        Ext.Global.RedirectLoggedUser('NotificationView');",
+                    "        ",
+                    "        ",
+                    "    }",
+                    "});",
+                    "",
+                    "",
                     "",
                     "",
                     "",
@@ -665,6 +698,26 @@
             },
             "name": "initialize",
             "designerId": "7e63eba3-4a11-42ac-b230-48e893b41436"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainNavPush",
+                "implHandler": [
+                    "//console.log(view);                      ",
+                    "",
+                    "Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').hide();",
+                    ""
+                ],
+                "name": "push"
+            },
+            "name": "onMainNavPush",
+            "designerId": "3e5c59ce-1690-45dc-a159-b617d5d56cac"
         }
     ]
 }

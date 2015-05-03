@@ -63,29 +63,6 @@
             },
             "name": "itemTpl",
             "designerId": "9a8ae2fd-c7af-4712-a486-9a39aee8d81f"
-        },
-        {
-            "type": "Ext.plugin.PullRefresh",
-            "reference": {
-                "name": "plugins",
-                "type": "array"
-            },
-            "codeClass": null,
-            "name": "MyPullRefreshPlugin1",
-            "designerId": "17c6cf7a-87a6-4275-9e76-9ba386424c40"
-        },
-        {
-            "type": "Ext.plugin.ListPaging",
-            "reference": {
-                "name": "plugins",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "autoPaging": true
-            },
-            "name": "MyListPagingPlugin",
-            "designerId": "deb1b49d-2e14-49cb-aa7a-62cba6aaf165"
         }
     ]
 }

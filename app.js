@@ -103,7 +103,8 @@ Ext.application({
         'EconomicIndicatorsBrief',
         'InvestorServiceView',
         'ConsumerServiceView',
-        'FeedbackFormView'
+        'FeedbackFormView',
+        'NotificationView'
     ],
     controllers: [
         'HomeController',

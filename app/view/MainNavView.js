@@ -258,19 +258,39 @@ Ext.define('MEC_App.view.MainNavView', {
                             }
                         ]
                     }
+                ],
+                listeners: [
+                    {
+                        fn: function(element, eOpts) {
+                            Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').show();
+
+                        },
+                        event: 'painted'
+                    }
                 ]
             }
+        ],
+        listeners: [
+            {
+                fn: 'onMainNavPush',
+                event: 'push'
+            }
         ]
+    },
+
+    onMainNavPush: function(navigationview, view, eOpts) {
+        //console.log(view);
+
+        Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').hide();
+
     },
 
     initialize: function() {
         this.callParent();
 
 
-        //var me = this;
+        //Create Menu
         var theMenu = Ext.create('MEC_App.view.SideMenu');
-
-
         Ext.Viewport.setMenu(theMenu,{
             side: 'right',
             reveal: false,
@@ -282,10 +302,11 @@ Ext.define('MEC_App.view.MainNavView', {
 
 
 
-        // Add Menu button
 
-        var navBar = Ext.ComponentQuery.query('MainNavView')[0].getNavigationBar();
 
+
+        // Add menu button
+        var navBar = this.getNavigationBar();
         navBar.add({
             xtype:'button',
             iconCls: 'list',
@@ -296,8 +317,24 @@ Ext.define('MEC_App.view.MainNavView', {
         });
 
 
-        // add title
-        //navBar.setTitle('<div class=toplogo></div>');
+        // Add Notification Icon
+        var me = this;
+        navBar.add({
+            xtype:'button',
+            cls: 'notify-icon',
+            align:'left',
+            itemId:'btnNotofication',
+            handler: function(){
+
+
+
+                Ext.Global.RedirectLoggedUser('NotificationView');
+
+
+            }
+        });
+
+
 
 
 

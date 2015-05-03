@@ -1,0 +1,159 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "NotificationView",
+        "designer|userClassName": "NotificationView",
+        "itemId": "NotificationView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "ConsumerIndicatorsListing1",
+    "designerId": "0c269455-48b4-407a-9368-feb37ac9013a",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "الإشعارات"
+            },
+            "name": "MyLabel3",
+            "designerId": "80b54caf-ea1e-442b-bf52-aee2b72067c4"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "id": null,
+                "itemCls": "item-notification",
+                "itemId": "lstItems",
+                "pressedCls": null,
+                "selectedCls": null,
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "556eb45c-5865-40dd-ad8a-99e8ad8dee79",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "{content}",
+                            "<div class='notification-sub'>{date}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "b6a7b798-8e37-4e88-8a4f-2ca2aa167992"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var view = this;//me.getMyBusinessView();",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "//alert('loading');",
+                    "",
+                    "",
+                    "var requestData = {",
+                    "    \"serviceId\": \"11\",",
+                    "    \"token\": Ext.Global.userToken,",
+                    "    \"language\": \"ar\",",
+                    "    \"identityType\": 'QID',//Ext.Global.identityType,",
+                    "    \"identityNum\": Ext.Global.identityNum,",
+                    "    \"identityNationality\":  Ext.Global.identityNationality",
+                    "};",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('webServiceUrl'),",
+                    "    method : 'POST',",
+                    "    jsonData :requestData,",
+                    "    success : function (response) {",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        ",
+                    "        ",
+                    "        if(json.listOfMecMyNotificationsIo.mecAction.length>0)",
+                    "        {",
+                    "            var store = new Ext.data.Store({",
+                    "                data : json.listOfMecMyNotificationsIo.mecAction",
+                    "            });",
+                    "",
+                    "            var lst = view.down('#lstItems');",
+                    "            lst.setStore(store);",
+                    "        }        ",
+                    "",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "",
+                    "    }",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "d812f17a-79a5-4f4e-b60b-bfd35fd958a8"
+        }
+    ]
+}

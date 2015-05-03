@@ -67,6 +67,8 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
                 });
 
                 view.setStore(store);
+
+
                 Ext.AnimationHelper.HideLoading();
             }
         });

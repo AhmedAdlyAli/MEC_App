@@ -114,7 +114,8 @@
             "EconomicIndicatorsBrief",
             "InvestorServiceView",
             "ConsumerServiceView",
-            "FeedbackFormView"
+            "FeedbackFormView",
+            "NotificationView"
         ]
     },
     "name": "Application",

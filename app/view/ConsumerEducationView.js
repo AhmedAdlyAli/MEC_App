@@ -40,10 +40,12 @@ Ext.define('MEC_App.view.ConsumerEducationView', {
                 cls: 'CompanyList',
                 height: '100%',
                 itemId: 'lstEducation',
-                itemCls: 'item-recall',
+                itemCls: 'item-education',
                 itemTpl: [
-                    '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{ArticleBrief}</span></div>',
+                    '{ArticleTitle}',
+                    '<br />',
+                    '<img class="img" src="https://pbs.twimg.com/media/CDx2dQaWgAAf3xI.png" />',
+                    '',
                     ''
                 ]
             }
