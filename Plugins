@@ -21,3 +21,7 @@ http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-a
 
 
 cordova plugin add plugin.google.maps --variable API_KEY_FOR_ANDROID="AIzaSyAeJHLXDPQvKF-_6SBzdBYOnzRHmn8soQ0" --variable API_KEY_FOR_IOS="AIzaSyCuOp-yWmouTftQpsFDTlxTFR4FBGDqgP4"
+
+
+cordova plugin add org.apache.cordova.geolocation
+

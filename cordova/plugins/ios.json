@@ -76,12 +76,23 @@
                             "xml": true,
                             "count": 1
                         }
-                    ]
+                    ],
+                    "CoreData.framework": [],
+                    "CoreText.framework": [],
+                    "GLKit.framework": [],
+                    "libc++.dylib": [],
+                    "libicucore.dylib": [],
+                    "libz.dylib": [],
+                    "OpenGLES.framework": [],
+                    "SystemConfiguration.framework": []
                 }
             },
             "*-Info.plist": {
                 "parents": {
-                    "NSLocationWhenInUseUsageDescription": []
+                    "NSLocationWhenInUseUsageDescription": [],
+                    "Google Maps API Key": [],
+                    "NSLocationAlwaysUsageDescription": [],
+                    "CFBundleURLTypes": []
                 }
             }
         }

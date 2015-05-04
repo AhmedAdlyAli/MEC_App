@@ -49,13 +49,29 @@
                 "cls": [
                     "mapview"
                 ],
-                "height": 400,
+                "height": null,
                 "id": "pnlMapDealers",
                 "itemId": "pnlMap",
                 "zIndex": 1000
             },
             "name": "MyPanel",
-            "designerId": "ac5efce5-d942-45e6-a68a-e31a9e3ce9b5"
+            "designerId": "ac5efce5-d942-45e6-a68a-e31a9e3ce9b5",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 420,
+                        "itemId": "mapDealers"
+                    },
+                    "name": "MyMap1",
+                    "designerId": "4ee210d4-048a-4175-8e16-e9ccfd8f39fd"
+                }
+            ]
         },
         {
             "type": "Ext.Button",

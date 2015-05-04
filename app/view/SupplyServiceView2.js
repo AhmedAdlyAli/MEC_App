@@ -20,8 +20,8 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.Button',
-        'Ext.Map'
+        'Ext.Map',
+        'Ext.Button'
     ],
 
     config: {
@@ -37,10 +37,16 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
             {
                 xtype: 'panel',
                 cls: 'mapview',
-                height: 400,
                 id: 'pnlMapDealers',
                 itemId: 'pnlMap',
-                zIndex: 1000
+                zIndex: 1000,
+                items: [
+                    {
+                        xtype: 'map',
+                        height: 420,
+                        itemId: 'mapDealers'
+                    }
+                ]
             },
             {
                 xtype: 'button',

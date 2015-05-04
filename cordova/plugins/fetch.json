@@ -23,14 +23,6 @@
         "is_top_level": true,
         "variables": {}
     },
-    "plugin.google.maps": {
-        "source": {
-            "type": "registry",
-            "id": "plugin.google.maps"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "com.phonegap.plugins.barcodescanner": {
         "source": {
             "type": "registry",
@@ -61,6 +53,34 @@
             "id": "org.pbernasconi.progressindicator"
         },
         "is_top_level": true,
+        "variables": {}
+    },
+    "plugin.http.request": {
+        "source": {
+            "type": "registry",
+            "id": "plugin.http.request"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.google.playservices": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wf9a5m75/google-play-services",
+            "subdir": ".",
+            "ref": "v23"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
+    "com.googlemaps.ios": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/wf9a5m75/googlemaps-ios-sdk-for-phonegap",
+            "subdir": ".",
+            "ref": "master"
+        },
+        "is_top_level": false,
         "variables": {}
     }
 }

@@ -138,39 +138,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         // initialize google maps
         var view = component;
 
-        var pnlMap = view.down('#pnlMap');
+        var mapPanel = view.down('mapDealers');
+        var gMap = mapPanel.getMap();
 
         Ext.Function.defer(function(){
 
-            var map = plugin.google.maps.Map.getMap(pnlMap.element.dom);
-
-            map.setClickable(true);
 
 
-            map.getMyLocation(function(location){
-
-                //map.setMyLocationEnabled(true);
-
-                // alert(location.latLng.lat);
-
-                //map.setCenter(location.latLng);
-
-                map.animateCamera({
-                    'target': location.latLng,
-                    'tilt': 60,
-                    'zoom': 9,
-                    'bearing': 140
-                });
-
-
-            }, function(){
-
-                alert("error: " + msg);
-
-            });
-
-
-        /*
 
             // get dealers
 
@@ -277,7 +251,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        */
+
 
 
 
