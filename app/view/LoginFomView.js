@@ -82,6 +82,7 @@ Ext.define('MEC_App.view.LoginFomView', {
                     {
                         xtype: 'fieldset',
                         centered: true,
+                        itemId: 'fSet',
                         width: '100%',
                         items: [
                             {

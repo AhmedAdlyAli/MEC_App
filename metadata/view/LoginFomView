@@ -155,6 +155,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "centered": true,
+                        "itemId": "fSet",
                         "title": null,
                         "width": "100%"
                     },

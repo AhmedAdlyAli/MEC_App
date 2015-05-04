@@ -15,6 +15,11 @@ var localeEn =
 				{itemId:"btnSubmitLogin", "xtype": "button","value":"Login"},
 				{itemId:"txtUserName", "xtype": "textfield","value":"User Name"},
 				{itemId:"txtPassword", "xtype": "textfield","value":"Password"},
+				{itemId:"fSet", "xtype": "dir","value":"ltr"},
+
+
+
+				
 				
 			]
 
