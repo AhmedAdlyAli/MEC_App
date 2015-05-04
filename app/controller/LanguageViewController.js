@@ -38,7 +38,7 @@ Ext.define('MEC_App.controller.LanguageViewController', {
     onBtrnEnglishTap: function(button, e, eOpts) {
 
 
-        localStorage.setItem('LanguageFlag', 'en');
+        //localStorage.setItem('LanguageFlag', 'en');
 
 
         Ext.Global.LanguageFlag = 'en';
@@ -52,7 +52,7 @@ Ext.define('MEC_App.controller.LanguageViewController', {
     },
 
     onBtnArabicTap: function(button, e, eOpts) {
-        localStorage.setItem('LanguageFlag', 'ar');
+        //localStorage.setItem('LanguageFlag', 'ar');
         Ext.Global.LanguageFlag = 'ar';
 
         var home = Ext.create('widget.MainNavView');
@@ -62,17 +62,16 @@ Ext.define('MEC_App.controller.LanguageViewController', {
     },
 
     onLanguageViewInitialize: function(component, eOpts) {
+        var languageFlag = localStorage.getItem('LanguageFlag');
 
-
-        if(localStorage.LanguageFlag){
-
-            var languageFlag = localStorage.getItem('LanguageFlag');
+        if(languageFlag){
 
             Ext.Global.LanguageFlag = languageFlag;
 
             var home = Ext.create('widget.MainNavView');
             Ext.Viewport.setActiveItem(home);
         }
+
 
 
 

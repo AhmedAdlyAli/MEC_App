@@ -69,7 +69,7 @@ Ext.define('MEC_App.controller.Localization', {
             //console.log(viewLoc);
 
             Ext.each(viewLoc.items,function(item){
-               var viewItem = viewObj.down('#'+item.itemId);
+                var viewItem = viewObj.down('#'+item.itemId);
 
                 if(item.xtype=='button') viewItem.setText(item.value);
                 if(item.xtype=='label') viewItem.setHtml(item.value);

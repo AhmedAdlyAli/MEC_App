@@ -34,7 +34,7 @@
                 "implHandler": [
                     "",
                     "",
-                    "localStorage.setItem('LanguageFlag', 'en');",
+                    "//localStorage.setItem('LanguageFlag', 'en');",
                     "",
                     "",
                     "Ext.Global.LanguageFlag = 'en';",
@@ -68,7 +68,7 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnArabicTap",
                 "implHandler": [
-                    "localStorage.setItem('LanguageFlag', 'ar');",
+                    "//localStorage.setItem('LanguageFlag', 'ar');",
                     "Ext.Global.LanguageFlag = 'ar';",
                     "",
                     "var home = Ext.create('widget.MainNavView');",
@@ -97,17 +97,16 @@
                 "designer|targetType": "Ext.Panel",
                 "fn": "onLanguageViewInitialize",
                 "implHandler": [
+                    "var languageFlag = localStorage.getItem('LanguageFlag');",
                     "",
+                    "if(languageFlag){",
                     "",
-                    "if(localStorage.LanguageFlag){",
-                    "",
-                    "    var languageFlag = localStorage.getItem('LanguageFlag');",
-                    "    ",
                     "    Ext.Global.LanguageFlag = languageFlag;",
                     "",
                     "    var home = Ext.create('widget.MainNavView');",
                     "    Ext.Viewport.setActiveItem(home);",
                     "}",
+                    "",
                     "",
                     "",
                     ""
