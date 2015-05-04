@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		02FF587D19724532BA9FAB0D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9506737AB24FB39381182F /* AVFoundation.framework */; };
 		031EDD45C93C4477B0023D94 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FC6CD60474159B3981E9C /* libiconv.dylib */; };
@@ -573,8 +574,6 @@
 				6CAB8D1BFC1746EA9B04E637 /* CDVDevice.m in Sources */,
 				5378CD604D4D4BD9AE54E615 /* MBProgressHUD.m in Sources */,
 				D9316F30A0294704ADF92B42 /* ProgressIndicator.m in Sources */,
-				B2A880349C7249B499669C6B /* README in Sources */,
-				E48F16CAE0FC45C68F5AB7E1 /* BSD-LICENSE in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,7 +607,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MEC_App/MEC_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,
@@ -644,7 +643,7 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "MEC_App/MEC_App-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-weak_framework",
 					CoreFoundation,

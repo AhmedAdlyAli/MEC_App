@@ -184,3 +184,4 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-04 15:48:32.786 MEC_App[31987:270218] Unlimited access to network resources
 2015-05-04 15:48:32.984 MEC_App[31987:270218] Resetting plugins due to page load.
 2015-05-04 15:48:33.229 MEC_App[31987:270218] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/EBEC698D-EBD1-472B-AD07-08D291DCF32B/MEC_App.app/www/index.html
+2015-05-04 16:52:36.369 MEC_App[31987:294154] Terminating since there is no system app.
