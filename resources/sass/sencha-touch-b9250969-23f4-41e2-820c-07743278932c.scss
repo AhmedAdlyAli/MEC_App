@@ -1512,7 +1512,7 @@ height:3em;
     overflow: hidden;
     outline:none;
     color:#701d45;
-    font-size:1.3em; 
+    font-size:1.3em;
     margin-top:9em;
 }
 
@@ -1523,10 +1523,15 @@ height:3em;
     border: none;
     cursor:pointer;
     overflow: hidden;
-    outline:none; 
+    outline:none;
     color:#701d45;
     font-size:1.3em;
     margin-top:1em;
 }
 
+
+.ltr-cls{
+    direction:ltr !important 
+    
+}
 

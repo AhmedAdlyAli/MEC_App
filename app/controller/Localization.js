@@ -74,7 +74,7 @@ Ext.define('MEC_App.controller.Localization', {
                             viewItem.setPlaceHolder(item.value);
                             viewItem.setLabel(item.value);
                         }
-                        if(item.xtype=='dire') viewItem.setCss('direction:'+item.value);
+                        if(item.xtype=='cls') viewItem.addCls(item.value);
 
                     });
                 }
