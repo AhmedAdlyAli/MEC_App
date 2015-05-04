@@ -83,6 +83,7 @@
                                 ],
                                 "docked": "bottom",
                                 "html": "تسجيل الدخول",
+                                "itemId": "lblTitle",
                                 "layout|flex": 1
                             },
                             "name": "MyLabel2",

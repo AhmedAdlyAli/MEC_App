@@ -53,7 +53,8 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 flex: 1,
                                 cls: 'print-office-header-title',
                                 docked: 'bottom',
-                                html: 'تسجيل الدخول'
+                                html: 'تسجيل الدخول',
+                                itemId: 'lblTitle'
                             }
                         ]
                     }

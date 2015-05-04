@@ -26,10 +26,7 @@ Ext.define('MEC_App.controller.Localization', {
 
     LoadLocalization: function() {
 
-
-        //Ext.Global.LangugeFlag = 'en';
-
-        //read localization flag set from Application Run, or Language screen
+        //read localization flag set from Language screen
 
         if(Ext.Global.LanguageFlag == 'ar')
         {
@@ -50,7 +47,7 @@ Ext.define('MEC_App.controller.Localization', {
 
     LocalizeView: function(viewObj) {
 
-
+        // if the localization is set ==> english
         if(Ext.Global.Localization)
         {
             var loc = Ext.Global.Localization;
@@ -62,26 +59,25 @@ Ext.define('MEC_App.controller.Localization', {
                     viewLoc = item;
                     return;
                 }
-
             });
 
 
-            //console.log(viewLoc);
-
-            Ext.each(viewLoc.items,function(item){
-                var viewItem = viewObj.down('#'+item.itemId);
-
-                if(item.xtype=='button') viewItem.setText(item.value);
-                if(item.xtype=='label') viewItem.setHtml(item.value);
-                if(item.xtype=='textfield')
+            if(viewLoc.items)
                 {
-                    viewItem.setPlaceHolder(item.value);
-                    viewItem.setLabel(item.value);
+                    Ext.each(viewLoc.items,function(item){
+                        var viewItem = viewObj.down('#'+item.itemId);
+
+                        if(item.xtype=='button') viewItem.setText(item.value);
+                        if(item.xtype=='label') viewItem.setHtml(item.value);
+                        if(item.xtype=='textfield')
+                        {
+                            viewItem.setPlaceHolder(item.value);
+                            viewItem.setLabel(item.value);
+                        }
+
+
+                    });
                 }
-
-
-            });
-
 
         }
 
