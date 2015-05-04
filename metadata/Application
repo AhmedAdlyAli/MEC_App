@@ -29,7 +29,8 @@
             "GoodsPricesController",
             "GoodPriceListController",
             "ShopPriceListController",
-            "WhereToShopController"
+            "WhereToShopController",
+            "LanguageViewController"
         ],
         "models": [
             "MenuModel"
@@ -115,7 +116,8 @@
             "InvestorServiceView",
             "ConsumerServiceView",
             "FeedbackFormView",
-            "NotificationView"
+            "NotificationView",
+            "LanguageView"
         ]
     },
     "name": "Application",
@@ -132,9 +134,15 @@
                 "fn": "launch",
                 "implHandler": [
                     "",
+                    "",
+                    "",
+                    "",
                     "Ext.Global.LoadLocalization();",
                     "",
                     "Ext.Global.LoadSessionVariables();",
+                    "",
+                    "",
+                    "",
                     ""
                 ]
             },

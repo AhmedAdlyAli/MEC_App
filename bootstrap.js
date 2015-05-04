@@ -688,7 +688,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.GoodsPricesController": [],
   "MEC_App.controller.HomeController": [],
   "MEC_App.controller.InvestorEducationController": [],
+  "MEC_App.controller.LanguageViewController": [],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.Localization": [
+    "Ext.Localization"
+  ],
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.MyBusinessController": [],
@@ -730,6 +734,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.InquiriesView": [],
   "MEC_App.view.InvestorEducationView": [],
   "MEC_App.view.InvestorServiceView": [],
+  "MEC_App.view.LanguageView": [],
   "MEC_App.view.LoginFomView": [],
   "MEC_App.view.MainNavView": [],
   "MEC_App.view.MediaCenterView": [],
@@ -1531,7 +1536,11 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.InvestorEducationController": [
     "controller.InvestorEducationController"
   ],
+  "MEC_App.controller.LanguageViewController": [
+    "controller.LanguageViewController"
+  ],
   "MEC_App.controller.LocAr": [],
+  "MEC_App.controller.Localization": [],
   "MEC_App.controller.LoginController": [],
   "MEC_App.controller.MinistryNewsController": [],
   "MEC_App.controller.MyBusinessController": [],
@@ -1628,6 +1637,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.InvestorServiceView": [
     "widget.InvestorServiceView"
+  ],
+  "MEC_App.view.LanguageView": [
+    "widget.LanguageView"
   ],
   "MEC_App.view.LoginFomView": [
     "widget.LoginFomView"

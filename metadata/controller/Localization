@@ -1,0 +1,112 @@
+{
+    "type": "class",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "alternateClassName": [
+            "Ext.Localization"
+        ],
+        "designer|userClassName": "Localization",
+        "singleton": true
+    },
+    "name": "MyClass",
+    "designerId": "4b8d32f3-0784-444d-bc4d-762dc72ce000",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "LoadLocalization",
+                "implHandler": [
+                    "",
+                    "",
+                    "        //Ext.Global.LangugeFlag = 'en';",
+                    "",
+                    "        //read localization flag set from Application Run, or Language screen",
+                    "",
+                    "        if(Ext.Global.LanguageFlag == 'ar')",
+                    "            {",
+                    "",
+                    "                // do nothing, forms already arabic",
+                    "",
+                    "            }else if(Ext.Global.LanguageFlag == 'en')",
+                    "            {",
+                    "                // laod english json file",
+                    "",
+                    "                Ext.Global.Localization = localeEn;",
+                    "",
+                    "            }",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "LoadLocalization",
+            "designerId": "775f9906-f0f2-4f50-88b3-4e453e71648c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "viewObj"
+                ],
+                "fn": "LocalizeView",
+                "implHandler": [
+                    "",
+                    "",
+                    "if(Ext.Global.Localization)",
+                    "{",
+                    "    var loc = Ext.Global.Localization;",
+                    "    var viewLoc;",
+                    "",
+                    "    Ext.each(loc.Views,function(item){",
+                    "        if(item.itemId==viewObj._itemId)",
+                    "        {",
+                    "            viewLoc = item;",
+                    "            return;",
+                    "        }",
+                    "",
+                    "    });",
+                    "",
+                    "",
+                    "    //console.log(viewLoc);",
+                    "",
+                    "    Ext.each(viewLoc.items,function(item){",
+                    "       var viewItem = viewObj.down('#'+item.itemId);",
+                    "",
+                    "        if(item.xtype=='button') viewItem.setText(item.value);",
+                    "        if(item.xtype=='label') viewItem.setHtml(item.value);",
+                    "        if(item.xtype=='textfield')",
+                    "        {",
+                    "            viewItem.setPlaceHolder(item.value);",
+                    "            viewItem.setLabel(item.value);",
+                    "        }",
+                    "",
+                    "",
+                    "    });",
+                    "",
+                    "",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "LocalizeView",
+            "designerId": "be1fe15b-dea9-4296-9018-ddabf8f24333"
+        }
+    ]
+}

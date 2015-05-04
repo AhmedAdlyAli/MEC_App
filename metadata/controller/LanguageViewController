@@ -1,0 +1,118 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "LanguageViewController",
+        "designer|userClassName": "LanguageViewController",
+        "requires": [
+            "Ext.Global"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "0f8b9266-49e8-4bd3-8e61-ea2f61c236a9",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btrnEnglish",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtrnEnglishTap",
+                "implHandler": [
+                    "",
+                    "",
+                    "localStorage.setItem('LanguageFlag', 'en');",
+                    "",
+                    "",
+                    "Ext.Global.LanguageFlag = 'en';",
+                    "",
+                    "var home = Ext.create('widget.MainNavView');",
+                    "Ext.Viewport.setActiveItem(home);",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtrnEnglishTap",
+            "designerId": "0bb4cf8f-715a-4c0d-b301-96eabb0e111d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnArabic",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnArabicTap",
+                "implHandler": [
+                    "localStorage.setItem('LanguageFlag', 'ar');",
+                    "Ext.Global.LanguageFlag = 'ar';",
+                    "",
+                    "var home = Ext.create('widget.MainNavView');",
+                    "Ext.Viewport.setActiveItem(home);",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnArabicTap",
+            "designerId": "d8c683e6-5655-4581-a620-c807259ec7e3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#LanguageView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Panel",
+                "fn": "onLanguageViewInitialize",
+                "implHandler": [
+                    "        var languageFlag = localStorage.getItem('LanguageFlag');",
+                    "",
+                    "        if(languageFlag){",
+                    "            Ext.Global.LanguageFlag = languageFlag;",
+                    "",
+                    "            var home = Ext.create('widget.MainNavView');",
+                    "            Ext.Viewport.setActiveItem(home);",
+                    "        }",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onLanguageViewInitialize",
+            "designerId": "4300d8fd-e8e0-4751-9a74-e9c70b78f59c"
+        }
+    ]
+}

@@ -104,7 +104,8 @@ Ext.application({
         'InvestorServiceView',
         'ConsumerServiceView',
         'FeedbackFormView',
-        'NotificationView'
+        'NotificationView',
+        'LanguageView'
     ],
     controllers: [
         'HomeController',
@@ -129,17 +130,24 @@ Ext.application({
         'GoodsPricesController',
         'GoodPriceListController',
         'ShopPriceListController',
-        'WhereToShopController'
+        'WhereToShopController',
+        'LanguageViewController'
     ],
     name: 'MEC_App',
 
     launch: function() {
 
+
+
+
         Ext.Global.LoadLocalization();
 
         Ext.Global.LoadSessionVariables();
 
-        Ext.create('MEC_App.view.MainNavView', {fullscreen: true});
+
+
+
+        Ext.create('MEC_App.view.LanguageView', {fullscreen: true});
     }
 
 });

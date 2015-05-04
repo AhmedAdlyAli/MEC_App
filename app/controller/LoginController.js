@@ -31,6 +31,9 @@ Ext.define('MEC_App.controller.LoginController', {
             },
             "button#btnRegister": {
                 tap: 'onBtnRegisterTap'
+            },
+            "formpanel#LoginFomView": {
+                initialize: 'onLoginFomViewInitialize'
             }
         }
     },
@@ -149,6 +152,12 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
 
+
+
+    },
+
+    onLoginFomViewInitialize: function(component, eOpts) {
+                    Ext.Localization.LocalizeView(component);
 
 
     }

@@ -21,13 +21,14 @@ Ext.define('MEC_App.view.MainNavView', {
         'Ext.Panel',
         'Ext.Label',
         'Ext.Button',
-        'Ext.Menu'
+        'Ext.Menu',
+        'MEC_App.controller.Localization'
     ],
 
     config: {
         cls: 'home-wrapper',
         fullscreen: true,
-        itemId: 'mainNav',
+        itemId: 'MainNavView',
         defaultBackButtonText: ' عودة',
         items: [
             {
@@ -287,6 +288,21 @@ Ext.define('MEC_App.view.MainNavView', {
 
     initialize: function() {
         this.callParent();
+
+
+        // load Localization
+        Ext.Localization.LoadLocalization();
+
+
+
+        //Localize myself
+        Ext.Localization.LocalizeView(this);
+
+
+
+
+
+
 
 
         //Create Menu

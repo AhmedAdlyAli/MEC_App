@@ -1,0 +1,46 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "LanguageView",
+        "designer|userClassName": "LanguageView",
+        "itemId": "LanguageView"
+    },
+    "name": "MyPanel5",
+    "designerId": "f2ed55d5-41aa-4ec4-ae55-697d5ce8c0c9",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "btnArabic",
+                "text": "العربية"
+            },
+            "name": "MyButton2",
+            "designerId": "c52bbeec-15fd-4cc7-88a2-94d20971632d"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "btrnEnglish",
+                "text": "English"
+            },
+            "name": "MyButton3",
+            "designerId": "c1ad82ae-9e4a-4aac-ad5a-fbe43a8b8071"
+        }
+    ]
+}
