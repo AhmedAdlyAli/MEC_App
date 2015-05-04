@@ -9,6 +9,7 @@
         "designer|userAlias": "PublicServiceView",
         "designer|userClassName": "PublicServiceView",
         "fullscreen": true,
+        "itemId": "PublicServiceView",
         "layout": "vbox",
         "scrollable": null
     },
@@ -26,6 +27,10 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
                     "",
                     "var links = [",
                     "                {Name:'خدمات المستثمر',Url:'InvestorServiceView',RequireLogin:false,Icon:'ico-investorService.png'},",

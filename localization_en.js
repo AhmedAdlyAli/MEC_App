@@ -44,6 +44,32 @@ var localeEn =
 
 
 		{
+			itemId:"PublicServiceView",
+			description: "Public Services...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Public Services"}
+
+			]
+
+		},
+
+
+		{
+			itemId:"SettingsView",
+			description: "Settings...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Settings"},
+				{itemId:"LanguageButtonsLabel", xtype: "label",value:"Current Language"},
+				{itemId:"ChangeButtonPanel", xtype: "cls",value:"ltr-cls"}
+
+			]
+
+		},
+
+
+		{
 			itemId:"SideMenu",
 			description: "Side Menu...",
 			items:

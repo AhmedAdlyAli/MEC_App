@@ -1,0 +1,45 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "SettingsViewController",
+        "designer|userClassName": "SettingsViewController"
+    },
+    "name": "MyController",
+    "designerId": "b6f7bd25-d106-4834-b92f-956fd69b778d",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "segmentedbutton#languageButtons",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.SegmentedButton",
+                "fn": "onLanguageButtonsInitialize",
+                "implHandler": [
+                    "",
+                    "if(Ext.Global.LanguageFlag == 'en') {",
+                    "    component.setPressedButtons([0]);",
+                    "}",
+                    "else {",
+                    "    component.setPressedButtons([1]);",
+                    "}"
+                ],
+                "name": "initialize"
+            },
+            "name": "onLanguageButtonsInitialize",
+            "designerId": "ee3e62a4-92d6-4d2c-9b44-50604d135df0"
+        }
+    ]
+}

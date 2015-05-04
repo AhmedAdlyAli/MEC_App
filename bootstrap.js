@@ -700,6 +700,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.ProjectsController": [],
   "MEC_App.controller.RecallsController": [],
+  "MEC_App.controller.SettingsViewController": [],
   "MEC_App.controller.ShopPriceListController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [],
@@ -1549,6 +1550,9 @@ Ext.ClassManager.addNameAliasMappings({
   "MEC_App.controller.PrintOffsController": [],
   "MEC_App.controller.ProjectsController": [],
   "MEC_App.controller.RecallsController": [],
+  "MEC_App.controller.SettingsViewController": [
+    "controller.SettingsViewController"
+  ],
   "MEC_App.controller.ShopPriceListController": [],
   "MEC_App.controller.SideMenuController": [],
   "MEC_App.controller.SupplyServiceController": [

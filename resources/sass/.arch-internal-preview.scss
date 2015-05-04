@@ -1419,6 +1419,12 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin: 5% 0;
 }
 
+.settings-header-icon {
+    background: url(../images/setting-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
+
 .login-form {
     background: #fff;
 
@@ -1533,7 +1539,31 @@ height:3em;
 
 
 .ltr-cls{
-    direction:ltr !important 
-    
+    direction:ltr !important
+
 }
 
+.language-button-wrapper {
+    padding: 10px;
+    background: #fff;
+
+    .language-button-title {
+        color: #701d45;
+        line-height: 1.8em;
+    }
+
+    .language-buttons {
+        .x-button {
+            background: #fff;
+            border: solid 1px #e5e5e5;
+            color: #701d45;
+            overflow: visible;
+
+            &.x-button-pressed,
+            &.x-button-pressing {
+                background:#701d45;
+                color: #fff;
+            }
+        }
+    }
+}
