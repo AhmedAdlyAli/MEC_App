@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
 
     config: {
         fullscreen: true,
+        itemId: 'PublicServiceView',
         layout: 'vbox',
         items: [
             {
@@ -92,6 +93,10 @@ Ext.define('MEC_App.view.PublicServiceView', {
 
     initialize: function() {
         this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
 
         var links = [
                         {Name:'خدمات المستثمر',Url:'InvestorServiceView',RequireLogin:false,Icon:'ico-investorService.png'},

@@ -30,7 +30,8 @@
             "GoodPriceListController",
             "ShopPriceListController",
             "WhereToShopController",
-            "LanguageViewController"
+            "LanguageViewController",
+            "SettingsViewController"
         ],
         "models": [
             "MenuModel"

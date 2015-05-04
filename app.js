@@ -130,7 +130,8 @@ Ext.application({
         'GoodPriceListController',
         'ShopPriceListController',
         'WhereToShopController',
-        'LanguageViewController'
+        'LanguageViewController',
+        'SettingsViewController'
     ],
     name: 'MEC_App',
 

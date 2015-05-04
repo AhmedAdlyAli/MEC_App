@@ -17,7 +17,129 @@ Ext.define('MEC_App.view.SettingsView', {
     extend: 'Ext.Panel',
     alias: 'widget.SettingsView',
 
+    requires: [
+        'Ext.Panel',
+        'Ext.Label',
+        'Ext.Spacer',
+        'Ext.SegmentedButton',
+        'Ext.Button'
+    ],
+
     config: {
+        itemId: 'SettingsView',
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'settings-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'الاإعدادات',
+                                        itemId: 'viewLbl'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.7,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'language-button-wrapper',
+                                itemId: 'ChangeButtonPanel',
+                                layout: 'hbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        cls: 'language-button-title',
+                                        html: 'اللغة المستخدمة',
+                                        itemId: 'LanguageButtonsLabel'
+                                    },
+                                    {
+                                        xtype: 'spacer'
+                                    },
+                                    {
+                                        xtype: 'segmentedbutton',
+                                        cls: [
+                                            'ltr-cls',
+                                            'language-buttons'
+                                        ],
+                                        itemId: 'languageButtons',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                handler: function(button, e) {
+
+
+                                                    localStorage.setItem('LanguageFlag', 'en');
+
+
+                                                    Ext.Global.LanguageFlag = 'en';
+
+                                                    var home = Ext.create('widget.MainNavView');
+                                                    Ext.Viewport.setActiveItem(home);
+
+
+                                                },
+                                                itemId: 'EnglishButton',
+                                                text: 'English'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                handler: function(button, e) {
+                                                    localStorage.setItem('LanguageFlag', 'ar');
+                                                    Ext.Global.LanguageFlag = 'ar';
+
+                                                    var home = Ext.create('widget.MainNavView');
+                                                    Ext.Viewport.setActiveItem(home);
+
+                                                },
+                                                itemId: 'ArabicButton',
+                                                text: 'العربية'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

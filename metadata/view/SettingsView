@@ -7,8 +7,304 @@
     "codeClass": null,
     "userConfig": {
         "designer|userAlias": "SettingsView",
-        "designer|userClassName": "SettingsView"
+        "designer|userClassName": "SettingsView",
+        "itemId": "SettingsView",
+        "layout": "fit"
     },
     "name": "MyPanel",
-    "designerId": "ad686a47-69e6-4c20-9e12-d2fa56c317c3"
+    "designerId": "ad686a47-69e6-4c20-9e12-d2fa56c317c3",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
+            },
+            "name": "MyPanel11",
+            "designerId": "4aa77ec0-59e1-4be5-b73a-57e30775e25f",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "0a4d21f1-9124-449a-a8c2-268b4ffd920f",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "9dbe5699-b55d-44cc-8ee6-202d85ae926a",
+                            "cn": [
+                                {
+                                    "type": "Ext.Panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "settings-header-icon"
+                                        ],
+                                        "layout|flex": 2
+                                    },
+                                    "name": "MyPanel12",
+                                    "designerId": "1721d33f-dd27-4f14-b586-50b000dd4be8"
+                                },
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "service-header-title"
+                                        ],
+                                        "html": "الاإعدادات",
+                                        "itemId": "viewLbl",
+                                        "layout|flex": 1
+                                    },
+                                    "name": "MyLabel54",
+                                    "designerId": "4aba6773-ae02-41e0-a1a8-09b417ddcb32"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.7,
+                        "scrollable": null
+                    },
+                    "name": "MyPanel7",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
+                    "designerId": "9a7ae8e0-55bf-4401-b1c1-b42c3aecd10a",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "language-button-wrapper"
+                                ],
+                                "itemId": "ChangeButtonPanel",
+                                "layout": "hbox"
+                            },
+                            "name": "MyPanel13",
+                            "designerId": "bd8d9298-c6a9-4f25-85ca-b92c34e6659b",
+                            "cn": [
+                                {
+                                    "type": "Ext.Label",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "language-button-title"
+                                        ],
+                                        "html": "اللغة المستخدمة",
+                                        "itemId": "LanguageButtonsLabel"
+                                    },
+                                    "name": "MyLabel55",
+                                    "designerId": "42c6d990-6103-41cd-94f0-5d16b1c669fc"
+                                },
+                                {
+                                    "type": "Ext.Spacer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "name": "MySpacer1",
+                                    "designerId": "c38d2cd3-1238-4a5e-9d00-7dd154f35231"
+                                },
+                                {
+                                    "type": "Ext.SegmentedButton",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "ltr-cls",
+                                            "language-buttons"
+                                        ],
+                                        "designer|displayName": null,
+                                        "html": null,
+                                        "itemId": "languageButtons",
+                                        "style": null,
+                                        "ui": null
+                                    },
+                                    "name": "MySegmentedButton",
+                                    "designerId": "3618ca07-3319-4510-80a9-5a9fa11bc334",
+                                    "cn": [
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "EnglishButton",
+                                                "text": "English"
+                                            },
+                                            "name": "MyButton18",
+                                            "designerId": "724a926b-5281-4218-b7fe-83492d444dc6",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "",
+                                                            "",
+                                                            "localStorage.setItem('LanguageFlag', 'en');",
+                                                            "",
+                                                            "",
+                                                            "Ext.Global.LanguageFlag = 'en';",
+                                                            "",
+                                                            "var home = Ext.create('widget.MainNavView');",
+                                                            "Ext.Viewport.setActiveItem(home);",
+                                                            "",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "b3ac7a61-fc36-42aa-933a-3a2f8c4000f5"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "Ext.Button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "itemId": "ArabicButton",
+                                                "pressed": null,
+                                                "text": "العربية"
+                                            },
+                                            "name": "MyButton19",
+                                            "designerId": "2b5acc7c-1110-4c7d-9816-237ce8c3839e",
+                                            "cn": [
+                                                {
+                                                    "type": "fixedfunction",
+                                                    "reference": {
+                                                        "name": "items",
+                                                        "type": "array"
+                                                    },
+                                                    "codeClass": null,
+                                                    "userConfig": {
+                                                        "designer|params": [
+                                                            "button",
+                                                            "e"
+                                                        ],
+                                                        "fn": "handler",
+                                                        "implHandler": [
+                                                            "localStorage.setItem('LanguageFlag', 'ar');",
+                                                            "Ext.Global.LanguageFlag = 'ar';",
+                                                            "",
+                                                            "var home = Ext.create('widget.MainNavView');",
+                                                            "Ext.Viewport.setActiveItem(home);",
+                                                            ""
+                                                        ]
+                                                    },
+                                                    "name": "handler",
+                                                    "designerId": "9cd499d8-fa88-4bcd-af9a-ea6300060f38"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "6c740469-d043-4d35-8c51-4e15a848a61c"
+        }
+    ]
 }
