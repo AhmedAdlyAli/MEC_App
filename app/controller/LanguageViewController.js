@@ -62,14 +62,17 @@ Ext.define('MEC_App.controller.LanguageViewController', {
     },
 
     onLanguageViewInitialize: function(component, eOpts) {
-                var languageFlag = localStorage.getItem('LanguageFlag');
 
-                if(languageFlag){
-                    Ext.Global.LanguageFlag = languageFlag;
 
-                    var home = Ext.create('widget.MainNavView');
-                    Ext.Viewport.setActiveItem(home);
-                }
+        if(localStorage.LanguageFlag){
+
+            var languageFlag = localStorage.getItem('LanguageFlag');
+
+            Ext.Global.LanguageFlag = languageFlag;
+
+            var home = Ext.create('widget.MainNavView');
+            Ext.Viewport.setActiveItem(home);
+        }
 
 
 

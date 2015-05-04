@@ -27,22 +27,22 @@ Ext.define('MEC_App.controller.Localization', {
     LoadLocalization: function() {
 
 
-                //Ext.Global.LangugeFlag = 'en';
+        //Ext.Global.LangugeFlag = 'en';
 
-                //read localization flag set from Application Run, or Language screen
+        //read localization flag set from Application Run, or Language screen
 
-                if(Ext.Global.LanguageFlag == 'ar')
-                    {
+        if(Ext.Global.LanguageFlag == 'ar')
+        {
 
-                        // do nothing, forms already arabic
+            // do nothing, forms already arabic
 
-                    }else if(Ext.Global.LanguageFlag == 'en')
-                    {
-                        // laod english json file
+        }else if(Ext.Global.LanguageFlag == 'en')
+        {
+            // laod english json file
 
-                        Ext.Global.Localization = localeEn;
+            Ext.Global.Localization = localeEn;
 
-                    }
+        }
 
 
 
