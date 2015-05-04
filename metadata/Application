@@ -50,7 +50,6 @@
             "Ext.Ajax"
         ],
         "views": [
-            "HomeView",
             "PublicServiceView",
             "MediaCenterView",
             "InquiriesView",

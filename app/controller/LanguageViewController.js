@@ -23,22 +23,32 @@ Ext.define('MEC_App.controller.LanguageViewController', {
 
     config: {
         control: {
-            "button#btrnEnglish": {
-                tap: 'onBtrnEnglishTap'
-            },
             "button#btnArabic": {
                 tap: 'onBtnArabicTap'
             },
-            "panel#LanguageView": {
-                initialize: 'onLanguageViewInitialize'
+            "button#btnEnglish": {
+                tap: 'onBtnEnglishTap'
+            },
+            "panel#AboutMinistryView": {
+                initialize: 'onAboutMinistryViewInitialize'
             }
         }
     },
 
-    onBtrnEnglishTap: function(button, e, eOpts) {
+    onBtnArabicTap: function(button, e, eOpts) {
+        localStorage.setItem('LanguageFlag', 'ar');
+        Ext.Global.LanguageFlag = 'ar';
+
+        var home = Ext.create('widget.MainNavView');
+        Ext.Viewport.setActiveItem(home);
 
 
-        //localStorage.setItem('LanguageFlag', 'en');
+    },
+
+    onBtnEnglishTap: function(button, e, eOpts) {
+
+
+        localStorage.setItem('LanguageFlag', 'en');
 
 
         Ext.Global.LanguageFlag = 'en';
@@ -48,21 +58,12 @@ Ext.define('MEC_App.controller.LanguageViewController', {
 
 
 
-
     },
 
-    onBtnArabicTap: function(button, e, eOpts) {
-        //localStorage.setItem('LanguageFlag', 'ar');
-        Ext.Global.LanguageFlag = 'ar';
-
-        var home = Ext.create('widget.MainNavView');
-        Ext.Viewport.setActiveItem(home);
-
-
-    },
-
-    onLanguageViewInitialize: function(component, eOpts) {
+    onAboutMinistryViewInitialize: function(component, eOpts) {
         var languageFlag = localStorage.getItem('LanguageFlag');
+
+
 
         if(languageFlag){
 
@@ -71,7 +72,6 @@ Ext.define('MEC_App.controller.LanguageViewController', {
             var home = Ext.create('widget.MainNavView');
             Ext.Viewport.setActiveItem(home);
         }
-
 
 
 

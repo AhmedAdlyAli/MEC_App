@@ -39,7 +39,6 @@
     "framework": "touch24",
     "viewOrderMap": {
         "view": [
-            "3adeb383-e444-404a-9382-121eaaf2cdf9",
             "7b23aef6-db2d-4685-9251-d9486597a989",
             "de8af37b-c568-427b-a133-80197b043d73",
             "4db0d5ab-6e07-4ed3-9f2f-1c17b50b5d46",
@@ -47,6 +46,7 @@
             "4a0cd04b-c28e-477e-a81a-e02be07018db",
             "9f841d86-496b-40a3-a5a1-0a1d6404185c",
             "a9c7aa87-9a8b-4439-949b-858af548d3ed",
+            "c93d118f-1b70-4dff-a9ca-a4bcc53ae77b",
             "05d7c039-6661-4fb5-ba60-169fb9b867d0",
             "ad686a47-69e6-4c20-9e12-d2fa56c317c3",
             "4872b1ad-f612-4a9b-a8cc-b610878f1115",
@@ -110,8 +110,7 @@
             "607e3a7e-36b8-4a69-84dd-413e2c3a093e",
             "f6c84ffa-9010-493f-85e3-911b6aeabb66",
             "25fd70a8-f9e7-4be3-a52b-0867484b6ed3",
-            "49d7e60b-4b7e-428f-8914-047e82ed82a2",
-            "f2ed55d5-41aa-4ec4-ae55-697d5ce8c0c9"
+            "49d7e60b-4b7e-428f-8914-047e82ed82a2"
         ],
         "store": [
             "ccc960be-070d-418b-ae65-bf898e8553e7"

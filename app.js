@@ -38,7 +38,6 @@ Ext.application({
         'MenuArrayStore'
     ],
     views: [
-        'HomeView',
         'PublicServiceView',
         'MediaCenterView',
         'InquiriesView',

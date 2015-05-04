@@ -23,42 +23,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#btrnEnglish",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onBtrnEnglishTap",
-                "implHandler": [
-                    "",
-                    "",
-                    "//localStorage.setItem('LanguageFlag', 'en');",
-                    "",
-                    "",
-                    "Ext.Global.LanguageFlag = 'en';",
-                    "",
-                    "var home = Ext.create('widget.MainNavView');",
-                    "Ext.Viewport.setActiveItem(home);",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "name": "tap"
-            },
-            "name": "onBtrnEnglishTap",
-            "designerId": "0bb4cf8f-715a-4c0d-b301-96eabb0e111d"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|controlQuery": "button#btnArabic",
                 "designer|params": [
                     "button",
@@ -68,7 +32,7 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnArabicTap",
                 "implHandler": [
-                    "//localStorage.setItem('LanguageFlag', 'ar');",
+                    "localStorage.setItem('LanguageFlag', 'ar');",
                     "Ext.Global.LanguageFlag = 'ar';",
                     "",
                     "var home = Ext.create('widget.MainNavView');",
@@ -89,15 +53,52 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "panel#LanguageView",
+                "designer|controlQuery": "button#btnEnglish",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnEnglishTap",
+                "implHandler": [
+                    "",
+                    "",
+                    "localStorage.setItem('LanguageFlag', 'en');",
+                    "",
+                    "",
+                    "Ext.Global.LanguageFlag = 'en';",
+                    "",
+                    "var home = Ext.create('widget.MainNavView');",
+                    "Ext.Viewport.setActiveItem(home);",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnEnglishTap",
+            "designerId": "855fc99f-d886-4edb-9201-ab3c1e982b73"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "panel#AboutMinistryView",
                 "designer|params": [
                     "component",
                     "eOpts"
                 ],
                 "designer|targetType": "Ext.Panel",
-                "fn": "onLanguageViewInitialize",
+                "fn": "onAboutMinistryViewInitialize",
                 "implHandler": [
                     "var languageFlag = localStorage.getItem('LanguageFlag');",
+                    "",
+                    "",
                     "",
                     "if(languageFlag){",
                     "",
@@ -108,13 +109,12 @@
                     "}",
                     "",
                     "",
-                    "",
                     ""
                 ],
                 "name": "initialize"
             },
-            "name": "onLanguageViewInitialize",
-            "designerId": "4300d8fd-e8e0-4751-9a74-e9c70b78f59c"
+            "name": "onAboutMinistryViewInitialize",
+            "designerId": "fa26c31d-3717-4014-8cc4-0cf3ea51d811"
         }
     ]
 }

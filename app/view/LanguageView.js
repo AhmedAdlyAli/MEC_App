@@ -18,21 +18,68 @@ Ext.define('MEC_App.view.LanguageView', {
     alias: 'widget.LanguageView',
 
     requires: [
+        'Ext.Panel',
+        'Ext.Img',
         'Ext.Button'
     ],
 
     config: {
-        itemId: 'LanguageView',
+        fullscreen: true,
+        itemId: 'AboutMinistryView',
+        layout: 'fit',
         items: [
             {
-                xtype: 'button',
-                itemId: 'btnArabic',
-                text: 'العربية'
-            },
-            {
-                xtype: 'button',
-                itemId: 'btrnEnglish',
-                text: 'English'
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'image',
+                                        cls: 'img-lang',
+                                        height: 201,
+                                        src: '/resources/images/lang-logo.png'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.2,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        scrollable: {
+                            direction: 'vertical',
+                            directionLock: true
+                        },
+                        items: [
+                            {
+                                xtype: 'button',
+                                cls: 'btn-lang-1',
+                                id: 'btnArabic',
+                                text: 'العربية'
+                            },
+                            {
+                                xtype: 'button',
+                                cls: 'btn-lang-2',
+                                itemId: 'btnEnglish',
+                                text: 'English'
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

@@ -9,38 +9,146 @@
         "designer|initialView": true,
         "designer|userAlias": "LanguageView",
         "designer|userClassName": "LanguageView",
-        "itemId": "LanguageView"
+        "fullscreen": true,
+        "itemId": "AboutMinistryView",
+        "layout": "fit",
+        "scrollable": null
     },
-    "name": "MyPanel5",
-    "designerId": "f2ed55d5-41aa-4ec4-ae55-697d5ce8c0c9",
+    "name": "AboutMinistryView1",
+    "designerId": "c93d118f-1b70-4dff-a9ca-a4bcc53ae77b",
     "cn": [
         {
-            "type": "Ext.Button",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemId": "btnArabic",
-                "text": "العربية"
+                "height": null,
+                "layout": "vbox",
+                "scrollable": null
             },
-            "name": "MyButton2",
-            "designerId": "c52bbeec-15fd-4cc7-88a2-94d20971632d"
-        },
-        {
-            "type": "Ext.Button",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "itemId": "btrnEnglish",
-                "text": "English"
-            },
-            "name": "MyButton3",
-            "designerId": "c1ad82ae-9e4a-4aac-ad5a-fbe43a8b8071"
+            "name": "MyPanel14",
+            "designerId": "1d862a68-8c3b-4075-aafd-5dd1c92ae8d8",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header"
+                        ],
+                        "docked": null,
+                        "height": "30%",
+                        "layout": "vbox",
+                        "layout|flex": 1
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "f5ce1c0c-0d23-4840-9c14-13ba03206158",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "services-header-overlay"
+                                ],
+                                "height": "100%",
+                                "layout": "vbox"
+                            },
+                            "name": "MyPanel8",
+                            "designerId": "83d84008-a0ab-4087-8cfe-98c70d037ec2",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "cls": [
+                                            "img-lang"
+                                        ],
+                                        "height": 201,
+                                        "src": "/resources/images/lang-logo.png"
+                                    },
+                                    "name": "MyImg",
+                                    "designerId": "aee43638-b840-44ec-aaf8-7d4fe3efaec4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-panel"
+                        ],
+                        "height": "auto",
+                        "layout|flex": 2.2,
+                        "scrollable": [
+                            "{ direction: 'vertical', directionLock: true }"
+                        ]
+                    },
+                    "name": "MyPanel7",
+                    "configAlternates": {
+                        "scrollable": "object"
+                    },
+                    "designerId": "cb114c1b-4038-4dec-a307-f1e3276ea7a1",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-lang-1"
+                                ],
+                                "id": "btnArabic",
+                                "text": "العربية"
+                            },
+                            "name": "MyButton",
+                            "designerId": "f7bb3e5c-5580-4e5a-bef9-9ab4116273d6"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-lang-2"
+                                ],
+                                "itemId": "btnEnglish",
+                                "text": "English"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "559f15fc-324f-41c8-a5ac-b5a7534b6185"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
