@@ -418,23 +418,12 @@
                     "// get supplier",
                     "// call allocate to get fees",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
                     ""
                 ],
                 "name": "tap"
             },
             "name": "onBtnSupplyNext2Tap",
-            "designerId": "181e9757-beb2-43ce-a342-5f10b52f907f"
+            "designerId": "b6a95fee-e40d-4d94-a19e-bad42de1ec1f"
         }
     ]
 }

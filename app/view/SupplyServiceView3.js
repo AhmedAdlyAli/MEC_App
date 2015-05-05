@@ -90,7 +90,7 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
             {
                 xtype: 'button',
                 cls: 'btn-send',
-                itemId: 'btnSupplyNext1',
+                itemId: 'btnSupplyNext2',
                 text: 'دفع المستحقات'
             }
         ]
