@@ -49,9 +49,15 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceView1Initialize: function(component, eOpts) {
-
         var me = this;
         var view = component;
+
+
+        // localization
+        Ext.Localization.LocalizeView(view);
+
+
+
 
         var url2 = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyItemDetails';
 
@@ -165,9 +171,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceView2Initialize: function(component, eOpts) {
-
-        // initialize google maps
         var view = component;
+
+
+        Ext.Localization.LocalizeView(view);
+
+
 
         //console.log(view.getData());
 
@@ -370,6 +379,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     onSupplyServiceView3Initialize: function(component, eOpts) {
         var view  = component;
+
+
+        //localization
+        Ext.Localization.LocalizeView(view);
+
+
+
         var view2Data = view.getData();
 
         var userName = Ext.Global.LanguageFlag == 'ar' ? Ext.Global.identityNameAr : Ext.Global.identityNameEn;

@@ -30,7 +30,8 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'نموذج طلب تموين'
+                html: 'نموذج طلب تموين',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'panel',
@@ -42,7 +43,13 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
     },
 
     initialize: function() {
+
         var view = this;
+
+        //localization
+        Ext.Localization.LocalizeView(view);
+
+
         var data = view.getData();
 
         console.log(data);

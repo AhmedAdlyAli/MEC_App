@@ -34,11 +34,13 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'نموذج طلب تموين'
+                html: 'نموذج طلب تموين',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'panel',
                 cls: 'acc-group',
+                itemId: 'pnlConfirm',
                 items: [
                     {
                         xtype: 'label',
