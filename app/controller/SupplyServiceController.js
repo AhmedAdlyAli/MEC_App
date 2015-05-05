@@ -147,7 +147,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Function.defer(function(){
 
 
-
             var mapPanel = view.down('#mapDealers');
             var gMap = mapPanel.getMap();
 
@@ -160,7 +159,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
 
-
             var orderItems =[];
             var formData = view.getData();
 
@@ -169,8 +167,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 orderItems.push({ ItemID: key, value: formData[key] });
           }
         }
-
-
 
 
 
@@ -234,7 +230,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                            view.down('#lblTitle').setHtml(marker.data.DealerName);
                            view.down('#lblAddress').setHtml(marker.data.Address);
-                           view.down('#DealerID').setValue(marker.data.DealerID);
+                           view.down('#hiddenDealerID').setValue(marker.data.DealerID);
 
 
 
