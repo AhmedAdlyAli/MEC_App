@@ -128,10 +128,10 @@ body {
 .home-carousel {
     .x-carousel-indicator {
         background: rgba(255,255,255,0.6);
-        
+
         span {
             background-color: #701d45;
-            
+
             &.x-carousel-indicator-active {
                 background-color: #fff;
             }
@@ -1580,7 +1580,9 @@ background: url(../images/toplogo.png) no-repeat center top;
     .item-link.x-list-item.x-item-selected.x-list-item-tpl {
         .nav-item {
             background-position: left center !important;
-            padding: 4px 0 4px 3em;
+            padding: 4px 0 4px 2.8em;
+            text-align: left;
+            direction: ltr;
         }
     }
 

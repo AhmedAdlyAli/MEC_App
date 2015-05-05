@@ -19,6 +19,30 @@ var localeEn =
 				{Name:"Supply Services", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"}
 			]
 		},
+
+		{
+			itemId:"MediaCenterView",
+			items: [
+				{Name:"Ministry News", CatID:1, Icon:"ico-ministry-news.png"},
+				{Name:"Reflections", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"Similar Regional Official News", CatID:2, Icon:"ico-news-local-similar.png"},
+				{Name:"Regional Economic News", CatID:4, Icon:"ico-news-local-economic.png"},
+				{Name:"Similar International Official News", CatID:6, Icon:"ico-news-international-similar.png"},
+				{Name:"International Economic News", CatID:9, Icon:"ico-news-international-economic.png"}
+			]
+		},
+
+		{
+			itemId:"InquiriesView",
+			items: [
+				{Name:"Find a Commercial Name", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
+				{Name:"Find a Commercial Activity", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
+				{Name:"Recalls", Url:"RecallsView", Icon:"ico-recall-item.png"},
+				{Name:"Consumer Awarness", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
+				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
+				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"}
+			]
+		}
 	],
 
 	Views: [
@@ -45,10 +69,34 @@ var localeEn =
 			[
 				{itemId:"homeServices", xtype: "label",value:"Public Services"},
 				{itemId:"btnMediaCenter", xtype: "label",value:"Media Center"},
-				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Publications"},
+				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Extracts"},
 				{itemId:"homeReports", xtype: "label",value:"Reports"},
 				{itemId:"btnProjects", xtype: "label",value:"Projects"},
 				{itemId:"homeContact", xtype: "label",value:"Contact Us"}
+
+			]
+		},
+
+
+		{
+			itemId:"MediaCenterView",
+			description: "Media Center...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Media Center"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+		{
+			itemId:"InquiriesView",
+			description: "inquiries and Extracts...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Inquiries & Extracts"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
 
 			]
 		},
