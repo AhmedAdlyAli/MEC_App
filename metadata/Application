@@ -118,7 +118,8 @@
             "FeedbackFormView",
             "NotificationView",
             "LanguageView",
-            "SupplyServiceView3"
+            "SupplyServiceView3",
+            "SupplyServicesView4"
         ]
     },
     "name": "Application",
@@ -134,7 +135,7 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "", 
+                    "",
                     "",
                     "",
                     "",

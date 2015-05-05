@@ -105,9 +105,10 @@ Ext.application({
         'FeedbackFormView',
         'NotificationView',
         'LanguageView',
-        'SupplyServiceView3'
+        'SupplyServiceView3',
+        'SupplyServiceView4'
     ],
-    controllers: [ 
+    controllers: [
         'HomeController',
         'SideMenuController',
         'ComplaintsController',

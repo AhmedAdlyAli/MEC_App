@@ -103,6 +103,14 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.Global.identityNationality = json.listOfMecContactInfoIo.contact[0].identityNationality;
 
 
+                    Ext.Global.identityNameAr = json.listOfMecContactInfoIo.contact[0].fullNameACalc;
+
+                    Ext.Global.identityNameEn = json.listOfMecContactInfoIo.contact[0].fullNameECalc;
+
+
+
+
+
                     Ext.AnimationHelper.HideLoading();
 
 

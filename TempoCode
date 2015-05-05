@@ -218,4 +218,40 @@ Hatem:
 
 
 
+acc-group
+label-value
+
+
+ for (var key in formData) {
+  if (formData.hasOwnProperty(key)) {
+        orderItems.push({ ItemID: key, value: formData[key] });
+  }
+}
+
+
+
+ var infowindow = new google.maps.InfoWindow();
+
+
+ var marker = new google.maps.Marker({
+                    map: gMap,
+                    animation: google.maps.Animation.DROP,
+                    position: new google.maps.LatLng (item.Lat,item.Lng),
+                    icon: 'resources/images/drop-pin.png',
+                    data:item
+                });
+
+                google.maps.event.addListener(marker,'click',function(pos) {
+
+                    var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
+                       infowindow.setContent(info);
+                       infowindow.open(gMap,marker);
+
+                   view.down('#lblTitle').setHtml(marker.data.Name);
+                   view.down('#lblAddress').setHtml(marker.data.Address);
+                   view.down('#lblTel').setHtml(marker.data.Tel);
+                   view.down('#lblFax').setHtml(marker.data.Fax);
+
+                });
+
 

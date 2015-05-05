@@ -67,6 +67,10 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 itemId: 'hiddenDealerID'
             },
             {
+                xtype: 'hiddenfield',
+                itemId: 'hiddenDealerName'
+            },
+            {
                 xtype: 'button',
                 cls: 'btn-send',
                 itemId: 'btnSupplyNext2',

@@ -776,6 +776,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.SupplyServiceView1": [],
   "MEC_App.view.SupplyServiceView2": [],
   "MEC_App.view.SupplyServiceView3": [],
+  "MEC_App.view.SupplyServiceView4": [],
   "MEC_App.view.TradeActivityAvailabilityView": [],
   "MEC_App.view.TradeNameAvailabilityView": [],
   "MEC_App.view.TradeNameBranchDetails": [],
@@ -1762,6 +1763,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SupplyServiceView3": [
     "widget.SupplyServiceView3"
+  ],
+  "MEC_App.view.SupplyServiceView4": [
+    "widget.SupplyServiceView4"
   ],
   "MEC_App.view.TradeActivityAvailabilityView": [
     "widget.TradeActivityAvailabilityView"

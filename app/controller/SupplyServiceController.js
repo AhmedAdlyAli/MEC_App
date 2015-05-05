@@ -38,6 +38,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "button#btnSupplyNext2": {
                 tap: 'onBtnSupplyNext2Tap'
+            },
+            "panel#SupplyServiceView3": {
+                initialize: 'onSupplyServiceView3Initialize'
+            },
+            "button#btnSupplyNext3": {
+                tap: 'onBtnSupplyNext3Tap'
             }
         }
     },
@@ -45,7 +51,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     onSupplyServiceView1Initialize: function(component, eOpts) {
 
         var me = this;
-
+        var view = component;
 
         var url2 = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyItemDetails';
 
@@ -66,6 +72,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
 
+                view.setData(json2.Data.Items);
 
                 var fsItems = me.getFsItems();
 
@@ -129,11 +136,29 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view = this.getSupplyServiceView1();
 
 
+        var consolidatedData= [];
+
+        var formData = view.getValues();
+        var viewData = view.getData();
+
+
+        Ext.each(viewData,function(item){
+            var price = formData[item.ItemID] * item.Price;
+            consolidatedData.push({ ItemID: item.ItemID,ItemName:item.Name,  Quantity: formData[item.ItemID],ItemPrice:price});
+        });
+
+
         Ext.Viewport.getActiveItem().push({
             xtype: 'SupplyServiceView2',
             title:  Ext.Global.GetFixedTitle(),
-            data: view.getValues()
+            data: consolidatedData
         });
+
+
+
+
+
+
 
 
 
@@ -144,7 +169,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         // initialize google maps
         var view = component;
 
-        console.log(view.getData());
+        //console.log(view.getData());
 
         Ext.Function.defer(function(){
 
@@ -162,13 +187,16 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
             var orderItems =[];
-            var formData = view.getData();
+            var viewData={};
+            viewData.Items = view.getData();
 
-         for (var key in formData) {
-          if (formData.hasOwnProperty(key)) {
-                orderItems.push({ ItemID: key, value: formData[key] });
-          }
-        }
+
+            Ext.each(viewData.Items,function(item){
+            //alert(item.ItemID);
+                orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
+
+            });
+
 
 
 
@@ -204,7 +232,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     Ext.AnimationHelper.HideLoading();
 
 
-                   console.log(json2);
+                   //console.log(json2);
 
 
 
@@ -234,14 +262,16 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                            view.down('#lblAddress').setHtml(marker.data.Address);
                            view.down('#hiddenDealerID').setValue(marker.data.DealerID);
 
+                           view.down('#hiddenDealerName').setValue(marker.data.DealerName);
+
+                        // console.log(marker.data.DealerID);
 
 
-                         console.log(marker.data.DealerID);
+                         viewData.DealerID = marker.data.DealerID;
+                         viewData.DealerName = marker.data.DealerName;
 
+                         view.setData(viewData);
 
-                         formData.DealerID = marker.data.DealerID;
-
-                         view.setData(formData);
 
 
 
@@ -250,21 +280,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+
                 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 },
                 failure: function(request, resp) {
@@ -272,39 +289,156 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 }
             });
 
-
-
-
-
-
-
-
-
         }, 1100,this);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     },
 
     onBtnSupplyNext2Tap: function(button, e, eOpts) {
-        var view = this.getSupplierServiceView3();
+        var view = this.getSupplyServiceView2();
+        var view2Data = view.getData();
 
-        console.log(view.getData());
 
-        // collect form data
-        // get supplier
-        // call allocate to get fees
+
+        var orderItems =[];
+
+
+        Ext.each(view2Data.Items,function(item){
+
+            //console.log(item.ItemID +'===' + item.Quantity);
+
+            orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
+        });
+
+
+        //console.log(view2Data);
+
+
+
+        var allocationID =0;
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItems';
+
+        var requestData =
+            {"qid":"21463400042",
+             "languageID": 2,
+             "mobileDeviceID":"1231",
+             "dealerID": view2Data.DealerID,
+             orderItems: orderItems
+            };
+
+                Ext.AnimationHelper.ShowLoading();
+
+                Ext.Ajax.request({
+
+                    url : url,
+                    method : 'POST',
+                    jsonData :requestData,
+                    success : function (response) {
+
+
+
+                        var json1 = Ext.util.JSON.decode(response.responseText);
+                        var json2 = Ext.util.JSON.decode(json1.d);
+
+
+
+                        allocationID = json2.Data.Allocations[0].AllocationID;
+
+                        view2Data.AllocationID = allocationID;
+
+                        Ext.AnimationHelper.HideLoading();
+
+                        Ext.Viewport.getActiveItem().push({
+                            xtype: 'SupplyServiceView3',
+                            title: Ext.Global.GetFixedTitle(),
+                            data: view2Data
+                        });
+
+
+
+
+                    },
+                    failure: function(request, resp) {
+                        alert("in failure");
+                    }
+                });
+
+
+
+    },
+
+    onSupplyServiceView3Initialize: function(component, eOpts) {
+        var view  = component;
+        var view2Data = view.getData();
+
+        var userName = Ext.Global.LanguageFlag == 'ar' ? Ext.Global.identityNameAr : Ext.Global.identityNameEn;
+
+        view.down('#lblUserName2').setHtml(userName);
+        view.down('#lblDealer2').setHtml(view2Data.DealerName);
+
+        var totalPrice =0;
+
+        var pnlItems = view.down('#pnlItems');
+
+        Ext.each(view2Data.Items, function(item){
+
+
+
+        totalPrice += item.ItemPrice;
+
+
+               pnlItems.add(
+                {
+                    xtype: 'panel',
+                    layout: 'hbox',
+                    items:
+                    [
+
+                        {
+                    xtype: 'label',
+                    html: item.ItemName,
+                            flex: 1
+
+                    },
+                      {
+                    xtype: 'label',
+                    html: item.Quantity,
+                          cls:'label-value',
+                            flex: 2
+                }
+
+                    ]
+
+                });
+
+
+                    });
+
+        view.down('#lblFees2').setHtml(totalPrice);
+
+        //view.setData(view2Data);
+
+
+
+    },
+
+    onBtnSupplyNext3Tap: function(button, e, eOpts) {
+                var view = this.getSupplyServiceView3();
+                var view3Data = view.getData();
+                view3Data.TotalPrice = view.down('#lblFees2').getHtml();
+
+
+
+                Ext.Viewport.getActiveItem().push({
+                    xtype: 'SupplyServiceView4',
+                    title: Ext.Global.GetFixedTitle(),
+                    data: view3Data
+                });
+
+
+
+
 
 
     }

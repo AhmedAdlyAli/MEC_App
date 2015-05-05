@@ -1586,7 +1586,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         }
     }
 }
- 
+
 .action-button {
     background: #691e49;
     margin: 10px;
@@ -1597,3 +1597,33 @@ background: url(../images/toplogo.png) no-repeat center top;
         color: #fff;
     }
 }
+
+
+.list-inner{
+    direction:rtl;
+    background-color:#fff;
+    border-bottom: solid 1px #eeeeee;
+
+    .x-label{
+        padding:0 2em 0 0 !important ;
+        border:0 !important;
+        color: #6f2f51;
+        font-weight:bold;
+    }
+
+    .label-value{
+        padding: 0 !important;
+        border: 0 !important;
+        color:#010101;
+        font-weight:500;
+
+    }
+
+}
+
+
+
+
+
+
+

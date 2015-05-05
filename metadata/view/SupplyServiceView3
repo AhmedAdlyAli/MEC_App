@@ -94,36 +94,22 @@
                     "designerId": "1d1faa35-c239-44ec-b13b-cdea474b7995"
                 },
                 {
-                    "type": "Ext.dataview.List",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": 150,
-                        "itemId": "lstItems"
+                        "cls": [
+                            "list-inner"
+                        ],
+                        "height": 170,
+                        "itemId": "pnlItems",
+                        "layout": "vbox"
                     },
-                    "name": "MyList1",
-                    "designerId": "57594980-2d44-43e3-af80-1cf52cd09718",
-                    "cn": [
-                        {
-                            "type": "Ext.XTemplate",
-                            "reference": {
-                                "name": "itemTpl",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|displayName": "itemTpl",
-                                "implHandler": [
-                                    "<div>List Item {string}</div>"
-                                ]
-                            },
-                            "name": "itemTpl",
-                            "designerId": "91e90ca4-5fa8-4c39-a5be-71eaa5c837d0"
-                        }
-                    ]
+                    "name": "MyPanel2",
+                    "designerId": "c7e7d4d7-d0b3-4944-98e7-a55e17520b33"
                 },
                 {
                     "type": "Ext.Label",
@@ -199,7 +185,7 @@
                     "btn-send"
                 ],
                 "height": null,
-                "itemId": "btnSupplyNext2",
+                "itemId": "btnSupplyNext3",
                 "text": "دفع المستحقات"
             },
             "name": "MyButton",

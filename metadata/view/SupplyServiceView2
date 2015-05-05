@@ -120,6 +120,19 @@
             "designerId": "55dbf475-bcc2-4277-a07e-787d6a70ebb2"
         },
         {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "hiddenDealerName"
+            },
+            "name": "MyHiddenField1",
+            "designerId": "8a8802a3-42b0-4caa-9265-72533a7f641b"
+        },
+        {
             "type": "Ext.Button",
             "reference": {
                 "name": "items",

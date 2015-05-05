@@ -6,15 +6,31 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "PrintOffsView3",
-        "designer|userClassName": "PrintOffsView3",
-        "itemId": "PrintOffsView3",
+        "designer|userAlias": "SupplyServiceView4",
+        "designer|userClassName": "SupplyServiceView4",
+        "itemId": "SupplyServiceView4",
         "layout": "vbox",
         "scrollable": false
     },
-    "name": "MyPanel5",
-    "designerId": "25fd70a8-f9e7-4be3-a52b-0867484b6ed3",
+    "name": "PrintOffsView",
+    "designerId": "66db58dc-d333-40cc-a4a6-6d23596d6479",
     "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "نموذج طلب تموين"
+            },
+            "name": "MyLabel",
+            "designerId": "5348acf4-5f47-439b-9eb4-e3436643c55c"
+        },
         {
             "type": "Ext.Panel",
             "reference": {
@@ -23,12 +39,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "html": " <iframe name=\"paymentframe\"    class=\"web-frame\" ></iframe>",
+                "html": " <iframe name=\"paymentframe\"    class=\"web-frame\"  ></iframe>",
                 "itemId": "pnlIframe",
                 "layout|flex": 1
             },
             "name": "MyPanel5",
-            "designerId": "7f6f5c4c-7dcf-434f-bb78-d4e0b69a93ff"
+            "designerId": "4ef3202d-e96f-4d68-9332-140c7c11c001"
         },
         {
             "type": "fixedfunction",
@@ -63,10 +79,10 @@
                     "    //alert(data.fees);",
                     "",
                     "    form.setValues({",
-                    "        vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',",
-                    "        vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',",
-                    "        vpc_Amount: data.fees+'00',",
-                    "        vpc_Locale : data.locale",
+                    "        vpc_MerchTxnRef: data.AllocationID, //'Ahmed Adly Ali',",
+                    "        vpc_OrderInfo: data.AllocationID + '_' + data.DealerID,//'Test',",
+                    "        vpc_Amount: data.TotalPrice+'00',",
+                    "        vpc_Locale : Ext.Global.LanguageFlag",
                     "",
                     "    });",
                     "",
@@ -81,7 +97,7 @@
                 ]
             },
             "name": "initialize",
-            "designerId": "4357c2c4-614e-4d11-9b3d-994bb6a48136"
+            "designerId": "235a5cfc-56d7-4fd4-9af8-a2c9fe7cbb2c"
         }
     ]
 }

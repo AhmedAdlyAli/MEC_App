@@ -20,8 +20,6 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.dataview.List',
-        'Ext.XTemplate',
         'Ext.Button'
     ],
 
@@ -58,12 +56,11 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
                         id: 'lblItems'
                     },
                     {
-                        xtype: 'list',
-                        height: 150,
-                        itemId: 'lstItems',
-                        itemTpl: [
-                            '<div>List Item {string}</div>'
-                        ]
+                        xtype: 'panel',
+                        cls: 'list-inner',
+                        height: 170,
+                        itemId: 'pnlItems',
+                        layout: 'vbox'
                     },
                     {
                         xtype: 'label',
@@ -90,7 +87,7 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
             {
                 xtype: 'button',
                 cls: 'btn-send',
-                itemId: 'btnSupplyNext2',
+                itemId: 'btnSupplyNext3',
                 text: 'دفع المستحقات'
             }
         ]
