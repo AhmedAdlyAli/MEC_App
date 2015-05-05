@@ -1511,14 +1511,14 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .item-notification{
 
-    height:3em;
+    height:5em;
     padding:0.5em 2em 0.5em 0.5em;
-    background: url(../images/notify-item1.png) no-repeat 90% center;
+    background: url(../images/notify-item1.png) no-repeat 96% 36%;
 
 
-    .notification-sub{
-        padding:0.5em 3em 0.5em 0.5em;
-        background: url(../images/notify-item2.png) no-repeat 90% center;
+    .notification-sub{ 
+        padding:0.5em 1em 0.5em 0.5em;
+        background: url(../images/notify-item2.png) no-repeat right 36%;
 
     }
 
@@ -1649,8 +1649,8 @@ background: url(../images/toplogo.png) no-repeat center top;
 .text-panel{
     background:#fff;
 
-    
-    
+
+
 .text-container{
     height: 100%;
     padding:1em;
