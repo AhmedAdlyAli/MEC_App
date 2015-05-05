@@ -26,7 +26,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "نموذج طلب تموين"
+                "html": "نموذج طلب تموين",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel",
             "designerId": "5348acf4-5f47-439b-9eb4-e3436643c55c"
@@ -56,7 +57,13 @@
             "userConfig": {
                 "fn": "initialize",
                 "implHandler": [
+                    "",
                     "var view = this;",
+                    "",
+                    "//localization",
+                    "Ext.Localization.LocalizeView(view);",
+                    "",
+                    "",
                     "var data = view.getData();",
                     "",
                     "console.log(data);",

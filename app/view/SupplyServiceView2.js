@@ -78,14 +78,6 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 text: 'التالي'
             }
         ]
-    },
-
-    initialize: function() {
-        this.callParent();
-
-        Ext.Localization.LoadLocalization();
-
-        Ext.Localization.LocalizeView(this);
     }
 
 });

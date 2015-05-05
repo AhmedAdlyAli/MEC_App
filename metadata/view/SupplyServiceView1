@@ -104,28 +104,6 @@
             },
             "name": "MyButton",
             "designerId": "34fb0a35-b57f-4131-8472-55487e4ad096"
-        },
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "initialize",
-                "implHandler": [
-                    "",
-                    "this.callParent();",
-                    "",
-                    "Ext.Localization.LoadLocalization();",
-                    "",
-                    "Ext.Localization.LocalizeView(this);",
-                    ""
-                ]
-            },
-            "name": "initialize",
-            "designerId": "0b194797-84cd-42fa-baf3-f53b6e3da538"
         }
     ]
 }

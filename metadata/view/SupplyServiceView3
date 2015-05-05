@@ -29,7 +29,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "نموذج طلب تموين"
+                "html": "نموذج طلب تموين",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel",
             "designerId": "48c0f71b-8f47-4ff4-baee-a847b161fb6f"
@@ -44,7 +45,8 @@
             "userConfig": {
                 "cls": [
                     "acc-group"
-                ]
+                ],
+                "itemId": "pnlConfirm"
             },
             "name": "MyPanel9",
             "designerId": "21e78822-6241-4a65-a489-ebeae3d57192",

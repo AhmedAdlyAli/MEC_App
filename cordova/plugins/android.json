@@ -35,6 +35,10 @@
                         {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ProgressIndicator\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -69,7 +73,12 @@
                             "count": 1
                         }
                     ],
-                    "/*": []
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        }
+                    ]
                 }
             },
             "res/values/strings.xml": {
@@ -576,6 +585,9 @@
             "PACKAGE_NAME": "mec.mecapp"
         },
         "org.pbernasconi.progressindicator": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "mec.mecapp"
         }
     },

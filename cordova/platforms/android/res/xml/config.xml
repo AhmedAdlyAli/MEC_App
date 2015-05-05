@@ -51,4 +51,7 @@
     <splash height="1334" src="resources/splash/splash.png" width="750" />
     <splash height="2208" src="resources/splash/splash.png" width="1242" />
     <splash height="1242" src="resources/splash/splash.png" width="2208" />
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
 </widget>

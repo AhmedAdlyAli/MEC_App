@@ -173,6 +173,41 @@ var localeEn =
 			]
 		},
 
+		{
+			itemId:"SupplyServiceView3",
+			description: "Supply Services view 3 - order confirmation",
+			items:
+			[
+				{itemId:"pnlConfirm", xtype: "cls",value:"ltr-cls"},
+				
+				{itemId:"lblTitle", xtype: "label",value:"Supply Services Request Form"},
+				{itemId:"lblUserName", xtype: "label",value:"User Name"},
+				
+				{itemId:"lblItems", xtype: "label",value:"Items & Quantities"},
+				{itemId:"lblDealer", xtype: "label",value:"Selected Dealer"},
+				{itemId:"lblFees", xtype: "label",value:"Required Fees"},
+
+				{itemId:"btnSupplyNext3", xtype: "button",value:"Confirm & Pay"}
+
+			]
+		},
+
+
+		{
+			itemId:"SupplyServiceView4",
+			description: "Supply Services view 4 - payment",
+			items:
+			[
+	
+				{itemId:"lblTitle", xtype: "label",value:"Supply Services Request Form"}
+	
+
+			]
+		},
+
+
+
+
 
 		{
 			itemId:"SettingsView",

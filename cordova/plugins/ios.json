@@ -31,6 +31,14 @@
                         {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,7 +60,7 @@
                     "AssetsLibrary.framework": [
                         {
                             "xml": false,
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "CoreVideo.framework": [
@@ -67,10 +75,30 @@
                             "count": 1
                         }
                     ],
-                    "ImageIO.framework": [],
-                    "CoreLocation.framework": [],
-                    "CoreGraphics.framework": [],
-                    "MobileCoreServices.framework": [],
+                    "ImageIO.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
@@ -89,7 +117,12 @@
             },
             "*-Info.plist": {
                 "parents": {
-                    "NSLocationWhenInUseUsageDescription": [],
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
+                        }
+                    ],
                     "Google Maps API Key": [],
                     "NSLocationAlwaysUsageDescription": [],
                     "CFBundleURLTypes": []
@@ -118,6 +151,9 @@
         },
         "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "com.domain.MEC_App"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "MEC.MECAPP"
         }
     },
     "dependent_plugins": {}

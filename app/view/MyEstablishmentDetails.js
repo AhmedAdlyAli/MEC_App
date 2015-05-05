@@ -259,7 +259,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         itemTpl: [
                             '<div class=\'tpl-branch-1\'>{branchName}</div>',
                             '',
-                            '<div class=\'tpl-branch-2\'>{status}</div>',
+                            '<div class=\'tpl-branch-2\'>{status}&nbsp;</div>',
                             '',
                             ''
                         ]
