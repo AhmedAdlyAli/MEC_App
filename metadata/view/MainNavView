@@ -48,6 +48,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "home-carousel"
+                        ],
+                        "indicator": false,
                         "itemId": "NewsCarousel",
                         "layout|flex": 1,
                         "ui": null
@@ -82,7 +86,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "home-header"
+                                    "home-header2"
                                 ],
                                 "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
                                 "id": "pnlNews1",
@@ -100,7 +104,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "home-header"
+                                    "home-header3"
                                 ],
                                 "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
                                 "id": "pnlNews2",
@@ -108,6 +112,48 @@
                             },
                             "name": "MyPanel9",
                             "designerId": "58de5c7f-6f8b-4fc4-80d7-fe571570ca36"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNewsCarouselInitialize",
+                                "implHandler": [
+                                    "var carousel = this;",
+                                    "",
+                                    "setInterval(function(){",
+                                    "    carousel.next();",
+                                    "},3000);"
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onNewsCarouselInitialize",
+                            "designerId": "03d6ae37-79bd-404b-963c-75775347b75e"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onNewsCarouselActiveItemChange",
+                                "implHandler": [
+                                    "if(container.activeIndex == container.items.length-1) {",
+                                    "    setTimeout(function(){",
+                                    "        container.setActiveItem(0);",
+                                    "    },3501);",
+                                    "}"
+                                ],
+                                "name": "activeitemchange"
+                            },
+                            "name": "onNewsCarouselActiveItemChange",
+                            "designerId": "4531c171-08e6-441f-9350-4f8b2a66e7e2"
                         }
                     ]
                 },

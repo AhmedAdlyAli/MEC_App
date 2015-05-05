@@ -43,7 +43,9 @@ Ext.define('MEC_App.view.MainNavView', {
                     {
                         xtype: 'carousel',
                         flex: 1,
+                        cls: 'home-carousel',
                         itemId: 'NewsCarousel',
+                        indicator: false,
                         items: [
                             {
                                 xtype: 'panel',
@@ -54,17 +56,29 @@ Ext.define('MEC_App.view.MainNavView', {
                             },
                             {
                                 xtype: 'panel',
-                                cls: 'home-header',
+                                cls: 'home-header2',
                                 html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                                 id: 'pnlNews1',
                                 itemId: 'pnlNews1'
                             },
                             {
                                 xtype: 'panel',
-                                cls: 'home-header',
+                                cls: 'home-header3',
                                 html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                                 id: 'pnlNews2',
                                 itemId: 'pnlNews2'
+                            }
+                        ],
+                        listeners: [
+                            {
+                                fn: function(component, eOpts) {
+                                    var carousel = this;
+
+                                    setInterval(function(){
+                                        carousel.next();
+                                    },3000);
+                                },
+                                event: 'initialize'
                             }
                         ]
                     },
@@ -295,10 +309,23 @@ Ext.define('MEC_App.view.MainNavView', {
         ],
         listeners: [
             {
+                fn: 'onNewsCarouselActiveItemChange',
+                event: 'activeitemchange',
+                delegate: '#NewsCarousel'
+            },
+            {
                 fn: 'onMainNavPush',
                 event: 'push'
             }
         ]
+    },
+
+    onNewsCarouselActiveItemChange: function(container, value, oldValue, eOpts) {
+        if(container.activeIndex == container.items.length-1) {
+            setTimeout(function(){
+                container.setActiveItem(0);
+            },3501);
+        }
     },
 
     onMainNavPush: function(navigationview, view, eOpts) {

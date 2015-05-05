@@ -107,7 +107,7 @@ Ext.application({
         'LanguageView',
         'SupplyServiceView3'
     ],
-    controllers: [ 
+    controllers: [
         'HomeController',
         'SideMenuController',
         'ComplaintsController',
