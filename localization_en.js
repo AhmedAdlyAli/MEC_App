@@ -101,6 +101,20 @@ var localeEn =
 
 
 		{
+			itemId:"SupplyServiceView1",
+			description: "Supply Services...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
+				{itemId:"itemQuantityTitle", xtype: "titlebar",value:"Items and Quantities", align:"left"},
+				{itemId:"frmSupplyService1", xtype: "cls",value:"ltr-cls"},
+				{itemId:"btnSupplyNext1", xtype: "button",value:"Next"}
+
+			]
+		},
+
+
+		{
 			itemId:"SettingsView",
 			description: "Settings...",
 			items:

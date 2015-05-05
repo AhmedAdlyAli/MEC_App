@@ -30,7 +30,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "نموذج طلب تموين"
+                "html": "نموذج طلب تموين",
+                "itemId": "viewLbl"
             },
             "name": "MyLabel",
             "designerId": "6fc6a023-6e94-4d31-9f96-2fd1e8b2b33d"
@@ -45,7 +46,8 @@
             "userConfig": {
                 "cls": [
                     "acc-container"
-                ]
+                ],
+                "itemId": "frmSupplyService1"
             },
             "name": "MyPanel5",
             "designerId": "aad26cca-c17d-4cf4-af25-a9670b063012",
@@ -62,6 +64,7 @@
                             "acc-header3"
                         ],
                         "docked": "top",
+                        "itemId": "itemQuantityTitle",
                         "title": "الاصناف والكميات",
                         "titleAlign": "right"
                     },
@@ -101,6 +104,28 @@
             },
             "name": "MyButton",
             "designerId": "34fb0a35-b57f-4131-8472-55487e4ad096"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "0b194797-84cd-42fa-baf3-f53b6e3da538"
         }
     ]
 }

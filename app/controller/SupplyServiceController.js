@@ -49,7 +49,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         var url2 = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyItemDetails';
 
-        var requestData2 = {"qid":"21463400042", "languageID":"2", "mobileDeviceID":"1231"};
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+        var requestData2 = {"qid":"21463400042", "languageID":language, "mobileDeviceID":"1231"};
 
 
         //Ext.AnimationHelper.ShowLoading();

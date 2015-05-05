@@ -36,16 +36,19 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'نموذج طلب تموين'
+                html: 'نموذج طلب تموين',
+                itemId: 'viewLbl'
             },
             {
                 xtype: 'panel',
                 cls: 'acc-container',
+                itemId: 'frmSupplyService1',
                 items: [
                     {
                         xtype: 'titlebar',
                         cls: 'acc-header3',
                         docked: 'top',
+                        itemId: 'itemQuantityTitle',
                         title: 'الاصناف والكميات',
                         titleAlign: 'right'
                     },
@@ -62,6 +65,16 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                 text: 'التالي'
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });
