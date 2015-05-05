@@ -60,7 +60,7 @@ Ext.define('MEC_App.controller.Global', {
 
         var config={
 
-            webServiceUrl : 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+            webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
             supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice.svc',
             CMSWSUrl : 'http://196.205.5.28:333/MEC/api'
 
