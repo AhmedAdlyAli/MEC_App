@@ -97,7 +97,7 @@ Ext.application({
         'DailyPricesView',
         'GoodsPricesView',
         'ShopPriceListView',
-        'AboutMinistryView',
+        'AboutView',
         'MinistryBranchesView',
         'EconomicIndicatorsBrief',
         'InvestorServiceView',

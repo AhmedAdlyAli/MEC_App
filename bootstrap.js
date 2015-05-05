@@ -712,7 +712,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.model.MenuModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.override.MenuArrayStore": [],
-  "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.AboutView": [],
   "MEC_App.view.AdminServicesView": [],
   "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
@@ -1577,8 +1577,8 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.override.MenuArrayStore": [],
-  "MEC_App.view.AboutMinistryView": [
-    "widget.AboutMinistryView"
+  "MEC_App.view.AboutView": [
+    "widget.AboutView"
   ],
   "MEC_App.view.AdminServicesView": [
     "widget.AdminServicesView"

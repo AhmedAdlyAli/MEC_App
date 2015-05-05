@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "AboutMinistryView",
-        "designer|userClassName": "AboutMinistryView",
+        "designer|userAlias": "AboutView",
+        "designer|userClassName": "AboutView",
         "fullscreen": true,
-        "itemId": "AboutMinistryView",
+        "itemId": "AboutView",
         "layout": "fit",
         "scrollable": null
     },
