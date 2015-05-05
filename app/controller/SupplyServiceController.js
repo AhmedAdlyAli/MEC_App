@@ -66,7 +66,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData2 = {"qid":"21463400042", "languageID":language, "mobileDeviceID":"1231"};
 
 
-        //Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
         Ext.Ajax.request({
 
@@ -80,37 +80,47 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 view.setData(json2.Data.Items);
 
-                var fsItems = me.getFsItems();
 
 
-                 Ext.each(json2.Data.Items, function(item){
 
-                        fsItems.add(
 
-                            {
-                                xtype: 'spinnerfield',
-                                label: item.Name,
-                                placeholder: item.Name,
-                                value: item.AllocatedQty,
-                                name: item.ItemID,
-                                stepValue: 1,
-                                minValue: 0,
-                                maxValue:100,
-                                listeners : {
-                                    spin : function(spinnerfield, newValue, direction, eOpts) {
-                                        if(newValue>item.AllocatedQty){
-                                            this.setValue(item.AllocatedQty);
-                                        }
+
+
+
+                //fsItems = Ext.create({xtype:'fieldset'});
+
+
+                var fsItems =view.down('#frmSupplyService1').add({xtype: 'fieldset'});
+
+                Ext.each(json2.Data.Items, function(item){
+
+                    console.log(item.Name);
+                    fsItems.add(
+
+                        {
+                            xtype: 'spinnerfield',
+                            label: item.Name,
+                            placeholder: item.Name,
+                            value: item.AllocatedQty,
+                            name: item.ItemID,
+                            stepValue: 1,
+                            minValue: 0,
+                            maxValue:100,
+                            listeners : {
+                                spin : function(spinnerfield, newValue, direction, eOpts) {
+                                    if(newValue>item.AllocatedQty){
+                                        this.setValue(item.AllocatedQty);
                                     }
                                 }
+                            }
 
 
 
-                             }
+                        }
 
-                        );
+                    );
 
-                    });
+                });
 
 
 
