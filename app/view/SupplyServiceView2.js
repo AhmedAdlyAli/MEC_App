@@ -21,13 +21,17 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
         'Ext.Label',
         'Ext.Panel',
         'Ext.Map',
+        'Ext.field.Hidden',
         'Ext.Button'
     ],
 
     config: {
-        cls: 'complaint-view',
         itemId: 'SupplyServiceView2',
         zIndex: 1000,
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
@@ -47,6 +51,20 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                         itemId: 'mapDealers'
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-title',
+                itemId: 'lblTitle'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-address',
+                itemId: 'lblAddress'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'hiddenDealerID'
             },
             {
                 xtype: 'button',

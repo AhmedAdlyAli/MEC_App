@@ -7,7 +7,8 @@
     "codeClass": null,
     "userConfig": {
         "cls": [
-            "complaint-view"
+            "complaint-view",
+            "rtl"
         ],
         "designer|userAlias": "SupplyServiceView2",
         "designer|userClassName": "SupplyServiceView2",
@@ -72,6 +73,51 @@
                     "designerId": "4ee210d4-048a-4175-8e16-e9ccfd8f39fd"
                 }
             ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-title"
+                ],
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "1f9a8be3-3d68-4338-8576-dcf2e48f0df3"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-address"
+                ],
+                "itemId": "lblAddress"
+            },
+            "name": "MyLabel8",
+            "designerId": "c30f2108-11db-4398-8d86-70fe3ac5a596"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "hiddenDealerID"
+            },
+            "name": "MyHiddenField",
+            "designerId": "55dbf475-bcc2-4277-a07e-787d6a70ebb2"
         },
         {
             "type": "Ext.Button",

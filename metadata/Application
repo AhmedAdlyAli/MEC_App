@@ -117,7 +117,8 @@
             "ConsumerServiceView",
             "FeedbackFormView",
             "NotificationView",
-            "LanguageView"
+            "LanguageView",
+            "SupplyServiceView3"
         ]
     },
     "name": "Application",

@@ -1,0 +1,209 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "SupplyServiceView3",
+        "designer|userClassName": "SupplyServiceView3",
+        "itemId": "SupplyServiceView3",
+        "layout": null,
+        "scrollable": "vertical"
+    },
+    "designerId": "e1295a74-d161-44ce-b026-43aeea4460de",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "نموذج طلب تموين"
+            },
+            "name": "MyLabel",
+            "designerId": "48c0f71b-8f47-4ff4-baee-a847b161fb6f"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "acc-group"
+                ]
+            },
+            "name": "MyPanel9",
+            "designerId": "21e78822-6241-4a65-a489-ebeae3d57192",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "اسم المستخدم",
+                        "id": "lblUserName"
+                    },
+                    "name": "MyLabel14",
+                    "designerId": "2c8b54b8-d5c9-4a38-8f07-a2a55c04f518"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value"
+                        ],
+                        "itemId": "lblUserName2"
+                    },
+                    "name": "MyLabel18",
+                    "designerId": "f0299727-f11c-47a8-8f28-344bdb51e74b"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "الاصناف والكميات",
+                        "id": "lblItems"
+                    },
+                    "name": "MyLabel30",
+                    "designerId": "1d1faa35-c239-44ec-b13b-cdea474b7995"
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 150,
+                        "itemId": "lstItems"
+                    },
+                    "name": "MyList1",
+                    "designerId": "57594980-2d44-43e3-af80-1cf52cd09718",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {string}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "91e90ca4-5fa8-4c39-a5be-71eaa5c837d0"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "منفذ التوزيع",
+                        "id": "lblDealer"
+                    },
+                    "name": "MyLabel33",
+                    "designerId": "e9ef4ad3-e57b-4570-9e1d-1fdfaf468f7e"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value"
+                        ],
+                        "itemId": "lblDealer2"
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "2d5a1f60-88ce-4455-bdef-740c439d4065"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "الرسوم المستحقة",
+                        "id": "lblFees"
+                    },
+                    "name": "MyLabel34",
+                    "designerId": "41e8f68e-33e5-42e6-b98d-695b13918a36"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value"
+                        ],
+                        "itemId": "lblFees2"
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "cdfcb017-eb70-452f-a0c0-2b0a2c6483fb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "btn-send"
+                ],
+                "height": null,
+                "itemId": "btnSupplyNext1",
+                "text": "دفع المستحقات"
+            },
+            "name": "MyButton",
+            "designerId": "9124b90b-8665-4137-8195-793ceb068437"
+        }
+    ]
+}

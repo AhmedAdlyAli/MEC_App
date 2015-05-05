@@ -104,7 +104,8 @@ Ext.application({
         'ConsumerServiceView',
         'FeedbackFormView',
         'NotificationView',
-        'LanguageView'
+        'LanguageView',
+        'SupplyServiceView3'
     ],
     controllers: [
         'HomeController',

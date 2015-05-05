@@ -22,7 +22,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             lblFamilyCount: '#lblFamilyCount',
             fsItems: '#fsItems',
             SupplyServiceView1: 'SupplyServiceView1',
-            SupplyServiceView2: 'SupplyServiceView2'
+            SupplyServiceView2: 'SupplyServiceView2',
+            SupplyServiceView3: 'SupplyServiceView3'
         },
 
         control: {
@@ -34,6 +35,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "panel#SupplyServiceView2": {
                 initialize: 'onSupplyServiceView2Initialize'
+            },
+            "button#btnSupplyNext2": {
+                tap: 'onBtnSupplyNext2Tap'
             }
         }
     },
@@ -73,7 +77,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 label: item.Name,
                                 placeholder: item.Name,
                                 value: item.AllocatedQty,
-                                name: 'item-'+item.ItemID,
+                                name: item.ItemID,
                                 stepValue: 1,
                                 minValue: 0,
                                 maxValue:100,
@@ -138,16 +142,17 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         // initialize google maps
         var view = component;
 
-        var mapPanel = view.down('mapDealers');
-        var gMap = mapPanel.getMap();
-
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
-
+        console.log(view.getData());
 
         Ext.Function.defer(function(){
 
 
+
+            var mapPanel = view.down('#mapDealers');
+            var gMap = mapPanel.getMap();
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
 
 
             // get dealers
@@ -155,11 +160,34 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
 
-            var requestData =  {"qid":"24263400239", "languageID":"2",
-                                "mobileDeviceID":"1231",
-                                "latitude":location.lat,
-                                "longtitude":location.lng};
 
+            var orderItems =[];
+            var formData = view.getData();
+
+         for (var key in formData) {
+          if (formData.hasOwnProperty(key)) {
+                orderItems.push({ ItemID: key, value: formData[key] });
+          }
+        }
+
+
+
+
+
+
+            var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+            var requestData =  {"qid":"24263400239",
+                                "languageID":language,
+                                "mobileDeviceID":"1231",
+                                "restrictDealerBasedOnStock":"true",
+                                "latitude":"25.321283",//location.lat,
+                                "longtitude":"51.528329",//location.lng,
+                                "orderItems": orderItems
+                               };
+
+
+        //console.log(requestData);
 
 
             Ext.AnimationHelper.ShowLoading();
@@ -178,42 +206,53 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     Ext.AnimationHelper.HideLoading();
 
 
-
-
-                    // add markers
-                    //25.3040033,51.5294588
+                   console.log(json2);
 
 
 
+             var infowindow = new google.maps.InfoWindow();
 
 
+                Ext.each(json2.Data.Dealers,function(item){
 
-
-                  var infowindow = new google.maps.InfoWindow();
-
-                             var marker = new google.maps.Marker({
+                        var marker = new google.maps.Marker({
                             map: gMap,
                             animation: google.maps.Animation.DROP,
-                            position: new google.maps.LatLng (item.Lat,item.Lng),
+                            position: new google.maps.LatLng(item.Longtitude,item.Latitude),
                             icon: 'resources/images/drop-pin.png',
                             data:item
                         });
 
-                        google.maps.event.addListener(marker,'click',function(pos) {
 
-                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
+
+
+                     google.maps.event.addListener(marker,'click',function(pos) {
+
+                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.DealerName+'</div>';
                                infowindow.setContent(info);
                                infowindow.open(gMap,marker);
 
-                           //view.down('#lblTitle').setHtml(marker.data.Name);
-                           //view.down('#lblAddress').setHtml(marker.data.Address);
-                           //view.down('#lblTel').setHtml(marker.data.Tel);
-                           //view.down('#lblFax').setHtml(marker.data.Fax);
+                           view.down('#lblTitle').setHtml(marker.data.DealerName);
+                           view.down('#lblAddress').setHtml(marker.data.Address);
+                           view.down('#DealerID').setValue(marker.data.DealerID);
+
+
+
+                         console.log(marker.data.DealerID);
+
+
+                         formData.DealerID = marker.data.DealerID;
+
+                         view.setData(formData);
+
+
 
                         });
 
 
 
+
+                });
 
 
 
@@ -243,8 +282,31 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        }, 100,this);
+        }, 1100,this);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    },
+
+    onBtnSupplyNext2Tap: function(button, e, eOpts) {
+        var view = this.getSupplierServiceView3();
+
+        console.log(view.getData());
+
+        // collect form data
+        // get supplier
+        // call allocate to get fees
 
 
 
