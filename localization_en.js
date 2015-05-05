@@ -15,12 +15,7 @@ var localeEn =
 				{itemId:"btnSubmitLogin", "xtype": "button","value":"Login"},
 				{itemId:"txtUserName", "xtype": "textfield","value":"User Name"},
 				{itemId:"txtPassword", "xtype": "textfield","value":"Password"},
-				{itemId:"fSet", "xtype": "cls","value":"ltr-cls"},
-
-
-
-				
-				
+				{itemId:"fSet", "xtype": "cls","value":"ltr-cls"}
 			]
 
 		},
@@ -37,6 +32,29 @@ var localeEn =
 				{itemId:"homeReports", xtype: "label",value:"Reports"},
 				{itemId:"btnProjects", xtype: "label",value:"Projects"},
 				{itemId:"homeContact", xtype: "label",value:"Contact Us"}
+
+			]
+
+		},
+
+
+		{
+			itemId:"ComplaintsView",
+			description: "Complaints...",
+			items:
+			[
+				{itemId:"frmComplaint", xtype: "cls",value:"ltr-cls"},
+				{itemId:"viewLbl", xtype: "label",value:"Report Abuse"},
+				{itemId:"shopName", xtype: "textfield",value:"Store Name"},
+				{itemId:"shopLocation", xtype: "textfield",value:"Store Location"},
+				{itemId:"txtCategory", xtype: "textfield",value:"Complaint Type"},
+				{itemId:"txtComplaint", xtype: "textfield",value:"Complaint Description"},
+				{itemId:"fullName", xtype: "textfield",value:"Full Name"},
+				{itemId:"email", xtype: "textfield",value:"Email"},
+				{itemId:"mobile", xtype: "textfield",value:"Mobile"},
+				{itemId:"mytextfield", xtype: "textfield",value:"Barcode Scan"},
+				{itemId:"lblAttachImage", xtype: "label",value:"Attach Image"},
+				{itemId:"btnSubmitComplaint", xtype: "button",value:"Send"}
 
 			]
 
