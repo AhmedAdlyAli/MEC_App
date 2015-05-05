@@ -16,10 +16,17 @@ var localeEn =
 			itemId:"ConsumerServiceView",
 			items: [
 				{Name:"Report Complaint", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
-				{Name:"Supply Services", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"}
+				{Name:"Supply Services", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
-
+		{
+			itemId:"SupplyServiceListing",
+			items: [
+				{Name:"How to request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
+				{Name:"Departnment Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
+			]
+		},
 		{
 			itemId:"MediaCenterView",
 			items: [
@@ -42,7 +49,14 @@ var localeEn =
 				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
 				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"}
 			]
-		}
+		},
+
+
+
+
+
+
+
 	],
 
 	Views: [
@@ -204,6 +218,20 @@ var localeEn =
 
 			]
 		},
+
+
+		{
+			itemId:"SupplyServiceListing",
+			description: "Supply Services view 4 - payment",
+			items:
+			[
+	
+				{itemId:"lblTitle", xtype: "label",value:"Supply Services"}
+	
+
+			]
+		},
+
 
 
 

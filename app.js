@@ -106,7 +106,10 @@ Ext.application({
         'NotificationView',
         'LanguageView',
         'SupplyServiceView3',
-        'SupplyServiceView4'
+        'SupplyServiceView4',
+        'SupplyServiceListing',
+        'SupplyServiceHowTo',
+        'SupplyServiceDepartmentServices'
     ],
     controllers: [
         'HomeController',

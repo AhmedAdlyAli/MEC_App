@@ -1,0 +1,167 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "SupplyServiceListing",
+        "designer|userClassName": "SupplyServiceListing",
+        "fullscreen": true,
+        "itemId": "SupplyServiceListing",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "ConsumerServiceView1",
+    "designerId": "cb03e6c9-be54-4d88-b668-ae8d514a5964",
+    "cn": [
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 2.2,
+                "scrollable": null
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "7d636d70-e68b-4731-9c53-4978ba65de29",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "vbox"
+                    },
+                    "name": "MyPanel10",
+                    "designerId": "d2324fd5-67a7-44fd-b87f-ed6e4631b332",
+                    "cn": [
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "service-title"
+                                ],
+                                "html": "خدمات التموين",
+                                "id": null,
+                                "itemId": "lblTitle"
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "05988619-7784-4a1b-b79a-b4a22914965f"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "CompanyList"
+                        ],
+                        "height": 195,
+                        "itemCls": "item-link",
+                        "itemId": "lstLinks2"
+                    },
+                    "name": "MyList4",
+                    "designerId": "6bf2f23c-668f-4a50-9b81-19c5e2ac9bf3",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "dc3fdf24-13f7-4f07-a9c4-b3f141bad973"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLstLinks1ItemTap1",
+                                "implHandler": [
+                                    "            Ext.Global.RedirectToView(record.data);",
+                                    ""
+                                ],
+                                "name": "itemtap"
+                            },
+                            "name": "onLstLinks1ItemTap1",
+                            "designerId": "2b7ade19-622d-4e65-a04e-8712915333da"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "var links = Ext.Localization.getLinks(this);",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstLinks2');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "64fd9893-bbfd-413c-a9a2-30928045397e"
+        }
+    ]
+}

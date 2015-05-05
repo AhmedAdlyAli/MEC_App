@@ -119,7 +119,10 @@
             "NotificationView",
             "LanguageView",
             "SupplyServiceView3",
-            "SupplyServiceView4"
+            "SupplyServiceView4",
+            "SupplyServiceListing",
+            "SupplyServiceHowTo",
+            "SupplyServiceDepartmentServices"
         ]
     },
     "name": "Application",
