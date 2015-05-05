@@ -141,6 +141,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var mapPanel = view.down('mapDealers');
         var gMap = mapPanel.getMap();
 
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+
         Ext.Function.defer(function(){
 
 
@@ -177,56 +181,34 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
                     // add markers
-
-                    map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
-
+                    //25.3040033,51.5294588
 
 
 
-                        map.addMarker({
-                            'position': new plugin.google.maps.LatLng(25.3033825, 51.5092886),
-                            'title': "الميرة",
-                            'snippet': "فرع فريج بن عمران",
-                            animation: plugin.google.maps.Animation.DROP
-                        }, function(marker) {
-                            marker.showInfoWindow();
-                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
-                                alert("Marker is clicked");
-                            });
 
+
+
+
+                  var infowindow = new google.maps.InfoWindow();
+
+                             var marker = new google.maps.Marker({
+                            map: gMap,
+                            animation: google.maps.Animation.DROP,
+                            position: new google.maps.LatLng (item.Lat,item.Lng),
+                            icon: 'resources/images/drop-pin.png',
+                            data:item
                         });
 
+                        google.maps.event.addListener(marker,'click',function(pos) {
 
+                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
+                               infowindow.setContent(info);
+                               infowindow.open(gMap,marker);
 
-
-                        map.addMarker({
-                            'position': new plugin.google.maps.LatLng(25.3033825, 51.529458),
-                            'title': "الميرة",
-                            'snippet': "فرع الدفنة",
-                            animation: plugin.google.maps.Animation.DROP
-                        }, function(marker) {
-                            marker.showInfoWindow();
-                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
-                                alert("Marker is clicked");
-                            });
-
-                        });
-
-
-
-
-
-
-                        map.addMarker({
-                            'position': new plugin.google.maps.LatLng(25.3040033,51.5294588),
-                            'title': "الميرة",
-                            'snippet': "فرع المنتزه",
-                            animation: plugin.google.maps.Animation.DROP
-                        }, function(marker) {
-                            marker.showInfoWindow();
-                            marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
-                                alert("Marker is clicked");
-                            });
+                           //view.down('#lblTitle').setHtml(marker.data.Name);
+                           //view.down('#lblAddress').setHtml(marker.data.Address);
+                           //view.down('#lblTel').setHtml(marker.data.Tel);
+                           //view.down('#lblFax').setHtml(marker.data.Fax);
 
                         });
 
@@ -236,7 +218,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                    });
+
+
+
+
+
 
 
 

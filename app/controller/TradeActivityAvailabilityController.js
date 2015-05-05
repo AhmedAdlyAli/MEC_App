@@ -57,9 +57,12 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
         var requestData = {
             "serviceId":"5",
-            "language":"ARA",
+            "language":"ar",
             "englishSearchClause":"",
-            "arabicSearchClause":searchKeyword
+
+            "arabicSearchClause":searchKeyword,
+            "searchLanguage":"ARA"
+
         };
 
 
