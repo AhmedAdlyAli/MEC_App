@@ -26,7 +26,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
     config: {
         fullscreen: true,
-        itemId: 'publicserviceview1',
+        itemId: 'MediaCenterView',
         layout: 'vbox',
         items: [
             {
@@ -110,23 +110,12 @@ Ext.define('MEC_App.view.MediaCenterView', {
 
     initialize: function() {
         this.callParent();
-        /*
-        this.down('#btnPublications').setHtml(Ext.Global.GetViewTitle('MinistryPublications'));
-        this.down('#btnMinistryNews').setHtml(Ext.Global.GetViewTitle('MinistryNews'));
-        this.down('#btnNews').setHtml(Ext.Global.GetViewTitle('EconomyNews'));
 
-        this.down('#viewLbl').setHtml( Ext.Global.GetViewTitle('MediaCenter'));
-        */
+        Ext.Localization.LoadLocalization();
 
+        Ext.Localization.LocalizeView(this);
 
-
-               var links = [{Name:'أخبار الوزارة', CatID:1,Icon:'ico-ministry-news.png'},
-                            {Name:'إنعكاسات', CatID:8,Icon:'ico-news-about.png'},
-                            {Name:'أخبار جهات رسميه اقليمية مشابهه', CatID:2,Icon:'ico-news-local-similar.png'},
-                            {Name:'أخبار اقتصادية اقليمية', CatID:4,Icon:'ico-news-local-economic.png'},
-                            {Name:'أخبار جهات رسميه دولية مشابهه', CatID:6,Icon:'ico-news-international-similar.png'},
-                            {Name:'أخبار اقتصادية دولية', CatID:9,Icon:'ico-news-international-economic.png'}
-                            ];
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

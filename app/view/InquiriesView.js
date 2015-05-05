@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.InquiriesView', {
 
     config: {
         fullscreen: true,
+        itemId: 'InquiriesView',
         layout: 'fit',
         items: [
             {
@@ -103,14 +104,11 @@ Ext.define('MEC_App.view.InquiriesView', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:'البحث عن اسم تجاري',Url:'TradeNameAvailabilityView', Icon:'ico-search-trade-name.png'},
-                            {Name:'البحث عن نشاط تجاري',Url:'TradeActivityAvailabilityView',Icon:'ico-search-trade-activity.png'},
-                            {Name:'الاستدعاءات',Url:'RecallsView' ,Icon:'ico-recall-item.png'},
-                            {Name:'ثقافة المستهلك',Url:'ConsumerEducationView',Icon:'ico-consumer-cultuer.png'},
-                            {Name:' ثقافة المستثمر ',Url:'InvestorEducationView',Icon:'ico-investor-culture.png'},
-                            {Name:'المخالفات والاغلاقات',Url:'ViolationsView', Icon:'ico-violations.png'}
-                            ];
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links
