@@ -255,3 +255,48 @@ label-value
                 });
 
 
+
+
+
+
+.list-inner{
+    direction:rtl;
+    background-color:#fff;
+    border-bottom: solid 1px #eeeeee;
+
+    .x-label{
+        padding:0 2em 0 0 !important ;
+        border:0 !important;
+        color: #6f2f51;
+        font-weight:bold;
+    }
+
+    .label-value{
+        padding: 0 !important;
+        border: 0 !important;
+        color:#010101;
+        font-weight:500;
+
+    }
+
+}
+
+
+
+
+
+
+HTTPS issue:
+
+
+@implementation NSURLRequest(DataController) 
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host 
+{ 
+return YES; 
+} 
+@end 
+
+
+
+
+

@@ -93,7 +93,8 @@ module.exports.metadata =
     "nl.x-services.plugins.actionsheet": "1.1.4",
     "org.apache.cordova.device": "0.3.0",
     "org.pbernasconi.progressindicator": "1.1.0",
-    "cordova-plugin-camera": "1.0.0"
+    "cordova-plugin-camera": "1.0.0",
+    "org.apache.cordova.geolocation": "0.3.12"
 }
 // BOTTOM OF METADATA
 });

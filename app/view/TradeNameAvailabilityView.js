@@ -44,6 +44,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                 items: [
                     {
                         xtype: 'textfield',
+                        hidden: true,
                         id: 'txtGroupName',
                         label: 'مجموعة النشاط',
                         name: 'txtGroupName',

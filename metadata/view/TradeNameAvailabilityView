@@ -56,6 +56,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "hidden": true,
                         "id": "txtGroupName",
                         "label": "مجموعة النشاط",
                         "name": "txtGroupName",
