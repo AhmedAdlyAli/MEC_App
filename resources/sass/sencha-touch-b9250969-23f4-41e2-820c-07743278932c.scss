@@ -1548,7 +1548,15 @@ height:3em;
 
 
 .ltr-cls{
-    direction:ltr !important
+    direction:ltr !important;
+    
+    .item-link,
+    .item-link.x-list-item.x-item-selected.x-list-item-tpl {
+        .nav-item {
+            background-position: left center !important;
+            padding: 4px 0 4px 3em;
+        }
+    }
 
 }
 

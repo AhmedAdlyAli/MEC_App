@@ -28,6 +28,11 @@
          "update": "delta"
       },
       {
+         "path": "localization_ar.js",
+         "bundle": true,
+         "update": "delta"
+      },
+      {
          "path": "app.js",
          "bundle": true,
          "update": "delta"
