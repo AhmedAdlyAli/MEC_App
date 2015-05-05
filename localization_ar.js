@@ -19,6 +19,30 @@ var localeAr =
 				{Name:"خدمات التموين", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"}
 			]
 		},
+
+		{
+			itemId:"MediaCenterView",
+			items: [
+				{Name:"أخبار الوزارة", CatID:1, Icon:"ico-ministry-news.png"},
+				{Name:"إنعكاسات", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"أخبار جهات رسميه اقليمية مشابهه", CatID:2, Icon:"ico-news-local-similar.png"},
+				{Name:"أخبار اقتصادية اقليمية", CatID:4, Icon:"ico-news-local-economic.png"},
+				{Name:"أخبار جهات رسميه دولية مشابهه", CatID:6, Icon:"ico-news-international-similar.png"},
+				{Name:"أخبار اقتصادية دولية", CatID:9, Icon:"ico-news-international-economic.png"}
+			]
+		},
+
+		{
+			itemId:"InquiriesView",
+			items: [
+				{Name:"البحث عن اسم تجاري", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
+				{Name:"البحث عن نشاط تجاري", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
+				{Name:"الاستدعاءات", Url:"RecallsView", Icon:"ico-recall-item.png"},
+				{Name:"ثقافة المستهلك", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
+				{Name:"ثقافة المستثمر", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
+				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"}
+			]
+		}
 	],
 	Views: [
 					
