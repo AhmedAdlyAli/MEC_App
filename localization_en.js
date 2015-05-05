@@ -115,6 +115,18 @@ var localeEn =
 
 
 		{
+			itemId:"SupplyServiceView2",
+			description: "Supply Services...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
+				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"}
+
+			]
+		},
+
+
+		{
 			itemId:"SettingsView",
 			description: "Settings...",
 			items:

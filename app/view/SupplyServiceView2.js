@@ -36,7 +36,8 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'نموذج طلب تموين'
+                html: 'نموذج طلب تموين',
+                itemId: 'viewLbl'
             },
             {
                 xtype: 'panel',
@@ -73,6 +74,14 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 text: 'التالي'
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });
