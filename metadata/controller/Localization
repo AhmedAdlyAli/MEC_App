@@ -31,9 +31,9 @@
                     "if(Ext.Global.LanguageFlag == 'ar')",
                     "{",
                     "",
-                    "    // Reset the localization if english  as the views are already arabic ",
+                    "    // Reset the localization if english  as the views are already arabic",
                     "",
-                    "    Ext.Global.Localization = null;",
+                    "    Ext.Global.Localization = localeAr;",
                     "",
                     "}",
                     "else if(Ext.Global.LanguageFlag == 'en')",
@@ -66,7 +66,7 @@
                 "implHandler": [
                     "",
                     "// if the localization is set ==> english",
-                    "if(Ext.Global.Localization)",
+                    "if(Ext.Global.Localization && Ext.Global.LanguageFlag == 'en')",
                     "{",
                     "    var loc = Ext.Global.Localization;",
                     "    var viewLoc;",
@@ -106,6 +106,39 @@
             },
             "name": "LocalizeView",
             "designerId": "be1fe15b-dea9-4296-9018-ddabf8f24333"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "viewObj"
+                ],
+                "fn": "getLinks",
+                "implHandler": [
+                    "    if(Ext.Global.Localization) {",
+                    "        var loc = Ext.Global.Localization;",
+                    "        var viewLoc;",
+                    "",
+                    "        Ext.each(loc.Links,function(item){",
+                    "            if(item.itemId==viewObj._itemId)",
+                    "            {",
+                    "                viewLoc = item.items;",
+                    "                return;",
+                    "            }",
+                    "        });",
+                    "        ",
+                    "        return viewLoc;",
+                    "",
+                    "    }"
+                ]
+            },
+            "name": "getLinks",
+            "designerId": "14dd7585-4d70-49f3-9b0a-2133f7948e92"
         }
     ]
 }

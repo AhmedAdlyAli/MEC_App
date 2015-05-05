@@ -9,6 +9,7 @@
         "designer|userAlias": "ConsumerServiceView",
         "designer|userClassName": "ConsumerServiceView",
         "fullscreen": true,
+        "itemId": "ConsumerServiceView",
         "layout": "vbox",
         "scrollable": null
     },
@@ -27,10 +28,11 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
+                    "Ext.Localization.LoadLocalization();",
                     "",
-                    "var links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'ico-complaints.png'},",
-                    "                    {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'ico-supplyService.png'}",
-                    "                    ];",
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "var links = Ext.Localization.getLinks(this);",
                     "",
                     "var store = new Ext.data.Store({",
                     "    data : links",

@@ -3,6 +3,24 @@ var localeEn =
 {
 	Name : "English translation",
 	LanguageCode : "en",
+	Links: [
+		{
+			itemId:"PublicServiceView",
+			items: [
+				{Name:"Investor Services", Url:"InvestorServiceView", RequireLogin:false, Icon:"ico-investorService.png"},
+				{Name:"Consumer Services", Url:"ConsumerServiceView", RequireLogin:false, Icon:"ico-consumerService.png"}
+			]
+		},
+
+		{
+			itemId:"ConsumerServiceView",
+			items: [
+				{Name:"Report Complaint", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
+				{Name:"Supply Services", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"}
+			]
+		},
+	],
+
 	Views: [
 		{
 			itemId:"LoginFomView",
@@ -17,7 +35,6 @@ var localeEn =
 				{itemId:"txtPassword", "xtype": "textfield","value":"Password"},
 				{itemId:"fSet", "xtype": "cls","value":"ltr-cls"}
 			]
-
 		},
 
 
@@ -34,7 +51,6 @@ var localeEn =
 				{itemId:"homeContact", xtype: "label",value:"Contact Us"}
 
 			]
-
 		},
 
 
@@ -44,7 +60,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"frmComplaint", xtype: "cls",value:"ltr-cls"},
-				{itemId:"viewLbl", xtype: "label",value:"Report Abuse"},
+				{itemId:"viewLbl", xtype: "label",value:"Report Complaint"},
 				{itemId:"shopName", xtype: "textfield",value:"Store Name"},
 				{itemId:"shopLocation", xtype: "textfield",value:"Store Location"},
 				{itemId:"txtCategory", xtype: "textfield",value:"Complaint Type"},
@@ -57,7 +73,6 @@ var localeEn =
 				{itemId:"btnSubmitComplaint", xtype: "button",value:"Send"}
 
 			]
-
 		},
 
 
@@ -66,10 +81,22 @@ var localeEn =
 			description: "Public Services...",
 			items:
 			[
-				{itemId:"viewLbl", xtype: "label",value:"Public Services"}
+				{itemId:"viewLbl", xtype: "label",value:"Public Services"},
+				{itemId:"lstLinks", xtype: "cls",value:"ltr-cls"},
 
 			]
+		},
 
+
+		{
+			itemId:"ConsumerServiceView",
+			description: "Consumer Services...",
+			items:
+			[
+				{itemId:"lblConsumer", xtype: "label",value:"Consumer Services"},
+				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"},
+
+			]
 		},
 
 
@@ -82,7 +109,6 @@ var localeEn =
 				{itemId:"LanguageButtonsLabel", xtype: "label",value:"Current Language"},
 				{itemId:"ChangeButtonPanel", xtype: "cls",value:"ltr-cls"},
 				{itemId:"saveButton", xtype: "button",value:"Save"}
-
 			]
 
 		},
@@ -103,7 +129,6 @@ var localeEn =
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
 				{itemId:"btnLogout", "xtype": "button","value":"Logout"}
-
 
 			]
 

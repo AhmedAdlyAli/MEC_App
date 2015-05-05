@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.ConsumerServiceView', {
 
     config: {
         fullscreen: true,
+        itemId: 'ConsumerServiceView',
         layout: 'vbox',
         items: [
             {
@@ -76,10 +77,11 @@ Ext.define('MEC_App.view.ConsumerServiceView', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:' ابلاغ عن شكوي',Url:'ComplaintsView',RequireLogin:false,Icon:'ico-complaints.png'},
-                            {Name:' خدمات التموين',Url:'SupplyServiceView1', RequireLogin:true, Icon:'ico-supplyService.png'}
-                            ];
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

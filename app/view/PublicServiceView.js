@@ -98,10 +98,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
 
         Ext.Localization.LocalizeView(this);
 
-        var links = [
-                {Name:'خدمات المستثمر',Url:'InvestorServiceView',RequireLogin:false,Icon:'ico-investorService.png'},
-                {Name:'خدمات المستهلك',Url:'ConsumerServiceView', RequireLogin:false, Icon:'ico-consumerService.png'}
-            ];
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

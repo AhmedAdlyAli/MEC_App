@@ -33,7 +33,7 @@ Ext.define('MEC_App.controller.Localization', {
 
             // Reset the localization if english  as the views are already arabic
 
-            Ext.Global.Localization = null;
+            Ext.Global.Localization = localeAr;
 
         }
         else if(Ext.Global.LanguageFlag == 'en')
@@ -51,7 +51,7 @@ Ext.define('MEC_App.controller.Localization', {
     LocalizeView: function(viewObj) {
 
         // if the localization is set ==> english
-        if(Ext.Global.Localization)
+        if(Ext.Global.Localization && Ext.Global.LanguageFlag == 'en')
         {
             var loc = Ext.Global.Localization;
             var viewLoc;
@@ -87,6 +87,24 @@ Ext.define('MEC_App.controller.Localization', {
 
 
 
+    },
+
+    getLinks: function(viewObj) {
+            if(Ext.Global.Localization) {
+                var loc = Ext.Global.Localization;
+                var viewLoc;
+
+                Ext.each(loc.Links,function(item){
+                    if(item.itemId==viewObj._itemId)
+                    {
+                        viewLoc = item.items;
+                        return;
+                    }
+                });
+
+                return viewLoc;
+
+            }
     }
 
 });
