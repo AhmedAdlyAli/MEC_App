@@ -13,6 +13,7 @@
         "designer|userClassName": "ComplaintsView",
         "enableSubmissionForm": false,
         "fullscreen": null,
+        "itemId": "ComplaintsView",
         "layout": "vbox",
         "pinHeaders": null,
         "requires": [
@@ -49,7 +50,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "ابلغ عن شكوي"
+                "html": "ابلغ عن شكوي",
+                "itemId": "viewLbl"
             },
             "name": "MyLabel3",
             "designerId": "8a1f3b8e-3fa5-4382-8b71-5f5c6373991d"
@@ -63,6 +65,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": null,
+                "itemId": "frmComplaint",
                 "layout|flex": 1,
                 "modal": null,
                 "scrollable": [
@@ -91,6 +94,7 @@
                         "itemId": "shopName",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "shopName",
                         "placeHolder": "اسم المحل",
                         "required": true
@@ -107,9 +111,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "shopLocation",
-                        "itemId": null,
+                        "itemId": "shopLocation",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "shopLocation",
                         "placeHolder": "موقع المتجر"
                     },
@@ -128,6 +133,7 @@
                         "id": "txtCategory",
                         "itemId": "txtCategory",
                         "label": null,
+                        "labelWidth": "40%",
                         "name": "txtCategory",
                         "placeHolder": "نوع الشكوي",
                         "readOnly": true
@@ -191,8 +197,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "txtComplaint",
+                        "itemId": "txtComplaint",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "txtComplaint",
                         "placeHolder": "نص الشكوي",
                         "required": true
@@ -209,8 +217,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "fullName",
+                        "itemId": "fullName",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "fullName",
                         "placeHolder": "الاسم بالكامل",
                         "required": true
@@ -227,8 +237,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "email",
+                        "itemId": "email",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "email",
                         "placeHolder": "البريد الالكتدوني"
                     },
@@ -244,8 +256,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "mobile",
+                        "itemId": "mobile",
                         "label": "",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "mobile",
                         "placeHolder": "رقم الهاتف",
                         "required": true
@@ -265,6 +279,7 @@
                         "id": "txtBarCode",
                         "itemId": "mytextfield",
                         "label": "",
+                        "labelWidth": "40%",
                         "name": "txtBarCode",
                         "placeHolder": "barcode",
                         "readOnly": true
@@ -309,7 +324,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "ارفق صورة",
-                        "id": "lblAttachImage"
+                        "id": "lblAttachImage",
+                        "itemId": "lblAttachImage"
                     },
                     "name": "MyLabel",
                     "designerId": "e0f8a5c5-be1f-48bc-9af1-14a9fcf27fa9"
@@ -516,6 +532,7 @@
                             "btn-send"
                         ],
                         "id": "btnSubmitComplaint",
+                        "itemId": "btnSubmitComplaint",
                         "text": "ارسال"
                     },
                     "name": "MyButton20",
@@ -661,6 +678,9 @@
                     "this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));",
                     "",
                     "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
                     ""
                 ]
             },

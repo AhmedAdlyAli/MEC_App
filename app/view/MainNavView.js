@@ -365,15 +365,11 @@ Ext.define('MEC_App.view.MainNavView', {
             handler: function(){
 
 
-
                 Ext.Global.RedirectLoggedUser('NotificationView');
 
 
             }
         });
-
-
-
 
 
 
@@ -389,7 +385,6 @@ Ext.define('MEC_App.view.MainNavView', {
         //this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
         //this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
         //this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
-
 
 
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
@@ -410,7 +405,6 @@ Ext.define('MEC_App.view.MainNavView', {
             }
 
         });
-
 
     }
 

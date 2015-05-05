@@ -31,17 +31,20 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
     config: {
         cls: 'complaint-view',
+        itemId: 'ComplaintsView',
         layout: 'vbox',
         enableSubmissionForm: false,
         items: [
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'ابلغ عن شكوي'
+                html: 'ابلغ عن شكوي',
+                itemId: 'viewLbl'
             },
             {
                 xtype: 'fieldset',
                 flex: 1,
+                itemId: 'frmComplaint',
                 scrollable: {
                     direction: 'vertical',
                     directionLock: true
@@ -52,6 +55,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'shopName',
                         itemId: 'shopName',
                         label: '',
+                        labelWidth: '40%',
                         name: 'shopName',
                         required: true,
                         placeHolder: 'اسم المحل'
@@ -59,7 +63,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'textfield',
                         id: 'shopLocation',
+                        itemId: 'shopLocation',
                         label: '',
+                        labelWidth: '40%',
                         name: 'shopLocation',
                         placeHolder: 'موقع المتجر'
                     },
@@ -68,6 +74,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         hidden: false,
                         id: 'txtCategory',
                         itemId: 'txtCategory',
+                        labelWidth: '40%',
                         name: 'txtCategory',
                         placeHolder: 'نوع الشكوي',
                         readOnly: true,
@@ -111,7 +118,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'textareafield',
                         id: 'txtComplaint',
+                        itemId: 'txtComplaint',
                         label: '',
+                        labelWidth: '40%',
                         name: 'txtComplaint',
                         required: true,
                         placeHolder: 'نص الشكوي'
@@ -119,7 +128,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'textfield',
                         id: 'fullName',
+                        itemId: 'fullName',
                         label: '',
+                        labelWidth: '40%',
                         name: 'fullName',
                         required: true,
                         placeHolder: 'الاسم بالكامل'
@@ -127,14 +138,18 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'textfield',
                         id: 'email',
+                        itemId: 'email',
                         label: '',
+                        labelWidth: '40%',
                         name: 'email',
                         placeHolder: 'البريد الالكتدوني'
                     },
                     {
                         xtype: 'textfield',
                         id: 'mobile',
+                        itemId: 'mobile',
                         label: '',
+                        labelWidth: '40%',
                         name: 'mobile',
                         required: true,
                         placeHolder: 'رقم الهاتف'
@@ -145,6 +160,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         id: 'txtBarCode',
                         itemId: 'mytextfield',
                         label: '',
+                        labelWidth: '40%',
                         name: 'txtBarCode',
                         placeHolder: 'barcode',
                         readOnly: true,
@@ -169,7 +185,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'label',
                         html: 'ارفق صورة',
-                        id: 'lblAttachImage'
+                        id: 'lblAttachImage',
+                        itemId: 'lblAttachImage'
                     },
                     {
                         xtype: 'panel',
@@ -293,6 +310,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         },
                         cls: 'btn-send',
                         id: 'btnSubmitComplaint',
+                        itemId: 'btnSubmitComplaint',
                         text: 'ارسال'
                     }
                 ]
@@ -386,6 +404,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
         this.down('#btnSubmitComplaint').setText(Ext.Global.GetComplaintsTitle('Submit'));
 
 
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
 
     }
 
