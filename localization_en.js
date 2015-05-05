@@ -62,7 +62,8 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Settings"},
 				{itemId:"LanguageButtonsLabel", xtype: "label",value:"Current Language"},
-				{itemId:"ChangeButtonPanel", xtype: "cls",value:"ltr-cls"}
+				{itemId:"ChangeButtonPanel", xtype: "cls",value:"ltr-cls"},
+				{itemId:"saveButton", xtype: "button",value:"Save"}
 
 			]
 

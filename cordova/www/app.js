@@ -35935,6 +35935,303 @@ Ext.define('Ext.MessageBox', {
 });
 
 /**
+ * SegmentedButton is a container for a group of {@link Ext.Button}s. Generally a SegmentedButton would be
+ * a child of a {@link Ext.Toolbar} and would be used to switch between different views.
+ *
+ * ## Example usage:
+ *
+ *     @example
+ *     var segmentedButton = Ext.create('Ext.SegmentedButton', {
+ *         allowMultiple: true,
+ *         items: [
+ *             {
+ *                 text: 'Option 1'
+ *             },
+ *             {
+ *                 text: 'Option 2',
+ *                 pressed: true
+ *             },
+ *             {
+ *                 text: 'Option 3'
+ *             }
+ *         ],
+ *         listeners: {
+ *             toggle: function(container, button, pressed){
+ *                 alert("User toggled the '" + button.getText() + "' button: " + (pressed ? 'on' : 'off'));
+ *             }
+ *         }
+ *     });
+ *     Ext.Viewport.add({ xtype: 'container', padding: 10, items: [segmentedButton] });
+ */
+Ext.define('Ext.SegmentedButton', {
+    extend: Ext.Container,
+    xtype: 'segmentedbutton',
+    config: {
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        baseCls: Ext.baseCSSPrefix + 'segmentedbutton',
+        /**
+         * @cfg {String} pressedCls
+         * CSS class when a button is in pressed state.
+         * @accessor
+         */
+        pressedCls: Ext.baseCSSPrefix + 'button-pressed',
+        /**
+         * @cfg {Boolean} allowMultiple
+         * Allow multiple pressed buttons.
+         * @accessor
+         */
+        allowMultiple: false,
+        /**
+         * @cfg {Boolean} allowDepress
+         * Allow toggling the pressed state of each button.
+         * Defaults to `true` when {@link #allowMultiple} is `true`.
+         * @accessor
+         */
+        allowDepress: false,
+        /**
+         * @cfg {Boolean} allowToggle Allow child buttons to be pressed when tapped on. Set to `false` to allow tapping but not toggling of the buttons.
+         * @accessor
+         */
+        allowToggle: true,
+        /**
+         * @cfg {Array} pressedButtons
+         * The pressed buttons for this segmented button.
+         *
+         * You can remove all pressed buttons by calling {@link #setPressedButtons} with an empty array.
+         * @accessor
+         */
+        pressedButtons: [],
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        layout: {
+            type: 'hbox',
+            align: 'stretch'
+        },
+        /**
+         * @cfg
+         * @inheritdoc
+         */
+        defaultType: 'button'
+    },
+    /**
+     * @event toggle
+     * Fires when any child button's pressed state has changed.
+     * @param {Ext.SegmentedButton} this
+     * @param {Ext.Button} button The toggled button.
+     * @param {Boolean} isPressed Boolean to indicate if the button was pressed or not.
+     */
+    initialize: function() {
+        var me = this;
+        me.callParent();
+        me.on({
+            delegate: '> button',
+            scope: me,
+            tap: 'onButtonRelease'
+        });
+        me.onAfter({
+            delegate: '> button',
+            scope: me,
+            hide: 'onButtonHiddenChange',
+            show: 'onButtonHiddenChange'
+        });
+    },
+    updateAllowMultiple: function(allowMultiple) {
+        if (!this.initialized && !this.getInitialConfig().hasOwnProperty('allowDepress') && allowMultiple) {
+            this.setAllowDepress(true);
+        }
+    },
+    /**
+     * We override `initItems` so we can check for the pressed config.
+     */
+    applyItems: function() {
+        var me = this,
+            pressedButtons = [],
+            ln, i, item, items;
+        //call the parent first so the items get converted into a MixedCollection
+        me.callParent(arguments);
+        items = this.getItems();
+        ln = items.length;
+        for (i = 0; i < ln; i++) {
+            item = items.items[i];
+            if (item.getInitialConfig('pressed')) {
+                pressedButtons.push(items.items[i]);
+            }
+        }
+        me.updateFirstAndLastCls(items);
+        me.setPressedButtons(pressedButtons);
+    },
+    /**
+     * Button sets a timeout of 10ms to remove the {@link #pressedCls} on the release event.
+     * We don't want this to happen, so lets return `false` and cancel the event.
+     * @private
+     */
+    onButtonRelease: function(button) {
+        if (!this.getAllowToggle()) {
+            return;
+        }
+        var me = this,
+            pressedButtons = me.getPressedButtons() || [],
+            buttons = [],
+            alreadyPressed;
+        if (!me.getDisabled() && !button.getDisabled()) {
+            //if we allow for multiple pressed buttons, use the existing pressed buttons
+            if (me.getAllowMultiple()) {
+                buttons = pressedButtons.concat(buttons);
+            }
+            alreadyPressed = (buttons.indexOf(button) !== -1) || (pressedButtons.indexOf(button) !== -1);
+            //if we allow for depressing buttons, and the new pressed button is currently pressed, remove it
+            if (alreadyPressed && me.getAllowDepress()) {
+                Ext.Array.remove(buttons, button);
+            } else if (!alreadyPressed || !me.getAllowDepress()) {
+                buttons.push(button);
+            }
+            me.setPressedButtons(buttons);
+        }
+    },
+    onItemAdd: function() {
+        this.callParent(arguments);
+        this.updateFirstAndLastCls(this.getItems());
+    },
+    onItemRemove: function() {
+        this.callParent(arguments);
+        this.updateFirstAndLastCls(this.getItems());
+    },
+    // @private
+    onButtonHiddenChange: function() {
+        this.updateFirstAndLastCls(this.getItems());
+    },
+    // @private
+    updateFirstAndLastCls: function(items) {
+        var ln = items.length,
+            basePrefix = Ext.baseCSSPrefix,
+            firstCls = basePrefix + 'first',
+            lastCls = basePrefix + 'last',
+            item, i;
+        //remove all existing classes
+        for (i = 0; i < ln; i++) {
+            item = items.items[i];
+            item.removeCls(firstCls);
+            item.removeCls(lastCls);
+        }
+        //add a first cls to the first non-hidden button
+        for (i = 0; i < ln; i++) {
+            item = items.items[i];
+            if (!item.isHidden()) {
+                item.addCls(firstCls);
+                break;
+            }
+        }
+        //add a last cls to the last non-hidden button
+        for (i = ln - 1; i >= 0; i--) {
+            item = items.items[i];
+            if (!item.isHidden()) {
+                item.addCls(lastCls);
+                break;
+            }
+        }
+    },
+    /**
+     * @private
+     */
+    applyPressedButtons: function(newButtons) {
+        var me = this,
+            array = [],
+            button, ln, i;
+        if (me.getAllowToggle()) {
+            if (Ext.isArray(newButtons)) {
+                ln = newButtons.length;
+                for (i = 0; i < ln; i++) {
+                    button = me.getComponent(newButtons[i]);
+                    if (button && array.indexOf(button) === -1) {
+                        array.push(button);
+                    }
+                }
+            } else {
+                button = me.getComponent(newButtons);
+                if (button && array.indexOf(button) === -1) {
+                    array.push(button);
+                }
+            }
+        }
+        return array;
+    },
+    /**
+     * Updates the pressed buttons.
+     * @private
+     */
+    updatePressedButtons: function(newButtons, oldButtons) {
+        var me = this,
+            items = me.getItems(),
+            pressedCls = me.getPressedCls(),
+            events = [],
+            item, button, ln, i, e;
+        //loop through existing items and remove the pressed cls from them
+        ln = items.length;
+        if (oldButtons && oldButtons.length) {
+            for (i = 0; i < ln; i++) {
+                item = items.items[i];
+                if (oldButtons.indexOf(item) != -1 && newButtons.indexOf(item) == -1) {
+                    item.removeCls([
+                        pressedCls,
+                        item.getPressedCls()
+                    ]);
+                    events.push({
+                        item: item,
+                        toggle: false
+                    });
+                }
+            }
+        }
+        //loop through the new pressed buttons and add the pressed cls to them
+        ln = newButtons.length;
+        for (i = 0; i < ln; i++) {
+            button = newButtons[i];
+            if (!oldButtons || oldButtons.indexOf(button) == -1) {
+                button.addCls(pressedCls);
+                events.push({
+                    item: button,
+                    toggle: true
+                });
+            }
+        }
+        //loop through each of the events and fire them after a delay
+        ln = events.length;
+        if (ln && oldButtons !== undefined) {
+            Ext.defer(function() {
+                for (i = 0; i < ln; i++) {
+                    e = events[i];
+                    me.fireEvent('toggle', me, e.item, e.toggle);
+                }
+            }, 50);
+        }
+    },
+    /**
+     * Returns `true` if a specified {@link Ext.Button} is pressed.
+     * @param {Ext.Button} button The button to check if pressed.
+     * @return {Boolean} pressed
+     */
+    isPressed: function(button) {
+        var pressedButtons = this.getPressedButtons();
+        return pressedButtons.indexOf(button) != -1;
+    },
+    /**
+     * @private
+     */
+    doSetDisabled: function(disabled) {
+        var me = this;
+        me.items.each(function(item) {
+            item.setDisabled(disabled);
+        }, me);
+        me.callParent(arguments);
+    }
+}, function() {});
+
+/**
  * {@link Ext.TitleBar}'s are most commonly used as a docked item within an {@link Ext.Container}.
  *
  * The main difference between a {@link Ext.TitleBar} and an {@link Ext.Toolbar} is that
@@ -65185,7 +65482,7 @@ Ext.define('MEC_App.controller.Global', {
     GetConfig: function(key) {
         var config = {
                 webServiceUrl: 'http://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
-                supplyWebServiceUrl: 'http://ctc.vivensas.com/MService.svc',
+                supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice.svc',
                 CMSWSUrl: 'http://196.205.5.28:333/MEC/api'
             };
         return config[key];
@@ -66380,62 +66677,29 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     onSupplyServiceView2Initialize: function(component, eOpts) {
         // initialize google maps
         var view = component;
-        var pnlMap = view.down('#pnlMap');
+        var mapPanel = view.down('mapDealers');
+        var gMap = mapPanel.getMap();
         Ext.Function.defer(function() {
-            var map = plugin.google.maps.Map.getMap(pnlMap.element.dom);
-            map.setClickable(true);
-            map.getMyLocation(function(location) {
-                //map.setMyLocationEnabled(true);
-                // alert(location.latLng.lat);
-                //map.setCenter(location.latLng);
-                map.animateCamera({
-                    'target': location.latLng,
-                    'tilt': 60,
-                    'zoom': 9,
-                    'bearing': 140
-                });
-            }, function() {
-                alert("error: " + msg);
-            });
-        }, /*
-
             // get dealers
-
-            var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
-
-
-            var requestData =  {"qid":"24263400239", "languageID":"2",
-                                "mobileDeviceID":"1231",
-                                "latitude":location.lat,
-                                "longtitude":location.lng};
-
-
-
+            var url = Ext.Global.GetConfig('supplyWebServiceUrl') + '/GetNearbyDealers';
+            var requestData = {
+                    "qid": "24263400239",
+                    "languageID": "2",
+                    "mobileDeviceID": "1231",
+                    "latitude": location.lat,
+                    "longtitude": location.lng
+                };
             Ext.AnimationHelper.ShowLoading();
-
             Ext.Ajax.request({
-
-                url : url,
-                method : 'POST',
-                jsonData :requestData,
-                success : function (response) {
-
+                url: url,
+                method: 'POST',
+                jsonData: requestData,
+                success: function(response) {
                     var json1 = Ext.util.JSON.decode(response.responseText);
                     var json2 = Ext.util.JSON.decode(json1.d);
-
-
                     Ext.AnimationHelper.HideLoading();
-
-
-
-
                     // add markers
-
                     map.addEventListener(plugin.google.maps.event.MAP_READY, function() {
-
-
-
-
                         map.addMarker({
                             'position': new plugin.google.maps.LatLng(25.3033825, 51.5092886),
                             'title': "الميرة",
@@ -66446,12 +66710,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
                                 alert("Marker is clicked");
                             });
-
                         });
-
-
-
-
                         map.addMarker({
                             'position': new plugin.google.maps.LatLng(25.3033825, 51.529458),
                             'title': "الميرة",
@@ -66462,16 +66721,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
                                 alert("Marker is clicked");
                             });
-
                         });
-
-
-
-
-
-
                         map.addMarker({
-                            'position': new plugin.google.maps.LatLng(25.3040033,51.5294588),
+                            'position': new plugin.google.maps.LatLng(25.3040033, 51.5294588),
                             'title': "الميرة",
                             'snippet': "فرع المنتزه",
                             animation: plugin.google.maps.Animation.DROP
@@ -66480,32 +66732,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             marker.addEventListener(plugin.google.maps.event.MARKER_CLICK, function() {
                                 alert("Marker is clicked");
                             });
-
                         });
-
-
-
-
-
-
-
                     });
-
-
-
-
-
-
                 },
                 failure: function(request, resp) {
                     alert("in failure");
                 }
             });
-
-
-
-        */
-        100, this);
+        }, 100, this);
     }
 });
 
@@ -67956,6 +68190,43 @@ Ext.define('MEC_App.controller.LanguageViewController', {
 });
 
 /*
+ * File: app/controller/SettingsViewController.js
+ *
+ * This file was generated by Sencha Architect version 3.2.0.
+ * http://www.sencha.com/products/architect/
+ *
+ * This file requires use of the Sencha Touch 2.4.x library, under independent license.
+ * License of Sencha Architect does not include license for Sencha Touch 2.4.x. For more
+ * details see http://www.sencha.com/license or contact license@sencha.com.
+ *
+ * This file will be auto-generated each and everytime you save your project.
+ *
+ * Do NOT hand edit this file.
+ */
+Ext.define('MEC_App.controller.SettingsViewController', {
+    extend: Ext.app.Controller,
+    alias: 'controller.SettingsViewController',
+    config: {
+        control: {
+            "segmentedbutton#languageButtons": {
+                initialize: 'onLanguageButtonsInitialize'
+            }
+        }
+    },
+    onLanguageButtonsInitialize: function(component, eOpts) {
+        if (Ext.Global.LanguageFlag == 'en') {
+            component.setPressedButtons([
+                0
+            ]);
+        } else {
+            component.setPressedButtons([
+                1
+            ]);
+        }
+    }
+});
+
+/*
  * File: app/view/PublicServiceView.js
  *
  * This file was generated by Sencha Architect version 3.2.0.
@@ -67974,6 +68245,7 @@ Ext.define('MEC_App.view.PublicServiceView', {
     alias: 'widget.PublicServiceView',
     config: {
         fullscreen: true,
+        itemId: 'PublicServiceView',
         layout: 'vbox',
         items: [
             {
@@ -68037,6 +68309,8 @@ Ext.define('MEC_App.view.PublicServiceView', {
     },
     initialize: function() {
         this.callParent();
+        Ext.Localization.LoadLocalization();
+        Ext.Localization.LocalizeView(this);
         var links = [
                 {
                     Name: 'خدمات المستثمر',
@@ -68621,7 +68895,109 @@ Ext.define('MEC_App.view.ReportsView', {
 Ext.define('MEC_App.view.SettingsView', {
     extend: Ext.Panel,
     alias: 'widget.SettingsView',
-    config: {}
+    config: {
+        itemId: 'SettingsView',
+        layout: 'fit',
+        items: [
+            {
+                xtype: 'panel',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        flex: 1,
+                        cls: 'services-header',
+                        height: '30%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'services-header-overlay',
+                                height: '100%',
+                                layout: 'vbox',
+                                items: [
+                                    {
+                                        xtype: 'panel',
+                                        flex: 2,
+                                        cls: 'settings-header-icon'
+                                    },
+                                    {
+                                        xtype: 'label',
+                                        flex: 1,
+                                        cls: 'service-header-title',
+                                        html: 'الاإعدادات',
+                                        itemId: 'viewLbl'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        flex: 2.7,
+                        cls: 'inner-panel',
+                        height: 'auto',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'language-button-wrapper',
+                                itemId: 'ChangeButtonPanel',
+                                layout: 'hbox',
+                                items: [
+                                    {
+                                        xtype: 'label',
+                                        cls: 'language-button-title',
+                                        html: 'اللغة المستخدمة',
+                                        itemId: 'LanguageButtonsLabel'
+                                    },
+                                    {
+                                        xtype: 'spacer'
+                                    },
+                                    {
+                                        xtype: 'segmentedbutton',
+                                        cls: [
+                                            'ltr-cls',
+                                            'language-buttons'
+                                        ],
+                                        itemId: 'languageButtons',
+                                        items: [
+                                            {
+                                                xtype: 'button',
+                                                handler: function(button, e) {
+                                                    localStorage.setItem('LanguageFlag', 'en');
+                                                    Ext.Global.LanguageFlag = 'en';
+                                                    var home = Ext.create('widget.MainNavView');
+                                                    Ext.Viewport.setActiveItem(home);
+                                                },
+                                                itemId: 'EnglishButton',
+                                                text: 'English'
+                                            },
+                                            {
+                                                xtype: 'button',
+                                                handler: function(button, e) {
+                                                    localStorage.setItem('LanguageFlag', 'ar');
+                                                    Ext.Global.LanguageFlag = 'ar';
+                                                    var home = Ext.create('widget.MainNavView');
+                                                    Ext.Viewport.setActiveItem(home);
+                                                },
+                                                itemId: 'ArabicButton',
+                                                text: 'العربية'
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    initialize: function() {
+        this.callParent();
+        Ext.Localization.LoadLocalization();
+        Ext.Localization.LocalizeView(this);
+    }
 });
 
 /*
@@ -69329,9 +69705,10 @@ Ext.define('MEC_App.controller.Localization', {
     config: {},
     LoadLocalization: function() {
         //read localization flag set from Language screen
-        if (Ext.Global.LanguageFlag == 'ar') {}
-        // do nothing, forms already arabic
-        else if (Ext.Global.LanguageFlag == 'en') {
+        if (Ext.Global.LanguageFlag == 'ar') {
+            // Reset the localization if english  as the views are already arabic
+            Ext.Global.Localization = null;
+        } else if (Ext.Global.LanguageFlag == 'en') {
             // laod english json file
             Ext.Global.Localization = localeEn;
         }
@@ -70926,10 +71303,16 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
             {
                 xtype: 'panel',
                 cls: 'mapview',
-                height: 400,
                 id: 'pnlMapDealers',
                 itemId: 'pnlMap',
-                zIndex: 1000
+                zIndex: 1000,
+                items: [
+                    {
+                        xtype: 'map',
+                        height: 420,
+                        itemId: 'mapDealers'
+                    }
+                ]
             },
             {
                 xtype: 'button',
@@ -74869,6 +75252,38 @@ var localeEn = {
                 ]
             },
             {
+                itemId: "PublicServiceView",
+                description: "Public Services...",
+                items: [
+                    {
+                        itemId: "viewLbl",
+                        xtype: "label",
+                        value: "Public Services"
+                    }
+                ]
+            },
+            {
+                itemId: "SettingsView",
+                description: "Settings...",
+                items: [
+                    {
+                        itemId: "viewLbl",
+                        xtype: "label",
+                        value: "Settings"
+                    },
+                    {
+                        itemId: "LanguageButtonsLabel",
+                        xtype: "label",
+                        value: "Current Language"
+                    },
+                    {
+                        itemId: "ChangeButtonPanel",
+                        xtype: "cls",
+                        value: "ltr-cls"
+                    }
+                ]
+            },
+            {
                 itemId: "SideMenu",
                 description: "Side Menu...",
                 items: [
@@ -75043,7 +75458,8 @@ Ext.application({
         'GoodPriceListController',
         'ShopPriceListController',
         'WhereToShopController',
-        'LanguageViewController'
+        'LanguageViewController',
+        'SettingsViewController'
     ],
     name: 'MEC_App',
     launch: function() {

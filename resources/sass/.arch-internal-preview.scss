@@ -54,6 +54,17 @@ body {
         border: none;
         background: none;
         @include border-radius(0);
+
+        &.action-button {
+            background: #691e49;
+            margin: 10px;
+            height:2.5em;
+
+            .x-button-label {
+                text-align: center;
+                color: #fff;
+            }
+        }
     }
 
     .x-toolbar {
@@ -1565,5 +1576,16 @@ height:3em;
                 color: #fff;
             }
         }
+    }
+}
+
+.action-button {
+    background: #691e49;
+    margin: 10px;
+    height:2.5em;
+
+    .x-button-label {
+        text-align: center;
+        color: #fff;
     }
 }

@@ -201,39 +201,7 @@
                                                 "text": "English"
                                             },
                                             "name": "MyButton18",
-                                            "designerId": "724a926b-5281-4218-b7fe-83492d444dc6",
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "",
-                                                            "",
-                                                            "localStorage.setItem('LanguageFlag', 'en');",
-                                                            "",
-                                                            "",
-                                                            "Ext.Global.LanguageFlag = 'en';",
-                                                            "",
-                                                            "var home = Ext.create('widget.MainNavView');",
-                                                            "Ext.Viewport.setActiveItem(home);",
-                                                            "",
-                                                            ""
-                                                        ]
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "b3ac7a61-fc36-42aa-933a-3a2f8c4000f5"
-                                                }
-                                            ]
+                                            "designerId": "724a926b-5281-4218-b7fe-83492d444dc6"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -248,36 +216,62 @@
                                                 "text": "العربية"
                                             },
                                             "name": "MyButton19",
-                                            "designerId": "2b5acc7c-1110-4c7d-9816-237ce8c3839e",
-                                            "cn": [
-                                                {
-                                                    "type": "fixedfunction",
-                                                    "reference": {
-                                                        "name": "items",
-                                                        "type": "array"
-                                                    },
-                                                    "codeClass": null,
-                                                    "userConfig": {
-                                                        "designer|params": [
-                                                            "button",
-                                                            "e"
-                                                        ],
-                                                        "fn": "handler",
-                                                        "implHandler": [
-                                                            "localStorage.setItem('LanguageFlag', 'ar');",
-                                                            "Ext.Global.LanguageFlag = 'ar';",
-                                                            "",
-                                                            "var home = Ext.create('widget.MainNavView');",
-                                                            "Ext.Viewport.setActiveItem(home);",
-                                                            ""
-                                                        ]
-                                                    },
-                                                    "name": "handler",
-                                                    "designerId": "9cd499d8-fa88-4bcd-af9a-ea6300060f38"
-                                                }
-                                            ]
+                                            "designerId": "2b5acc7c-1110-4c7d-9816-237ce8c3839e"
                                         }
                                     ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "action-button"
+                                ],
+                                "docked": "bottom",
+                                "itemId": "saveButton",
+                                "text": "حفظ"
+                            },
+                            "name": "MyButton21",
+                            "designerId": "7596fca3-e41c-4393-be54-05660b4e3c72",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "var selectedLanguage = button.up('panel').down('segmentedbutton').getPressedButtons()[0].getItemId();",
+                                            "",
+                                            "if(selectedLanguage == 'ArabicButton') {",
+                                            "    localStorage.setItem('LanguageFlag', 'ar');",
+                                            "    Ext.Global.LanguageFlag = 'ar';",
+                                            "}",
+                                            "",
+                                            "else if(selectedLanguage == 'EnglishButton') {",
+                                            "    localStorage.setItem('LanguageFlag', 'en');",
+                                            "    Ext.Global.LanguageFlag = 'en';",
+                                            "}",
+                                            "",
+                                            "var home = Ext.create('widget.MainNavView');",
+                                            "Ext.Viewport.setActiveItem(home);"
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "dfc81c0e-80aa-4ca2-90f1-c8131be91c05"
                                 }
                             ]
                         }

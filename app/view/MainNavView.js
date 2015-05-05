@@ -19,10 +19,12 @@ Ext.define('MEC_App.view.MainNavView', {
 
     requires: [
         'Ext.Panel',
+        'Ext.carousel.Carousel',
         'Ext.Label',
         'Ext.Button',
         'Ext.Menu',
-        'MEC_App.controller.Localization'
+        'MEC_App.controller.Localization',
+        'Ext.data.proxy.JsonP'
     ],
 
     config: {
@@ -39,12 +41,32 @@ Ext.define('MEC_App.view.MainNavView', {
                 layout: 'vbox',
                 items: [
                     {
-                        xtype: 'panel',
+                        xtype: 'carousel',
                         flex: 1,
-                        cls: 'home-header',
-                        html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
-                        id: 'pnlNews',
-                        itemId: 'pnlNews'
+                        itemId: 'NewsCarousel',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                cls: 'home-header',
+                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
+                                id: 'pnlNews',
+                                itemId: 'pnlNews'
+                            },
+                            {
+                                xtype: 'panel',
+                                cls: 'home-header',
+                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
+                                id: 'pnlNews1',
+                                itemId: 'pnlNews1'
+                            },
+                            {
+                                xtype: 'panel',
+                                cls: 'home-header',
+                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
+                                id: 'pnlNews2',
+                                itemId: 'pnlNews2'
+                            }
+                        ]
                     },
                     {
                         xtype: 'panel',
@@ -355,14 +377,6 @@ Ext.define('MEC_App.view.MainNavView', {
 
 
 
-
-
-
-
-
-
-
-
         //Localization
 
 
@@ -378,16 +392,21 @@ Ext.define('MEC_App.view.MainNavView', {
 
 
 
-
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
 
-            if (event.direction == 'left' && theMenu.isHidden()) {
-                Ext.Viewport.showMenu('right');
-            } else if (event.direction == 'right') {
-                if (theMenu.isHidden()) {
-                    Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
-                }
+            if (node.closest('.x-carousel-item')) {
+                event.stopPropagation();
+            }
 
+            else {
+                if (event.direction == 'left' && theMenu.isHidden()) {
+                    Ext.Viewport.showMenu('right');
+                } else if (event.direction == 'right') {
+                    if (theMenu.isHidden()) {
+                        Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
+                    }
+
+                }
             }
 
         });

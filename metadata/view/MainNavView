@@ -16,7 +16,8 @@
         "itemId": "MainNavView",
         "requires": [
             "Ext.Menu",
-            "MEC_App.controller.Localization"
+            "MEC_App.controller.Localization",
+            "Ext.data.proxy.JsonP"
         ],
         "scrollable": null
     },
@@ -40,23 +41,75 @@
             "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
             "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.carousel.Carousel",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": [
-                            "home-header"
-                        ],
-                        "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
-                        "id": "pnlNews",
-                        "itemId": "pnlNews",
-                        "layout|flex": 1
+                        "itemId": "NewsCarousel",
+                        "layout|flex": 1,
+                        "ui": null
                     },
-                    "name": "MyPanel1",
-                    "designerId": "a8245f08-2e06-4951-a7b6-299ee637e8fb"
+                    "name": "MyCarousel",
+                    "designerId": "11290aad-96fb-4058-a8f6-86dec41cc3f9",
+                    "cn": [
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "home-header"
+                                ],
+                                "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
+                                "id": "pnlNews",
+                                "itemId": "pnlNews"
+                            },
+                            "name": "MyPanel1",
+                            "designerId": "a8245f08-2e06-4951-a7b6-299ee637e8fb"
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "home-header"
+                                ],
+                                "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
+                                "id": "pnlNews1",
+                                "itemId": "pnlNews1"
+                            },
+                            "name": "MyPanel5",
+                            "designerId": "07bc5351-96ca-4d67-a532-5fb1ece27abe"
+                        },
+                        {
+                            "type": "Ext.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "home-header"
+                                ],
+                                "html": "<div class=\"header-text-bg\"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>",
+                                "id": "pnlNews2",
+                                "itemId": "pnlNews2"
+                            },
+                            "name": "MyPanel9",
+                            "designerId": "58de5c7f-6f8b-4fc4-80d7-fe571570ca36"
+                        }
+                    ]
                 },
                 {
                     "type": "Ext.Panel",
@@ -671,14 +724,6 @@
                     "",
                     "",
                     "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
                     "//Localization",
                     "",
                     "",
@@ -694,16 +739,21 @@
                     "",
                     "",
                     "",
-                    "",
                     "Ext.Viewport.bodyElement.on('swipe', function (event, node, options){",
+                    "    ",
+                    "    if (node.closest('.x-carousel-item')) {",
+                    "        event.stopPropagation();",
+                    "    }",
+                    "    ",
+                    "    else {",
+                    "        if (event.direction == 'left' && theMenu.isHidden()) {",
+                    "            Ext.Viewport.showMenu('right');",
+                    "        } else if (event.direction == 'right') {",
+                    "            if (theMenu.isHidden()) {",
+                    "                Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');",
+                    "            }",
                     "",
-                    "    if (event.direction == 'left' && theMenu.isHidden()) {",
-                    "        Ext.Viewport.showMenu('right');",
-                    "    } else if (event.direction == 'right') {",
-                    "        if (theMenu.isHidden()) {",
-                    "            Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');",
                     "        }",
-                    "",
                     "    }",
                     "",
                     "});",

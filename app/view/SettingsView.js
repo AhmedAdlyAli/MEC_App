@@ -93,38 +93,40 @@ Ext.define('MEC_App.view.SettingsView', {
                                         items: [
                                             {
                                                 xtype: 'button',
-                                                handler: function(button, e) {
-
-
-                                                    localStorage.setItem('LanguageFlag', 'en');
-
-
-                                                    Ext.Global.LanguageFlag = 'en';
-
-                                                    var home = Ext.create('widget.MainNavView');
-                                                    Ext.Viewport.setActiveItem(home);
-
-
-                                                },
                                                 itemId: 'EnglishButton',
                                                 text: 'English'
                                             },
                                             {
                                                 xtype: 'button',
-                                                handler: function(button, e) {
-                                                    localStorage.setItem('LanguageFlag', 'ar');
-                                                    Ext.Global.LanguageFlag = 'ar';
-
-                                                    var home = Ext.create('widget.MainNavView');
-                                                    Ext.Viewport.setActiveItem(home);
-
-                                                },
                                                 itemId: 'ArabicButton',
                                                 text: 'العربية'
                                             }
                                         ]
                                     }
                                 ]
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, e) {
+                                    var selectedLanguage = button.up('panel').down('segmentedbutton').getPressedButtons()[0].getItemId();
+
+                                    if(selectedLanguage == 'ArabicButton') {
+                                        localStorage.setItem('LanguageFlag', 'ar');
+                                        Ext.Global.LanguageFlag = 'ar';
+                                    }
+
+                                    else if(selectedLanguage == 'EnglishButton') {
+                                        localStorage.setItem('LanguageFlag', 'en');
+                                        Ext.Global.LanguageFlag = 'en';
+                                    }
+
+                                    var home = Ext.create('widget.MainNavView');
+                                    Ext.Viewport.setActiveItem(home);
+                                },
+                                cls: 'action-button',
+                                docked: 'bottom',
+                                itemId: 'saveButton',
+                                text: 'حفظ'
                             }
                         ]
                     }
