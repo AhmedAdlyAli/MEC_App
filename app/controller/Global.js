@@ -104,7 +104,7 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     RedirectToView: function(viewData) {
-        console.log(viewData);
+
 
 
         if (viewData.Url.indexOf('http')>-1){

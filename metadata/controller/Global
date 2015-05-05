@@ -249,7 +249,7 @@
                 ],
                 "fn": "RedirectToView",
                 "implHandler": [
-                    "console.log(viewData);",
+                    "",
                     "",
                     "",
                     "if (viewData.Url.indexOf('http')>-1){",

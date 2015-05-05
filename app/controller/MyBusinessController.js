@@ -48,6 +48,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
     onMyBusinessViewInitialize: function(component, eOpts) {
         Ext.AnimationHelper.ShowLoading();
 
+        var view = component;
 
         var requestData = {
             "serviceId": "2",
@@ -78,7 +79,29 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
                 var view = me.getMyBusinessView();
 
+
                 var lstComapnies = view.down('#lstMyCompanies');
+
+
+        /*
+
+                var lstComapnies = view.add({
+                        xtype: 'list',
+                        //flex: 1,
+                        height: '100px',
+                        itemId: 'lstMyCompanies',
+                        itemCls: 'item-company',
+                        itemTpl: [
+                            '    <div class=\'tpl-signatory-1\'>{establishmentArabicName}</div>',
+                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>سجل تجاري: {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
+                            ''
+                        ],
+                        onItemDisclosure: false
+                    });
+
+        */
+
+
                 lstComapnies.setStore(storeCompanies);
 
                 Ext.AnimationHelper.HideLoading();
