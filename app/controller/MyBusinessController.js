@@ -203,7 +203,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                         var lstBranches = view.down('#lstBranches');
                         lstBranches.setStore(storeBranches);
 
-                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
+                        lstBranches.setHeight(company.listOfBranches.branches.length*4 + 'em');
                         lstBranches.setScrollable(false);
 
 
