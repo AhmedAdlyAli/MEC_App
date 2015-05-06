@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.ContactUsView', {
 
     config: {
         fullscreen: true,
+        itemId: 'ConnectView',
         layout: 'fit',
         items: [
             {
@@ -102,12 +103,11 @@ Ext.define('MEC_App.view.ContactUsView', {
     initialize: function() {
         this.callParent();
 
-        var links = [{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
-                     {Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-                     {Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
-                     {Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
-                     {Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
-                    ];
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

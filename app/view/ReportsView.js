@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.ReportsView', {
 
     config: {
         fullscreen: true,
+        itemId: 'ReportsView',
         layout: 'fit',
         items: [
             {
@@ -103,13 +104,11 @@ Ext.define('MEC_App.view.ReportsView', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
-                     {Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
-                     {Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-                     {Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}
+        Ext.Localization.LocalizeView(this);
 
-                    ];
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

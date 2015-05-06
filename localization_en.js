@@ -42,6 +42,27 @@ var localeEn =
 				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
 				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"}
 			]
+		},
+
+		{
+			itemId:"ReportsView",
+			items: [
+				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
+             	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
+             	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
+             	{Name:'Trademark Report',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}
+			]
+		},
+
+		{
+			itemId:"ConnectView",
+			items: [
+				{Name:'About The Ministry',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
+             	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
+             	{Name:'Ministry Staff',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
+             	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
+			]
 		}
 	],
 
@@ -70,9 +91,9 @@ var localeEn =
 				{itemId:"homeServices", xtype: "label",value:"Public Services"},
 				{itemId:"btnMediaCenter", xtype: "label",value:"Media Center"},
 				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Extracts"},
-				{itemId:"homeReports", xtype: "label",value:"Reports"},
+				{itemId:"homeReports", xtype: "label",value:"Indicators & Reports"},
 				{itemId:"btnProjects", xtype: "label",value:"Projects"},
-				{itemId:"homeContact", xtype: "label",value:"Contact Us"}
+				{itemId:"homeContact", xtype: "label",value:"Connect"}
 
 			]
 		},
@@ -96,6 +117,30 @@ var localeEn =
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Inquiries & Extracts"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+		{
+			itemId:"ReportsView",
+			description: "Reportss...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Indicators & Reports"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+		{
+			itemId:"ConnectView",
+			description: "Contactus...",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Connect"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
 
 			]

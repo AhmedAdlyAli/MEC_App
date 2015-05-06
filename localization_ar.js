@@ -42,6 +42,27 @@ var localeAr =
 				{Name:"ثقافة المستثمر", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
 				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"}
 			]
+		},
+
+		{
+			itemId:"ReportsView",
+			items: [
+				{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
+             	{Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
+             	{Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
+             	{Name:'تقرير العلامات التجارية',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}
+			]
+		},
+
+		{
+			itemId:"ConnectView",
+			items: [
+				{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
+             	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
+             	{Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
+             	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
+			]
 		}
 	],
 	Views: [
