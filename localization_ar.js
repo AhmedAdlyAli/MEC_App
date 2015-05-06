@@ -67,7 +67,7 @@ var localeAr =
 		{
 			itemId:"ConnectView",
 			items: [
-				{Name:'عن الوزارة',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
+				{Name:'عن الوزارة',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
              	{Name:'موظفو الوزارة',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},

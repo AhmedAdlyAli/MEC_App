@@ -66,7 +66,7 @@ var localeEn =
 		{
 			itemId:"ConnectView",
 			items: [
-				{Name:'About The Ministry',Url:'AboutMinistryView',OpenExternalWindow:false, Icon:'about-minstry.png'},
+				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
              	{Name:'Ministry Staff',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
