@@ -18,61 +18,84 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
     alias: 'widget.ViolationsDetailsView',
 
     requires: [
-        'Ext.Panel',
         'Ext.Img',
+        'Ext.Panel',
         'Ext.Label'
     ],
 
     config: {
+        cls: 'rtl',
         itemId: 'ViolationsDetailsView',
         layout: 'vbox',
+        scrollable: 'vertical',
         items: [
             {
+                xtype: 'image',
+                cls: 'img',
+                height: 201,
+                itemId: 'imgDetails'
+            },
+            {
                 xtype: 'panel',
-                flex: 1,
-                cls: 'newsDetails',
+                cls: 'text-panel',
                 items: [
                     {
-                        xtype: 'image',
-                        cls: 'img',
-                        height: 201,
-                        itemId: 'imgDetails'
+                        xtype: 'label',
+                        cls: 'violation-label-1',
+                        html: 'المحل المخالف'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblCompanyName'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblCompanyName'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'violation-label-2',
+                        html: 'المخالفة'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblViolation'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblViolation'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'violation-label-3',
+                        html: 'العقوبة'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblPunishment'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblPunishment'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'violation-label-4',
+                        html: 'رقم القرار'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblDecisionNumber'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblDecisionNumber'
                     }
                 ]
             }

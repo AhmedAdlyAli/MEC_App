@@ -47,9 +47,11 @@
             "codeClass": null,
             "userConfig": {
                 "height": "100%",
+                "hidden": false,
                 "itemCls": "item-company",
                 "itemId": "lstMyCompanies",
-                "layout|flex": 1
+                "layout|flex": 1,
+                "onItemDisclosure": false
             },
             "name": "MyList",
             "designerId": "8236bac8-764a-41d6-9a0d-531cc802a0eb",

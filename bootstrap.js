@@ -532,17 +532,6 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -712,7 +701,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.model.MenuModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.override.MenuArrayStore": [],
-  "MEC_App.view.AboutMinistryView": [],
+  "MEC_App.view.AboutView": [],
   "MEC_App.view.AdminServicesView": [],
   "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
@@ -773,6 +762,11 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.SettingsView": [],
   "MEC_App.view.ShopPriceListView": [],
   "MEC_App.view.SideMenu": [],
+  "MEC_App.view.SupplyServiceDepartmentServices": [],
+  "MEC_App.view.SupplyServiceHowTo": [],
+  "MEC_App.view.SupplyServiceListing": [],
+  "MEC_App.view.SupplyServiceMyData": [],
+  "MEC_App.view.SupplyServiceNearestDealer": [],
   "MEC_App.view.SupplyServiceView1": [],
   "MEC_App.view.SupplyServiceView2": [],
   "MEC_App.view.SupplyServiceView3": [],
@@ -1366,17 +1360,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
-  "Ext.log.Base": [],
-  "Ext.log.Logger": [],
-  "Ext.log.filter.Filter": [],
-  "Ext.log.filter.Priority": [],
-  "Ext.log.formatter.Default": [],
-  "Ext.log.formatter.Formatter": [],
-  "Ext.log.formatter.Identity": [],
-  "Ext.log.writer.Console": [],
-  "Ext.log.writer.DocumentTitle": [],
-  "Ext.log.writer.Remote": [],
-  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1574,8 +1557,8 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.override.MenuArrayStore": [],
-  "MEC_App.view.AboutMinistryView": [
-    "widget.AboutMinistryView"
+  "MEC_App.view.AboutView": [
+    "widget.AboutView"
   ],
   "MEC_App.view.AdminServicesView": [
     "widget.AdminServicesView"
@@ -1754,6 +1737,21 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SideMenu": [
     "widget.SideMenu"
+  ],
+  "MEC_App.view.SupplyServiceDepartmentServices": [
+    "widget.SupplyServiceDepartmentServices"
+  ],
+  "MEC_App.view.SupplyServiceHowTo": [
+    "widget.SupplyServiceHowTo"
+  ],
+  "MEC_App.view.SupplyServiceListing": [
+    "widget.SupplyServiceListing"
+  ],
+  "MEC_App.view.SupplyServiceMyData": [
+    "widget.SupplyServiceMyData"
+  ],
+  "MEC_App.view.SupplyServiceNearestDealer": [
+    "widget.SupplyServiceNearestDealer"
   ],
   "MEC_App.view.SupplyServiceView1": [
     "widget.SupplyServiceView1"

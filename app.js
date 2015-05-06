@@ -97,7 +97,7 @@ Ext.application({
         'DailyPricesView',
         'GoodsPricesView',
         'ShopPriceListView',
-        'AboutMinistryView',
+        'AboutView',
         'MinistryBranchesView',
         'EconomicIndicatorsBrief',
         'InvestorServiceView',
@@ -106,7 +106,12 @@ Ext.application({
         'NotificationView',
         'LanguageView',
         'SupplyServiceView3',
-        'SupplyServiceView4'
+        'SupplyServiceView4',
+        'SupplyServiceListing',
+        'SupplyServiceHowTo',
+        'SupplyServiceDepartmentServices',
+        'SupplyServiceNearestDealer',
+        'SupplyServiceMyData'
     ],
     controllers: [
         'HomeController',

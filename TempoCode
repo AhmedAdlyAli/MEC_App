@@ -255,3 +255,119 @@ label-value
                 });
 
 
+
+
+
+
+.list-inner{
+    direction:rtl;
+    background-color:#fff;
+    border-bottom: solid 1px #eeeeee;
+
+    .x-label{
+        padding:0 2em 0 0 !important ;
+        border:0 !important;
+        color: #6f2f51;
+        font-weight:bold;
+    }
+
+    .label-value{
+        padding: 0 !important;
+        border: 0 !important;
+        color:#010101;
+        font-weight:500;
+
+    }
+
+}
+
+
+
+
+
+
+HTTPS issue:
+
+
+@implementation NSURLRequest(DataController) 
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host 
+{ 
+return YES; 
+} 
+@end 
+
+
+
+
+var pnlItems = view.down('#pnlItems');
+
+Ext.each(view2Data.Items, function(item){
+
+
+
+totalPrice += item.ItemPrice;
+
+
+       pnlItems.add(
+        {
+            xtype: 'panel',
+            layout: 'hbox',
+            items:
+            [
+
+                {
+            xtype: 'label',
+            html: item.ItemName,
+                    flex: 1
+
+            },
+              {
+            xtype: 'label',
+            html: item.Quantity,
+                  cls:'label-value',
+                    flex: 2
+        }
+
+            ]
+
+        });
+
+
+            });
+
+
+
+
+
+
+                    var fsItems =view.down('#frmSupplyService1').add({xtype: 'fieldset'});
+
+
+
+
+{
+                xtype: 'list',
+                flex: 1,
+                height: '100%',
+                itemId: 'lstMyCompanies',
+                itemCls: 'item-company',
+                itemTpl: [
+                    '    <div class=\'tpl-signatory-1\'>{establishmentArabicName}</div>',
+                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>سجل تجاري: {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
+                    ''
+                ],
+                onItemDisclosure: false
+            }   
+
+
+
+
+
+
+
+
+
+
+        Ext.each(json2.Data.Items, function(item){
+
+

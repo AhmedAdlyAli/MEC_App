@@ -79,6 +79,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "height": null,
                         "itemId": "fsItems",
                         "title": null
                     },

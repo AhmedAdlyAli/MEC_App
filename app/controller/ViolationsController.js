@@ -69,7 +69,7 @@ Ext.define('MEC_App.controller.ViolationsController', {
         var view = component;
         var data = view.getData();
         view.down('#lblCompanyName').setHtml(data.CompanyName);
-        view.down('#lblViolations').setHtml(data.Violations);
+        view.down('#lblViolation').setHtml(data.Violations);
         view.down('#lblPunishment').setHtml(data.Punishment);
         view.down('#lblDecisionNumber').setHtml(data.DecisionNumber);
         view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);

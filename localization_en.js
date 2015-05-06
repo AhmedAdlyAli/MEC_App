@@ -16,10 +16,19 @@ var localeEn =
 			itemId:"ConsumerServiceView",
 			items: [
 				{Name:"Report Complaint", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
-				{Name:"Supply Services", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"}
+				{Name:"Supply Services", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
-
+		{
+			itemId:"SupplyServiceListing",
+			items: [
+				{Name:"How to request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"My Details", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
+				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
+				{Name:"Nearest Dealer", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"Departnment Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
+			]
+		},
 		{
 			itemId:"MediaCenterView",
 			items: [
@@ -44,7 +53,7 @@ var localeEn =
 			]
 		},
 
-		{
+{
 			itemId:"ReportsView",
 			items: [
 				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
@@ -64,6 +73,7 @@ var localeEn =
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
 		}
+
 	],
 
 	Views: [
@@ -245,10 +255,39 @@ var localeEn =
 			[
 	
 				{itemId:"lblTitle", xtype: "label",value:"Supply Services Request Form"}
+			]
+		},
+		{
+			itemId:"SupplyServiceNearestDealer",
+			description: "Supply Service Nearby Dealer",
+			items:
+			[
+	
+				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Dealers"}
+			]
+		},
+		{
+			itemId:"SupplyServiceMyData",
+			description: "Supply Service Nearby Dealer",
+			items:
+			[
+	
+				{itemId:"viewLbl", xtype: "label",value:"My Family Details"}
+			]
+		},
+   
+		{
+			itemId:"SupplyServiceListing",
+			description: "Supply Services view 4 - payment",
+			items:
+			[
+	
+				{itemId:"lblTitle", xtype: "label",value:"Supply Services"}
 	
 
 			]
 		},
+
 
 
 

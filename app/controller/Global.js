@@ -104,7 +104,7 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     RedirectToView: function(viewData) {
-        console.log(viewData);
+
 
 
         if (viewData.Url.indexOf('http')>-1){
@@ -112,7 +112,11 @@ Ext.define('MEC_App.controller.Global', {
 
             if(viewData.OpenExternalWindow){
 
-                window.open(viewData.Url,'_blank');
+
+                window.open(viewData.Url,'_system');
+
+
+
 
             }else{
                 Ext.Viewport.getActiveItem().push({

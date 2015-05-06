@@ -180,7 +180,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             title: "طريقة الاستلام",
                                             items: [
                                             { text: "شخصي", value: "1" },
-                                            { text: "البريد", value: "2" },
                                             { text: "البريد الالكتروني", value: "3" }
 
 

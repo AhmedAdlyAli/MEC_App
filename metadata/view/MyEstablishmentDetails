@@ -644,7 +644,7 @@
                             "userConfig": {
                                 "designer|displayName": "itemTpl",
                                 "implHandler": [
-                                    "<div>List Item {string}</div>"
+                                    "<div>{businessActivityName}</div>"
                                 ]
                             },
                             "name": "itemTpl",

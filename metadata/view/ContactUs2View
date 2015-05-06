@@ -82,6 +82,7 @@
                         "cls": [
                             "btn-youtube"
                         ],
+                        "hidden": true,
                         "icon": null,
                         "iconAlign": "center",
                         "iconCls": "youtube",
@@ -218,8 +219,8 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "window.open('https://twitter.com/mec_qatar','_blank','location=1');",
-                                    "",
+                                    "window.open('https://twitter.com/mec_qatar','_system');",
+                                    " ",
                                     ""
                                 ]
                             },
@@ -239,57 +240,14 @@
                     "designerId": "d3af7762-aa46-4ac3-a2a1-aae5577662aa"
                 },
                 {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "btn-facebook"
-                        ],
-                        "icon": null,
-                        "iconAlign": "center",
-                        "iconCls": "facebook",
-                        "itemId": "facebook",
-                        "text": null
-                    },
-                    "name": "MyButton3",
-                    "designerId": "f4dce67c-d8e2-49f8-87f1-85812414f184",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "window.open('https://www.facebook.com','_blank','location=1');",
-                                    ""
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "35e3129e-1c06-48aa-a87e-7581fc429f82"
-                        }
-                    ]
-                },
-                {
                     "type": "Ext.Spacer",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MySpacer5",
-                    "designerId": "37ac226b-1407-462a-bab3-284b84ebc00e"
+                    "name": "MySpacer1",
+                    "designerId": "e7e54a44-2d72-4e5b-98d5-f0fba50fa8a1"
                 }
             ]
         }

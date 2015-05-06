@@ -1,0 +1,111 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "SupplyServiceNearestDealer",
+        "designer|userClassName": "SupplyServiceNearestDealer",
+        "itemId": "SupplyServiceNearestDealer",
+        "layout": null,
+        "requires": [
+            "Ext.Map"
+        ],
+        "scrollable": null,
+        "zIndex": 1000
+    },
+    "name": "SupplyServiceView",
+    "designerId": "60f2a379-df13-407c-a2e0-059362da4616",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "أقرب منفذ توزيع",
+                "itemId": "viewLbl"
+            },
+            "name": "MyLabel",
+            "designerId": "472a5c59-2090-4ba6-baac-518d9bf77b28"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "mapview"
+                ],
+                "height": null,
+                "id": null,
+                "itemId": "pnlMap",
+                "zIndex": 1000
+            },
+            "name": "MyPanel",
+            "designerId": "7b47f254-1c64-475e-8db2-c6f900c0ed76",
+            "cn": [
+                {
+                    "type": "Ext.Map",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 420,
+                        "itemId": "mapDealers"
+                    },
+                    "name": "MyMap1",
+                    "designerId": "b3d761cb-bfe8-4863-bbf3-e6ff7bba6790"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-title"
+                ],
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "686fb6b4-e70b-45d7-9844-648165399f3e"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-address"
+                ],
+                "itemId": "lblAddress"
+            },
+            "name": "MyLabel8",
+            "designerId": "7e0c6743-9733-4256-ae87-c19b62a29037"
+        }
+    ]
+}

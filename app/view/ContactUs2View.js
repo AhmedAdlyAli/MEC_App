@@ -57,6 +57,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
 
                         },
                         cls: 'btn-youtube',
+                        hidden: true,
                         itemId: 'youtube',
                         iconAlign: 'center',
                         iconCls: 'youtube'
@@ -83,7 +84,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     {
                         xtype: 'button',
                         handler: function(button, e) {
-                            window.open('https://twitter.com/mec_qatar','_blank','location=1');
+                            window.open('https://twitter.com/mec_qatar','_system');
 
 
                         },
@@ -94,17 +95,6 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            window.open('https://www.facebook.com','_blank','location=1');
-
-                        },
-                        cls: 'btn-facebook',
-                        itemId: 'facebook',
-                        iconAlign: 'center',
-                        iconCls: 'facebook'
                     },
                     {
                         xtype: 'spacer'

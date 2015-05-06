@@ -44,7 +44,7 @@ Ext.define('MEC_App.view.NotificationView', {
                 itemId: 'lstItems',
                 itemCls: 'item-notification',
                 itemTpl: [
-                    '{content}',
+                    '<div>Test </div>',
                     '<div class=\'notification-sub\'>{date}</div>'
                 ]
             }

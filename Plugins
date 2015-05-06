@@ -24,4 +24,5 @@ cordova plugin add plugin.google.maps --variable API_KEY_FOR_ANDROID="AIzaSyAeJH
 
 
 cordova plugin add org.apache.cordova.geolocation
+cordova plugin add org.apache.cordova.inappbrowser
 

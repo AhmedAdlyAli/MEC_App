@@ -1,0 +1,83 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "SupplyServiceDepartmentServices",
+        "designer|userClassName": "SupplyServiceDepartmentServices",
+        "fullscreen": true,
+        "itemId": "SupplyServiceDepartmentServices",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "SupplyServiceHowTo1",
+    "designerId": "82d79397-1f7d-4340-8d32-c0765211b5a7",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "خدمات الادارة",
+                "id": "lblTitle1"
+            },
+            "name": "MyLabel3",
+            "designerId": "cffbf018-4fb5-4bb9-935f-1c518e5338bb"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "text-panel"
+                ],
+                "height": "auto",
+                "layout|flex": 1,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "91dae499-131f-4773-8097-422dcc8898c6",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container"
+                        ],
+                        "html": "تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:  بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية."
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "025e6fb7-9309-470d-991b-20b3de732571"
+                }
+            ]
+        }
+    ]
+}

@@ -41,13 +41,15 @@ Ext.define('MEC_App.view.MyBusinessView', {
                 xtype: 'list',
                 flex: 1,
                 height: '100%',
+                hidden: false,
                 itemId: 'lstMyCompanies',
                 itemCls: 'item-company',
                 itemTpl: [
                     '    <div class=\'tpl-signatory-1\'>{establishmentArabicName}</div>',
                     '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>سجل تجاري: {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
                     ''
-                ]
+                ],
+                onItemDisclosure: false
             }
         ]
     }

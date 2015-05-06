@@ -44,6 +44,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "button#btnSupplyNext3": {
                 tap: 'onBtnSupplyNext3Tap'
+            },
+            "panel#SupplyServiceNearestDealer": {
+                initialize: 'onSupplyServiceNearestDealerInitialize'
+            },
+            "panel#SupplyServiceMyData": {
+                initialize: 'onSupplyServiceMyDataInitialize'
             }
         }
     },
@@ -66,7 +72,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData2 = {"qid":"21463400042", "languageID":language, "mobileDeviceID":"1231"};
 
 
-        //Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
         Ext.Ajax.request({
 
@@ -80,37 +86,47 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 view.setData(json2.Data.Items);
 
-                var fsItems = me.getFsItems();
 
 
-                 Ext.each(json2.Data.Items, function(item){
 
-                        fsItems.add(
 
-                            {
-                                xtype: 'spinnerfield',
-                                label: item.Name,
-                                placeholder: item.Name,
-                                value: item.AllocatedQty,
-                                name: item.ItemID,
-                                stepValue: 1,
-                                minValue: 0,
-                                maxValue:100,
-                                listeners : {
-                                    spin : function(spinnerfield, newValue, direction, eOpts) {
-                                        if(newValue>item.AllocatedQty){
-                                            this.setValue(item.AllocatedQty);
-                                        }
+
+
+
+                //fsItems = Ext.create({xtype:'fieldset'});
+
+
+                var fsItems =view.down('#frmSupplyService1').add({xtype: 'fieldset'});
+
+                Ext.each(json2.Data.Items, function(item){
+
+                    console.log(item.Name);
+                    fsItems.add(
+
+                        {
+                            xtype: 'spinnerfield',
+                            label: item.Name,
+                            placeholder: item.Name,
+                            value: item.AllocatedQty,
+                            name: item.ItemID,
+                            stepValue: 1,
+                            minValue: 0,
+                            maxValue:100,
+                            listeners : {
+                                spin : function(spinnerfield, newValue, direction, eOpts) {
+                                    if(newValue>item.AllocatedQty){
+                                        this.setValue(item.AllocatedQty);
                                     }
                                 }
+                            }
 
 
 
-                             }
+                        }
 
-                        );
+                    );
 
-                    });
+                });
 
 
 
@@ -175,7 +191,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         Ext.Localization.LocalizeView(view);
+            Ext.AnimationHelper.ShowLoading();
 
+        navigator.geolocation.getCurrentPosition(function(position){
 
 
         //console.log(view.getData());
@@ -186,8 +204,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             var mapPanel = view.down('#mapDealers');
             var gMap = mapPanel.getMap();
 
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
+                  gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+                  gMap.setZoom(11);
 
 
             // get dealers
@@ -216,8 +234,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 "languageID":language,
                                 "mobileDeviceID":"1231",
                                 "restrictDealerBasedOnStock":"true",
-                                "latitude":"25.321283",//location.lat,
-                                "longtitude":"51.528329",//location.lng,
+                                "latitude": position.coords.latitude, //"25.321283",//location.lat,
+                                "longtitude":position.coords.longitude, //"51.528329", //location.lng,
+
                                 "orderItems": orderItems
                                };
 
@@ -225,7 +244,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         //console.log(requestData);
 
 
-            Ext.AnimationHelper.ShowLoading();
 
             Ext.Ajax.request({
 
@@ -300,6 +318,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         }, 1100,this);
 
+
+        }, function(error){
+                alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        });
 
     },
 
@@ -451,6 +474,202 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     title: Ext.Global.GetFixedTitle(),
                     data: view3Data
                 });
+
+
+
+
+
+
+    },
+
+    onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
+        var view = component;
+
+        Ext.Localization.LocalizeView(view);
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        // get user location then get near dealers
+        navigator.geolocation.getCurrentPosition(function(position){
+
+
+
+
+        Ext.Function.defer(function(){
+
+
+            var mapPanel = view.down('#mapDealers');
+            var gMap = mapPanel.getMap();
+
+            gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+            gMap.setZoom(11);
+
+
+            // get dealers
+
+            var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
+
+
+            var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+            var requestData =  {"qid":"24263400239",
+                                "languageID":language,
+                                "mobileDeviceID":"1231",
+                                "restrictDealerBasedOnStock":"false",
+                                "latitude": position.coords.latitude, //"25.321283",//location.lat,
+                                "longtitude":position.coords.longitude, //"51.528329", //location.lng,
+                                "orderItems": []
+                               };
+
+
+            Ext.Ajax.request({
+
+                url : url,
+                method : 'POST',
+                jsonData :requestData,
+                success : function (response) {
+
+                    var json1 = Ext.util.JSON.decode(response.responseText);
+                    var json2 = Ext.util.JSON.decode(json1.d);
+
+
+                    Ext.AnimationHelper.HideLoading();
+
+
+                    //console.log(json2);
+
+
+
+                    var infowindow = new google.maps.InfoWindow();
+
+
+                    Ext.each(json2.Data.Dealers,function(item){
+
+                        var marker = new google.maps.Marker({
+                            map: gMap,
+                            animation: google.maps.Animation.DROP,
+                            position: new google.maps.LatLng(item.Longtitude,item.Latitude),
+                            icon: 'resources/images/drop-pin.png',
+                            data:item
+                        });
+
+
+
+
+                        google.maps.event.addListener(marker,'click',function(pos) {
+
+                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.DealerName+'</div>';
+                            infowindow.setContent(info);
+                            infowindow.open(gMap,marker);
+
+                            view.down('#lblTitle').setHtml(marker.data.DealerName);
+                            view.down('#lblAddress').setHtml(marker.data.Address);
+
+
+                        });
+
+
+
+
+
+                    });
+
+                },
+                failure: function(request, resp) {
+                    alert("in failure");
+                }
+            });
+
+        }, 300,this);
+
+
+
+
+
+
+        }, function(error){
+                alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        });
+
+
+
+
+
+
+    },
+
+    onSupplyServiceMyDataInitialize: function(component, eOpts) {
+        var me = this;
+        var view = component;
+
+
+        // localization
+        Ext.Localization.LocalizeView(view);
+
+
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
+
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+
+        var requestData=
+            {"qid":"21463400042",
+             "languageID":language,
+             "mobileDeviceID":"1231"};
+
+
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1.d);
+
+                console.log(json2);
+
+
+
+
+                        var store = new Ext.data.Store({
+                            data : json2.Data.FamilyMembers
+                        });
+
+                        var lst = view.down('#lstFamily');
+                        lst.setStore(store);
+
+                        lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                        lst.setScrollable(false);
+
+
+
+
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
+
+
+
+
+
 
 
 
