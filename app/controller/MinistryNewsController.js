@@ -55,7 +55,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture=ar&pageIndex=0&pageSize=20&categoryId='+categoryID,
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=20&categoryId='+categoryID,
             method : 'Get',
             success : function (response) {
 
