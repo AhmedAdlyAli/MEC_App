@@ -513,10 +513,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        totalPrice += item.ItemPrice;
+            totalPrice += item.ItemPrice;
 
 
-               pnlItems.add(
+            pnlItems.add(
                 {
                     xtype: 'panel',
                     layout: 'hbox',
@@ -524,24 +524,24 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     [
 
                         {
-                    xtype: 'label',
-                    html: item.ItemName,
+                            xtype: 'label',
+                            html: item.ItemName,
                             flex: 1
 
-                    },
-                      {
-                    xtype: 'label',
-                    html: item.Quantity,
-                          cls:'label-value',
+                        },
+                        {
+                            xtype: 'label',
+                            html: item.Quantity,
+                            cls:'label-value',
                             flex: 2
-                }
+                        }
 
                     ]
 
                 });
 
 
-                    });
+        });
 
         view.down('#lblFees2').setHtml(totalPrice);
 

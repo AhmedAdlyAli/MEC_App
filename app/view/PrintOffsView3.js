@@ -29,7 +29,7 @@ Ext.define('MEC_App.view.PrintOffsView3', {
             {
                 xtype: 'panel',
                 flex: 1,
-                html: '<div style="-webkit-overflow-scrolling: touch;overflow-x:hidden;overflow-y: scroll; height:500px"> <iframe name="paymentframe"    class="web-frame" height="100%" width="100%"  ></iframe></div>',
+                html: '<div style="-webkit-overflow-scrolling: touch;overflow-x:scroll;overflow-y: scroll; height:500px"> <iframe name="paymentframe"    class="web-frame" height="100%" width="100%"  ></iframe></div>',
                 itemId: 'pnlIframe'
             }
         ]

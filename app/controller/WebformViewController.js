@@ -31,7 +31,7 @@ Ext.define('MEC_App.controller.WebformViewController', {
 
         var data  = view.getData();
         view.down('#lblTitle').setHtml(data.Name);
-        var html = '<div style="-webkit-overflow-scrolling: touch;overflow-x:hidden;overflow-y: scroll; height:500px"><iframe src="'+data.Url+'" height="100%" width="100%" class="web-frame"></iframe></div>';
+        var html = '<div style="-webkit-overflow-scrolling: touch;overflow-x:scroll;overflow-y: scroll; height:500px"><iframe src="'+data.Url+'" height="100%" width="100%" class="web-frame"></iframe></div>';
         view.down('#pnlFrame').setHtml(html);
 
 

@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
                     {
                         xtype: 'panel',
                         height: '100%',
-                        html: '<div style="-webkit-overflow-scrolling: touch;overflow-x:hidden;overflow-y: scroll; height:500px"> <iframe name="paymentframe"    class="web-frame" height="100%" width="100%"  ></iframe></div>',
+                        html: '<div style="-webkit-overflow-scrolling: touch;overflow-x:scroll;overflow-y: scroll; height:500px"> <iframe name="paymentframe"    class="web-frame" height="100%" width="100%"  ></iframe></div>',
                         itemId: 'pnlIframe'
                     }
                 ]
@@ -68,7 +68,7 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
 
             var form = Ext.create('Ext.form.Panel', {
                 standardSubmit: true,
-                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                url: Ext.Global.GetConfig('SupplyServicePaymentUrl'),
                 method: 'POST',
                 items: [
                     {xtype: 'textfield',name: 'vpc_MerchTxnRef'},
