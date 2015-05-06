@@ -62,6 +62,7 @@
 		F3710BE2EF89439293522C87 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC76242E183433C863B0BBA /* CDVLocation.m */; };
 		F8420CBB73D54F4693EB5B42 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F1D37292514207AD1FF769 /* CDVCamera.m */; };
 		FBCCE8525C494F328863A3ED /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9BD3BF1F6E46C9BF6CB526 /* UIImage+CropScaleOrientation.m */; };
+		F006496C78934EE393EA05DE /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,8 @@
 		FEAF5845319C46AE96C80D8A /* GoogleMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleMaps.h; path = plugin.google.maps/GoogleMaps.h; sourceTree = "<group>"; };
 		FEFBF89B8E7645D8B2C8B77D /* GoogleMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleMaps.m; path = plugin.google.maps/GoogleMaps.m; sourceTree = "<group>"; };
 		FFB5403587924FD0936A2E54 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = plugin.google.maps/Circle.h; sourceTree = "<group>"; };
+		BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		FC0A98B388B14E358DC02444 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +406,8 @@
 				12B6686A7C7947409BF35CE7 /* CDVExif.h */,
 				9DC76242E183433C863B0BBA /* CDVLocation.m */,
 				674DB10160994B538FEB3E65 /* CDVLocation.h */,
+				BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */,
+				FC0A98B388B14E358DC02444 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = MEC_App/Plugins;
@@ -607,6 +612,7 @@
 				F8420CBB73D54F4693EB5B42 /* CDVCamera.m in Sources */,
 				95FFEB7D06334EA2AE0B359A /* CDVJpegHeaderWriter.m in Sources */,
 				F3710BE2EF89439293522C87 /* CDVLocation.m in Sources */,
+				F006496C78934EE393EA05DE /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -112,7 +112,11 @@ Ext.define('MEC_App.controller.Global', {
 
             if(viewData.OpenExternalWindow){
 
-                window.open(viewData.Url,'_blank');
+
+                window.open(viewData.Url,'_system');
+
+
+
 
             }else{
                 Ext.Viewport.getActiveItem().push({
