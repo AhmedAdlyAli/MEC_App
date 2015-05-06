@@ -63,16 +63,44 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Localization.LocalizeView(view);
 
 
+        Ext.AnimationHelper.ShowLoading();
 
 
+        // ceate session
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/CreateSession';
+
+        var requestData = {"mobileDeviceID":Ext.Global.userToken};
+
+        console.log(Ext.Global.userToken);
+
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1.d);
+
+
+                Ext.Global.userSupplyToken = json2.Data.SessionID;
+
+
+        /////////////////////////////////
+
+        // get allocated items
         var url2 = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyItemDetails';
 
         var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-        var requestData2 = {"qid":"21463400042", "languageID":language, "mobileDeviceID":"1231"};
+        var requestData2 = {"qid":"21463400042",
+                            "languageID":language,
+                            "mobileDeviceID":"1231",
+                            "sessionID": Ext.Global.userSupplyToken};
 
-
-        Ext.AnimationHelper.ShowLoading();
 
         Ext.Ajax.request({
 
@@ -86,14 +114,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 view.setData(json2.Data.Items);
 
-
-
-
-
-
-
-
-                //fsItems = Ext.create({xtype:'fieldset'});
 
 
                 var fsItems =view.down('#frmSupplyService1').add({xtype: 'fieldset'});
@@ -138,6 +158,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 alert("in failure");
             }
         });
+        /////////////////////////////////////////////
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
+
+
+
+
 
 
 
@@ -236,8 +272,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 "restrictDealerBasedOnStock":"true",
                                 "latitude": position.coords.latitude, //"25.321283",//location.lat,
                                 "longtitude":position.coords.longitude, //"51.528329", //location.lng,
-
-                                "orderItems": orderItems
+                                "orderItems": orderItems,
+                                "sessionID": Ext.Global.userSupplyToken
                                };
 
 
@@ -359,7 +395,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
              "languageID": 2,
              "mobileDeviceID":"1231",
              "dealerID": view2Data.DealerID,
-             orderItems: orderItems
+             orderItems: orderItems,
+             "sessionID": Ext.Global.userSupplyToken
             };
 
 
@@ -547,7 +584,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 "restrictDealerBasedOnStock":"false",
                                 "latitude": position.coords.latitude, //"25.321283",//location.lat,
                                 "longtitude":position.coords.longitude, //"51.528329", //location.lng,
-                                "orderItems": []
+                                "orderItems": [],
+                                "sessionID": Ext.Global.userSupplyToken
                                };
 
 
@@ -647,7 +685,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData=
             {"qid":"21463400042",
              "languageID":language,
-             "mobileDeviceID":"1231"};
+             "mobileDeviceID":"1231",
+            "sessionID": Ext.Global.userSupplyToken};
 
 
 

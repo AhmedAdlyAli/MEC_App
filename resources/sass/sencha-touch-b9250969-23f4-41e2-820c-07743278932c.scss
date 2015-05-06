@@ -97,7 +97,7 @@ body {
 
 .home-header,
 .home-header2,
-.home-header3 {
+.home-header3{
     direction: rtl;
     background: url(../images/home-header-bg.jpg);
     background-size: cover;
@@ -1152,10 +1152,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .web-frame{
-
-    width:100%;
-    height:31em;
-    border:none
+    border:none;
 }
 
 
@@ -1652,12 +1649,12 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 
-.text-container{
-    height: 100%;
-    padding:1em;
-    margin:0 !important;
-    line-height:2.5em;
-}
+    .text-container{
+        height: 100%;
+        padding:1em;
+        margin:0 !important;
+        line-height:2.5em;
+    }
 
 }
 
@@ -1674,76 +1671,76 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .recall-label-1{
-        padding:0 2.2em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/recall1.png) no-repeat 96% 90%;
+    padding:0 2.2em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/recall1.png) no-repeat 96% 90%;
 
 
 }
 
 .recall-label-2{
-        padding:0 2.2em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/recall2.png) no-repeat 96% 90%;
+    padding:0 2.2em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/recall2.png) no-repeat 96% 90%;
 
 }
 
 
 .recall-label-3{
-        padding:0 2.2em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/recall3.png) no-repeat 96% 90%;
+    padding:0 2.2em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/recall3.png) no-repeat 96% 90%;
 
 }
 
 
 .violation-label-1{
-        padding:0 2.2em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/vio1.png) no-repeat 96% 90%;
+    padding:0 2.2em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/vio1.png) no-repeat 96% 90%;
 }
 
 
 .violation-label-2{
-        padding:0 2.5em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/vio2.png) no-repeat 96% 90%;
+    padding:0 2.5em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/vio2.png) no-repeat 96% 90%;
 
 }
 .violation-label-3{
-        padding:0 3em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/vio3.png) no-repeat 96% 90%;
+    padding:0 3em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/vio3.png) no-repeat 96% 90%;
 
 }
 .violation-label-4{
-        padding:0 3em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/vio4.png) no-repeat 96% 90%;
+    padding:0 3em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/vio4.png) no-repeat 96% 90%;
 
 }
 
 
 .project-label-1{
-        padding:0 3em 0 0;
-        color: #6f2f51; 
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/pro1.png) no-repeat 96% 90%;
+    padding:0 3em 0 0;
+    color: #6f2f51;
+    padding-top:1em;
+    font-weight:bold;
+    background: url(../images/pro1.png) no-repeat 96% 90%;
 
 }
 
@@ -1753,7 +1750,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 // fix purple issue
 .x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl
 {
-  background-color:#fff!important;
+    background-color:#fff!important;
 
 }
 

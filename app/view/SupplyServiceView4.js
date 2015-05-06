@@ -24,8 +24,11 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
 
     config: {
         itemId: 'SupplyServiceView4',
-        layout: 'vbox',
         scrollable: false,
+        cls: [
+            'complaint-view',
+            'rtl'
+        ],
         items: [
             {
                 xtype: 'label',
@@ -35,9 +38,15 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
             },
             {
                 xtype: 'panel',
-                flex: 1,
-                html: ' <iframe name="paymentframe"    class="web-frame"  ></iframe>',
-                itemId: 'pnlIframe'
+                height: '100%',
+                items: [
+                    {
+                        xtype: 'panel',
+                        height: '100%',
+                        html: '<div style="-webkit-overflow-scrolling: touch;overflow-x:hidden;overflow-y: scroll; height:500px"> <iframe name="paymentframe"    class="web-frame" height="100%" width="100%"  ></iframe></div>',
+                        itemId: 'pnlIframe'
+                    }
+                ]
             }
         ]
     },

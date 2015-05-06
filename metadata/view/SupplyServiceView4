@@ -6,10 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
         "designer|userAlias": "SupplyServiceView4",
         "designer|userClassName": "SupplyServiceView4",
         "itemId": "SupplyServiceView4",
-        "layout": "vbox",
+        "layout": null,
         "scrollable": false
     },
     "name": "PrintOffsView",
@@ -40,12 +44,27 @@
             },
             "codeClass": null,
             "userConfig": {
-                "html": " <iframe name=\"paymentframe\"    class=\"web-frame\"  ></iframe>",
-                "itemId": "pnlIframe",
-                "layout|flex": 1
+                "height": "100%"
             },
-            "name": "MyPanel5",
-            "designerId": "4ef3202d-e96f-4d68-9332-140c7c11c001"
+            "name": "MyPanel2",
+            "designerId": "d22fe27d-3968-4320-8cbc-817d29509ff5",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "100%",
+                        "html": "<div style=\"-webkit-overflow-scrolling: touch;overflow-x:hidden;overflow-y: scroll; height:500px\"> <iframe name=\"paymentframe\"    class=\"web-frame\" height=\"100%\" width=\"100%\"  ></iframe></div>",
+                        "itemId": "pnlIframe"
+                    },
+                    "name": "MyPanel5",
+                    "designerId": "4ef3202d-e96f-4d68-9332-140c7c11c001"
+                }
+            ]
         },
         {
             "type": "fixedfunction",

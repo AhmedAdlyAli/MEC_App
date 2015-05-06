@@ -24,7 +24,6 @@ Ext.define('MEC_App.view.WebFrameView', {
 
     config: {
         itemId: 'WebFrameView',
-        layout: 'vbox',
         cls: [
             'complaint-view',
             'rtl'
@@ -39,7 +38,7 @@ Ext.define('MEC_App.view.WebFrameView', {
             },
             {
                 xtype: 'panel',
-                flex: 1,
+                height: '100%',
                 items: [
                     {
                         xtype: 'panel',
