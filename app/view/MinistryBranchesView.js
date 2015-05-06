@@ -113,36 +113,36 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                     {Name:'مجمع خدمات الهلال',Lat:'25.26332',Lng:'51.53486',Address:'TBD',Tel:'123',Fax:'456'},
                     {Name:'بلدية الظعاين',Lat:'25.5636',Lng:'51.45246',Address:'TBD',Tel:'123',Fax:'456'},
                     {Name:'بلدية الوكرة',Lat:'25.16715',Lng:'51.59787',Address:'TBD',Tel:'123',Fax:'456'}
-                                ];
+                ];
 
 
-              var infowindow = new google.maps.InfoWindow();
+                var infowindow = new google.maps.InfoWindow();
 
 
-        var i = 0;
+                var i = 0;
 
                 Ext.each(branches,function(item){
 
-                        var marker = new google.maps.Marker({
-                            map: gMap,
-                            animation: google.maps.Animation.DROP,
-                            position: new google.maps.LatLng (item.Lat,item.Lng),
-                            icon: 'resources/images/drop-pin.png',
-                            data:item
-                        });
+                    var marker = new google.maps.Marker({
+                        map: gMap,
+                        animation: google.maps.Animation.DROP,
+                        position: new google.maps.LatLng (item.Lat,item.Lng),
+                        icon: 'resources/images/drop-pin.png',
+                        data:item
+                    });
 
-                        google.maps.event.addListener(marker,'click',function(pos) {
+                    google.maps.event.addListener(marker,'click',function(pos) {
 
-                            var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
-                               infowindow.setContent(info);
-                               infowindow.open(gMap,marker);
+                        var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.Name+'</div>';
+                        infowindow.setContent(info);
+                        infowindow.open(gMap,marker);
 
-                           view.down('#lblTitle').setHtml(marker.data.Name);
-                           view.down('#lblAddress').setHtml(marker.data.Address);
-                           view.down('#lblTel').setHtml(marker.data.Tel);
-                           view.down('#lblFax').setHtml(marker.data.Fax);
+                        view.down('#lblTitle').setHtml(marker.data.Name);
+                        view.down('#lblAddress').setHtml(marker.data.Address);
+                        view.down('#lblTel').setHtml(marker.data.Tel);
+                        view.down('#lblFax').setHtml(marker.data.Fax);
 
-                        });
+                    });
 
 
                     if(i===0)
