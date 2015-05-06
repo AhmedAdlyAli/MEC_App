@@ -293,6 +293,7 @@ var localeEn =
 
 	]
 
-
+,
+	Messages: {StockNotFound:'There is No stock on the selected dealer'}
 
 }

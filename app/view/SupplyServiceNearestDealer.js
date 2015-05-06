@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                 items: [
                     {
                         xtype: 'map',
-                        height: 420,
+                        height: '20em',
                         itemId: 'mapDealers'
                     }
                 ]

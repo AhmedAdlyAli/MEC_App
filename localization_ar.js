@@ -57,5 +57,6 @@ var localeAr =
 	Views: [
 					
 		]
-
+,
+	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار'}
 }

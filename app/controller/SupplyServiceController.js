@@ -327,6 +327,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onBtnSupplyNext2Tap: function(button, e, eOpts) {
+
+
+
+
+
         var view = this.getSupplyServiceView2();
         var view2Data = view.getData();
 
@@ -343,8 +348,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         });
 
 
-        //console.log(view2Data);
-
 
 
         var allocationID =0;
@@ -359,42 +362,67 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
              orderItems: orderItems
             };
 
-                Ext.AnimationHelper.ShowLoading();
 
-                Ext.Ajax.request({
-
-                    url : url,
-                    method : 'POST',
-                    jsonData :requestData,
-                    success : function (response) {
+        //console.log(requestData);
 
 
+        Ext.AnimationHelper.ShowLoading();
 
-                        var json1 = Ext.util.JSON.decode(response.responseText);
-                        var json2 = Ext.util.JSON.decode(json1.d);
+        Ext.Ajax.request({
 
-
-
-                        allocationID = json2.Data.Allocations[0].AllocationID;
-
-                        view2Data.AllocationID = allocationID;
-
-                        Ext.AnimationHelper.HideLoading();
-
-                        Ext.Viewport.getActiveItem().push({
-                            xtype: 'SupplyServiceView3',
-                            title: Ext.Global.GetFixedTitle(),
-                            data: view2Data
-                        });
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
 
 
 
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1.d);
 
-                    },
-                    failure: function(request, resp) {
-                        alert("in failure");
-                    }
-                });
+                //console.log(json2);
+
+
+
+                if(json2.ErrorMessage==='StockNotFound')
+                {
+
+
+                    var m = Ext.Localization.GetMessage('StockNotFound');
+                    Ext.device.Notification.show({
+                        title: 'خطأ',
+                        buttons:["موافق"],
+                        message: m
+                    });
+
+                    //alert(m);
+
+                    Ext.AnimationHelper.HideLoading();
+
+
+                }else{
+
+
+                    allocationID = json2.Data.Allocations[0].AllocationID;
+
+                    view2Data.AllocationID = allocationID;
+
+                    Ext.AnimationHelper.HideLoading();
+
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: 'SupplyServiceView3',
+                        title: Ext.Global.GetFixedTitle(),
+                        data: view2Data
+                    });
+
+                }
+
+
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
 
 
 

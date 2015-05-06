@@ -106,6 +106,15 @@ Ext.define('MEC_App.controller.Localization', {
                 return viewLoc;
 
             }
+    },
+
+    GetMessage: function(key) {
+            if(Ext.Global.Localization) {
+                var loc = Ext.Global.Localization;
+
+                return loc.Messages[key];
+
+            }
     }
 
 });

@@ -48,7 +48,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 items: [
                     {
                         xtype: 'map',
-                        height: 420,
+                        height: '20em',
                         itemId: 'mapDealers'
                     }
                 ]
