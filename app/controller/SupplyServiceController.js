@@ -188,7 +188,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         Ext.Localization.LocalizeView(view);
+            Ext.AnimationHelper.ShowLoading();
 
+        navigator.geolocation.getCurrentPosition(function(position){
 
 
         //console.log(view.getData());
@@ -199,8 +201,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             var mapPanel = view.down('#mapDealers');
             var gMap = mapPanel.getMap();
 
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
+                  gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+                  gMap.setZoom(11);
 
 
             // get dealers
@@ -229,8 +231,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 "languageID":language,
                                 "mobileDeviceID":"1231",
                                 "restrictDealerBasedOnStock":"true",
-                                "latitude":"25.321283",//location.lat,
-                                "longtitude":"51.528329",//location.lng,
+                                "latitude": position.coords.latitude, //"25.321283",//location.lat,
+                                "longtitude":position.coords.longitude, //"51.528329", //location.lng,
+
                                 "orderItems": orderItems
                                };
 
@@ -238,7 +241,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         //console.log(requestData);
 
 
-            Ext.AnimationHelper.ShowLoading();
 
             Ext.Ajax.request({
 
@@ -313,6 +315,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         }, 1100,this);
 
+
+        }, function(error){
+                alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        });
 
     },
 
@@ -473,18 +480,15 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
-        Ext.AnimationHelper.ShowLoading();
-
-
-
         var view = component;
-
 
         Ext.Localization.LocalizeView(view);
 
 
+        Ext.AnimationHelper.ShowLoading();
 
-        //console.log(view.getData());
+        // get user location then get near dealers
+        navigator.geolocation.getCurrentPosition(function(position){
 
 
 
@@ -495,8 +499,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             var mapPanel = view.down('#mapDealers');
             var gMap = mapPanel.getMap();
 
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
+            gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+            gMap.setZoom(11);
 
 
             // get dealers
@@ -510,16 +514,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                 "languageID":language,
                                 "mobileDeviceID":"1231",
                                 "restrictDealerBasedOnStock":"false",
-                                "latitude":"25.321283",//location.lat,
-                                "longtitude":"51.528329", //location.lng,
-                                 "orderItems": []
+                                "latitude": position.coords.latitude, //"25.321283",//location.lat,
+                                "longtitude":position.coords.longitude, //"51.528329", //location.lng,
+                                "orderItems": []
                                };
 
-
-        //console.log(requestData);
-
-
-            Ext.AnimationHelper.ShowLoading();
 
             Ext.Ajax.request({
 
@@ -535,14 +534,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     Ext.AnimationHelper.HideLoading();
 
 
-                   //console.log(json2);
+                    //console.log(json2);
 
 
 
-             var infowindow = new google.maps.InfoWindow();
+                    var infowindow = new google.maps.InfoWindow();
 
 
-                Ext.each(json2.Data.Dealers,function(item){
+                    Ext.each(json2.Data.Dealers,function(item){
 
                         var marker = new google.maps.Marker({
                             map: gMap,
@@ -555,14 +554,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                     google.maps.event.addListener(marker,'click',function(pos) {
+                        google.maps.event.addListener(marker,'click',function(pos) {
 
                             var info = '<div style="font-size:16px;font-family:PFDinTextUniversal;padding-right:5px" class="branch-title">'+marker.data.DealerName+'</div>';
-                               infowindow.setContent(info);
-                               infowindow.open(gMap,marker);
+                            infowindow.setContent(info);
+                            infowindow.open(gMap,marker);
 
-                           view.down('#lblTitle').setHtml(marker.data.DealerName);
-                           view.down('#lblAddress').setHtml(marker.data.Address);
+                            view.down('#lblTitle').setHtml(marker.data.DealerName);
+                            view.down('#lblAddress').setHtml(marker.data.Address);
 
 
                         });
@@ -571,7 +570,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                });
+                    });
 
                 },
                 failure: function(request, resp) {
@@ -579,7 +578,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 }
             });
 
-        }, 1100,this);
+        }, 300,this);
+
+
+
+
+
+
+        }, function(error){
+                alert('code: '    + error.code    + '\n' +
+                  'message: ' + error.message + '\n');
+        });
+
+
+
+
+
 
     }
 

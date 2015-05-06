@@ -252,3 +252,9 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-06 01:02:51.926 MEC_App[21405:267556] Resetting plugins due to page load.
 2015-05-06 01:02:52.215 MEC_App[21405:267556] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7A8D97CA-BEAE-4309-9674-C35AFA29F122/MEC_App.app/www/index.html
 2015-05-06 01:02:58.802 MEC_App[21405:267556] THREAD WARNING: ['ProgressIndicator'] took '20.125732' ms. Plugin should use a background thread.
+2015-05-06 03:23:33.689 MEC_App[24316:331911] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-06 03:23:33.690 MEC_App[24316:331911] Multi-tasking -> Device: YES, App: YES
+2015-05-06 03:23:33.692 MEC_App[24316:331911] Unlimited access to network resources
+2015-05-06 03:23:33.897 MEC_App[24316:331911] Resetting plugins due to page load.
+2015-05-06 03:23:34.214 MEC_App[24316:331911] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/BEE2136A-665C-44A4-8B44-91D7CF0D8EA4/MEC_App.app/www/index.html
+2015-05-06 03:23:45.305 MEC_App[24316:331911] locationManager::didFailWithError (null)

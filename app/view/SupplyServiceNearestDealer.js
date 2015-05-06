@@ -34,7 +34,7 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'نموذج طلب تموين',
+                html: 'أقرب منفذ توزيع',
                 itemId: 'viewLbl'
             },
             {

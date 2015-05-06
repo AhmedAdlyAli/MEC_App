@@ -34,7 +34,7 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "نموذج طلب تموين",
+                "html": "أقرب منفذ توزيع",
                 "itemId": "viewLbl"
             },
             "name": "MyLabel",
