@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.RecallsView', {
                 itemCls: 'item-recall',
                 itemTpl: [
                     '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{ProductTitle}</span><br /><span class="brief">{PublishDate}</span></div>',
+                    '<div class=\'tpl-recall-2 FA\'><span>{ProductTitle}</span><br /></div>',
                     ''
                 ]
             }

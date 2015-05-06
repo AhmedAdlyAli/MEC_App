@@ -103,25 +103,27 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblPercentOfChange').setHtml(data.ChangePercent);
 
 
-        view.down('#lblLastUpdate2').setHtml(data.LastUpdated);
+        view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatJsonDate(data.LastUpdated));
+
+
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
 
         view.down('#pnlPDF').element.on('tap', function () {
-              window.open("http://www.google.com", "_blank");
-          });
+            window.open("http://www.google.com", "_blank");
+        });
 
 
         view.down('#pnlBrief').element.on('tap', function () {
 
 
-                    Ext.Viewport.getActiveItem().push({
-                    xtype: 'EconomicIndicatorsBrief',
-                    title: Ext.Global.GetFixedTitle(),
-                    data: data
-                });
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'EconomicIndicatorsBrief',
+                title: Ext.Global.GetFixedTitle(),
+                data: data
+            });
 
 
-          });
+        });
 
 
 
