@@ -81,7 +81,7 @@
                         "cls": [
                             "CompanyList"
                         ],
-                        "height": 195,
+                        "height": 260,
                         "itemCls": "item-link",
                         "itemId": "lstLinks2"
                     },

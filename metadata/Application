@@ -122,7 +122,8 @@
             "SupplyServiceView4",
             "SupplyServiceListing",
             "SupplyServiceHowTo",
-            "SupplyServiceDepartmentServices"
+            "SupplyServiceDepartmentServices",
+            "SupplyServiceNearestDealer"
         ]
     },
     "name": "Application",

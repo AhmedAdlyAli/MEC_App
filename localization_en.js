@@ -24,6 +24,7 @@ var localeEn =
 			items: [
 				{Name:"How to request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
+				{Name:"Nearest Dealer", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"Departnment Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
@@ -214,11 +215,17 @@ var localeEn =
 			[
 	
 				{itemId:"lblTitle", xtype: "label",value:"Supply Services Request Form"}
-	
-
 			]
 		},
-
+		{
+			itemId:"SupplyServiceNearestDealer",
+			description: "Supply Service Nearby Dealer",
+			items:
+			[
+	
+				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Dealers"}
+			]
+		},
 
 		{
 			itemId:"SupplyServiceListing",

@@ -24,6 +24,7 @@ var localeAr =
 			items: [
 				{Name:"كيفية الحصول علي خدمات التموين", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"نموذج طلب التموين", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
+				{Name:"أقرب منفذ توزيع", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"خدمات الادارة", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},

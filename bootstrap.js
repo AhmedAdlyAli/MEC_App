@@ -776,6 +776,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.SupplyServiceDepartmentServices": [],
   "MEC_App.view.SupplyServiceHowTo": [],
   "MEC_App.view.SupplyServiceListing": [],
+  "MEC_App.view.SupplyServiceNearestDealer": [],
   "MEC_App.view.SupplyServiceView1": [],
   "MEC_App.view.SupplyServiceView2": [],
   "MEC_App.view.SupplyServiceView3": [],
@@ -1766,6 +1767,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.SupplyServiceListing": [
     "widget.SupplyServiceListing"
+  ],
+  "MEC_App.view.SupplyServiceNearestDealer": [
+    "widget.SupplyServiceNearestDealer"
   ],
   "MEC_App.view.SupplyServiceView1": [
     "widget.SupplyServiceView1"
