@@ -432,11 +432,11 @@ Ext.define('MEC_App.view.MainNavView', {
 
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
 
-            if (node.closest('.x-carousel-item')) {
-                event.stopPropagation();
-            }
+            //if (node.closest('.x-carousel-item')) {
+                //event.stopPropagation();
+            //}
 
-            else {
+            //else {
                 if (event.direction == 'left' && theMenu.isHidden()) {
                     Ext.Viewport.showMenu('right');
                 } else if (event.direction == 'right') {
@@ -445,7 +445,7 @@ Ext.define('MEC_App.view.MainNavView', {
                     }
 
                 }
-            }
+            //}
 
         });
 
