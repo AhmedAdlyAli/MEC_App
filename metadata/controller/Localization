@@ -142,6 +142,30 @@
             },
             "name": "getLinks",
             "designerId": "14dd7585-4d70-49f3-9b0a-2133f7948e92"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "key"
+                ],
+                "fn": "GetMessage",
+                "implHandler": [
+                    "    if(Ext.Global.Localization) {",
+                    "        var loc = Ext.Global.Localization;",
+                    "",
+                    "        return loc.Messages[key];",
+                    "",
+                    "    }"
+                ]
+            },
+            "name": "GetMessage",
+            "designerId": "0bef0122-a0b5-40c5-9a55-64bb9559f4b4"
         }
     ]
 }

@@ -137,5 +137,6 @@ var localeAr =
 
 		}		
 		]
-
+,
+	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار'}
 }
