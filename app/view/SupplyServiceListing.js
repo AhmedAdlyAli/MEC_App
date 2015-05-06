@@ -50,7 +50,7 @@ Ext.define('MEC_App.view.SupplyServiceListing', {
                     {
                         xtype: 'list',
                         cls: 'CompanyList',
-                        height: 260,
+                        height: 325,
                         itemId: 'lstLinks2',
                         itemCls: 'item-link',
                         itemTpl: [

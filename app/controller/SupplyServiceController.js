@@ -47,6 +47,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "panel#SupplyServiceNearestDealer": {
                 initialize: 'onSupplyServiceNearestDealerInitialize'
+            },
+            "panel#SupplyServiceMyData": {
+                initialize: 'onSupplyServiceMyDataInitialize'
             }
         }
     },
@@ -589,6 +592,84 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');
         });
+
+
+
+
+
+
+    },
+
+    onSupplyServiceMyDataInitialize: function(component, eOpts) {
+        var me = this;
+        var view = component;
+
+
+        // localization
+        Ext.Localization.LocalizeView(view);
+
+
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
+
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+
+        var requestData=
+            {"qid":"21463400042",
+             "languageID":language,
+             "mobileDeviceID":"1231"};
+
+
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1.d);
+
+                console.log(json2);
+
+
+
+
+                        var store = new Ext.data.Store({
+                            data : json2.Data.FamilyMembers
+                        });
+
+                        var lst = view.down('#lstFamily');
+                        lst.setStore(store);
+
+                        lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                        lst.setScrollable(false);
+
+
+
+
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
+
+
+
+
+
 
 
 

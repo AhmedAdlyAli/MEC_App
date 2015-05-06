@@ -1,0 +1,72 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "SupplyServiceMyData",
+        "designer|userClassName": "SupplyServiceMyData",
+        "itemId": "SupplyServiceMyData",
+        "layout": "vbox",
+        "scrollable": "vertical"
+    },
+    "designerId": "275e654d-49b9-46d9-99e4-d217e94ecda8",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "بياناتي",
+                "itemId": "viewLbl"
+            },
+            "name": "MyLabel",
+            "designerId": "a5deeba0-eb66-448f-b5f3-e761390367a1"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemCls": "item-link",
+                "itemId": "lstFamily",
+                "layout|flex": 2
+            },
+            "name": "MyList",
+            "designerId": "63108c7a-8892-4420-8433-5da6cbd77152",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>{Name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "52458c29-d66c-46c7-91ee-851f021f3d0a"
+                }
+            ]
+        }
+    ]
+}

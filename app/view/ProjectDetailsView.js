@@ -18,54 +18,69 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
     alias: 'widget.ProjectDetailsView',
 
     requires: [
-        'Ext.Panel',
         'Ext.Img',
+        'Ext.Panel',
         'Ext.Label'
     ],
 
     config: {
+        cls: 'rtl',
         itemId: 'ProjectDetailsView',
         layout: 'vbox',
+        scrollable: 'vertical',
         items: [
             {
+                xtype: 'image',
+                cls: 'img',
+                height: 201,
+                itemId: 'imgDetails'
+            },
+            {
                 xtype: 'panel',
-                flex: 1,
-                cls: 'newsDetails',
+                cls: 'text-panel',
                 items: [
                     {
-                        xtype: 'image',
-                        cls: 'img',
-                        height: 201,
-                        itemId: 'imgDetails'
+                        xtype: 'label',
+                        cls: 'recall-label-1',
+                        html: 'اسم المبادرة'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'title',
-                                html: '',
-                                itemId: 'lblTitle'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        html: '',
+                        itemId: 'lblTitle'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'project-label-1',
+                        html: 'عن المبادرة'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblDescription'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblDescription'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'recall-label-3',
+                        html: 'بيانات الاتصال'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblUrl'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblUrl'
                     }
                 ]
             }

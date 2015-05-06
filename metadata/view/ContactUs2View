@@ -164,7 +164,7 @@
                                 ],
                                 "fn": "handler",
                                 "implHandler": [
-                                    "window.open('https://instagram.com/mec_qatar/','_system');",
+                                    "window.open('https://instagram.com/mec_qatar/','_blank','location=1');",
                                     "",
                                     "",
                                     ""
@@ -220,7 +220,7 @@
                                 "fn": "handler",
                                 "implHandler": [
                                     "window.open('https://twitter.com/mec_qatar','_system');",
-                                    "",
+                                    " ",
                                     ""
                                 ]
                             },

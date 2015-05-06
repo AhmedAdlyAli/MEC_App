@@ -6,11 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "rtl"
+        ],
         "designer|userAlias": "ViolationsDetailsView",
         "designer|userClassName": "ViolationsDetailsView",
         "id": null,
         "itemId": "ViolationsDetailsView",
         "layout": "vbox",
+        "scrollable": "vertical",
         "xtype": null
     },
     "name": "RecallDetailsView1",
@@ -24,6 +28,24 @@
     ],
     "cn": [
         {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "img"
+                ],
+                "height": 201,
+                "id": null,
+                "itemId": "imgDetails"
+            },
+            "name": "MyImg",
+            "designerId": "c55da9e0-4999-44fe-b07c-2a9be8d422b5"
+        },
+        {
             "type": "Ext.Panel",
             "reference": {
                 "name": "items",
@@ -32,15 +54,14 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "newsDetails"
-                ],
-                "layout|flex": 1
+                    "text-panel"
+                ]
             },
-            "name": "MyPanel3",
-            "designerId": "37d4398f-a648-45bb-9bf4-9d78a8afb429",
+            "name": "MyPanel1",
+            "designerId": "a489e09a-3338-40ff-be93-12563e0f5c65",
             "cn": [
                 {
-                    "type": "Ext.Img",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -48,118 +69,179 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "img"
+                            "violation-label-1"
                         ],
-                        "height": 201,
+                        "html": "المحل المخالف"
+                    },
+                    "name": "MyLabel3",
+                    "designerId": "ea5c0678-b13e-4e3b-a827-54ad6ece7ced"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container2"
+                        ],
                         "id": null,
-                        "itemId": "imgDetails"
+                        "itemId": "lblCompanyName"
                     },
-                    "name": "MyImg",
-                    "designerId": "c55da9e0-4999-44fe-b07c-2a9be8d422b5"
-                },
+                    "name": "MyLabel2",
+                    "designerId": "229651d4-6c1b-408f-ad7a-ba72d80dacf2"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "text-panel"
+                ]
+            },
+            "name": "MyPanel2",
+            "designerId": "bcd79383-e9a5-43ba-8943-69305d2352ad",
+            "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel1",
-                    "designerId": "a489e09a-3338-40ff-be93-12563e0f5c65",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblCompanyName"
-                            },
-                            "name": "MyLabel2",
-                            "designerId": "229651d4-6c1b-408f-ad7a-ba72d80dacf2"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "violation-label-2"
+                        ],
+                        "html": "المخالفة"
+                    },
+                    "name": "MyLabel11",
+                    "designerId": "0c456b81-7b12-412b-860d-c67af3966ce9"
                 },
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel2",
-                    "designerId": "bcd79383-e9a5-43ba-8943-69305d2352ad",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblViolation"
-                            },
-                            "name": "MyLabel4",
-                            "designerId": "877834c0-11e9-485b-9d12-075c59c1a00a"
-                        }
-                    ]
-                },
+                    "userConfig": {
+                        "cls": [
+                            "text-container2"
+                        ],
+                        "id": null,
+                        "itemId": "lblViolation"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "877834c0-11e9-485b-9d12-075c59c1a00a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "text-panel"
+                ]
+            },
+            "name": "MyPanel4",
+            "designerId": "61cbbe98-aaa0-42e7-8830-ab433b0a5803",
+            "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel4",
-                    "designerId": "61cbbe98-aaa0-42e7-8830-ab433b0a5803",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblPunishment"
-                            },
-                            "name": "MyLabel5",
-                            "designerId": "02858923-b6e7-43c4-af59-ec7aed692c18"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "violation-label-3"
+                        ],
+                        "html": "العقوبة"
+                    },
+                    "name": "MyLabel10",
+                    "designerId": "a9ea998e-10a5-4896-967b-9971529644ca"
                 },
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel",
-                    "designerId": "5ca57754-d6da-4ceb-8c0c-0b6b9ee024b5",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblDecisionNumber"
-                            },
-                            "name": "MyLabel5",
-                            "designerId": "9ea07576-6abd-478c-8c26-fa56efa076bd"
-                        }
-                    ]
+                    "userConfig": {
+                        "cls": [
+                            "text-container2"
+                        ],
+                        "id": null,
+                        "itemId": "lblPunishment"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "02858923-b6e7-43c4-af59-ec7aed692c18"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "text-panel"
+                ]
+            },
+            "name": "MyPanel",
+            "designerId": "5ca57754-d6da-4ceb-8c0c-0b6b9ee024b5",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "violation-label-4"
+                        ],
+                        "html": "رقم القرار"
+                    },
+                    "name": "MyLabel9",
+                    "designerId": "2c604c48-ec19-48f4-8e03-91ce86a6d093"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container2"
+                        ],
+                        "id": null,
+                        "itemId": "lblDecisionNumber"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "9ea07576-6abd-478c-8c26-fa56efa076bd"
                 }
             ]
         }

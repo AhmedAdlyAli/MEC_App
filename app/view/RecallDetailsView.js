@@ -18,55 +18,71 @@ Ext.define('MEC_App.view.RecallDetailsView', {
     alias: 'widget.RecallDetailsView',
 
     requires: [
-        'Ext.Panel',
         'Ext.Label',
-        'Ext.Img'
+        'Ext.Img',
+        'Ext.Panel'
     ],
 
     config: {
+        cls: 'rtl',
         itemId: 'RecallDetailsView',
         layout: 'vbox',
+        scrollable: 'vertical',
         items: [
             {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: '',
+                itemId: 'lblTitle'
+            },
+            {
+                xtype: 'image',
+                cls: 'img',
+                height: 201,
+                itemId: 'imgDetails'
+            },
+            {
                 xtype: 'panel',
-                flex: 1,
-                cls: 'newsDetails',
+                cls: 'text-panel',
                 items: [
                     {
                         xtype: 'label',
-                        cls: 'title',
-                        html: '',
-                        itemId: 'lblTitle'
+                        cls: 'recall-label-1',
+                        html: 'الخلل'
                     },
                     {
-                        xtype: 'image',
-                        cls: 'img',
-                        height: 201,
-                        itemId: 'imgDetails'
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblDetails'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'recall-label-2',
+                        html: 'الاجراء'
                     },
                     {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblDetails'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                itemId: 'lblProdcedure'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblProdcedure'
                     },
                     {
                         xtype: 'panel',
+                        cls: 'text-panel',
                         items: [
                             {
                                 xtype: 'label',
+                                cls: 'recall-label-3',
+                                html: 'التواصل'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'text-container2',
                                 itemId: 'lblContact'
                             }
                         ]

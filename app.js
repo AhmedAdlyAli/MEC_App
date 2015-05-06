@@ -110,7 +110,8 @@ Ext.application({
         'SupplyServiceListing',
         'SupplyServiceHowTo',
         'SupplyServiceDepartmentServices',
-        'SupplyServiceNearestDealer'
+        'SupplyServiceNearestDealer',
+        'SupplyServiceMyData'
     ],
     controllers: [
         'HomeController',

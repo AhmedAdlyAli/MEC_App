@@ -6,11 +6,15 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "rtl"
+        ],
         "designer|userAlias": "RecallDetailsView",
         "designer|userClassName": "RecallDetailsView",
         "id": null,
         "itemId": "RecallDetailsView",
         "layout": "vbox",
+        "scrollable": "vertical",
         "xtype": null
     },
     "name": "NewsDetailsView1",
@@ -24,6 +28,43 @@
     ],
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "height": null,
+                "html": "",
+                "id": null,
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel",
+            "designerId": "eb54555a-4926-4431-a576-6094ffb69f29"
+        },
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "img"
+                ],
+                "height": 201,
+                "id": null,
+                "itemId": "imgDetails"
+            },
+            "name": "MyImg",
+            "designerId": "eb54ef02-1124-4d41-a06a-bb8127b90f9f"
+        },
+        {
             "type": "Ext.Panel",
             "reference": {
                 "name": "items",
@@ -32,12 +73,11 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "newsDetails"
-                ],
-                "layout|flex": 1
+                    "text-panel"
+                ]
             },
-            "name": "MyPanel3",
-            "designerId": "f7a8d18f-b853-4495-a266-67c2347d1374",
+            "name": "MyPanel1",
+            "designerId": "135ae96d-ccad-4e9c-b1da-e5894bb0518d",
             "cn": [
                 {
                     "type": "Ext.Label",
@@ -48,18 +88,15 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "title"
+                            "recall-label-1"
                         ],
-                        "height": null,
-                        "html": "",
-                        "id": null,
-                        "itemId": "lblTitle"
+                        "html": "الخلل"
                     },
-                    "name": "MyLabel",
-                    "designerId": "eb54555a-4926-4431-a576-6094ffb69f29"
+                    "name": "MyLabel1",
+                    "designerId": "7b7dd1ed-05a5-4c6f-b62a-b7b8b8e7c646"
                 },
                 {
-                    "type": "Ext.Img",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -67,14 +104,63 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "img"
+                            "text-container2"
                         ],
-                        "height": 201,
                         "id": null,
-                        "itemId": "imgDetails"
+                        "itemId": "lblDetails"
                     },
-                    "name": "MyImg",
-                    "designerId": "eb54ef02-1124-4d41-a06a-bb8127b90f9f"
+                    "name": "MyLabel2",
+                    "designerId": "afde3734-1d15-47f8-af06-fc2c9d0930f7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "text-panel"
+                ]
+            },
+            "name": "MyPanel2",
+            "designerId": "ba203eda-a0cf-4a6b-b2b6-48c1e36fecb5",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "recall-label-2"
+                        ],
+                        "html": "الاجراء"
+                    },
+                    "name": "MyLabel7",
+                    "designerId": "d5941c43-3f2e-4f54-b8dc-b82f2b60fc1f"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container2"
+                        ],
+                        "id": null,
+                        "itemId": "lblProdcedure"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "d3d8d4ee-d839-4b11-afb5-247475bfb3b5"
                 },
                 {
                     "type": "Ext.Panel",
@@ -83,58 +169,11 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "name": "MyPanel1",
-                    "designerId": "135ae96d-ccad-4e9c-b1da-e5894bb0518d",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblDetails"
-                            },
-                            "name": "MyLabel2",
-                            "designerId": "afde3734-1d15-47f8-af06-fc2c9d0930f7"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
+                    "userConfig": {
+                        "cls": [
+                            "text-panel"
+                        ]
                     },
-                    "codeClass": null,
-                    "name": "MyPanel2",
-                    "designerId": "ba203eda-a0cf-4a6b-b2b6-48c1e36fecb5",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": null,
-                                "itemId": "lblProdcedure"
-                            },
-                            "name": "MyLabel4",
-                            "designerId": "d3d8d4ee-d839-4b11-afb5-247475bfb3b5"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
                     "name": "MyPanel4",
                     "designerId": "ab3896d9-5d48-4067-aaf2-1406b8f488c4",
                     "cn": [
@@ -146,6 +185,25 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "recall-label-3"
+                                ],
+                                "html": "التواصل"
+                            },
+                            "name": "MyLabel8",
+                            "designerId": "e2b4b4bd-750a-4204-ad18-b86078cb137e"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "text-container2"
+                                ],
                                 "id": null,
                                 "itemId": "lblContact"
                             },
