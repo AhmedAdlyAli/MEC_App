@@ -20,6 +20,7 @@ Ext.define('MEC_App.view.GoodsPricesView', {
     requires: [
         'Ext.Label',
         'Ext.tab.Panel',
+        'Ext.tab.Bar',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -37,7 +38,8 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'أسعار السلع الاستهلاكية'
+                html: 'أسعار السلع الاستهلاكية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'tabpanel',
@@ -45,6 +47,14 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                     'rtl',
                     'tap-panel'
                 ],
+                itemId: 'GoodsPricesList',
+                tabBar: {
+                    docked: 'top',
+                    layout: {
+                        type: 'hbox',
+                        pack: 'center'
+                    }
+                },
                 items: [
                     {
                         xtype: 'container',
@@ -89,6 +99,14 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

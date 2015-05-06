@@ -36,7 +36,8 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'مؤشرات استهلاكية'
+                html: 'مؤشرات استهلاكية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -74,11 +75,11 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:'النشرة اليومية',Url:'DailyReportView'},
-                     {Name:'اين تتسوق',Url:'WhereToShopView'},
-                     {Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com'}
-                    ];
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
             data : links

@@ -44,7 +44,7 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetAllShops?culture=ar&pageIndex=0&pageSize=20',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetAllShops?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 
@@ -74,7 +74,7 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture=ar&pageIndex=0&pageSize=20',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 

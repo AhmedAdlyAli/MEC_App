@@ -31,7 +31,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "مؤشرات استهلاكية"
+                "html": "مؤشرات استهلاكية",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "475736b9-3be3-4d72-a5fb-a2ab712033e2"
@@ -112,11 +113,11 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
+                    "Ext.Localization.LoadLocalization();",
                     "",
-                    "var links = [{Name:'النشرة اليومية',Url:'DailyReportView'},",
-                    "             {Name:'اين تتسوق',Url:'WhereToShopView'},",
-                    "             {Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com'}",
-                    "            ];",
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "var links = Ext.Localization.getLinks(this);",
                     "",
                     "var store = new Ext.data.Store({",
                     "    data : links",

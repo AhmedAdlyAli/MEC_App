@@ -57,7 +57,7 @@
                         "ui": null
                     },
                     "name": "MyCarousel",
-                    "designerId": "11290aad-96fb-4058-a8f6-86dec41cc3f9",
+                    "designerId": "c82447c1-f5d1-4f6e-ac3f-76b9e88690d5",
                     "cn": [
                         {
                             "type": "Ext.Panel",
@@ -75,7 +75,7 @@
                                 "itemId": "pnlNews"
                             },
                             "name": "MyPanel1",
-                            "designerId": "a8245f08-2e06-4951-a7b6-299ee637e8fb"
+                            "designerId": "0cd35951-2fe0-487c-ac98-cfb05c86e882"
                         },
                         {
                             "type": "Ext.Panel",
@@ -93,7 +93,7 @@
                                 "itemId": "pnlNews1"
                             },
                             "name": "MyPanel5",
-                            "designerId": "07bc5351-96ca-4d67-a532-5fb1ece27abe"
+                            "designerId": "c78de5f0-9f98-4659-bb01-dc787b21f297"
                         },
                         {
                             "type": "Ext.Panel",
@@ -111,7 +111,7 @@
                                 "itemId": "pnlNews2"
                             },
                             "name": "MyPanel9",
-                            "designerId": "58de5c7f-6f8b-4fc4-80d7-fe571570ca36"
+                            "designerId": "b79e06be-af3c-4d9c-ac25-1921da799205"
                         },
                         {
                             "type": "basiceventbinding",
@@ -132,7 +132,7 @@
                                 "name": "initialize"
                             },
                             "name": "onNewsCarouselInitialize",
-                            "designerId": "03d6ae37-79bd-404b-963c-75775347b75e"
+                            "designerId": "aa17ae18-c4a1-4255-8bbe-00806521788a"
                         },
                         {
                             "type": "basiceventbinding",
@@ -153,7 +153,7 @@
                                 "name": "activeitemchange"
                             },
                             "name": "onNewsCarouselActiveItemChange",
-                            "designerId": "4531c171-08e6-441f-9350-4f8b2a66e7e2"
+                            "designerId": "1f55e0b7-1ac9-4da6-8408-fd62e9404ddb"
                         }
                     ]
                 },
@@ -172,7 +172,7 @@
                         "layout|flex": 2
                     },
                     "name": "MyPanel2",
-                    "designerId": "24c01667-166b-4058-9340-06c41d663814",
+                    "designerId": "87c9e345-c1c2-4441-83eb-6382b9e673c6",
                     "cn": [
                         {
                             "type": "Ext.Panel",
@@ -186,7 +186,7 @@
                                 "layout|flex": 1
                             },
                             "name": "MyPanel3",
-                            "designerId": "234d9518-89af-4723-b2c1-3fb37d7e7cd7",
+                            "designerId": "1c69a7a5-e133-44cc-bc5f-426d3f99f573",
                             "cn": [
                                 {
                                     "type": "Ext.Panel",
@@ -203,7 +203,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel17",
-                                    "designerId": "2c8ca6ee-6c02-4c40-ac3b-523f1039fb94",
+                                    "designerId": "5fa8bfa3-784b-4e0c-a742-14a1224c9345",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -219,7 +219,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel19",
-                                            "designerId": "118e3046-733d-401c-9452-294bdb5a0528"
+                                            "designerId": "637c4a61-d93e-495e-9172-837c3d2d5160"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -239,7 +239,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
-                                            "designerId": "24b6ed2f-d170-436f-9aca-f13cb9e5728f"
+                                            "designerId": "e5ac3362-5c8a-45af-9b0b-50890ed9f959"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -259,7 +259,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton16",
-                                            "designerId": "308ff7eb-ca36-47a2-b3e6-6ba5408da8d5"
+                                            "designerId": "736a9408-3708-40b0-92ec-28d9dcfb41fb"
                                         }
                                     ]
                                 },
@@ -278,7 +278,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel18",
-                                    "designerId": "8af20715-12af-439f-a9ac-5cc745118fff",
+                                    "designerId": "48ccc3c0-ac8a-4690-a1c4-68141ba83b35",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -294,7 +294,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel20",
-                                            "designerId": "a82ce1e7-0890-4fc3-b762-06d993e977ef"
+                                            "designerId": "7eb0c2d5-24bb-452d-af9e-9c9a7551181d"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -313,7 +313,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
-                                            "designerId": "49ab43c9-ac4b-42a3-a6b2-e9f7cfda711b"
+                                            "designerId": "c58d646c-6f5b-4bac-a1e8-87f5093eea2e"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -333,7 +333,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton15",
-                                            "designerId": "620f390a-5355-46d1-ab6d-a1f5672c9a46"
+                                            "designerId": "d27245a9-8db4-4f38-be76-c916193869c9"
                                         }
                                     ]
                                 }
@@ -351,7 +351,7 @@
                                 "layout|flex": 1
                             },
                             "name": "MyPanel",
-                            "designerId": "5e3d47f0-9934-4f3c-a94a-b144b87f137b",
+                            "designerId": "469d4617-82fa-4c5b-b930-c67e88d80dc4",
                             "cn": [
                                 {
                                     "type": "Ext.Panel",
@@ -368,7 +368,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel17",
-                                    "designerId": "e87d5573-7035-40b7-981d-73bf9239fc52",
+                                    "designerId": "6486e926-b7b6-497f-93d2-9fb334bacd9e",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -384,7 +384,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel19",
-                                            "designerId": "1fa7486c-8fc4-41f0-bf84-a04792dfee39"
+                                            "designerId": "c7a45b3d-9124-4e8a-8230-92130c071a72"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -403,7 +403,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
-                                            "designerId": "e9163652-6cee-4ca5-a962-b97e0efd5b0a"
+                                            "designerId": "941755a9-2965-4e9c-b341-d26246ac747e"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -423,7 +423,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton10",
-                                            "designerId": "a2c09e83-2ab5-4ac6-b0d4-f9569d92df48"
+                                            "designerId": "bc5e747f-4517-44f4-a8d3-f6307ac68849"
                                         }
                                     ]
                                 },
@@ -443,7 +443,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel18",
-                                    "designerId": "5cb0ec10-bcaf-4aeb-bdd4-0dd26caf7bc0",
+                                    "designerId": "3421b558-3153-4449-8319-2e0fb4da807c",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -459,7 +459,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel20",
-                                            "designerId": "ce0fe6f0-93ba-46f9-8bf5-0a37df0699ce"
+                                            "designerId": "ee9c121f-2105-4fb0-ab11-086273deb4a6"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -478,7 +478,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
-                                            "designerId": "b1ca1ba9-7e97-4ab6-9cb6-db41bbd62e55"
+                                            "designerId": "ef5b3a77-235a-4713-a4e0-150b4e1a3fac"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -498,7 +498,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton6",
-                                            "designerId": "fd6e15d8-9852-4c6c-9476-6ea9ba42a9d5"
+                                            "designerId": "013c2b2c-9206-4376-a9a2-315bc63579b0"
                                         }
                                     ]
                                 }
@@ -516,7 +516,7 @@
                                 "layout|flex": 1
                             },
                             "name": "MyPanel4",
-                            "designerId": "c604a83c-f4fd-4908-9cc5-38eeaa28e493",
+                            "designerId": "59a488b8-c39a-4f26-bf41-0d2e9df678df",
                             "cn": [
                                 {
                                     "type": "Ext.Panel",
@@ -534,7 +534,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel17",
-                                    "designerId": "849275a0-337c-4290-9c1a-9bb6e41940b6",
+                                    "designerId": "af1b9f7e-8293-408c-b228-c795f2d7e726",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -550,7 +550,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel19",
-                                            "designerId": "882d6f87-fe17-4bf4-b40c-b44ea46f67be"
+                                            "designerId": "413311d1-3ed0-40aa-b33b-06a6a613f580"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -569,7 +569,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel3",
-                                            "designerId": "5d691a91-c27a-4085-b5e3-0dd55b3c5502"
+                                            "designerId": "263aae88-0a26-42c0-8506-ec68cb455ed1"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -589,7 +589,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton5",
-                                            "designerId": "74698546-e64a-468b-b2aa-5d3aba29804f"
+                                            "designerId": "f928275d-987f-4432-891c-e0e65f062801"
                                         }
                                     ]
                                 },
@@ -609,7 +609,7 @@
                                         "layout|flex": 1
                                     },
                                     "name": "MyPanel18",
-                                    "designerId": "f1d1bb09-41f2-484f-a8ec-b76dafd644f4",
+                                    "designerId": "fa3d2036-43d9-480d-97de-6c961780430b",
                                     "cn": [
                                         {
                                             "type": "Ext.Panel",
@@ -625,7 +625,7 @@
                                                 "layout|flex": 2
                                             },
                                             "name": "MyPanel20",
-                                            "designerId": "6f01c628-2a21-498b-83c2-2c6343061bd1"
+                                            "designerId": "71355838-8537-4406-bc33-e8ef17a0a953"
                                         },
                                         {
                                             "type": "Ext.Label",
@@ -644,7 +644,7 @@
                                                 "layout|flex": 1
                                             },
                                             "name": "MyLabel4",
-                                            "designerId": "981be17a-aadf-42fc-af9b-d2980b0f6659"
+                                            "designerId": "5070b90e-2f76-4e28-9e1c-06eb24c03b93"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -664,7 +664,7 @@
                                                 "top": 0
                                             },
                                             "name": "MyButton4",
-                                            "designerId": "41d68f49-9dc5-48ba-9caa-7bbe17080fe0"
+                                            "designerId": "4c59e933-0289-477f-a634-797931b8978e"
                                         }
                                     ]
                                 }
@@ -688,7 +688,7 @@
                         "name": "painted"
                     },
                     "name": "onPnlMainPainted",
-                    "designerId": "b342f58c-5d46-4ed2-9b98-9cb0d3b51e64"
+                    "designerId": "6b578398-eac0-4594-9f76-b827bbee7870"
                 }
             ]
         },
@@ -823,6 +823,31 @@
             },
             "name": "onMainNavPush",
             "designerId": "3e5c59ce-1690-45dc-a159-b617d5d56cac"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainNavViewActiveItemChange",
+                "implHandler": [
+                    "",
+                    "if(value.getId() == 'pnlMain' && oldValue.getId() == 'SettingsView') {",
+                    "",
+                    "    Ext.Localization.LoadLocalization();",
+                    "    Ext.Localization.LocalizeView(container);",
+                    "    Ext.Localization.LocalizeView(Ext.Viewport.getMenus().right);",
+                    "",
+                    "}",
+                    ""
+                ],
+                "name": "activeitemchange"
+            },
+            "name": "onMainNavViewActiveItemChange",
+            "designerId": "ccc6e08d-b7da-45fc-aaa2-d091c630b10d"
         }
     ]
 }

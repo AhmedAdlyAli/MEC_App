@@ -31,7 +31,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "أسعار السلع الاستهلاكية"
+                "html": "أسعار السلع الاستهلاكية",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "4be2aa30-3c04-49e3-b147-93b79a661d16"
@@ -47,11 +48,26 @@
                 "cls": [
                     "rtl",
                     "tap-panel"
-                ]
+                ],
+                "itemId": "GoodsPricesList"
             },
             "name": "MyTabPanel",
             "designerId": "b84de7bf-b896-46c5-acfb-84f0a0f67b86",
             "cn": [
+                {
+                    "type": "Ext.tab.Bar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "docked": "top"
+                    },
+                    "name": "MyTabBar",
+                    "designerId": "f3016a60-3f72-459c-a915-1cb595d20449"
+                },
                 {
                     "type": "Ext.Container",
                     "reference": {
@@ -167,6 +183,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "f976275f-2aa4-41d9-838f-1037703c0d60"
         }
     ]
 }

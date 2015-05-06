@@ -97,7 +97,7 @@ body {
 
 .home-header,
 .home-header2,
-.home-header3 {
+.home-header3{
     direction: rtl;
     background: url(../images/home-header-bg.jpg);
     background-size: cover;
@@ -1584,6 +1584,32 @@ background: url(../images/toplogo.png) no-repeat center top;
             direction: ltr;
         }
     }
+    
+    .item-shop,
+    .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
+
+        padding-top:1em;
+        padding-bottom:1em;
+        padding-left:3em;
+        padding-right:0;
+        background: url(../images/request.png) no-repeat 4% center;
+
+        .tpl-shope-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
+    }
+
+    .item-product, .item-product.x-list-item.x-item-selected.x-list-item-tpl{
+        padding-top:1em;
+        padding-bottom:1em;
+        padding-left:3em;
+        padding-right:0;
+        background: url(../images/request.png) no-repeat 4% center;
+
+        .tpl-product-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
+    }
 
 }
 
@@ -1740,7 +1766,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .project-label-1{
         padding:0 3em 0 0;
-        color: #6f2f51; 
+        color: #6f2f51;
         padding-top:1em;
         font-weight:bold;
         background: url(../images/pro1.png) no-repeat 96% 90%;
