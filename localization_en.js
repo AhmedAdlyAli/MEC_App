@@ -72,6 +72,32 @@ var localeEn =
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
+		},
+
+		{
+			itemId:"EconomicIndicatorsListing",
+			items: [
+				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView'},
+             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView'},
+             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView'}
+			]
+		},
+
+		{
+			itemId:"ConsumerIndicatorsListing",
+			items: [
+				{Name:'Daily Bulletin',Url:'DailyReportView'},
+             	{Name:'Where to Shop',Url:'WhereToShopView'},
+             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com'}
+			]
+		},
+
+		{
+			itemId:"DailyReportView",
+			items: [
+				{Name:'Daily Prices',Url:'DailyPricesView', Icon:'ico-daily-prices.png'},
+             	{Name:'Consumer Goods Prices',Url:'GoodsPricesView', Icon:'ico-consumer-goods.png'}
+			]
 		}
 
 	],
@@ -281,7 +307,6 @@ var localeEn =
 			description: "Supply Services view 4 - payment",
 			items:
 			[
-	
 				{itemId:"lblTitle", xtype: "label",value:"Supply Services"},
 				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"}
 
@@ -289,8 +314,55 @@ var localeEn =
 		},
 
 
+		{
+			itemId:"EconomicIndicatorsListing",
+			description: "Economic Indicators Listing",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Economic Indicators"},
+				{itemId:"lstItems", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
 
 
+		{
+			itemId:"ConsumerIndicatorsListing",
+			description: "Consumer Indicators Listing",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Consumer Indicators"},
+				{itemId:"lstItems", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+		{
+			itemId:"DailyReportView",
+			description: "Daily Report",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Daily Bulletin"},
+				{itemId:"lstItems", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+		{
+			itemId:"GoodsPricesView",
+			description: "Goods Prices",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Consumer Goods Prices"},
+				//{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
+				//{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
+				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lstShops", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lstProducts", xtype: "cls",value:"ltr-cls"}
+			]
+		},
 
 
 		{
@@ -314,11 +386,11 @@ var localeEn =
 			[
 				{itemId:"btnHome", "xtype": "button","value":"Home"},
 				{itemId:"btnServices", "xtype": "button","value":"Public Services"},
-				{itemId:"btnInquiry", "xtype": "button","value":"Inquiries & Publications"},
+				{itemId:"btnInquiry", "xtype": "button","value":"Inquiries & Extracts"},
 				{itemId:"btnMedai", "xtype": "button","value":"Media Center"},
-				{itemId:"btnContact", "xtype": "button","value":"Reports"},
-				{itemId:"btnProjects", "xtype": "button","value":"Contact Us"},
-				{itemId:"btnReports", "xtype": "button","value":"Reports"},
+				{itemId:"btnContact", "xtype": "button","value":"Connect"},
+				{itemId:"btnProjects", "xtype": "button","value":"Projects"},
+				{itemId:"btnReports", "xtype": "button","value":"Indicators & Reports"},
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
 				{itemId:"btnLogout", "xtype": "button","value":"Logout"}

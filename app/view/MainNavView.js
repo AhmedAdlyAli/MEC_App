@@ -316,6 +316,10 @@ Ext.define('MEC_App.view.MainNavView', {
             {
                 fn: 'onMainNavPush',
                 event: 'push'
+            },
+            {
+                fn: 'onMainNavViewActiveItemChange',
+                event: 'activeitemchange'
             }
         ]
     },
@@ -332,6 +336,18 @@ Ext.define('MEC_App.view.MainNavView', {
         //console.log(view);
 
         Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').hide();
+
+    },
+
+    onMainNavViewActiveItemChange: function(container, value, oldValue, eOpts) {
+
+        if(value.getId() == 'pnlMain' && oldValue.getId() == 'SettingsView') {
+
+            Ext.Localization.LoadLocalization();
+            Ext.Localization.LocalizeView(container);
+            Ext.Localization.LocalizeView(Ext.Viewport.getMenus().right);
+
+        }
 
     },
 

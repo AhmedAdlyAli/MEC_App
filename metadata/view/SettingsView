@@ -8,6 +8,7 @@
     "userConfig": {
         "designer|userAlias": "SettingsView",
         "designer|userClassName": "SettingsView",
+        "id": "SettingsView",
         "itemId": "SettingsView",
         "layout": "fit"
     },
@@ -254,6 +255,7 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
+                                            "",
                                             "var selectedLanguage = button.up('panel').down('segmentedbutton').getPressedButtons()[0].getItemId();",
                                             "",
                                             "if(selectedLanguage == 'ArabicButton') {",
@@ -266,8 +268,8 @@
                                             "    Ext.Global.LanguageFlag = 'en';",
                                             "}",
                                             "",
-                                            "var home = Ext.create('widget.MainNavView');",
-                                            "Ext.Viewport.setActiveItem(home);"
+                                            "Ext.Viewport.getActiveItem().reset();",
+                                            ""
                                         ]
                                     },
                                     "name": "handler",

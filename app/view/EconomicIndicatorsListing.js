@@ -33,7 +33,8 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'مؤشرات إقتصادية'
+                html: 'مؤشرات إقتصادية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -69,11 +70,11 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView'},
-                     {Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView'},
-                     {Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView'}
-                    ];
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
                             data : links

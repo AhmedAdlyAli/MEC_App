@@ -73,10 +73,69 @@ var localeAr =
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
+		},
+
+		{
+			itemId:"EconomicIndicatorsListing",
+			items: [
+				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView'},
+             	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView'},
+             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView'}
+			]
+		},
+
+		{
+			itemId:"ConsumerIndicatorsListing",
+			items: [
+				{Name:'النشرة اليومية',Url:'DailyReportView'},
+             	{Name:'اين تتسوق',Url:'WhereToShopView'},
+             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com'}
+			]
+		},
+
+		{
+			itemId:"DailyReportView",
+			items: [
+				{Name:'الاسعار اليومية',Url:'DailyPricesView', Icon:'ico-daily-prices.png'},
+             	{Name:'أسعار السلع الاستهلاكية',Url:'GoodsPricesView', Icon:'ico-consumer-goods.png'}
+			]
 		}
 	],
 	Views: [
-					
+			{
+			itemId:"MainNavView",
+			description: "Home...",
+			items:
+			[
+				{itemId:"homeServices", xtype: "label",value:"الخدمات العامة"},
+				{itemId:"btnMediaCenter", xtype: "label",value:"المركز الاعلامي"},
+				{itemId:"homeInquire", xtype: "label",value:"الاستعلامات والاصدارات"},
+				{itemId:"homeReports", xtype: "label",value:"المؤشرات والتقارير"},
+				{itemId:"btnProjects", xtype: "label",value:"المبادرات والمشاريع"},
+				{itemId:"homeContact", xtype: "label",value:"التواصل"}
+
+			]
+		},
+
+		{
+			itemId:"SideMenu",
+			description: "Side Menu...",
+			items:
+			[
+				{itemId:"btnHome", "xtype": "button","value":"الرئيسية"},
+				{itemId:"btnServices", "xtype": "button","value":"الخدمات العامة"},
+				{itemId:"btnInquiry", "xtype": "button","value":"المركز الاعلامي"},
+				{itemId:"btnMedai", "xtype": "button","value":"الاستعلامات والاصدارات"},
+				{itemId:"btnContact", "xtype": "button","value":"التواصل"},
+				{itemId:"btnProjects", "xtype": "button","value":"المبادرات والمشاريع"},
+				{itemId:"btnReports", "xtype": "button","value":"المؤشرات والتقارير"},
+				{itemId:"btnSettings", "xtype": "button","value":"الاعدادات"},
+				{itemId:"btnLogin", "xtype": "button","value":"تسجيل الدخول"},
+				{itemId:"btnLogout", "xtype": "button","value":"تسجيل الخروج"}
+
+			]
+
+		}		
 		]
 ,
 	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار'}

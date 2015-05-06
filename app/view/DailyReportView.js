@@ -33,15 +33,17 @@ Ext.define('MEC_App.view.DailyReportView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'النشرة اليومية'
+                html: 'النشرة اليومية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
                 cls: 'CompanyList',
                 height: '100%',
                 itemId: 'lstItems',
+                itemCls: 'item-link',
                 itemTpl: [
-                    '<div class=\'CompanyListItem\'>{Name}</div>'
+                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                 ]
             }
         ],
@@ -72,10 +74,11 @@ Ext.define('MEC_App.view.DailyReportView', {
     initialize: function() {
         this.callParent();
 
+        Ext.Localization.LoadLocalization();
 
-        var links = [{Name:'الاسعار اليومية',Url:'DailyPricesView'},
-                     {Name:'أسعار السلع الاستهلاكية',Url:'GoodsPricesView'}
-                    ];
+        Ext.Localization.LocalizeView(this);
+
+        var links = Ext.Localization.getLinks(this);
 
         var store = new Ext.data.Store({
                             data : links

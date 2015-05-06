@@ -26,6 +26,7 @@ Ext.define('MEC_App.view.SettingsView', {
     ],
 
     config: {
+        id: 'SettingsView',
         itemId: 'SettingsView',
         layout: 'fit',
         items: [
@@ -108,6 +109,7 @@ Ext.define('MEC_App.view.SettingsView', {
                             {
                                 xtype: 'button',
                                 handler: function(button, e) {
+
                                     var selectedLanguage = button.up('panel').down('segmentedbutton').getPressedButtons()[0].getItemId();
 
                                     if(selectedLanguage == 'ArabicButton') {
@@ -120,8 +122,8 @@ Ext.define('MEC_App.view.SettingsView', {
                                         Ext.Global.LanguageFlag = 'en';
                                     }
 
-                                    var home = Ext.create('widget.MainNavView');
-                                    Ext.Viewport.setActiveItem(home);
+                                    Ext.Viewport.getActiveItem().reset();
+
                                 },
                                 cls: 'action-button',
                                 docked: 'bottom',
