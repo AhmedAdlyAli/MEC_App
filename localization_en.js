@@ -185,7 +185,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Public Services"},
-				{itemId:"lstLinks", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lstLinks", xtype: "cls",value:"ltr-cls"}
 
 			]
 		},
@@ -197,7 +197,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblConsumer", xtype: "label",value:"Consumer Services"},
-				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"}
 
 			]
 		},
@@ -282,8 +282,8 @@ var localeEn =
 			items:
 			[
 	
-				{itemId:"lblTitle", xtype: "label",value:"Supply Services"}
-	
+				{itemId:"lblTitle", xtype: "label",value:"Supply Services"},
+				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"}
 
 			]
 		},
