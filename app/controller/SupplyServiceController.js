@@ -229,6 +229,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Localization.LocalizeView(view);
             Ext.AnimationHelper.ShowLoading();
 
+
+            var mapPanel = view.down('#mapDealers');
+            var gMap = mapPanel.getMap();
+
+
         navigator.geolocation.getCurrentPosition(function(position){
 
 
@@ -237,8 +242,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Function.defer(function(){
 
 
-            var mapPanel = view.down('#mapDealers');
-            var gMap = mapPanel.getMap();
 
                   gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
                   gMap.setZoom(11);
@@ -356,8 +359,29 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         }, function(error){
-                alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
+                //alert('code: '    + error.code    + '\n' +
+                //  'message: ' + error.message + '\n');
+
+
+
+                //alert('code: '    + error.code    + '\n' +
+                  //'message: ' + error.message + '\n');
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+
+
+             var m = Ext.Localization.GetMessage('LocationNotEnabled');
+                            Ext.device.Notification.show({
+                                title: 'خطأ',
+                                buttons:["موافق"],
+                                message: m
+                            });
+
+          Ext.AnimationHelper.HideLoading();
+
+
         });
 
     },
@@ -555,8 +579,15 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         Ext.AnimationHelper.ShowLoading();
 
+
+            var mapPanel = view.down('#mapDealers');
+            var gMap = mapPanel.getMap();
+
+
+
         // get user location then get near dealers
         navigator.geolocation.getCurrentPosition(function(position){
+
 
 
 
@@ -564,8 +595,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Function.defer(function(){
 
 
-            var mapPanel = view.down('#mapDealers');
-            var gMap = mapPanel.getMap();
+
 
             gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
             gMap.setZoom(11);
@@ -655,8 +685,24 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         }, function(error){
-                alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
+
+                //alert('code: '    + error.code    + '\n' +
+                  //'message: ' + error.message + '\n');
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+
+
+             var m = Ext.Localization.GetMessage('LocationNotEnabled');
+                            Ext.device.Notification.show({
+                                title: 'خطأ',
+                                buttons:["موافق"],
+                                message: m
+                            });
+
+          Ext.AnimationHelper.HideLoading();
+
         });
 
 
