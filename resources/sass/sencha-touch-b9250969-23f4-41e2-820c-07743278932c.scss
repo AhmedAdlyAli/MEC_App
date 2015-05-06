@@ -623,13 +623,14 @@ body {
     }
 
     .lstng-title {
-        font-size: 13px;
+        font-size: 15px;
         line-height: 20px;
+        overflow: hidden;
     }
 
     .lstng-brief {
         .x-innerhtml {
-            font-size: 12px;
+            font-size: 14px;
             color: #898989;
             white-space: nowrap;
             overflow: hidden;
@@ -661,8 +662,7 @@ body {
         }
     }
 
-    .x-item-pressed,
-    .x-item-selected {
+    .x-item-pressed {
         .x-dock-horizontal {
             background: #711b44 !important;
         }
@@ -1581,7 +1581,7 @@ background: url(../images/toplogo.png) no-repeat center top;
             direction: ltr;
         }
     }
-    
+
     .item-shop,
     .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
 

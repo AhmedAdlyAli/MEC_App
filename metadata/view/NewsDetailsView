@@ -11,6 +11,7 @@
         "id": "NewsDetailsView",
         "itemId": "NewsDetailsView",
         "layout": "vbox",
+        "scrollable": null,
         "xtype": null
     },
     "name": "MyPanel2",
@@ -34,9 +35,17 @@
                 "cls": [
                     "newsDetails"
                 ],
-                "layout|flex": 1
+                "layout": "vbox",
+                "layout|flex": 1,
+                "scrollable": [
+                    "{direction: 'vertical',",
+                    "directionLock: true}"
+                ]
             },
             "name": "MyPanel3",
+            "configAlternates": {
+                "scrollable": "object"
+            },
             "designerId": "e1713cbf-df44-44eb-910b-8ff034c9fcd1",
             "cn": [
                 {
@@ -67,7 +76,8 @@
                     "userConfig": {
                         "cls": [
                             "title-date-container"
-                        ]
+                        ],
+                        "scrollable": null
                     },
                     "name": "MyPanel",
                     "designerId": "9e033d4f-6bb0-40b9-9e3b-c4f02d92a412",
@@ -138,9 +148,12 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
+                    "",
                     "var data = this.getData();",
+                    "",
+                    "",
                     "this.down('#lblTitle').setHtml(data.NewsTitle);",
-                    "this.down('#lblDate').setHtml(data.NewsDate);",
+                    "this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));",
                     "this.down('#lblDetails').setHtml(data.NewsDescription);",
                     "this.down('#imgNews').setSrc(\"http://196.205.5.28:333/MEC/api/EconomyNews/Image/13\");",
                     ""
