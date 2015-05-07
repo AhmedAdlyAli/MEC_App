@@ -36,7 +36,8 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                 cls: 'inners-title',
                 docked: 'top',
                 html: 'كيفية الحصول علي خدمات التموين',
-                id: 'lblTitle'
+                id: 'lblTitle',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'panel',
@@ -56,6 +57,14 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

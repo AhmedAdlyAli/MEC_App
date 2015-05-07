@@ -80,7 +80,7 @@ Ext.define('MEC_App.controller.ProjectsController', {
         view.down('#lblTitle').setHtml(data.ProjectTitle);
         view.down('#lblDescription').setHtml(data.ProjectDescription);
         view.down('#lblUrl').setHtml(data.ProjectURL);
-        view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);
+        view.down('#imgDetails').setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/InitiativesAndProject/Image/"+data.Id);//.setSrc(this.getData().NewsImgUrl);
 
     }
 

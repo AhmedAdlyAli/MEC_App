@@ -36,7 +36,8 @@ Ext.define('MEC_App.view.SupplyServiceDepartmentServices', {
                 cls: 'inners-title',
                 docked: 'top',
                 html: 'خدمات الادارة',
-                id: 'lblTitle1'
+                id: 'lblTitle1',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'panel',
@@ -56,6 +57,14 @@ Ext.define('MEC_App.view.SupplyServiceDepartmentServices', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

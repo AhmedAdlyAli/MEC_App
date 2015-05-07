@@ -26,7 +26,7 @@ var localeEn =
 				{Name:"My Details", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"Nearest Dealer", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
-				{Name:"Departnment Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
+				{Name:"Department Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
 		{
@@ -59,7 +59,7 @@ var localeEn =
 				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'Trademark Report',Url:'http://www.google.com',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'Trademark Report',Url:'http://mec.gov.qa',OpenExternalWindow:true,Icon:'ico-trade.png'}
 			]
 		},
 
@@ -68,7 +68,7 @@ var localeEn =
 			items: [
 				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'Ministry Staff',Url:'http://www.google.com', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'Ministry Staff',Url:'http://mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
@@ -88,7 +88,7 @@ var localeEn =
 			items: [
 				{Name:'Daily Bulletin',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
              	{Name:'Where to Shop',Url:'WhereToShopView',Icon:'ico-where.png'},
-             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com',Icon:'ico-report.png'}
+             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://mec.gov.qa',Icon:'ico-report.png'}
 			]
 		},
 
@@ -699,6 +699,25 @@ var localeEn =
 				{itemId:"InitiativeName", xtype: "label",value:"Initiative Name"},
 				{itemId:"AboutInitiative", xtype: "label",value:"About Initiative"},
 				{itemId:"ContactInfo", xtype: "label",value:"Contact Information"}
+			]
+		},
+
+		{
+			itemId:"SupplyServiceHowTo",
+			description: "How to Request Supply Service",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"How to Request Supply Service"}
+			]
+		},
+
+		{
+			itemId:"SupplyServiceDepartmentServices",
+			description: "How to Request Supply Service",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Department Services"}
 			]
 		}
 

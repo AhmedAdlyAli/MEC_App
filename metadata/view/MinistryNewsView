@@ -58,7 +58,7 @@
             "userConfig": {
                 "designer|displayName": "itemTpl",
                 "implHandler": [
-                    "<div>{text}</div>"
+                    "<div></div>"
                 ]
             },
             "name": "itemTpl",
