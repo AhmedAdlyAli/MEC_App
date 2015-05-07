@@ -255,7 +255,18 @@ var localeEn =
 				
 				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
 				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
-
+				{itemId:"lbl3", "xtype": "label","value":"CR Expiry Date"},
+				{itemId:"lbl4", "xtype": "label","value":"CR Status"},
+				{itemId:"lbl5", "xtype": "label","value":"CR English Name"},
+				{itemId:"lbl6", "xtype": "label","value":"CR Arabic Name"},
+				{itemId:"lbl7", "xtype": "label","value":"Capital"},
+				{itemId:"lbl8", "xtype": "label","value":"CP Number"},
+				{itemId:"lbl9", "xtype": "label","value":"CP Status"},
+				{itemId:"lbl10", "xtype": "label","value":"CP Expiry Date"},
+				{itemId:"lbl11", "xtype": "label","value":"Establishment Date"},
+				{itemId:"lbl12", "xtype": "label","value":"Establishment Type"},
+				{itemId:"lbl13", "xtype": "label","value":"Legal Form"},
+				{itemId:"lbl14", "xtype": "label","value":"Establishment Status"},
 
 				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
 				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},

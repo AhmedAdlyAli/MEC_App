@@ -75,7 +75,7 @@ Ext.define('MEC_App.view.PrintOffsView3', {
 
             });
 
-            var tr= 'vpc_OrderInfo' +  data.recordID + '\n';
+            var tr= 'vpc_OrderInfo:+' +  data.recordID + '+\n';
             tr+= 'vpc_OrderInfo' + data.caseSerialNum + '_' + data.typeCode + '\n';
             tr+= 'vpc_Amount:'  +  data.fees    + '\n';
             tr+= 'locale' + Ext.Global.LanguageFlag ;

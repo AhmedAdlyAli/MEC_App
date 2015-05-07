@@ -312,6 +312,10 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         console.log(json);
 
+
+                                        alert(json.status);
+
+
                                         if(json.status==='Their is Active Cases for this account from the same case type !')
                                         {
 
