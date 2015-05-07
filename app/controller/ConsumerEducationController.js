@@ -26,6 +26,10 @@ Ext.define('MEC_App.controller.ConsumerEducationController', {
     },
 
     onConsumerEducationViewInitialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
+
+
+
         var view = component;//me.getMyBusinessView();
 
 
@@ -36,7 +40,7 @@ Ext.define('MEC_App.controller.ConsumerEducationController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/ConsumerEducation/GetAllConsumerEducations?culture=ar&pageSize=20&pageIndex=0',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/ConsumerEducation/GetAllConsumerEducations?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
             method : 'Get',
             success : function (response) {
 

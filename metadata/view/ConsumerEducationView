@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "ثقافة المستهلك"
+                "html": "ثقافة المستهلك",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "685c6b0d-a91a-46c4-8587-42d8335c2b6d"
@@ -67,13 +68,35 @@
                         "implHandler": [
                             "{ArticleTitle}",
                             "<br />",
-                            "<img class=\"img\" src=\"https://pbs.twimg.com/media/CDx2dQaWgAAf3xI.png\" />",
+                            "<img class=\"img\" src=\"{[this.getImgSrc(values.Id)]}\" />",
                             "",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "892c5620-c6e4-465a-9dcf-ff48a9a17b6f"
+                    "designerId": "892c5620-c6e4-465a-9dcf-ff48a9a17b6f",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "Id"
+                                ],
+                                "fn": "getImgSrc",
+                                "implHandler": [
+                                    "                            var src = Ext.Global.GetConfig('CMSWSUrl')+\"/ConsumerEducation/Image/\"+Id;",
+                                    "                            return src;"
+                                ]
+                            },
+                            "name": "getImgSrc",
+                            "designerId": "2d7c5e40-0965-40e2-a743-274a2e5f2aa4"
+                        }
+                    ]
                 }
             ]
         }

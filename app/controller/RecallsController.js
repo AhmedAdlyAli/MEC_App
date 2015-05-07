@@ -31,6 +31,8 @@ Ext.define('MEC_App.controller.RecallsController', {
     },
 
     onRecallsViewInitialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
+
         var view = component;//me.getMyBusinessView();
 
 
@@ -43,7 +45,7 @@ Ext.define('MEC_App.controller.RecallsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Recall/GetAllRecalls?culture=ar&pageSize=20&pageIndex=0',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Recall/GetAllRecalls?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
             method : 'Get',
             success : function (response) {
 
@@ -66,13 +68,23 @@ Ext.define('MEC_App.controller.RecallsController', {
     },
 
     onRecallDetailsViewInitialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
+
         var view = component;
         var data = view.getData();
+
+
         view.down('#lblTitle').setHtml(data.ProductTitle);
         view.down('#lblDetails').setHtml(data.ProductIssue);
         view.down('#lblProdcedure').setHtml(data.ConsumerProcedure);
         view.down('#lblContact').setHtml(data.ContactSupplier);
-        view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);
+        view.down('#imgDetails')
+        .setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/Recall/Image/"+data.Id);
+
+
+
+
+
 
 
     },

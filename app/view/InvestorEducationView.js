@@ -33,7 +33,8 @@ Ext.define('MEC_App.view.InvestorEducationView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'ثقافة المستثمر'
+                html: 'ثقافة المستثمر',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -41,12 +42,18 @@ Ext.define('MEC_App.view.InvestorEducationView', {
                 height: '100%',
                 itemId: 'lstEducation',
                 itemCls: 'item-education',
-                itemTpl: [
+                itemTpl: Ext.create('Ext.XTemplate', 
                     '{ArticleTitle}',
                     '<br />',
-                    '<img class="img" src="https://pbs.twimg.com/media/CDx2dQaWgAAf3xI.png" />',
-                    ''
-                ]
+                    '<img class="img" src="{[this.getImgSrc(values.Id)]}" />',
+                    '',
+                    {
+                        getImgSrc: function(Id) {
+                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/InvestorEducation/Image/"+Id;
+                            return src;
+                        }
+                    }
+                )
             }
         ]
     }

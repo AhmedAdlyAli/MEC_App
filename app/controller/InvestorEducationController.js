@@ -27,7 +27,7 @@ Ext.define('MEC_App.controller.InvestorEducationController', {
 
     onInvestorEducationViewInitialize: function(component, eOpts) {
         var view = component;//me.getMyBusinessView();
-
+        Ext.Localization.LocalizeView(view);
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -36,7 +36,7 @@ Ext.define('MEC_App.controller.InvestorEducationController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InvestorEducation/GetAllInvestorEducations?culture=ar&pageSize=20&pageIndex=0',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InvestorEducation/GetAllInvestorEducations?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
             method : 'Get',
             success : function (response) {
 

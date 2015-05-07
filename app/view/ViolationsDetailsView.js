@@ -18,9 +18,9 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
     alias: 'widget.ViolationsDetailsView',
 
     requires: [
+        'Ext.Label',
         'Ext.Img',
-        'Ext.Panel',
-        'Ext.Label'
+        'Ext.Panel'
     ],
 
     config: {
@@ -30,6 +30,12 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
         scrollable: 'vertical',
         items: [
             {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'المخالفات',
+                itemId: 'lblTitle'
+            },
+            {
                 xtype: 'image',
                 cls: 'img',
                 height: 201,
@@ -38,11 +44,13 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl1',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'violation-label-1',
-                        html: 'المحل المخالف'
+                        html: 'المحل المخالف',
+                        itemId: 'lbl1'
                     },
                     {
                         xtype: 'label',
@@ -54,11 +62,13 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl2',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'violation-label-2',
-                        html: 'المخالفة'
+                        html: 'المخالفة',
+                        itemId: 'lbl2'
                     },
                     {
                         xtype: 'label',
@@ -70,11 +80,13 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl3',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'violation-label-3',
-                        html: 'العقوبة'
+                        html: 'العقوبة',
+                        itemId: 'lbl3'
                     },
                     {
                         xtype: 'label',
@@ -86,11 +98,13 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl4',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'violation-label-4',
-                        html: 'رقم القرار'
+                        html: 'رقم القرار',
+                        itemId: 'lbl4'
                     },
                     {
                         xtype: 'label',

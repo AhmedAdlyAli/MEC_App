@@ -34,6 +34,8 @@ Ext.define('MEC_App.controller.ViolationsController', {
         var view = component;//me.getMyBusinessView();
 
 
+        Ext.Localization.LocalizeView(view);
+
         Ext.AnimationHelper.ShowLoading();
 
 
@@ -43,7 +45,7 @@ Ext.define('MEC_App.controller.ViolationsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Violation/GetAllViolations?culture=ar&pageSize=20&pageIndex=0',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Violation/GetAllViolations?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
             method : 'Get',
             success : function (response) {
 
@@ -67,6 +69,9 @@ Ext.define('MEC_App.controller.ViolationsController', {
 
     onViolationsDetailsViewInitialize: function(component, eOpts) {
         var view = component;
+        Ext.Localization.LocalizeView(view);
+
+
         var data = view.getData();
         view.down('#lblCompanyName').setHtml(data.CompanyName);
         view.down('#lblViolation').setHtml(data.Violations);

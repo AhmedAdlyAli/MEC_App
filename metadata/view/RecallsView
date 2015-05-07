@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "الاستدعاءات"
+                "html": "الاستدعاءات",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "c3af772a-6390-4275-963e-dc528f614aea"

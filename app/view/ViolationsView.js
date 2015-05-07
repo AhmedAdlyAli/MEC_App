@@ -33,7 +33,8 @@ Ext.define('MEC_App.view.ViolationsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'الاغلاقات الادارية'
+                html: 'الاغلاقات الادارية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -43,7 +44,7 @@ Ext.define('MEC_App.view.ViolationsView', {
                 itemCls: 'item-recall',
                 itemTpl: [
                     '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{CompanyName}</span><br /><span class="brief">{PublishDate}</span></div>',
+                    '<div class=\'tpl-recall-2 FA\'><span>{CompanyName}</span><br /></div>',
                     ''
                 ]
             }

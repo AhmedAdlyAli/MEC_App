@@ -323,6 +323,90 @@ var localeEn =
 		},
 
 		{
+			itemId:"RecallsView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Recalls"},
+				{itemId:"lstRecalls", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
+
+	{
+			itemId:"ViolationsView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Violations"},
+				{itemId:"lstViolations", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
+
+		{
+			itemId:"RecallDetailsView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Recalls"},
+				{itemId:"pnl1", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnl2", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnl3", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"lbl1", "xtype": "label","value":"Issue"},
+				{itemId:"lbl2", "xtype": "label","value":"Procedure"},
+				{itemId:"lbl3", "xtype": "label","value":"Contact the Owner"}
+
+			]
+		},
+
+
+				{
+			itemId:"ViolationsDetailsView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Violations"},
+				{itemId:"pnl1", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnl2", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnl3", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnl4", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"lbl1", "xtype": "label","value":"Violated Shop"},
+				{itemId:"lbl2", "xtype": "label","value":"Violation"},
+				{itemId:"lbl3", "xtype": "label","value":"Punishment"},
+				{itemId:"lbl4", "xtype": "label","value":"Decision Number"}
+
+			]
+		},
+
+		{
+			itemId:"ConsumerEducationView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Consumer Awareness"},
+				{itemId:"lstEducation", "xtype": "cls","value":"ltr-cls"}
+				
+
+			]
+		},
+
+		{
+			itemId:"InvestorEducationView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Investor Awareness"},
+				{itemId:"lstEducation", "xtype": "cls","value":"ltr-cls"}
+				
+
+			]
+		},
+
+
+
+
+		{
 			itemId:"LoginFomView",
 			description: "login form",
 			items:
