@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "ثقافة المستثمر"
+                "html": "ثقافة المستثمر",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "31b3a8b6-773f-43b9-8afc-ffb5728008ef"
@@ -67,12 +68,34 @@
                         "implHandler": [
                             "{ArticleTitle}",
                             "<br />",
-                            "<img class=\"img\" src=\"https://pbs.twimg.com/media/CDx2dQaWgAAf3xI.png\" />",
+                            "<img class=\"img\" src=\"{[this.getImgSrc(values.Id)]}\" />",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "9efc2f7b-064c-4a3d-ae6c-dff0e4e7dff7"
+                    "designerId": "9efc2f7b-064c-4a3d-ae6c-dff0e4e7dff7",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "Id"
+                                ],
+                                "fn": "getImgSrc",
+                                "implHandler": [
+                                    "                            var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InvestorEducation/Image/\"+Id;",
+                                    "                            return src;"
+                                ]
+                            },
+                            "name": "getImgSrc",
+                            "designerId": "e5196f29-df29-43fd-827a-222cd64d9bd2"
+                        }
+                    ]
                 }
             ]
         }

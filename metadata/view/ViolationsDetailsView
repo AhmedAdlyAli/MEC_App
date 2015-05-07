@@ -28,6 +28,23 @@
     ],
     "cn": [
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "المخالفات",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel",
+            "designerId": "fb240d0a-e39b-4f15-b0d3-c6ca38d751ab"
+        },
+        {
             "type": "Ext.Img",
             "reference": {
                 "name": "items",
@@ -55,7 +72,8 @@
             "userConfig": {
                 "cls": [
                     "text-panel"
-                ]
+                ],
+                "itemId": "pnl1"
             },
             "name": "MyPanel1",
             "designerId": "a489e09a-3338-40ff-be93-12563e0f5c65",
@@ -71,7 +89,8 @@
                         "cls": [
                             "violation-label-1"
                         ],
-                        "html": "المحل المخالف"
+                        "html": "المحل المخالف",
+                        "itemId": "lbl1"
                     },
                     "name": "MyLabel3",
                     "designerId": "ea5c0678-b13e-4e3b-a827-54ad6ece7ced"
@@ -105,7 +124,8 @@
             "userConfig": {
                 "cls": [
                     "text-panel"
-                ]
+                ],
+                "itemId": "pnl2"
             },
             "name": "MyPanel2",
             "designerId": "bcd79383-e9a5-43ba-8943-69305d2352ad",
@@ -121,7 +141,8 @@
                         "cls": [
                             "violation-label-2"
                         ],
-                        "html": "المخالفة"
+                        "html": "المخالفة",
+                        "itemId": "lbl2"
                     },
                     "name": "MyLabel11",
                     "designerId": "0c456b81-7b12-412b-860d-c67af3966ce9"
@@ -155,7 +176,8 @@
             "userConfig": {
                 "cls": [
                     "text-panel"
-                ]
+                ],
+                "itemId": "pnl3"
             },
             "name": "MyPanel4",
             "designerId": "61cbbe98-aaa0-42e7-8830-ab433b0a5803",
@@ -171,7 +193,8 @@
                         "cls": [
                             "violation-label-3"
                         ],
-                        "html": "العقوبة"
+                        "html": "العقوبة",
+                        "itemId": "lbl3"
                     },
                     "name": "MyLabel10",
                     "designerId": "a9ea998e-10a5-4896-967b-9971529644ca"
@@ -205,7 +228,8 @@
             "userConfig": {
                 "cls": [
                     "text-panel"
-                ]
+                ],
+                "itemId": "pnl4"
             },
             "name": "MyPanel",
             "designerId": "5ca57754-d6da-4ceb-8c0c-0b6b9ee024b5",
@@ -221,7 +245,8 @@
                         "cls": [
                             "violation-label-4"
                         ],
-                        "html": "رقم القرار"
+                        "html": "رقم القرار",
+                        "itemId": "lbl4"
                     },
                     "name": "MyLabel9",
                     "designerId": "2c604c48-ec19-48f4-8e03-91ce86a6d093"

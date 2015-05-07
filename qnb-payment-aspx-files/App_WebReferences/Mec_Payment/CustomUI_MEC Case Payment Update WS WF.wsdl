@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://siebel.com/CustomUI" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://siebel.com/CustomUI" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://siebel.com/CustomUI">
+      <xsd:element name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Input">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Transaction_spcResponse_spcCode" type="xsd:string" />
+            <xsd:element name="RequestResult" type="xsd:string" />
+            <xsd:element name="Authorization_spcID" type="xsd:string" />
+            <xsd:element name="Object_spcId" type="xsd:string" />
+            <xsd:element name="Card_spcType" type="xsd:string" />
+            <xsd:element name="Response_spcCode" type="xsd:string" />
+            <xsd:element name="Transaction_spcBatch_spcNumber" type="xsd:string" />
+            <xsd:element name="Card_spcNumber" type="xsd:string" />
+            <xsd:element name="Shopping_spcTransaction_spcNumber" type="xsd:string" />
+            <xsd:element name="Receipt_spcNumber" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Output">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Status" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Input">
+    <part name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Input" element="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Input" />
+  </message>
+  <message name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Output">
+    <part name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Output" element="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Output" />
+  </message>
+  <portType name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+    <operation name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+      <input message="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Input" />
+      <output message="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF_Output" />
+    </operation>
+  </portType>
+  <binding name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF" type="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+      <soap:operation soapAction="document/http://siebel.com/CustomUI:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+    <port name="MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF" binding="tns:MEC_spcCase_spcPayment_spcUpdate_spcWS_spcWF">
+      <soap:address location="http://172.16.2.118/eai_anon_ara/start.swe?SWEExtSource=SecureWebService&amp;SWEExtCmd=Execute" />
+    </port>
+  </service>
+</definitions>

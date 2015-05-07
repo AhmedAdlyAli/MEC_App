@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "الاغلاقات الادارية"
+                "html": "الاغلاقات الادارية",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "3dff6220-3968-4163-a06c-cd7c1006c14e"
@@ -66,7 +67,7 @@
                         "designer|displayName": "itemTpl",
                         "implHandler": [
                             "<div class='tpl-recall-1 FA'><img src=\"http://196.205.5.28:333/MEC/api//Recall/image/11\" /></div>",
-                            "<div class='tpl-recall-2 FA'><span>{CompanyName}</span><br /><span class=\"brief\">{PublishDate}</span></div>",
+                            "<div class='tpl-recall-2 FA'><span>{CompanyName}</span><br /></div>",
                             ""
                         ]
                     },

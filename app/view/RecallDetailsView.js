@@ -44,11 +44,13 @@ Ext.define('MEC_App.view.RecallDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl1',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'recall-label-1',
-                        html: 'الخلل'
+                        html: 'الخلل',
+                        itemId: 'lbl1'
                     },
                     {
                         xtype: 'label',
@@ -60,32 +62,36 @@ Ext.define('MEC_App.view.RecallDetailsView', {
             {
                 xtype: 'panel',
                 cls: 'text-panel',
+                itemId: 'pnl2',
                 items: [
                     {
                         xtype: 'label',
                         cls: 'recall-label-2',
-                        html: 'الاجراء'
+                        html: 'الاجراء',
+                        itemId: 'lbl2'
                     },
                     {
                         xtype: 'label',
                         cls: 'text-container2',
                         itemId: 'lblProdcedure'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'text-panel',
+                itemId: 'pnl3',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'recall-label-3',
+                        html: 'التواصل',
+                        itemId: 'lbl3'
                     },
                     {
-                        xtype: 'panel',
-                        cls: 'text-panel',
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'recall-label-3',
-                                html: 'التواصل'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'text-container2',
-                                itemId: 'lblContact'
-                            }
-                        ]
+                        xtype: 'label',
+                        cls: 'text-container2',
+                        itemId: 'lblContact'
                     }
                 ]
             }
