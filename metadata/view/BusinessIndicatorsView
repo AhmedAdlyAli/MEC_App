@@ -72,6 +72,7 @@
                             "header-cell1"
                         ],
                         "html": "السجلات التجارية الجديدة",
+                        "itemId": "NewCommercialReg",
                         "layout|flex": 1
                     },
                     "name": "MyLabel1",
@@ -89,6 +90,7 @@
                             "header-cell2"
                         ],
                         "html": "القيمة بالريال القطري",
+                        "itemId": "ValueQAR",
                         "layout|flex": 1
                     },
                     "name": "MyLabel2",
@@ -124,7 +126,8 @@
                         "cls": [
                             "subheader-cell1"
                         ],
-                        "html": "السجلات الرئيسية"
+                        "html": "السجلات الرئيسية",
+                        "itemId": "MainCrs"
                     },
                     "name": "MyLabel3",
                     "designerId": "b648b61e-5859-4b49-8fac-6d9065bf0695"
@@ -157,7 +160,7 @@
                         "designer|displayName": "itemTpl",
                         "implHandler": [
                             "",
-                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell1\"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>",
                             "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.MainNewBusinessRegisters.Change)]}\">{MainNewBusinessRegisters.Value}</div>",
                             ""
                         ]
@@ -193,6 +196,25 @@
                             },
                             "name": "CheckPercentOfChange",
                             "designerId": "84b4d004-6f4b-418f-9a17-7d70fbc007db"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "LocalizeLabel",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'الربع';",
+                                    "else",
+                                    "    return 'Quarter';"
+                                ]
+                            },
+                            "name": "LocalizeLabel",
+                            "designerId": "d0fd3e18-b905-4632-bf09-dbb7225c76e2"
                         }
                     ]
                 }
@@ -225,7 +247,8 @@
                         "cls": [
                             "subheader-cell1"
                         ],
-                        "html": "السجلات الفرعية"
+                        "html": "السجلات الفرعية",
+                        "itemId": "BranchCRs"
                     },
                     "name": "MyLabel3",
                     "designerId": "b7009559-85f7-4cd5-a425-7bdeed69bf8f"
@@ -256,7 +279,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell1\"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>",
                             "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.BranchNewBusinessRegisters.Change)]}\">{BranchNewBusinessRegisters.Value}</div>",
                             ""
                         ]
@@ -292,6 +315,25 @@
                             },
                             "name": "CheckPercentOfChange",
                             "designerId": "9d85a6b4-158c-41a5-b6cd-0c2f6c1dbed7"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "LocalizeLabel",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'الربع';",
+                                    "else",
+                                    "    return 'Quarter';"
+                                ]
+                            },
+                            "name": "LocalizeLabel",
+                            "designerId": "5d02d147-52d8-4fc4-a493-1990cfc126dc"
                         }
                     ]
                 }
@@ -326,6 +368,7 @@
                             "header-cell1"
                         ],
                         "html": "السجلات التجارية المجددة",
+                        "itemId": "RenewedCRs",
                         "layout|flex": 1
                     },
                     "name": "MyLabel1",
@@ -343,6 +386,7 @@
                             "header-cell2"
                         ],
                         "html": "القيمة بالريال القطري",
+                        "itemId": "ValueQAR2",
                         "layout|flex": 1
                     },
                     "name": "MyLabel4",
@@ -377,7 +421,8 @@
                         "cls": [
                             "subheader-cell1"
                         ],
-                        "html": "السجلات الرئيسية"
+                        "html": "السجلات الرئيسية",
+                        "itemId": "MainCrs2"
                     },
                     "name": "MyLabel3",
                     "designerId": "db584cfa-5bf0-4793-911b-0030408be1b0"
@@ -408,7 +453,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class=\"row-cell1\"> الربع  {Quarter}  -  {Year} </div>",
+                            "<div class=\"row-cell1\"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>",
                             "<div class=\"row-cell2  {[this.CheckPercentOfChange(values.MainRenewedBusinessRegisters.Change)]}\">{MainRenewedBusinessRegisters.Value}</div>",
                             ""
                         ]
@@ -444,6 +489,25 @@
                             },
                             "name": "CheckPercentOfChange",
                             "designerId": "94b7b8d2-2f0c-489e-b8c6-2f910b4bc735"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "LocalizeLabel",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'الربع';",
+                                    "else",
+                                    "    return 'Quarter';"
+                                ]
+                            },
+                            "name": "LocalizeLabel",
+                            "designerId": "efe4aaa5-086f-4953-a89a-9aed59d536ff"
                         }
                     ]
                 }
@@ -476,7 +540,8 @@
                         "cls": [
                             "subheader-cell1"
                         ],
-                        "html": "السجلات الفرعية"
+                        "html": "السجلات الفرعية",
+                        "itemId": "BranchCRs2"
                     },
                     "name": "MyLabel3",
                     "designerId": "43bdc471-ead6-4e87-a95f-e9a484f1c2db"
@@ -507,7 +572,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class=\"row-cell1\"> الربع {Quarter} - {Year}  </div>",
+                            "<div class=\"row-cell1\"> {[this.LocalizeLabel()]} {Quarter} - {Year}  </div>",
                             "<div class=\"row-cell2 {[this.CheckPercentOfChange(values.BranchRenewedBusinessRegisters.Change)]}\">{BranchRenewedBusinessRegisters.Value}</div>",
                             ""
                         ]
@@ -543,10 +608,52 @@
                             },
                             "name": "CheckPercentOfChange",
                             "designerId": "6f1766c0-431d-4bf5-ab64-479bc11fa941"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "LocalizeLabel",
+                                "fn": "LocalizeLabel",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'الربع';",
+                                    "else",
+                                    "    return 'Quarter';"
+                                ]
+                            },
+                            "name": "LocalizeLabel",
+                            "designerId": "5833885b-68b2-4135-9f83-3348b25f785f"
                         }
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "0b5c93b0-c398-4379-9000-c249cde48e69"
         }
     ]
 }

@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "المبادرات والمشاريع"
+                "html": "المبادرات والمشاريع",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "8e61c6c0-9514-4fde-9c36-efc63600516a"
@@ -74,6 +75,28 @@
                     "designerId": "6cacf226-f754-4a17-b860-0112e29951c7"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "83e9887c-d803-4287-9d35-f4194a05815a"
         }
     ]
 }

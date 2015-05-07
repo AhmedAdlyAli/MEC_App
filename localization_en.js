@@ -77,18 +77,18 @@ var localeEn =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
-				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView'},
-             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView'},
-             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView'}
+				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png'},
+             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png'},
+             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png'}
 			]
 		},
 
 		{
 			itemId:"ConsumerIndicatorsListing",
 			items: [
-				{Name:'Daily Bulletin',Url:'DailyReportView'},
-             	{Name:'Where to Shop',Url:'WhereToShopView'},
-             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com'}
+				{Name:'Daily Bulletin',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
+             	{Name:'Where to Shop',Url:'WhereToShopView',Icon:'ico-where.png'},
+             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com',Icon:'ico-report.png'}
 			]
 		},
 
@@ -108,7 +108,7 @@ var localeEn =
                     {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png'},
                     {Name:'Establishment Services',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png'},
                     {Name:'Reserve Trade Name',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png'}
-                    ]
+                ]
 		},
 
 		{
@@ -119,7 +119,6 @@ var localeEn =
              {Name:'Change Signatories',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
              {Name:'Terminate Branch',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
              {Name:'Terminate Commercial Registration',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
-
             ]
 		}
 
@@ -127,7 +126,6 @@ var localeEn =
 	],
 
 	Views: [
-
 
 		{
 			itemId:"MyBusinessView",
@@ -160,7 +158,6 @@ var localeEn =
 				{itemId:"lbl11", "xtype": "label","value":"Establishment Arabic Name"},
 				{itemId:"lbl12", "xtype": "label","value":"Establishment English Name"},
 				{itemId:"lbl13", "xtype": "label","value":"Total Fees"}
-
 			]
 		},
 
@@ -177,7 +174,6 @@ var localeEn =
 				{itemId:"txtNoOfCopies", "xtype": "textfield","value":"No of Copies"},
 				{itemId:"btnPrintoffsNext", "xtype": "button","value":"Next"},
 				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
-
 			]
 		},
 
@@ -196,7 +192,6 @@ var localeEn =
 				{itemId:"lbl7", "xtype": "label","value":"Required Attachments"},
 				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confrim & Pay"},
 				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
-
 			]
 		},
 
@@ -217,7 +212,6 @@ var localeEn =
 			description: "",
 			items:
 			[
-				
 				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
 				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
 				{itemId:"lbl3", "xtype": "label","value":"CR Expiry Date"},
@@ -242,8 +236,6 @@ var localeEn =
 				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"Branches", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
-				
-
 			]
 		},
 
@@ -252,7 +244,6 @@ var localeEn =
 			description: "",
 			items:
 			[
-				
 				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
 				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
 				{itemId:"lbl3", "xtype": "label","value":"CR Expiry Date"},
@@ -270,15 +261,10 @@ var localeEn =
 
 				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
 				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},
-			 
 				{itemId:"titlebar4", "xtype": "titlebar","value":"Signatories"},
-
 				{itemId:"EstablishmentInfo", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
-				 
 				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
-				
-
 			]
 		},
 
@@ -361,9 +347,8 @@ var localeEn =
 				{itemId:"btnMediaCenter", xtype: "label",value:"Media Center"},
 				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Extracts"},
 				{itemId:"homeReports", xtype: "label",value:"Indicators & Reports"},
-				{itemId:"btnProjects", xtype: "label",value:"Projects"},
+				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
 				{itemId:"homeContact", xtype: "label",value:"Connect"}
-
 			]
 		},
 
@@ -375,7 +360,6 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Media Center"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -387,7 +371,6 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Inquiries & Extracts"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -399,7 +382,6 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Indicators & Reports"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -411,7 +393,6 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Connect"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -433,7 +414,6 @@ var localeEn =
 				{itemId:"mytextfield", xtype: "textfield",value:"Barcode Scan"},
 				{itemId:"lblAttachImage", xtype: "label",value:"Attach Image"},
 				{itemId:"btnSubmitComplaint", xtype: "button",value:"Send"}
-
 			]
 		},
 
@@ -445,7 +425,6 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Public Services"},
 				{itemId:"lstLinks", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -457,7 +436,6 @@ var localeEn =
 			[
 				{itemId:"lblConsumer", xtype: "label",value:"Consumer Services"},
 				{itemId:"lstLinks2", xtype: "cls",value:"ltr-cls"}
-
 			]
 		},
 
@@ -471,7 +449,6 @@ var localeEn =
 				{itemId:"itemQuantityTitle", xtype: "titlebar",value:"Items and Quantities", align:"left"},
 				{itemId:"frmSupplyService1", xtype: "cls",value:"ltr-cls"},
 				{itemId:"btnSupplyNext1", xtype: "button",value:"Next"}
-
 			]
 		},
 
@@ -483,9 +460,9 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
 				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"}
-
 			]
 		},
+
 
 		{
 			itemId:"SupplyServiceView3",
@@ -493,16 +470,12 @@ var localeEn =
 			items:
 			[
 				{itemId:"pnlConfirm", xtype: "cls",value:"ltr-cls"},
-				
 				{itemId:"lblTitle", xtype: "label",value:"Supply Services Request Form"},
 				{itemId:"lblUserName", xtype: "label",value:"User Name"},
-				
 				{itemId:"lblItems", xtype: "label",value:"Items & Quantities"},
 				{itemId:"lblDealer", xtype: "label",value:"Selected Dealer"},
 				{itemId:"lblFees", xtype: "label",value:"Required Fees"},
-
 				{itemId:"btnSupplyNext3", xtype: "button",value:"Confirm & Pay"}
-
 			]
 		},
 
@@ -547,9 +520,6 @@ var localeEn =
 		},
 
 
-
-
-
 		{
 			itemId:"AdminServicesView",
 			description: "",
@@ -560,11 +530,6 @@ var localeEn =
 
 			]
 		},
-
-
-
-
-
 
 
 		{
@@ -619,6 +584,67 @@ var localeEn =
 
 
 		{
+			itemId:"DailyPricesView",
+			description: "Daily Prices",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Daily Prices"},
+				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
+				{itemId:"PricesGrid", xtype: "cls",value:"ltr-cls"},
+				{itemId:"ProductName1", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice1", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductName2", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice2", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"}
+			]
+		},
+
+
+		{
+			itemId:"WhereToShopView",
+			description: "Where to Shop",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Where to Shop"},
+				{itemId:"txtProductName", "xtype": "textfield","value":"Choose Product"},
+				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
+				{itemId:"ShopName", xtype: "label",value:"Shop Name"},
+				{itemId:"Quantity", xtype: "label",value:"Quantity"},
+				{itemId:"Price", xtype: "label",value:"Price"}
+			]
+		},
+
+
+		{
+			itemId:"BusinessIndicatorsView",
+			description: "Business Indicators",
+			items:
+			[
+				{itemId:"lblViewTitle", xtype: "label",value:"Business Indicators"},
+				{itemId:"NewCommercialReg", "xtype": "label", "value":"New CRs"},
+				{itemId:"ValueQAR", xtype: "label",value:"Value (QAR)"},
+				{itemId:"ValueQAR2", xtype: "label",value:"Value (QAR)"},
+				{itemId:"MainCrs", xtype: "label",value:"Main Commercial Registerations"},
+				{itemId:"MainCrs2", xtype: "label",value:"Main Commercial Registerations"},
+				{itemId:"BranchCRs", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"RenewedCRs", xtype: "label",value:"Renewed CRs"},
+				{itemId:"BranchCRs2", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"GridHeader", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdMainCRs", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader1", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdSubCRs", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridHeader1", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdMainCRs2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader3", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdSubCRs2", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+		{
 			itemId:"SettingsView",
 			description: "Settings...",
 			items:
@@ -642,7 +668,7 @@ var localeEn =
 				{itemId:"btnInquiry", "xtype": "button","value":"Inquiries & Extracts"},
 				{itemId:"btnMedai", "xtype": "button","value":"Media Center"},
 				{itemId:"btnContact", "xtype": "button","value":"Connect"},
-				{itemId:"btnProjects", "xtype": "button","value":"Projects"},
+				{itemId:"btnProjects", "xtype": "button","value":"Projects & Initiatives"},
 				{itemId:"btnReports", "xtype": "button","value":"Indicators & Reports"},
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
@@ -650,9 +676,31 @@ var localeEn =
 
 			]
 
+		},
+
+
+		{
+			itemId:"ProjectsView",
+			description: "Projects",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Projects & Initiatives"},
+				{itemId:"lstProjects", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+		{
+			itemId:"ProjectDetailsView",
+			description: "Projects Details",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"InitiativeName", xtype: "label",value:"Initiative Name"},
+				{itemId:"AboutInitiative", xtype: "label",value:"About Initiative"},
+				{itemId:"ContactInfo", xtype: "label",value:"Contact Information"}
+			]
 		}
-
-
 
 
 	],

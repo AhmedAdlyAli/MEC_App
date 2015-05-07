@@ -37,13 +37,11 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture=ar&pageIndex=0&pageSize=2&categoryId=3',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=2&categoryId=3',
             method : 'Get',
             success : function (response) {
 
                 var json = Ext.util.JSON.decode(response.responseText);
-
-                console.log(json);
 
 
                 var store = new Ext.data.Store({

@@ -14,10 +14,15 @@
         "id": null,
         "itemId": "ProjectDetailsView",
         "layout": "vbox",
-        "scrollable": "vertical",
+        "scrollable": [
+            "{direction: 'vertical',directionLock: true}"
+        ],
         "xtype": null
     },
     "name": "RecallDetailsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
     "designerId": "54c3c531-1bfa-42f3-847d-5ae4d41868af",
     "customConfigs": [
         {
@@ -71,7 +76,8 @@
                         "cls": [
                             "recall-label-1"
                         ],
-                        "html": "اسم المبادرة"
+                        "html": "اسم المبادرة",
+                        "itemId": "InitiativeName"
                     },
                     "name": "MyLabel3",
                     "designerId": "a79fde0e-4387-4181-ab7b-830a86fe732e"
@@ -123,7 +129,8 @@
                         "cls": [
                             "project-label-1"
                         ],
-                        "html": "عن المبادرة"
+                        "html": "عن المبادرة",
+                        "itemId": "AboutInitiative"
                     },
                     "name": "MyLabel12",
                     "designerId": "7f46d143-6a41-4ee5-86c5-b2611c264959"
@@ -173,7 +180,8 @@
                         "cls": [
                             "recall-label-3"
                         ],
-                        "html": "بيانات الاتصال"
+                        "html": "بيانات الاتصال",
+                        "itemId": "ContactInfo"
                     },
                     "name": "MyLabel13",
                     "designerId": "10d165e3-9496-44c7-8ad9-66752edb2349"
@@ -196,6 +204,28 @@
                     "designerId": "44834be8-4ed9-46ff-bdf0-6f2347678de5"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "727918f8-239f-419c-8443-f0b6a2829672"
         }
     ]
 }

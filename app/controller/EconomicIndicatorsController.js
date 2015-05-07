@@ -52,7 +52,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture=ar&pageIndex=0&pageSize=20',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 

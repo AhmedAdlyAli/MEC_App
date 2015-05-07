@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "الاسعار اليومية"
+                "html": "الاسعار اليومية",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "696c6659-efca-4445-ad4d-7fcd6a90eb4f"
@@ -46,7 +47,8 @@
                 "cls": [
                     "rtl",
                     "tap-panel"
-                ]
+                ],
+                "itemId": "PricesGrid"
             },
             "name": "MyTabPanel",
             "designerId": "4bd61687-ac4b-491b-b604-fe007ea6e60c",
@@ -100,6 +102,7 @@
                                             "header-cell1"
                                         ],
                                         "html": "اسم المنتج",
+                                        "itemId": "ProductName1",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel14",
@@ -117,6 +120,7 @@
                                             "header-cell2"
                                         ],
                                         "html": "سعر الكيلو",
+                                        "itemId": "ProductPrice1",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel32",
@@ -240,6 +244,7 @@
                                             "header-cell1"
                                         ],
                                         "html": "اسم المنتج",
+                                        "itemId": "ProductName2",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel14",
@@ -257,6 +262,7 @@
                                             "header-cell2"
                                         ],
                                         "html": "سعر الكيلو",
+                                        "itemId": "ProductPrice2",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel32",
@@ -380,6 +386,7 @@
                                             "header-cell1"
                                         ],
                                         "html": "اسم المنتج",
+                                        "itemId": "ProductName3",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel14",
@@ -397,6 +404,7 @@
                                             "header-cell2"
                                         ],
                                         "html": "سعر الكيلو",
+                                        "itemId": "ProductPrice3",
                                         "layout|flex": 1
                                     },
                                     "name": "MyLabel32",
@@ -472,6 +480,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "9a33e717-dde8-46c4-97d9-416e29094ee0"
         }
     ]
 }
