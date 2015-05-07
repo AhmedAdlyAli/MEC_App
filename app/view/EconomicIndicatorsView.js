@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.EconomicIndicatorsView', {
                 itemId: 'lstIndicators',
                 itemCls: 'item-indicator',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class="tpl-indicator-1"><span>{Title}</span><br/><span class="sub-title">{Value} مليون (ر.ق)</span></div>',
+                    '<div class="tpl-indicator-1"><span>{Title}</span><br/><span class="sub-title">{Value} {[this.Translate()]}</span></div>',
                     '    <div class="tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}</div>',
                     {
                         CheckPercentOfChange: function(changePercent) {
@@ -55,6 +55,14 @@ Ext.define('MEC_App.view.EconomicIndicatorsView', {
                                 return 'arrow-down';
 
                             }
+                        },
+                        Translate: function() {
+                            var text='مليون (ر.ق)';
+                            if(Ext.Global.LanguageFlag == 'en'){
+                                text='Million (QAR)';
+                            }
+
+                            return text;
                         }
                     }
                 )

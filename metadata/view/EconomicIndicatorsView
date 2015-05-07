@@ -65,7 +65,7 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class=\"tpl-indicator-1\"><span>{Title}</span><br/><span class=\"sub-title\">{Value} مليون (ر.ق)</span></div>",
+                            "<div class=\"tpl-indicator-1\"><span>{Title}</span><br/><span class=\"sub-title\">{Value} {[this.Translate()]}</span></div>",
                             "    <div class=\"tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}\"> {ChangePercent}</div>"
                         ]
                     },
@@ -95,6 +95,27 @@
                             },
                             "name": "CheckPercentOfChange",
                             "designerId": "4aa9b926-098b-4e9a-889b-8b8a78c59262"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "Translate",
+                                "implHandler": [
+                                    "var text='مليون (ر.ق)';",
+                                    "if(Ext.Global.LanguageFlag == 'en'){",
+                                    "    text='Million (QAR)';",
+                                    "}",
+                                    "",
+                                    "return text;"
+                                ]
+                            },
+                            "name": "Translate",
+                            "designerId": "11a3e33d-f72e-46c8-82a4-444892cb2f1f"
                         }
                     ]
                 }

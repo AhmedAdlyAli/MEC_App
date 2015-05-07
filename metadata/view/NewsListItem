@@ -32,14 +32,16 @@
                     "// Provide an implementation to update this container's child items",
                     "var me = this;",
                     "",
-                    "",
-                    "me.down('#imgNews').setSrc('http://196.205.5.28:333/MEC/api/EconomyNews/Image/13');//record.get('NewsImgUrl'));",
-                    "me.down('#textCmp').setHtml(record.get('NewsTitle'));",
-                    "me.down('label').setHtml(record.get('NewsBrief'));",
-                    "",
-                    "",
                     "me.callParent(arguments);",
-                    ""
+                    "if(record){",
+                    "    if(record.get('NewsTitle') !== undefined && record.get('NewsBrief') !== undefined){",
+                    "        var imgSrc = 'http://196.205.5.28:333/MEC/api/EconomyNews/Image/'+record.get('Id') || 'resources/images/defaultImage.png';",
+                    "",
+                    "        me.down('#imgNews').setSrc(imgSrc);",
+                    "        me.down('#textCmp').setHtml(record.get('NewsTitle'));",
+                    "        me.down('label').setHtml(record.get('NewsBrief'));",
+                    "    }",
+                    "}"
                 ]
             },
             "name": "updateRecord",
@@ -58,7 +60,7 @@
                 ],
                 "itemId": "imgNews",
                 "layout|flex": 2,
-                "src": "NewsImgUrl",
+                "src": null,
                 "width": null
             },
             "name": "MyImg3",
@@ -89,7 +91,7 @@
                         "cls": [
                             "lstng-title"
                         ],
-                        "html": null,
+                        "html": " ",
                         "itemId": "textCmp",
                         "layout|flex": 2
                     },
@@ -107,7 +109,7 @@
                         "cls": [
                             "lstng-brief"
                         ],
-                        "html": null,
+                        "html": " ",
                         "layout|flex": 1
                     },
                     "name": "MyLabel6",

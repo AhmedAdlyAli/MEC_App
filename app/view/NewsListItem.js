@@ -31,8 +31,7 @@ Ext.define('MEC_App.view.NewsListItem', {
                 xtype: 'image',
                 flex: 2,
                 cls: 'lstng-img',
-                itemId: 'imgNews',
-                src: 'NewsImgUrl'
+                itemId: 'imgNews'
             },
             {
                 xtype: 'panel',
@@ -43,12 +42,14 @@ Ext.define('MEC_App.view.NewsListItem', {
                         xtype: 'component',
                         flex: 2,
                         cls: 'lstng-title',
+                        html: ' ',
                         itemId: 'textCmp'
                     },
                     {
                         xtype: 'label',
                         flex: 1,
-                        cls: 'lstng-brief'
+                        cls: 'lstng-brief',
+                        html: ' '
                     }
                 ]
             }
@@ -59,14 +60,16 @@ Ext.define('MEC_App.view.NewsListItem', {
         // Provide an implementation to update this container's child items
         var me = this;
 
-
-        me.down('#imgNews').setSrc('http://196.205.5.28:333/MEC/api/EconomyNews/Image/13');//record.get('NewsImgUrl'));
-        me.down('#textCmp').setHtml(record.get('NewsTitle'));
-        me.down('label').setHtml(record.get('NewsBrief'));
-
-
         me.callParent(arguments);
+        if(record){
+            if(record.get('NewsTitle') !== undefined && record.get('NewsBrief') !== undefined){
+                var imgSrc = 'http://196.205.5.28:333/MEC/api/EconomyNews/Image/'+record.get('Id') || 'resources/images/defaultImage.png';
 
+                me.down('#imgNews').setSrc(imgSrc);
+                me.down('#textCmp').setHtml(record.get('NewsTitle'));
+                me.down('label').setHtml(record.get('NewsBrief'));
+            }
+        }
     }
 
 });

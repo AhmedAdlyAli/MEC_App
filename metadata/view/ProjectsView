@@ -66,13 +66,37 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tpl-recall-1 FA'><img src=\"http://196.205.5.28:333/MEC/api//Recall/image/11\" /></div>",
+                            "<div class='tpl-recall-1 FA'><img src=\"{[this.getImgSrc(values.Id)]}\" /></div>",
                             "<div class='tpl-recall-2 FA'><span>{ProjectTitle}</span></div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "6cacf226-f754-4a17-b860-0112e29951c7"
+                    "designerId": "6cacf226-f754-4a17-b860-0112e29951c7",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "Id"
+                                ],
+                                "fn": "getImgSrc",
+                                "implHandler": [
+                                    "",
+                                    "var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InitiativesAndProject/Image/\"+Id;",
+                                    "return src;",
+                                    ""
+                                ]
+                            },
+                            "name": "getImgSrc",
+                            "designerId": "75642509-421f-4cc5-ad47-567e5cbfe1dc"
+                        }
+                    ]
                 }
             ]
         },

@@ -35,7 +35,7 @@ Ext.define('MEC_App.view.MinistryNewsView', {
         useSimpleItems: false,
         variableHeights: true,
         itemTpl: [
-            '<div>{text}</div>'
+            '<div></div>'
         ],
         items: [
             {
