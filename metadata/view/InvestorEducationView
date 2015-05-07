@@ -88,8 +88,8 @@
                                 ],
                                 "fn": "getImgSrc",
                                 "implHandler": [
-                                    "                            var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InvestorEducation/Image/\"+Id;",
-                                    "                            return src;"
+                                    "var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InvestorEducation/Image/\"+Id;",
+                                    "return src;"
                                 ]
                             },
                             "name": "getImgSrc",

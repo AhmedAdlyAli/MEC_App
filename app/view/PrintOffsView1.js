@@ -108,8 +108,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR',
-                        value: 21
+                        name: 'hiddenCompanyCR'
                     },
                     {
                         xtype: 'textfield',
@@ -162,8 +161,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        name: 'hiddenPrintoutType',
-                        value: 52
+                        name: 'hiddenPrintoutType'
                     },
                     {
                         xtype: 'textfield',
@@ -213,8 +211,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod',
-                        value: 3
+                        name: 'hiddenDeliveryMethod'
                     },
                     {
                         xtype: 'textfield',
