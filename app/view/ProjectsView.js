@@ -33,7 +33,8 @@ Ext.define('MEC_App.view.ProjectsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'المبادرات والمشاريع'
+                html: 'المبادرات والمشاريع',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -48,6 +49,16 @@ Ext.define('MEC_App.view.ProjectsView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

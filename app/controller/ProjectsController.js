@@ -43,7 +43,7 @@ Ext.define('MEC_App.controller.ProjectsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InitiativesAndProject/GetAllInitiativesAndProjects?culture=ar&pageIndex=0&pageSize=20',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InitiativesAndProject/GetAllInitiativesAndProjects?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 

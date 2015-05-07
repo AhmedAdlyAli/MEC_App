@@ -27,7 +27,10 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
         cls: 'rtl',
         itemId: 'ProjectDetailsView',
         layout: 'vbox',
-        scrollable: 'vertical',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
         items: [
             {
                 xtype: 'image',
@@ -42,7 +45,8 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
                     {
                         xtype: 'label',
                         cls: 'recall-label-1',
-                        html: 'اسم المبادرة'
+                        html: 'اسم المبادرة',
+                        itemId: 'InitiativeName'
                     },
                     {
                         xtype: 'label',
@@ -59,7 +63,8 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
                     {
                         xtype: 'label',
                         cls: 'project-label-1',
-                        html: 'عن المبادرة'
+                        html: 'عن المبادرة',
+                        itemId: 'AboutInitiative'
                     },
                     {
                         xtype: 'label',
@@ -75,7 +80,8 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
                     {
                         xtype: 'label',
                         cls: 'recall-label-3',
-                        html: 'بيانات الاتصال'
+                        html: 'بيانات الاتصال',
+                        itemId: 'ContactInfo'
                     },
                     {
                         xtype: 'label',
@@ -85,6 +91,16 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

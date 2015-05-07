@@ -325,40 +325,21 @@ body {
     }
 }
 
-.HList {
-    direction: rtl;
-    .x-innerhtml {
-        background: #fff;
-    }
-
-    .HListItem {
-        background: url(../images/HListIcon.png) no-repeat right;
-        padding: 0 30px 0 0;
-        line-height: 35px;
-    }
-
-}
-
-
-
-
+.HList,
 .CompanyList {
     direction: rtl;
     .x-innerhtml {
         background: #fff;
     }
 
+    .HListItem,
     .CompanyListItem {
-        background: url(../images/HListIcon.png) no-repeat right;
-        padding: 0 35px 0 0;
+        background: url(../images/HListIcon.png) no-repeat 96% center;
+        padding: 0 36px 0 0;
         line-height: 35px;
     }
 
 }
-
-
-
-
 
 
 
@@ -906,12 +887,6 @@ body {
         padding:0.5em 0 0.5em 0.5em;
         font-weight:500;
     }
-    .FA{
-        float:right
-    }
-    .FB{
-        float:left
-    }
 
 }
 
@@ -935,13 +910,6 @@ body {
         padding:0.5em 0 0.5em 0.5em;
         font-weight:500;
     }
-    .FA{
-        float:right
-    }
-    .FB{
-        float:left
-    }
-
 }
 
 
@@ -1571,8 +1539,16 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 
-.ltr-cls{
+.ltr-cls {
     direction:ltr !important;
+
+    .FA {
+        float: left;
+    }
+
+    .FB {
+        float: right;
+    }
 
     .item-link,
     .item-link.x-list-item.x-item-selected.x-list-item-tpl {
@@ -1586,9 +1562,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     .item-shop,
     .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
-
-        padding-top:1em;
-        padding-bottom:1em;
         padding-left:3em;
         padding-right:0;
         background: url(../images/request.png) no-repeat 4% center;
@@ -1599,8 +1572,6 @@ background: url(../images/toplogo.png) no-repeat center top;
     }
 
     .item-product, .item-product.x-list-item.x-item-selected.x-list-item-tpl{
-        padding-top:1em;
-        padding-bottom:1em;
         padding-left:3em;
         padding-right:0;
         background: url(../images/request.png) no-repeat 4% center;
@@ -1615,6 +1586,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         border-left: solid 1px #fff;
     }
 
+
     .row-cell1,
     .row-cell2 {
         float: left;
@@ -1625,7 +1597,82 @@ background: url(../images/toplogo.png) no-repeat center top;
         border-right: none;
     }
 
+    .item-company{
+        padding-left:3em;
+        padding-right:0;
+        background: url(../images/company.png) no-repeat 4% center;
+
+        .tpl-company-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
+
+    }
+
+    .HListItem {
+        background: url(../images/HListIcon.png) no-repeat 4% center;
+        padding: 0 0 0 36px;
+    }
+
+
+    .item-request{
+
+        padding-right:0;
+        padding-left:3em;
+        background: url(../images/request.png) no-repeat 4% center;
+
+        .tpl-request-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
+    }
+    
+    
+    .recall-label-1{
+        padding:1em 0 0 2.2em;
+        background: url(../images/recall1.png) no-repeat 4% 90%;
+
+
+    }
+
+    .recall-label-2{
+        padding:1em 0 0 2.2em;
+        background: url(../images/recall2.png) no-repeat 4% 90%;
+
+    }
+
+    .recall-label-3{
+        padding:1em 0 0 2.2em;
+        background: url(../images/recall3.png) no-repeat 4% 90%;
+
+    }
+    
+    .violation-label-1{
+        padding:1em 0 0 2.2em;
+        background: url(../images/vio1.png) no-repeat 4% 90%;
+    }
+
+    .violation-label-2{
+        padding:1em 0 0 2.5em;
+        background: url(../images/vio2.png) no-repeat 4% 90%;
+    }
+
+    .violation-label-3{
+        padding:1em 0 0 3em;
+        background: url(../images/vio3.png) no-repeat 4% 90%;
+    }
+
+    .violation-label-4{
+        padding:1em 0 0 3em;
+        background: url(../images/vio4.png) no-repeat 4% 90%;
+    }
+
+    .project-label-1{
+        padding:1em 0 0 2.2em;
+        background: url(../images/pro1.png) no-repeat 4% 90%;
+    }
+
+
 }
+
 
 .language-button-wrapper {
     padding: 10px;
@@ -1714,77 +1761,64 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .recall-label-1{
-    padding:0 2.2em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/recall1.png) no-repeat 96% 90%;
 
 
 }
 
 .recall-label-2{
-    padding:0 2.2em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/recall2.png) no-repeat 96% 90%;
 
 }
 
 
 .recall-label-3{
-    padding:0 2.2em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/recall3.png) no-repeat 96% 90%;
 
 }
 
-
 .violation-label-1{
-    padding:0 2.2em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/vio1.png) no-repeat 96% 90%;
 }
 
-
 .violation-label-2{
-    padding:0 2.5em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.5em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/vio2.png) no-repeat 96% 90%;
-
 }
+
 .violation-label-3{
-    padding:0 3em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/vio3.png) no-repeat 96% 90%;
-
 }
+
 .violation-label-4{
-    padding:0 3em 0 0;
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
     color: #6f2f51;
-    padding-top:1em;
-    font-weight:bold;
     background: url(../images/vio4.png) no-repeat 96% 90%;
-
 }
-
 
 .project-label-1{
-        padding:0 3em 0 0;
-        color: #6f2f51;
-        padding-top:1em;
-        font-weight:bold;
-        background: url(../images/pro1.png) no-repeat 96% 90%;
-
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
+    color: #6f2f51;
+    background: url(../images/pro1.png) no-repeat 96% 90%;
 }
 
 

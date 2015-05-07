@@ -68,6 +68,7 @@ Ext.define('MEC_App.controller.Localization', {
                     }
                 });
 
+                if(viewLoc.cls) viewObj.addCls(viewLoc.cls);
 
                 if(viewLoc.items)
                 {
