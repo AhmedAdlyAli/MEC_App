@@ -35,7 +35,8 @@ Ext.define('MEC_App.view.DailyPricesView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'الاسعار اليومية'
+                html: 'الاسعار اليومية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'tabpanel',
@@ -43,6 +44,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
                     'rtl',
                     'tap-panel'
                 ],
+                itemId: 'PricesGrid',
                 items: [
                     {
                         xtype: 'container',
@@ -63,13 +65,15 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell1',
-                                        html: 'اسم المنتج'
+                                        html: 'اسم المنتج',
+                                        itemId: 'ProductName1'
                                     },
                                     {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو'
+                                        html: 'سعر الكيلو',
+                                        itemId: 'ProductPrice1'
                                     }
                                 ]
                             },
@@ -117,13 +121,15 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell1',
-                                        html: 'اسم المنتج'
+                                        html: 'اسم المنتج',
+                                        itemId: 'ProductName2'
                                     },
                                     {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو'
+                                        html: 'سعر الكيلو',
+                                        itemId: 'ProductPrice2'
                                     }
                                 ]
                             },
@@ -171,13 +177,15 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell1',
-                                        html: 'اسم المنتج'
+                                        html: 'اسم المنتج',
+                                        itemId: 'ProductName3'
                                     },
                                     {
                                         xtype: 'label',
                                         flex: 1,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو'
+                                        html: 'سعر الكيلو',
+                                        itemId: 'ProductPrice3'
                                     }
                                 ]
                             },
@@ -209,6 +217,14 @@ Ext.define('MEC_App.view.DailyPricesView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

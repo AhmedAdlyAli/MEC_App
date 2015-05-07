@@ -53,13 +53,15 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell1',
-                        html: 'السجلات التجارية الجديدة'
+                        html: 'السجلات التجارية الجديدة',
+                        itemId: 'NewCommercialReg'
                     },
                     {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell2',
-                        html: 'القيمة بالريال القطري'
+                        html: 'القيمة بالريال القطري',
+                        itemId: 'ValueQAR'
                     }
                 ]
             },
@@ -71,7 +73,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     {
                         xtype: 'label',
                         cls: 'subheader-cell1',
-                        html: 'السجلات الرئيسية'
+                        html: 'السجلات الرئيسية',
+                        itemId: 'MainCrs'
                     }
                 ]
             },
@@ -81,7 +84,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemCls: 'grid-row',
                 itemTpl: Ext.create('Ext.XTemplate', 
                     '',
-                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell1"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>',
                     '<div class="row-cell2 {[this.CheckPercentOfChange(values.MainNewBusinessRegisters.Change)]}">{MainNewBusinessRegisters.Value}</div>',
                     '',
                     {
@@ -97,6 +100,12 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
                             }
 
+                        },
+                        LocalizeLabel: function() {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return 'الربع';
+                            else
+                            return 'Quarter';
                         }
                     }
                 )
@@ -109,7 +118,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     {
                         xtype: 'label',
                         cls: 'subheader-cell1',
-                        html: 'السجلات الفرعية'
+                        html: 'السجلات الفرعية',
+                        itemId: 'BranchCRs'
                     }
                 ]
             },
@@ -118,7 +128,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdSubCRs',
                 itemCls: 'grid-row',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell1"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>',
                     '<div class="row-cell2 {[this.CheckPercentOfChange(values.BranchNewBusinessRegisters.Change)]}">{BranchNewBusinessRegisters.Value}</div>',
                     '',
                     {
@@ -134,6 +144,12 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
                             }
 
+                        },
+                        LocalizeLabel: function() {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return 'الربع';
+                            else
+                            return 'Quarter';
                         }
                     }
                 )
@@ -148,13 +164,15 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell1',
-                        html: 'السجلات التجارية المجددة'
+                        html: 'السجلات التجارية المجددة',
+                        itemId: 'RenewedCRs'
                     },
                     {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell2',
-                        html: 'القيمة بالريال القطري'
+                        html: 'القيمة بالريال القطري',
+                        itemId: 'ValueQAR2'
                     }
                 ]
             },
@@ -166,7 +184,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     {
                         xtype: 'label',
                         cls: 'subheader-cell1',
-                        html: 'السجلات الرئيسية'
+                        html: 'السجلات الرئيسية',
+                        itemId: 'MainCrs2'
                     }
                 ]
             },
@@ -175,7 +194,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdMainCRs2',
                 itemCls: 'grid-row',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class="row-cell1"> الربع  {Quarter}  -  {Year} </div>',
+                    '<div class="row-cell1"> {[this.LocalizeLabel()]}  {Quarter}  -  {Year} </div>',
                     '<div class="row-cell2  {[this.CheckPercentOfChange(values.MainRenewedBusinessRegisters.Change)]}">{MainRenewedBusinessRegisters.Value}</div>',
                     '',
                     {
@@ -191,6 +210,12 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
                             }
 
+                        },
+                        LocalizeLabel: function() {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return 'الربع';
+                            else
+                            return 'Quarter';
                         }
                     }
                 )
@@ -203,7 +228,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     {
                         xtype: 'label',
                         cls: 'subheader-cell1',
-                        html: 'السجلات الفرعية'
+                        html: 'السجلات الفرعية',
+                        itemId: 'BranchCRs2'
                     }
                 ]
             },
@@ -212,7 +238,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 itemId: 'grdSubCRs2',
                 itemCls: 'grid-row',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class="row-cell1"> الربع {Quarter} - {Year}  </div>',
+                    '<div class="row-cell1"> {[this.LocalizeLabel()]} {Quarter} - {Year}  </div>',
                     '<div class="row-cell2 {[this.CheckPercentOfChange(values.BranchRenewedBusinessRegisters.Change)]}">{BranchRenewedBusinessRegisters.Value}</div>',
                     '',
                     {
@@ -228,11 +254,27 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
                             }
 
+                        },
+                        LocalizeLabel: function() {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return 'الربع';
+                            else
+                            return 'Quarter';
                         }
                     }
                 )
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

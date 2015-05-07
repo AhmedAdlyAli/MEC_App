@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.ConsumerIndicatorsListing', {
                 itemId: 'lstItems',
                 itemCls: 'item-link',
                 itemTpl: [
-                    '<div>{Name}</div>'
+                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                 ]
             }
         ],

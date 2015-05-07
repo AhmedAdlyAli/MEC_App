@@ -77,18 +77,18 @@ var localeEn =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
-				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView'},
-             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView'},
-             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView'}
+				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png'},
+             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png'},
+             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png'}
 			]
 		},
 
 		{
 			itemId:"ConsumerIndicatorsListing",
 			items: [
-				{Name:'Daily Bulletin',Url:'DailyReportView'},
-             	{Name:'Where to Shop',Url:'WhereToShopView'},
-             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com'}
+				{Name:'Daily Bulletin',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
+             	{Name:'Where to Shop',Url:'WhereToShopView',Icon:'ico-where.png'},
+             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.google.com',Icon:'ico-report.png'}
 			]
 		},
 
@@ -361,6 +361,67 @@ var localeEn =
 				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstShops", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstProducts", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+		{
+			itemId:"DailyPricesView",
+			description: "Daily Prices",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Daily Prices"},
+				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
+				{itemId:"PricesGrid", xtype: "cls",value:"ltr-cls"},
+				{itemId:"ProductName1", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice1", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductName2", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice2", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
+				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"}
+			]
+		},
+
+
+		{
+			itemId:"WhereToShopView",
+			description: "Where to Shop",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Where to Shop"},
+				{itemId:"txtProductName", "xtype": "textfield","value":"Choose Product"},
+				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
+				{itemId:"ShopName", xtype: "label",value:"Shop Name"},
+				{itemId:"Quantity", xtype: "label",value:"Quantity"},
+				{itemId:"Price", xtype: "label",value:"Price"}
+			]
+		},
+
+
+		{
+			itemId:"BusinessIndicatorsView",
+			description: "Business Indicators",
+			items:
+			[
+				{itemId:"lblViewTitle", xtype: "label",value:"Business Indicators"},
+				{itemId:"NewCommercialReg", "xtype": "label", "value":"New CRs"},
+				{itemId:"ValueQAR", xtype: "label",value:"Value (QAR)"},
+				{itemId:"ValueQAR2", xtype: "label",value:"Value (QAR)"},
+				{itemId:"MainCrs", xtype: "label",value:"Main Commercial Registerations"},
+				{itemId:"MainCrs2", xtype: "label",value:"Main Commercial Registerations"},
+				{itemId:"BranchCRs", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"RenewedCRs", xtype: "label",value:"Renewed CRs"},
+				{itemId:"BranchCRs2", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"GridHeader", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdMainCRs", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader1", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdSubCRs", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridHeader1", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdMainCRs2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"GridSubHeader3", xtype: "cls",value:"ltr-cls"},
+				{itemId:"grdSubCRs2", xtype: "cls",value:"ltr-cls"}
 			]
 		},
 

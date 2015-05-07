@@ -32,7 +32,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "أين تتسوق"
+                "html": "أين تتسوق",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "7c99b1ad-5d48-4cd2-a76c-2f1637fef5d8"
@@ -48,6 +49,7 @@
                 "docked": "top",
                 "itemId": "txtProductName",
                 "label": "اختر منتج",
+                "labelWidth": "35%",
                 "placeHolder": "اختر منتج",
                 "readOnly": true
             },
@@ -84,8 +86,8 @@
                             "        title: \"المنتج\",",
                             "        items: items,",
                             "        //selectedValue: \"2\",",
-                            "        doneButtonLabel: \"اختيار\",",
-                            "        cancelButtonLabel: \"الغاء\"",
+                            "        doneButtonLabel: Ext.Localization.GetMessage('Choose'),",
+                            "        cancelButtonLabel: Ext.Localization.GetMessage('Cancel')",
                             "    };",
                             "",
                             "",
@@ -151,6 +153,7 @@
                                 ],
                                 "docked": null,
                                 "html": "اسم المحل",
+                                "itemId": "ShopName",
                                 "layout|flex": 1
                             },
                             "name": "MyLabel34",
@@ -169,6 +172,7 @@
                                 ],
                                 "docked": null,
                                 "html": "الكمية",
+                                "itemId": "Quantity",
                                 "layout|flex": 1
                             },
                             "name": "MyLabel35",
@@ -187,6 +191,7 @@
                                 ],
                                 "docked": null,
                                 "html": "السعر",
+                                "itemId": "Price",
                                 "layout|flex": 1
                             },
                             "name": "MyLabel37",
@@ -229,6 +234,28 @@
                     "designerId": "aadbe0a2-36a6-4161-9f15-ef189666185f"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "435a6196-1714-4058-b893-abaa438fcc3a"
         }
     ]
 }

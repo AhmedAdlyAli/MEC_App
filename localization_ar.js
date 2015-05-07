@@ -78,18 +78,18 @@ var localeAr =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
-				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView'},
-             	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView'},
-             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView'}
+				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView', Icon:'ico-month.png'},
+             	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png'},
+             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView', Icon:'ico-year.png'}
 			]
 		},
 
 		{
 			itemId:"ConsumerIndicatorsListing",
 			items: [
-				{Name:'النشرة اليومية',Url:'DailyReportView'},
-             	{Name:'اين تتسوق',Url:'WhereToShopView'},
-             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com'}
+				{Name:'النشرة اليومية',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
+             	{Name:'اين تتسوق',Url:'WhereToShopView',Icon:'ico-where.png'},
+             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.google.com',Icon:'ico-report.png'}
 			]
 		},
 

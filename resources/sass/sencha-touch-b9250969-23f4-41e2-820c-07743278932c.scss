@@ -1607,6 +1607,22 @@ background: url(../images/toplogo.png) no-repeat center top;
             padding:0.5em 0.5em 0.5em 0;
         }
     }
+    
+    .header-cell2 {
+        border-right: none;
+        border-left: solid 1px #fff;
+    }
+
+
+    .row-cell1,
+    .row-cell2 {
+        float: left;
+        border-right: solid 1px #d7d7d7;
+    }
+
+    .row-cell2 {
+        border-right: none;
+    }
 
 }
 

@@ -39,13 +39,15 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'أين تتسوق'
+                html: 'أين تتسوق',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'textfield',
                 docked: 'top',
                 itemId: 'txtProductName',
                 label: 'اختر منتج',
+                labelWidth: '35%',
                 placeHolder: 'اختر منتج',
                 readOnly: true,
                 listeners: [
@@ -71,8 +73,8 @@ Ext.define('MEC_App.view.WhereToShopView', {
                                     title: "المنتج",
                                     items: items,
                                     //selectedValue: "2",
-                                    doneButtonLabel: "اختيار",
-                                    cancelButtonLabel: "الغاء"
+                                    doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                    cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                 };
 
 
@@ -111,19 +113,22 @@ Ext.define('MEC_App.view.WhereToShopView', {
                                 xtype: 'label',
                                 flex: 1,
                                 cls: 'header-cell1',
-                                html: 'اسم المحل'
+                                html: 'اسم المحل',
+                                itemId: 'ShopName'
                             },
                             {
                                 xtype: 'label',
                                 flex: 1,
                                 cls: 'header-cell2',
-                                html: 'الكمية'
+                                html: 'الكمية',
+                                itemId: 'Quantity'
                             },
                             {
                                 xtype: 'label',
                                 flex: 1,
                                 cls: 'header-cell2',
-                                html: 'السعر'
+                                html: 'السعر',
+                                itemId: 'Price'
                             }
                         ]
                     },
@@ -134,6 +139,16 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });
