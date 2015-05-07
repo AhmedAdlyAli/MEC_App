@@ -31,7 +31,7 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'MainNavView',
-        defaultBackButtonText: ' عودة',
+        defaultBackButtonText: ' ',
         items: [
             {
                 xtype: 'panel',

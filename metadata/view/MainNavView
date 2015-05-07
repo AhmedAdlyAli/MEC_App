@@ -9,7 +9,7 @@
         "cls": [
             "home-wrapper"
         ],
-        "defaultBackButtonText": " عودة",
+        "defaultBackButtonText": " ",
         "designer|userAlias": "MainNavView",
         "designer|userClassName": "MainNavView",
         "fullscreen": true,
