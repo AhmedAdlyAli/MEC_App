@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar1',
                         title: 'بيانات الفرع',
                         titleAlign: 'right',
                         listeners: [
@@ -205,7 +205,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar2',
                         title: 'الانشطة التجارية',
                         titleAlign: 'right',
                         listeners: [
@@ -237,7 +237,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar4',
                         title: 'المخولين بالتوقيع',
                         titleAlign: 'right',
                         listeners: [

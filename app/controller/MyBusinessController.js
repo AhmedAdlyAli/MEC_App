@@ -46,6 +46,10 @@ Ext.define('MEC_App.controller.MyBusinessController', {
     },
 
     onMyBusinessViewInitialize: function(component, eOpts) {
+
+        Ext.Localization.LocalizeView(component);
+
+
         Ext.AnimationHelper.ShowLoading();
 
         var view = component;
@@ -53,11 +57,13 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         var requestData = {
             "serviceId": "2",
             "token": Ext.Global.userToken,
-            "language": "ar",
+            "language": Ext.Global.LanguageFlag,
             "identityType":'QID', //Ext.Global.identityType,
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };
+
+        console.log(requestData);
 
 
         var me = this;
@@ -129,6 +135,11 @@ Ext.define('MEC_App.controller.MyBusinessController', {
     onMyEstablishmentDetailsInitialize: function(component, eOpts) {
         var view = component; //me.getMyEstablishmentDetails();
 
+
+        Ext.Localization.LocalizeView(view);
+
+
+
         var cr = view.getData().commercialRegistration;
 
         if(cr===''){
@@ -158,7 +169,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         requestData = {
             "serviceId": "8",
             "token": Ext.Global.userToken,
-            "language": "ar",
+            "language": Ext.Global.LanguageFlag,
             "commercialRegistrationNum":cr,
             "moiEstablishmentNum":"",
             "siebelSpcOperationSpcObjectSpcId":"",
@@ -278,6 +289,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
     onMyBranchDetailsInitialize: function(component, eOpts) {
         var view = component; //me.getMyEstablishmentDetails();
+        Ext.Localization.LocalizeView(view);
 
         var cr = view.getData().branchCR;
 
@@ -297,7 +309,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         }
 
 
-           Ext.AnimationHelper.ShowLoading();
+        Ext.AnimationHelper.ShowLoading();
 
 
 
@@ -308,91 +320,91 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         console.log(cr);
 
-         requestData = {
-          "serviceId": "8",
-          "token": Ext.Global.userToken,
-          "language": "ar",
-          "commercialRegistrationNum":cr,
-          "moiEstablishmentNum":"",
-          "siebelSpcOperationSpcObjectSpcId":"",
-          "qatarChamberNum":"",
-          "statusMsg":"",
-          "commercialPermitNum":"",
-          "numOutputObjects":"",
-          "economicalNum":""
+        requestData = {
+            "serviceId": "8",
+            "token": Ext.Global.userToken,
+            "language": Ext.Global.LanguageFlag,
+            "commercialRegistrationNum":cr,
+            "moiEstablishmentNum":"",
+            "siebelSpcOperationSpcObjectSpcId":"",
+            "qatarChamberNum":"",
+            "statusMsg":"",
+            "commercialPermitNum":"",
+            "numOutputObjects":"",
+            "economicalNum":""
         };
 
 
-                Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                    url : Ext.Global.GetConfig('webServiceUrl'),
-                    method : 'POST',
-                    // useDefaultXhrHeader: false,
-                    jsonData :requestData,
-                    success : function (response) {
-                       var json = Ext.util.JSON.decode(response.responseText);
-
-
-                        //Bind Data to controls
-                        var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            // useDefaultXhrHeader: false,
+            jsonData :requestData,
+            success : function (response) {
+                var json = Ext.util.JSON.decode(response.responseText);
 
 
-
-                        view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                        view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
-                        view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
-                        view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
-                        view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
-                        view.down('#companyCapital').setHtml(company.companyCapital);
-                        view.down('#commercialPermit').setHtml(company.commercialPermit);
-                        view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                        view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
-                        view.down('#establishmentDate').setHtml(company.establishmentDate);
-                        view.down('#establishmentType').setHtml(company.establishmentType);
-                        view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
-                        view.down('#establishmentStatus').setHtml(company.establishmentStatus);
+                //Bind Data to controls
+                var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 
 
 
-                        //signatories
-                        var storeSignatories = new Ext.data.Store({
-                            data : company.listOfSignatories.signatories
-                        });
-
-                        var lst = view.down('#lstSignatories');
-                        lst.setStore(storeSignatories);
-
-                        lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
-                            lst.setScrollable(false);
-
-
-
-                        //Branches
-
-                        if(company.listOfBranches.branches.length > 0){
-                        var storeBranches = new Ext.data.Store({
-                            data : company.listOfBranches.branches
-                        });
+                view.down('#commercialRegistration').setHtml(company.commercialRegistration);
+                view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
+                view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
+                view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
+                view.down('#companyCapital').setHtml(company.companyCapital);
+                view.down('#commercialPermit').setHtml(company.commercialPermit);
+                view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
+                view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
+                view.down('#establishmentDate').setHtml(company.establishmentDate);
+                view.down('#establishmentType').setHtml(company.establishmentType);
+                view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
+                view.down('#establishmentStatus').setHtml(company.establishmentStatus);
 
 
 
-                        var lstBranches = view.down('#lstBranches');
-                        lstBranches.setStore(storeBranches);
-
-                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
-                        lstBranches.setScrollable(false);
-
-
-                        }
-
-
-
-
-                        Ext.AnimationHelper.HideLoading();
-
-
-                    }
+                //signatories
+                var storeSignatories = new Ext.data.Store({
+                    data : company.listOfSignatories.signatories
                 });
+
+                var lst = view.down('#lstSignatories');
+                lst.setStore(storeSignatories);
+
+                lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                lst.setScrollable(false);
+
+
+
+                //Branches
+
+                if(company.listOfBranches.branches.length > 0){
+                    var storeBranches = new Ext.data.Store({
+                        data : company.listOfBranches.branches
+                    });
+
+
+
+                    var lstBranches = view.down('#lstBranches');
+                    lstBranches.setStore(storeBranches);
+
+                    lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
+                    lstBranches.setScrollable(false);
+
+
+                }
+
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            }
+        });
 
     }
 

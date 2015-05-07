@@ -33,15 +33,17 @@ Ext.define('MEC_App.view.AdminServicesView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'الخدمات الإدارية'
+                html: 'الخدمات الإدارية',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
-                cls: 'CompanyList',
+                cls: 'HList',
                 height: '100%',
                 itemId: 'lstViewLinks',
+                itemCls: 'HListItem',
                 itemTpl: [
-                    '<div class=\'CompanyListItem\'>{Name}</div>'
+                    '<div>{Name}</div>'
                 ]
             }
         ],
@@ -63,15 +65,11 @@ Ext.define('MEC_App.view.AdminServicesView', {
     },
 
     initialize: function() {
+        Ext.Localization.LocalizeView(this);
 
-        var links = [{Name:'تجديد السجل التجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},
-                     {Name:'تجديد الرخصة التجارية',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},
-                     {Name:'تغيير الإسم التجارى',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
-                     {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
-                     {Name:'محو فرع',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
-                     {Name:'محو سجل رئيسي',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
+        var links = Ext.Localization.getLinks(this);
 
-                    ];
+
 
         var store = new Ext.data.Store({
                             data : links

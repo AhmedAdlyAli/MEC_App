@@ -33,7 +33,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "متابعة المعاملات"
+                "html": "متابعة المعاملات",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel",
             "designerId": "f52bd4c9-3486-4b4c-a3f1-f663abc37272"

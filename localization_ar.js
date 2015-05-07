@@ -99,9 +99,49 @@ var localeAr =
 				{Name:'الاسعار اليومية',Url:'DailyPricesView', Icon:'ico-daily-prices.png'},
              	{Name:'أسعار السلع الاستهلاكية',Url:'GoodsPricesView', Icon:'ico-consumer-goods.png'}
 			]
+		},
+		{
+			itemId:"InvestorServiceView",
+			items: [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png'},
+                    {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png'},
+                    {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png'},
+                    {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png'},
+                    {Name:' خدمات التسجيل ',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png'},
+                    {Name:'حجز اسم تجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png'}
+                    ]
+		},
+		{
+			itemId:"AdminServicesView",
+			items: [{Name:'تجديد السجل التجاري',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},
+             {Name:'تجديد الرخصة التجارية',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},
+             {Name:'تغيير الإسم التجارى',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+             {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+             {Name:'محو فرع',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
+             {Name:'محو سجل رئيسي',Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
+
+            ]
 		}
+
+
+
+
+
+
+
+
+
 	],
 	Views: [
+
+		{
+			itemId:"InvestorServiceView",
+			description: "",
+			items:
+			[
+				{itemId:"lblInvestor", "xtype": "label","value":"خدنات المستثمر"}
+			]
+		},
+
 			{
 			itemId:"MainNavView",
 			description: "Home...",
@@ -138,5 +178,37 @@ var localeAr =
 		}		
 		]
 ,
-	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار'}
+	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار',
+				EstName:'اسم النشرة',
+				Choose:'المختار',
+				Cancel:'الغاء',
+				CRPrint:'مستخرج سجل تجاري - العربية',
+				CRPrint2: 'مستخرج سجل تجاري - انجليزي',
+				CRPrint3: 'شهادة عن رخصة تجارية',
+				CRPrint4: 'شهادة عدم ملكية'	,
+				PrintType: 'نوع المستخرج' ,
+				DeliveryMethod: 'طريقة الاستلام',
+				Personal: 'شخصي',
+				Email: 'البريد الالكتروني',
+				ActiveRequestError: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة',
+				Error: 'خطأ',
+				OK: 'موافق'
+
+				}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -61,7 +61,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar1",
                         "title": "بيانات المنشاة",
                         "titleAlign": "right"
                     },
@@ -118,7 +118,7 @@
                                 "designer|displayName": null,
                                 "html": " رقم السجل التجاري",
                                 "id": null,
-                                "itemId": null
+                                "itemId": "lbl1"
                             },
                             "name": "MyLabel",
                             "designerId": "ca121b75-3a6d-4e25-adad-d5fa0f8cb8f7"
@@ -152,7 +152,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "تاريخ التسجيل",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl2"
                             },
                             "name": "MyLabel2",
                             "designerId": "85e0271b-ba75-4d43-8ea4-20226d069ea0"
@@ -184,7 +185,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "تاريخ الانتهاء",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl3"
                             },
                             "name": "MyLabel3",
                             "designerId": "a6e67faf-a087-4724-a1b3-c2721a7cac1f"
@@ -216,7 +218,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "حالة السجل التجاري",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl4"
                             },
                             "name": "MyLabel8",
                             "designerId": "8dae6ead-289e-4f9b-935b-0b343bc0be1a"
@@ -248,7 +251,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "اسم السجل التجاري بالإنجليزية",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl5"
                             },
                             "name": "MyLabel1",
                             "designerId": "c4e9aa23-1e5a-48c5-b65b-f81717c22422"
@@ -280,7 +284,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "اسم السجل التجاري بالعربية",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl6"
                             },
                             "name": "MyLabel15",
                             "designerId": "86fa3671-b9d7-4662-9be3-ed1d80c97809"
@@ -312,7 +317,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "راس مال الشركة",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl7"
                             },
                             "name": "MyLabel4",
                             "designerId": "0c1b70d8-c33a-4cfc-9df6-e345b76bb76b"
@@ -344,7 +350,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "رقم الرخصة التجارية",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl8"
                             },
                             "name": "MyLabel5",
                             "designerId": "cb088b68-d547-4856-85b1-7ff7962a906a"
@@ -376,7 +383,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "حالة الرخصة التجارية",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl9"
                             },
                             "name": "MyLabel7",
                             "designerId": "2003903a-f176-4a7d-9e58-f6e7dc2413cb"
@@ -408,7 +416,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "تاريخ انتهاء الرخصة التجارية",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl10"
                             },
                             "name": "MyLabel16",
                             "designerId": "3be77cb4-c451-410d-8627-39e1063e7be9"
@@ -440,7 +449,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "تاريخ التاسيس",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl11"
                             },
                             "name": "MyLabel9",
                             "designerId": "0e6b2f0d-e603-40b6-b134-bc4d1a06a1df"
@@ -472,7 +482,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "نوع المنشاة",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl12"
                             },
                             "name": "MyLabel10",
                             "designerId": "aeb2e07c-fe62-495f-bf77-0294ba0ef70e"
@@ -504,7 +515,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "الشكل القانوني",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl13"
                             },
                             "name": "MyLabel11",
                             "designerId": "593fa455-1e37-4221-870c-15be65d6a8b1"
@@ -536,7 +548,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "حالة المنشاة",
-                                "id": null
+                                "id": null,
+                                "itemId": "lbl14"
                             },
                             "name": "MyLabel12",
                             "designerId": "25605e60-0548-40c1-88ea-9a8fbb4a7d7e"
@@ -593,7 +606,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar2",
                         "title": "الانشطة التجارية",
                         "titleAlign": "right"
                     },
@@ -684,7 +697,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar3",
                         "title": "الفروع",
                         "titleAlign": "right"
                     },
@@ -781,7 +794,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar4",
                         "title": "المخولين بالتوقيع",
                         "titleAlign": "right"
                     },

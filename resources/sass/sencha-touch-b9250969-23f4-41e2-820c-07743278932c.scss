@@ -323,40 +323,21 @@ body {
     }
 }
 
-.HList {
-    direction: rtl;
-    .x-innerhtml {
-        background: #fff;
-    }
-
-    .HListItem {
-        background: url(../images/HListIcon.png) no-repeat right;
-        padding: 0 30px 0 0;
-        line-height: 35px;
-    }
-
-}
-
-
-
-
+.HList,
 .CompanyList {
     direction: rtl;
     .x-innerhtml {
         background: #fff;
     }
 
+    .HListItem,
     .CompanyListItem {
-        background: url(../images/HListIcon.png) no-repeat right;
-        padding: 0 35px 0 0;
+        background: url(../images/HListIcon.png) no-repeat 96% center;
+        padding: 0 36px 0 0;
         line-height: 35px;
     }
 
 }
-
-
-
-
 
 
 
@@ -904,12 +885,6 @@ body {
         padding:0.5em 0 0.5em 0.5em;
         font-weight:500;
     }
-    .FA{
-        float:right
-    }
-    .FB{
-        float:left
-    }
 
 }
 
@@ -933,13 +908,6 @@ body {
         padding:0.5em 0 0.5em 0.5em;
         font-weight:500;
     }
-    .FA{
-        float:right
-    }
-    .FB{
-        float:left
-    }
-
 }
 
 
@@ -1569,7 +1537,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 
-.ltr-cls{
+.ltr-cls {
     direction:ltr !important;
 
     .item-link,
@@ -1584,9 +1552,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     .item-shop,
     .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
-
-        padding-top:1em;
-        padding-bottom:1em;
         padding-left:3em;
         padding-right:0;
         background: url(../images/request.png) no-repeat 4% center;
@@ -1597,8 +1562,6 @@ background: url(../images/toplogo.png) no-repeat center top;
     }
 
     .item-product, .item-product.x-list-item.x-item-selected.x-list-item-tpl{
-        padding-top:1em;
-        padding-bottom:1em;
         padding-left:3em;
         padding-right:0;
         background: url(../images/request.png) no-repeat 4% center;
@@ -1623,6 +1586,35 @@ background: url(../images/toplogo.png) no-repeat center top;
     .row-cell2 {
         border-right: none;
     }
+
+    .item-company{
+        padding-left:3em;
+        padding-right:0;
+        background: url(../images/company.png) no-repeat 4% center;
+
+        .tpl-company-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
+
+    }
+
+    .HListItem {
+        background: url(../images/HListIcon.png) no-repeat 4% center;
+        padding: 0 0 0 36px;
+    }
+    
+    
+.item-request{
+    
+    padding-right:0;
+    padding-left:3em;
+    background: url(../images/request.png) no-repeat 4% center;
+
+    .tpl-request-2{
+        padding:0.5em 0.5em 0.5em 0;
+    }
+}
+
 
 }
 

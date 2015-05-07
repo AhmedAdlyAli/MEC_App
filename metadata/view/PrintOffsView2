@@ -50,7 +50,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "طلب مستخرجات"
+                "html": "طلب مستخرجات",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "b9b686b9-7cf6-4262-990b-8e0a5b1ed9b8"
@@ -65,7 +66,8 @@
             "userConfig": {
                 "cls": [
                     "acc-group"
-                ]
+                ],
+                "itemId": "pnlData"
             },
             "name": "MyPanel2",
             "designerId": "3399d7c5-6594-46b5-8d7a-ff144f735a59",
@@ -78,7 +80,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "نوع المستخرج"
+                        "html": "نوع المستخرج",
+                        "itemId": "lbl1"
                     },
                     "name": "MyLabel30",
                     "designerId": "570fd72c-4a6c-409a-af5f-0002639348e8"
@@ -107,7 +110,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "عدد النسخ"
+                        "html": "عدد النسخ",
+                        "id": "lbl2"
                     },
                     "name": "MyLabel32",
                     "designerId": "6eff29a9-53df-4443-96df-792f27a526f9"
@@ -138,7 +142,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "اسم المنشأة"
+                        "html": "اسم المنشأة",
+                        "itemId": "lbl3"
                     },
                     "name": "MyLabel34",
                     "designerId": "b13c4c39-880c-4181-bd8a-264d33c84da0"
@@ -167,7 +172,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "إجمالي الرسوم"
+                        "html": "إجمالي الرسوم",
+                        "itemId": "lbl4"
                     },
                     "name": "MyLabel36",
                     "designerId": "7d49d3dc-69cb-4187-b196-58a9681fd17a"
@@ -196,7 +202,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "رقم الطلب"
+                        "html": "رقم الطلب",
+                        "itemId": "lbl5"
                     },
                     "name": "MyLabel38",
                     "designerId": "bc81538e-cc70-4d88-bbd8-e2c2abfa5371"
@@ -225,7 +232,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "حالة الطلب"
+                        "html": "حالة الطلب",
+                        "itemId": "lbl6"
                     },
                     "name": "MyLabel40",
                     "designerId": "d21898f0-f84e-4c6c-ad8b-8dc3a3934593"
@@ -254,7 +262,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "المرفقات المطلوبة"
+                        "html": "المرفقات المطلوبة",
+                        "itemId": "lbl7"
                     },
                     "name": "MyLabel42",
                     "designerId": "ad855d4f-c62b-401d-9ad1-43d057329305"
@@ -348,7 +357,7 @@
                                     "            json.recordID = company.caseNum;",
                                     "            json.typeCode = company.typeCode;",
                                     "            json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;",
-                                    "            json.locale = 'ar';",
+                                    "            json.locale = Ext.Global.LanguageFlag;",
                                     "",
                                     "",
                                     "",
@@ -362,9 +371,9 @@
                                     "",
                                     "",
                                     "            Ext.device.Notification.show({",
-                                    "                title: 'خطأ',",
-                                    "                buttons: [\"موافق\"],",
-                                    "                message:  'json.statusMsg'",
+                                    "                title: Ext.Localization.GetMessage('Error'),",
+                                    "                buttons: [Ext.Localization.GetMessage('OK')],",
+                                    "                message:  Ext.Localization.GetMessage('ActiveRequestError')",
                                     "            });",
                                     "",
                                     "        }",
@@ -409,6 +418,7 @@
             "userConfig": {
                 "fn": "initialize",
                 "implHandler": [
+                    "Ext.Localization.LocalizeView(this);",
                     "",
                     "var view = this; //this.getPrintOffsView2();",
                     "var json = view.getData();",

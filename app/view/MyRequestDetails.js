@@ -41,7 +41,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                 items: [
                     {
                         xtype: 'label',
-                        html: ' رقم الطلب'
+                        html: ' رقم الطلب',
+                        itemId: 'lbl1'
                     },
                     {
                         xtype: 'label',
@@ -51,7 +52,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: ' حالة الطلب'
+                        html: ' حالة الطلب',
+                        itemId: 'lbl2'
                     },
                     {
                         xtype: 'label',
@@ -61,7 +63,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: ' نوع الطلب'
+                        html: ' نوع الطلب',
+                        itemId: 'lbl3'
                     },
                     {
                         xtype: 'label',
@@ -71,7 +74,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: ' تاريخ تقديم الطلب'
+                        html: ' تاريخ تقديم الطلب',
+                        itemId: 'lbl4'
                     },
                     {
                         xtype: 'label',
@@ -81,7 +85,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'تاريخ آخر تحديث'
+                        html: 'تاريخ آخر تحديث',
+                        itemId: 'lbl5'
                     },
                     {
                         xtype: 'label',
@@ -91,7 +96,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'تاريخ اغلاق الطلب'
+                        html: 'تاريخ اغلاق الطلب',
+                        itemId: 'lbl6'
                     },
                     {
                         xtype: 'label',
@@ -101,7 +107,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'الرقم الشخصي لمقدم الطلب'
+                        html: 'الرقم الشخصي لمقدم الطلب',
+                        itemId: 'lbl7'
                     },
                     {
                         xtype: 'label',
@@ -111,7 +118,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اسم مقدم الطلب باللغة العربية'
+                        html: 'اسم مقدم الطلب باللغة العربية',
+                        itemId: 'lbl8'
                     },
                     {
                         xtype: 'label',
@@ -121,7 +129,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اسم مقدم الطلب باللغة الانجليزية'
+                        html: 'اسم مقدم الطلب باللغة الانجليزية',
+                        itemId: 'lbl9'
                     },
                     {
                         xtype: 'label',
@@ -131,7 +140,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'رقم السجل التجاري'
+                        html: 'رقم السجل التجاري',
+                        id: 'lbl10'
                     },
                     {
                         xtype: 'label',
@@ -141,7 +151,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اسم الشركة باللغة العربية'
+                        html: 'اسم الشركة باللغة العربية',
+                        itemId: 'lbl11'
                     },
                     {
                         xtype: 'label',
@@ -151,7 +162,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اسم الشركة باللغة الانجليزية'
+                        html: 'اسم الشركة باللغة الانجليزية',
+                        id: 'lbl12'
                     },
                     {
                         xtype: 'label',
@@ -161,7 +173,8 @@ Ext.define('MEC_App.view.MyRequestDetails', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اجمالي المبلغ المطلوب'
+                        html: 'اجمالي المبلغ المطلوب',
+                        id: 'lbl13'
                     },
                     {
                         xtype: 'label',

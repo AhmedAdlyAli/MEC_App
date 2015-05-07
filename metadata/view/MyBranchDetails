@@ -61,7 +61,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar1",
                         "title": "بيانات الفرع",
                         "titleAlign": "right"
                     },
@@ -593,7 +593,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar2",
                         "title": "الانشطة التجارية",
                         "titleAlign": "right"
                     },
@@ -685,7 +685,7 @@
                             "acc-header"
                         ],
                         "docked": "top",
-                        "itemId": "mytitlebar",
+                        "itemId": "titlebar4",
                         "title": "المخولين بالتوقيع",
                         "titleAlign": "right"
                     },

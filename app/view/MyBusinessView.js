@@ -35,7 +35,8 @@ Ext.define('MEC_App.view.MyBusinessView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'بياناتي الخاصة'
+                html: 'بياناتي الخاصة',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
@@ -44,11 +45,26 @@ Ext.define('MEC_App.view.MyBusinessView', {
                 hidden: false,
                 itemId: 'lstMyCompanies',
                 itemCls: 'item-company',
-                itemTpl: [
-                    '    <div class=\'tpl-signatory-1\'>{establishmentArabicName}</div>',
-                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>سجل تجاري: {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
-                    ''
-                ],
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '    <div class=\'tpl-signatory-1\'>{[this.CheckLang(values.establishmentArabicName, values.establishmentEnglishName)]}</div>',
+                    '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{[this.CheckCrName()]} {commercialRegistration}</span> <span class=\'FB\'>{companyStatus}</span></div>',
+                    '',
+                    {
+                        CheckLang: function(ar, en) {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return ar;
+                            else
+                            return en;
+
+                        },
+                        CheckCrName: function() {
+                            if(Ext.Global.LanguageFlag=='ar')
+                            return 'سجل تجاري:';
+                            else
+                            return 'CR:';
+                        }
+                    }
+                ),
                 onItemDisclosure: false
             }
         ]
