@@ -24,6 +24,9 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
         control: {
             "button#btnSubmitActivity": {
                 tap: 'onBtnSubmitActivityTap'
+            },
+            "formpanel#tradenameavailabilityview1": {
+                initialize: 'onTradenameavailabilityview1Initialize'
             }
         }
     },
@@ -94,6 +97,10 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
 
 
+    },
+
+    onTradenameavailabilityview1Initialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
     }
 
 });

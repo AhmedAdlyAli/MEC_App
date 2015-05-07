@@ -192,7 +192,8 @@ var localeAr =
 				Email: 'البريد الالكتروني',
 				ActiveRequestError: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة',
 				Error: 'خطأ',
-				OK: 'موافق'
+				OK: 'موافق',
+				ErrSearchKeyword: 'يجب إدخال كلمة البحث'
 
 				}
 }

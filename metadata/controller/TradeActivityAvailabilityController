@@ -112,6 +112,29 @@
             },
             "name": "onBtnSubmitActivityTap",
             "designerId": "645b0c90-7332-4afa-8f8e-1d5838322b8c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "formpanel#tradenameavailabilityview1",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onTradenameavailabilityview1Initialize",
+                "implHandler": [
+                    "Ext.Localization.LocalizeView(component);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onTradenameavailabilityview1Initialize",
+            "designerId": "d20a2dd9-3f24-49f0-a275-670cbe7020e5"
         }
     ]
 }

@@ -57,9 +57,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
             Ext.device.Notification.show({
-                title: 'خطأ',
-                buttons:["موافق"],
-                message: 'يجب إدخال كلمة البحث'
+                title: Ext.Localization.GetMessage('Error'),
+                buttons:[Ext.Localization.GetMessage('OK')],
+                message: Ext.Localization.GetMessage('ErrSearchKeyword')
             });
 
             return;
@@ -78,11 +78,13 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
         var requestData = {
             "serviceId":"6",
-            "language":"ARA",
-            "tradeNameLanguage":"ARA",
+            "language":Ext.Global.LanguageFlag,
+            "tradeNameLanguage":Ext.Global.LanguageFlag   ,
             "tradeName":searchKeyword
         };
 
+
+        console.log(requestData);
 
 
         Ext.AnimationHelper.ShowLoading();

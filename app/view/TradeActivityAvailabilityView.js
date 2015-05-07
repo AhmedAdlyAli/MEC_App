@@ -28,7 +28,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
 
     config: {
         cls: 'complaint-view',
-        itemId: '',
+        itemId: 'tradenameavailabilityview1',
         layout: 'fit',
         scrollable: false,
         items: [
@@ -36,7 +36,8 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'البحث عن نشاط تجاري'
+                html: 'البحث عن نشاط تجاري',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'fieldset',
@@ -62,6 +63,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 cls: 'CompanyList',
                 height: '100%',
                 id: 'lstTradeActivityResults',
+                itemId: 'lstTradeActivityResults',
                 itemCls: 'item-activity',
                 itemTpl: [
                     '<div class=\'tpl-activity-1\'>{businessActivityArabicName}</div>',

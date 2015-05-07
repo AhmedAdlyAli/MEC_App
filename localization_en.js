@@ -292,6 +292,40 @@ var localeEn =
 			]
 		},
 
+
+
+		{
+			itemId:"TradeNameAvailabilityView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Trade Name Availability Search"},
+				{itemId:"txtActivityName", "xtype": "textfield","value":"Trade Name"},
+				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"lstTradeNameResults", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"btnSubmit", "xtype": "button","value":"Search"}
+					
+				
+			]
+		},
+
+		{
+			itemId:"tradenameavailabilityview1",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"Trade Name Availability Search"},
+				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Name"},
+				{itemId:"btnSubmitActivity", "xtype": "button","value":"Search"},
+				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} 
+		 
+			]
+		},
+
+
+
+
+
 		{
 			itemId:"InvestorServiceView",
 			description: "",
@@ -638,7 +672,8 @@ var localeEn =
 				Email: 'Email',
 				ActiveRequestError: 'There is already active request of the same type for this Establishment',
 				Error: 'Error',
-				OK: 'Ok'				
+				OK: 'Ok',
+				ErrSearchKeyword: 'Please enter the search keyword'				
 				}
 
 }

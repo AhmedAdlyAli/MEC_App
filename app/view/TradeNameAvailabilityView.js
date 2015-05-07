@@ -36,11 +36,13 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'البحث عن اسم تجاري'
+                html: 'البحث عن اسم تجاري',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'fieldset',
                 docked: 'top',
+                itemId: 'fsForm',
                 items: [
                     {
                         xtype: 'textfield',

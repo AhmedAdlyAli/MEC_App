@@ -11,7 +11,7 @@
         ],
         "designer|userAlias": "TradeActivityAvailabilityView",
         "designer|userClassName": "TradeActivityAvailabilityView",
-        "itemId": "",
+        "itemId": "tradenameavailabilityview1",
         "layout": "fit",
         "scrollable": false
     },
@@ -30,7 +30,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "البحث عن نشاط تجاري"
+                "html": "البحث عن نشاط تجاري",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel1",
             "designerId": "23a29c8e-e229-4a8d-9e54-21aa89735d5b"
@@ -99,7 +100,7 @@
                 "height": "100%",
                 "id": "lstTradeActivityResults",
                 "itemCls": "item-activity",
-                "itemId": null,
+                "itemId": "lstTradeActivityResults",
                 "store": null
             },
             "name": "MyList1",
