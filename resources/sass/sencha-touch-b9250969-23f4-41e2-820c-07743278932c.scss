@@ -1570,7 +1570,7 @@ background: url(../images/toplogo.png) no-repeat center top;
             padding:0.5em 0.5em 0.5em 0;
         }
     }
-    
+
     .header-cell2 {
         border-right: none;
         border-left: solid 1px #fff;
@@ -1602,21 +1602,22 @@ background: url(../images/toplogo.png) no-repeat center top;
         background: url(../images/HListIcon.png) no-repeat 4% center;
         padding: 0 0 0 36px;
     }
-    
-    
-.item-request{
-    
-    padding-right:0;
-    padding-left:3em;
-    background: url(../images/request.png) no-repeat 4% center;
 
-    .tpl-request-2{
-        padding:0.5em 0.5em 0.5em 0;
+
+    .item-request{
+
+        padding-right:0;
+        padding-left:3em;
+        background: url(../images/request.png) no-repeat 4% center;
+
+        .tpl-request-2{
+            padding:0.5em 0.5em 0.5em 0;
+        }
     }
-}
 
 
 }
+
 
 .language-button-wrapper {
     padding: 10px;
