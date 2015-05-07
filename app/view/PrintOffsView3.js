@@ -80,7 +80,7 @@ Ext.define('MEC_App.view.PrintOffsView3', {
             tr+= 'vpc_Amount:'  +  data.fees    + '\n';
             tr+= 'locale' + Ext.Global.LanguageFlag ;
 
-            alert(tr);
+           // alert(tr);
 
 
 

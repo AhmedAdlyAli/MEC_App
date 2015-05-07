@@ -233,6 +233,7 @@ var localeEn =
 				{itemId:"titlebar4", "xtype": "titlebar","value":"Signatories"},
 
 				{itemId:"EstablishmentInfo", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"Branches", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
