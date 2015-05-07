@@ -529,6 +529,29 @@
             },
             "name": "onTradeNameBranchDetailsInitialize",
             "designerId": "5cedf100-a805-4dc3-8604-0e8715be0fd0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "formpanel#TradeNameAvailabilityView",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.form.Panel",
+                "fn": "onTradeNameAvailabilityViewInitialize",
+                "implHandler": [
+                    "Ext.Localization.LocalizeView(component);"
+                ],
+                "name": "initialize"
+            },
+            "name": "onTradeNameAvailabilityViewInitialize",
+            "designerId": "7763c91c-e6f8-47d7-a018-5c565f5817c9"
         }
     ]
 }

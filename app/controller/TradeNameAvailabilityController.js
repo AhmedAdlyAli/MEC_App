@@ -37,6 +37,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             },
             "panel#TradeNameBranchDetails": {
                 initialize: 'onTradeNameBranchDetailsInitialize'
+            },
+            "formpanel#TradeNameAvailabilityView": {
+                initialize: 'onTradeNameAvailabilityViewInitialize'
             }
         }
     },
@@ -423,6 +426,10 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                     }
                 });
 
+    },
+
+    onTradeNameAvailabilityViewInitialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
     }
 
 });

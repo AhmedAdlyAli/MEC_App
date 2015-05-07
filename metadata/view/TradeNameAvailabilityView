@@ -11,10 +11,11 @@
         ],
         "designer|userAlias": "TradeNameAvailabilityView",
         "designer|userClassName": "TradeNameAvailabilityView",
-        "itemId": "",
+        "itemId": "TradeNameAvailabilityView",
         "layout": "fit",
         "scrollable": false
     },
+    "name": "MyFormPanel",
     "designerId": "dbb8eea4-cde2-4155-bbe5-01f9ac64d6a4",
     "cn": [
         {

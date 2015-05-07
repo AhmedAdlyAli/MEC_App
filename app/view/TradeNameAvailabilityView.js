@@ -28,7 +28,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
 
     config: {
         cls: 'complaint-view',
-        itemId: '',
+        itemId: 'TradeNameAvailabilityView',
         layout: 'fit',
         scrollable: false,
         items: [
