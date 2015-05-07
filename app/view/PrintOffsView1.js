@@ -34,11 +34,13 @@ Ext.define('MEC_App.view.PrintOffsView1', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'طلب مستخرجات'
+                html: 'طلب مستخرجات',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'fieldset',
                 flex: 1,
+                itemId: 'fsForm',
                 scrollable: {
                     direction: 'vertical',
                     directionLock: true
@@ -71,7 +73,11 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         var items = [];
 
                                         Ext.each(data, function(item){
+
+                                            if(Ext.Global.LanguageFlag=='ar')
                                             items.push({ text: item.establishmentArabicName, value: item.commercialRegistration });
+                                            else
+                                            items.push({ text: item.establishmentEnglishName, value: item.commercialRegistration });
                                         });
 
 
@@ -79,11 +85,10 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "اسم الشركة",
+                                            title: Ext.Localization.GetMessage('EstName'),
                                             items: items,
-                                            //selectedValue: "2",
-                                            doneButtonLabel: "اختيار",
-                                            cancelButtonLabel: "الغاء"
+                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                         };
 
 
@@ -123,18 +128,17 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "نوع المستخرج",
+                                            title: Ext.Localization.GetMessage('PrintType'),
                                             items: [
 
-                                            { text: "مستخرج سجل تجاري - العربية", value: "51" },
-                                            { text: "مستخرج سجل تجاري - انجليزي", value: "52" },
-                                            { text: "شهادة عن رخصة تجارية", value: "53" }//,
-                                            //{ text: "شهادة عدم ملكية", value: "50" }
+                                            { text: Ext.Localization.GetMessage('CRPrint') , value: "51" },
+                                            { text: Ext.Localization.GetMessage('CRPrint2'), value: "52" },
+                                            { text: Ext.Localization.GetMessage('CRPrint3'), value: "53" }//,
+                                            //{ text: Ext.Localization.GetMessage('CRPrint4'), value: "50" }
 
                                             ],
-                                            selectedValue: "",
-                                            doneButtonLabel: "اختيار",
-                                            cancelButtonLabel: "الغاء"
+                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                         };
 
                                         var hiddenPrintType = Ext.ComponentQuery.query("#hiddenPrintoutType")[0];
@@ -177,17 +181,16 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "طريقة الاستلام",
+                                            title: Ext.Localization.GetMessage('DeliveryMethod') ,
                                             items: [
-                                            { text: "شخصي", value: "1" },
-                                            { text: "البريد الالكتروني", value: "3" }
-
+                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" },
+                                            { text: Ext.Localization.GetMessage('Email'), value: "3" }
 
 
                                             ],
                                             selectedValue: "",
-                                            doneButtonLabel: "اختيار",
-                                            cancelButtonLabel: "الغاء"
+                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                         };
 
 
@@ -279,7 +282,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 var requestData = {
                                     "serviceId": "9",
                                     "token": Ext.Global.userToken,
-                                    "language": "ar",
+                                    "language": Ext.Global.LanguageFlag,
                                     "identityType": 'QID',//Ext.Global.identityType,
                                     "identityNum": Ext.Global.identityNum,
                                     "identityNationality": Ext.Global.identityNationality,
@@ -313,9 +316,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         {
 
                                             Ext.device.Notification.show({
-                                                title: 'خطأ',
-                                                buttons:["موافق"],
-                                                message: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة'
+                                                title: Ext.Localization.GetMessage('Error'),
+                                                buttons: [Ext.Localization.GetMessage('OK')],
+                                                message: Ext.Localization.GetMessage('ActiveRequestError')
                                             });
 
 
@@ -362,7 +365,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
     },
 
     initialize: function() {
-        //alert('asd');
+        Ext.Localization.LocalizeView(this);
+
+
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -370,8 +375,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
         var requestData = {
             "serviceId": "2",
             "token": Ext.Global.userToken,
-            "language": "ar",
-            "identityType":'QID', //Ext.Global.identityType,
+            "language": Ext.Global.LanguageFlag,
+            "identityType":'QID',
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };

@@ -40,15 +40,18 @@ Ext.define('MEC_App.view.PrintOffsView2', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'طلب مستخرجات'
+                html: 'طلب مستخرجات',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'panel',
                 cls: 'acc-group',
+                itemId: 'pnlData',
                 items: [
                     {
                         xtype: 'label',
-                        html: 'نوع المستخرج'
+                        html: 'نوع المستخرج',
+                        itemId: 'lbl1'
                     },
                     {
                         xtype: 'label',
@@ -57,7 +60,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'عدد النسخ'
+                        html: 'عدد النسخ',
+                        id: 'lbl2'
                     },
                     {
                         xtype: 'label',
@@ -69,7 +73,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'اسم المنشأة'
+                        html: 'اسم المنشأة',
+                        itemId: 'lbl3'
                     },
                     {
                         xtype: 'label',
@@ -78,7 +83,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'إجمالي الرسوم'
+                        html: 'إجمالي الرسوم',
+                        itemId: 'lbl4'
                     },
                     {
                         xtype: 'label',
@@ -87,7 +93,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'رقم الطلب'
+                        html: 'رقم الطلب',
+                        itemId: 'lbl5'
                     },
                     {
                         xtype: 'label',
@@ -96,7 +103,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'حالة الطلب'
+                        html: 'حالة الطلب',
+                        itemId: 'lbl6'
                     },
                     {
                         xtype: 'label',
@@ -105,7 +113,8 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                     },
                     {
                         xtype: 'label',
-                        html: 'المرفقات المطلوبة'
+                        html: 'المرفقات المطلوبة',
+                        itemId: 'lbl7'
                     },
                     {
                         xtype: 'label',
@@ -157,7 +166,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                                         json.recordID = company.caseNum;
                                         json.typeCode = company.typeCode;
                                         json.fees = company.listOfMecCaseFees.mecCaseFees[0].feesTotalValue;
-                                        json.locale = 'ar';
+                                        json.locale = Ext.Global.LanguageFlag;
 
 
 
@@ -171,9 +180,9 @@ Ext.define('MEC_App.view.PrintOffsView2', {
 
 
                                         Ext.device.Notification.show({
-                                            title: 'خطأ',
-                                            buttons: ["موافق"],
-                                            message:  'json.statusMsg'
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message:  Ext.Localization.GetMessage('ActiveRequestError')
                                         });
 
                                     }
@@ -201,6 +210,7 @@ Ext.define('MEC_App.view.PrintOffsView2', {
     },
 
     initialize: function() {
+        Ext.Localization.LocalizeView(this);
 
         var view = this; //this.getPrintOffsView2();
         var json = view.getData();

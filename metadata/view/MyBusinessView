@@ -33,7 +33,8 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "بياناتي الخاصة"
+                "html": "بياناتي الخاصة",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel",
             "designerId": "9aae0f08-8d70-4243-a09f-4ddad8c08aa0"
@@ -66,13 +67,58 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "    <div class='tpl-signatory-1'>{establishmentArabicName}</div>",
-                            "    <div class='tpl-signatory-2'><span class='FA'>سجل تجاري: {commercialRegistration}</span> <span class='FB'>{companyStatus}</span></div>",
+                            "    <div class='tpl-signatory-1'>{[this.CheckLang(values.establishmentArabicName, values.establishmentEnglishName)]}</div>",
+                            "    <div class='tpl-signatory-2'><span class='FA'>{[this.CheckCrName()]} {commercialRegistration}</span> <span class='FB'>{companyStatus}</span></div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "f9d449fc-b922-4b9b-a687-7e5308a28998"
+                    "designerId": "f9d449fc-b922-4b9b-a687-7e5308a28998",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "ar",
+                                    "en"
+                                ],
+                                "fn": "CheckLang",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "    return ar;",
+                                    "else",
+                                    "    return en;",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckLang",
+                            "designerId": "0b2d234e-0aee-4fbe-ab21-5c348881f6fa"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "CheckCrName",
+                                "implHandler": [
+                                    " if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'سجل تجاري:';",
+                                    "else ",
+                                    "    return 'CR:';"
+                                ]
+                            },
+                            "name": "CheckCrName",
+                            "designerId": "df665997-c131-44f1-b7e8-74a2269728a4"
+                        }
+                    ]
                 }
             ]
         }

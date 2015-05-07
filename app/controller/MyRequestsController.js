@@ -34,6 +34,9 @@ Ext.define('MEC_App.controller.MyRequestsController', {
     onMyRequestsViewInitialize: function(component, eOpts) {
         var view = component;//me.getMyBusinessView();
 
+        Ext.Localization.LocalizeView(view);
+
+
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -43,8 +46,8 @@ Ext.define('MEC_App.controller.MyRequestsController', {
         var requestData = {
             "serviceId": "3",
             "token": Ext.Global.userToken,
-            "language": "ar",
-            "identityType": 'QID',//Ext.Global.identityType,
+            "language": Ext.Global.LanguageFlag,
+            "identityType": 'QID',
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };
@@ -88,6 +91,9 @@ Ext.define('MEC_App.controller.MyRequestsController', {
     },
 
     onMyRequestDetailsInitialize: function(component, eOpts) {
+        Ext.Localization.LocalizeView(component);
+
+
         var view = component; //me.getMyEstablishmentDetails();
 
         var serial = view.getData().requestCaseNum;
@@ -108,17 +114,14 @@ Ext.define('MEC_App.controller.MyRequestsController', {
         Ext.AnimationHelper.ShowLoading();
 
 
-
-
         // get request details
 
         var me = this;
 
-
         requestData = {
             "serviceId": "4",
             "token": Ext.Global.userToken,
-            "language": "ar",
+            "language": Ext.Global.LanguageFlag,
             "requestNumber":serial
         };
 

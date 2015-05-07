@@ -35,7 +35,8 @@ Ext.define('MEC_App.view.MyRequestsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'متابعة المعاملات'
+                html: 'متابعة المعاملات',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'list',

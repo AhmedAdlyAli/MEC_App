@@ -98,11 +98,199 @@ var localeEn =
 				{Name:'Daily Prices',Url:'DailyPricesView', Icon:'ico-daily-prices.png'},
              	{Name:'Consumer Goods Prices',Url:'GoodsPricesView', Icon:'ico-consumer-goods.png'}
 			]
+		},
+
+		{
+			itemId:"InvestorServiceView",
+			items: [{Name:'My Establishments',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png'},
+                    {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png'},
+                    {Name:'PrintOffs Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png'},
+                    {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png'},
+                    {Name:'Establishment Services',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png'},
+                    {Name:'Reserve Trade Name',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png'}
+                    ]
+		},
+
+		{
+			itemId:"AdminServicesView",
+			items: [{Name:'Renew Commercial Registration',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},
+             {Name:'Renew Commercial Permit',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},
+             {Name:'Change Trade Name',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+             {Name:'Change Signatories',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
+             {Name:'Terminate Branch',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
+             {Name:'Terminate Commercial Registration',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
+
+            ]
 		}
+
 
 	],
 
 	Views: [
+
+
+		{
+			itemId:"MyBusinessView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"My Establishments"},
+				{itemId:"lstMyCompanies", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
+
+
+		{
+			itemId:"MyRequestDetails",
+			description: "",
+			items:
+			[
+				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"lbl1", "xtype": "label","value":"Request No"},
+				{itemId:"lbl2", "xtype": "label","value":"Request Status"},
+				{itemId:"lbl3", "xtype": "label","value":"Request Type"},
+				{itemId:"lbl4", "xtype": "label","value":"Request Date"},
+				{itemId:"lbl5", "xtype": "label","value":"Request Last Updated"},
+				{itemId:"lbl6", "xtype": "label","value":"Request Closure Date"},
+				{itemId:"lbl7", "xtype": "label","value":"Requester ID Number"},
+				{itemId:"lbl8", "xtype": "label","value":"Requester Arabic Name"},
+				{itemId:"lbl9", "xtype": "label","value":"Requester English Name"},
+				{itemId:"lbl10", "xtype": "label","value":"CR Number"},
+				{itemId:"lbl11", "xtype": "label","value":"Establishment Arabic Name"},
+				{itemId:"lbl12", "xtype": "label","value":"Establishment English Name"},
+				{itemId:"lbl13", "xtype": "label","value":"Total Fees"}
+
+			]
+		},
+
+
+		{
+			itemId:"PrintOffsView1",
+			description: "",
+			items:
+			[
+				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"companyName", "xtype": "textfield","value":"Company Name"},
+				{itemId:"txtPrintoutType", "xtype": "textfield","value":"PrintOff Type"},
+				{itemId:"txtDeliveryMethod", "xtype": "textfield","value":"Delivery Method"},
+				{itemId:"txtNoOfCopies", "xtype": "textfield","value":"No of Copies"},
+				{itemId:"btnPrintoffsNext", "xtype": "button","value":"Next"},
+				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+
+			]
+		},
+
+		{
+			itemId:"PrintOffsView2",
+			description: "",
+			items:
+			[
+				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"lbl1", "xtype": "label","value":"PrintOff Type"},
+				{itemId:"lbl2", "xtype": "label","value":"No Of Copies"},
+				{itemId:"lbl3", "xtype": "label","value":"Establishment Name"},
+				{itemId:"lbl4", "xtype": "label","value":"Total Fees"},
+				{itemId:"lbl5", "xtype": "label","value":"Request Number"},
+				{itemId:"lbl6", "xtype": "label","value":"Request Status"},
+				{itemId:"lbl7", "xtype": "label","value":"Required Attachments"},
+				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confrim & Pay"},
+				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+
+			]
+		},
+
+
+		{
+			itemId:"PrintOffsView3",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+			]
+		},	
+
+
+
+		{
+			itemId:"MyEstablishmentDetails",
+			description: "",
+			items:
+			[
+				
+				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
+				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
+				{itemId:"lbl3", "xtype": "label","value":"CR Expiry Date"},
+				{itemId:"lbl4", "xtype": "label","value":"CR Status"},
+				{itemId:"lbl5", "xtype": "label","value":"CR English Name"},
+				{itemId:"lbl6", "xtype": "label","value":"CR Arabic Name"},
+				{itemId:"lbl7", "xtype": "label","value":"Capital"},
+				{itemId:"lbl8", "xtype": "label","value":"CP Number"},
+				{itemId:"lbl9", "xtype": "label","value":"CP Status"},
+				{itemId:"lbl10", "xtype": "label","value":"CP Expiry Date"},
+				{itemId:"lbl11", "xtype": "label","value":"Establishment Date"},
+				{itemId:"lbl12", "xtype": "label","value":"Establishment Type"},
+				{itemId:"lbl13", "xtype": "label","value":"Legal Form"},
+				{itemId:"lbl14", "xtype": "label","value":"Establishment Status"},
+
+				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
+				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},
+				{itemId:"titlebar3", "xtype": "titlebar","value":"Branches"},
+				{itemId:"titlebar4", "xtype": "titlebar","value":"Signatories"},
+
+				{itemId:"EstablishmentInfo", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"Branches", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
+				
+
+			]
+		},
+
+{
+			itemId:"MyBranchDetails",
+			description: "",
+			items:
+			[
+				
+				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
+				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
+
+
+				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
+				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},
+			 
+				{itemId:"titlebar4", "xtype": "titlebar","value":"Signatories"},
+
+				{itemId:"EstablishmentInfo", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
+				 
+				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
+				
+
+			]
+		},
+
+		{
+			itemId:"MyRequestsView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"My Requests"},
+				{itemId:"lstMyRequests", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
+		{
+			itemId:"InvestorServiceView",
+			description: "",
+			items:
+			[
+				{itemId:"lblInvestor", "xtype": "label","value":"investor Services"},
+				{itemId:"lstLinks1", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
 		{
 			itemId:"LoginFomView",
 			description: "login form",
@@ -314,6 +502,26 @@ var localeEn =
 		},
 
 
+
+
+
+		{
+			itemId:"AdminServicesView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Administrative Services"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
+
+
+
+
+
+
+
 		{
 			itemId:"EconomicIndicatorsListing",
 			description: "Economic Indicators Listing",
@@ -402,9 +610,24 @@ var localeEn =
 
 
 
-	]
+	],
 
-,
-	Messages: {StockNotFound:'There is No stock on the selected dealer'}
+	Messages: {
+				StockNotFound:'There is No stock on the selected dealer',
+								EstName:'Establishment Name',
+				Choose:'Choose',
+				Cancel:'Cancel',
+				CRPrint:'CR PrintOff Arabic',
+				CRPrint2: 'CR PrintOff English',
+				CRPrint3: 'CP PrintOff',
+				CRPrint4: 'NOC Certificate'	,
+				PrintType: 'Printiff Type' ,
+				DeliveryMethod: 'Delivery Method',
+				Personal: 'Personal',
+				Email: 'Email',
+				ActiveRequestError: 'There is already active request of the same type for this Establishment',
+				Error: 'Error',
+				OK: 'Ok'				
+				}
 
 }

@@ -18,6 +18,7 @@ Ext.define('MEC_App.view.PrintOffsView3', {
     alias: 'widget.PrintOffsView3',
 
     requires: [
+        'Ext.Label',
         'Ext.Panel'
     ],
 
@@ -26,6 +27,12 @@ Ext.define('MEC_App.view.PrintOffsView3', {
         layout: 'vbox',
         scrollable: false,
         items: [
+            {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'طلب مستخرجات',
+                itemId: 'lblTitle'
+            },
             {
                 xtype: 'panel',
                 flex: 1,
@@ -39,7 +46,8 @@ Ext.define('MEC_App.view.PrintOffsView3', {
         var view = this;
         var data = view.getData();
 
-        console.log(data);
+        Ext.Localization.LocalizeView(view);
+
 
         Ext.Function.defer(function(){
             // payment gateway redirection
@@ -61,10 +69,23 @@ Ext.define('MEC_App.view.PrintOffsView3', {
             form.setValues({
                 vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',
                 vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',
-                vpc_Amount: data.fees+'00',
-                vpc_Locale : data.locale
+                vpc_Amount: data.fees * 100,
+                vpc_Locale : Ext.Global.LanguageFlag
+
 
             });
+
+            var tr= 'vpc_OrderInfo' +  data.recordID + '\n';
+            tr+= 'vpc_OrderInfo' + data.caseSerialNum + '_' + data.typeCode + '\n';
+            tr+= 'vpc_Amount:'  +  data.fees    + '\n';
+            tr+= 'locale' + Ext.Global.LanguageFlag ;
+
+            alert(tr);
+
+
+
+
+
 
             form.element.dom.target = 'paymentframe';
             form.submit(); //{target: 'paymentframe'}

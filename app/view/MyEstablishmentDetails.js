@@ -45,7 +45,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar1',
                         title: 'بيانات المنشاة',
                         titleAlign: 'right',
                         listeners: [
@@ -66,7 +66,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'label',
-                                html: ' رقم السجل التجاري'
+                                html: ' رقم السجل التجاري',
+                                itemId: 'lbl1'
                             },
                             {
                                 xtype: 'label',
@@ -76,7 +77,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التسجيل'
+                                html: 'تاريخ التسجيل',
+                                itemId: 'lbl2'
                             },
                             {
                                 xtype: 'label',
@@ -85,7 +87,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ الانتهاء'
+                                html: 'تاريخ الانتهاء',
+                                itemId: 'lbl3'
                             },
                             {
                                 xtype: 'label',
@@ -94,7 +97,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة السجل التجاري'
+                                html: 'حالة السجل التجاري',
+                                itemId: 'lbl4'
                             },
                             {
                                 xtype: 'label',
@@ -103,7 +107,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'اسم السجل التجاري بالإنجليزية'
+                                html: 'اسم السجل التجاري بالإنجليزية',
+                                itemId: 'lbl5'
                             },
                             {
                                 xtype: 'label',
@@ -112,7 +117,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'اسم السجل التجاري بالعربية'
+                                html: 'اسم السجل التجاري بالعربية',
+                                itemId: 'lbl6'
                             },
                             {
                                 xtype: 'label',
@@ -121,7 +127,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'راس مال الشركة'
+                                html: 'راس مال الشركة',
+                                itemId: 'lbl7'
                             },
                             {
                                 xtype: 'label',
@@ -130,7 +137,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'رقم الرخصة التجارية'
+                                html: 'رقم الرخصة التجارية',
+                                itemId: 'lbl8'
                             },
                             {
                                 xtype: 'label',
@@ -139,7 +147,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة الرخصة التجارية'
+                                html: 'حالة الرخصة التجارية',
+                                itemId: 'lbl9'
                             },
                             {
                                 xtype: 'label',
@@ -148,7 +157,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ انتهاء الرخصة التجارية'
+                                html: 'تاريخ انتهاء الرخصة التجارية',
+                                itemId: 'lbl10'
                             },
                             {
                                 xtype: 'label',
@@ -157,7 +167,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس'
+                                html: 'تاريخ التاسيس',
+                                itemId: 'lbl11'
                             },
                             {
                                 xtype: 'label',
@@ -166,7 +177,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشاة'
+                                html: 'نوع المنشاة',
+                                itemId: 'lbl12'
                             },
                             {
                                 xtype: 'label',
@@ -175,7 +187,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'الشكل القانوني'
+                                html: 'الشكل القانوني',
+                                itemId: 'lbl13'
                             },
                             {
                                 xtype: 'label',
@@ -184,7 +197,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة المنشاة'
+                                html: 'حالة المنشاة',
+                                itemId: 'lbl14'
                             },
                             {
                                 xtype: 'label',
@@ -205,7 +219,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar2',
                         title: 'الانشطة التجارية',
                         titleAlign: 'right',
                         listeners: [
@@ -238,7 +252,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar3',
                         title: 'الفروع',
                         titleAlign: 'right',
                         listeners: [
@@ -275,7 +289,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         xtype: 'titlebar',
                         cls: 'acc-header',
                         docked: 'top',
-                        itemId: 'mytitlebar',
+                        itemId: 'titlebar4',
                         title: 'المخولين بالتوقيع',
                         titleAlign: 'right',
                         listeners: [
