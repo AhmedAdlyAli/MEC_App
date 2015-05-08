@@ -21,6 +21,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
         'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.Hidden',
+        'Ext.field.Spinner',
         'Ext.Button'
     ],
 
@@ -46,6 +47,92 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     directionLock: true
                 },
                 items: [
+                    {
+                        xtype: 'textfield',
+                        itemId: 'txtPrintoutType',
+                        label: 'نوع المستخرج',
+                        name: 'txtPrintoutType',
+                        placeHolder: 'نوع المستخرج',
+                        readOnly: true,
+                        listeners: [
+                            {
+                                fn: function(component, eOpts) {
+
+                                    // Create Native drop down
+                                    var me = this;
+
+                                    me.element.on('tap', function(){
+
+                                        var btn = this;
+                                        var config = {
+                                            title: Ext.Localization.GetMessage('PrintType'),
+                                            items: [
+
+                                            { text: Ext.Localization.GetMessage('PrintType1') , value: "51" },
+                                            { text: Ext.Localization.GetMessage('PrintType2'), value: "52" },
+                                            { text: Ext.Localization.GetMessage('PrintType3'), value: "53" },
+                                            { text: Ext.Localization.GetMessage('PrintType4'), value: "50" }
+
+                                            ],
+                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
+                                        };
+
+                                        var hiddenPrintType = Ext.ComponentQuery.query("#hiddenPrintoutType")[0];
+
+                                        //    Ext.DeviceController.ShowNativePickerWithValue(me,hiddenPrintType, config);
+
+
+
+
+                                        // Show the picker
+                                        window.plugins.listpicker.showPicker(config,
+                                        //select item
+                                        function(selectedValue) {
+
+                                            hiddenPrintType.setValue(selectedValue);
+
+                                            Ext.each(config.items, function(item){
+
+                                                if(item.value==selectedValue){
+                                                    txtField.setValue(item.text);
+                                                }
+                                            });
+
+
+
+                                        },
+                                        //cancel
+                                        function() {}
+                                        );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    }, me);
+
+
+
+
+
+
+
+                                },
+                                event: 'initialize'
+                            }
+                        ]
+                    },
                     {
                         xtype: 'textfield',
                         itemId: 'companyName',
@@ -112,54 +199,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         value: 21
                     },
                     {
-                        xtype: 'textfield',
-                        itemId: 'txtPrintoutType',
-                        label: 'نوع المستخرج',
-                        name: 'txtPrintoutType',
-                        placeHolder: 'نوع المستخرج',
-                        readOnly: true,
-                        listeners: [
-                            {
-                                fn: function(component, eOpts) {
-
-                                    // Create Native drop down
-                                    var me = this;
-
-                                    me.element.on('tap', function(){
-
-                                        var btn = this;
-                                        var config = {
-                                            title: Ext.Localization.GetMessage('PrintType'),
-                                            items: [
-
-                                            { text: Ext.Localization.GetMessage('CRPrint') , value: "51" },
-                                            { text: Ext.Localization.GetMessage('CRPrint2'), value: "52" },
-                                            { text: Ext.Localization.GetMessage('CRPrint3'), value: "53" }//,
-                                            //{ text: Ext.Localization.GetMessage('CRPrint4'), value: "50" }
-
-                                            ],
-                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
-                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
-                                        };
-
-                                        var hiddenPrintType = Ext.ComponentQuery.query("#hiddenPrintoutType")[0];
-
-                                        Ext.DeviceController.ShowNativePickerWithValue(me,hiddenPrintType, config);
-
-                                    }, me);
-
-
-
-
-
-
-
-                                },
-                                event: 'initialize'
-                            }
-                        ]
-                    },
-                    {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
                         name: 'hiddenPrintoutType',
@@ -217,11 +256,13 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         value: 01
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'spinnerfield',
                         itemId: 'txtNoOfCopies',
                         label: 'عدد النسخ',
                         name: 'txtNoOfCopies',
-                        placeHolder: 'عدد النسخ'
+                        maxValue: 10,
+                        minValue: 1,
+                        stepValue: 1
                     },
                     {
                         xtype: 'button',

@@ -108,6 +108,11 @@ Ext.define('MEC_App.controller.DeviceController', {
                                                  //  alert("You have cancelled");
                                              }
                                             );
+
+
+
+
+
     },
 
     GetBarcode: function(txtField) {

@@ -86,6 +86,114 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": null,
+                        "itemId": "txtPrintoutType",
+                        "label": "نوع المستخرج",
+                        "labelAlign": null,
+                        "name": "txtPrintoutType",
+                        "placeHolder": "نوع المستخرج",
+                        "readOnly": true
+                    },
+                    "name": "MyTextField3",
+                    "designerId": "04b46beb-3f69-4317-b9c8-8b540546b639",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onTxtPrintoutTypeInitialize",
+                                "implHandler": [
+                                    "",
+                                    "// Create Native drop down",
+                                    "var me = this;",
+                                    "",
+                                    "me.element.on('tap', function(){",
+                                    "",
+                                    "    var btn = this;",
+                                    "    var config = {",
+                                    "        title: Ext.Localization.GetMessage('PrintType'),",
+                                    "        items: [",
+                                    "",
+                                    "            { text: Ext.Localization.GetMessage('PrintType1') , value: \"51\" },",
+                                    "            { text: Ext.Localization.GetMessage('PrintType2'), value: \"52\" },",
+                                    "            { text: Ext.Localization.GetMessage('PrintType3'), value: \"53\" },",
+                                    "            { text: Ext.Localization.GetMessage('PrintType4'), value: \"50\" }",
+                                    "",
+                                    "        ],",
+                                    "        doneButtonLabel: Ext.Localization.GetMessage('Choose'),",
+                                    "        cancelButtonLabel: Ext.Localization.GetMessage('Cancel')",
+                                    "    };",
+                                    "",
+                                    "    var hiddenPrintType = Ext.ComponentQuery.query(\"#hiddenPrintoutType\")[0];",
+                                    "",
+                                    "//    Ext.DeviceController.ShowNativePickerWithValue(me,hiddenPrintType, config);",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "// Show the picker",
+                                    "window.plugins.listpicker.showPicker(config,",
+                                    "                                     //select item",
+                                    "                                     function(selectedValue) {",
+                                    "",
+                                    "                                         hiddenPrintType.setValue(selectedValue);",
+                                    "",
+                                    "                                         Ext.each(config.items, function(item){",
+                                    "",
+                                    "                                             if(item.value==selectedValue){",
+                                    "                                                 txtField.setValue(item.text);",
+                                    "                                             }",
+                                    "                                         });",
+                                    "                                         ",
+                                    "",
+                                    "",
+                                    "                                     },",
+                                    "                                     //cancel",
+                                    "                                     function() {}",
+                                    "                                    );",
+                                    "",
+                                    "",
+                                    "",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "    ",
+                                    "",
+                                    "}, me);",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onTxtPrintoutTypeInitialize",
+                            "designerId": "357ededa-be7c-4696-9129-822af8a2361b"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": null,
                         "itemId": "companyName",
                         "label": "اسم الشركة",
                         "labelAlign": null,
@@ -174,76 +282,6 @@
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
-                },
-                {
-                    "type": "Ext.field.Text",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": null,
-                        "itemId": "txtPrintoutType",
-                        "label": "نوع المستخرج",
-                        "labelAlign": null,
-                        "name": "txtPrintoutType",
-                        "placeHolder": "نوع المستخرج",
-                        "readOnly": true
-                    },
-                    "name": "MyTextField3",
-                    "designerId": "04b46beb-3f69-4317-b9c8-8b540546b639",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "onTxtPrintoutTypeInitialize",
-                                "implHandler": [
-                                    "",
-                                    "// Create Native drop down",
-                                    "var me = this;",
-                                    "",
-                                    "me.element.on('tap', function(){",
-                                    "",
-                                    "    var btn = this;",
-                                    "    var config = {",
-                                    "        title: Ext.Localization.GetMessage('PrintType'),",
-                                    "        items: [",
-                                    "",
-                                    "            { text: Ext.Localization.GetMessage('CRPrint') , value: \"51\" },",
-                                    "            { text: Ext.Localization.GetMessage('CRPrint2'), value: \"52\" },",
-                                    "            { text: Ext.Localization.GetMessage('CRPrint3'), value: \"53\" }//,",
-                                    "            //{ text: Ext.Localization.GetMessage('CRPrint4'), value: \"50\" }",
-                                    "",
-                                    "        ],",
-                                    "        doneButtonLabel: Ext.Localization.GetMessage('Choose'),",
-                                    "        cancelButtonLabel: Ext.Localization.GetMessage('Cancel')",
-                                    "    };",
-                                    "",
-                                    "    var hiddenPrintType = Ext.ComponentQuery.query(\"#hiddenPrintoutType\")[0];",
-                                    "",
-                                    "    Ext.DeviceController.ShowNativePickerWithValue(me,hiddenPrintType, config);",
-                                    "",
-                                    "}, me);",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    ""
-                                ],
-                                "name": "initialize"
-                            },
-                            "name": "onTxtPrintoutTypeInitialize",
-                            "designerId": "357ededa-be7c-4696-9129-822af8a2361b"
-                        }
-                    ]
                 },
                 {
                     "type": "Ext.field.Hidden",
@@ -346,7 +384,7 @@
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Spinner",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -357,10 +395,12 @@
                         "itemId": "txtNoOfCopies",
                         "label": "عدد النسخ",
                         "labelAlign": null,
+                        "maxValue": 10,
+                        "minValue": 1,
                         "name": "txtNoOfCopies",
-                        "placeHolder": "عدد النسخ"
+                        "stepValue": 1
                     },
-                    "name": "MyTextField1",
+                    "name": "MySpinnerField",
                     "designerId": "636a93be-291f-46bb-967d-7895e60ada0f"
                 },
                 {

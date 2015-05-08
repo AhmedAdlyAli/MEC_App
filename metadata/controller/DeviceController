@@ -144,7 +144,12 @@
                     "                                     function() {",
                     "                                         //  alert(\"You have cancelled\");",
                     "                                     }",
-                    "                                    );"
+                    "                                    );",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
                 ]
             },
             "name": "ShowNativePickerWithValue",
