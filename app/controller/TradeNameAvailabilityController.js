@@ -333,9 +333,8 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         console.log(cr);
 
          requestData = {
-          "serviceId": "8",
-          "token": Ext.Global.userToken,
-          "language": "ar",
+          "serviceId": "88",
+          "language": Ext.Global.LanguageFlag,
           "commercialRegistrationNum":cr,
           "moiEstablishmentNum":"",
           "siebelSpcOperationSpcObjectSpcId":"",
@@ -356,7 +355,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                     success : function (response) {
                        var json = Ext.util.JSON.decode(response.responseText);
 
-
+                        //console.log(json);
                         //Bind Data to controls
                         var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 

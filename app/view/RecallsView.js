@@ -42,11 +42,17 @@ Ext.define('MEC_App.view.RecallsView', {
                 height: '100%',
                 itemId: 'lstRecalls',
                 itemCls: 'item-recall',
-                itemTpl: [
-                    '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class=\'tpl-recall-1 FA\'><img src="{[this.getImgSrc(values.Id)]}" /></div>',
                     '<div class=\'tpl-recall-2 FA\'><span>{ProductTitle}</span><br /></div>',
-                    ''
-                ]
+                    '',
+                    {
+                        getImgSrc: function(Id) {
+                            return Ext.Global.GetConfig('CMSWSUrl')+"/Recall/Image/"+Id;
+
+                        }
+                    }
+                )
             }
         ]
     }
