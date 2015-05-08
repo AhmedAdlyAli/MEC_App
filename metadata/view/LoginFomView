@@ -217,7 +217,40 @@
                                 "itemId": "lblForgotPassword"
                             },
                             "name": "MyLabel14",
-                            "designerId": "174c990f-6389-4c76-9a7e-14cae29495bd"
+                            "designerId": "174c990f-6389-4c76-9a7e-14cae29495bd",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "onLblForgotPasswordInitialize",
+                                        "implHandler": [
+                                            "",
+                                            "",
+                                            "",
+                                            "// add tab function on text field",
+                                            "var me = this;",
+                                            "me.element.on('tap', function(){",
+                                            "",
+                                            "",
+                                            "if(Ext.Global.LanguageFlag=='ar')",
+                                            "window.open('https://services.mec.gov.qa/ara/start.swe?SWECmd=Login&SWECM=S&SRN=&SWEHo=services.mec.gov.qa','_system');",
+                                            "else",
+                                            "window.open('https://services.mec.gov.qa/enu/start.swe?SWECmd=Login&SWECM=S&SRN=&SWEHo=services.mec.gov.qa','_system');",
+                                            "}, me);",
+                                            "",
+                                            ""
+                                        ],
+                                        "name": "initialize"
+                                    },
+                                    "name": "onLblForgotPasswordInitialize",
+                                    "designerId": "e962386e-bc02-40dd-9260-d7ec277bfddc"
+                                }
+                            ]
                         }
                     ]
                 }

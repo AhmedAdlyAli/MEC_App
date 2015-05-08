@@ -59,12 +59,8 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
             },
             {
                 xtype: 'label',
-                cls: 'branch-address',
-                itemId: 'lblAddress'
-            },
-            {
-                xtype: 'label',
                 cls: 'branch-goto',
+                html: 'الذهاب إلي الفرع',
                 itemId: 'lblGoTo'
             },
             {
@@ -102,18 +98,52 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 gMap.setZoom(11);
 
 
-                var branches = [
-                    {Name:'الفرع الرئيسي',Lat:'25.321283',Lng:'51.528329',Address:'TBD',Tel:'123',Fax:'456'},
 
-                    {Name:'مركز جوازات الشحانيه',Lat:'25.3769',Lng:'51.23146',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'بلديه الريان',Lat:'25.30137',Lng:'51.43637',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'بلديه ام صلال لترخيص',Lat:'25.41506',Lng:'51.39724',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'ام صلال لتسجيل',Lat:'25.4679',Lng:'51.40586',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'مركز شرطه الزباره',Lat:'25.82954',Lng:'51.34425',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'مجمع خدمات الهلال',Lat:'25.26332',Lng:'51.53486',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'بلدية الظعاين',Lat:'25.5636',Lng:'51.45246',Address:'TBD',Tel:'123',Fax:'456'},
-                    {Name:'بلدية الوكرة',Lat:'25.16715',Lng:'51.59787',Address:'TBD',Tel:'123',Fax:'456'}
+        var branches = [];
+
+
+
+
+                if(Ext.Global.LanguageFlag == 'en')
+                {
+
+                branches = [
+                    {Name:'Headquarters',Lat:'25.321283',Lng:'51.528329',Address:'TBD',Tel:'40122222',Fax:''},
+
+                    {Name:'Al-Shahanya Immigration center',Lat:'25.3769',Lng:'51.23146',Tel:'',Fax:''},
+                    {Name:'Al-Rayyan Municipality',Lat:'25.30137',Lng:'51.43637',Tel:'44265918',Fax:'44266126'},
+
+                    {Name:'Um Salal Municipality',Lat:'25.41506',Lng:'51.39724',Tel:'235185 - 40288670',Fax:''},
+                    {Name:'Um Sallal Registration Branch',Lat:'25.4679',Lng:'51.40586',Tel:'44264255',Fax:'44784622'},
+
+                    {Name:'Al Zubarah',Lat:'25.82954',Lng:'51.34425',Tel:'2353630 - 40288680',Fax:''},
+                    {Name:'Al-Hilal Service Center',Lat:'25.26332',Lng:'51.53486',Tel:'',Fax:''},
+                    {Name:'Al- Zaaien Municipality',Lat:'25.5636',Lng:'51.45246',Tel:'44347843',Fax:''},
+                    {Name:'Al-Wakrah Municipality', Lat:'25.16715',Lng:'51.59787',Tel:'44264088',Fax:'44631647'}
                 ];
+
+                }else{
+
+
+                branches = [
+                    {Name:'الفرع الرئيسي',Lat:'25.321283',Lng:'51.528329',Address:'TBD',Tel:'40122222',Fax:''},
+
+                    {Name:'مركز جوازات الشحانيه',Lat:'25.3769',Lng:'51.23146',Tel:'',Fax:''},
+                    {Name:'بلديه الريان',Lat:'25.30137',Lng:'51.43637',Tel:'44265918',Fax:'44266126'},
+                    {Name:'بلديه ام صلال لترخيص',Lat:'25.41506',Lng:'51.39724',Tel:'235185 - 40288670',Fax:''},
+                    {Name:'ام صلال للتسجيل',Lat:'25.4679',Lng:'51.40586',Tel:'44264255',Fax:'44784622'},
+                    {Name:'مركز شرطه الزباره',Lat:'25.82954',Lng:'51.34425',Tel:'2353630 - 40288680',Fax:''},
+                    {Name:'مجمع خدمات الهلال',Lat:'25.26332',Lng:'51.53486',Tel:'',Fax:''},
+                    {Name:'بلدية الظعاين',Lat:'25.5636',Lng:'51.45246',Tel:'44347843',Fax:''},
+                    {Name:'بلدية الوكرة',Lat:'25.16715',Lng:'51.59787',Tel:'44264088',Fax:'44631647'}
+                ];
+
+                }
+
+
+
+
+
 
 
                 var infowindow = new google.maps.InfoWindow();
@@ -138,12 +168,16 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         infowindow.open(gMap,marker);
 
                         view.down('#lblTitle').setHtml(marker.data.Name);
-                        view.down('#lblAddress').setHtml(marker.data.Address);
                         view.down('#lblTel').setHtml(marker.data.Tel);
                         view.down('#lblFax').setHtml(marker.data.Fax);
 
-                    });
+                        var gotoElement  = view.down('#lblGoTo').element;
+                        gotoElement.on('tap', function(){
+                            window.open('maps:q='+item.Lat+','+item.Lng,'_system');
+                        }, gotoElement);
 
+
+                    });
 
                     if(i===0)
                     {
@@ -153,19 +187,6 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
 
                     i++;
                 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

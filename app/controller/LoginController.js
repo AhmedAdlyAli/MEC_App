@@ -29,11 +29,11 @@ Ext.define('MEC_App.controller.LoginController', {
             "button#btnSubmitLogin": {
                 tap: 'onBtnSubmitLoginTap'
             },
-            "button#btnRegister": {
-                tap: 'onBtnRegisterTap'
-            },
             "formpanel#LoginFomView": {
                 initialize: 'onLoginFomViewInitialize'
+            },
+            "button#btnRegister": {
+                tap: 'onBtnRegisterTap'
             }
         }
     },
@@ -152,20 +152,20 @@ Ext.define('MEC_App.controller.LoginController', {
 
     },
 
-    onBtnRegisterTap: function(button, e, eOpts) {
-
-        var viewdata = {Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService', Name:'مستخدم جديد'};
-
-        Ext.Global.RedirectToView(viewdata);
-
-
-
+    onLoginFomViewInitialize: function(component, eOpts) {
+                    Ext.Localization.LocalizeView(component);
 
 
     },
 
-    onLoginFomViewInitialize: function(component, eOpts) {
-                    Ext.Localization.LocalizeView(component);
+    onBtnRegisterTap: function(button, e, eOpts) {
+
+        if(Ext.Global.LanguageFlag=='ar')
+        window.open('https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService','_system');
+        else
+        window.open('https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService','_system');
+
+
 
 
     }

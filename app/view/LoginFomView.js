@@ -107,7 +107,29 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 xtype: 'label',
                                 cls: 'login-links',
                                 html: 'نسيت كلمة السر',
-                                itemId: 'lblForgotPassword'
+                                itemId: 'lblForgotPassword',
+                                listeners: [
+                                    {
+                                        fn: function(component, eOpts) {
+
+
+
+                                            // add tab function on text field
+                                            var me = this;
+                                            me.element.on('tap', function(){
+
+
+                                                if(Ext.Global.LanguageFlag=='ar')
+                                                window.open('https://services.mec.gov.qa/ara/start.swe?SWECmd=Login&SWECM=S&SRN=&SWEHo=services.mec.gov.qa','_system');
+                                                else
+                                                window.open('https://services.mec.gov.qa/enu/start.swe?SWECmd=Login&SWECM=S&SRN=&SWEHo=services.mec.gov.qa','_system');
+                                            }, me);
+
+
+                                        },
+                                        event: 'initialize'
+                                    }
+                                ]
                             }
                         ]
                     }

@@ -63,7 +63,7 @@ Ext.define('MEC_App.view.NewsListItem', {
         me.callParent(arguments);
         if(record){
             if(record.get('NewsTitle') !== undefined && record.get('NewsBrief') !== undefined){
-                var imgSrc = Ext.Global.GetConfig('CMSWSUrl')+ '/api/EconomyNews/Image/'+record.get('Id') || 'resources/images/defaultImage.png';
+                var imgSrc = Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/Image/'+record.get('Id') || 'resources/images/defaultImage.png';
 
                 me.down('#imgNews').setSrc(imgSrc);
                 me.down('#textCmp').setHtml(record.get('NewsTitle'));
