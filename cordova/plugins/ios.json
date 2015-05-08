@@ -47,6 +47,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -110,7 +114,7 @@
                     "AudioToolbox.framework": [
                         {
                             "xml": true,
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "CoreData.framework": [],
@@ -167,6 +171,9 @@
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },

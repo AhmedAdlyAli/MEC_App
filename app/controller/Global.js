@@ -286,6 +286,78 @@ Ext.define('MEC_App.controller.Global', {
 
         return dateFormat(date, "ddd, mmm dS, yyyy");
 
+    },
+
+    SubmitCase: function() {
+        var caseData = Ext.Viewport.getActiveItem().down('PrintOffsView3').getData();
+
+
+
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        var requestData = {
+            "serviceId": "10",
+            "token": Ext.Global.userToken,
+            "objectSpcId": caseData.recordID,
+            "caseSerialNum":""
+        };
+
+
+        Ext.Ajax.request({
+
+            url : Ext.Global.GetConfig('webServiceUrl'),
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+                var json = Ext.util.JSON.decode(response.responseText);
+
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+                if(json.statusMsg!='success')
+                {
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Confirm'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('CaseSubmitted')
+                    });
+
+
+                    // go back to Home
+                    Ext.Viewport.getActiveItem().reset();
+
+
+
+                }else{
+
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('GenericError')
+                    });
+
+                }
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
     }
 
 });

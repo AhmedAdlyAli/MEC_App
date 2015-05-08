@@ -193,7 +193,10 @@ var localeAr =
 				ActiveRequestError: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة',
 				Error: 'خطأ',
 				OK: 'موافق',
-				ErrSearchKeyword: 'يجب إدخال كلمة البحث'
+				ErrSearchKeyword: 'يجب إدخال كلمة البحث',
+				GenericError: 'عفوا٫ لقد حدث خطأ في الاتصال بالنظام',
+				Confirm:'تأكيد',
+				CaseSubmitted:'تم تقديم الطلب بنجاح٬ شكرا لاستخدامك تطبيق وزارة الاقتصاد والتجارة'
 
 				}
 }

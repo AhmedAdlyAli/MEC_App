@@ -13,6 +13,9 @@ cordova plugin add com.phonegap.plugins.barcodescanner
 
 cordova plugin add nl.x-services.plugins.actionsheet
 
+cordova plugin add org.apache.cordova.vibration
+
+
 
 
 http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-app

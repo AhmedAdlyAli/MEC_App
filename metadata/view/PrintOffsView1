@@ -125,9 +125,9 @@
                                     "    Ext.each(data, function(item){",
                                     "",
                                     "        if(Ext.Global.LanguageFlag=='ar')",
-                                    "        items.push({ text: item.establishmentArabicName, value: item.commercialRegistration });",
+                                    "            items.push({ text: item.establishmentArabicName, value: item.commercialRegistration });",
                                     "        else",
-                                    "        items.push({ text: item.establishmentEnglishName, value: item.commercialRegistration });",
+                                    "            items.push({ text: item.establishmentEnglishName, value: item.commercialRegistration });",
                                     "    });",
                                     "",
                                     "",
@@ -142,7 +142,7 @@
                                     "    };",
                                     "",
                                     "",
-                                    " var hiddenCompanyCR = Ext.ComponentQuery.query(\"#hiddenCompanyCR\")[0];",
+                                    "    var hiddenCompanyCR = Ext.ComponentQuery.query(\"#hiddenCompanyCR\")[0];",
                                     "",
                                     "    Ext.DeviceController.ShowNativePickerWithValue(me, hiddenCompanyCR,config);",
                                     "",
@@ -167,7 +167,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenCompanyCR",
-                        "name": "hiddenCompanyCR"
+                        "name": "hiddenCompanyCR",
+                        "value": [
+                            "21"
+                        ]
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
@@ -251,7 +254,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenPrintoutType",
-                        "name": "hiddenPrintoutType"
+                        "name": "hiddenPrintoutType",
+                        "value": [
+                            "52"
+                        ]
                     },
                     "name": "MyHiddenField",
                     "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
@@ -331,7 +337,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenDeliveryMethod",
-                        "name": "hiddenDeliveryMethod"
+                        "name": "hiddenDeliveryMethod",
+                        "value": [
+                            "01"
+                        ]
                     },
                     "name": "MyHiddenField1",
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
@@ -427,12 +436,14 @@
                                     "",
                                     "",
                                     "if(err.length>0){",
+                                    "    navigator.vibrate(300);",
                                     "",
                                     "    Ext.device.Notification.show({",
                                     "        title: 'خطأ',",
                                     "        buttons:[\"موافق\"],",
                                     "        message: err",
                                     "    });",
+                                    "",
                                     "}else{",
                                     "",
                                     "",
@@ -473,30 +484,28 @@
                                     "",
                                     "            json.NoOfCopies = view.down('#txtNoOfCopies').getValue();",
                                     "",
-                                    "            console.log(json);",
-                                    "        ",
-                                    "            ",
-                                    "            alert(json.status);",
-                                    "            ",
-                                    "            ",
+                                    "",
                                     "            if(json.status==='Their is Active Cases for this account from the same case type !')",
                                     "            {",
                                     "",
-                                    "    Ext.device.Notification.show({",
-                                    "                title: Ext.Localization.GetMessage('Error'),",
-                                    "                buttons: [Ext.Localization.GetMessage('OK')],",
-                                    "        message: Ext.Localization.GetMessage('ActiveRequestError')",
-                                    "    });",
+                                    "                Ext.device.Notification.show({",
+                                    "                    title: Ext.Localization.GetMessage('Error'),",
+                                    "                    buttons: [Ext.Localization.GetMessage('OK')],",
+                                    "                    message: Ext.Localization.GetMessage('ActiveRequestError')",
+                                    "                });",
                                     "",
                                     "",
                                     "            }else{",
                                     "",
                                     "",
-                                    "            Ext.Viewport.getActiveItem().push({",
-                                    "                xtype: 'PrintOffsView2',",
-                                    "                title: Ext.Global.GetFixedTitle(),",
-                                    "                data: json",
-                                    "            });",
+                                    "                console.log(json);",
+                                    "",
+                                    "",
+                                    "                Ext.Viewport.getActiveItem().push({",
+                                    "                    xtype: 'PrintOffsView2',",
+                                    "                    title: Ext.Global.GetFixedTitle(),",
+                                    "                    data: json",
+                                    "                });",
                                     "",
                                     "",
                                     "            }",
@@ -544,6 +553,7 @@
                     "",
                     "",
                     "",
+                    "",
                     "Ext.AnimationHelper.ShowLoading();",
                     "",
                     "",
@@ -551,7 +561,7 @@
                     "    \"serviceId\": \"2\",",
                     "    \"token\": Ext.Global.userToken,",
                     "    \"language\": Ext.Global.LanguageFlag,",
-                    "    \"identityType\":'QID', ",
+                    "    \"identityType\":'QID',",
                     "    \"identityNum\": Ext.Global.identityNum,",
                     "    \"identityNationality\":  Ext.Global.identityNationality",
                     "};",

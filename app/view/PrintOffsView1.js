@@ -108,7 +108,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR'
+                        name: 'hiddenCompanyCR',
+                        value: 21
                     },
                     {
                         xtype: 'textfield',
@@ -161,7 +162,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        name: 'hiddenPrintoutType'
+                        name: 'hiddenPrintoutType',
+                        value: 52
                     },
                     {
                         xtype: 'textfield',
@@ -211,7 +213,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod'
+                        name: 'hiddenDeliveryMethod',
+                        value: 01
                     },
                     {
                         xtype: 'textfield',
@@ -264,12 +267,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
 
                             if(err.length>0){
+                                navigator.vibrate(300);
 
                                 Ext.device.Notification.show({
                                     title: 'خطأ',
                                     buttons:["موافق"],
                                     message: err
                                 });
+
                             }else{
 
 
@@ -310,11 +315,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                         json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
 
-                                        console.log(json);
-
-
-                                        alert(json.status);
-
 
                                         if(json.status==='Their is Active Cases for this account from the same case type !')
                                         {
@@ -327,6 +327,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
 
                                         }else{
+
+
+                                            console.log(json);
 
 
                                             Ext.Viewport.getActiveItem().push({
@@ -370,6 +373,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
     initialize: function() {
         Ext.Localization.LocalizeView(this);
+
 
 
 

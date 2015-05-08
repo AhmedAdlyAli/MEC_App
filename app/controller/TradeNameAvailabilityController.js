@@ -69,28 +69,18 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
-
-
-
-
         var url = Ext.Global.GetConfig('webServiceUrl');
 
 
         var requestData = {
             "serviceId":"6",
             "language":Ext.Global.LanguageFlag,
-            "tradeNameLanguage":Ext.Global.LanguageFlag   ,
+            "tradeNameLanguage": Ext.Global.LanguageFlag=='ar'?'ARA':'ENU',
             "tradeName":searchKeyword
         };
 
 
-        console.log(requestData);
-
-
         Ext.AnimationHelper.ShowLoading();
-
-
-
 
 
         Ext.Ajax.request({

@@ -825,7 +825,10 @@ var localeEn =
 				ActiveRequestError: 'There is already active request of the same type for this Establishment',
 				Error: 'Error',
 				OK: 'Ok',
-				ErrSearchKeyword: 'Please enter the search keyword'				
+				ErrSearchKeyword: 'Please enter the search keyword',
+				GenericError: 'Sorry an Error has occured during the communication with the System',
+				Confirm:'Confirm',
+				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application'
 				}
 
 }

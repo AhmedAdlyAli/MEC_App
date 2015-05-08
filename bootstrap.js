@@ -779,6 +779,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.ViolationsDetailsView": [],
   "MEC_App.view.ViolationsView": [],
   "MEC_App.view.WebFrameView": [],
+  "MEC_App.view.WebFrameView1": [],
   "MEC_App.view.WhereToShopView": []
 });
 
@@ -1788,6 +1789,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.WebFrameView": [
     "widget.WebFrameView"
+  ],
+  "MEC_App.view.WebFrameView1": [
+    "widget.WebFrameView1"
   ],
   "MEC_App.view.WhereToShopView": [
     "widget.WhereToShopView"

@@ -46,6 +46,9 @@ Ext.define('MEC_App.view.PrintOffsView3', {
         var view = this;
         var data = view.getData();
 
+
+
+        console.log(data);
         Ext.Localization.LocalizeView(view);
 
 
@@ -68,23 +71,17 @@ Ext.define('MEC_App.view.PrintOffsView3', {
 
             form.setValues({
                 vpc_MerchTxnRef: data.recordID, //'Ahmed Adly Ali',
-                vpc_OrderInfo: data.caseSerialNum + '_' + data.typeCode,//'Test',
-                vpc_Amount: data.fees * 100,
+                vpc_OrderInfo: data.serialNumber,//'Test',
+                vpc_Amount: data.listOfMecCaseFees. mecCaseFees[0].feesTotalValue * 100,
                 vpc_Locale : Ext.Global.LanguageFlag
 
 
             });
 
             var tr= 'vpc_OrderInfo:+' +  data.recordID + '+\n';
-            tr+= 'vpc_OrderInfo' + data.caseSerialNum + '_' + data.typeCode + '\n';
+            tr+= 'vpc_OrderInfo' + data.caseSerialNum  + '\n';
             tr+= 'vpc_Amount:'  +  data.fees    + '\n';
             tr+= 'locale' + Ext.Global.LanguageFlag ;
-
-            // alert(tr);
-
-
-
-
 
 
             form.element.dom.target = 'paymentframe';

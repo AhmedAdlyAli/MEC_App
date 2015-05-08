@@ -1,0 +1,90 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "WebFrameView1",
+        "designer|userClassName": "WebFrameView1",
+        "itemId": "WebFrameView1",
+        "layout": null,
+        "scrollable": null
+    },
+    "name": "WebFrameView1",
+    "designerId": "35b1ea95-4866-48ff-9035-ce33279d9a45",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "Test",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "45066c43-130e-4b29-b475-348d5fd9811b"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%"
+            },
+            "name": "MyPanel1",
+            "designerId": "fbf8caa5-dfd0-443c-b896-fbe9201b7293",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "100%",
+                        "html": "<div style=\"-webkit-overflow-scrolling: touch;overflow-x:scroll;overflow-y: scroll; height:500px\"><iframe src=\"http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DR_ar.aspx?Title=BSS+Online+Payment+Gateway&vpc_3DSXID=TQY4sEQGHycAoyvEvL9oS3CfH%2BI%3D&vpc_AVSRequestCode=Z&vpc_AVSResultCode=Unsupported&vpc_AcqAVSRespCode=Unsupported&vpc_AcqCSCRespCode=U&vpc_AcqResponseCode=00&vpc_Amount=12000&vpc_AuthorizeId=017383&vpc_BatchNo=20150507&vpc_CSCResultCode=U&vpc_Card=MC&vpc_CardNum=xxxxxxxxxxxx2346&vpc_Command=pay&vpc_Locale=ar&vpc_MerchTxnRef=1-1JPG8S&vpc_Merchant=MECQNB01&vpc_Message=Approved&vpc_OrderInfo=VPC+Example&vpc_ReceiptNo=512723406658&vpc_SecureHash=A182201D019815E9A30EC88013E4616B&vpc_TransactionNo=1100000161&vpc_TxnResponseCode=0&vpc_VerSecurityLevel=07&vpc_VerStatus=A&vpc_VerType=3DS&vpc_Version=1\" height=\"100%\" width=\"100%\" class=\"web-frame\"></iframe></div>",
+                        "itemId": "pnlFrame"
+                    },
+                    "name": "MyPanel",
+                    "designerId": "ade3bfd5-31c3-48e0-8247-24b487e8acd5"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onWebFrameView1Initialize",
+                "implHandler": [
+                    "component.setData('this is the data');",
+                    "",
+                    "//alert('Ext.Viewport.getActiveItem().down(\\'#WebFrameView1\\').getData()');"
+                ],
+                "name": "initialize"
+            },
+            "name": "onWebFrameView1Initialize",
+            "designerId": "1a57b221-d1b7-49d9-912f-b2861a90376c"
+        }
+    ]
+}

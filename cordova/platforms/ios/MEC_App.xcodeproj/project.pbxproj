@@ -63,6 +63,7 @@
 		F8420CBB73D54F4693EB5B42 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F1D37292514207AD1FF769 /* CDVCamera.m */; };
 		FBCCE8525C494F328863A3ED /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9BD3BF1F6E46C9BF6CB526 /* UIImage+CropScaleOrientation.m */; };
 		F006496C78934EE393EA05DE /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */; };
+		0FF8E15F130A43CF906E5D3B /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C227B836F484EBF2509B0 /* CDVVibration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +215,8 @@
 		FFB5403587924FD0936A2E54 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = plugin.google.maps/Circle.h; sourceTree = "<group>"; };
 		BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVInAppBrowser.m"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		FC0A98B388B14E358DC02444 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVInAppBrowser.h"; path = "org.apache.cordova.inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		2F9C227B836F484EBF2509B0 /* CDVVibration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVVibration.m"; path = "org.apache.cordova.vibration/CDVVibration.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B13202B8A52A4FBFA52E6894 /* CDVVibration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVVibration.h"; path = "org.apache.cordova.vibration/CDVVibration.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,6 +411,8 @@
 				674DB10160994B538FEB3E65 /* CDVLocation.h */,
 				BCF35076476E422BA45A9B46 /* CDVInAppBrowser.m */,
 				FC0A98B388B14E358DC02444 /* CDVInAppBrowser.h */,
+				2F9C227B836F484EBF2509B0 /* CDVVibration.m */,
+				B13202B8A52A4FBFA52E6894 /* CDVVibration.h */,
 			);
 			name = Plugins;
 			path = MEC_App/Plugins;
@@ -613,6 +618,7 @@
 				95FFEB7D06334EA2AE0B359A /* CDVJpegHeaderWriter.m in Sources */,
 				F3710BE2EF89439293522C87 /* CDVLocation.m in Sources */,
 				F006496C78934EE393EA05DE /* CDVInAppBrowser.m in Sources */,
+				0FF8E15F130A43CF906E5D3B /* CDVVibration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -111,7 +111,8 @@ Ext.application({
         'SupplyServiceHowTo',
         'SupplyServiceDepartmentServices',
         'SupplyServiceNearestDealer',
-        'SupplyServiceMyData'
+        'SupplyServiceMyData',
+        'WebFrameView1'
     ],
     controllers: [
         'HomeController',
