@@ -80,7 +80,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         this.down('#lblTitle').setHtml(data.NewsTitle);
         this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));
         this.down('#lblDetails').setHtml(data.NewsDescription);
-        this.down('#imgNews').setSrc("http://196.205.5.28:333/MEC/api/EconomyNews/Image/13");
+        this.down('#imgNews').setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/EconomyNews/Image/"+data.Id);
 
     }
 

@@ -158,7 +158,7 @@
                     "    //supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',",
                     "    //payment: https://supply.mec.gov.qa/mservice/paymentservice/...",
                     "",
-                    "    CMSWSUrl : 'http://196.205.5.28:333/MEC/api',",
+                    "    CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',",
                     "    SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/CS_VPC_3Party_DO_mob.aspx'",
                     "",
                     "",

@@ -439,3 +439,29 @@ Ext.Localization.LocalizeView(this);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ext.Global.GetConfig('CMSWSUrl')
+

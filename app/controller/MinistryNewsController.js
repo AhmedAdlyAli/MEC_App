@@ -29,7 +29,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
         var data = component.getData()[0];
 
-        console.log(data);
+        //console.log(data);
 
         component.down('#lblTitle').setHtml(data.Title);
 
