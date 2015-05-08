@@ -171,38 +171,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|controlQuery": "button#btnRegister",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onBtnRegisterTap",
-                "implHandler": [
-                    "",
-                    "var viewdata = {Url:'http://eservicesstg.mec.gov.qa/eservice_ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService', Name:'مستخدم جديد'};",
-                    "",
-                    "Ext.Global.RedirectToView(viewdata);",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "name": "tap"
-            },
-            "name": "onBtnRegisterTap",
-            "designerId": "7e06534d-ec95-452b-829b-4611250027db"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "designer|controlQuery": "formpanel#LoginFomView",
                 "designer|params": [
                     "component",
@@ -219,6 +187,38 @@
             },
             "name": "onLoginFomViewInitialize",
             "designerId": "64aaa297-38c7-48ef-a6f2-05d49d00d846"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnRegister",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnRegisterTap",
+                "implHandler": [
+                    "",
+                    "if(Ext.Global.LanguageFlag=='ar')",
+                    "window.open('https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService','_system');",
+                    "else",
+                    "window.open('https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Create+User+General+Instructions+View+eService','_system');",
+                    "    ",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnRegisterTap",
+            "designerId": "487bbc82-baf7-4bfa-b664-3d7bc88dff8b"
         }
     ]
 }

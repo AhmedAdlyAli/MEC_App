@@ -10,11 +10,11 @@ $list-rounded-radius: 0;
 
 /* _arch-other-start */
 @font-face {
-  font-family: 'PFDinTextUniversal-Light';
-  src: url('fonts/PFDinTextUniversal-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal-Light.otf')  format('opentype'),
-	     url('fonts/PFDinTextUniversal-Light.woff') format('woff'), url('fonts/PFDinTextUniversal-Light.ttf')  format('truetype'), url('fonts/PFDinTextUniversal-Light.svg#PFDinTextUniversal-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'PFDinTextUniversal-Light';
+    src: url('fonts/PFDinTextUniversal-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal-Light.otf')  format('opentype'),
+        url('fonts/PFDinTextUniversal-Light.woff') format('woff'), url('fonts/PFDinTextUniversal-Light.ttf')  format('truetype'), url('fonts/PFDinTextUniversal-Light.svg#PFDinTextUniversal-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -1456,7 +1456,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         border-bottom: none;
     }
 
-    .login-links {
+    .login-links { 
         text-align: left;
         text-decoration: underline;
         color: #691e49;
@@ -1468,7 +1468,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 .branch-title{
     color: #691e49;
     margin: 5px 10px;
-
 }
 
 .branch-address{
@@ -1483,6 +1482,18 @@ background: url(../images/toplogo.png) no-repeat center top;
     padding-right:40px;
     background: url(../images/b-tel.png) no-repeat right center;
 }
+
+
+
+.branch-goto{
+    margin: 5px 10px;
+    padding-left:1em;
+    color:#701d45;
+    text-align:left;
+    background: url(../images/goto.png) no-repeat 34% center;
+    text-decoration:underline;
+}
+
 
 
 .branch-fax{

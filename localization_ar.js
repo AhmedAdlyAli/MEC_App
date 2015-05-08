@@ -69,7 +69,7 @@ var localeAr =
 			items: [
 				{Name:'عن الوزارة',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'موظفو الوزارة',Url:'http://mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'موظفو الوزارة',Url:'http://www.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
