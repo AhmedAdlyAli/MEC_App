@@ -316,6 +316,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
 
 
+
+
+
                                         if(json.status==='Their is Active Cases for this account from the same case type !')
                                         {
 
@@ -329,7 +332,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         }else{
 
 
-                                            console.log(json);
+                                            //              console.log(json);
 
 
                                             Ext.Viewport.getActiveItem().push({
@@ -338,16 +341,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                                 data: json
                                             });
 
-
                                         }
 
-
-
-
-
                                         Ext.AnimationHelper.HideLoading();
-
-
                                     }
                                 });
 

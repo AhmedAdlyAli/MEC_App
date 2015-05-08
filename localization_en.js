@@ -102,23 +102,23 @@ var localeEn =
 
 		{
 			itemId:"InvestorServiceView",
-			items: [{Name:'My Establishments',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png'},
-                    {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png'},
-                    {Name:'PrintOffs Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png'},
-                    {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png'},
-                    {Name:'Establishment Services',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png'},
-                    {Name:'Reserve Trade Name',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png'}
+			items: [{Name:'My Establishments',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png', OpenExternalWindow:false},
+                    {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png', OpenExternalWindow:false},
+                    {Name:'PrintOffs Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
+                    {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
+                    {Name:'Establishment Services',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png', OpenExternalWindow:true},
+                    {Name:'Reserve Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true}
                 ]
 		},
 
 		{
 			itemId:"AdminServicesView",
-			items: [{Name:'Renew Commercial Registration',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService'},
-             {Name:'Renew Commercial Permit',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService'},
-             {Name:'Change Trade Name',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
-             {Name:'Change Signatories',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService'},
-             {Name:'Terminate Branch',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'},
-             {Name:'Terminate Commercial Registration',Url:'http://eservicesstg.mec.gov.qa/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService'}
+			items: [{Name:'Renew Commercial Registration',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'Renew Commercial Permit',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'Change Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'Change Signatories',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'Terminate Branch',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'Terminate Commercial Registration',Url:'https://services.mec.gov.qa/enu/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
             ]
 		}
 

@@ -94,7 +94,7 @@ lblRequiredAttachments
 
 TODO:
 - proposal ==
-- tamween
+- tamween 
 
 - Payment
 - web view 
@@ -364,19 +364,7 @@ totalPrice += item.ItemPrice;
 
 
 
-
-
-
-
         Ext.each(json2.Data.Items, function(item){
-
-
-
-
-
-
-
-
 
 
 
@@ -447,9 +435,19 @@ Ext.Localization.LocalizeView(this);
 
 
 
+==================================
+- TODO
 
+= Tamween Emil 
+- add branches and tamween content 
+- add registration links 
+- add MEC ERP 
+- printout issues
+- Tamween issues 
+- Issues 
+- Localization 
 
-
+==================================
 
 
 

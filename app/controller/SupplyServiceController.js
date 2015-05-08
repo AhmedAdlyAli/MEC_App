@@ -59,6 +59,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view = component;
 
 
+        //var phoneName = window.device.name;
+        //https://cordova.apache.org/docs/en/3.0.0/cordova_device_device.md.html#device.name
+
+
+
         // localization
         Ext.Localization.LocalizeView(view);
 

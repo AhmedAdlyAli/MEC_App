@@ -129,14 +129,6 @@ Ext.define('MEC_App.view.PrintOffsView2', {
                                 data: company
                             });
 
-
-
-
-
-
-
-
-
                         },
                         cls: 'btn-send',
                         itemId: 'btnPrintoffs2Next',

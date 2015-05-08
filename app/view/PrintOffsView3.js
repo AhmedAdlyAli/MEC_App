@@ -57,7 +57,7 @@ Ext.define('MEC_App.view.PrintOffsView3', {
 
             var form = Ext.create('Ext.form.Panel', {
                 standardSubmit: true,
-                url: 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
+                url: Ext.Global.GetConfig('BSSPaymentGatewayUrl')  ,// 'http://eservicesstg.mec.gov.qa/QNB_PaymentGateway/CS_VPC_3Party_DO_mob.aspx',
                 method: 'POST',
                 items: [
                     {xtype: 'textfield',name: 'vpc_MerchTxnRef'},

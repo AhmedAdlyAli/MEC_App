@@ -34,9 +34,6 @@ Ext.define('MEC_App.view.MinistryNewsView', {
         pinHeaders: false,
         useSimpleItems: false,
         variableHeights: true,
-        itemTpl: [
-            '<div></div>'
-        ],
         items: [
             {
                 xtype: 'label',
