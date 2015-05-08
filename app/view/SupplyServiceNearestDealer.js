@@ -46,7 +46,8 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                     {
                         xtype: 'map',
                         height: '20em',
-                        itemId: 'mapDealers'
+                        itemId: 'mapDealers',
+                        mapOptions: '{{\n  center:new google.maps.LatLng(25.321283,51.528329),\n  zoom:11}'
                     }
                 ]
             },

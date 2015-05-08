@@ -828,7 +828,8 @@ var localeEn =
 				ErrSearchKeyword: 'Please enter the search keyword',
 				GenericError: 'Sorry an Error has occured during the communication with the System',
 				Confirm:'Confirm',
-				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application'
+				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application',
+				LocationNotEnabled:'Location service is required to use this feature'
 				}
 
 }

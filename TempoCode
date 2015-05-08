@@ -416,10 +416,11 @@ else
 <span class="brief">{PublishDate}</span>
 
 
+position.coords.latitude
+position.coords.longitude
+
 
 Ext.Localization.LocalizeView(this);
-
-
 
 
 
@@ -433,4 +434,8 @@ Ext.Localization.LocalizeView(this);
 
 
 
-    
+    view.down('#imgDetails')
+.setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/Recall/Image/"+data.Id);
+
+
+

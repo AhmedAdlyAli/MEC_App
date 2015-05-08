@@ -572,6 +572,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
+        var me = this;
         var view = component;
 
         Ext.Localization.LocalizeView(view);
@@ -595,13 +596,143 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             Ext.Function.defer(function(){
 
 
-
-
-                gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+                gMap.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
                 gMap.setZoom(11);
 
 
                 // get dealers
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
+
+            }, 300,this);
+
+
+
+
+
+
+        }, function(error){
+
+
+           // alert('code: '    + error.code    + '\n' +
+           // 'message: ' + error.message + '\n');
+
+
+            var m = Ext.Localization.GetMessage('LocationNotEnabled');
+            Ext.device.Notification.show({
+                title: 'خطأ',
+                buttons:["موافق"],
+                message: m
+            });
+
+
+
+
+           Ext.Function.defer(function(){
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+                me.GetDealers(gMap,lat,lng,[],view,'');
+
+             }, 300,this);
+
+
+               Ext.AnimationHelper.HideLoading();
+
+        });
+
+
+
+
+
+
+    },
+
+    onSupplyServiceMyDataInitialize: function(component, eOpts) {
+        var me = this;
+        var view = component;
+
+
+        // localization
+        Ext.Localization.LocalizeView(view);
+
+
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
+
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+
+        var requestData=
+            {"qid":"21463400042",
+             "languageID":language,
+             "mobileDeviceID":"1231",
+            "sessionID": Ext.Global.userSupplyToken};
+
+
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1.d);
+
+               // console.log(json2);
+
+
+
+
+                        var store = new Ext.data.Store({
+                            data : json2.Data.FamilyMembers
+                        });
+
+                        var lst = view.down('#lstFamily');
+                        lst.setStore(store);
+
+                        lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                        lst.setScrollable(false);
+
+
+
+
+
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+            },
+            failure: function(request, resp) {
+                alert("in failure");
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+    },
+
+    GetDealers: function(gMap, lat, lng, orderItems, view, token) {
+        //alert(view);
+
+
+        //alert('start');
+
 
                 var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
@@ -612,11 +743,15 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "restrictDealerBasedOnStock":"false",
-                                    "latitude": position.coords.latitude, //"25.321283",//location.lat,
-                                    "longtitude":position.coords.longitude, //"51.528329", //location.lng,
-                                    "orderItems": [],
-                                    "sessionID": Ext.Global.userSupplyToken
+                                    "latitude": lat, //"25.321283",//location.lat,
+                                    "longtitude":lng, //"51.528329", //location.lng,
+                                    "orderItems": orderItems,
+                                    "sessionID": token
                                    };
+
+
+             //console.log(requestData);
+
 
 
                 Ext.Ajax.request({
@@ -676,119 +811,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         alert("in failure");
                     }
                 });
-
-            }, 300,this);
-
-
-
-
-
-
-        }, function(error){
-
-            //alert('code: '    + error.code    + '\n' +
-            //'message: ' + error.message + '\n');
-
-            gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-            gMap.setZoom(11);
-
-
-
-            var m = Ext.Localization.GetMessage('LocationNotEnabled');
-            Ext.device.Notification.show({
-                title: 'خطأ',
-                buttons:["موافق"],
-                message: m
-            });
-
-            Ext.AnimationHelper.HideLoading();
-
-        });
-
-
-
-
-
-
-    },
-
-    onSupplyServiceMyDataInitialize: function(component, eOpts) {
-        var me = this;
-        var view = component;
-
-
-        // localization
-        Ext.Localization.LocalizeView(view);
-
-
-
-
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
-
-        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
-
-
-        var requestData=
-            {"qid":"21463400042",
-             "languageID":language,
-             "mobileDeviceID":"1231",
-            "sessionID": Ext.Global.userSupplyToken};
-
-
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-        Ext.Ajax.request({
-
-            url : url,
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
-
-                var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
-
-                console.log(json2);
-
-
-
-
-                        var store = new Ext.data.Store({
-                            data : json2.Data.FamilyMembers
-                        });
-
-                        var lst = view.down('#lstFamily');
-                        lst.setStore(store);
-
-                        lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
-                        lst.setScrollable(false);
-
-
-
-
-
-
-
-                Ext.AnimationHelper.HideLoading();
-
-
-            },
-            failure: function(request, resp) {
-                alert("in failure");
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
     }
 
 });

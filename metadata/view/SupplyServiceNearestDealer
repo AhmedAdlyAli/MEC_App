@@ -68,7 +68,12 @@
                     "codeClass": null,
                     "userConfig": {
                         "height": "20em",
-                        "itemId": "mapDealers"
+                        "itemId": "mapDealers",
+                        "mapOptions": [
+                            "{{",
+                            "  center:new google.maps.LatLng(25.321283,51.528329),",
+                            "  zoom:11}"
+                        ]
                     },
                     "name": "MyMap1",
                     "designerId": "b3d761cb-bfe8-4863-bbf3-e6ff7bba6790"
