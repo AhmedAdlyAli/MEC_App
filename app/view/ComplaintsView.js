@@ -21,6 +21,8 @@ Ext.define('MEC_App.view.ComplaintsView', {
         'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.TextArea',
+        'Ext.field.Email',
+        'Ext.field.Number',
         'Ext.Panel',
         'Ext.Img',
         'Ext.Button',
@@ -136,7 +138,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         placeHolder: 'الاسم بالكامل'
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'emailfield',
                         id: 'email',
                         itemId: 'email',
                         label: '',
@@ -145,7 +147,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         placeHolder: 'البريد الالكتدوني'
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'numberfield',
                         id: 'mobile',
                         itemId: 'mobile',
                         label: '',

@@ -229,7 +229,7 @@
                     "designerId": "4b8df373-3f3d-4bd0-a7cb-b4c3c9ec3e26"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Email",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -244,17 +244,18 @@
                         "name": "email",
                         "placeHolder": "البريد الالكتدوني"
                     },
-                    "name": "MyTextField6",
+                    "name": "MyEmailField",
                     "designerId": "b2ba6435-40a8-4155-86a1-107ec68797b2"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|displayName": "mobile",
                         "id": "mobile",
                         "itemId": "mobile",
                         "label": "",
@@ -264,7 +265,7 @@
                         "placeHolder": "رقم الهاتف",
                         "required": true
                     },
-                    "name": "MyTextField7",
+                    "name": "MyNumberField2",
                     "designerId": "fba83ece-53fd-4aa8-bb74-fe811ab2a86c"
                 },
                 {
