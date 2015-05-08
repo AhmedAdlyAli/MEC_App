@@ -10,6 +10,15 @@ $list-rounded-radius: 0;
 
 /* _arch-other-start */
 @font-face {
+  font-family: 'PFDinTextUniversal-Light';
+  src: url('fonts/PFDinTextUniversal-Light.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal-Light.otf')  format('opentype'),
+	     url('fonts/PFDinTextUniversal-Light.woff') format('woff'), url('fonts/PFDinTextUniversal-Light.ttf')  format('truetype'), url('fonts/PFDinTextUniversal-Light.svg#PFDinTextUniversal-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
     font-family: 'PFDinTextUniversal';
     src: url('fonts/PFDinTextUniversal.eot?#iefix') format('embedded-opentype'),  url('fonts/PFDinTextUniversal.otf')  format('opentype'),
         url('fonts/PFDinTextUniversal.woff') format('woff'), url('fonts/PFDinTextUniversal.ttf')  format('truetype'), url('fonts/PFDinTextUniversal.svg#PFDinTextUniversal') format('svg');
@@ -47,6 +56,19 @@ body {
     .x-button {
         color: #701d45;
     }
+}
+
+.fixed-ar-title {
+    font-family: 'PFDinTextUniversal-Light';
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.fixed-en-title {
+    font-size: 10px;
+    line-height: 19px;
+    font-family: 'PFDinTextUniversal-Light';
 }
 
 .home-wrapper {
@@ -1624,8 +1646,8 @@ background: url(../images/toplogo.png) no-repeat center top;
             padding:0.5em 0.5em 0.5em 0;
         }
     }
-    
-    
+
+
     .recall-label-1{
         padding:1em 0 0 2.2em;
         background: url(../images/recall1.png) no-repeat 4% 90%;
@@ -1644,7 +1666,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         background: url(../images/recall3.png) no-repeat 4% 90%;
 
     }
-    
+
     .violation-label-1{
         padding:1em 0 0 2.2em;
         background: url(../images/vio1.png) no-repeat 4% 90%;
