@@ -51,27 +51,63 @@ Ext.define('MEC_App.view.MainNavView', {
                                 xtype: 'panel',
                                 cls: 'home-header',
                                 html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
-                                id: 'pnlNews',
                                 itemId: 'pnlNews'
                             },
                             {
                                 xtype: 'panel',
                                 cls: 'home-header2',
                                 html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
-                                id: 'pnlNews1',
                                 itemId: 'pnlNews1'
                             },
                             {
                                 xtype: 'panel',
                                 cls: 'home-header3',
                                 html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
-                                id: 'pnlNews2',
                                 itemId: 'pnlNews2'
                             }
                         ],
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
+                                    // loaad top 3 news
+
+
+
+                                    var me = this;
+
+                                    Ext.Ajax.request({
+
+                                        url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=3&categoryId=1',
+                                        method : 'Get',
+                                        success : function (response) {
+
+                                            var json = Ext.util.JSON.decode(response.responseText);
+
+                                            console.log(json);
+
+                                            me.down('#pnlNews').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[0].Id +');');
+                                            me.down('#pnlNews1').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[1].Id +');');
+                                            me.down('#pnlNews2').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[2].Id +');');
+
+
+
+                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[0].NewsTitle  + '</div)');
+                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[1].NewsTitle  + '</div)');
+                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[2].NewsTitle  + '</div)');
+
+
+
+
+
+                                            console.log(me.down('#pnlNews').getStyle());
+
+                                        }
+                                    });
+
+
+
+
+
                                     var carousel = this;
 
                                     setInterval(function(){

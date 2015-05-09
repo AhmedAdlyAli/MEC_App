@@ -181,8 +181,8 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
                                 Ext.device.Notification.show({
-                                    title: Ext.Localization.GetMessage('FeedbackSubmitted'),
-                                    buttons: [Ext.Localization.GetMessage('Cancel')],
+                                    title: Ext.Localization.GetMessage('Confirm'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
                                     message:  Ext.Localization.GetMessage('FeedbackSubmitted'),
                                     callback: function(button) {
 

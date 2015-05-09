@@ -159,7 +159,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                         });
 
-            }, 300,this);
+            }, 1000,this);
 
 
 

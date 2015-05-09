@@ -136,7 +136,7 @@
                                 "cls": [
                                     "language-button-wrapper"
                                 ],
-                                "html": "Build Number: 104",
+                                "html": null,
                                 "itemId": "ChangeButtonPanel",
                                 "layout": "hbox"
                             },
@@ -223,6 +223,19 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "Build Number:105"
+                            },
+                            "name": "MyLabel5",
+                            "designerId": "715904db-c36d-421f-be8a-7d9741251c3a"
                         },
                         {
                             "type": "Ext.Button",

@@ -879,3 +879,19 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 14:30:25.529 MEC_App[3535:1200659] Resetting plugins due to page load.
 2015-05-09 14:30:25.817 MEC_App[3535:1200659] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/479369E0-F43B-4AC3-B1BC-2B2169282318/MEC_App.app/www/index.html
 2015-05-09 14:30:42.125 MEC_App[3535:1200710] Terminating since there is no system app.
+2015-05-09 14:41:35.924 MEC_App[5265:1208976] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 14:41:35.927 MEC_App[5265:1208976] Multi-tasking -> Device: YES, App: YES
+2015-05-09 14:41:35.939 MEC_App[5265:1208976] Unlimited access to network resources
+2015-05-09 14:41:36.336 MEC_App[5265:1208976] Resetting plugins due to page load.
+2015-05-09 14:41:36.724 MEC_App[5265:1208976] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/4E780D02-A284-4378-951C-7CC6F0A052DA/MEC_App.app/www/index.html
+2015-05-09 15:05:25.553 MEC_App[6505:1219658] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 15:05:25.555 MEC_App[6505:1219658] Multi-tasking -> Device: YES, App: YES
+2015-05-09 15:05:25.559 MEC_App[6505:1219658] Unlimited access to network resources
+2015-05-09 15:05:25.992 MEC_App[6505:1219658] Resetting plugins due to page load.
+2015-05-09 15:05:26.626 MEC_App[6505:1219658] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/75C4A0D8-4320-4FA3-AEFB-6E07901ECAD5/MEC_App.app/www/index.html
+2015-05-09 15:07:11.269 MEC_App[6505:1219658] THREAD WARNING: ['ProgressIndicator'] took '53.699951' ms. Plugin should use a background thread.
+2015-05-09 16:37:11.174 MEC_App[8639:1259501] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 16:37:11.175 MEC_App[8639:1259501] Multi-tasking -> Device: YES, App: YES
+2015-05-09 16:37:11.192 MEC_App[8639:1259501] Unlimited access to network resources
+2015-05-09 16:37:11.873 MEC_App[8639:1259501] Resetting plugins due to page load.
+2015-05-09 16:37:12.372 MEC_App[8639:1259501] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B3433A09-DA65-492F-B2F6-52EA51A269DE/MEC_App.app/www/index.html
