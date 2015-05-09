@@ -68,7 +68,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 itemCls: 'item-activity',
                 itemTpl: [
                     '<div class=\'tpl-activity-1\'>{businessActivityArabicName}</div>',
-                    '<div class=\'tpl-activity-2\'>{fees} ر.ق</div>'
+                    '<div class=\'tpl-activity-2\'><span class=FB> {fees} ر.ق</span> <span class=FA> {businessActivityCode}</span> </div>'
                 ]
             }
         ]
