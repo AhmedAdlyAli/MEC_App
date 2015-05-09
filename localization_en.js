@@ -829,7 +829,8 @@ var localeEn =
 				GenericError: 'Sorry an Error has occured during the communication with the System',
 				Confirm:'Confirm',
 				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application',
-				LocationNotEnabled:'Location service is required to use this feature'
+				LocationNotEnabled:'Location service is required to use this feature',
+				FeedbackSubmitted:'Thanks for sending a suggesstion'
 				}
 
 }

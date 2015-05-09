@@ -45,13 +45,16 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "CompanyList"
+                    "news-lstng"
                 ],
                 "height": "100%",
                 "id": null,
-                "itemCls": "item-recall",
+                "itemCls": null,
                 "itemId": "lstProjects",
-                "store": null
+                "onItemDisclosure": true,
+                "pinHeaders": false,
+                "store": null,
+                "useSimpleItems": false
             },
             "name": "MyList1",
             "designerId": "79cde96e-9865-4403-8e37-4d3a7558df50",
@@ -66,9 +69,10 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tpl-recall-1 FA'><img src=\"{[this.getImgSrc(values.Id)]}\" /></div>",
-                            "<div class='tpl-recall-2 FA'><span>{ProjectTitle}</span></div>",
-                            ""
+                            "<div class=\"x-horizontal x-align-stretch x-pack-start x-layout-box\">",
+                            "    <div class=\"x-img x-img-image lstng-img x-img-background x-layout-box-item x-flexed x-stretched\" style=\"-webkit-box-flex: 2; background-image: url({[this.getImgSrc(values.Id)]});\"></div>",
+                            "    <div class=\"lstng-title x-layout-box-item x-flexed x-stretched\" style=\"-webkit-box-flex: 7;\"><span>{ProjectTitle}</span></div>",
+                            "</div>"
                         ]
                     },
                     "name": "itemTpl",
@@ -87,10 +91,10 @@
                                 ],
                                 "fn": "getImgSrc",
                                 "implHandler": [
-                                    "",
+                                    "var img = new Image();",
                                     "var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InitiativesAndProject/Image/\"+Id;",
-                                    "return src;",
-                                    ""
+                                    "",
+                                    "return src;"
                                 ]
                             },
                             "name": "getImgSrc",

@@ -100,7 +100,7 @@
                     "designerId": "4ca0b7bc-8915-4f0f-8513-8aebe8e63437"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Email",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -112,19 +112,22 @@
                         "label": "",
                         "labelAlign": null,
                         "name": "email",
-                        "placeHolder": "البريد الالكتدوني"
+                        "placeHolder": "البريد الالكتروني"
                     },
-                    "name": "MyTextField6",
+                    "name": "MyEmailField1",
                     "designerId": "121f821a-dab0-4bdd-9d09-5e4102ce201f"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Number",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "component": [
+                            "{\"type\":\"tel\"}"
+                        ],
                         "id": null,
                         "itemId": "txtMobile",
                         "label": "",
@@ -133,7 +136,7 @@
                         "placeHolder": "رقم الهاتف",
                         "required": true
                     },
-                    "name": "MyTextField7",
+                    "name": "MyNumberField",
                     "designerId": "1efe3af9-de93-43c5-9e21-5fe0208bf779"
                 },
                 {
@@ -435,9 +438,9 @@
                                     "",
                                     "",
                                     "    Ext.device.Notification.show({",
-                                    "        title: 'رسالة',",
-                                    "        buttons: [\"موافق\"],",
-                                    "        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),",
+                                    "        title: 'شكرا',",
+                                    "        buttons: [\"اغلاق\"],",
+                                    "        message:  Ext.Localization.GetMessage.FeedbackSubmitted,",
                                     "        callback: function(button) {",
                                     "",
                                     "            //return user to home page",

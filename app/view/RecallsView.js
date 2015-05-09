@@ -38,21 +38,24 @@ Ext.define('MEC_App.view.RecallsView', {
             },
             {
                 xtype: 'list',
-                cls: 'CompanyList',
+                cls: 'news-lstng',
                 height: '100%',
                 itemId: 'lstRecalls',
-                itemCls: 'item-recall',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class=\'tpl-recall-1 FA\'><img src="{[this.getImgSrc(values.Id)]}" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{ProductTitle}</span><br /></div>',
-                    '',
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '    <div class="x-img x-img-image lstng-img x-img-background x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 2; background-image: url({[this.getImgSrc(values.Id)]});"></div>',
+                    '    <div class="lstng-title x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 7;"><span>{ProductTitle}</span></div>',
+                    '</div>',
                     {
                         getImgSrc: function(Id) {
                             return Ext.Global.GetConfig('CMSWSUrl')+"/Recall/Image/"+Id;
 
                         }
                     }
-                )
+                ),
+                onItemDisclosure: true,
+                pinHeaders: false,
+                useSimpleItems: false
             }
         ]
     }

@@ -45,13 +45,16 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "CompanyList"
+                    "news-lstng"
                 ],
                 "height": "100%",
                 "id": null,
-                "itemCls": "item-recall",
+                "itemCls": null,
                 "itemId": "lstRecalls",
-                "store": null
+                "onItemDisclosure": true,
+                "pinHeaders": false,
+                "store": null,
+                "useSimpleItems": false
             },
             "name": "MyList1",
             "designerId": "19b73b3d-01cd-400d-82c2-124d88e525da",
@@ -66,9 +69,10 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tpl-recall-1 FA'><img src=\"{[this.getImgSrc(values.Id)]}\" /></div>",
-                            "<div class='tpl-recall-2 FA'><span>{ProductTitle}</span><br /></div>",
-                            ""
+                            "<div class=\"x-horizontal x-align-stretch x-pack-start x-layout-box\">",
+                            "    <div class=\"x-img x-img-image lstng-img x-img-background x-layout-box-item x-flexed x-stretched\" style=\"-webkit-box-flex: 2; background-image: url({[this.getImgSrc(values.Id)]});\"></div>",
+                            "    <div class=\"lstng-title x-layout-box-item x-flexed x-stretched\" style=\"-webkit-box-flex: 7;\"><span>{ProductTitle}</span></div>",
+                            "</div>"
                         ]
                     },
                     "name": "itemTpl",

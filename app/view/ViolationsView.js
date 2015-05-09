@@ -38,15 +38,23 @@ Ext.define('MEC_App.view.ViolationsView', {
             },
             {
                 xtype: 'list',
-                cls: 'CompanyList',
+                cls: 'news-lstng',
                 height: '100%',
                 itemId: 'lstViolations',
-                itemCls: 'item-recall',
-                itemTpl: [
-                    '<div class=\'tpl-recall-1 FA\'><img src="http://196.205.5.28:333/MEC/api//Recall/image/11" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{CompanyName}</span><br /></div>',
-                    ''
-                ]
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '    <div class="x-img x-img-image lstng-img x-img-background x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 2; background-image: url({[this.getImgSrc(values.Id)]});"></div>',
+                    '    <div class="lstng-title x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 7;"><span>{CompanyName}</span></div>',
+                    '</div>',
+                    {
+                        getImgSrc: function(Id) {
+                            return Ext.Global.GetConfig('CMSWSUrl')+"/Violation/Image/"+Id;
+                        }
+                    }
+                ),
+                onItemDisclosure: true,
+                pinHeaders: false,
+                useSimpleItems: false
             }
         ]
     }

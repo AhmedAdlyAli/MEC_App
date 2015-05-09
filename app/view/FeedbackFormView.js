@@ -20,6 +20,8 @@ Ext.define('MEC_App.view.FeedbackFormView', {
     requires: [
         'Ext.Label',
         'Ext.form.FieldSet',
+        'Ext.field.Email',
+        'Ext.field.Number',
         'Ext.field.TextArea',
         'Ext.Panel',
         'Ext.Img',
@@ -57,15 +59,18 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         placeHolder: 'الاسم بالكامل'
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'emailfield',
                         itemId: 'txtEmail',
                         label: '',
                         name: 'email',
-                        placeHolder: 'البريد الالكتدوني'
+                        placeHolder: 'البريد الالكتروني'
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'numberfield',
                         itemId: 'txtMobile',
+                        component: {
+                            type: 'tel'
+                        },
                         label: '',
                         name: 'mobile',
                         required: true,
@@ -176,9 +181,9 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
                                 Ext.device.Notification.show({
-                                    title: 'رسالة',
-                                    buttons: ["موافق"],
-                                    message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
+                                    title: 'شكرا',
+                                    buttons: ["اغلاق"],
+                                    message:  Ext.Localization.GetMessage.FeedbackSubmitted,
                                     callback: function(button) {
 
                                         //return user to home page
