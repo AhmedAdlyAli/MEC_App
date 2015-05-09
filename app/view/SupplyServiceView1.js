@@ -22,7 +22,8 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
         'Ext.Panel',
         'Ext.TitleBar',
         'Ext.form.FieldSet',
-        'Ext.Button'
+        'Ext.Button',
+        'Ext.field.Spinner'
     ],
 
     config: {

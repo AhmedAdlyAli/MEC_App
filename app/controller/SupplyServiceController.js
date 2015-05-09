@@ -119,55 +119,24 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                         view.setData(json2.Data.Items);
 
+                        var fsItems = view.down('#fsItems');
 
+                        Ext.each(json2.Data.Items, function(item){
+                            fsItems.add(
 
-                        var pnlForm = view.down('#frmSupplyService1');
+                                {
+                                    xtype: 'spinnerfield',
+                                    label: item.Name,
+                                    value: item.AllocatedQty,
+                                    name: item.ItemID,
+                                    stepValue: 1,
+                                    minValue: 0,
+                                    maxValue:item.AllocatedQty
+                                }
 
-                        var fsItems = pnlForm.add({xtype: 'panel'});
+                            );
 
-
-
-
-                        Ext.Function.defer(function(){
-
-                            Ext.each(json2.Data.Items, function(item){
-
-                                //console.log(item.Name);
-                                fsItems.add(
-
-                                    {
-                                        xtype: 'spinnerfield',
-                                        label: item.Name,
-                                        placeholder: item.Name,
-                                        value: item.AllocatedQty,
-                                        name: item.ItemID,
-                                        stepValue: 1,
-                                        minValue: 0,
-                                        maxValue:100,
-                                        listeners : {
-                                            spin : function(spinnerfield, newValue, direction, eOpts) {
-                                                if(newValue>item.AllocatedQty){
-                                                    this.setValue(item.AllocatedQty);
-                                                }
-                                            }
-                                        }
-
-
-                                    }
-
-                                );
-
-                            });
-
-                        }, 500,this);
-
-
-
-
-
-
-
-
+                        });
 
                         Ext.AnimationHelper.HideLoading();
 
@@ -177,11 +146,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         alert("in failure");
                     }
                 });
-                /////////////////////////////////////////////
-
-
-
-                Ext.AnimationHelper.HideLoading();
 
 
             },
