@@ -895,3 +895,30 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 16:37:11.192 MEC_App[8639:1259501] Unlimited access to network resources
 2015-05-09 16:37:11.873 MEC_App[8639:1259501] Resetting plugins due to page load.
 2015-05-09 16:37:12.372 MEC_App[8639:1259501] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B3433A09-DA65-492F-B2F6-52EA51A269DE/MEC_App.app/www/index.html
+2015-05-09 16:59:04.694 MEC_App[10335:1272772] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 16:59:04.696 MEC_App[10335:1272772] Multi-tasking -> Device: YES, App: YES
+2015-05-09 16:59:04.698 MEC_App[10335:1272772] Unlimited access to network resources
+2015-05-09 16:59:04.876 MEC_App[10335:1272772] Resetting plugins due to page load.
+2015-05-09 16:59:05.151 MEC_App[10335:1272772] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/3DC62E5E-28EF-43B6-B0CB-EA0401BF7791/MEC_App.app/www/index.html
+2015-05-09 16:59:13.371 MEC_App[10335:1272772] THREAD WARNING: ['ProgressIndicator'] took '18.897949' ms. Plugin should use a background thread.
+2015-05-09 16:59:38.447 MEC_App[10798:1274182] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 16:59:38.448 MEC_App[10798:1274182] Multi-tasking -> Device: YES, App: YES
+2015-05-09 16:59:38.450 MEC_App[10798:1274182] Unlimited access to network resources
+2015-05-09 16:59:38.611 MEC_App[10798:1274182] Resetting plugins due to page load.
+2015-05-09 16:59:38.936 MEC_App[10798:1274182] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/0AD6A006-38AB-4B5D-868F-4F2733A6DDFD/MEC_App.app/www/index.html
+2015-05-09 17:31:04.092 MEC_App[12571:1285087] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 17:31:04.096 MEC_App[12571:1285087] Multi-tasking -> Device: YES, App: YES
+2015-05-09 17:31:04.106 MEC_App[12571:1285087] Unlimited access to network resources
+2015-05-09 17:31:04.703 MEC_App[12571:1285087] Resetting plugins due to page load.
+2015-05-09 17:31:05.218 MEC_App[12571:1285087] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/FA44B28C-7C84-4D66-80CA-3FEA274E3076/MEC_App.app/www/index.html
+2015-05-09 17:33:58.005 MEC_App[13451:1288272] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 17:33:58.006 MEC_App[13451:1288272] Multi-tasking -> Device: YES, App: YES
+2015-05-09 17:33:58.008 MEC_App[13451:1288272] Unlimited access to network resources
+2015-05-09 17:33:58.177 MEC_App[13451:1288272] Resetting plugins due to page load.
+2015-05-09 17:33:58.502 MEC_App[13451:1288272] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A9DEC88A-9186-4DAA-8052-CD847C7FC63A/MEC_App.app/www/index.html
+2015-05-09 17:34:52.438 MEC_App[14112:1290574] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 17:34:52.439 MEC_App[14112:1290574] Multi-tasking -> Device: YES, App: YES
+2015-05-09 17:34:52.440 MEC_App[14112:1290574] Unlimited access to network resources
+2015-05-09 17:34:52.916 MEC_App[14112:1290574] Resetting plugins due to page load.
+2015-05-09 17:34:53.391 MEC_App[14112:1290574] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/69324899-AAA5-44E3-B1F0-DCD52A1BF0FD/MEC_App.app/www/index.html
+2015-05-09 17:35:09.946 MEC_App[14112:1290574] THREAD WARNING: ['ProgressIndicator'] took '18.072998' ms. Plugin should use a background thread.

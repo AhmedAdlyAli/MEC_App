@@ -123,43 +123,43 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                         var pnlForm = view.down('#frmSupplyService1');
 
-                        var fsItems = pnlForm.add({xtype: 'fieldset'});
+                        var fsItems = pnlForm.add({xtype: 'panel'});
 
 
 
 
-            Ext.Function.defer(function(){
+                        Ext.Function.defer(function(){
 
-                        Ext.each(json2.Data.Items, function(item){
+                            Ext.each(json2.Data.Items, function(item){
 
-                            //console.log(item.Name);
-                            fsItems.add(
+                                //console.log(item.Name);
+                                fsItems.add(
 
-                                {
-                                    xtype: 'spinnerfield',
-                                    label: item.Name,
-                                    placeholder: item.Name,
-                                    value: item.AllocatedQty,
-                                    name: item.ItemID,
-                                    stepValue: 1,
-                                    minValue: 0,
-                                    maxValue:100,
-                                    listeners : {
-                                        spin : function(spinnerfield, newValue, direction, eOpts) {
-                                            if(newValue>item.AllocatedQty){
-                                                this.setValue(item.AllocatedQty);
+                                    {
+                                        xtype: 'spinnerfield',
+                                        label: item.Name,
+                                        placeholder: item.Name,
+                                        value: item.AllocatedQty,
+                                        name: item.ItemID,
+                                        stepValue: 1,
+                                        minValue: 0,
+                                        maxValue:100,
+                                        listeners : {
+                                            spin : function(spinnerfield, newValue, direction, eOpts) {
+                                                if(newValue>item.AllocatedQty){
+                                                    this.setValue(item.AllocatedQty);
+                                                }
                                             }
                                         }
+
+
                                     }
 
+                                );
 
-                                }
+                            });
 
-                            );
-
-                        });
-
-            }, 1000,this);
+                        }, 500,this);
 
 
 

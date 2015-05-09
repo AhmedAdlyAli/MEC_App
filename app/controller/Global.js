@@ -63,6 +63,9 @@ Ext.define('MEC_App.controller.Global', {
             webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
             supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
 
+
+           //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
+
             //production
             //supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',
             //payment: https://supply.mec.gov.qa/mservice/paymentservice/...
