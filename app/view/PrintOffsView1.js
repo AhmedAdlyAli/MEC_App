@@ -52,6 +52,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         itemId: 'txtPrintoutType',
                         label: 'نوع المستخرج',
                         name: 'txtPrintoutType',
+                        required: true,
                         placeHolder: 'نوع المستخرج',
                         readOnly: true,
                         listeners: [
@@ -90,34 +91,52 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         //select item
                                         function(selectedValue) {
 
+
+
+                                            // reset company selection
+
+                                            me.up('PrintOffsView1').down('#hiddenCompanyCR').setValue('');
+                                            me.up('PrintOffsView1').down('#companyName').setValue('');
+
+
+
                                             hiddenPrintType.setValue(selectedValue);
 
                                             Ext.each(config.items, function(item){
 
                                                 if(item.value==selectedValue){
-                                                    txtField.setValue(item.text);
+                                                    me.setValue(item.text);
                                                 }
                                             });
 
 
+                                            me.up('PrintOffsView1').PrintoutType = selectedValue;
+
+                                            if(selectedValue==50)// salbia
+                                            {
+                                                // hide company field
+                                                me.up('PrintOffsView1').down('#companyName').setDisabled(true);
+
+                                            }else{
+                                                me.up('PrintOffsView1').down('#companyName').setDisabled(false);
+                                            }
+
+
+                                            if(selectedValue==53) // CP certificate
+                                            {
+                                                me.up('PrintOffsView1').DeliveryPersonalOnly = true;
+                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(1);
+                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setValue(1);
+
+                                            }else{
+                                                me.up('PrintOffsView1').DeliveryPersonalOnly = false;
+                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(10);
+                                            }
 
                                         },
                                         //cancel
                                         function() {}
                                         );
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
                                     }, me);
@@ -152,39 +171,95 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                     me.element.on('tap', function(){
 
+                                        if(me.getDisabled()===false)
+                                        {
 
-                                        var data = me.up('PrintOffsView1').getData();
+                                            var data = me.up('PrintOffsView1').getData();
 
+                                            var items = [];
 
-
-                                        var items = [];
-
-                                        Ext.each(data, function(item){
-
-                                            if(Ext.Global.LanguageFlag=='ar')
-                                            items.push({ text: item.establishmentArabicName, value: item.commercialRegistration });
-                                            else
-                                            items.push({ text: item.establishmentEnglishName, value: item.commercialRegistration });
-                                        });
+                                            Ext.each(data, function(item){
 
 
+                                                var v ='';
+                                                if(me.up('PrintOffsView1').PrintoutType==53)
+                                                v = item.commercialPermit;
+                                                else
+                                                v = item.commercialRegistration;
 
 
-                                        var btn = this;
-                                        var config = {
-                                            title: Ext.Localization.GetMessage('EstName'),
-                                            items: items,
-                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
-                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
-                                        };
+                                                if(Ext.Global.LanguageFlag=='ar')
+                                                items.push({ text: item.establishmentArabicName, value: v });
+                                                else
+                                                items.push({ text: item.establishmentEnglishName, value: v });
+                                            });
 
 
-                                        var hiddenCompanyCR = Ext.ComponentQuery.query("#hiddenCompanyCR")[0];
-
-                                        Ext.DeviceController.ShowNativePickerWithValue(me, hiddenCompanyCR,config);
 
 
+                                            var btn = this;
+                                            var config = {
+                                                title: Ext.Localization.GetMessage('EstName'),
+                                                items: items,
+                                                doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                                cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
+                                            };
+
+
+
+
+                                            var hiddenCompanyCR = Ext.ComponentQuery.query("#hiddenCompanyCR")[0];
+
+                                            //Ext.DeviceController.ShowNativePickerWithValue(me, hiddenCompanyCR,config);
+
+
+
+
+                                            // Show the picker
+                                            window.plugins.listpicker.showPicker(config,
+                                            //select item
+                                            function(selectedValue) {
+
+
+                                                //check if the company has CR Or CP
+
+                                                if(selectedValue!=='')
+                                                {
+                                                    hiddenCompanyCR.setValue(selectedValue);
+
+                                                    Ext.each(config.items, function(item){
+                                                        if(item.value==selectedValue){
+                                                            me.setValue(item.text);
+                                                        }
+                                                    });
+                                                }else{
+
+                                                    var key;
+                                                    if(me.up('PrintOffsView1').PrintoutType==53)
+                                                    key= 'cantSubmitCP';
+                                                    else
+                                                    key= 'cantSubmitCR';
+
+                                                    Ext.device.Notification.show({
+                                                        title: Ext.Localization.GetMessage('Error'),
+                                                        buttons: [Ext.Localization.GetMessage('OK')],
+                                                        message:  Ext.Localization.GetMessage(key)
+                                                    });
+
+                                                }
+
+                                            },
+                                            //cancel
+                                            function() {
+                                                //  alert("You have cancelled");
+                                            }
+                                            );
+
+
+                                        }
                                     }, me);
+
+
 
 
                                 },
@@ -195,14 +270,12 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR',
-                        value: 21
+                        name: 'hiddenCompanyCR'
                     },
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        name: 'hiddenPrintoutType',
-                        value: 52
+                        name: 'hiddenPrintoutType'
                     },
                     {
                         xtype: 'textfield',
@@ -210,6 +283,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         itemId: 'txtDeliveryMethod',
                         label: 'طريقة الاستلام',
                         name: 'txtDeliveryMethod',
+                        required: true,
                         placeHolder: 'طريقة الاستلام',
                         readOnly: true,
                         listeners: [
@@ -220,19 +294,33 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     var me = this;
                                     me.element.on('tap', function(){
 
+                                        var itemsList=[];
+
+                                        if(me.up('PrintOffsView1').DeliveryPersonalOnly===true)
+                                        {
+
+                                            itemsList=    [
+                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" }
+                                            ];
+
+                                        }else{
+                                            itemsList=    [
+                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" },
+                                            { text: Ext.Localization.GetMessage('Email'), value: "3" }
+                                            ];
+
+                                        }
+
+
                                         var btn = this;
                                         var config = {
                                             title: Ext.Localization.GetMessage('DeliveryMethod') ,
-                                            items: [
-                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" },
-                                            { text: Ext.Localization.GetMessage('Email'), value: "3" }
-
-
-                                            ],
+                                            items: itemsList,
                                             selectedValue: "",
                                             doneButtonLabel: Ext.Localization.GetMessage('Choose'),
                                             cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                         };
+
 
 
                                         var hiddenDeliveryMethod = Ext.ComponentQuery.query("#hiddenDeliveryMethod")[0];
@@ -252,14 +340,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod',
-                        value: 01
+                        name: 'hiddenDeliveryMethod'
                     },
                     {
                         xtype: 'spinnerfield',
                         itemId: 'txtNoOfCopies',
                         label: 'عدد النسخ',
                         name: 'txtNoOfCopies',
+                        required: true,
                         maxValue: 10,
                         minValue: 1,
                         stepValue: 1
@@ -285,25 +373,27 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             var err='';
 
 
-                            if(formData.hiddenCompanyCR===''){
-
-                                err+="برجاء اختيار الشركة \n";
-                            }
-
-
-
                             if(formData.hiddenPrintoutType===''){
 
-                                err+="برجاء اختيار طريقة الاستلام";
+                                err+=Ext.Localization.GetMessage('errPrintType'); //  "برجاء اختيار نوع المستخرج \n";
                             }
 
 
-                            if(formData.txtNoOfCopies===''){
 
-                                err+="برجاء اختيار عدد النسخ";
+                            if(formData.hiddenPrintoutType!=='50')
+                            {
+
+                                if(formData.hiddenCompanyCR===''){
+
+                                    err+=Ext.Localization.GetMessage('errCompanyCr'); //"برجاء اختيار الشركة \n";
+                                }
                             }
 
 
+                            if(formData.hiddenDeliveryMethod===''){
+
+                                err+=Ext.Localization.GetMessage('errDeliveryMethod'); //"برجاء اختيار طريقة الاستلام";
+                            }
 
 
 
@@ -319,8 +409,16 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             }else{
 
 
+                                var cr,cp;
 
-
+                                if(view.PrintoutType===53)
+                                {
+                                    cr='';
+                                    cp= view.down('#hiddenCompanyCR').getValue();
+                                }else{
+                                    cp='';
+                                    cr= view.down('#hiddenCompanyCR').getValue();
+                                }
 
 
                                 Ext.AnimationHelper.ShowLoading();
@@ -332,7 +430,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     "identityType": 'QID',//Ext.Global.identityType,
                                     "identityNum": Ext.Global.identityNum,
                                     "identityNationality": Ext.Global.identityNationality,
-                                    "commercialRegistrationNum":view.down('#hiddenCompanyCR').getValue(),
+                                    "commercialRegistrationNum":cr,
                                     "caseType":view.down('#hiddenPrintoutType').getValue(),
                                     "establishmentSpcId":"",
                                     "caseSubType":"01",
@@ -340,7 +438,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     "numOfCopies":view.down('#txtNoOfCopies').getValue(),
                                     "moiEstablishmentNum":"",
                                     "qatarChamberNum":"",
-                                    "commercialPermitNum":"",
+                                    "commercialPermitNum":cp,
                                     "economicalNum":""
                                 };
 
@@ -411,11 +509,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
     initialize: function() {
         Ext.Localization.LocalizeView(this);
 
-
-
-
         Ext.AnimationHelper.ShowLoading();
 
+        this.DeliveryPersonalOnly = false;
 
         var requestData = {
             "serviceId": "2",
@@ -445,7 +541,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                 Ext.AnimationHelper.HideLoading();
 
-
+                console.log(json.listOfPrimaryEstablishment.primaryEstablishment);
 
 
             }

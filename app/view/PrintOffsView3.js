@@ -78,10 +78,12 @@ Ext.define('MEC_App.view.PrintOffsView3', {
 
             });
 
-            var tr= 'vpc_OrderInfo:+' +  data.recordID + '+\n';
-            tr+= 'vpc_OrderInfo' + data.caseSerialNum  + '\n';
-            tr+= 'vpc_Amount:'  +  data.fees    + '\n';
+            var tr= 'vpc_MerchTxnRef:+' +  data.recordID + '+\n';
+            tr+= 'vpc_OrderInfo' + data.serialNumber  + '\n';
+            tr+= 'vpc_Amount:'  + data.listOfMecCaseFees. mecCaseFees[0].feesTotalValue * 100    + '\n';
             tr+= 'locale' + Ext.Global.LanguageFlag ;
+
+        //    alert(tr);
 
 
             form.element.dom.target = 'paymentframe';

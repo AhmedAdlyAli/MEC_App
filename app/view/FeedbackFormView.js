@@ -183,7 +183,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 Ext.device.Notification.show({
                                     title: 'شكرا',
                                     buttons: ["اغلاق"],
-                                    message:  Ext.Localization.GetMessage.FeedbackSubmitted,
+                                    message:  Ext.Localization.GetMessage('FeedbackSubmitted'),
                                     callback: function(button) {
 
                                         //return user to home page

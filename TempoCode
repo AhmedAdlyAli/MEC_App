@@ -431,6 +431,11 @@ Ext.Localization.LocalizeView(this);
 
 
 
+ Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Confirm'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message:  Ext.Localization.GetMessage('CaseSubmitted')
+            });
 
 
 
@@ -450,6 +455,7 @@ Ext.Localization.LocalizeView(this);
 - Tamween issues 
 - Issues 
 - Localization 
+- QID
 ==================================
 
 

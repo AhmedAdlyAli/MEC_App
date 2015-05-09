@@ -290,6 +290,8 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     SubmitCase: function() {
+        /*
+
         var caseData = Ext.Viewport.getActiveItem().down('PrintOffsView3').getData();
 
 
@@ -352,7 +354,7 @@ Ext.define('MEC_App.controller.Global', {
         });
 
 
-
+        */
 
 
 

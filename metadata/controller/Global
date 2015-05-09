@@ -462,6 +462,8 @@
             "userConfig": {
                 "fn": "SubmitCase",
                 "implHandler": [
+                    "/*",
+                    "",
                     "var caseData = Ext.Viewport.getActiveItem().down('PrintOffsView3').getData();",
                     "",
                     "",
@@ -524,7 +526,7 @@
                     "});",
                     "",
                     "",
-                    "",
+                    "*/",
                     "",
                     "",
                     "",

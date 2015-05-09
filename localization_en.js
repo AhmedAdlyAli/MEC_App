@@ -830,6 +830,11 @@ var localeEn =
 				Confirm:'Confirm',
 				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application',
 				LocationNotEnabled:'Location service is required to use this feature',
+				errPrintType: 'Please choose Printout Type \n',
+				errCompanyCr: 'Please choose the Company \n',
+				errDeliveryMethod:'Please choose the Delivery Method \n',
+				cantSubmitCR:'cannot submit Request for reserved trade Name',
+				cantSubmitCP:'cannot submit Request for company without Commercial Permit',
 				FeedbackSubmitted:'Thanks for sending a suggesstion'
 				}
 
