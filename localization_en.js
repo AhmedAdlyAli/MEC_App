@@ -59,7 +59,7 @@ var localeEn =
 				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'Trademark Report',Url:'http://WWW.mec.gov.qa',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'Trademark Report',Url:'http://www.mec.gov.qa/English/Pages/Home.aspx',OpenExternalWindow:true,Icon:'ico-trade.png'}
 			]
 		},
 
@@ -68,7 +68,7 @@ var localeEn =
 			items: [
 				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'Ministry Staff',Url:'http://WWW.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'Ministry Staff',Url:'http://www.mec.gov.qa/English/Pages/Home.aspx', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
@@ -88,7 +88,7 @@ var localeEn =
 			items: [
 				{Name:'Daily Bulletin',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
              	{Name:'Where to Shop',Url:'WhereToShopView',Icon:'ico-where.png'},
-             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://mec.gov.qa',Icon:'ico-report.png'}
+             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
 			]
 		},
 
@@ -494,8 +494,8 @@ var localeEn =
 				{itemId:"txtCategory", xtype: "textfield",value:"Complaint Type"},
 				{itemId:"txtComplaint", xtype: "textfield",value:"Complaint Description"},
 				{itemId:"fullName", xtype: "textfield",value:"Full Name"},
-				{itemId:"email", xtype: "textfield",value:"Email"},
-				{itemId:"mobile", xtype: "textfield",value:"Mobile"},
+				{itemId:"email", xtype: "emailfield",value:"Email"},
+				{itemId:"mobile", xtype: "numberfield",value:"Mobile"},
 				{itemId:"mytextfield", xtype: "textfield",value:"Barcode Scan"},
 				{itemId:"lblAttachImage", xtype: "label",value:"Attach Image"},
 				{itemId:"btnSubmitComplaint", xtype: "button",value:"Send"}

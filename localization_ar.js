@@ -60,7 +60,7 @@ var localeAr =
 				{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'تقرير العلامات التجارية',Url:'http://mec.gov.qa',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'تقرير العلامات التجارية',Url:'http://www.mec.gov.qa/arabic/Pages/home.aspx',OpenExternalWindow:true,Icon:'ico-trade.png'}
 			]
 		},
 
@@ -69,7 +69,7 @@ var localeAr =
 			items: [
 				{Name:'عن الوزارة',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'موظفو الوزارة',Url:'http://www.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'موظفو الوزارة',Url:'http://www.mec.gov.qa/arabic/Pages/home.aspx', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
@@ -89,7 +89,7 @@ var localeAr =
 			items: [
 				{Name:'النشرة اليومية',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
              	{Name:'اين تتسوق',Url:'WhereToShopView',Icon:'ico-where.png'},
-             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://mec.gov.qa',Icon:'ico-report.png'}
+             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
 			]
 		},
 
