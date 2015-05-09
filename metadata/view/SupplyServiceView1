@@ -47,6 +47,7 @@
                 "cls": [
                     "acc-container"
                 ],
+                "height": 400,
                 "itemId": "frmSupplyService1"
             },
             "name": "MyPanel5",

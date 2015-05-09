@@ -121,11 +121,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                        var fsItems =view.down('#frmSupplyService1').add({xtype: 'fieldset'});
+                        var pnlForm = view.down('#frmSupplyService1');
+
+                        var fsItems = pnlForm.add({xtype: 'fieldset'});
+
+
+
+
+            Ext.Function.defer(function(){
 
                         Ext.each(json2.Data.Items, function(item){
 
-                            console.log(item.Name);
+                            //console.log(item.Name);
                             fsItems.add(
 
                                 {
@@ -146,12 +153,19 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     }
 
 
-
                                 }
 
                             );
 
                         });
+
+            }, 300,this);
+
+
+
+
+
+
 
 
 

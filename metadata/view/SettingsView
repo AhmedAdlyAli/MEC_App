@@ -136,6 +136,7 @@
                                 "cls": [
                                     "language-button-wrapper"
                                 ],
+                                "html": "Build Number: 104",
                                 "itemId": "ChangeButtonPanel",
                                 "layout": "hbox"
                             },

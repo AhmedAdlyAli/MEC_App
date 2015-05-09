@@ -42,6 +42,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
             {
                 xtype: 'panel',
                 cls: 'acc-container',
+                height: 400,
                 itemId: 'frmSupplyService1',
                 items: [
                     {

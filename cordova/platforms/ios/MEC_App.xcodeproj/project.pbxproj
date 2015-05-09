@@ -639,8 +639,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,7 +667,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5d9e33f4-d106-4695-a051-cbba82d2c781";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -678,8 +678,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -704,7 +704,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5d9e33f4-d106-4695-a051-cbba82d2c781";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
