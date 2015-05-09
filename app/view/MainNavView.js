@@ -85,15 +85,15 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                             console.log(json);
 
-                                            me.down('#pnlNews').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[0].Id +');');
-                                            me.down('#pnlNews1').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[1].Id +');');
-                                            me.down('#pnlNews2').setStyle('background: url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[2].Id +');');
+                                            me.down('#pnlNews').setStyle({'background-image': 'url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[0].Id +')','background-size':'cover'});
+                                            me.down('#pnlNews1').setStyle({'background-image': 'url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[1].Id +')','background-size':'cover'});
+                                            me.down('#pnlNews2').setStyle({'background-image': 'url('+Ext.Global.GetConfig('CMSWSUrl')+'/EconomyNews/Image/'+json[2].Id +')','background-size':'cover'});
 
 
 
-                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[0].NewsTitle  + '</div)');
-                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[1].NewsTitle  + '</div)');
-                                            me.down('#pnlNews').setHtml('<div class="header-text-bg"><b>' + json[2].NewsTitle  + '</div)');
+                                            me.down('#pnlNews').setHtml('<div class="header-text-bg">' + json[0].NewsTitle  + '</div)');
+                                            me.down('#pnlNews1').setHtml('<div class="header-text-bg">' + json[1].NewsTitle  + '</div)');
+                                            me.down('#pnlNews2').setHtml('<div class="header-text-bg">' + json[2].NewsTitle  + '</div)');
 
 
 
