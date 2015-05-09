@@ -223,7 +223,7 @@ Ext.define('MEC_App.view.TradeNameBranchDetails', {
                         id: 'lstBizActivities-c3',
                         itemId: 'lstBizActivities',
                         itemTpl: [
-                            '<div>List Item {string}</div>'
+                            '<div> {businessActivityName}</div>'
                         ]
                     }
                 ]

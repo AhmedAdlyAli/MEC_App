@@ -121,6 +121,25 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
     onLstMyCompaniesItemTap: function(dataview, index, target, record, e, eOpts) {
 
+
+        var cr = record.data.commercialRegistration;
+        var cp = record.data.commercialPermit;
+
+
+
+        if(cr==='' && cp===''){
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [ Ext.Localization.GetMessage('Ok')],
+                message:  Ext.Localization.GetMessage('ErrNocrcp')
+            });
+
+
+        }else{
+
+
+
         dataview.up('MainNavView').push({
             xtype: 'MyEstablishmentDetails',
             title: Ext.Global.GetFixedTitle(),
@@ -128,7 +147,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         });
 
-
+        }
 
     },
 
@@ -179,7 +198,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             "siebelSpcOperationSpcObjectSpcId":"",
             "qatarChamberNum":"",
             "statusMsg":"",
-            "commercialPermitNum":"",
+            "commercialPermitNum":cp,
             "numOutputObjects":"",
             "economicalNum":""
         };
@@ -193,7 +212,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             jsonData :requestData,
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
-
+                console.log(json);
 
                 //Bind Data to controls
                 var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
@@ -217,6 +236,8 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                 //signatories
+        if(company.listOfSignatories.signatories.length>0)
+            {
                 var storeSignatories = new Ext.data.Store({
                     data : company.listOfSignatories.signatories
                 });
@@ -226,6 +247,26 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
                 lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
                 lst.setScrollable(false);
+            }
+
+
+
+
+                if(company.listOfHumanPartners.humanPartners.length>0)
+        {
+                //partners
+                var storePartners = new Ext.data.Store({
+                    data : company.listOfHumanPartners.humanPartners
+                });
+
+                var lstPartners = view.down('#lstPartners');
+                lstPartners.setStore(storePartners);
+
+                lstPartners.setHeight(company.listOfHumanPartners.humanPartners.length*6 + 'em');
+                lstPartners.setScrollable(false);
+
+        }
+
 
 
 
@@ -258,7 +299,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                     });
 
 
-
                     var lstBizActivities = view.down('#lstBizActivities');
                     lstBizActivities.setStore(storActivities);
 
@@ -280,14 +320,26 @@ Ext.define('MEC_App.controller.MyBusinessController', {
     },
 
     onLstBranchesc1ItemTap: function(dataview, index, target, record, e, eOpts) {
-        dataview.up('MainNavView').push({
-            xtype: 'MyBranchDetails',
-            title: Ext.Global.GetFixedTitle(),
-            data: record.data
 
-        });
+        if(record.data.branchCR==='' && record.data.branchCP===''){
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [ Ext.Localization.GetMessage('Ok')],
+                message:  Ext.Localization.GetMessage('ErrNocrcp')
+            });
 
 
+        }else{
+
+            dataview.up('MainNavView').push({
+                xtype: 'MyBranchDetails',
+                title: Ext.Global.GetFixedTitle(),
+                data: record.data
+
+            });
+
+        }
 
     },
 
@@ -295,22 +347,18 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         var view = component; //me.getMyEstablishmentDetails();
         Ext.Localization.LocalizeView(view);
 
+
+        //console.log(view.getData());
+
         var cr = view.getData().branchCR;
+        var cp = view.getData().branchCP;
 
-        //alert(cr);
+
+        if(cr!=='')cp='';
 
 
-        if(cr===''){
 
-            Ext.device.Notification.show({
-                title: 'Data Issue ',
-                buttons: ["OK"],
-                message: 'رقم السجل التجاري غير صحيح٫ برجاء العودة واختيار شركة اخرى'
-            });
 
-            return;
-
-        }
 
 
         Ext.AnimationHelper.ShowLoading();
@@ -322,7 +370,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         var me = this;
 
-        console.log(cr);
 
         requestData = {
             "serviceId": "8",
@@ -333,11 +380,13 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             "siebelSpcOperationSpcObjectSpcId":"",
             "qatarChamberNum":"",
             "statusMsg":"",
-            "commercialPermitNum":"",
+            "commercialPermitNum":cp,
             "numOutputObjects":"",
             "economicalNum":""
         };
 
+
+        console.log(requestData);
 
         Ext.Ajax.request({
 
@@ -351,6 +400,9 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
                 //Bind Data to controls
                 var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
+
+
+
 
 
 
@@ -370,42 +422,55 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-                //signatories
-                var storeSignatories = new Ext.data.Store({
-                    data : company.listOfSignatories.signatories
-                });
-
-                var lst = view.down('#lstSignatories');
-                lst.setStore(storeSignatories);
-
-                lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
-                lst.setScrollable(false);
-
-
-
-                //Branches
-
-                if(company.listOfBranches.branches.length > 0){
-                    var storeBranches = new Ext.data.Store({
-                        data : company.listOfBranches.branches
+                if(company.listOfSignatories.signatories.length>0)
+                {
+                    //signatories
+                    var storeSignatories = new Ext.data.Store({
+                        data : company.listOfSignatories.signatories
                     });
 
+                    var lst = view.down('#lstSignatories');
+                    lst.setStore(storeSignatories);
 
-
-                    var lstBranches = view.down('#lstBranches');
-                    lstBranches.setStore(storeBranches);
-
-                    lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
-                    lstBranches.setScrollable(false);
-
+                    lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                    lst.setScrollable(false);
 
                 }
 
 
 
 
+
+                if(company.listOfCRBusinessActivities.crBusinessActivities.length>0)
+                {
+
+                    //signatories
+                    var storeAct = new Ext.data.Store({
+                        data : company.listOfCRBusinessActivities.crBusinessActivities
+                    });
+
+                    var lst2 = view.down('#lstBizActivities');
+                    lst2.setStore(storeAct);
+
+                    lst2.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*6 + 'em');
+                    lst2.setScrollable(false);
+
+                }
+
+
+
+
+
+
+
                 Ext.AnimationHelper.HideLoading();
 
+
+            },
+            failure:function(response){
+
+
+                console.log(response);
 
             }
         });

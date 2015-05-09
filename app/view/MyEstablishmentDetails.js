@@ -107,7 +107,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'اسم السجل التجاري بالإنجليزية',
+                                html: 'اسم المنشأة باللغة الإنجليزية',
                                 itemId: 'lbl5'
                             },
                             {
@@ -117,7 +117,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'اسم السجل التجاري بالعربية',
+                                html: 'اسم المنشأة بالغة العربية',
                                 itemId: 'lbl6'
                             },
                             {
@@ -277,6 +277,44 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             '',
                             ''
                         ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                cls: 'acc-container',
+                itemId: 'Partners',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header',
+                        docked: 'top',
+                        itemId: 'titlebar4',
+                        title: 'الشركاء',
+                        titleAlign: 'right',
+                        listeners: [
+                            {
+                                fn: function(element, eOpts) {
+                                    Ext.AnimationHelper.HandleShowHidePanel(element,'lstPartners-C1');
+
+                                },
+                                event: 'painted'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'list',
+                        id: 'lstPartners-C1',
+                        itemId: 'lstPartners',
+                        itemCls: 'item-signatory',
+                        itemTpl: [
+                            '',
+                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                            '',
+                            ''
+                        ],
+                        scrollToTopOnRefresh: false
                     }
                 ]
             },

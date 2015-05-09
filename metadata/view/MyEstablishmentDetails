@@ -250,7 +250,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "اسم السجل التجاري بالإنجليزية",
+                                "html": "اسم المنشأة باللغة الإنجليزية",
                                 "id": null,
                                 "itemId": "lbl5"
                             },
@@ -283,7 +283,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "اسم السجل التجاري بالعربية",
+                                "html": "اسم المنشأة بالغة العربية",
                                 "id": null,
                                 "itemId": "lbl6"
                             },
@@ -758,6 +758,108 @@
                             },
                             "name": "itemTpl",
                             "designerId": "980ee71b-cf2b-4593-b748-08f76ab4fbb3"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "acc-container"
+                ],
+                "height": null,
+                "itemId": "Partners",
+                "layout|flex": null,
+                "scrollable": null
+            },
+            "name": "MyPanel6",
+            "designerId": "6f1737b4-140f-4ea7-86e1-d4ccaed5ab87",
+            "cn": [
+                {
+                    "type": "Ext.TitleBar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "acc-header"
+                        ],
+                        "docked": "top",
+                        "itemId": "titlebar4",
+                        "title": "الشركاء",
+                        "titleAlign": "right"
+                    },
+                    "name": "MyTitleBar",
+                    "designerId": "d499eabe-c632-4295-a8fb-6c4d8937983f",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onMytitlebarPainted1111",
+                                "implHandler": [
+                                    "Ext.AnimationHelper.HandleShowHidePanel(element,'lstPartners-C1');",
+                                    ""
+                                ],
+                                "name": "painted"
+                            },
+                            "name": "onMytitlebarPainted1111",
+                            "designerId": "3e79dae9-3b94-42ed-91c7-cf6daaf80bac"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": null,
+                        "id": "lstPartners-C1",
+                        "itemCls": "item-signatory",
+                        "itemId": "lstPartners",
+                        "scrollToTopOnRefresh": false
+                    },
+                    "name": "MyList",
+                    "configAlternates": {
+                        "inline": "boolean"
+                    },
+                    "designerId": "82ec8c03-dfe5-4bfa-a49a-8124c35995fa",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "",
+                                    "    <div class='tpl-signatory-1'>{fullNameARA}</div>",
+                                    "    <div class='tpl-signatory-2'><span class='FA'>{type}</span> <span class='FB'>{nationality}</span></div>",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "c6418af1-de62-4067-9b16-646170c343a4"
                         }
                     ]
                 }

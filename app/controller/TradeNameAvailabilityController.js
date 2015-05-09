@@ -91,13 +91,22 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             jsonData :requestData,
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
+
+
+                if(json.listOfMecReservedTradeNamesIo.mecReservedTradeNames.length>0)
+                {
                 var store = new Ext.data.Store({
-                    //model: 'MEC_App.model.TradeNameResultModel',
+
                     data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
                 });
 
                 var lst = Ext.getCmp('lstTradeNameResults');
                 lst.setStore(store);
+                }
+
+
+
+
 
 
                 Ext.AnimationHelper.HideLoading();
@@ -122,6 +131,24 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
     onLstTradeNameResultsItemTap: function(dataview, index, target, record, e, eOpts) {
 
+
+        var cr = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
+        var cp = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialPermit;
+
+
+
+        if(cr==='' && cp===''){
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [ Ext.Localization.GetMessage('Ok')],
+                message:  Ext.Localization.GetMessage('ErrNocrcp')
+            });
+
+
+        }else{
+
+
         dataview.up('MainNavView').push({
             xtype: 'TradeNameEstablishmentDetails',
             title: 'بيانات الشركة',
@@ -130,6 +157,8 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         });
 
 
+
+        }
 
 
 
@@ -192,7 +221,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             "siebelSpcOperationSpcObjectSpcId":"",
             "qatarChamberNum":"",
             "statusMsg":"",
-            "commercialPermitNum":"",
+            "commercialPermitNum":cp,
             "numOutputObjects":"",
             "economicalNum":""
         };
@@ -236,7 +265,8 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
 
 
-
+        if(company.listOfSignatories.signatories.length>0)
+            {
                 //signatories
                 var storeSignatories = new Ext.data.Store({
                     data : company.listOfSignatories.signatories
@@ -247,6 +277,26 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
                 lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
                 lst.setScrollable(false);
+
+            }
+
+
+                        if(company.listOfHumanPartners.humanPartners.length>0)
+        {
+                //partners
+                var storePartners = new Ext.data.Store({
+                    data : company.listOfHumanPartners.humanPartners
+                });
+
+                var lstPartners = view.down('#lstPartners');
+                lstPartners.setStore(storePartners);
+
+                lstPartners.setHeight(company.listOfHumanPartners.humanPartners.length*6 + 'em');
+                lstPartners.setScrollable(false);
+
+
+        }
+
 
 
 
@@ -388,6 +438,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                         //signatories
+
+                                if(company.listOfSignatories.signatories.length>0)
+                {
                         var storeSignatories = new Ext.data.Store({
                             data : company.listOfSignatories.signatories
                         });
@@ -398,25 +451,30 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                         lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
                             lst.setScrollable(false);
 
-
-
-                        //Branches
-
-                        if(company.listOfBranches.branches.length > 0){
-                        var storeBranches = new Ext.data.Store({
-                            data : company.listOfBranches.branches
-                        });
+                }
 
 
 
-                        var lstBranches = view.down('#lstBranches');
-                        lstBranches.setStore(storeBranches);
 
-                        lstBranches.setHeight(company.listOfBranches.branches.length*6 + 'em');
-                        lstBranches.setScrollable(false);
+                        //activites
+                                if(company.listOfCRBusinessActivities.crBusinessActivities.length>0)
+                {
+
+                    //signatories
+                    var storeAct = new Ext.data.Store({
+                        data : company.listOfCRBusinessActivities.crBusinessActivities
+                    });
+
+                    var lst2 = view.down('#lstBizActivities');
+                    lst2.setStore(storeAct);
+
+                    lst2.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*6 + 'em');
+                    lst2.setScrollable(false);
+
+                }
 
 
-                        }
+
 
 
 
