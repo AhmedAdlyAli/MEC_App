@@ -123,11 +123,76 @@ Ext.define('MEC_App.view.PrintOffsView2', {
 
 
 
-                            Ext.Viewport.getActiveItem().push({
-                                xtype: 'PrintOffsView3',
-                                title: Ext.Global.GetFixedTitle(),
-                                data: company
+
+                            // submit the case before payment redirection
+
+
+
+
+                            Ext.AnimationHelper.ShowLoading();
+
+                            var requestData = {
+                                "serviceId": "10",
+                                "token": Ext.Global.userToken,
+                                "objectSpcId": company.recordID,
+                                "caseSerialNum":""
+                            };
+
+
+                            Ext.Ajax.request({
+
+                                url : Ext.Global.GetConfig('webServiceUrl'),
+                                method : 'POST',
+                                jsonData :requestData,
+                                success : function (response) {
+                                    var json = Ext.util.JSON.decode(response.responseText);
+
+
+
+
+                                    Ext.AnimationHelper.HideLoading();
+
+
+                                    if(json.statusMsg!='success')
+                                    {
+
+
+                                        // go to next screen - payment
+
+                                        Ext.Viewport.getActiveItem().push({
+                                            xtype: 'PrintOffsView3',
+                                            title: Ext.Global.GetFixedTitle(),
+                                            data: company
+                                        });
+
+                                    }else{
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message:  Ext.Localization.GetMessage('GenericError')
+                                        });
+
+                                    }
+
+
+
+                                }
                             });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         },
                         cls: 'btn-send',
