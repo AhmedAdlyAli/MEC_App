@@ -242,7 +242,7 @@
                         "labelAlign": null,
                         "labelWidth": "40%",
                         "name": "email",
-                        "placeHolder": "البريد الالكتدوني"
+                        "placeHolder": "البريد الالكتروني"
                     },
                     "name": "MyEmailField",
                     "designerId": "b2ba6435-40a8-4155-86a1-107ec68797b2"

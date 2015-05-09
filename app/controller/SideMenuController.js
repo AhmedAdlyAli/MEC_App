@@ -61,12 +61,15 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.toggleMenu('right');
 
-
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'PublicServiceView',
-            title: Ext.Global.GetFixedTitle()
-        });
-
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "PublicServiceView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'PublicServiceView',
+                title: Ext.Global.GetFixedTitle()
+            });
+        }
 
 
     },
@@ -87,85 +90,107 @@ Ext.define('MEC_App.controller.SideMenuController', {
 
         Ext.Viewport.toggleMenu('right');
 
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "MediaCenterView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'MediaCenterView',
+                title: Ext.Global.GetFixedTitle()
 
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'MediaCenterView',
-            title: Ext.Global.GetFixedTitle()
-
-        });
-
+            });
+        }
 
     },
 
     onBtnInquiryTap: function(button, e, eOpts) {
          Ext.Viewport.toggleMenu('right');
 
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "InquiriesView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'InquiriesView',
+                title: Ext.Global.GetFixedTitle()
+            });
 
-                Ext.Viewport.getActiveItem().push({
-                    xtype: 'InquiriesView',
-                    title: Ext.Global.GetFixedTitle()
-                });
-
-
+        }
 
     },
 
     onBtnContactTap: function(button, e, eOpts) {
         Ext.Viewport.toggleMenu('right');
 
-
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'ContactUsView',
-            title:  Ext.Global.GetFixedTitle()
-        });
-
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "ConnectView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'ContactUsView',
+                title:  Ext.Global.GetFixedTitle()
+            });
+        }
 
     },
 
     onBtnProjectsTap: function(button, e, eOpts) {
         Ext.Viewport.toggleMenu('right');
 
-
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'ProjectsView',
-            title: Ext.Global.GetFixedTitle()
-        });
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "ProjectsView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'ProjectsView',
+                title: Ext.Global.GetFixedTitle()
+            });
+        }
     },
 
     onBtnReportsTap: function(button, e, eOpts) {
-                Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
 
-
-                                        Ext.Viewport.getActiveItem().push({
-                                            xtype: 'ReportsView',
-                                            title:  Ext.Global.GetFixedTitle()
-                                        });
-
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "ReportsView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'ReportsView',
+                title:  Ext.Global.GetFixedTitle()
+            });
+        }
 
     },
 
     onBtnSettingsTap: function(button, e, eOpts) {
-         Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
 
-
-                                                Ext.Viewport.getActiveItem().push({
-                                                    xtype: 'SettingsView',
-                                                    title: Ext.Global.GetFixedTitle()
-                                                });
-
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "SettingsView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'SettingsView',
+                title: Ext.Global.GetFixedTitle()
+            });
+        }
 
 
     },
 
     onBtnLoginTap: function(button, e, eOpts) {
-               Ext.Viewport.toggleMenu('right');
+        Ext.Viewport.toggleMenu('right');
 
-
-                                                        Ext.Viewport.getActiveItem().push({
-                                                            xtype: 'LoginFomView',
-                                                            title:  Ext.Global.GetFixedTitle()
-                                                        });
-
+        if(Ext.Viewport.getActiveItem()._activeItem._itemId == "LoginFomView"){
+            return;
+        }
+        else {
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'LoginFomView',
+                title:  Ext.Global.GetFixedTitle()
+            });
+        }
 
     },
 

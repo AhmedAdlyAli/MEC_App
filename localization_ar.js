@@ -164,8 +164,8 @@ var localeAr =
 			[
 				{itemId:"btnHome", "xtype": "button","value":"الرئيسية"},
 				{itemId:"btnServices", "xtype": "button","value":"الخدمات العامة"},
-				{itemId:"btnInquiry", "xtype": "button","value":"المركز الاعلامي"},
-				{itemId:"btnMedai", "xtype": "button","value":"الاستعلامات والاصدارات"},
+				{itemId:"btnInquiry", "xtype": "button","value":"الاستعلامات والاصدارات"},
+				{itemId:"btnMedai", "xtype": "button","value":"المركز الاعلامي"},
 				{itemId:"btnContact", "xtype": "button","value":"التواصل"},
 				{itemId:"btnProjects", "xtype": "button","value":"المبادرات والمشاريع"},
 				{itemId:"btnReports", "xtype": "button","value":"المؤشرات والتقارير"},
@@ -203,7 +203,8 @@ var localeAr =
 				errDeliveryMethod:'برجاء اختيار طريقة الاستلام \n',
 				cantSubmitCR:'لا يمكن تقديم طلب طباعة لاسم تجاري محجوز',
 				cantSubmitCP:'لا يمكن تقديم طلب طباعة رخصة لشركة بدون رخصة تجارية',
-				FeedbackSubmitted:'شكرا علي ارسال المقترح، يسعدنا تواصلك'
+				FeedbackSubmitted:'شكرا علي ارسال المقترح، يسعدنا تواصلك',
+				Thanks:'شكرا'
 				}
 }
 
