@@ -121,18 +121,10 @@ body {
 
 .home-header,
 .home-header2,
-.home-header3{ 
+.home-header3{
     direction: rtl;
-    //background: url(../images/home-header-bg.jpg);
-    background-size: cover;
-
-    &.home-header2 {
-    //    background: url(../images/home-header-bg2.jpg);
-    }
-
-    &.home-header3 {
-    //    background: url(../images/home-header-bg3.jpg);
-    }
+    background: #690927 url(../images/defaultImage.png) center center no-repeat;
+    background-size: contain;
 
     .x-innerhtml {
         padding: 5%;
