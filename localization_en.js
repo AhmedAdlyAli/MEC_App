@@ -813,7 +813,7 @@ var localeEn =
 
 	Messages: {
 				StockNotFound:'There is No stock on the selected dealer',
-								EstName:'Establishment Name',
+				EstName:'Establishment Name',
 				Choose:'Choose',
 				Cancel:'Cancel',
 				PrintType1:'CR PrintOff -  Arabic',
@@ -836,9 +836,9 @@ var localeEn =
 				errCompanyCr: 'Please choose the Company \n',
 				errDeliveryMethod:'Please choose the Delivery Method \n',
 				cantSubmitCR:'cannot submit Request for reserved trade Name',
-				cantSubmitCP:'cannot submit Request for company without Commercial Permit' ,
-				ErrNocrcp:'Cannot display the information for reserved trade name'
-
+				cantSubmitCP:'cannot submit Request for company without Commercial Permit',
+				FeedbackSubmitted:'Thanks for sending a suggesstion',
+				Thanks:'Thanks'
 				}
 
 }

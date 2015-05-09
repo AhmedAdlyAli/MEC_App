@@ -144,7 +144,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         label: '',
                         labelWidth: '40%',
                         name: 'email',
-                        placeHolder: 'البريد الالكتدوني'
+                        placeHolder: 'البريد الالكتروني'
                     },
                     {
                         xtype: 'numberfield',

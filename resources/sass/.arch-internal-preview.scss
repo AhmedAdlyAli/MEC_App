@@ -622,6 +622,7 @@ body {
     .lstng-img {
         width: 60px;
         height: 60px;
+        background-image: url(../images/defaultImage.png);
         background-size: cover;
         background-position: center top;
         margin: 0 0 0 10px;
@@ -1456,7 +1457,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         border-bottom: none;
     }
 
-    .login-links { 
+    .login-links {
         text-align: left;
         text-decoration: underline;
         color: #691e49;

@@ -101,6 +101,13 @@ Ext.define('MEC_App.view.ProjectDetailsView', {
 
         Ext.Localization.LocalizeView(this);
 
+        var view = this;
+
+        var contactInfo  = view.down('#lblUrl').element;
+            contactInfo.on('tap', function(){
+                window.open(view.down('#lblUrl').getHtml(),'_blank');
+            }, contactInfo);
+
     }
 
 });

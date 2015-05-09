@@ -38,23 +38,26 @@ Ext.define('MEC_App.view.ProjectsView', {
             },
             {
                 xtype: 'list',
-                cls: 'CompanyList',
+                cls: 'news-lstng',
                 height: '100%',
                 itemId: 'lstProjects',
-                itemCls: 'item-recall',
                 itemTpl: Ext.create('Ext.XTemplate', 
-                    '<div class=\'tpl-recall-1 FA\'><img src="{[this.getImgSrc(values.Id)]}" /></div>',
-                    '<div class=\'tpl-recall-2 FA\'><span>{ProjectTitle}</span></div>',
-                    '',
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '    <div class="x-img x-img-image lstng-img x-img-background x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 2; background-image: url({[this.getImgSrc(values.Id)]});"></div>',
+                    '    <div class="lstng-title x-layout-box-item x-flexed x-stretched" style="-webkit-box-flex: 7;"><span>{ProjectTitle}</span></div>',
+                    '</div>',
                     {
                         getImgSrc: function(Id) {
-
+                            var img = new Image();
                             var src = Ext.Global.GetConfig('CMSWSUrl')+"/InitiativesAndProject/Image/"+Id;
-                            return src;
 
+                            return src;
                         }
                     }
-                )
+                ),
+                onItemDisclosure: true,
+                pinHeaders: false,
+                useSimpleItems: false
             }
         ]
     },

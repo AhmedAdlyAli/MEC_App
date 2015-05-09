@@ -206,7 +206,8 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
             scroll:this.domEvent,
             pinch:this.domEvent,
             pinchstart:this.domEvent,
-            pinchend:this.domEvent
+            pinchend:this.domEvent,
+            swipe:this.domEvent
         });
     },
 
