@@ -205,7 +205,16 @@ var localeAr =
 				cantSubmitCP:'هذه المنشأة ليس لها رخصة تجاري',
 				FeedbackSubmitted:'شكرا علي ارسال المقترح، يسعدنا تواصلك',
 				Thanks:'شكرا',
-				ErrNocrcp:'لا يمكن عرض بيانات اسم تجاري محجوز'				
+				ErrNocrcp:'لا يمكن عرض بيانات اسم تجاري محجوز',
+				errShopName:'فضلا ادخل اسم المتجر\n',
+	            errComplaintType:'فضلا اختر نوع الشكوي\n',
+	            errComplaintText:'فضلا ادخل نص الشكوي\n',
+	            errFullName:'فضلا ادخل الاسم بالكامل\n',
+	            errMobile:'فضلا ادخل رقم الجوال\n',
+	            errUserName:'فضلا ادخل اسم المستخدم\n',
+	            errPassword:'فضلا ادخل كلمة السر\n',
+	            errSuggestion : 'فضلا ادخل المقترح\n	',
+	            errMail: 'فضلا ادخل بريد الكتروني صحيح\n	'
 
 				}
 }

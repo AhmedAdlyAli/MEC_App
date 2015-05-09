@@ -40,11 +40,13 @@ Ext.define('MEC_App.view.FeedbackFormView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'مقترحات'
+                html: 'مقترحات',
+                itemId: 'lblTitle'
             },
             {
                 xtype: 'fieldset',
                 flex: 1,
+                itemId: 'FeedbackForm',
                 scrollable: {
                     direction: 'vertical',
                     directionLock: true
@@ -53,7 +55,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                     {
                         xtype: 'textfield',
                         itemId: 'txtFullName',
-                        label: '',
+                        label: 'الاسم بالكامل',
                         name: 'fullName',
                         required: true,
                         placeHolder: 'الاسم بالكامل'
@@ -61,7 +63,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                     {
                         xtype: 'emailfield',
                         itemId: 'txtEmail',
-                        label: '',
+                        label: 'البريد الالكتروني',
                         name: 'email',
                         placeHolder: 'البريد الالكتروني'
                     },
@@ -71,7 +73,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         component: {
                             type: 'tel'
                         },
-                        label: '',
+                        label: 'رقم الهاتف',
                         name: 'mobile',
                         required: true,
                         placeHolder: 'رقم الهاتف'
@@ -79,7 +81,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                     {
                         xtype: 'textareafield',
                         itemId: 'txtComment',
-                        label: '',
+                        label: 'نص المقترح',
                         name: 'suggestion',
                         required: true,
                         placeHolder: 'نص المقترح'
@@ -87,7 +89,8 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                     {
                         xtype: 'label',
                         html: 'ارفق صورة',
-                        id: 'lblAttachImage1'
+                        id: 'lblAttachImage1',
+                        itemId: 'lblAttachImage1'
                     },
                     {
                         xtype: 'panel',
@@ -142,30 +145,28 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
                             //alert(frm.getValues().shopName);
-                            var formData =frm.getValues();
-
-
-                            var err='';
-
-
-
-
-
+                            var formData =frm.getValues(),
+                                ereg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+                                testResult = ereg.test(formData.email),
+                                err='';
+                            console.log(formData);
 
                             if(formData.fullName===''){
 
-                                err+=Ext.Global.GetValidationMsg('errFullName');
+                                err+=Ext.Localization.GetMessage('errFullName');
                             }
 
+                            if(formData.email !=='' && !testResult){
+                                err+=Ext.Localization.GetMessage('errMail');
+                            }
 
-                            if(formData.mobile===''){
-
-                                err+=Ext.Global.GetValidationMsg('errMobile');
+                            if(formData.mobile === null){
+                                err+=Ext.Localization.GetMessage('errMobile');
                             }
 
                             if(formData.suggestion===''){
 
-                                err+=Ext.Global.GetValidationMsg('errSuggestion');
+                                err+=Ext.Localization.GetMessage('errSuggestion');
                             }
 
 
@@ -173,8 +174,8 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                             if(err.length>0){
 
                                 Ext.device.Notification.show({
-                                    title: 'خطأ',
-                                    buttons:["موافق"],
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons:[Ext.Localization.GetMessage('OK')],
                                     message: err
                                 });
                             }else{
@@ -200,6 +201,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         },
                         cls: 'btn-send',
                         id: 'btnSubmitComplaint1',
+                        itemId: 'btnSubmitComplaint1',
                         text: 'ارسال'
                     }
                 ]
@@ -254,6 +256,15 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
                 //custom class MEC_App.controller.DeviceController
                 Ext.DeviceController.CaptureImage(image);
+
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
 
     }
 

@@ -1691,6 +1691,10 @@ background: url(../images/toplogo.png) no-repeat center top;
         padding:1em 0 0 2.2em;
         background: url(../images/pro1.png) no-repeat 4% 90%;
     }
+    
+    &.complaint-view .x-label {
+        margin: 5px 0 15px 10px;
+    }
 
 
 }
