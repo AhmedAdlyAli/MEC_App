@@ -681,3 +681,35 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 00:18:14.042 MEC_App[13588:3230474] Resetting plugins due to page load.
 2015-05-09 00:18:14.273 MEC_App[13588:3230474] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8B5C03E4-1092-4927-B57A-439B469A7590/data/Containers/Bundle/Application/67718CB4-6EA5-4964-A3E7-2F6E057763E8/MEC_App.app/www/index.html
 2015-05-09 00:18:30.524 MEC_App[13588:3230474] THREAD WARNING: ['InAppBrowser'] took '35.232178' ms. Plugin should use a background thread.
+2015-05-09 02:23:34.526 MEC_App[4958:30941] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 02:23:34.527 MEC_App[4958:30941] Multi-tasking -> Device: YES, App: YES
+2015-05-09 02:23:34.528 MEC_App[4958:30941] Unlimited access to network resources
+2015-05-09 02:23:34.659 MEC_App[4958:30941] Resetting plugins due to page load.
+2015-05-09 02:23:35.972 MEC_App[4958:30941] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/2C02FED1-4E8B-4ABF-B8C8-3D7E7644FF9A/MEC_App.app/www/index.html
+2015-05-09 02:24:00.320 MEC_App[4958:30982] Communications error: <OS_xpc_error: <error: 0x3a9a5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x3a9a83c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-05-09 02:26:59.008 MEC_App[5510:34667] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 02:26:59.009 MEC_App[5510:34667] Multi-tasking -> Device: YES, App: YES
+2015-05-09 02:26:59.010 MEC_App[5510:34667] Unlimited access to network resources
+2015-05-09 02:26:59.142 MEC_App[5510:34667] Resetting plugins due to page load.
+2015-05-09 02:26:59.398 MEC_App[5510:34667] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/576F5198-3A39-4571-B128-760A32CC52C9/MEC_App.app/www/index.html
+2015-05-09 02:28:07.144 MEC_App[6277:36958] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 02:28:07.145 MEC_App[6277:36958] Multi-tasking -> Device: YES, App: YES
+2015-05-09 02:28:07.146 MEC_App[6277:36958] Unlimited access to network resources
+2015-05-09 02:28:07.274 MEC_App[6277:36958] Resetting plugins due to page load.
+2015-05-09 02:28:08.493 MEC_App[6277:36958] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/53A547D9-4598-431D-B207-1D219A618E79/MEC_App.app/www/index.html
+2015-05-09 02:28:14.880 MEC_App[6277:36958] THREAD WARNING: ['ListPicker'] took '14.195312' ms. Plugin should use a background thread.
+2015-05-09 02:28:20.851 MEC_App[6277:36958] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-09 02:28:32.289 MEC_App[6277:36958] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-09 02:39:43.782 MEC_App[7350:43604] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 02:39:43.783 MEC_App[7350:43604] Multi-tasking -> Device: YES, App: YES
+2015-05-09 02:39:43.784 MEC_App[7350:43604] Unlimited access to network resources
+2015-05-09 02:39:43.927 MEC_App[7350:43604] Resetting plugins due to page load.
+2015-05-09 02:39:45.250 MEC_App[7350:43604] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/4F813E87-1996-448D-8D69-CC89826E2EFA/MEC_App.app/www/index.html
+2015-05-09 02:40:27.640 MEC_App[8222:45650] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 02:40:27.641 MEC_App[8222:45650] Multi-tasking -> Device: YES, App: YES
+2015-05-09 02:40:27.642 MEC_App[8222:45650] Unlimited access to network resources
+2015-05-09 02:40:27.784 MEC_App[8222:45650] Resetting plugins due to page load.
+2015-05-09 02:40:28.019 MEC_App[8222:45650] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/7523B82D-2559-4490-A5D7-877CC1263B97/MEC_App.app/www/index.html
+2015-05-09 02:40:35.119 MEC_App[8222:45650] THREAD WARNING: ['InAppBrowser'] took '77.358887' ms. Plugin should use a background thread.

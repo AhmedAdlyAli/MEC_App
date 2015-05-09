@@ -150,6 +150,9 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         xtype: 'numberfield',
                         id: 'mobile',
                         itemId: 'mobile',
+                        component: {
+                            type: 'tel'
+                        },
                         label: '',
                         labelWidth: '40%',
                         name: 'mobile',

@@ -255,6 +255,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "component": [
+                            "{\"type\":\"tel\"}"
+                        ],
                         "designer|displayName": "mobile",
                         "id": "mobile",
                         "itemId": "mobile",

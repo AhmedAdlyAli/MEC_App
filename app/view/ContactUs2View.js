@@ -68,7 +68,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     {
                         xtype: 'button',
                         handler: function(button, e) {
-                            window.open('https://instagram.com/mec_qatar/','_blank','location=1');
+                            window.open('instagram://mec_qatar','_system');
 
 
 
@@ -84,7 +84,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     {
                         xtype: 'button',
                         handler: function(button, e) {
-                            window.open('https://twitter.com/mec_qatar','_system');
+                            window.open('twitter://mec_qatar','_system');
 
 
                         },
