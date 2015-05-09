@@ -144,6 +144,10 @@ Ext.define('MEC_App.controller.LoginController', {
 
                 }
 
+            },
+            failure: function(request, resp) {
+
+                Ext.AnimationHelper.HideLoading();
             }
         });
 

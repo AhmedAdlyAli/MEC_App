@@ -42,6 +42,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
             {
                 xtype: 'fieldset',
                 docked: 'top',
+                itemId: 'fsForm',
                 items: [
                     {
                         xtype: 'textfield',

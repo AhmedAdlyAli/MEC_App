@@ -45,6 +45,7 @@
             "codeClass": null,
             "userConfig": {
                 "docked": "top",
+                "itemId": "fsForm",
                 "title": null
             },
             "name": "MyFieldSet",

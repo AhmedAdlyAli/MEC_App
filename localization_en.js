@@ -302,9 +302,11 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", "xtype": "label","value":"Trade Name Availability Search"},
-				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Name"},
+				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Activity"},
 				{itemId:"btnSubmitActivity", "xtype": "button","value":"Search"},
-				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} 
+				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} ,
+				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"}
+
 		 
 			]
 		},
@@ -834,7 +836,9 @@ var localeEn =
 				errCompanyCr: 'Please choose the Company \n',
 				errDeliveryMethod:'Please choose the Delivery Method \n',
 				cantSubmitCR:'cannot submit Request for reserved trade Name',
-				cantSubmitCP:'cannot submit Request for company without Commercial Permit' 
+				cantSubmitCP:'cannot submit Request for company without Commercial Permit' ,
+				ErrNocrcp:'Cannot display the information for reserved trade name'
+
 				}
 
 }

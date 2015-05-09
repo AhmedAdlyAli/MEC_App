@@ -41,11 +41,11 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
         if(searchKeyword===''){
 
 
-            Ext.device.Notification.show({
-                title: 'خطأ',
-                buttons:["موافق"],
-                message: 'يجب إدخال اسم النشاط'
-            });
+         Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('ErrSearchKeyword')
+                    });
 
             return;
 
@@ -58,15 +58,16 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
         var url = Ext.Global.GetConfig('webServiceUrl');
 
 
-        var requestData = {
-            "serviceId":"5",
-            "language":"ar",
-            "englishSearchClause":"",
 
-            "arabicSearchClause":searchKeyword,
-            "searchLanguage":"ARA"
+        var requestData =  {
+            "serviceId":"5",
+            "language": Ext.Global.LanguageFlag,
+            "englishSearchClause":Ext.Global.LanguageFlag == 'en'?searchKeyword : '',
+            "arabicSearchClause":Ext.Global.LanguageFlag == 'ar'?searchKeyword : '',
+            "searchLanguage":Ext.Global.LanguageFlag ==  'ar'? 'ARA' : 'ENU'
 
         };
+
 
 
 
@@ -78,6 +79,10 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
             jsonData :requestData,
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
+
+
+               console.log(json);
+
                 var store = new Ext.data.Store({
                     data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
                 });

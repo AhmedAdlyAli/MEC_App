@@ -854,3 +854,10 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 06:19:49.478 MEC_App[27713:4329956] Resetting plugins due to page load.
 2015-05-09 06:19:50.897 MEC_App[27713:4329956] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8B5C03E4-1092-4927-B57A-439B469A7590/data/Containers/Bundle/Application/EFD421A0-B23B-499F-92BB-AF3F435A0933/MEC_App.app/www/index.html
 2015-05-09 06:20:24.000 MEC_App[27713:4329956] THREAD WARNING: ['Notification'] took '17.650146' ms. Plugin should use a background thread.
+2015-05-09 06:35:11.447 MEC_App[28571:4383234] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8B5C03E4-1092-4927-B57A-439B469A7590/data/Containers/Data/Application/935516D4-4DD3-49EC-AB9E-5A307D361A80/Library/Cookies/Cookies.binarycookies
+2015-05-09 06:35:11.503 MEC_App[28571:4383234] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 06:35:11.503 MEC_App[28571:4383234] Multi-tasking -> Device: YES, App: YES
+2015-05-09 06:35:11.504 MEC_App[28571:4383234] Unlimited access to network resources
+2015-05-09 06:35:11.685 MEC_App[28571:4383234] Resetting plugins due to page load.
+2015-05-09 06:35:12.995 MEC_App[28571:4383234] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8B5C03E4-1092-4927-B57A-439B469A7590/data/Containers/Bundle/Application/D1EDAA94-D932-4FE5-9782-6972F880F3CF/MEC_App.app/www/index.html
+2015-05-09 06:35:24.621 MEC_App[28571:4383234] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
