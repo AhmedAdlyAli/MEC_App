@@ -190,6 +190,15 @@ Ext.define('MEC_App.view.TradeNameBranchDetails', {
                                 xtype: 'label',
                                 cls: 'label-value',
                                 itemId: 'establishmentStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم قيد المنشأة'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                itemId: 'establishmentRegNumber'
                             }
                         ]
                     }

@@ -464,11 +464,44 @@ Ext.Localization.LocalizeView(this);
 
 
 
+// add tab function on text field
+var me = this;
+me.element.on('tap', function(){
 
+    var btn = this;
+    var config = {
+        title: "نوع الشكوي",
+        items: [
+            { text: "Type 1", value: "Type 1" },
+            { text: "Type 2", value: "Type 2" },
+            { text: "Type 3", value: "Type 3" },
+            { text: "Type 4", value: "Type 4" },
+            { text: "Type 5", value: "Type 5" },
+            { text: "Type 6", value: "Type 6" }
+
+        ],
+        selectedValue: "1",
+        doneButtonLabel: "ٌختيار",
+        cancelButtonLabel: "الغاء"
+    };
+
+    Ext.DeviceController.ShowNativePicker(me,config);
+
+
+}, me);
+
+
+
+
+establishmentRegNumber
+Ext.getCmp('#establishmentRegNumber').setHtml(company.moiEstablishmentId);
 
 
 
 
 
 Ext.Global.GetConfig('CMSWSUrl')
+
+https://dl.dropboxusercontent.com/s/ubwbruegf0sn96a/Download.htm?dl=0 
+
 

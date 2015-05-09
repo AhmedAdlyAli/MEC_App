@@ -558,6 +558,38 @@
                             },
                             "name": "MyLabel29",
                             "designerId": "4c9a6d0a-9f80-4526-afe9-5a5ca336105d"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "رقم قيد المنشأة",
+                                "id": null
+                            },
+                            "name": "MyLabel34",
+                            "designerId": "e02ca5c5-9284-4a18-8d58-6f650eaa239d"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": null,
+                                "itemId": "establishmentRegNumber"
+                            },
+                            "name": "MyLabel35",
+                            "designerId": "992653e5-8bea-413e-8ed5-b7b8845fddfb"
                         }
                     ]
                 }

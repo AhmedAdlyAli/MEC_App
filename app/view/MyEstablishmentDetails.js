@@ -204,6 +204,16 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                                 xtype: 'label',
                                 cls: 'label-value',
                                 itemId: 'establishmentStatus'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم قيد المنشأة',
+                                itemId: 'lbl15'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                itemId: 'establishmentRegNumber'
                             }
                         ]
                     }

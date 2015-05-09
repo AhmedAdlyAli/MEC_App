@@ -77,7 +77,7 @@ Ext.define('MEC_App.controller.ViolationsController', {
         view.down('#lblViolation').setHtml(data.Violations);
         view.down('#lblPunishment').setHtml(data.Punishment);
         view.down('#lblDecisionNumber').setHtml(data.DecisionNumber);
-        view.down('#imgDetails').setSrc('http://196.205.5.28:333/MEC/api//Recall/image/5');//.setSrc(this.getData().NewsImgUrl);
+        view.down('#imgDetails').setSrc( Ext.Global.GetConfig('CMSWSUrl') + '/Violation/Image/'+data.Id);//.setSrc(this.getData().NewsImgUrl);
 
     },
 

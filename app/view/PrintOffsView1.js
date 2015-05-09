@@ -300,13 +300,13 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         {
 
                                             itemsList=    [
-                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" }
+                                            { text: Ext.Localization.GetMessage('Personal') , value: "02" }
                                             ];
 
                                         }else{
                                             itemsList=    [
-                                            { text: Ext.Localization.GetMessage('Personal') , value: "1" },
-                                            { text: Ext.Localization.GetMessage('Email'), value: "3" }
+                                            { text: Ext.Localization.GetMessage('Personal') , value: "02" },
+                                            { text: Ext.Localization.GetMessage('Email'), value: "01" }
                                             ];
 
                                         }
@@ -401,8 +401,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 navigator.vibrate(300);
 
                                 Ext.device.Notification.show({
-                                    title: 'خطأ',
-                                    buttons:["موافق"],
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
                                     message: err
                                 });
 
@@ -432,6 +432,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     "identityNationality": Ext.Global.identityNationality,
                                     "commercialRegistrationNum":cr,
                                     "caseType":view.down('#hiddenPrintoutType').getValue(),
+                                    "deliveryMethod":view.down('#hiddenDeliveryMethod').getValue(),
                                     "establishmentSpcId":"",
                                     "caseSubType":"01",
                                     "contactId":"",

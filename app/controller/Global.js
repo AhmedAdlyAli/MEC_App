@@ -64,7 +64,7 @@ Ext.define('MEC_App.controller.Global', {
             supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
 
 
-           //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
+            //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
             //production
             //supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',

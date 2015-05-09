@@ -204,6 +204,17 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                                 xtype: 'label',
                                 cls: 'label-value',
                                 id: 'establishmentStatus1'
+                            },
+                            {
+                                xtype: 'label',
+                                html: 'رقم قيد المنشأة',
+                                id: 'establishmentStatus2'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                id: 'establishmentRegNumber',
+                                itemId: 'establishmentRegNumber'
                             }
                         ]
                     }
@@ -291,42 +302,6 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                                 ]
                             }
                         ]
-                    }
-                ]
-            },
-            {
-                xtype: 'panel',
-                cls: 'acc-container',
-                itemId: 'partners',
-                items: [
-                    {
-                        xtype: 'titlebar',
-                        cls: 'acc-header',
-                        docked: 'top',
-                        itemId: 'mytitlebar',
-                        title: 'الشركاء',
-                        titleAlign: 'right',
-                        listeners: [
-                            {
-                                fn: function(element, eOpts) {
-                                    Ext.AnimationHelper.HandleShowHidePanel(element,'lstPartners');
-
-                                },
-                                event: 'painted'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'list',
-                        id: 'lstPartners',
-                        itemCls: 'item-signatory',
-                        itemTpl: [
-                            '',
-                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
-                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
-                            ''
-                        ],
-                        scrollToTopOnRefresh: false
                     }
                 ]
             },

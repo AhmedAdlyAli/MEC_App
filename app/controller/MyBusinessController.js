@@ -218,6 +218,8 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 
 
+                //console.log(company);
+
 
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
                 view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
@@ -232,40 +234,41 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);
+                view.down('#establishmentRegNumber').setHtml(company.moiEstablishmentId);
 
 
 
                 //signatories
-        if(company.listOfSignatories.signatories.length>0)
-            {
-                var storeSignatories = new Ext.data.Store({
-                    data : company.listOfSignatories.signatories
-                });
+                if(company.listOfSignatories.signatories.length>0)
+                {
+                    var storeSignatories = new Ext.data.Store({
+                        data : company.listOfSignatories.signatories
+                    });
 
-                var lst = view.down('#lstSignatories');
-                lst.setStore(storeSignatories);
+                    var lst = view.down('#lstSignatories');
+                    lst.setStore(storeSignatories);
 
-                lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
-                lst.setScrollable(false);
-            }
+                    lst.setHeight(company.listOfSignatories.signatories.length*6 + 'em');
+                    lst.setScrollable(false);
+                }
 
 
 
 
                 if(company.listOfHumanPartners.humanPartners.length>0)
-        {
-                //partners
-                var storePartners = new Ext.data.Store({
-                    data : company.listOfHumanPartners.humanPartners
-                });
+                {
+                    //partners
+                    var storePartners = new Ext.data.Store({
+                        data : company.listOfHumanPartners.humanPartners
+                    });
 
-                var lstPartners = view.down('#lstPartners');
-                lstPartners.setStore(storePartners);
+                    var lstPartners = view.down('#lstPartners');
+                    lstPartners.setStore(storePartners);
 
-                lstPartners.setHeight(company.listOfHumanPartners.humanPartners.length*6 + 'em');
-                lstPartners.setScrollable(false);
+                    lstPartners.setHeight(company.listOfHumanPartners.humanPartners.length*6 + 'em');
+                    lstPartners.setScrollable(false);
 
-        }
+                }
 
 
 
@@ -419,7 +422,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);
-
+                view.down('#establishmentRegNumber').setHtml(company.moiEstablishmentId);
 
 
                 if(company.listOfSignatories.signatories.length>0)

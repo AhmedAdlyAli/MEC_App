@@ -545,6 +545,38 @@
                             },
                             "name": "MyLabel29",
                             "designerId": "e6b1d5ee-d2d5-4533-a2de-167faa58a995"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "html": "رقم قيد المنشأة",
+                                "id": "establishmentStatus2"
+                            },
+                            "name": "MyLabel30",
+                            "designerId": "cd1c85d8-a423-4d47-abfe-74f11b37cac4"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": "establishmentRegNumber",
+                                "itemId": "establishmentRegNumber"
+                            },
+                            "name": "MyLabel31",
+                            "designerId": "924f7f8b-5dea-48e7-b734-d4abe393307b"
                         }
                     ]
                 }
@@ -771,107 +803,6 @@
                                     "designerId": "42a552f1-efa8-43c5-8d88-08c07a86e20e"
                                 }
                             ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "type": "Ext.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "acc-container"
-                ],
-                "height": null,
-                "itemId": "partners",
-                "layout|flex": null,
-                "scrollable": null
-            },
-            "name": "MyPanel5",
-            "designerId": "64426ac8-81e1-4135-a344-768a11ec4096",
-            "cn": [
-                {
-                    "type": "Ext.TitleBar",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "acc-header"
-                        ],
-                        "docked": "top",
-                        "itemId": "mytitlebar",
-                        "title": "الشركاء",
-                        "titleAlign": "right"
-                    },
-                    "name": "MyTitleBar",
-                    "designerId": "081b6cdb-0d79-4e77-abfe-fddd3fa567a5",
-                    "cn": [
-                        {
-                            "type": "basiceventbinding",
-                            "reference": {
-                                "name": "listeners",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "fn": "onMytitlebarPainted1111",
-                                "implHandler": [
-                                    "Ext.AnimationHelper.HandleShowHidePanel(element,'lstPartners');",
-                                    ""
-                                ],
-                                "name": "painted"
-                            },
-                            "name": "onMytitlebarPainted1111",
-                            "designerId": "32f7bdeb-33e4-4a30-9bcb-0d5dee1fe67d"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.dataview.List",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": null,
-                        "id": "lstPartners",
-                        "itemCls": "item-signatory",
-                        "itemId": null,
-                        "scrollToTopOnRefresh": false
-                    },
-                    "name": "MyList",
-                    "configAlternates": {
-                        "inline": "boolean"
-                    },
-                    "designerId": "8e8cceeb-58a5-4617-9d26-7824b4bd3302",
-                    "cn": [
-                        {
-                            "type": "Ext.XTemplate",
-                            "reference": {
-                                "name": "itemTpl",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|displayName": "itemTpl",
-                                "implHandler": [
-                                    "",
-                                    "    <div class='tpl-signatory-1'>{fullNameARA}</div>",
-                                    "    <div class='tpl-signatory-2'><span class='FA'>{type}</span> <span class='FB'>{nationality}</span></div>",
-                                    ""
-                                ]
-                            },
-                            "name": "itemTpl",
-                            "designerId": "aac92347-9c78-4653-b7f2-88a9c63aec42"
                         }
                     ]
                 }

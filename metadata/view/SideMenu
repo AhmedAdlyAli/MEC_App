@@ -173,26 +173,6 @@
                                     "menuBtn"
                                 ],
                                 "iconAlign": "right",
-                                "iconCls": "m-icon5",
-                                "itemId": "btnContact",
-                                "layout|flex": 1,
-                                "text": "التواصل"
-                            },
-                            "name": "MyButton8",
-                            "designerId": "36447bac-54c3-4bb1-ae25-71ecbf73d98a"
-                        },
-                        {
-                            "type": "Ext.Button",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "menuBtn"
-                                ],
-                                "iconAlign": "right",
                                 "iconCls": "m-icon6",
                                 "itemId": "btnProjects",
                                 "layout|flex": 1,
@@ -220,6 +200,26 @@
                             },
                             "name": "MyButton12",
                             "designerId": "165253c3-fdbd-416a-beea-ad03f218bf80"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
+                                "iconAlign": "right",
+                                "iconCls": "m-icon5",
+                                "itemId": "btnContact",
+                                "layout|flex": 1,
+                                "text": "التواصل"
+                            },
+                            "name": "MyButton8",
+                            "designerId": "36447bac-54c3-4bb1-ae25-71ecbf73d98a"
                         },
                         {
                             "type": "Ext.Button",

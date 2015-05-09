@@ -922,3 +922,102 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 17:34:52.916 MEC_App[14112:1290574] Resetting plugins due to page load.
 2015-05-09 17:34:53.391 MEC_App[14112:1290574] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/69324899-AAA5-44E3-B1F0-DCD52A1BF0FD/MEC_App.app/www/index.html
 2015-05-09 17:35:09.946 MEC_App[14112:1290574] THREAD WARNING: ['ProgressIndicator'] took '18.072998' ms. Plugin should use a background thread.
+2015-05-09 19:47:52.586 MEC_App[23651:1349248] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 19:47:52.593 MEC_App[23651:1349248] Multi-tasking -> Device: YES, App: YES
+2015-05-09 19:47:52.639 MEC_App[23651:1349248] Unlimited access to network resources
+2015-05-09 19:47:54.101 MEC_App[23651:1349248] Resetting plugins due to page load.
+2015-05-09 19:47:55.173 MEC_App[23651:1349248] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/FA495FDE-BADE-4FC7-B84D-FD837973F93A/MEC_App.app/www/index.html
+2015-05-09 19:48:14.393 MEC_App[23651:1349248] THREAD WARNING: ['ProgressIndicator'] took '47.742920' ms. Plugin should use a background thread.
+2015-05-09 19:48:56.082 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '130.070801' ms. Plugin should use a background thread.
+2015-05-09 19:49:20.122 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '119.972168' ms. Plugin should use a background thread.
+2015-05-09 19:49:22.497 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.182129' ms. Plugin should use a background thread.
+2015-05-09 19:49:34.755 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.051025' ms. Plugin should use a background thread.
+2015-05-09 19:49:36.963 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '50.743164' ms. Plugin should use a background thread.
+2015-05-09 19:52:33.147 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.051025' ms. Plugin should use a background thread.
+2015-05-09 19:52:35.321 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '47.213135' ms. Plugin should use a background thread.
+2015-05-09 19:52:40.282 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.988037' ms. Plugin should use a background thread.
+2015-05-09 19:52:44.830 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.832031' ms. Plugin should use a background thread.
+2015-05-09 19:52:50.015 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.402100' ms. Plugin should use a background thread.
+2015-05-09 19:52:52.452 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '50.040771' ms. Plugin should use a background thread.
+2015-05-09 19:53:26.925 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.792969' ms. Plugin should use a background thread.
+2015-05-09 19:53:30.419 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.600098' ms. Plugin should use a background thread.
+2015-05-09 19:53:37.997 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.818115' ms. Plugin should use a background thread.
+2015-05-09 19:53:41.929 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '51.645020' ms. Plugin should use a background thread.
+2015-05-09 19:53:44.343 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.220459' ms. Plugin should use a background thread.
+2015-05-09 19:53:48.930 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '47.401123' ms. Plugin should use a background thread.
+2015-05-09 19:53:52.644 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.545898' ms. Plugin should use a background thread.
+2015-05-09 19:53:59.625 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.905029' ms. Plugin should use a background thread.
+2015-05-09 19:55:57.509 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.994873' ms. Plugin should use a background thread.
+2015-05-09 19:56:01.512 MEC_App[23651:1349248] THREAD WARNING: ['Notification'] took '42.342041' ms. Plugin should use a background thread.
+2015-05-09 19:56:08.626 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '15.088867' ms. Plugin should use a background thread.
+2015-05-09 19:56:18.988 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.800781' ms. Plugin should use a background thread.
+2015-05-09 19:57:41.095 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.562744' ms. Plugin should use a background thread.
+2015-05-09 19:57:46.130 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '12.572021' ms. Plugin should use a background thread.
+2015-05-09 19:57:52.540 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.291016' ms. Plugin should use a background thread.
+2015-05-09 19:58:00.133 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '15.951172' ms. Plugin should use a background thread.
+2015-05-09 19:58:03.284 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '17.417969' ms. Plugin should use a background thread.
+2015-05-09 19:59:09.214 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '15.535156' ms. Plugin should use a background thread.
+2015-05-09 19:59:12.044 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '13.214844' ms. Plugin should use a background thread.
+2015-05-09 19:59:19.229 MEC_App[23651:1349248] THREAD WARNING: ['ListPicker'] took '14.045898' ms. Plugin should use a background thread.
+2015-05-09 20:01:10.049 MEC_App[23651:1355757] Communications error: <OS_xpc_error: <error: 0x3b055f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x3b0583c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-05-09 20:01:39.974 MEC_App[24360:1357505] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 20:01:39.975 MEC_App[24360:1357505] Multi-tasking -> Device: YES, App: YES
+2015-05-09 20:01:39.977 MEC_App[24360:1357505] Unlimited access to network resources
+2015-05-09 20:01:40.176 MEC_App[24360:1357505] Resetting plugins due to page load.
+2015-05-09 20:01:40.914 MEC_App[24360:1357505] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/45DCC512-5945-4C89-A8CC-02ED44914FB6/MEC_App.app/www/index.html
+2015-05-09 20:02:05.935 MEC_App[24360:1357505] THREAD WARNING: ['ProgressIndicator'] took '20.652832' ms. Plugin should use a background thread.
+2015-05-09 20:12:14.546 MEC_App[24888:1363121] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 20:12:14.547 MEC_App[24888:1363121] Multi-tasking -> Device: YES, App: YES
+2015-05-09 20:12:14.548 MEC_App[24888:1363121] Unlimited access to network resources
+2015-05-09 20:12:14.732 MEC_App[24888:1363121] Resetting plugins due to page load.
+2015-05-09 20:12:15.087 MEC_App[24888:1363121] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/79BC5234-9065-4DAF-922C-0C2DDD0250E9/MEC_App.app/www/index.html
+2015-05-09 20:24:22.586 MEC_App[24888:1363121] THREAD WARNING: ['ListPicker'] took '10.439209' ms. Plugin should use a background thread.
+2015-05-09 20:25:25.022 MEC_App[24888:1363121] THREAD WARNING: ['Notification'] took '39.077148' ms. Plugin should use a background thread.
+2015-05-09 20:30:32.823 MEC_App[25456:1372153] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 20:30:32.824 MEC_App[25456:1372153] Multi-tasking -> Device: YES, App: YES
+2015-05-09 20:30:32.826 MEC_App[25456:1372153] Unlimited access to network resources
+2015-05-09 20:30:32.967 MEC_App[25456:1372153] Resetting plugins due to page load.
+2015-05-09 20:30:34.308 MEC_App[25456:1372153] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/94995A00-B588-46C7-B16B-46811FD0BB26/MEC_App.app/www/index.html
+2015-05-09 20:32:57.111 MEC_App[25456:1372153] THREAD WARNING: ['Notification'] took '19.014160' ms. Plugin should use a background thread.
+2015-05-09 20:35:59.616 MEC_App[25456:1372153] THREAD WARNING: ['InAppBrowser'] took '70.216309' ms. Plugin should use a background thread.
+2015-05-09 21:10:23.655 MEC_App[25456:1388914] Communications error: <OS_xpc_error: <error: 0x3aec5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x3aec83c> { length = 22, contents = "Connection interrupted" }
+}>
+2015-05-09 22:16:17.831 MEC_App[27397:1412276] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:16:17.833 MEC_App[27397:1412276] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:16:17.852 MEC_App[27397:1412276] Unlimited access to network resources
+2015-05-09 22:16:18.456 MEC_App[27397:1412276] Resetting plugins due to page load.
+2015-05-09 22:16:19.170 MEC_App[27397:1412276] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8B54B8FE-D931-48F8-AF72-9FB6735E7E1D/MEC_App.app/www/index.html
+2015-05-09 22:18:10.156 MEC_App[27861:1414054] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:18:10.157 MEC_App[27861:1414054] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:18:10.158 MEC_App[27861:1414054] Unlimited access to network resources
+2015-05-09 22:18:10.315 MEC_App[27861:1414054] Resetting plugins due to page load.
+2015-05-09 22:18:10.559 MEC_App[27861:1414054] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/11EEDB62-114F-41C5-92BB-D8DB311C0A18/MEC_App.app/www/index.html
+2015-05-09 22:21:21.414 MEC_App[28861:1417688] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:21:21.415 MEC_App[28861:1417688] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:21:21.416 MEC_App[28861:1417688] Unlimited access to network resources
+2015-05-09 22:21:21.622 MEC_App[28861:1417688] Resetting plugins due to page load.
+2015-05-09 22:21:22.026 MEC_App[28861:1417688] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/3C30437F-E3CA-46B8-A889-77DEBAC26FB1/MEC_App.app/www/index.html
+2015-05-09 22:21:36.114 MEC_App[28861:1417688] THREAD WARNING: ['ProgressIndicator'] took '20.401855' ms. Plugin should use a background thread.
+2015-05-09 22:21:39.039 MEC_App[28861:1417688] THREAD WARNING: ['ListPicker'] took '44.197021' ms. Plugin should use a background thread.
+2015-05-09 22:24:44.745 MEC_App[28861:1419895] Terminating since there is no system app.
+2015-05-09 22:25:12.105 MEC_App[29398:1421699] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:25:12.106 MEC_App[29398:1421699] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:25:12.108 MEC_App[29398:1421699] Unlimited access to network resources
+2015-05-09 22:25:12.272 MEC_App[29398:1421699] Resetting plugins due to page load.
+2015-05-09 22:25:12.537 MEC_App[29398:1421699] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A0DE9113-243C-4F9D-BEEA-19247D1BABBA/MEC_App.app/www/index.html
+2015-05-09 22:37:14.806 MEC_App[29878:1427559] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:37:14.807 MEC_App[29878:1427559] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:37:14.809 MEC_App[29878:1427559] Unlimited access to network resources
+2015-05-09 22:37:14.976 MEC_App[29878:1427559] Resetting plugins due to page load.
+2015-05-09 22:37:15.356 MEC_App[29878:1427559] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/131B3A37-2D64-4BD1-9E42-6C1F0D60D72E/MEC_App.app/www/index.html
+2015-05-09 22:39:13.536 MEC_App[29878:1427559] THREAD WARNING: ['ListPicker'] took '14.562744' ms. Plugin should use a background thread.
+2015-05-09 22:45:08.119 MEC_App[30409:1431793] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 22:45:08.120 MEC_App[30409:1431793] Multi-tasking -> Device: YES, App: YES
+2015-05-09 22:45:08.121 MEC_App[30409:1431793] Unlimited access to network resources
+2015-05-09 22:45:08.273 MEC_App[30409:1431793] Resetting plugins due to page load.
+2015-05-09 22:45:08.647 MEC_App[30409:1431793] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/BAE9D8EC-390D-4506-A8FA-D8465903822C/MEC_App.app/www/index.html
+2015-05-09 22:45:32.333 MEC_App[30409:1431793] THREAD WARNING: ['ProgressIndicator'] took '19.044922' ms. Plugin should use a background thread.
+2015-05-09 22:45:35.457 MEC_App[30409:1431793] THREAD WARNING: ['ListPicker'] took '13.628906' ms. Plugin should use a background thread.
