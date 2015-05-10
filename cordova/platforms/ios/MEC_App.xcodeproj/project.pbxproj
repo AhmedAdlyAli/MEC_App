@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		02FF587D19724532BA9FAB0D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9506737AB24FB39381182F /* AVFoundation.framework */; };
 		031EDD45C93C4477B0023D94 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B30FC6CD60474159B3981E9C /* libiconv.dylib */; };
@@ -667,7 +668,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "5d9e33f4-d106-4695-a051-cbba82d2c781";
+				PROVISIONING_PROFILE = "61c1cea0-940b-45a3-ad17-477594346182";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -704,7 +705,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "5d9e33f4-d106-4695-a051-cbba82d2c781";
+				PROVISIONING_PROFILE = "61c1cea0-940b-45a3-ad17-477594346182";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

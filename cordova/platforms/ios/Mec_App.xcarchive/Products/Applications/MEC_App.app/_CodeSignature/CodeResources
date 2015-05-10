@@ -54,7 +54,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		RboCF0ekY86BjYNMBg6+cszpZfo=
+		73OfMzxMub0ENBRdTUgmGd5kHlc=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		gxhRSwNHJmv2LpARHWQ93h5/iko=
+		Czz3r7jB7f/mfgHRU07AkXBeJeU=
 		</data>
 		<key>icon-40.png</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		G1bzHBpvl+0DeW+w9gBsGC0kW+4=
+		RSAz1RRfakJqFg7KMfMTOGfdSfE=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		usGu8BEpmXNSBr9JKIl1+d55vcY=
+		pooP3sE3lDmTVAFCq7eXOJXnT+M=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		/G9TjzOhK6IBPU8ANHd2Du5dMk4=
+		TA5Z9ZIQY0b3FSkbuoEwbDNf/R0=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -367,6 +367,10 @@
 		<key>www/resources/images/drop-pin.png</key>
 		<data>
 		n+I6LYE0nEbcQ9Paq0Dv/cMxl+Y=
+		</data>
+		<key>www/resources/images/e-mail-title-icon.png</key>
+		<data>
+		HaKTJPlvZhJDgnqIwg2CjaQqILs=
 		</data>
 		<key>www/resources/images/facebook.png</key>
 		<data>
@@ -576,6 +580,10 @@
 		<data>
 		UMfMjjYIlLTKj6qgV0B0pLjs/kI=
 		</data>
+		<key>www/resources/images/img-logo.png</key>
+		<data>
+		A6ekUiLyV01iP1pou9VoDKcKvec=
+		</data>
 		<key>www/resources/images/ind-down.png</key>
 		<data>
 		FTWZ8uxptGvDFiwQ+aH9clhPqBA=
@@ -590,7 +598,7 @@
 		</data>
 		<key>www/resources/images/instagram.png</key>
 		<data>
-		CpyKpykBXclC2IMvM656sS4uZFA=
+		cxn9SkyNRp9IbT0HThjBy9y9cZk=
 		</data>
 		<key>www/resources/images/lang-logo.png</key>
 		<data>
@@ -706,7 +714,7 @@
 		</data>
 		<key>www/resources/images/twitter.png</key>
 		<data>
-		g62oWqS0Vwcj8jgUrDGNFmcf2pk=
+		yBt9iqQCivjl8AGQL941+xmfHqA=
 		</data>
 		<key>www/resources/images/vio1.png</key>
 		<data>
@@ -730,7 +738,7 @@
 		</data>
 		<key>www/resources/images/youtube.png</key>
 		<data>
-		lVUY9wr3gfrChLnUBsFukDExc5k=
+		oExmnvWNfY3YZ2vn1eiSEEclM2E=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -781,7 +789,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		RboCF0ekY86BjYNMBg6+cszpZfo=
+		73OfMzxMub0ENBRdTUgmGd5kHlc=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -797,7 +805,7 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		gxhRSwNHJmv2LpARHWQ93h5/iko=
+		Czz3r7jB7f/mfgHRU07AkXBeJeU=
 		</data>
 		<key>icon-40.png</key>
 		<data>
@@ -861,11 +869,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		G1bzHBpvl+0DeW+w9gBsGC0kW+4=
+		RSAz1RRfakJqFg7KMfMTOGfdSfE=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		usGu8BEpmXNSBr9JKIl1+d55vcY=
+		pooP3sE3lDmTVAFCq7eXOJXnT+M=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -1025,7 +1033,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		/G9TjzOhK6IBPU8ANHd2Du5dMk4=
+		TA5Z9ZIQY0b3FSkbuoEwbDNf/R0=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -1090,6 +1098,10 @@
 		<key>www/resources/images/drop-pin.png</key>
 		<data>
 		n+I6LYE0nEbcQ9Paq0Dv/cMxl+Y=
+		</data>
+		<key>www/resources/images/e-mail-title-icon.png</key>
+		<data>
+		HaKTJPlvZhJDgnqIwg2CjaQqILs=
 		</data>
 		<key>www/resources/images/facebook.png</key>
 		<data>
@@ -1299,6 +1311,10 @@
 		<data>
 		UMfMjjYIlLTKj6qgV0B0pLjs/kI=
 		</data>
+		<key>www/resources/images/img-logo.png</key>
+		<data>
+		A6ekUiLyV01iP1pou9VoDKcKvec=
+		</data>
 		<key>www/resources/images/ind-down.png</key>
 		<data>
 		FTWZ8uxptGvDFiwQ+aH9clhPqBA=
@@ -1313,7 +1329,7 @@
 		</data>
 		<key>www/resources/images/instagram.png</key>
 		<data>
-		CpyKpykBXclC2IMvM656sS4uZFA=
+		cxn9SkyNRp9IbT0HThjBy9y9cZk=
 		</data>
 		<key>www/resources/images/lang-logo.png</key>
 		<data>
@@ -1429,7 +1445,7 @@
 		</data>
 		<key>www/resources/images/twitter.png</key>
 		<data>
-		g62oWqS0Vwcj8jgUrDGNFmcf2pk=
+		yBt9iqQCivjl8AGQL941+xmfHqA=
 		</data>
 		<key>www/resources/images/vio1.png</key>
 		<data>
@@ -1453,7 +1469,7 @@
 		</data>
 		<key>www/resources/images/youtube.png</key>
 		<data>
-		lVUY9wr3gfrChLnUBsFukDExc5k=
+		oExmnvWNfY3YZ2vn1eiSEEclM2E=
 		</data>
 	</dict>
 	<key>rules</key>
