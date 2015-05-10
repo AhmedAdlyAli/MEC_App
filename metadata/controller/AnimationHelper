@@ -85,7 +85,7 @@
                     "",
                     "}",
                     "",
-                    "",
+                    "Ext.Global.Loading = true;",
                     "",
                     ""
                 ]
@@ -103,16 +103,22 @@
             "userConfig": {
                 "fn": "HideLoading",
                 "implHandler": [
+                    "if(Ext.Global.Loading === true)",
+                    "{",
+                    "    try {",
+                    "        ProgressIndicator.hide();",
                     "",
-                    "try {",
-                    "    ProgressIndicator.hide();",
+                    "    }",
+                    "    catch(err) {",
+                    "",
+                    "        Ext.Viewport.setMasked(false);",
+                    "",
+                    "    }",
+                    "    Ext.Global.Loading = false;",
                     "",
                     "}",
-                    "catch(err) {",
                     "",
-                    "    Ext.Viewport.setMasked(false);",
                     "",
-                    "}",
                     ""
                 ]
             },

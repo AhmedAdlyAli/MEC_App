@@ -376,7 +376,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
         var me = this;
 
-        console.log(cr);
+        //console.log(cr);
 
          requestData = {
           "serviceId": "88",
@@ -399,6 +399,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                     // useDefaultXhrHeader: false,
                     jsonData :requestData,
                     success : function (response) {
+
+                         Ext.AnimationHelper.HideLoading();
+
                        var json = Ext.util.JSON.decode(response.responseText);
 
                         //console.log(json);
@@ -446,7 +449,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                                 if(company.listOfCRBusinessActivities.crBusinessActivities.length>0)
                 {
 
-                    //signatories
+                    //activites
                     var storeAct = new Ext.data.Store({
                         data : company.listOfCRBusinessActivities.crBusinessActivities
                     });
@@ -463,9 +466,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
-
-
-                        Ext.AnimationHelper.HideLoading();
 
 
                     }
