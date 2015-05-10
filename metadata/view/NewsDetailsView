@@ -35,6 +35,7 @@
                 "cls": [
                     "newsDetails"
                 ],
+                "itemId": "NewsDetailsPanel",
                 "layout": "vbox",
                 "layout|flex": 1,
                 "scrollable": [
@@ -148,6 +149,10 @@
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
                     "",
                     "var data = this.getData();",
                     "",

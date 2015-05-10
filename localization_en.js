@@ -450,6 +450,21 @@ var localeEn =
 			]
 		},
 
+		{
+			itemId:"NewsDetailsView",
+			description: "News Details",
+			items:
+			[
+				{itemId:"NewsDetailsPanel", xtype: "cls", value:"ltr-cls"}
+			]
+		},
+
+		{
+			itemId:"MinistryNewsList",
+			description: "Ministry News...",
+			cls: 'ltr-cls',
+			items:[]
+		},
 
 		{
 			itemId:"InquiriesView",
@@ -865,7 +880,8 @@ var localeEn =
 	            errUserName:'Please enter username\n',
 	            errPassword:'Please enter password\n',
 	            errSuggestion: 'Please enter your suggesstion\n',
-	            errMail: 'Please enter correct email address\n'
+	            errMail: 'Please enter correct email address\n',
+	            Failure: 'Connection lost, please try again later'
 				}
 
 }

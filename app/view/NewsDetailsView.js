@@ -32,6 +32,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                 xtype: 'panel',
                 flex: 1,
                 cls: 'newsDetails',
+                itemId: 'NewsDetailsPanel',
                 layout: 'vbox',
                 scrollable: {
                     direction: 'vertical',
@@ -73,6 +74,10 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
     initialize: function() {
         this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
 
         var data = this.getData();
 

@@ -24,6 +24,7 @@ Ext.define('MEC_App.view.NewsListItem', {
     ],
 
     config: {
+        itemId: 'MinistryNewsList',
         padding: 10,
         layout: 'hbox',
         items: [
@@ -70,6 +71,15 @@ Ext.define('MEC_App.view.NewsListItem', {
                 me.down('label').setHtml(record.get('NewsBrief'));
             }
         }
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

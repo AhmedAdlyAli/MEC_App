@@ -83,8 +83,6 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                             var json = Ext.util.JSON.decode(response.responseText);
 
-                                            console.log(json);
-
                                             var pnlNews1 = me.down('#pnlNews');
                                             var pnlNews2 = me.down('#pnlNews1');
                                             var pnlNews3 = me.down('#pnlNews2');
@@ -125,10 +123,6 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 });
                                             });
 
-
-
-
-                                            console.log(me.down('#pnlNews').getStyle());
 
                                         }
                                     });
