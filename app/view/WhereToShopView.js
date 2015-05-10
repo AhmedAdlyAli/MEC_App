@@ -19,8 +19,8 @@ Ext.define('MEC_App.view.WhereToShopView', {
 
     requires: [
         'Ext.Label',
-        'Ext.dataview.List',
         'Ext.Panel',
+        'Ext.dataview.List',
         'Ext.field.Hidden',
         'Ext.XTemplate'
     ],
@@ -28,7 +28,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
     config: {
         id: 'WhereToShopView',
         itemId: 'WhereToShopView',
-        layout: 'vbox',
+        layout: 'fit',
         scrollable: false,
         cls: [
             'complaint-view',
@@ -91,47 +91,46 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 ]
             },
             {
+                xtype: 'panel',
+                cls: 'grid-header',
+                docked: 'top',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell1',
+                        html: 'اسم المحل',
+                        itemId: 'ShopName'
+                    },
+                    {
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell2',
+                        html: 'الكمية',
+                        itemId: 'Quantity'
+                    },
+                    {
+                        xtype: 'label',
+                        flex: 1,
+                        cls: 'header-cell2',
+                        html: 'السعر',
+                        itemId: 'Price'
+                    }
+                ]
+            },
+            {
                 xtype: 'list',
+                height: '100%',
                 itemId: 'lstPrices',
                 itemCls: 'grid-row',
                 itemTpl: [
-                    '',
-                    '    <div class=\'row-cell\'>{Shop.ShopName}</div>    ',
-                    '    <div class=\'row-cell\'>{Quantity}({Unit.Name})</div>    ',
-                    '    <div class=\'row-cell\'>{Price}</div>    ',
-                    '',
-                    ''
+                    '<div class=\'row-cell\'>{Shop.ShopName}</div>    ',
+                    '<div class=\'row-cell\'>{Quantity}({Unit.Name})</div>    ',
+                    '<div class=\'row-cell\'>{Price}</div>    '
                 ],
+                striped: true,
                 items: [
-                    {
-                        xtype: 'panel',
-                        cls: 'grid-header',
-                        docked: 'top',
-                        layout: 'hbox',
-                        items: [
-                            {
-                                xtype: 'label',
-                                flex: 1,
-                                cls: 'header-cell1',
-                                html: 'اسم المحل',
-                                itemId: 'ShopName'
-                            },
-                            {
-                                xtype: 'label',
-                                flex: 1,
-                                cls: 'header-cell2',
-                                html: 'الكمية',
-                                itemId: 'Quantity'
-                            },
-                            {
-                                xtype: 'label',
-                                flex: 1,
-                                cls: 'header-cell2',
-                                html: 'السعر',
-                                itemId: 'Price'
-                            }
-                        ]
-                    },
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenProductID'

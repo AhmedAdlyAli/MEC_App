@@ -15,7 +15,7 @@
         "id": "WhereToShopView",
         "itemId": "WhereToShopView",
         "layout": "fit",
-        "scrollable": null
+        "scrollable": false
     },
     "name": "DailyPricesView3",
     "designerId": "61ac0178-7f48-4f70-8280-c365ccca1374",
@@ -107,24 +107,24 @@
             ]
         },
         {
-            "type": "Ext.dataview.List",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "height": null,
-                "id": null,
-                "itemCls": "grid-row",
-                "itemId": "lstPrices",
-                "store": null
+                "cls": [
+                    "grid-header"
+                ],
+                "docked": "top",
+                "layout": "hbox"
             },
-            "name": "MyList1",
-            "designerId": "657e92a7-9d2b-439c-bdbf-7d6959f67b8f",
+            "name": "MyPanel",
+            "designerId": "d5aede39-5ce5-4a4a-a3fe-78661ade8879",
             "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -132,73 +132,75 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "grid-header"
+                            "header-cell1"
                         ],
-                        "docked": "top",
-                        "layout": "hbox"
+                        "docked": null,
+                        "html": "اسم المحل",
+                        "itemId": "ShopName",
+                        "layout|flex": 1
                     },
-                    "name": "MyPanel",
-                    "designerId": "d5aede39-5ce5-4a4a-a3fe-78661ade8879",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "header-cell1"
-                                ],
-                                "docked": null,
-                                "html": "اسم المحل",
-                                "itemId": "ShopName",
-                                "layout|flex": 1
-                            },
-                            "name": "MyLabel34",
-                            "designerId": "0cac6614-72b7-413c-b50a-ab37f2642d00"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "header-cell2"
-                                ],
-                                "docked": null,
-                                "html": "الكمية",
-                                "itemId": "Quantity",
-                                "layout|flex": 1
-                            },
-                            "name": "MyLabel35",
-                            "designerId": "efb3b65d-82d0-42e8-ad7f-23031ad7a774"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "header-cell2"
-                                ],
-                                "docked": null,
-                                "html": "السعر",
-                                "itemId": "Price",
-                                "layout|flex": 1
-                            },
-                            "name": "MyLabel37",
-                            "designerId": "2a61b653-b54d-41c2-9b26-1c187f6de6ae"
-                        }
-                    ]
+                    "name": "MyLabel34",
+                    "designerId": "0cac6614-72b7-413c-b50a-ab37f2642d00"
                 },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "header-cell2"
+                        ],
+                        "docked": null,
+                        "html": "الكمية",
+                        "itemId": "Quantity",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "efb3b65d-82d0-42e8-ad7f-23031ad7a774"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "header-cell2"
+                        ],
+                        "docked": null,
+                        "html": "السعر",
+                        "itemId": "Price",
+                        "layout|flex": 1
+                    },
+                    "name": "MyLabel37",
+                    "designerId": "2a61b653-b54d-41c2-9b26-1c187f6de6ae"
+                }
+            ]
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": null,
+                "height": "100%",
+                "id": null,
+                "itemCls": "grid-row",
+                "itemId": "lstPrices",
+                "store": null,
+                "striped": true
+            },
+            "name": "MyList1",
+            "designerId": "657e92a7-9d2b-439c-bdbf-7d6959f67b8f",
+            "cn": [
                 {
                     "type": "Ext.field.Hidden",
                     "reference": {
@@ -222,12 +224,9 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "",
-                            "    <div class='row-cell'>{Shop.ShopName}</div>    ",
-                            "    <div class='row-cell'>{Quantity}({Unit.Name})</div>    ",
-                            "    <div class='row-cell'>{Price}</div>    ",
-                            "",
-                            ""
+                            "<div class='row-cell'>{Shop.ShopName}</div>    ",
+                            "<div class='row-cell'>{Quantity}({Unit.Name})</div>    ",
+                            "<div class='row-cell'>{Price}</div>    "
                         ]
                     },
                     "name": "itemTpl",
@@ -248,7 +247,8 @@
                     "",
                     "this.callParent();",
                     "",
-                    "  ",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
                     "Ext.Localization.LocalizeView(this);",
                     ""
                 ]

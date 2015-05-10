@@ -301,7 +301,7 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblTitle", "xtype": "label","value":"Trade Name Availability Search"},
+				{itemId:"lblTitle", "xtype": "label","value":"Trade Activity Availability Search"},
 				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Activity"},
 				{itemId:"btnSubmitActivity", "xtype": "button","value":"Search"},
 				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} ,
@@ -495,6 +495,29 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Connect"},
 				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+		{
+			itemId:"ContactUsView",
+			description: "Contactus...",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Contact Us"},
+				{itemId:"ContactUsTitle", xtype: "label",value:"Contact Us"},
+				{itemId:"MailTitle", xtype: "label",value:"E-mail"}
+			]
+		},
+
+		{
+			itemId:"AboutView",
+			description: "About Ministry",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"About Ministry"}
 			]
 		},
 

@@ -18,68 +18,68 @@ Ext.define('MEC_App.view.AboutView', {
     alias: 'widget.AboutView',
 
     requires: [
+        'Ext.Label',
         'Ext.Panel',
-        'Ext.Label'
+        'Ext.Img'
     ],
 
     config: {
         fullscreen: true,
         itemId: 'AboutView',
-        layout: 'fit',
+        layout: 'vbox',
+        scrollable: {
+            direction: 'vertical',
+            directionLock: true
+        },
         items: [
             {
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'عن الوزارة',
+                itemId: 'viewLbl'
+            },
+            {
                 xtype: 'panel',
-                layout: 'vbox',
+                flex: 1,
+                cls: 'services-header',
+                height: '30%',
                 items: [
                     {
                         xtype: 'panel',
-                        flex: 1,
-                        cls: 'services-header',
-                        height: '30%',
-                        layout: 'vbox',
+                        cls: 'services-header-overlay',
+                        height: '100%',
                         items: [
                             {
-                                xtype: 'panel',
-                                cls: 'services-header-overlay',
+                                xtype: 'image',
+                                cls: 'img-logo',
                                 height: '100%',
-                                layout: 'vbox',
-                                items: [
-                                    {
-                                        xtype: 'panel',
-                                        flex: 2,
-                                        cls: 'service-header-icon'
-                                    },
-                                    {
-                                        xtype: 'label',
-                                        flex: 1,
-                                        cls: 'service-header-title',
-                                        html: 'عن الوزارة',
-                                        itemId: 'viewLbl'
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'panel',
-                        flex: 2.2,
-                        cls: 'inner-panel',
-                        height: 'auto',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionLock: true
-                        },
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'about-text',
-                                html: 'تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:  بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية.'
+                                src: 'resources/images/img-logo.png'
                             }
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'panel',
+                flex: 2.7,
+                cls: 'inner-panel',
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'about-text',
+                        html: 'تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:  بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية.'
+                    }
+                ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

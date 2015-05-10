@@ -11,6 +11,7 @@
         ],
         "designer|userAlias": "ContactUs2View",
         "designer|userClassName": "ContactUs2View",
+        "itemId": "ContactUsView",
         "layout": "vbox",
         "scrollable": [
             "{ direction: 'vertical', directionLock: true }"
@@ -23,17 +24,22 @@
     "designerId": "020152b0-6c67-42a9-a552-1f580220e176",
     "cn": [
         {
-            "type": "Ext.Panel",
+            "type": "Ext.Label",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "html": "<h2 class=\"contact-us\">تواصل معنا</h2>"
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "تواصل معنا",
+                "itemId": "viewLbl",
+                "layout|flex": null
             },
-            "name": "MyPanel5",
-            "designerId": "81035bd2-7a9b-4684-9c08-c0054f790e54"
+            "name": "MyLabel7",
+            "designerId": "dae682c2-0d33-4f0b-937f-137921534b81"
         },
         {
             "type": "Ext.Panel",
@@ -43,36 +49,17 @@
             },
             "codeClass": null,
             "userConfig": {
-                "html": "<ul><li><a class=\"call\" href=\"tel:+97444494500\">+97444494500</a></li><li><a class=\"call\" href=\"tel:8005000\">8005000</a></li><li><a class=\"mail\" href=\"mailto:cpd@mec.gov.qa\">cpd@mec.gov.qa</a></li></ul>"
+                "cls": [
+                    "services-header"
+                ],
+                "height": "30%",
+                "layout|flex": 1
             },
-            "name": "MyPanel10",
-            "designerId": "897cc892-5135-407c-93cf-999fc3dd8c3a"
-        },
-        {
-            "type": "Ext.Panel",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "layout": "hbox"
-            },
-            "name": "MyPanel25",
-            "designerId": "74a52ba1-8ef1-44ba-8f4b-469007c4f233",
+            "name": "MyPanel8",
+            "designerId": "fd0a8bfd-4932-4b46-9e92-13b9601ccaea",
             "cn": [
                 {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "name": "MySpacer",
-                    "designerId": "5b62a469-944d-48fd-897f-d0a204c64133"
-                },
-                {
-                    "type": "Ext.Button",
+                    "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -80,176 +67,320 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "btn-youtube"
+                            "services-header-overlay"
                         ],
-                        "hidden": true,
-                        "icon": null,
-                        "iconAlign": "center",
-                        "iconCls": "youtube",
-                        "itemId": "youtube",
-                        "layout|flex": null,
-                        "text": null
+                        "height": "100%"
                     },
-                    "name": "MyButton",
-                    "designerId": "0f3933ce-1edd-4ecc-9ef0-87bad8ecec9d",
+                    "name": "MyPanel11",
+                    "designerId": "7f6ba385-b439-46be-96ef-69826688b457",
                     "cn": [
                         {
-                            "type": "fixedfunction",
+                            "type": "Ext.Img",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
+                                "centered": null,
+                                "cls": [
+                                    "img-logo"
                                 ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "//Ext.device.Device.openURL('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg');",
-                                    "",
-                                    "window.open('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_blank','location=1');",
-                                    "",
-                                    "",
-                                    ""
-                                ]
+                                "height": "100%",
+                                "src": "resources/images/img-logo.png"
                             },
-                            "name": "handler",
-                            "designerId": "4776ac37-9dfc-4af2-9d26-2e332a82e74c"
+                            "name": "MyImg4",
+                            "designerId": "fead01d0-8edc-4361-bef3-aa5c3e46457c"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "name": "MySpacer2",
-                    "designerId": "351db3c1-7c93-47d8-9f14-055e7ada5d56"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "btn-instagram"
-                        ],
-                        "icon": null,
-                        "iconAlign": "center",
-                        "iconCls": "instagram",
-                        "itemId": "instagram",
-                        "text": null
-                    },
-                    "name": "MyButton1",
-                    "designerId": "d4f5bf3c-33cc-4a97-afc1-7c7ba1784f41",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "window.open('instagram://mec_qatar','_system');",
-                                    "",
-                                    "",
-                                    ""
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "f4735edc-e81b-4972-a4c6-3b83118515b8"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "name": "MySpacer3",
-                    "designerId": "d58af6af-01fb-4dac-a66f-eb326f8b3505"
-                },
-                {
-                    "type": "Ext.Button",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "btn-twitter"
-                        ],
-                        "icon": null,
-                        "iconAlign": "center",
-                        "iconCls": "twitter",
-                        "itemId": "twitter",
-                        "text": null
-                    },
-                    "name": "MyButton2",
-                    "designerId": "1f143c88-3a50-4d11-8fff-69752b56d56e",
-                    "cn": [
-                        {
-                            "type": "fixedfunction",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "designer|params": [
-                                    "button",
-                                    "e"
-                                ],
-                                "fn": "handler",
-                                "implHandler": [
-                                    "window.open('twitter://mec_qatar','_system');",
-                                    "",
-                                    ""
-                                ]
-                            },
-                            "name": "handler",
-                            "designerId": "fd699a60-3031-47df-b921-880516800b62"
-                        }
-                    ]
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "name": "MySpacer4",
-                    "designerId": "d3af7762-aa46-4ac3-a2a1-aae5577662aa"
-                },
-                {
-                    "type": "Ext.Spacer",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "name": "MySpacer1",
-                    "designerId": "e7e54a44-2d72-4e5b-98d5-f0fba50fa8a1"
                 }
             ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2.7
+            },
+            "name": "MyPanel12",
+            "designerId": "db2a0260-bc59-4810-a429-5e6f4fbea4c9",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "contact-us"
+                        ],
+                        "html": "تواصل معنا",
+                        "itemId": "ContactUsTitle"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "fa1fc8a8-cb4a-4ae0-9dff-faf5fc1a30d9"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<ul><li><a class=\"call\" href=\"tel:+97444494500\">+97444494500</a></li><li><a class=\"call\" href=\"tel:8005000\">8005000</a></li></ul>"
+                    },
+                    "name": "MyPanel10",
+                    "designerId": "897cc892-5135-407c-93cf-999fc3dd8c3a"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "e-mail"
+                        ],
+                        "html": "البريد الالكتروني",
+                        "itemId": "MailTitle"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "58aed4f4-312e-4157-922c-5ea284dbffc7"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<ul><li><a class=\"mail\" href=\"mailto:cpd@mec.gov.qa\">cpd@mec.gov.qa</a></li></ul>"
+                    },
+                    "name": "MyPanel13",
+                    "designerId": "a3bc3796-e40e-485c-9650-491aff5dfa1b"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel25",
+                    "designerId": "74a52ba1-8ef1-44ba-8f4b-469007c4f233",
+                    "cn": [
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer",
+                            "designerId": "5b62a469-944d-48fd-897f-d0a204c64133"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-instagram"
+                                ],
+                                "icon": null,
+                                "iconAlign": "center",
+                                "iconCls": "instagram",
+                                "itemId": "instagram",
+                                "text": null
+                            },
+                            "name": "MyButton1",
+                            "designerId": "d4f5bf3c-33cc-4a97-afc1-7c7ba1784f41",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "window.open('instagram://mec_qatar','_system');",
+                                            "",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "f4735edc-e81b-4972-a4c6-3b83118515b8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer2",
+                            "designerId": "351db3c1-7c93-47d8-9f14-055e7ada5d56"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-youtube"
+                                ],
+                                "hidden": null,
+                                "icon": null,
+                                "iconAlign": "center",
+                                "iconCls": "youtube",
+                                "itemId": "youtube",
+                                "layout|flex": null,
+                                "text": null
+                            },
+                            "name": "MyButton",
+                            "designerId": "0f3933ce-1edd-4ecc-9ef0-87bad8ecec9d",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "",
+                                            "window.open('youtube://channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_system');",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "4776ac37-9dfc-4af2-9d26-2e332a82e74c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer3",
+                            "designerId": "d58af6af-01fb-4dac-a66f-eb326f8b3505"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "btn-twitter"
+                                ],
+                                "icon": null,
+                                "iconAlign": "center",
+                                "iconCls": "twitter",
+                                "itemId": "twitter",
+                                "text": null
+                            },
+                            "name": "MyButton2",
+                            "designerId": "1f143c88-3a50-4d11-8fff-69752b56d56e",
+                            "cn": [
+                                {
+                                    "type": "fixedfunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "button",
+                                            "e"
+                                        ],
+                                        "fn": "handler",
+                                        "implHandler": [
+                                            "window.open('twitter://mec_qatar','_system');",
+                                            "",
+                                            ""
+                                        ]
+                                    },
+                                    "name": "handler",
+                                    "designerId": "fd699a60-3031-47df-b921-880516800b62"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer4",
+                            "designerId": "d3af7762-aa46-4ac3-a2a1-aae5577662aa"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "1fb717d7-4035-4505-a939-9a8ebf797f0e"
         }
     ]
 }

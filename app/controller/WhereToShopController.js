@@ -45,7 +45,7 @@ Ext.define('MEC_App.controller.WhereToShopController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture=ar&pageIndex=0&pageSize=20',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 
@@ -86,7 +86,7 @@ Ext.define('MEC_App.controller.WhereToShopController', {
                 });
 
                 var lstPrices = view.down('#lstPrices');
-                lstPrices.setStore(store).setHeight(json.ProductPrices.length * 2.5 + 'em');
+                lstPrices.setStore(store);
 
                 Ext.AnimationHelper.HideLoading();
             }
