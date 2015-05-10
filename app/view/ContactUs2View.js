@@ -27,6 +27,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
 
     config: {
         cls: 'contact-us-view',
+        itemId: 'ContactUsView',
         layout: 'vbox',
         scrollable: {
             direction: 'vertical',
@@ -36,7 +37,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'تواصل معنا'
+                html: 'تواصل معنا',
+                itemId: 'viewLbl'
             },
             {
                 xtype: 'panel',
@@ -61,15 +63,27 @@ Ext.define('MEC_App.view.ContactUs2View', {
             },
             {
                 xtype: 'panel',
-                flex: 2.2,
+                flex: 2.7,
                 items: [
                     {
-                        xtype: 'panel',
-                        html: '<h2 class="contact-us">تواصل معنا</h2>'
+                        xtype: 'label',
+                        cls: 'contact-us',
+                        html: 'تواصل معنا',
+                        itemId: 'ContactUsTitle'
                     },
                     {
                         xtype: 'panel',
-                        html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
+                        html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li></ul>'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'e-mail',
+                        html: 'البريد الالكتروني',
+                        itemId: 'MailTitle'
+                    },
+                    {
+                        xtype: 'panel',
+                        html: '<ul><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
                     },
                     {
                         xtype: 'panel',
@@ -130,6 +144,14 @@ Ext.define('MEC_App.view.ContactUs2View', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
     }
 
 });

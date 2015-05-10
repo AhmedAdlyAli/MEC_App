@@ -476,12 +476,28 @@ body {
 
         &.contact-us {
             background: #e1e1e1 url(../images/contact-us-title-icon.png) no-repeat 96% center;
+            padding: 0 50px 0;
+            color: #691f49;
+            line-height: 40px;
             margin: 0 0 15px;
         }
 
         &.branches {
             background: #e1e1e1 url(../images/branches.png) no-repeat 96% center;
         }
+    }
+
+    .contact-us,
+    .e-mail {
+        background: #e1e1e1 url(../images/contact-us-title-icon.png) no-repeat 96% center;
+        padding: 0 50px 0;
+        color: #691f49;
+        line-height: 40px;
+        margin: 0 0 5px;
+    }
+
+    .e-mail {
+        background: #e1e1e1 url(../images/e-mail-title-icon.png) no-repeat 96% center;
     }
 
     a {
@@ -491,6 +507,7 @@ body {
         direction: ltr;
         display: block;
         font-family: HelveticaNeueLTStd57Condensed;
+        margin: 0 0 5px;
 
         &.call {
             background: url(../images/contact-us-item-icon.png) no-repeat 96% center;
@@ -510,8 +527,9 @@ body {
         border: none;
 
         .x-button-icon {
-            width: 32px;
-            height: 32px;
+            width: 50px;
+            height: 90px;
+            background-size: contain;
         }
     }
 
@@ -1731,6 +1749,28 @@ background: url(../images/toplogo.png) no-repeat center top;
             }
         }
 
+    }
+    
+    
+    .contact-us,
+    .e-mail {
+        background: #e1e1e1 url(../images/contact-us-title-icon.png) no-repeat 4% center;
+    }
+
+    .e-mail {
+        background: #e1e1e1 url(../images/e-mail-title-icon.png) no-repeat 4% center;
+    }
+
+    a {
+        padding: 0 0 0 50px;
+
+        &.call {
+            background: url(../images/contact-us-item-icon.png) no-repeat 4% center;
+        }
+
+        &.mail {
+            background: url(../images/mail.png) no-repeat 4% center;
+        }
     }
 
 

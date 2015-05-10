@@ -10,12 +10,35 @@
         "designer|userClassName": "AboutView",
         "fullscreen": true,
         "itemId": "AboutView",
-        "layout": "fit",
-        "scrollable": null
+        "layout": "vbox",
+        "scrollable": [
+            "{ direction: 'vertical', directionLock: true }"
+        ]
     },
     "name": "ContactUsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
     "designerId": "a9c7aa87-9a8b-4439-949b-858af548d3ed",
     "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "عن الوزارة",
+                "itemId": "viewLbl",
+                "layout|flex": null
+            },
+            "name": "MyLabel2",
+            "designerId": "9cdc1f13-b792-4602-ab1e-2adff1bf8b6a"
+        },
         {
             "type": "Ext.Panel",
             "reference": {
@@ -24,12 +47,16 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": null,
-                "layout": "vbox",
-                "scrollable": null
+                "cls": [
+                    "services-header"
+                ],
+                "docked": null,
+                "height": "30%",
+                "layout": null,
+                "layout|flex": 1
             },
-            "name": "MyPanel14",
-            "designerId": "dd65b875-8952-4eed-89f5-32ff2c224e06",
+            "name": "MyPanel6",
+            "designerId": "8c616fb7-51cf-479a-92a1-685a3edaafb2",
             "cn": [
                 {
                     "type": "Ext.Panel",
@@ -40,18 +67,16 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "services-header"
+                            "services-header-overlay"
                         ],
-                        "docked": null,
-                        "height": "30%",
-                        "layout": "vbox",
-                        "layout|flex": 1
+                        "height": "100%",
+                        "layout": null
                     },
-                    "name": "MyPanel6",
-                    "designerId": "8c616fb7-51cf-479a-92a1-685a3edaafb2",
+                    "name": "MyPanel8",
+                    "designerId": "07473574-c0f3-45f5-a062-871957e8cc10",
                     "cn": [
                         {
-                            "type": "Ext.Panel",
+                            "type": "Ext.Img",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -59,54 +84,41 @@
                             "codeClass": null,
                             "userConfig": {
                                 "cls": [
-                                    "services-header-overlay"
+                                    "img-logo"
                                 ],
                                 "height": "100%",
-                                "layout": "vbox"
+                                "src": "resources/images/img-logo.png"
                             },
-                            "name": "MyPanel8",
-                            "designerId": "07473574-c0f3-45f5-a062-871957e8cc10",
-                            "cn": [
-                                {
-                                    "type": "Ext.Panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-header-icon"
-                                        ],
-                                        "layout|flex": 2
-                                    },
-                                    "name": "MyPanel16",
-                                    "designerId": "ed31e5b7-75c2-48a8-8452-783e014297f3"
-                                },
-                                {
-                                    "type": "Ext.Label",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "cls": [
-                                            "service-header-title"
-                                        ],
-                                        "html": "عن الوزارة",
-                                        "itemId": "viewLbl",
-                                        "layout|flex": 1
-                                    },
-                                    "name": "MyLabel2",
-                                    "designerId": "9cdc1f13-b792-4602-ab1e-2adff1bf8b6a"
-                                }
-                            ]
+                            "name": "MyImg5",
+                            "designerId": "b63d7638-ab7a-498d-8566-9f24f5537f3e"
                         }
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": null,
+                "layout|flex": 2.7,
+                "scrollable": null
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "12e82dd7-f066-4d2c-819e-b05aa09559fc",
+            "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
@@ -114,39 +126,34 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "inner-panel"
+                            "about-text"
                         ],
-                        "height": "auto",
-                        "layout|flex": 2.2,
-                        "scrollable": [
-                            "{ direction: 'vertical', directionLock: true }"
-                        ]
+                        "html": "تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:  بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية."
                     },
-                    "name": "MyPanel7",
-                    "configAlternates": {
-                        "scrollable": "object"
-                    },
-                    "designerId": "12e82dd7-f066-4d2c-819e-b05aa09559fc",
-                    "cn": [
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "about-text"
-                                ],
-                                "html": "تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:  بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية."
-                            },
-                            "name": "MyLabel4",
-                            "designerId": "ac964c57-cea7-4d06-903b-97ca05b32996"
-                        }
-                    ]
+                    "name": "MyLabel4",
+                    "designerId": "ac964c57-cea7-4d06-903b-97ca05b32996"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "30ed93e7-ea53-4ab3-8378-75e307de7fdf"
         }
     ]
 }

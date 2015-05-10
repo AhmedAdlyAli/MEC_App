@@ -500,6 +500,29 @@ var localeEn =
 
 
 		{
+			itemId:"ContactUsView",
+			description: "Contactus...",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"Contact Us"},
+				{itemId:"ContactUsTitle", xtype: "label",value:"Contact Us"},
+				{itemId:"MailTitle", xtype: "label",value:"E-mail"}
+			]
+		},
+
+		{
+			itemId:"AboutView",
+			description: "About Ministry",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"About Ministry"}
+			]
+		},
+
+
+		{
 			itemId:"ComplaintsView",
 			description: "Complaints...",
 			items:

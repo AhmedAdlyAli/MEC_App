@@ -11,6 +11,7 @@
         ],
         "designer|userAlias": "ContactUs2View",
         "designer|userClassName": "ContactUs2View",
+        "itemId": "ContactUsView",
         "layout": "vbox",
         "scrollable": [
             "{ direction: 'vertical', directionLock: true }"
@@ -33,7 +34,9 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "تواصل معنا"
+                "html": "تواصل معنا",
+                "itemId": "viewLbl",
+                "layout|flex": null
             },
             "name": "MyLabel7",
             "designerId": "dae682c2-0d33-4f0b-937f-137921534b81"
@@ -101,23 +104,27 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout|flex": 2.2
+                "layout|flex": 2.7
             },
             "name": "MyPanel12",
             "designerId": "db2a0260-bc59-4810-a429-5e6f4fbea4c9",
             "cn": [
                 {
-                    "type": "Ext.Panel",
+                    "type": "Ext.Label",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<h2 class=\"contact-us\">تواصل معنا</h2>"
+                        "cls": [
+                            "contact-us"
+                        ],
+                        "html": "تواصل معنا",
+                        "itemId": "ContactUsTitle"
                     },
-                    "name": "MyPanel5",
-                    "designerId": "81035bd2-7a9b-4684-9c08-c0054f790e54"
+                    "name": "MyLabel1",
+                    "designerId": "fa1fc8a8-cb4a-4ae0-9dff-faf5fc1a30d9"
                 },
                 {
                     "type": "Ext.Panel",
@@ -127,10 +134,40 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<ul><li><a class=\"call\" href=\"tel:+97444494500\">+97444494500</a></li><li><a class=\"call\" href=\"tel:8005000\">8005000</a></li><li><a class=\"mail\" href=\"mailto:cpd@mec.gov.qa\">cpd@mec.gov.qa</a></li></ul>"
+                        "html": "<ul><li><a class=\"call\" href=\"tel:+97444494500\">+97444494500</a></li><li><a class=\"call\" href=\"tel:8005000\">8005000</a></li></ul>"
                     },
                     "name": "MyPanel10",
                     "designerId": "897cc892-5135-407c-93cf-999fc3dd8c3a"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "e-mail"
+                        ],
+                        "html": "البريد الالكتروني",
+                        "itemId": "MailTitle"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "58aed4f4-312e-4157-922c-5ea284dbffc7"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "<ul><li><a class=\"mail\" href=\"mailto:cpd@mec.gov.qa\">cpd@mec.gov.qa</a></li></ul>"
+                    },
+                    "name": "MyPanel13",
+                    "designerId": "a3bc3796-e40e-485c-9650-491aff5dfa1b"
                 },
                 {
                     "type": "Ext.Panel",
@@ -324,6 +361,26 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "1fb717d7-4035-4505-a939-9a8ebf797f0e"
         }
     ]
 }
