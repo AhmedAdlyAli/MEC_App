@@ -498,10 +498,26 @@ Ext.getCmp('#establishmentRegNumber').setHtml(company.moiEstablishmentId);
 
 
 
-
-
 Ext.Global.GetConfig('CMSWSUrl')
 
+
+
+xcodebuild clean -project Mec_App.xcodeproj -configuration Release -alltargets
+xcodebuild archive -project Mec_App.xcodeproj -scheme MEC_App -archivePath Mec_App.xcarchive
+xcodebuild -exportArchive -archivePath Mec_App.xcarchive -exportPath MEC_App -exportFormat ipa -exportProvisioningProfile MEC_Distribution_Profile
+
+
+
+
+MEC Version
 https://dl.dropboxusercontent.com/s/ubwbruegf0sn96a/Download.htm?dl=0 
 
 
+Test version
+
+
+
+
+
+
+ 

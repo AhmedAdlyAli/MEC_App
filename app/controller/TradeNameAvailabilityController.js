@@ -114,10 +114,10 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
             },
             failure: function(request, resp) {
-               // alert("in failure");
+                alert("in failure");
 
-                var respObj = Ext.JSON.decode(response.responseText);
-                Ext.Msg.alert("Error", respObj.status.statusMessage);
+               // var respObj = Ext.JSON.decode(response.responseText);
+               //  Ext.Msg.alert("Error", respObj.status.statusMessage);
 
             }
         });
@@ -284,6 +284,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 }
 
 
+
+
+                /*
                 if(company.listOfHumanPartners.humanPartners.length>0)
                 {
                     //partners
@@ -299,7 +302,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                 }
-
+        */
 
 
 
