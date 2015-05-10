@@ -189,7 +189,6 @@ var localeEn =
 				{itemId:"lbl4", "xtype": "label","value":"Total Fees"},
 				{itemId:"lbl5", "xtype": "label","value":"Request Number"},
 				{itemId:"lbl6", "xtype": "label","value":"Request Status"},
-				{itemId:"lbl7", "xtype": "label","value":"Required Attachments"},
 				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confrim & Pay"},
 				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
 			]

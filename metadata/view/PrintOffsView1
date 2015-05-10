@@ -351,11 +351,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "hiddenCompanyCR",
                         "itemId": "hiddenCompanyCR",
                         "name": "hiddenCompanyCR",
-                        "value": [
-                            "21"
-                        ]
+                        "value": null
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
@@ -368,11 +367,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "hiddenPrintoutType",
                         "itemId": "hiddenPrintoutType",
                         "name": "hiddenPrintoutType",
-                        "value": [
-                            "51"
-                        ]
+                        "value": null
                     },
                     "name": "MyHiddenField",
                     "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
@@ -466,11 +464,10 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "id": "hiddenDeliveryMethod",
                         "itemId": "hiddenDeliveryMethod",
                         "name": "hiddenDeliveryMethod",
-                        "value": [
-                            "\"01\""
-                        ]
+                        "value": null
                     },
                     "name": "MyHiddenField1",
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
@@ -540,7 +537,7 @@
                                     "var formData = view.getValues();",
                                     "",
                                     "",
-                                    "console.log(formData);",
+                                    "//alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);",
                                     "",
                                     "",
                                     "var err='';",
@@ -552,7 +549,6 @@
                                     "}",
                                     "",
                                     "",
-                                    "//alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);",
                                     "",
                                     "if(formData.hiddenPrintoutType!=='50')",
                                     "{",

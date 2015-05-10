@@ -270,15 +270,15 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     },
                     {
                         xtype: 'hiddenfield',
+                        id: 'hiddenCompanyCR',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR',
-                        value: 21
+                        name: 'hiddenCompanyCR'
                     },
                     {
                         xtype: 'hiddenfield',
+                        id: 'hiddenPrintoutType',
                         itemId: 'hiddenPrintoutType',
-                        name: 'hiddenPrintoutType',
-                        value: 51
+                        name: 'hiddenPrintoutType'
                     },
                     {
                         xtype: 'textfield',
@@ -342,9 +342,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     },
                     {
                         xtype: 'hiddenfield',
+                        id: 'hiddenDeliveryMethod',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod',
-                        value: '01'
+                        name: 'hiddenDeliveryMethod'
                     },
                     {
                         xtype: 'spinnerfield',
@@ -371,7 +371,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             var formData = view.getValues();
 
 
-                            console.log(formData);
+                            //alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);
 
 
                             var err='';
@@ -383,7 +383,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             }
 
 
-                            //alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);
 
                             if(formData.hiddenPrintoutType!=='50')
                             {
