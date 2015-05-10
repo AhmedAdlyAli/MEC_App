@@ -36,7 +36,7 @@ var localeEn =
 				{Name:"Reflections", CatID:8, Icon:"ico-news-about.png"},
 				{Name:"Similar Regional Official News", CatID:2, Icon:"ico-news-local-similar.png"},
 				{Name:"Regional Economic News", CatID:4, Icon:"ico-news-local-economic.png"},
-				{Name:"Similar International Official News", CatID:6, Icon:"ico-news-international-similar.png"},
+				{Name:"Similar Int. Official News", CatID:6, Icon:"ico-news-international-similar.png"},
 				{Name:"International Economic News", CatID:9, Icon:"ico-news-international-economic.png"}
 			]
 		},
