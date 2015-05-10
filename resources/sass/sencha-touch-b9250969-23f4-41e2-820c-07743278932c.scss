@@ -1493,7 +1493,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .notify-icon{
-    background: url(../images/notify-icon.png) no-repeat !important;
+    background: url(../images/notify-icon.png) no-repeat 0 2px !important;
     width:16px;
     heigt:22px;
     margin-left:1em !important
@@ -1690,6 +1690,37 @@ background: url(../images/toplogo.png) no-repeat center top;
     .project-label-1{
         padding:1em 0 0 2.2em;
         background: url(../images/pro1.png) no-repeat 4% 90%;
+    }
+
+    &.complaint-view .x-label {
+        margin: 5px 0 15px 10px;
+    }
+
+    .lstng-img {
+        margin: 0 10px 0 0;
+    }
+
+    .x-list-disclosure {
+        margin: 23px 10px 0 4px;
+
+        &:after {
+            right:4px;
+            left:0;
+        }
+    }
+    
+    &.newsDetails {
+        direction:ltr;
+
+        .title-date-container {
+            .date{
+                &:before {
+                    right:auto;
+                    left:-25px;
+                }
+            }
+        }
+
     }
 
 

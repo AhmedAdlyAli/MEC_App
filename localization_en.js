@@ -450,6 +450,21 @@ var localeEn =
 			]
 		},
 
+		{
+			itemId:"NewsDetailsView",
+			description: "News Details",
+			items:
+			[
+				{itemId:"NewsDetailsPanel", xtype: "cls", value:"ltr-cls"}
+			]
+		},
+
+		{
+			itemId:"MinistryNewsList",
+			description: "Ministry News...",
+			cls: 'ltr-cls',
+			items:[]
+		},
 
 		{
 			itemId:"InquiriesView",
@@ -806,6 +821,23 @@ var localeEn =
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Department Services"}
 			]
+		},
+
+		{
+			itemId:"FeedbackFormView",
+			description: "Suggestions Form",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Suggestions"},
+				{itemId:"txtFullName", xtype: "textfield",value:"Full Name"},
+				{itemId:"txtEmail", xtype: "emailfield",value:"E-mail"},
+				{itemId:"txtMobile", xtype: "numberfield",value:"Phone"},
+				{itemId:"txtComment", xtype: "textareafield",value:"Suggestion"},
+				{itemId:"lblAttachImage1", xtype: "label",value:"Attach Photo"},
+				{itemId:"btnSubmitComplaint1", xtype: "button",value:"Send"},
+				{itemId:"FeedbackForm", xtype: "cls",value:"ltr-cls"}
+			]
 		}
 
 
@@ -838,7 +870,18 @@ var localeEn =
 				cantSubmitCR:'This Establishment doesn\'t have Commercial Registeration',
 				cantSubmitCP:'This Establishment doesn\'t have Commercial Permit',
 				FeedbackSubmitted:'Thanks for sending a suggesstion',
-				Thanks:'Thanks'
+				Thanks:'Thanks',
+				ErrNocrcp:"Can't view a reserved Trade Name",
+				errShopName:'Please enter shop name\n',
+	            errComplaintType:'Please select complaint type\n',
+	            errComplaintText:'Please enter your complaint\n',
+	            errFullName:'Please enter full name\n',
+	            errMobile:'Please enter mobile number\n',
+	            errUserName:'Please enter username\n',
+	            errPassword:'Please enter password\n',
+	            errSuggestion: 'Please enter your suggesstion\n',
+	            errMail: 'Please enter correct email address\n',
+	            Failure: 'Connection lost, please try again later'
 				}
 
 }

@@ -143,14 +143,36 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                     },
                     failure: function(request, resp) {
-                        alert("in failure");
+                        Ext.device.Notification.show({
+                            title: Ext.Localization.GetMessage('Error'),
+                            buttons: [Ext.Localization.GetMessage('OK')],
+                            message:  Ext.Localization.GetMessage('Failure'),
+                            callback: function(button) {
+
+                                //return user to home page
+
+                                Ext.Viewport.getActiveItem().reset();
+
+                            }
+                        });
                     }
                 });
 
 
             },
             failure: function(request, resp) {
-                alert("in failure");
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Error'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('Failure'),
+                    callback: function(button) {
+
+                        //return user to home page
+
+                        Ext.Viewport.getActiveItem().reset();
+
+                    }
+                });
             }
         });
 
@@ -334,7 +356,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 },
                 failure: function(request, resp) {
-                    alert("in failure");
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('Failure'),
+                        callback: function(button) {
+
+                            //return user to home page
+
+                            Ext.Viewport.getActiveItem().reset();
+
+                        }
+                    });
                 }
             });
 
@@ -357,8 +390,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
              var m = Ext.Localization.GetMessage('LocationNotEnabled');
                             Ext.device.Notification.show({
-                                title: 'خطأ',
-                                buttons:["موافق"],
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
                                 message: m
                             });
 
@@ -464,7 +497,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
             },
             failure: function(request, resp) {
-                alert("in failure");
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Error'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('Failure'),
+                    callback: function(button) {
+
+                        //return user to home page
+
+                        Ext.Viewport.getActiveItem().reset();
+
+                    }
+                });
             }
         });
 
@@ -602,8 +646,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
             var m = Ext.Localization.GetMessage('LocationNotEnabled');
             Ext.device.Notification.show({
-                title: 'خطأ',
-                buttons:["موافق"],
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [Ext.Localization.GetMessage('OK')],
                 message: m
             });
 
@@ -694,7 +738,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
             },
             failure: function(request, resp) {
-                alert("in failure");
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Error'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('Failure'),
+                    callback: function(button) {
+
+                        //return user to home page
+
+                        Ext.Viewport.getActiveItem().reset();
+
+                    }
+                });
             }
         });
 
@@ -791,7 +846,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                     },
                     failure: function(request, resp) {
-                        alert("in failure");
+                        Ext.device.Notification.show({
+                            title: Ext.Localization.GetMessage('Error'),
+                            buttons: [Ext.Localization.GetMessage('OK')],
+                            message:  Ext.Localization.GetMessage('Failure'),
+                            callback: function(button) {
+
+                                //return user to home page
+
+                                Ext.Viewport.getActiveItem().reset();
+
+                            }
+                        });
                     }
                 });
     }

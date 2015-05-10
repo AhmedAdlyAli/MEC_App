@@ -50,7 +50,8 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "مقترحات"
+                "html": "مقترحات",
+                "itemId": "lblTitle"
             },
             "name": "MyLabel3",
             "designerId": "ae7b5d7d-326b-466b-b688-4228aca9dd37"
@@ -64,6 +65,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": null,
+                "itemId": "FeedbackForm",
                 "layout|flex": 1,
                 "modal": null,
                 "scrollable": [
@@ -90,7 +92,7 @@
                     "userConfig": {
                         "id": null,
                         "itemId": "txtFullName",
-                        "label": "",
+                        "label": "الاسم بالكامل",
                         "labelAlign": null,
                         "name": "fullName",
                         "placeHolder": "الاسم بالكامل",
@@ -109,7 +111,7 @@
                     "userConfig": {
                         "id": null,
                         "itemId": "txtEmail",
-                        "label": "",
+                        "label": "البريد الالكتروني",
                         "labelAlign": null,
                         "name": "email",
                         "placeHolder": "البريد الالكتروني"
@@ -130,7 +132,7 @@
                         ],
                         "id": null,
                         "itemId": "txtMobile",
-                        "label": "",
+                        "label": "رقم الهاتف",
                         "labelAlign": null,
                         "name": "mobile",
                         "placeHolder": "رقم الهاتف",
@@ -149,7 +151,7 @@
                     "userConfig": {
                         "id": null,
                         "itemId": "txtComment",
-                        "label": "",
+                        "label": "نص المقترح",
                         "labelAlign": null,
                         "name": "suggestion",
                         "placeHolder": "نص المقترح",
@@ -167,7 +169,8 @@
                     "codeClass": null,
                     "userConfig": {
                         "html": "ارفق صورة",
-                        "id": "lblAttachImage1"
+                        "id": "lblAttachImage1",
+                        "itemId": "lblAttachImage1"
                     },
                     "name": "MyLabel",
                     "designerId": "8859afe2-d0ff-4d2a-8d36-645a67f7cf05"
@@ -374,6 +377,7 @@
                             "btn-send"
                         ],
                         "id": "btnSubmitComplaint1",
+                        "itemId": "btnSubmitComplaint1",
                         "text": "ارسال"
                     },
                     "name": "MyButton20",
@@ -399,30 +403,28 @@
                                     "",
                                     "",
                                     "//alert(frm.getValues().shopName);",
-                                    "var formData =frm.getValues();",
-                                    "",
-                                    "",
-                                    "var err='';",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
-                                    "",
+                                    "var formData =frm.getValues(),",
+                                    "    ereg = /^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$/,",
+                                    "    testResult = ereg.test(formData.email),",
+                                    "    err='';",
+                                    "console.log(formData);",
                                     "",
                                     "if(formData.fullName===''){",
                                     "",
-                                    "    err+=Ext.Global.GetValidationMsg('errFullName');",
+                                    "    err+=Ext.Localization.GetMessage('errFullName');",
                                     "}",
                                     "",
+                                    "if(formData.email !=='' && !testResult){",
+                                    "    err+=Ext.Localization.GetMessage('errMail');",
+                                    "}",
                                     "",
-                                    "if(formData.mobile===''){",
-                                    "",
-                                    "    err+=Ext.Global.GetValidationMsg('errMobile');",
+                                    "if(formData.mobile === null){",
+                                    "    err+=Ext.Localization.GetMessage('errMobile');",
                                     "}",
                                     "",
                                     "if(formData.suggestion===''){",
                                     "",
-                                    "    err+=Ext.Global.GetValidationMsg('errSuggestion');",
+                                    "    err+=Ext.Localization.GetMessage('errSuggestion');",
                                     "}",
                                     "",
                                     "",
@@ -430,8 +432,8 @@
                                     "if(err.length>0){",
                                     "",
                                     "    Ext.device.Notification.show({",
-                                    "        title: 'خطأ',",
-                                    "        buttons:[\"موافق\"],",
+                                    "        title: Ext.Localization.GetMessage('Error'),",
+                                    "        buttons:[Ext.Localization.GetMessage('OK')],",
                                     "        message: err",
                                     "    });",
                                     "}else{",
@@ -462,6 +464,27 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "71d20669-3ede-4b3f-8687-bbded4807929"
         }
     ]
 }

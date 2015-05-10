@@ -9,7 +9,7 @@
         "designer|userAlias": "NewsListItem",
         "designer|userClassName": "NewsListItem",
         "id": null,
-        "itemId": null,
+        "itemId": "MinistryNewsList",
         "layout": "hbox",
         "padding": 10
     },
@@ -116,6 +116,27 @@
                     "designerId": "a6a88dd8-a266-401b-8700-2d72ae3a3441"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "460f53b3-44a7-49fc-870f-7c724da9e2a6"
         }
     ]
 }
