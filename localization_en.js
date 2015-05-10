@@ -301,7 +301,7 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblTitle", "xtype": "label","value":"Trade Name Availability Search"},
+				{itemId:"lblTitle", "xtype": "label","value":"Trade Activity Availability Search"},
 				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Activity"},
 				{itemId:"btnSubmitActivity", "xtype": "button","value":"Search"},
 				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} ,
