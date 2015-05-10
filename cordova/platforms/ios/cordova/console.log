@@ -1021,3 +1021,51 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 22:45:08.647 MEC_App[30409:1431793] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/BAE9D8EC-390D-4506-A8FA-D8465903822C/MEC_App.app/www/index.html
 2015-05-09 22:45:32.333 MEC_App[30409:1431793] THREAD WARNING: ['ProgressIndicator'] took '19.044922' ms. Plugin should use a background thread.
 2015-05-09 22:45:35.457 MEC_App[30409:1431793] THREAD WARNING: ['ListPicker'] took '13.628906' ms. Plugin should use a background thread.
+2015-05-09 23:19:20.837 MEC_App[33353:1452228] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:19:20.838 MEC_App[33353:1452228] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:19:20.840 MEC_App[33353:1452228] Unlimited access to network resources
+2015-05-09 23:19:21.037 MEC_App[33353:1452228] Resetting plugins due to page load.
+2015-05-09 23:19:21.420 MEC_App[33353:1452228] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/5928CF09-13E7-4861-9A4E-873D43B00D39/MEC_App.app/www/index.html
+2015-05-09 23:20:03.004 MEC_App[33994:1453895] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:20:03.005 MEC_App[33994:1453895] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:20:03.006 MEC_App[33994:1453895] Unlimited access to network resources
+2015-05-09 23:20:03.170 MEC_App[33994:1453895] Resetting plugins due to page load.
+2015-05-09 23:20:03.417 MEC_App[33994:1453895] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/D9CFCA36-7E46-4050-B01F-1F04189F508F/MEC_App.app/www/index.html
+2015-05-09 23:26:37.824 MEC_App[36420:1461322] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:26:37.828 MEC_App[36420:1461322] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:26:37.842 MEC_App[36420:1461322] Unlimited access to network resources
+2015-05-09 23:26:38.432 MEC_App[36420:1461322] Resetting plugins due to page load.
+2015-05-09 23:26:38.861 MEC_App[36420:1461322] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C84A0B8D-8AC7-489F-9065-C448FDB93F36/MEC_App.app/www/index.html
+2015-05-09 23:26:59.212 MEC_App[36420:1461322] THREAD WARNING: ['ProgressIndicator'] took '16.752930' ms. Plugin should use a background thread.
+2015-05-09 23:27:01.784 MEC_App[36420:1461322] THREAD WARNING: ['ListPicker'] took '32.224121' ms. Plugin should use a background thread.
+2015-05-09 23:28:01.241 MEC_App[36420:1461986] Terminating since there is no system app.
+2015-05-09 23:31:29.080 MEC_App[36932:1464155] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:31:29.081 MEC_App[36932:1464155] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:31:29.083 MEC_App[36932:1464155] Unlimited access to network resources
+2015-05-09 23:31:29.241 MEC_App[36932:1464155] Resetting plugins due to page load.
+2015-05-09 23:31:29.487 MEC_App[36932:1464155] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B5591BD0-EB02-41D2-9017-BE4D9962EEDA/MEC_App.app/www/index.html
+2015-05-09 23:38:32.757 MEC_App[37403:1467318] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:38:32.758 MEC_App[37403:1467318] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:38:32.760 MEC_App[37403:1467318] Unlimited access to network resources
+2015-05-09 23:38:32.925 MEC_App[37403:1467318] Resetting plugins due to page load.
+2015-05-09 23:38:33.179 MEC_App[37403:1467318] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F6A4849E-D5E3-4BE9-B076-5E4E0C4A2FE7/MEC_App.app/www/index.html
+2015-05-09 23:39:39.250 MEC_App[37860:1468744] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:39:39.252 MEC_App[37860:1468744] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:39:39.254 MEC_App[37860:1468744] Unlimited access to network resources
+2015-05-09 23:39:39.400 MEC_App[37860:1468744] Resetting plugins due to page load.
+2015-05-09 23:39:39.771 MEC_App[37860:1468744] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/27092851-D52B-40A6-9097-B4682D4C2814/MEC_App.app/www/index.html
+2015-05-09 23:40:50.320 MEC_App[38317:1470218] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:40:50.322 MEC_App[38317:1470218] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:40:50.324 MEC_App[38317:1470218] Unlimited access to network resources
+2015-05-09 23:40:50.469 MEC_App[38317:1470218] Resetting plugins due to page load.
+2015-05-09 23:40:50.744 MEC_App[38317:1470218] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A8FF7D26-9D6B-4DC7-BC8C-EDF15A712381/MEC_App.app/www/index.html
+2015-05-09 23:42:38.368 MEC_App[38776:1471871] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:42:38.369 MEC_App[38776:1471871] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:42:38.371 MEC_App[38776:1471871] Unlimited access to network resources
+2015-05-09 23:42:38.512 MEC_App[38776:1471871] Resetting plugins due to page load.
+2015-05-09 23:42:38.756 MEC_App[38776:1471871] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/77A612C0-478D-48B2-8793-B2EDC052B27B/MEC_App.app/www/index.html
+2015-05-09 23:44:05.481 MEC_App[39232:1473441] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-09 23:44:05.482 MEC_App[39232:1473441] Multi-tasking -> Device: YES, App: YES
+2015-05-09 23:44:05.483 MEC_App[39232:1473441] Unlimited access to network resources
+2015-05-09 23:44:05.627 MEC_App[39232:1473441] Resetting plugins due to page load.
+2015-05-09 23:44:06.138 MEC_App[39232:1473441] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7A5145EA-0A01-46E9-B48C-0C0A5367C55D/MEC_App.app/www/index.html

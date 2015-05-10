@@ -69,22 +69,28 @@ Ext.define('MEC_App.controller.AnimationHelper', {
 
         }
 
-
+        Ext.Global.Loading = true;
 
 
     },
 
     HideLoading: function() {
+        if(Ext.Global.Loading === true)
+        {
+            try {
+                ProgressIndicator.hide();
 
-        try {
-            ProgressIndicator.hide();
+            }
+            catch(err) {
+
+                Ext.Viewport.setMasked(false);
+
+            }
+            Ext.Global.Loading = false;
 
         }
-        catch(err) {
 
-            Ext.Viewport.setMasked(false);
 
-        }
 
     }
 
