@@ -47,21 +47,21 @@ Ext.define('MEC_App.controller.LoginController', {
 
         if(formData.txtUserName===''){
 
-            err+=Ext.Global.GetValidationMsg('errUserName');
+            err+=Ext.Localization.GetMessage('errUserName');
         }
 
 
         if(formData.txtPassword===''){
 
-            err+=Ext.Global.GetValidationMsg('errPassword');
+            err+=Ext.Localization.GetMessage('errPassword');
         }
 
 
         if(err.length>0){
 
             Ext.device.Notification.show({
-                title: 'خطأ',
-                buttons:["موافق"],
+                title: Ext.Localization.GetMessage('Error'),
+                buttons:[Ext.Localization.GetMessage('OK')],
                 message: err
             });
 
@@ -136,9 +136,9 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.AnimationHelper.HideLoading();
 
                     Ext.device.Notification.show({
-                        title: 'خطأ',
-                        buttons:["موافق"],
-                        message: 'إسم المستخدم أو كلمة المرور خطأ'
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('errUserPass')
                     });
 
 
