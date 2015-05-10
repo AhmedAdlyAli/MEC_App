@@ -28,6 +28,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
     config: {
         id: 'WhereToShopView',
         itemId: 'WhereToShopView',
+        layout: 'fit',
         scrollable: false,
         cls: [
             'complaint-view',
@@ -120,7 +121,6 @@ Ext.define('MEC_App.view.WhereToShopView', {
             },
             {
                 xtype: 'list',
-                docked: 'bottom',
                 height: '100%',
                 itemId: 'lstPrices',
                 itemCls: 'grid-row',

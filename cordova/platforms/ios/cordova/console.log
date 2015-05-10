@@ -1069,3 +1069,31 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-09 23:44:05.483 MEC_App[39232:1473441] Unlimited access to network resources
 2015-05-09 23:44:05.627 MEC_App[39232:1473441] Resetting plugins due to page load.
 2015-05-09 23:44:06.138 MEC_App[39232:1473441] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7A5145EA-0A01-46E9-B48C-0C0A5367C55D/MEC_App.app/www/index.html
+2015-05-10 12:52:34.946 MEC_App[46612:524780] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/23222034-994D-47DF-9656-4CF65FA20B6A/Library/Cookies/Cookies.binarycookies
+2015-05-10 12:52:35.041 MEC_App[46612:524780] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-10 12:52:35.041 MEC_App[46612:524780] Multi-tasking -> Device: YES, App: YES
+2015-05-10 12:52:35.043 MEC_App[46612:524780] Unlimited access to network resources
+2015-05-10 12:52:35.170 MEC_App[46612:524780] Resetting plugins due to page load.
+2015-05-10 12:52:36.480 MEC_App[46612:524780] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/ACB845BB-4451-45E3-AC5B-B419C69FD9DF/MEC_App.app/www/index.html
+2015-05-10 12:52:41.442 MEC_App[46612:524780] THREAD WARNING: ['ListPicker'] took '10.544922' ms. Plugin should use a background thread.
+2015-05-10 12:53:31.072 MEC_App[47153:527635] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/3299D411-2AD6-4747-BFC4-99BE141563F4/Library/Cookies/Cookies.binarycookies
+2015-05-10 12:53:31.162 MEC_App[47153:527635] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-10 12:53:31.162 MEC_App[47153:527635] Multi-tasking -> Device: YES, App: YES
+2015-05-10 12:53:31.163 MEC_App[47153:527635] Unlimited access to network resources
+2015-05-10 12:53:31.309 MEC_App[47153:527635] Resetting plugins due to page load.
+2015-05-10 12:53:31.561 MEC_App[47153:527635] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/7E1BF9A2-0BD9-4322-8CC0-FE68DF5739CD/MEC_App.app/www/index.html
+2015-05-10 12:53:35.787 MEC_App[47153:527635] THREAD WARNING: ['ListPicker'] took '11.591064' ms. Plugin should use a background thread.
+2015-05-10 12:55:18.670 MEC_App[47611:529741] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/F249CD5A-CDDE-49EC-873C-34B0AB5088C2/Library/Cookies/Cookies.binarycookies
+2015-05-10 12:55:18.733 MEC_App[47611:529741] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-10 12:55:18.733 MEC_App[47611:529741] Multi-tasking -> Device: YES, App: YES
+2015-05-10 12:55:18.734 MEC_App[47611:529741] Unlimited access to network resources
+2015-05-10 12:55:18.868 MEC_App[47611:529741] Resetting plugins due to page load.
+2015-05-10 12:55:19.090 MEC_App[47611:529741] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/7E7E26C1-D406-4A94-898A-E5F9FD1DFFAA/MEC_App.app/www/index.html
+2015-05-10 12:55:24.101 MEC_App[47611:529741] THREAD WARNING: ['ListPicker'] took '11.179932' ms. Plugin should use a background thread.
+2015-05-10 12:56:05.609 MEC_App[48061:531321] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/56C462A3-03FF-4F56-A230-5E31755F5AD5/Library/Cookies/Cookies.binarycookies
+2015-05-10 12:56:05.696 MEC_App[48061:531321] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-10 12:56:05.696 MEC_App[48061:531321] Multi-tasking -> Device: YES, App: YES
+2015-05-10 12:56:05.698 MEC_App[48061:531321] Unlimited access to network resources
+2015-05-10 12:56:05.825 MEC_App[48061:531321] Resetting plugins due to page load.
+2015-05-10 12:56:06.059 MEC_App[48061:531321] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/3D8E265D-7289-4C07-81BF-534099EEE096/MEC_App.app/www/index.html
+2015-05-10 12:56:10.374 MEC_App[48061:531321] THREAD WARNING: ['ListPicker'] took '11.478027' ms. Plugin should use a background thread.

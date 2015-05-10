@@ -14,7 +14,7 @@
         "designer|userClassName": "WhereToShopView",
         "id": "WhereToShopView",
         "itemId": "WhereToShopView",
-        "layout": null,
+        "layout": "fit",
         "scrollable": false
     },
     "name": "DailyPricesView3",
@@ -190,7 +190,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "docked": "bottom",
+                "docked": null,
                 "height": "100%",
                 "id": null,
                 "itemCls": "grid-row",
