@@ -1319,7 +1319,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     background:#f5f5f5;
     margin:0 !important;
     padding:0.5em 0 0.5em 0;
-    float:right;
+    float: right;
     min-height:2.5em;
     width:33.33%;
 
@@ -1333,6 +1333,14 @@ background: url(../images/toplogo.png) no-repeat center top;
 .grid-row{
     .x-innerhtml{
         padding:0 !important;
+    }
+
+    &:after {
+        content:".";
+        display:block;
+        visibility:hidden;
+        clear:both;
+        height:0;
     }
 }
 
@@ -1710,7 +1718,7 @@ background: url(../images/toplogo.png) no-repeat center top;
             left:0;
         }
     }
-    
+
     &.newsDetails {
         direction:ltr;
 
@@ -1894,4 +1902,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 
-
+.img-logo {
+    background-size: auto 75% !important;
+}

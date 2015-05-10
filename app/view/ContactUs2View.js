@@ -18,7 +18,9 @@ Ext.define('MEC_App.view.ContactUs2View', {
     alias: 'widget.ContactUs2View',
 
     requires: [
+        'Ext.Label',
         'Ext.Panel',
+        'Ext.Img',
         'Ext.Spacer',
         'Ext.Button'
     ],
@@ -32,72 +34,98 @@ Ext.define('MEC_App.view.ContactUs2View', {
         },
         items: [
             {
-                xtype: 'panel',
-                html: '<h2 class="contact-us">تواصل معنا</h2>'
+                xtype: 'label',
+                cls: 'inners-title',
+                html: 'تواصل معنا'
             },
             {
                 xtype: 'panel',
-                html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
-            },
-            {
-                xtype: 'panel',
-                layout: 'hbox',
+                flex: 1,
+                cls: 'services-header',
+                height: '30%',
                 items: [
                     {
-                        xtype: 'spacer'
+                        xtype: 'panel',
+                        cls: 'services-header-overlay',
+                        height: '100%',
+                        items: [
+                            {
+                                xtype: 'image',
+                                cls: 'img-logo',
+                                height: '100%',
+                                src: 'resources/images/img-logo.png'
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                flex: 2.2,
+                items: [
+                    {
+                        xtype: 'panel',
+                        html: '<h2 class="contact-us">تواصل معنا</h2>'
                     },
                     {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            //Ext.device.Device.openURL('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg');
-
-                            window.open('https://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_blank','location=1');
-
-
-
-                        },
-                        cls: 'btn-youtube',
-                        hidden: true,
-                        itemId: 'youtube',
-                        iconAlign: 'center',
-                        iconCls: 'youtube'
+                        xtype: 'panel',
+                        html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
                     },
                     {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            window.open('instagram://mec_qatar','_system');
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'spacer'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, e) {
+                                    window.open('instagram://mec_qatar','_system');
 
 
 
-                        },
-                        cls: 'btn-instagram',
-                        itemId: 'instagram',
-                        iconAlign: 'center',
-                        iconCls: 'instagram'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, e) {
-                            window.open('twitter://mec_qatar','_system');
+                                },
+                                cls: 'btn-instagram',
+                                itemId: 'instagram',
+                                iconAlign: 'center',
+                                iconCls: 'instagram'
+                            },
+                            {
+                                xtype: 'spacer'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, e) {
+
+                                    window.open('youtube://channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_system');
 
 
-                        },
-                        cls: 'btn-twitter',
-                        itemId: 'twitter',
-                        iconAlign: 'center',
-                        iconCls: 'twitter'
-                    },
-                    {
-                        xtype: 'spacer'
-                    },
-                    {
-                        xtype: 'spacer'
+                                },
+                                cls: 'btn-youtube',
+                                itemId: 'youtube',
+                                iconAlign: 'center',
+                                iconCls: 'youtube'
+                            },
+                            {
+                                xtype: 'spacer'
+                            },
+                            {
+                                xtype: 'button',
+                                handler: function(button, e) {
+                                    window.open('twitter://mec_qatar','_system');
+
+
+                                },
+                                cls: 'btn-twitter',
+                                itemId: 'twitter',
+                                iconAlign: 'center',
+                                iconCls: 'twitter'
+                            },
+                            {
+                                xtype: 'spacer'
+                            }
+                        ]
                     }
                 ]
             }
