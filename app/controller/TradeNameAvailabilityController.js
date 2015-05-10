@@ -95,16 +95,27 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
                 if(json.listOfMecReservedTradeNamesIo.mecReservedTradeNames.length>0)
                 {
-                var store = new Ext.data.Store({
+                    var store = new Ext.data.Store({
 
-                    data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
-                });
+                        data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
+                    });
 
-                var lst = Ext.getCmp('lstTradeNameResults');
-                lst.setStore(store);
+                    var lst = Ext.getCmp('lstTradeNameResults');
+                    lst.setStore(store);
                 }
 
 
+
+                if(json.listOfMecReservedTradeNamesIo.mecReservedTradeNames.length===0)
+                {
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('errNoSearchData')
+                    });
+
+                }
 
 
 
@@ -116,8 +127,8 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             failure: function(request, resp) {
                 alert("in failure");
 
-               // var respObj = Ext.JSON.decode(response.responseText);
-               //  Ext.Msg.alert("Error", respObj.status.statusMessage);
+                // var respObj = Ext.JSON.decode(response.responseText);
+                //  Ext.Msg.alert("Error", respObj.status.statusMessage);
 
             }
         });
@@ -141,7 +152,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
             Ext.device.Notification.show({
                 title: Ext.Localization.GetMessage('Error'),
-                buttons: [ Ext.Localization.GetMessage('Ok')],
+                buttons: [ Ext.Localization.GetMessage('OK')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
 
@@ -153,7 +164,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             xtype: 'TradeNameEstablishmentDetails',
             title: 'بيانات الشركة',
             data: record.data
-
         });
 
 
@@ -251,15 +261,19 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                 Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
-                Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(company.commercialRegistrationExpiryDate);
+                Ext.getCmp('commercialRegistrationIssueDate').setHtml(company.commercialRegistrationIssueDate);
+
+
+
+                Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
                 Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
                 Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
                 Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
                 Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
                 Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
                 Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
-                Ext.getCmp('commercialPermitExpiryDate1').setHtml(company.commercialPermitExpiryDate);
-                Ext.getCmp('establishmentDate1').setHtml(company.establishmentDate);
+                Ext.getCmp('commercialPermitExpiryDate1').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
+                Ext.getCmp('establishmentDate1').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
                 Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
                 Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
                 Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
@@ -282,6 +296,27 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                     lst.setScrollable(false);
 
                 }
+
+
+
+
+                //Branches
+
+                if(company.listOfBranches.branches.length > 0){
+                    var storeBranches = new Ext.data.Store({
+                        data : company.listOfBranches.branches
+                    });
+
+
+
+                    var lstBranches = view.down('#lstBranches');
+                    lstBranches.setStore(storeBranches);
+
+                    lstBranches.setHeight(company.listOfBranches.branches.length* 4.4 + 'em');
+                    lstBranches.setScrollable(false);
+
+                }
+
 
 
 
@@ -321,7 +356,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                     var lstBizActivities = view.down('#lstBizActivities');
                     lstBizActivities.setStore(storActivities);
 
-                    lstBizActivities.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*3 + 'em');
+                    lstBizActivities.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*3.6 + 'em');
                     lstBizActivities.setScrollable(false);
 
                 }
@@ -414,15 +449,16 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                         view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                        view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                        view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate));
+                        view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
                         view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                         view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                         view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
                         view.down('#companyCapital').setHtml(company.companyCapital);
                         view.down('#commercialPermit').setHtml(company.commercialPermit);
                         view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                        view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
-                        view.down('#establishmentDate').setHtml(company.establishmentDate);
+                        view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
+                        view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
                         view.down('#establishmentType').setHtml(company.establishmentType);
                         view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                         view.down('#establishmentStatus').setHtml(company.establishmentStatus);

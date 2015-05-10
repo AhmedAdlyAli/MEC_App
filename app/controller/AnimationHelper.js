@@ -53,23 +53,25 @@ Ext.define('MEC_App.controller.AnimationHelper', {
     },
 
     ShowLoading: function() {
+        if(Ext.Global.Loading === false)
+        {
+            try {
+                ProgressIndicator.showSimple(true);
+
+            }
+            catch(err) {
+
+                Ext.Viewport.setMasked({
+                    xtype: 'loadmask',
+                    message: 'جاري التحميل ..'
+                });
 
 
-        try {
-        ProgressIndicator.showSimple(true);
+            }
+
+            Ext.Global.Loading = true;
 
         }
-        catch(err) {
-
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: 'جاري التحميل ..'
-        });
-
-
-        }
-
-        Ext.Global.Loading = true;
 
 
     },

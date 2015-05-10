@@ -95,7 +95,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                             {
                                 xtype: 'button',
                                 handler: function(button, e) {
-                                    window.open('instagram://mec_qatar','_system');
+                                    window.open('http://www.instagram.com/mec_qatar','_system');
 
 
 
@@ -112,7 +112,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                                 xtype: 'button',
                                 handler: function(button, e) {
 
-                                    window.open('youtube://channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_system');
+                                    window.open('http://www.youtube.com/channel/UC6g2VPwsbQ57G-Ni-N8rTVg','_system');
 
 
                                 },
@@ -127,7 +127,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                             {
                                 xtype: 'button',
                                 handler: function(button, e) {
-                                    window.open('twitter://mec_qatar','_system');
+                                    window.open('http://twitter.com/mec_qatar','_system');
 
 
                                 },

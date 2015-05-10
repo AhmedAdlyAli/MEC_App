@@ -27,7 +27,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
     config: {
         cls: 'complaint-view',
-        id: 'PrintOffsView1',
         itemId: 'PrintOffsView1',
         layout: 'vbox',
         enableSubmissionForm: false,
@@ -227,6 +226,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                                 {
                                                     hiddenCompanyCR.setValue(selectedValue);
 
+                                                    // alert(hiddenCompanyCR.getValue());
+
                                                     Ext.each(config.items, function(item){
                                                         if(item.value==selectedValue){
                                                             me.setValue(item.text);
@@ -270,12 +271,14 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR'
+                        name: 'hiddenCompanyCR',
+                        value: 21
                     },
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenPrintoutType',
-                        name: 'hiddenPrintoutType'
+                        name: 'hiddenPrintoutType',
+                        value: 51
                     },
                     {
                         xtype: 'textfield',
@@ -340,7 +343,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     {
                         xtype: 'hiddenfield',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod'
+                        name: 'hiddenDeliveryMethod',
+                        value: '01'
                     },
                     {
                         xtype: 'spinnerfield',
@@ -379,6 +383,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             }
 
 
+                            //alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);
 
                             if(formData.hiddenPrintoutType!=='50')
                             {

@@ -41,11 +41,11 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
         if(searchKeyword===''){
 
 
-         Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
-                        buttons: [Ext.Localization.GetMessage('OK')],
-                        message:  Ext.Localization.GetMessage('ErrSearchKeyword')
-                    });
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message:  Ext.Localization.GetMessage('ErrSearchKeyword')
+            });
 
             return;
 
@@ -83,15 +83,15 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
 
                 if(json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo.length>0)
-                    {
-                var store = new Ext.data.Store({
-                    data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
-                });
+                {
+                    var store = new Ext.data.Store({
+                        data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
+                    });
 
-                var lst = Ext.getCmp('lstTradeActivityResults');
+                    var lst = Ext.getCmp('lstTradeActivityResults');
 
-                lst.setStore(store);
-                    }
+                    lst.setStore(store);
+                }
 
 
 

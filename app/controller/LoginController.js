@@ -148,6 +148,15 @@ Ext.define('MEC_App.controller.LoginController', {
             failure: function(request, resp) {
 
                 Ext.AnimationHelper.HideLoading();
+
+
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Error'),
+                    buttons:[Ext.Localization.GetMessage('OK')],
+                    message: Ext.Localization.GetMessage('errConnection')
+                });
+
+
             }
         });
 

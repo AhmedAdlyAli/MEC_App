@@ -43,10 +43,17 @@ Ext.define('MEC_App.view.NotificationView', {
                 height: '100%',
                 itemId: 'lstItems',
                 itemCls: 'item-notification',
-                itemTpl: [
-                    '<div>Test </div>',
-                    '<div class=\'notification-sub\'>{date}</div>'
-                ]
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div>{content} </div>',
+                    '<div class=\'notification-sub\'>{[this.FormatDate(values.date)]}</div>',
+                    {
+                        FormatDate: function(str) {
+                            return Ext.Global.FormatJsonDate(str);
+
+
+                        }
+                    }
+                )
             }
         ]
     },

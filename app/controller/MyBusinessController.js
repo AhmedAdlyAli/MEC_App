@@ -129,9 +129,10 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         if(cr==='' && cp===''){
 
+
             Ext.device.Notification.show({
                 title: Ext.Localization.GetMessage('Error'),
-                buttons: [ Ext.Localization.GetMessage('Ok')],
+                buttons: [Ext.Localization.GetMessage('OK')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
 
@@ -222,15 +223,16 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate));
+                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
                 view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                 view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                 view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
                 view.down('#companyCapital').setHtml(company.companyCapital);
                 view.down('#commercialPermit').setHtml(company.commercialPermit);
                 view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
-                view.down('#establishmentDate').setHtml(company.establishmentDate);
+                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
+                view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);
@@ -285,7 +287,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                     var lstBranches = view.down('#lstBranches');
                     lstBranches.setStore(storeBranches);
 
-                    lstBranches.setHeight(company.listOfBranches.branches.length* 4.2 + 'em');
+                    lstBranches.setHeight(company.listOfBranches.branches.length* 4.4 + 'em');
                     lstBranches.setScrollable(false);
 
                 }
@@ -305,7 +307,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                     var lstBizActivities = view.down('#lstBizActivities');
                     lstBizActivities.setStore(storActivities);
 
-                    lstBizActivities.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*3 + 'em');
+                    lstBizActivities.setHeight(company.listOfCRBusinessActivities.crBusinessActivities.length*3.6 + 'em');
                     lstBizActivities.setScrollable(false);
 
                 }
@@ -411,15 +413,20 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                view.down('#commercialRegistrationExpiryDate').setHtml(company.commercialRegistrationExpiryDate);
+
+
+                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate));
+
+
+                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
                 view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                 view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                 view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
                 view.down('#companyCapital').setHtml(company.companyCapital);
                 view.down('#commercialPermit').setHtml(company.commercialPermit);
                 view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                view.down('#commercialPermitExpiryDate').setHtml(company.commercialPermitExpiryDate);
-                view.down('#establishmentDate').setHtml(company.establishmentDate);
+                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
+                view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);

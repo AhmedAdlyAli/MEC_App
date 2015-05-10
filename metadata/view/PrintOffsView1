@@ -13,7 +13,7 @@
         "designer|userClassName": "PrintOffsView1",
         "enableSubmissionForm": false,
         "fullscreen": null,
-        "id": "PrintOffsView1",
+        "id": null,
         "itemId": "PrintOffsView1",
         "layout": "vbox",
         "pinHeaders": null,
@@ -297,6 +297,8 @@
                                     "                                         if(selectedValue!=='')",
                                     "                                         {",
                                     "                                             hiddenCompanyCR.setValue(selectedValue);",
+                                    "                                             ",
+                                    "                                            // alert(hiddenCompanyCR.getValue());",
                                     "",
                                     "                                             Ext.each(config.items, function(item){",
                                     "                                                 if(item.value==selectedValue){",
@@ -326,7 +328,7 @@
                                     "                                     }",
                                     "                                    );",
                                     "",
-                                    "    ",
+                                    "",
                                     "}",
                                     "}, me);",
                                     "",
@@ -350,7 +352,10 @@
                     "codeClass": null,
                     "userConfig": {
                         "itemId": "hiddenCompanyCR",
-                        "name": "hiddenCompanyCR"
+                        "name": "hiddenCompanyCR",
+                        "value": [
+                            "21"
+                        ]
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
@@ -365,7 +370,9 @@
                     "userConfig": {
                         "itemId": "hiddenPrintoutType",
                         "name": "hiddenPrintoutType",
-                        "value": null
+                        "value": [
+                            "51"
+                        ]
                     },
                     "name": "MyHiddenField",
                     "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
@@ -461,7 +468,9 @@
                     "userConfig": {
                         "itemId": "hiddenDeliveryMethod",
                         "name": "hiddenDeliveryMethod",
-                        "value": null
+                        "value": [
+                            "\"01\""
+                        ]
                     },
                     "name": "MyHiddenField1",
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
@@ -543,6 +552,7 @@
                                     "}",
                                     "",
                                     "",
+                                    "//alert(formData.hiddenPrintoutType + ' == '+ formData.hiddenCompanyCR);",
                                     "",
                                     "if(formData.hiddenPrintoutType!=='50')",
                                     "{",

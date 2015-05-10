@@ -66,12 +66,39 @@
                         "designer|displayName": "itemTpl",
                         "implHandler": [
                             "    <div class='tpl-request-1'>{requestCaseType}</div>",
-                            "    <div class='tpl-request-2'><span class='FA'> {requestCaseDate}</span> <span class='FB'>{requestCaseStatus}</span></div>",
+                            "    <div class='tpl-request-2'><span class='FA'> {[this.FormatDate(values.requestCaseDate)]}</span> <span class='FB'>{requestCaseStatus}</span></div>",
                             ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "fc901ceb-bbac-44d9-8619-e83048e50966"
+                    "designerId": "fc901ceb-bbac-44d9-8619-e83048e50966",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "str"
+                                ],
+                                "fn": "FormatDate",
+                                "implHandler": [
+                                    "return Ext.Global.FormatJsonDate(str);",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "FormatDate",
+                            "designerId": "093df989-ea09-4b8a-bb3f-cb5ef7e28c5f"
+                        }
+                    ]
                 }
             ]
         }

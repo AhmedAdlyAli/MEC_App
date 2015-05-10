@@ -146,13 +146,30 @@ Ext.application({
     launch: function() {
 
 
+        Ext.Ajax.on('requestexception', function (conn, response, options) {
+
+
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons:[Ext.Localization.GetMessage('OK')],
+                message: Ext.Localization.GetMessage('errConnection')
+            });
+
+
+            Ext.AnimationHelper.HideLoading();
+
+
+
+        });
+
 
 
         Ext.Global.LoadLocalization();
 
         Ext.Global.LoadSessionVariables();
 
-
+        Ext.Global.Loading=false;
 
 
         Ext.create('MEC_App.view.LanguageView', {fullscreen: true});

@@ -65,12 +65,35 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div>Test </div>",
-                            "<div class='notification-sub'>{date}</div>"
+                            "<div>{content} </div>",
+                            "<div class='notification-sub'>{[this.FormatDate(values.date)]}</div>"
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "b6a7b798-8e37-4e88-8a4f-2ca2aa167992"
+                    "designerId": "b6a7b798-8e37-4e88-8a4f-2ca2aa167992",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "str"
+                                ],
+                                "fn": "FormatDate",
+                                "implHandler": [
+                                    "return Ext.Global.FormatJsonDate(str);",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "FormatDate",
+                            "designerId": "f391e03a-3537-411d-a579-244608dbba5e"
+                        }
+                    ]
                 }
             ]
         },

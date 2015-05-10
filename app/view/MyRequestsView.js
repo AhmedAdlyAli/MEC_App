@@ -44,11 +44,22 @@ Ext.define('MEC_App.view.MyRequestsView', {
                 height: '100%',
                 itemId: 'lstMyRequests',
                 itemCls: 'item-request',
-                itemTpl: [
+                itemTpl: Ext.create('Ext.XTemplate', 
                     '    <div class=\'tpl-request-1\'>{requestCaseType}</div>',
-                    '    <div class=\'tpl-request-2\'><span class=\'FA\'> {requestCaseDate}</span> <span class=\'FB\'>{requestCaseStatus}</span></div>',
-                    ''
-                ]
+                    '    <div class=\'tpl-request-2\'><span class=\'FA\'> {[this.FormatDate(values.requestCaseDate)]}</span> <span class=\'FB\'>{requestCaseStatus}</span></div>',
+                    '',
+                    {
+                        FormatDate: function(str) {
+                            return Ext.Global.FormatJsonDate(str);
+
+
+
+
+
+
+                        }
+                    }
+                )
             }
         ]
     }

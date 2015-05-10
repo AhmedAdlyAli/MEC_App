@@ -905,7 +905,9 @@ var localeEn =
 	            errSuggestion: 'Please enter your suggesstion\n',
 	            errMail: 'Please enter correct email address\n',
 	            Failure: 'Connection lost, please try again later',
-	            errUserPass: 'Username or Password is not correct'
+	            errUserPass: 'Username or Password is not correct',
+	            errConnection: 'There was a problem connecting to the System',
+	            errNoSearchData: 'No Data available for your Search Query'
 				}
 
 }
