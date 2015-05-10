@@ -14,8 +14,8 @@
         "designer|userClassName": "WhereToShopView",
         "id": "WhereToShopView",
         "itemId": "WhereToShopView",
-        "layout": "vbox",
-        "scrollable": false
+        "layout": "fit",
+        "scrollable": null
     },
     "name": "DailyPricesView3",
     "designerId": "61ac0178-7f48-4f70-8280-c365ccca1374",
@@ -248,8 +248,7 @@
                     "",
                     "this.callParent();",
                     "",
-                    "Ext.Localization.LoadLocalization();",
-                    "",
+                    "  ",
                     "Ext.Localization.LocalizeView(this);",
                     ""
                 ]
