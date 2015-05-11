@@ -1325,3 +1325,21 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-11 10:34:38.660 MEC_App[18120:145644] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B1814C97-3E53-4AD8-9B7D-6DA13F2DA503/MEC_App.app/www/index.html
 2015-05-11 10:34:55.843 MEC_App[18120:145644] THREAD WARNING: ['ProgressIndicator'] took '18.820068' ms. Plugin should use a background thread.
 2015-05-11 10:35:17.372 MEC_App[18120:145644] THREAD WARNING: ['InAppBrowser'] took '36.416016' ms. Plugin should use a background thread.
+2015-05-11 12:31:59.408 MEC_App[21515:174420] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 12:31:59.412 MEC_App[21515:174420] Multi-tasking -> Device: YES, App: YES
+2015-05-11 12:31:59.423 MEC_App[21515:174420] Unlimited access to network resources
+2015-05-11 12:31:59.865 MEC_App[21515:174420] Resetting plugins due to page load.
+2015-05-11 12:32:00.240 MEC_App[21515:174420] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/FFD1A3BE-5477-4422-973D-B251DFBAA11D/MEC_App.app/www/index.html
+2015-05-11 17:32:51.721 MEC_App[23390:233584] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 17:32:51.723 MEC_App[23390:233584] Multi-tasking -> Device: YES, App: YES
+2015-05-11 17:32:51.737 MEC_App[23390:233584] Unlimited access to network resources
+2015-05-11 17:32:52.334 MEC_App[23390:233584] Resetting plugins due to page load.
+2015-05-11 17:32:52.808 MEC_App[23390:233584] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7308FAED-FED0-4730-BABF-96BDE0F64F50/MEC_App.app/www/index.html
+2015-05-11 19:02:29.951 MEC_App[24826:259898] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 19:02:29.952 MEC_App[24826:259898] Multi-tasking -> Device: YES, App: YES
+2015-05-11 19:02:29.954 MEC_App[24826:259898] Unlimited access to network resources
+2015-05-11 19:02:30.093 MEC_App[24826:259898] Resetting plugins due to page load.
+2015-05-11 19:02:30.472 MEC_App[24826:259898] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/4C73DC94-48DB-42AA-8F8D-D4262096F4A8/MEC_App.app/www/index.html
+2015-05-11 19:02:52.786 MEC_App[24826:259928] NSURLConnection/CFURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9813)
+2015-05-11 19:02:52.843 MEC_App[24826:259898] THREAD WARNING: ['Notification'] took '53.454834' ms. Plugin should use a background thread.
+2015-05-11 19:02:52.917 MEC_App[24826:259898] THREAD WARNING: ['Notification'] took '30.212891' ms. Plugin should use a background thread.

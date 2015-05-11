@@ -151,9 +151,11 @@
 @end
 
 
-@implementation NSURLRequest(DataController)
-+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
-{
-    return YES;
-}
-@end
+
+
+//@implementation NSURLRequest(DataController)
+//+ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
+//{
+//    return YES;
+//}
+//@end

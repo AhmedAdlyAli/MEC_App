@@ -66,7 +66,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         items: [
                             {
                                 xtype: 'label',
-                                html: 'اسم المنشأة بالغة العربية',
+                                html: 'اسم المنشأة باللغة العربية',
                                 itemId: 'lbl6'
                             },
                             {

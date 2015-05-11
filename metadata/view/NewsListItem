@@ -39,7 +39,7 @@
                     "",
                     "        me.down('#imgNews').setSrc(imgSrc);",
                     "        me.down('#textCmp').setHtml(record.get('NewsTitle'));",
-                    "        me.down('label').setHtml(record.get('NewsBrief'));",
+                    "        //me.down('label').setHtml(record.get('NewsBrief'));",
                     "    }",
                     "}"
                 ]
@@ -109,6 +109,7 @@
                         "cls": [
                             "lstng-brief"
                         ],
+                        "hidden": false,
                         "html": " ",
                         "layout|flex": 1
                     },

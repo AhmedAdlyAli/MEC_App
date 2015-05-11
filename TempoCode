@@ -519,5 +519,20 @@ https://dl.dropboxusercontent.com/s/fqbluiaj5ub6md1/Download.htm?dl=0
 
 
 
+    if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
+        {
+ 
 
  
+    }else{
+
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('NoData')
+                    });
+
+
+
+    }

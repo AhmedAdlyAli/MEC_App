@@ -101,7 +101,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":Ext.Global.identityNum,//"21463400042",
+                var requestData2 = {"qid":"21463400042", //Ext.Global.identityNum,//
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "sessionID": Ext.Global.userSupplyToken};
@@ -433,8 +433,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItems';
 
         var requestData =
-            {"qid":Ext.Global.identityNum,//"21463400042",
-             "languageID": Ext.Global.LanguageFlag,
+            {"qid": Ext.Global.identityNum,//"21463400042",//
+             "languageID": Ext.Global.LanguageFlag=='ar'?2:1,
              "mobileDeviceID":"1231",
              "dealerID": view2Data.DealerID,
              orderItems: orderItems,

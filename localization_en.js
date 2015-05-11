@@ -943,7 +943,8 @@ var localeEn =
 	            errConnection: 'There was a problem connecting to the System',
 	            errNoSearchData: 'No Data available for your Search Query',
 	            NoData: 'Sorry, No Data available',
-	            Message:'Message'
+	            Message:'Message',
+	            NoDataPrintoffs:'You can\'t submit PrintOff request for CR or CP because you don\'t have any establishments'
 				}
 
 }

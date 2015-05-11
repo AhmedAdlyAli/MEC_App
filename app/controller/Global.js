@@ -60,8 +60,29 @@ Ext.define('MEC_App.controller.Global', {
 
         var config={
 
-            webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+
+             //webServiceUrl : 'https://wsvcs.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+
+
+
             supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
+            SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
+
+
+
+
+            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
+            BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+
+
+
+
+
+            webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+
+
+
+
 
 
             //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
@@ -70,10 +91,6 @@ Ext.define('MEC_App.controller.Global', {
             //supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',
             //payment: https://supply.mec.gov.qa/mservice/paymentservice/...
 
-            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
-            SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/CS_VPC_3Party_DO_mob.aspx',
-
-            BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx'
 
 
 

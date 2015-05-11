@@ -537,17 +537,24 @@ Ext.define('MEC_App.view.PrintOffsView1', {
             jsonData :requestData,
             success : function (response) {
 
+                        Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
 
-                //var view = me.getPrintOffsView1();
 
-                me.setData(json.listOfPrimaryEstablishment.primaryEstablishment);
+             if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
+             {
 
-                Ext.AnimationHelper.HideLoading();
+               me.setData(json.listOfPrimaryEstablishment.primaryEstablishment);
 
-                console.log(json.listOfPrimaryEstablishment.primaryEstablishment);
-
+            }else{
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Error'),
+                    buttons:[Ext.Localization.GetMessage('OK')],
+                    message: Ext.Localization.GetMessage('NoDataPrintoffs')
+                });
+            }
 
             }
         });
