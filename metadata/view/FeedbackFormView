@@ -200,7 +200,7 @@
                                 "id": "img5",
                                 "itemId": "img1",
                                 "layout|flex": 1,
-                                "src": "resources/images/logo.png",
+                                "src": "resources/images/attach-default.png",
                                 "width": null
                             },
                             "name": "MyImg",
@@ -240,7 +240,7 @@
                                 "id": "img6",
                                 "itemId": "img2",
                                 "layout|flex": 1,
-                                "src": "resources/images/logo.png",
+                                "src": "resources/images/attach-default.png",
                                 "width": null
                             },
                             "name": "MyImg1",
@@ -295,7 +295,7 @@
                                 "id": "img7",
                                 "itemId": "img3",
                                 "layout|flex": 1,
-                                "src": "resources/images/logo.png",
+                                "src": "resources/images/attach-default.png",
                                 "width": null
                             },
                             "name": "MyImg2",
@@ -335,7 +335,7 @@
                                 "id": "img8",
                                 "itemId": "img4",
                                 "layout|flex": 1,
-                                "src": "resources/images/logo.png",
+                                "src": "resources/images/attach-default.png",
                                 "width": 200
                             },
                             "name": "MyImg3",

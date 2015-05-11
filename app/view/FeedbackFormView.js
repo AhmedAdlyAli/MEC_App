@@ -102,14 +102,14 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 height: 120,
                                 id: 'img5',
                                 itemId: 'img1',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             },
                             {
                                 xtype: 'image',
                                 flex: 1,
                                 id: 'img6',
                                 itemId: 'img2',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             }
                         ]
                     },
@@ -123,7 +123,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 height: 120,
                                 id: 'img7',
                                 itemId: 'img3',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             },
                             {
                                 xtype: 'image',
@@ -132,7 +132,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 id: 'img8',
                                 itemId: 'img4',
                                 width: 200,
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             }
                         ]
                     },
