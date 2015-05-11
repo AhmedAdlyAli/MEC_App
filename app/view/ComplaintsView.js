@@ -40,7 +40,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'ابلغ عن شكوي',
+                html: 'ابلغ عن شكوى',
                 itemId: 'viewLbl'
             },
             {
@@ -78,7 +78,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         itemId: 'txtCategory',
                         labelWidth: '40%',
                         name: 'txtCategory',
-                        placeHolder: 'نوع الشكوي',
+                        placeHolder: 'نوع الشكوى',
                         readOnly: true,
                         listeners: [
                             {
@@ -90,7 +90,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "نوع الشكوي",
+                                            title: "نوع الشكوى",
                                             items: [
                                             { text: "Type 1", value: "Type 1" },
                                             { text: "Type 2", value: "Type 2" },
@@ -125,7 +125,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         labelWidth: '40%',
                         name: 'txtComplaint',
                         required: true,
-                        placeHolder: 'نص الشكوي'
+                        placeHolder: 'نص الشكوى'
                     },
                     {
                         xtype: 'textfield',

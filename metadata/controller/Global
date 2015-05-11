@@ -190,7 +190,7 @@
             "userConfig": {
                 "fn": "GetFixedTitle",
                 "implHandler": [
-                    "        return '<div class=\"fixed-ar-title\">وزارة الاقتصاد و التجارة</div><div class=\"fixed-en-title\">MINISTRY OF ECONOMY AND COMMERCE</div>';"
+                    "        return '<img src=\"resources/images/toplogo.png\" />';"
                 ]
             },
             "name": "GetFixedTitle",

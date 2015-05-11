@@ -35,7 +35,7 @@
                 "id": "pnlMain",
                 "itemId": "pnlMain",
                 "layout": "vbox",
-                "title": "<div class=\"fixed-ar-title\">وزارة الاقتصاد و التجارة</div><div class=\"fixed-en-title\">MINISTRY OF ECONOMY AND COMMERCE</div>"
+                "title": "<img src=\"resources/images/toplogo.png\" />"
             },
             "name": "MyPanel",
             "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
@@ -54,9 +54,13 @@
                         "indicator": false,
                         "itemId": "NewsCarousel",
                         "layout|flex": 1,
+                        "showAnimation": null,
                         "ui": null
                     },
                     "name": "MyCarousel",
+                    "configAlternates": {
+                        "directionLock": "boolean"
+                    },
                     "designerId": "c82447c1-f5d1-4f6e-ac3f-76b9e88690d5",
                     "cn": [
                         {
@@ -180,9 +184,6 @@
                                     "",
                                     "    }",
                                     "});",
-                                    "",
-                                    "",
-                                    "",
                                     "",
                                     "",
                                     "var carousel = this;",

@@ -15,14 +15,14 @@ var localeAr =
 		{
 			itemId:"ConsumerServiceView",
 			items: [
-				{Name:"ابلاغ عن شكوي", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
+				{Name:"ابلاغ عن شكوى", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
 				{Name:"خدمات التموين", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
 		{
 			itemId:"SupplyServiceListing",
 			items: [
-				{Name:"كيفية الحصول علي خدمات التموين", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"كيفية الحصول على خدمات التموين", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"بياناتي", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"طلب شراء مواد تموينية", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"أقرب منفذ توزيع", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
@@ -34,10 +34,10 @@ var localeAr =
 			itemId:"MediaCenterView",
 			items: [
 				{Name:"أخبار الوزارة", CatID:1, Icon:"ico-ministry-news.png"},
-				{Name:"إنعكاسات", CatID:8, Icon:"ico-news-about.png"},
-				{Name:"أخبار جهات رسميه اقليمية مشابهه", CatID:2, Icon:"ico-news-local-similar.png"},
+				{Name:"اخبار عن الوزارة", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"أخبار جهات رسمية اقليمية مشابهة", CatID:2, Icon:"ico-news-local-similar.png"},
 				{Name:"أخبار اقتصادية اقليمية", CatID:4, Icon:"ico-news-local-economic.png"},
-				{Name:"أخبار جهات رسميه دولية مشابهه", CatID:6, Icon:"ico-news-international-similar.png"},
+				{Name:"أخبار جهات رسمية دولية مشابهة", CatID:6, Icon:"ico-news-international-similar.png"},
 				{Name:"أخبار اقتصادية دولية", CatID:9, Icon:"ico-news-international-economic.png"}
 			]
 		},
@@ -48,9 +48,9 @@ var localeAr =
 				{Name:"البحث عن اسم تجاري", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
 				{Name:"البحث عن نشاط تجاري", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
 				{Name:"الاستدعاءات", Url:"RecallsView", Icon:"ico-recall-item.png"},
+				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"},
 				{Name:"ثقافة المستهلك", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
-				{Name:"ثقافة المستثمر", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
-				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"}
+				{Name:"ثقافة المستثمر", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"}
 			]
 		},
 
@@ -114,7 +114,7 @@ var localeAr =
 			itemId:"AdminServicesView",
 			items: [{Name:'تجديد السجل التجاري',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Renewal+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'تجديد الرخصة التجارية',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+CP+Renew+General+Instructions+View+eService', OpenExternalWindow:true},
-             {Name:'تغيير الإسم التجارى',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
+             {Name:'تغيير الإسم التجاري',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'تغيير المدراء (المخولين بالتوقيع)',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'محو فرع',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'محو سجل رئيسي',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
@@ -203,12 +203,12 @@ var localeAr =
 				errDeliveryMethod:'برجاء اختيار طريقة الاستلام \n',
 				cantSubmitCR:'هذه المنشأة ليس لها سجل تجاري',
 				cantSubmitCP:'هذه المنشأة ليس لها رخصة تجاري',
-				FeedbackSubmitted:'شكرا علي ارسال المقترح، يسعدنا تواصلك',
+				FeedbackSubmitted:'شكرا على ارسال المقترح، يسعدنا تواصلك',
 				Thanks:'شكرا',
 				ErrNocrcp:'لا يمكن عرض بيانات اسم تجاري محجوز',
 				errShopName:'فضلا ادخل اسم المتجر\n',
-	            errComplaintType:'فضلا اختر نوع الشكوي\n',
-	            errComplaintText:'فضلا ادخل نص الشكوي\n',
+	            errComplaintType:'فضلا اختر نوع الشكوى\n',
+	            errComplaintText:'فضلا ادخل نص الشكوى\n',
 	            errFullName:'فضلا ادخل الاسم بالكامل\n',
 	            errMobile:'فضلا ادخل رقم الجوال\n',
 	            errUserName:'فضلا ادخل اسم المستخدم\n',

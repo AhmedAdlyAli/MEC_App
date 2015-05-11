@@ -121,7 +121,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'راس مال الشركة'
+                                html: 'رأس مال الشركة'
                             },
                             {
                                 xtype: 'label',
@@ -157,7 +157,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس'
+                                html: 'تاريخ التأسيس'
                             },
                             {
                                 xtype: 'label',
@@ -166,7 +166,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشاة'
+                                html: 'نوع المنشأة'
                             },
                             {
                                 xtype: 'label',
@@ -184,7 +184,7 @@ Ext.define('MEC_App.view.MyBranchDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة المنشاة'
+                                html: 'حالة المنشأة'
                             },
                             {
                                 xtype: 'label',

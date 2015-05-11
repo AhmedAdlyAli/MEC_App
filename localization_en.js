@@ -22,10 +22,10 @@ var localeEn =
 		{
 			itemId:"SupplyServiceListing",
 			items: [
-				{Name:"How to request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"How to Request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"My Details", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
-				{Name:"Nearest Dealer", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
+				{Name:"Nearest Distributor", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"Department Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
@@ -33,7 +33,7 @@ var localeEn =
 			itemId:"MediaCenterView",
 			items: [
 				{Name:"Ministry News", CatID:1, Icon:"ico-ministry-news.png"},
-				{Name:"Reflections", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"News About the Ministry", CatID:8, Icon:"ico-news-about.png"},
 				{Name:"Similar Regional Official News", CatID:2, Icon:"ico-news-local-similar.png"},
 				{Name:"Regional Economic News", CatID:4, Icon:"ico-news-local-economic.png"},
 				{Name:"Similar Int. Official News", CatID:6, Icon:"ico-news-international-similar.png"},
@@ -47,9 +47,9 @@ var localeEn =
 				{Name:"Find a Commercial Name", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
 				{Name:"Find a Commercial Activity", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
 				{Name:"Recalls", Url:"RecallsView", Icon:"ico-recall-item.png"},
+				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"},
 				{Name:"Consumer Awarness", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
-				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"},
-				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"}
+				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"}
 			]
 		},
 
@@ -104,10 +104,10 @@ var localeEn =
 			itemId:"InvestorServiceView",
 			items: [{Name:'My Establishments',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png', OpenExternalWindow:false},
                     {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png', OpenExternalWindow:false},
-                    {Name:'PrintOffs Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
+                    {Name:'Print Off Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
                     {Name:'Establishment Services',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png', OpenExternalWindow:true},
-                    {Name:'Reserve Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true}
+                    {Name:'Reserve a Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true}
                 ]
 		},
 
@@ -169,11 +169,11 @@ var localeEn =
 			[
 				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"companyName", "xtype": "textfield","value":"Company Name"},
-				{itemId:"txtPrintoutType", "xtype": "textfield","value":"PrintOff Type"},
+				{itemId:"txtPrintoutType", "xtype": "textfield","value":"Print Off Type"},
 				{itemId:"txtDeliveryMethod", "xtype": "textfield","value":"Delivery Method"},
 				{itemId:"txtNoOfCopies", "xtype": "textfield","value":"No of Copies"},
 				{itemId:"btnPrintoffsNext", "xtype": "button","value":"Next"},
-				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
 			]
 		},
 
@@ -183,14 +183,14 @@ var localeEn =
 			items:
 			[
 				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"lbl1", "xtype": "label","value":"PrintOff Type"},
+				{itemId:"lbl1", "xtype": "label","value":"Print Off Type"},
 				{itemId:"lbl2", "xtype": "label","value":"No Of Copies"},
 				{itemId:"lbl3", "xtype": "label","value":"Establishment Name"},
 				{itemId:"lbl4", "xtype": "label","value":"Total Fees"},
 				{itemId:"lbl5", "xtype": "label","value":"Request Number"},
 				{itemId:"lbl6", "xtype": "label","value":"Request Status"},
 				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confrim & Pay"},
-				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
 			]
 		},
 
@@ -200,7 +200,7 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblTitle", "xtype": "label","value":"PrintOff Request"}
+				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
 			]
 		},	
 
@@ -821,7 +821,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"InitiativeName", xtype: "label",value:"Initiative Name"},
-				{itemId:"AboutInitiative", xtype: "label",value:"About Initiative"},
+				{itemId:"AboutInitiative", xtype: "label",value:"About The Initiative"},
 				{itemId:"ContactInfo", xtype: "label",value:"Contact Information"}
 			]
 		},
@@ -874,7 +874,7 @@ var localeEn =
 				PrintType2: 'CR Offprint - English',
 				PrintType3: 'CP Replacement Certificate',
 				PrintType4: 'CR Clearance Certificate'	,
-				PrintType: 'Printoff Type' ,
+				PrintType: 'Print Off Type' ,
 				DeliveryMethod: 'Delivery Method',
 				Personal: 'Personal',
 				Email: 'Email',

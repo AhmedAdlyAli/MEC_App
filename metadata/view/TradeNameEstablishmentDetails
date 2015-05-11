@@ -62,7 +62,7 @@
                         ],
                         "docked": "top",
                         "itemId": "mytitlebar",
-                        "title": "بيانات المنشاة",
+                        "title": "بيانات المنشأة",
                         "titleAlign": "right"
                     },
                     "name": "MyTitleBar",
@@ -176,7 +176,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "راس مال الشركة",
+                                "html": "رأس مال الشركة",
                                 "id": "companyCapital"
                             },
                             "name": "MyLabel4",
@@ -238,7 +238,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "نوع المنشاة",
+                                "html": "نوع المنشأة",
                                 "id": "establishmentType"
                             },
                             "name": "MyLabel10",
@@ -524,7 +524,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ التاسيس",
+                                "html": "تاريخ التأسيس",
                                 "id": "establishmentDate"
                             },
                             "name": "MyLabel9",
@@ -555,7 +555,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "حالة المنشاة",
+                                "html": "حالة المنشأة",
                                 "id": "establishmentStatus"
                             },
                             "name": "MyLabel12",
