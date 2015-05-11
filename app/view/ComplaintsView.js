@@ -73,7 +73,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
-                        hidden: false,
+                        hidden: true,
                         id: 'txtCategory',
                         itemId: 'txtCategory',
                         labelWidth: '40%',
@@ -288,25 +288,85 @@ Ext.define('MEC_App.view.ComplaintsView', {
                             if(err.length>0){
 
                                 Ext.device.Notification.show({
-                                    title: 'خطأ',
-                                    buttons:["موافق"],
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons:[Ext.Localization.GetMessage('OK')],
                                     message: err
                                 });
                             }else{
 
 
-                                Ext.device.Notification.show({
-                                    title: 'رسالة',
-                                    buttons: ["موافق"],
-                                    message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
-                                    callback: function(button) {
 
-                                        //return user to home page
+                                //send emails with data
 
-                                        Ext.Viewport.getActiveItem().reset();
+
+
+
+
+
+
+
+
+                                //alert('loading');
+
+
+                                var requestData = {
+                                    "shopName": formData.shopName,
+                                    "shopLocation": formData.shopLocation,
+                                    "complaint": formData.txtComplaint,
+                                    "email":formData.email,
+                                    "barcode":formData.txtBarCode,
+                                    "fullName":formData.fullName,
+                                    "mobile":formData.mobile,
+
+                                    "identityNationality":  Ext.Global.identityNationality
+                                };
+
+
+
+
+
+
+                                var me = this;
+
+                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaintsEmail';
+
+
+                                Ext.AnimationHelper.ShowLoading();
+
+                                Ext.Ajax.request({
+
+                                    url : url,
+                                    method : 'POST',
+                                    jsonData :requestData,
+                                    success : function (response) {
+
+                                        Ext.AnimationHelper.HideLoading();
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons:[Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                            callback: function(button) {
+
+                                                //return user to home page
+
+                                                Ext.Viewport.getActiveItem().reset();
+
+                                            }
+                                        });
+
+
 
                                     }
+
+
                                 });
+
+
+                                //==========================================
+
+
 
 
                             }

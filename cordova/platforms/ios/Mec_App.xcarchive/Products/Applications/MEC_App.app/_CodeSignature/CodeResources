@@ -54,7 +54,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		T46Xpk3ymmTLeyHWDYzvxZvfkrc=
+		c0LbMVKADzHP8sQanMvREQfBA94=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		CbMmvlY8cRxD1zg41v3G5aEk8ek=
+		sb61H7tT8s79gAN9Yqfz+pyH8EM=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		VDZV7MvM7IWHhSnxG+74ITPK+cs=
+		NUn5TBWxehEsfpUTpmEwvu1Z+Bg=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -323,6 +323,10 @@
 		<key>www/resources/images/arrow-up.png</key>
 		<data>
 		6ZCRRWCgSnypenAYqTbHwcrwlDg=
+		</data>
+		<key>www/resources/images/attach-default.png</key>
+		<data>
+		5E5rE753aGXW4IZdFO6WL8K+3zA=
 		</data>
 		<key>www/resources/images/b-address.png</key>
 		<data>
@@ -789,7 +793,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		T46Xpk3ymmTLeyHWDYzvxZvfkrc=
+		c0LbMVKADzHP8sQanMvREQfBA94=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -869,11 +873,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		CbMmvlY8cRxD1zg41v3G5aEk8ek=
+		sb61H7tT8s79gAN9Yqfz+pyH8EM=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		VDZV7MvM7IWHhSnxG+74ITPK+cs=
+		NUn5TBWxehEsfpUTpmEwvu1Z+Bg=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -1054,6 +1058,10 @@
 		<key>www/resources/images/arrow-up.png</key>
 		<data>
 		6ZCRRWCgSnypenAYqTbHwcrwlDg=
+		</data>
+		<key>www/resources/images/attach-default.png</key>
+		<data>
+		5E5rE753aGXW4IZdFO6WL8K+3zA=
 		</data>
 		<key>www/resources/images/b-address.png</key>
 		<data>

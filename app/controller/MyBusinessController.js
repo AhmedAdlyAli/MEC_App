@@ -75,18 +75,47 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             jsonData :requestData,
             success : function (response) {
 
+
+
+                Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
                 //Companies
-                var storeCompanies = new Ext.data.Store({
-                    data : json.listOfPrimaryEstablishment.primaryEstablishment
-                });
+
 
 
                 var view = me.getMyBusinessView();
 
 
-                var lstComapnies = view.down('#lstMyCompanies');
+                if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
+                {
+
+                var storeCompanies = new Ext.data.Store({
+                    data : json.listOfPrimaryEstablishment.primaryEstablishment
+                });
+
+
+                    var lstComapnies = view.down('#lstMyCompanies');
+
+                     lstComapnies.setStore(storeCompanies);
+
+            }else{
+
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
+                                message: Ext.Localization.GetMessage('NoData')
+                            });
+
+
+
+            }
+
+
+
+
 
 
         /*
@@ -108,9 +137,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         */
 
 
-                lstComapnies.setStore(storeCompanies);
-
-                Ext.AnimationHelper.HideLoading();
 
 
             }
@@ -367,8 +393,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-
-
         //Ext.AnimationHelper.ShowLoading();
 
 
@@ -413,8 +437,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-
-
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
 
 
@@ -434,6 +456,10 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);
                 view.down('#establishmentRegNumber').setHtml(company.moiEstablishmentId);
+
+
+
+
 
 
                 if(company.listOfSignatories.signatories.length>0)

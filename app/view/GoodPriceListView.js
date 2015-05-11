@@ -50,7 +50,8 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell1',
-                        html: 'اسم المحل'
+                        html: 'اسم المحل',
+                        itemId: 'shopName'
                     },
                     {
                         xtype: 'label',

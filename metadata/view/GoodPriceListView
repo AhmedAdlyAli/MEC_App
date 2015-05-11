@@ -67,6 +67,7 @@
                         ],
                         "docked": null,
                         "html": "اسم المحل",
+                        "itemId": "shopName",
                         "layout|flex": 1
                     },
                     "name": "MyLabel34",

@@ -50,6 +50,7 @@ Ext.define('MEC_App.view.NewsListItem', {
                         xtype: 'label',
                         flex: 1,
                         cls: 'lstng-brief',
+                        hidden: false,
                         html: ' '
                     }
                 ]
@@ -68,7 +69,7 @@ Ext.define('MEC_App.view.NewsListItem', {
 
                 me.down('#imgNews').setSrc(imgSrc);
                 me.down('#textCmp').setHtml(record.get('NewsTitle'));
-                me.down('label').setHtml(record.get('NewsBrief'));
+                //me.down('label').setHtml(record.get('NewsBrief'));
             }
         }
     },

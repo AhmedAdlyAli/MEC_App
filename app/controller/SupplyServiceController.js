@@ -101,7 +101,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":Ext.Global.identityNum,//"21463400042",
+                var requestData2 = {"qid":Ext.Global.identityNum,//"21463400042", //
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "sessionID": Ext.Global.userSupplyToken};
@@ -114,16 +114,21 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     jsonData :requestData2,
                     success : function (response) {
 
+                        Ext.AnimationHelper.HideLoading();
+
+
+
                         var json1 = Ext.util.JSON.decode(response.responseText);
                         var json2 = Ext.util.JSON.decode(json1.d);
 
+                        if(json2.length>0)
+                        {
                         view.setData(json2.Data.Items);
 
                         var fsItems = view.down('#fsItems');
 
                         Ext.each(json2.Data.Items, function(item){
                             fsItems.add(
-
                                 {
                                     xtype: 'spinnerfield',
                                     label: item.Name,
@@ -137,8 +142,26 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             );
 
                         });
+                        }else{
 
-                        Ext.AnimationHelper.HideLoading();
+                        Ext.device.Notification.show({
+                            title: Ext.Localization.GetMessage('Error'),
+                            buttons: [Ext.Localization.GetMessage('OK')],
+                            message:  Ext.Localization.GetMessage('NoDataSupply')
+                        });
+
+
+
+
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+
+
+
+
+
+
+
+                        }
 
 
                     },
@@ -433,8 +456,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItems';
 
         var requestData =
-            {"qid":Ext.Global.identityNum,//"21463400042",
-             "languageID": Ext.Global.LanguageFlag,
+            {"qid": Ext.Global.identityNum,//"21463400042",//
+             "languageID": Ext.Global.LanguageFlag=='ar'?2:1,
              "mobileDeviceID":"1231",
              "dealerID": view2Data.DealerID,
              orderItems: orderItems,

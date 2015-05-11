@@ -39,20 +39,28 @@ Ext.define('MEC_App.controller.GoodPriceListController', {
             method : 'Get',
             success : function (response) {
 
+                        Ext.AnimationHelper.HideLoading();
+
+
+
+
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
+                if(json.ProductPrices.length>0)
 
-                var store = new Ext.data.Store({
-                    data : json.ProductPrices
-                });
+                {
 
-                var lstPrices = view.down('#lstPrices');
-                lstPrices.setStore(store).setHeight(json.ProductPrices.length * 2.5 + 'em');
+                    var store = new Ext.data.Store({
+                        data : json.ProductPrices
+                    });
+
+                    var lstPrices = view.down('#lstPrices');
+                    lstPrices.setStore(store).setHeight(json.ProductPrices.length * 2.5 + 'em');
+
+                }
 
 
-
-
-                Ext.AnimationHelper.HideLoading();
             }
         });
 

@@ -81,7 +81,9 @@ Ext.define('MEC_App.controller.Localization', {
                             if(item.xtype=='button') viewItem.setText(item.value);
                             if(item.xtype=='label') viewItem.setHtml(item.value);
                             if(item.xtype=='titlebar') viewItem.setTitle(item.value).setTitleAlign(item.align);
-                            //if(item.xtype=='container') viewItem.setTitle(item.value);
+
+                                if(item.xtype=='container') viewItem.tab.setTitle(item.value);
+
                             if(item.xtype=='textfield' || item.xtype=='numberfield' || item.xtype=='emailfield' || item.xtype=='textareafield')
                             {
                                 viewItem.setPlaceHolder(item.value);

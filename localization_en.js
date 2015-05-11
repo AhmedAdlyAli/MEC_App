@@ -523,6 +523,22 @@ var localeEn =
 		},
 
 
+
+		{
+			itemId:"AboutAppView",
+			description: "About app",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"About The Application"},
+				
+				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+
+
 		{
 			itemId:"ComplaintsView",
 			description: "Complaints...",
@@ -700,8 +716,8 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Consumer Goods Prices"},
-				//{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
-				//{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
+				{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
+				{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
 				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstShops", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstProducts", xtype: "cls",value:"ltr-cls"}
@@ -722,7 +738,13 @@ var localeEn =
 				{itemId:"ProductName2", xtype: "label",value:"Product Name"},
 				{itemId:"ProductPrice2", xtype: "label",value:"Price / Kilo"},
 				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
-				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"}
+				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"},
+				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegentsbles"},
+				{itemId:"FruitsContainer", xtype: "container",value:"Fruits"},
+				{itemId:"FishContainer", xtype: "container",value:"Fish"}
+
+
+
 			]
 		},
 
@@ -740,6 +762,16 @@ var localeEn =
 				{itemId:"Price", xtype: "label",value:"Price"}
 			]
 		},
+
+	{
+			itemId:"GoodPriceListView",
+			description: "",
+			items:
+			[
+				{itemId:"shopName", xtype: "label",value:"Shop Name"}
+			]
+		},
+
 
 
 		{
@@ -798,7 +830,8 @@ var localeEn =
 				{itemId:"btnReports", "xtype": "button","value":"Indicators & Reports"},
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
-				{itemId:"btnLogout", "xtype": "button","value":"Logout"}
+				{itemId:"btnLogout", "xtype": "button","value":"Logout"},
+				{itemId:"btnAboutApp", "xtype": "button","value":"About the App"}
 
 			]
 
@@ -910,7 +943,12 @@ var localeEn =
 	            errConnection: 'There was a problem connecting to the System',
 	            errNoSearchData: 'No Data available for your Search Query',
 	            NoData: 'Sorry, No Data available',
-	            Message:'Message'
+	            Message:'Message',
+	            NoDataPrintoffs:'You can\'t submit PrintOff request for CR or CP because you don\'t have any establishments',
+	            errNOC:'You can\'t request this type of Certificate because you have associated companies',
+	            NoDataSupply: 'You don\'t have data in the supply System',
+	            ComplaintsConfirmation:'Thank You, Complaint has been sent successfully',
+	            GeneralError: 'Sorry, Error occured'
 				}
 
 }
