@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.ProjectsView', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -35,6 +36,9 @@ Ext.define('MEC_App.view.ProjectsView', {
                 docked: 'top',
                 html: 'المبادرات والمشاريع',
                 itemId: 'lblTitle'
+            },
+            {
+                xtype: 'panel'
             },
             {
                 xtype: 'list',

@@ -20,6 +20,7 @@ Ext.define('MEC_App.view.MainNavView', {
     requires: [
         'Ext.Panel',
         'Ext.carousel.Carousel',
+        'Ext.Spacer',
         'Ext.Label',
         'Ext.Button',
         'Ext.Menu',
@@ -156,8 +157,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'services'
                                             },
                                             {
@@ -167,6 +171,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 html: 'الخدمات العامة',
                                                 id: 'homeServices',
                                                 itemId: 'homeServices'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',
@@ -187,8 +194,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'media'
                                             },
                                             {
@@ -197,6 +207,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 cls: 'home-icon-text',
                                                 html: 'المركز الاعلامي',
                                                 itemId: 'btnMediaCenter'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',
@@ -224,8 +237,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'inquiries'
                                             },
                                             {
@@ -234,6 +250,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 cls: 'home-icon-text',
                                                 html: 'الاستعلامات والاصدارات ',
                                                 itemId: 'homeInquire'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',
@@ -255,8 +274,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'reports'
                                             },
                                             {
@@ -265,6 +287,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 cls: 'home-icon-text',
                                                 html: 'المؤشرات والتقارير',
                                                 itemId: 'homeReports'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',
@@ -293,8 +318,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'projects'
                                             },
                                             {
@@ -303,6 +331,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 cls: 'home-icon-text',
                                                 html: 'المبادرات والمشاريع',
                                                 itemId: 'btnProjects'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',
@@ -324,8 +355,11 @@ Ext.define('MEC_App.view.MainNavView', {
                                         layout: 'vbox',
                                         items: [
                                             {
+                                                xtype: 'spacer'
+                                            },
+                                            {
                                                 xtype: 'panel',
-                                                flex: 2,
+                                                flex: 1,
                                                 cls: 'contact'
                                             },
                                             {
@@ -334,6 +368,9 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 cls: 'home-icon-text',
                                                 html: 'التواصل',
                                                 itemId: 'homeContact'
+                                            },
+                                            {
+                                                xtype: 'spacer'
                                             },
                                             {
                                                 xtype: 'button',

@@ -78,6 +78,7 @@
                     "userConfig": {
                         "id": "txtActivityName",
                         "label": "الاسم التجاري",
+                        "labelWidth": "35%",
                         "name": "txtActivityName",
                         "placeHolder": "الاسم التجاري"
                     },

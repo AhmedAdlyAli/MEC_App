@@ -158,8 +158,11 @@ body {
     .home-icon-text {
         color: #fff;
         text-align: center;
-        margin: 2% 0 15%;
         font-size: 85%;
+        
+        .x-innerhtml {
+            margin: 5% 0 0;
+        }
     }
 
     .btn-services {
@@ -169,7 +172,6 @@ body {
     .services {
         background: url(../images/home-icon-public-services.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 
     .btn-news {
@@ -179,7 +181,6 @@ body {
     .media {
         background: url(../images/home-icon-media.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 
     .btn-reports {
@@ -189,7 +190,6 @@ body {
     .reports {
         background: url(../images/home-icon-reports.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 
     .btn-inquire {
@@ -199,7 +199,6 @@ body {
     .inquiries {
         background: url(../images/home-icon-inquiries.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 
     .btn-projects {
@@ -209,7 +208,6 @@ body {
     .projects {
         background: url(../images/home-icon-projects.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 
     .btn-contact {
@@ -219,7 +217,6 @@ body {
     .contact {
         background: url(../images/home-icon-contact.png) no-repeat center;
         background-size: contain;
-        margin: 15% 0 3%;
     }
 }
 
@@ -508,14 +505,6 @@ body {
         display: block;
         font-family: HelveticaNeueLTStd57Condensed;
         margin: 0 0 5px;
-
-        &.call {
-            background: url(../images/contact-us-item-icon.png) no-repeat 96% center;
-        }
-
-        &.mail {
-            background: url(../images/mail.png) no-repeat 96% center;
-        }
     }
 
     .map-panel {
@@ -1762,14 +1751,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     a {
         padding: 0 0 0 50px;
-
-        &.call {
-            background: url(../images/contact-us-item-icon.png) no-repeat 4% center;
-        }
-
-        &.mail {
-            background: url(../images/mail.png) no-repeat 4% center;
-        }
     }
 
 

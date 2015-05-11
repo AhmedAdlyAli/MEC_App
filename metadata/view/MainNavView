@@ -269,6 +269,16 @@
                                     "designerId": "5fa8bfa3-784b-4e0c-a742-14a1224c9345",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer8",
+                                            "designerId": "ef89ce32-3241-4ef0-a6ff-4b302a01f6ad"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -279,7 +289,7 @@
                                                 "cls": [
                                                     "services"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel19",
                                             "designerId": "637c4a61-d93e-495e-9172-837c3d2d5160"
@@ -303,6 +313,16 @@
                                             },
                                             "name": "MyLabel3",
                                             "designerId": "e5ac3362-5c8a-45af-9b0b-50890ed9f959"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer9",
+                                            "designerId": "7af19fc2-a8ae-41a3-a09f-98d8a1f98417"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -344,6 +364,16 @@
                                     "designerId": "48ccc3c0-ac8a-4690-a1c4-68141ba83b35",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer6",
+                                            "designerId": "1ba21c4d-19ff-42df-9904-41cee31b8f1a"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -354,7 +384,7 @@
                                                 "cls": [
                                                     "media"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel20",
                                             "designerId": "7eb0c2d5-24bb-452d-af9e-9c9a7551181d"
@@ -377,6 +407,16 @@
                                             },
                                             "name": "MyLabel4",
                                             "designerId": "c58d646c-6f5b-4bac-a1e8-87f5093eea2e"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer7",
+                                            "designerId": "9005ae12-9a20-4dff-9d25-7b253d15aaf8"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -434,6 +474,16 @@
                                     "designerId": "6486e926-b7b6-497f-93d2-9fb334bacd9e",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer10",
+                                            "designerId": "2c368ada-5c7e-47cd-abd9-b56e76fe8456"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -444,7 +494,7 @@
                                                 "cls": [
                                                     "inquiries"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel19",
                                             "designerId": "c7a45b3d-9124-4e8a-8230-92130c071a72"
@@ -467,6 +517,16 @@
                                             },
                                             "name": "MyLabel3",
                                             "designerId": "941755a9-2965-4e9c-b341-d26246ac747e"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer11",
+                                            "designerId": "e1ed8d49-8bc1-4d21-82f6-d4afe8c11be6"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -509,6 +569,16 @@
                                     "designerId": "3421b558-3153-4449-8319-2e0fb4da807c",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer12",
+                                            "designerId": "00712964-23a7-4e72-a440-773144a74165"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -519,7 +589,7 @@
                                                 "cls": [
                                                     "reports"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel20",
                                             "designerId": "ee9c121f-2105-4fb0-ab11-086273deb4a6"
@@ -542,6 +612,16 @@
                                             },
                                             "name": "MyLabel4",
                                             "designerId": "ef5b3a77-235a-4713-a4e0-150b4e1a3fac"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer13",
+                                            "designerId": "26a92fe1-e875-463c-b7cb-aaec05cf150b"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -600,6 +680,16 @@
                                     "designerId": "af1b9f7e-8293-408c-b228-c795f2d7e726",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer14",
+                                            "designerId": "6d9a6361-9e0a-49a0-b5ed-1d361ef0ac2e"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -610,7 +700,7 @@
                                                 "cls": [
                                                     "projects"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel19",
                                             "designerId": "413311d1-3ed0-40aa-b33b-06a6a613f580"
@@ -633,6 +723,16 @@
                                             },
                                             "name": "MyLabel3",
                                             "designerId": "263aae88-0a26-42c0-8506-ec68cb455ed1"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer15",
+                                            "designerId": "39552971-26a2-4494-8633-1537e11a65d6"
                                         },
                                         {
                                             "type": "Ext.Button",
@@ -675,6 +775,16 @@
                                     "designerId": "fa3d2036-43d9-480d-97de-6c961780430b",
                                     "cn": [
                                         {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer16",
+                                            "designerId": "999e2071-2b15-4f73-bc62-826871692e1e"
+                                        },
+                                        {
                                             "type": "Ext.Panel",
                                             "reference": {
                                                 "name": "items",
@@ -685,7 +795,7 @@
                                                 "cls": [
                                                     "contact"
                                                 ],
-                                                "layout|flex": 2
+                                                "layout|flex": 1
                                             },
                                             "name": "MyPanel20",
                                             "designerId": "71355838-8537-4406-bc33-e8ef17a0a953"
@@ -708,6 +818,16 @@
                                             },
                                             "name": "MyLabel4",
                                             "designerId": "5070b90e-2f76-4e28-9e1c-06eb24c03b93"
+                                        },
+                                        {
+                                            "type": "Ext.Spacer",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "name": "MySpacer17",
+                                            "designerId": "1eab51d9-5cd1-4527-88de-09cbca8cabca"
                                         },
                                         {
                                             "type": "Ext.Button",

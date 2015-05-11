@@ -56,6 +56,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         xtype: 'textfield',
                         itemId: 'txtFullName',
                         label: 'الاسم بالكامل',
+                        labelWidth: '40%',
                         name: 'fullName',
                         required: true,
                         placeHolder: 'الاسم بالكامل'
@@ -64,6 +65,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         xtype: 'emailfield',
                         itemId: 'txtEmail',
                         label: 'البريد الالكتروني',
+                        labelWidth: '40%',
                         name: 'email',
                         placeHolder: 'البريد الالكتروني'
                     },
@@ -74,6 +76,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                             type: 'tel'
                         },
                         label: 'رقم الهاتف',
+                        labelWidth: '40%',
                         name: 'mobile',
                         required: true,
                         placeHolder: 'رقم الهاتف'
@@ -82,6 +85,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         xtype: 'textareafield',
                         itemId: 'txtComment',
                         label: 'نص المقترح',
+                        labelWidth: '40%',
                         name: 'suggestion',
                         required: true,
                         placeHolder: 'نص المقترح'

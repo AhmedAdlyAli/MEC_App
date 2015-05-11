@@ -37,6 +37,16 @@
             "designerId": "8e61c6c0-9514-4fde-9c36-efc63600516a"
         },
         {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "name": "MyPanel15",
+            "designerId": "116c6c76-97ba-440b-9baf-5cd3ed953e6d"
+        },
+        {
             "type": "Ext.dataview.List",
             "reference": {
                 "name": "items",

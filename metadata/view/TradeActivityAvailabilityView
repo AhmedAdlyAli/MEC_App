@@ -61,6 +61,7 @@
                     "userConfig": {
                         "id": "txtActivity",
                         "label": "اسم النشاط",
+                        "labelWidth": "35%",
                         "name": "txtActivity",
                         "placeHolder": "اسم النشاط"
                     },

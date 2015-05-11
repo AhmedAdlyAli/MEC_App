@@ -35,7 +35,7 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'كيفية الحصول علي خدمات التموين',
+                html: 'كيفية الحصول على خدمات التموين',
                 id: 'lblTitle',
                 itemId: 'lblTitle'
             },

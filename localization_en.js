@@ -319,7 +319,7 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblInvestor", "xtype": "label","value":"investor Services"},
+				{itemId:"lblInvestor", "xtype": "label","value":"Investor Services"},
 				{itemId:"lstLinks1", "xtype": "cls","value":"ltr-cls"}
 			]
 		},

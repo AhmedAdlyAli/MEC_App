@@ -56,6 +56,7 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                         xtype: 'textfield',
                         id: 'txtActivityName',
                         label: 'الاسم التجاري',
+                        labelWidth: '35%',
                         name: 'txtActivityName',
                         placeHolder: 'الاسم التجاري'
                     },

@@ -94,6 +94,7 @@
                         "itemId": "txtFullName",
                         "label": "الاسم بالكامل",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "fullName",
                         "placeHolder": "الاسم بالكامل",
                         "required": true
@@ -113,6 +114,7 @@
                         "itemId": "txtEmail",
                         "label": "البريد الالكتروني",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "email",
                         "placeHolder": "البريد الالكتروني"
                     },
@@ -134,6 +136,7 @@
                         "itemId": "txtMobile",
                         "label": "رقم الهاتف",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "mobile",
                         "placeHolder": "رقم الهاتف",
                         "required": true
@@ -153,6 +156,7 @@
                         "itemId": "txtComment",
                         "label": "نص المقترح",
                         "labelAlign": null,
+                        "labelWidth": "40%",
                         "name": "suggestion",
                         "placeHolder": "نص المقترح",
                         "required": true
