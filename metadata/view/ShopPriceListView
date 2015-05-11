@@ -65,6 +65,7 @@
                         ],
                         "docked": null,
                         "html": "اسم المنتج",
+                        "itemId": "productName",
                         "layout|flex": 1
                     },
                     "name": "MyLabel36",

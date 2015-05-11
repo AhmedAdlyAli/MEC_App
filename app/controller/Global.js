@@ -163,11 +163,7 @@ Ext.define('MEC_App.controller.Global', {
         if(JsonDate==='')return;
 
 
-
-        try{
-
-
-        if(JsonDate && JsonDate!=='' & JsobData!==null)
+        if(JsonDate && JsonDate!=='' & JsonDate!==null)
         {
             var ds = JsonDate;
 
@@ -311,11 +307,7 @@ Ext.define('MEC_App.controller.Global', {
         }
 
 
-            }
-        catch(err){
 
-            return JsonDate;
-        }
 
     },
 

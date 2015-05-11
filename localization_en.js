@@ -698,8 +698,8 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Consumer Goods Prices"},
-				//{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
-				//{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
+				{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
+				{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
 				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstShops", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstProducts", xtype: "cls",value:"ltr-cls"}
@@ -720,7 +720,13 @@ var localeEn =
 				{itemId:"ProductName2", xtype: "label",value:"Product Name"},
 				{itemId:"ProductPrice2", xtype: "label",value:"Price / Kilo"},
 				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
-				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"}
+				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"},
+				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegentsbles"},
+				{itemId:"FruitsContainer", xtype: "container",value:"Fruits"},
+				{itemId:"FishContainer", xtype: "container",value:"Fish"}
+
+
+
 			]
 		},
 
@@ -738,6 +744,16 @@ var localeEn =
 				{itemId:"Price", xtype: "label",value:"Price"}
 			]
 		},
+
+	{
+			itemId:"GoodPriceListView",
+			description: "",
+			items:
+			[
+				{itemId:"shopName", xtype: "label",value:"Shop Name"}
+			]
+		},
+
 
 
 		{
