@@ -311,7 +311,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "راس مال الشركة",
+                                "html": "رأس مال الشركة",
                                 "id": null
                             },
                             "name": "MyLabel4",
@@ -439,7 +439,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ التاسيس",
+                                "html": "تاريخ التأسيس",
                                 "id": null
                             },
                             "name": "MyLabel9",
@@ -471,7 +471,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "نوع المنشاة",
+                                "html": "نوع المنشأة",
                                 "id": null
                             },
                             "name": "MyLabel10",
@@ -535,7 +535,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "حالة المنشاة",
+                                "html": "حالة المنشأة",
                                 "id": null
                             },
                             "name": "MyLabel12",

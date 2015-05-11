@@ -54,9 +54,13 @@
                         "indicator": false,
                         "itemId": "NewsCarousel",
                         "layout|flex": 1,
+                        "showAnimation": null,
                         "ui": null
                     },
                     "name": "MyCarousel",
+                    "configAlternates": {
+                        "directionLock": "boolean"
+                    },
                     "designerId": "c82447c1-f5d1-4f6e-ac3f-76b9e88690d5",
                     "cn": [
                         {
@@ -180,9 +184,6 @@
                                     "",
                                     "    }",
                                     "});",
-                                    "",
-                                    "",
-                                    "",
                                     "",
                                     "",
                                     "var carousel = this;",

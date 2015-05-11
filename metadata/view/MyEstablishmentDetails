@@ -180,7 +180,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "راس مال الشركة",
+                                "html": "رأس مال الشركة",
                                 "id": null,
                                 "itemId": "lbl7"
                             },
@@ -213,7 +213,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "حالة المنشاة",
+                                "html": "حالة المنشأة",
                                 "id": null,
                                 "itemId": "lbl14"
                             },
@@ -279,7 +279,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "نوع المنشاة",
+                                "html": "نوع المنشأة",
                                 "id": null,
                                 "itemId": "lbl12"
                             },
@@ -415,7 +415,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ التاسيس",
+                                "html": "تاريخ التأسيس",
                                 "id": null,
                                 "itemId": "lbl11"
                             },

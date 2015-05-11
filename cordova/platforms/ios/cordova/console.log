@@ -1235,3 +1235,9 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-10 23:45:37.011 MEC_App[16659:131846] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/4186ECD3-75B9-4EC6-9288-CE774980EEDC/MEC_App.app/www/index.html
 2015-05-10 23:45:44.921 MEC_App[16659:131846] THREAD WARNING: ['Notification'] took '16.149170' ms. Plugin should use a background thread.
 2015-05-10 23:46:15.897 MEC_App[16659:131846] THREAD WARNING: ['Notification'] took '21.909180' ms. Plugin should use a background thread.
+2015-05-11 02:04:57.381 MEC_App[59039:679388] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/87BF93CD-6AB6-42B1-A7B1-8D4663A3A725/Library/Cookies/Cookies.binarycookies
+2015-05-11 02:04:57.441 MEC_App[59039:679388] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 02:04:57.441 MEC_App[59039:679388] Multi-tasking -> Device: YES, App: YES
+2015-05-11 02:04:57.442 MEC_App[59039:679388] Unlimited access to network resources
+2015-05-11 02:04:57.602 MEC_App[59039:679388] Resetting plugins due to page load.
+2015-05-11 02:04:57.826 MEC_App[59039:679388] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/0CDCFFE6-D5B5-44E8-9833-4D70470C0AA2/MEC_App.app/www/index.html

@@ -86,7 +86,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'راس مال الشركة',
+                                html: 'رأس مال الشركة',
                                 itemId: 'lbl7'
                             },
                             {
@@ -96,7 +96,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة المنشاة',
+                                html: 'حالة المنشأة',
                                 itemId: 'lbl14'
                             },
                             {
@@ -116,7 +116,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشاة',
+                                html: 'نوع المنشأة',
                                 itemId: 'lbl12'
                             },
                             {
@@ -157,7 +157,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس',
+                                html: 'تاريخ التأسيس',
                                 itemId: 'lbl11'
                             },
                             {

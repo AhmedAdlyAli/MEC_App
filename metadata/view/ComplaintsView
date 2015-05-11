@@ -50,7 +50,7 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "ابلغ عن شكوي",
+                "html": "ابلغ عن شكوى",
                 "itemId": "viewLbl"
             },
             "name": "MyLabel3",
@@ -135,7 +135,7 @@
                         "label": null,
                         "labelWidth": "40%",
                         "name": "txtCategory",
-                        "placeHolder": "نوع الشكوي",
+                        "placeHolder": "نوع الشكوى",
                         "readOnly": true
                     },
                     "name": "MyTextField4",
@@ -158,7 +158,7 @@
                                     "",
                                     "    var btn = this;",
                                     "    var config = {",
-                                    "        title: \"نوع الشكوي\",",
+                                    "        title: \"نوع الشكوى\",",
                                     "        items: [",
                                     "            { text: \"Type 1\", value: \"Type 1\" },",
                                     "            { text: \"Type 2\", value: \"Type 2\" },",
@@ -202,7 +202,7 @@
                         "labelAlign": null,
                         "labelWidth": "40%",
                         "name": "txtComplaint",
-                        "placeHolder": "نص الشكوي",
+                        "placeHolder": "نص الشكوى",
                         "required": true
                     },
                     "name": "MyTextArea",

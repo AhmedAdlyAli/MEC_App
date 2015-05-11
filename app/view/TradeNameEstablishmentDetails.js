@@ -46,7 +46,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'mytitlebar',
-                        title: 'بيانات المنشاة',
+                        title: 'بيانات المنشأة',
                         titleAlign: 'right',
                         listeners: [
                             {
@@ -86,7 +86,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'راس مال الشركة',
+                                html: 'رأس مال الشركة',
                                 id: 'companyCapital'
                             },
                             {
@@ -106,7 +106,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشاة',
+                                html: 'نوع المنشأة',
                                 id: 'establishmentType'
                             },
                             {
@@ -198,7 +198,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس',
+                                html: 'تاريخ التأسيس',
                                 id: 'establishmentDate'
                             },
                             {
@@ -208,7 +208,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'حالة المنشاة',
+                                html: 'حالة المنشأة',
                                 id: 'establishmentStatus'
                             },
                             {
