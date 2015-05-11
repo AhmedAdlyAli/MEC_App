@@ -203,14 +203,14 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 height: 120,
                                 id: 'img1',
                                 itemId: 'img1',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             },
                             {
                                 xtype: 'image',
                                 flex: 1,
                                 id: 'img2',
                                 itemId: 'img2',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             }
                         ]
                     },
@@ -224,7 +224,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 height: 120,
                                 id: 'img3',
                                 itemId: 'img3',
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             },
                             {
                                 xtype: 'image',
@@ -233,7 +233,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 id: 'img4',
                                 itemId: 'img4',
                                 width: 200,
-                                src: 'resources/images/logo.png'
+                                src: 'resources/images/attach-default.png'
                             }
                         ]
                     },
