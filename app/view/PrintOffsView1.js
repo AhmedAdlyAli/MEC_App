@@ -92,6 +92,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
 
 
+
+
                                             // reset company selection
 
                                             me.up('PrintOffsView1').down('#hiddenCompanyCR').setValue('');
@@ -117,8 +119,23 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                                 me.up('PrintOffsView1').down('#companyName').setDisabled(true);
 
                                             }else{
-                                                me.up('PrintOffsView1').down('#companyName').setDisabled(false);
+
+
+                                                if(me.up('PrintOffsView1').getData()===null)
+                                                {
+                                                    me.up('PrintOffsView1').down('#companyName').setDisabled(true);
+
+                                                }else{
+                                                    me.up('PrintOffsView1').down('#companyName').setDisabled(false);
+
+                                                }
                                             }
+
+
+
+
+
+
 
 
                                             if(selectedValue==53) // CP certificate
@@ -410,8 +427,25 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     message: err
                                 });
 
+
+
                             }else{
 
+
+
+
+                                if(formData.hiddenPrintoutType==='50' && view.getData()!==null)
+                                {
+
+
+                                    Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Error'),
+                                        buttons: [Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('errNOC')
+                                    });
+                                    return;
+
+                                }
 
                                 var cr,cp;
 
@@ -497,10 +531,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
 
 
-
-
-
-
                         },
                         cls: 'btn-send',
                         itemId: 'btnPrintoffsNext',
@@ -546,6 +576,8 @@ Ext.define('MEC_App.view.PrintOffsView1', {
              if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
              {
 
+
+
                me.setData(json.listOfPrimaryEstablishment.primaryEstablishment);
 
             }else{
@@ -554,6 +586,11 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                     buttons:[Ext.Localization.GetMessage('OK')],
                     message: Ext.Localization.GetMessage('NoDataPrintoffs')
                 });
+
+
+         me.down('#companyName').setDisabled(true);
+
+
             }
 
             }

@@ -1343,3 +1343,291 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-05-11 19:02:52.786 MEC_App[24826:259928] NSURLConnection/CFURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9813)
 2015-05-11 19:02:52.843 MEC_App[24826:259898] THREAD WARNING: ['Notification'] took '53.454834' ms. Plugin should use a background thread.
 2015-05-11 19:02:52.917 MEC_App[24826:259898] THREAD WARNING: ['Notification'] took '30.212891' ms. Plugin should use a background thread.
+2015-05-11 20:00:23.957 MEC_App[25916:281492] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:00:23.958 MEC_App[25916:281492] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:00:23.960 MEC_App[25916:281492] Unlimited access to network resources
+2015-05-11 20:00:24.199 MEC_App[25916:281492] Resetting plugins due to page load.
+2015-05-11 20:00:24.809 MEC_App[25916:281492] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/3A481BF1-5DF6-46A2-8317-53FEC7125352/MEC_App.app/www/index.html
+2015-05-11 20:00:40.048 MEC_App[25916:281492] THREAD WARNING: ['ProgressIndicator'] took '20.110107' ms. Plugin should use a background thread.
+2015-05-11 20:00:41.224 MEC_App[25916:281549] NSURLConnection/CFURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9813)
+2015-05-11 20:00:41.251 MEC_App[25916:281492] THREAD WARNING: ['Notification'] took '23.849121' ms. Plugin should use a background thread.
+2015-05-11 20:02:20.059 MEC_App[25916:281549] NSURLConnection/CFURLConnection HTTP load failed (kCFStreamErrorDomainSSL, -9813)
+2015-05-11 20:02:20.095 MEC_App[25916:281492] THREAD WARNING: ['Notification'] took '26.987793' ms. Plugin should use a background thread.
+2015-05-11 20:03:55.871 MEC_App[26442:284547] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:03:55.872 MEC_App[26442:284547] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:03:55.873 MEC_App[26442:284547] Unlimited access to network resources
+2015-05-11 20:03:56.027 MEC_App[26442:284547] Resetting plugins due to page load.
+2015-05-11 20:03:56.299 MEC_App[26442:284547] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/3E489CC1-7CA3-4A23-8CC4-2E5226221F6C/MEC_App.app/www/index.html
+2015-05-11 20:04:27.457 MEC_App[26442:284547] THREAD WARNING: ['ProgressIndicator'] took '23.331787' ms. Plugin should use a background thread.
+2015-05-11 20:04:29.954 MEC_App[26442:284547] THREAD WARNING: ['Notification'] took '19.992920' ms. Plugin should use a background thread.
+2015-05-11 20:06:18.694 MEC_App[26905:286484] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:06:18.695 MEC_App[26905:286484] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:06:18.697 MEC_App[26905:286484] Unlimited access to network resources
+2015-05-11 20:06:18.935 MEC_App[26905:286484] Resetting plugins due to page load.
+2015-05-11 20:06:19.437 MEC_App[26905:286484] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/814769AB-EEB3-4158-9D15-101C6B159286/MEC_App.app/www/index.html
+2015-05-11 20:07:34.331 MEC_App[27368:288038] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:07:34.332 MEC_App[27368:288038] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:07:34.333 MEC_App[27368:288038] Unlimited access to network resources
+2015-05-11 20:07:34.499 MEC_App[27368:288038] Resetting plugins due to page load.
+2015-05-11 20:07:34.784 MEC_App[27368:288038] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/E35E4FEA-7516-4996-A9C6-1AE996F67D35/MEC_App.app/www/index.html
+2015-05-11 20:07:46.536 MEC_App[27368:288038] THREAD WARNING: ['Notification'] took '15.391113' ms. Plugin should use a background thread.
+2015-05-11 20:08:03.300 MEC_App[27368:288038] THREAD WARNING: ['ListPicker'] took '44.216064' ms. Plugin should use a background thread.
+2015-05-11 20:08:07.132 MEC_App[27368:288038] *** Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndex:]: index 0 beyond bounds for empty array'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x003b6746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0312da97 objc_exception_throw + 44
+	2   CoreFoundation                      0x0028ab73 -[__NSArrayM objectAtIndex:] + 243
+	3   MEC_App                             0x0003ea0c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	4   MEC_App                             0x0003e54b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	5   MEC_App                             0x0003e030 -[ListPicker didDismissWithDoneButton:] + 272
+	6   libobjc.A.dylib                     0x031437cd -[NSObject performSelector:withObject:withObject:] + 84
+	7   UIKit                               0x00776a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	8   UIKit                               0x00afcbba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	9   libobjc.A.dylib                     0x031437cd -[NSObject performSelector:withObject:withObject:] + 84
+	10  UIKit                               0x00776a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	11  UIKit                               0x00776a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	12  UIKit                               0x008b718a -[UIControl sendAction:to:forEvent:] + 69
+	13  UIKit                               0x008b75a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	14  UIKit                               0x008b6811 -[UIControl touchesEnded:withEvent:] + 660
+	15  UIKit                               0x007cecfa -[UIWindow _sendTouchesForEvent:] + 874
+	16  UIKit                               0x007cf7d6 -[UIWindow sendEvent:] + 792
+	17  UIKit                               0x0078d6d1 -[UIApplication sendEvent:] + 242
+	18  UIKit                               0x0079db08 _UIApplicationHandleEventFromQueueEvent + 21484
+	19  UIKit                               0x00771337 _UIApplicationHandleEventQueue + 2300
+	20  CoreFoundation                      0x002d806f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	21  CoreFoundation                      0x002cdb7d __CFRunLoopDoSources0 + 253
+	22  CoreFoundation                      0x002cd0d8 __CFRunLoopRun + 952
+	23  CoreFoundation                      0x002cca5b CFRunLoopRunSpecific + 443
+	24  CoreFoundation                      0x002cc88b CFRunLoopRunInMode + 123
+	25  GraphicsServices                    0x045fb2c9 GSEventRunModal + 192
+	26  GraphicsServices                    0x045fb106 GSEventRun + 104
+	27  UIKit                               0x00775106 UIApplicationMain + 1526
+	28  MEC_App                             0x0003a4f9 main + 89
+	29  libdyld.dylib                       0x037fbac9 start + 1
+	30  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-05-11 20:10:07.124 MEC_App[27834:290279] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:10:07.125 MEC_App[27834:290279] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:10:07.128 MEC_App[27834:290279] Unlimited access to network resources
+2015-05-11 20:10:07.287 MEC_App[27834:290279] Resetting plugins due to page load.
+2015-05-11 20:10:07.581 MEC_App[27834:290279] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8A840713-5DBE-479D-9A46-7C37EAC5FBD4/MEC_App.app/www/index.html
+2015-05-11 20:10:21.212 MEC_App[27834:290279] THREAD WARNING: ['Notification'] took '14.662109' ms. Plugin should use a background thread.
+2015-05-11 20:10:29.457 MEC_App[27834:290279] THREAD WARNING: ['ListPicker'] took '10.658936' ms. Plugin should use a background thread.
+2015-05-11 20:10:36.001 MEC_App[27834:290279] *** Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndex:]: index 0 beyond bounds for empty array'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x003f0746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x03167a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x002c4b73 -[__NSArrayM objectAtIndex:] + 243
+	3   MEC_App                             0x00078a0c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	4   MEC_App                             0x0007854b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	5   MEC_App                             0x0007817b -[ListPicker didDismissWithCancelButton:] + 283
+	6   libobjc.A.dylib                     0x0317d7cd -[NSObject performSelector:withObject:withObject:] + 84
+	7   UIKit                               0x007b0a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	8   UIKit                               0x00b36bba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	9   libobjc.A.dylib                     0x0317d7cd -[NSObject performSelector:withObject:withObject:] + 84
+	10  UIKit                               0x007b0a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	11  UIKit                               0x007b0a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	12  UIKit                               0x008f118a -[UIControl sendAction:to:forEvent:] + 69
+	13  UIKit                               0x008f15a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	14  UIKit                               0x008f0811 -[UIControl touchesEnded:withEvent:] + 660
+	15  UIKit                               0x00808cfa -[UIWindow _sendTouchesForEvent:] + 874
+	16  UIKit                               0x008097d6 -[UIWindow sendEvent:] + 792
+	17  UIKit                               0x007c76d1 -[UIApplication sendEvent:] + 242
+	18  UIKit                               0x007d7b08 _UIApplicationHandleEventFromQueueEvent + 21484
+	19  UIKit                               0x007ab337 _UIApplicationHandleEventQueue + 2300
+	20  CoreFoundation                      0x0031206f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	21  CoreFoundation                      0x00307b7d __CFRunLoopDoSources0 + 253
+	22  CoreFoundation                      0x003070d8 __CFRunLoopRun + 952
+	23  CoreFoundation                      0x00306a5b CFRunLoopRunSpecific + 443
+	24  CoreFoundation                      0x0030688b CFRunLoopRunInMode + 123
+	25  GraphicsServices                    0x046352c9 GSEventRunModal + 192
+	26  GraphicsServices                    0x04635106 GSEventRun + 104
+	27  UIKit                               0x007af106 UIApplicationMain + 1526
+	28  MEC_App                             0x000744f9 main + 89
+	29  libdyld.dylib                       0x03835ac9 start + 1
+	30  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-05-11 20:14:14.001 MEC_App[28321:293177] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:14:14.002 MEC_App[28321:293177] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:14:14.004 MEC_App[28321:293177] Unlimited access to network resources
+2015-05-11 20:14:14.187 MEC_App[28321:293177] Resetting plugins due to page load.
+2015-05-11 20:14:14.763 MEC_App[28321:293177] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7CE190C1-2E36-40A1-9D75-E91C9DA73635/MEC_App.app/www/index.html
+2015-05-11 20:14:33.668 MEC_App[28321:293177] THREAD WARNING: ['Notification'] took '15.352051' ms. Plugin should use a background thread.
+2015-05-11 20:14:37.006 MEC_App[28321:293177] THREAD WARNING: ['ListPicker'] took '10.326904' ms. Plugin should use a background thread.
+2015-05-11 20:14:45.257 MEC_App[28321:293177] *** Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndex:]: index 0 beyond bounds for empty array'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0039c746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x03113a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x00270b73 -[__NSArrayM objectAtIndex:] + 243
+	3   MEC_App                             0x00024a0c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	4   MEC_App                             0x0002454b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	5   MEC_App                             0x00024030 -[ListPicker didDismissWithDoneButton:] + 272
+	6   libobjc.A.dylib                     0x031297cd -[NSObject performSelector:withObject:withObject:] + 84
+	7   UIKit                               0x0075ca90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	8   UIKit                               0x00ae2bba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	9   libobjc.A.dylib                     0x031297cd -[NSObject performSelector:withObject:withObject:] + 84
+	10  UIKit                               0x0075ca90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	11  UIKit                               0x0075ca22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	12  UIKit                               0x0089d18a -[UIControl sendAction:to:forEvent:] + 69
+	13  UIKit                               0x0089d5a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	14  UIKit                               0x0089c811 -[UIControl touchesEnded:withEvent:] + 660
+	15  UIKit                               0x007b4cfa -[UIWindow _sendTouchesForEvent:] + 874
+	16  UIKit                               0x007b57d6 -[UIWindow sendEvent:] + 792
+	17  UIKit                               0x007736d1 -[UIApplication sendEvent:] + 242
+	18  UIKit                               0x00783b08 _UIApplicationHandleEventFromQueueEvent + 21484
+	19  UIKit                               0x00757337 _UIApplicationHandleEventQueue + 2300
+	20  CoreFoundation                      0x002be06f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	21  CoreFoundation                      0x002b3b7d __CFRunLoopDoSources0 + 253
+	22  CoreFoundation                      0x002b30d8 __CFRunLoopRun + 952
+	23  CoreFoundation                      0x002b2a5b CFRunLoopRunSpecific + 443
+	24  CoreFoundation                      0x002b288b CFRunLoopRunInMode + 123
+	25  GraphicsServices                    0x045e12c9 GSEventRunModal + 192
+	26  GraphicsServices                    0x045e1106 GSEventRun + 104
+	27  UIKit                               0x0075b106 UIApplicationMain + 1526
+	28  MEC_App                             0x000204f9 main + 89
+	29  libdyld.dylib                       0x037e1ac9 start + 1
+	30  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-05-11 20:15:28.932 MEC_App[28782:295076] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:15:28.932 MEC_App[28782:295076] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:15:28.934 MEC_App[28782:295076] Unlimited access to network resources
+2015-05-11 20:15:29.075 MEC_App[28782:295076] Resetting plugins due to page load.
+2015-05-11 20:15:29.442 MEC_App[28782:295076] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/CF911461-ACD5-46E6-9886-2BEDBF259F56/MEC_App.app/www/index.html
+2015-05-11 20:15:42.707 MEC_App[28782:295076] THREAD WARNING: ['Notification'] took '13.474854' ms. Plugin should use a background thread.
+2015-05-11 20:20:14.956 MEC_App[29244:297653] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:20:14.957 MEC_App[29244:297653] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:20:14.959 MEC_App[29244:297653] Unlimited access to network resources
+2015-05-11 20:20:15.134 MEC_App[29244:297653] Resetting plugins due to page load.
+2015-05-11 20:20:16.782 MEC_App[29244:297653] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/957A1593-3BD6-4702-9106-8326F3C37D48/MEC_App.app/www/index.html
+2015-05-11 20:20:42.479 MEC_App[29244:297653] THREAD WARNING: ['Notification'] took '14.130127' ms. Plugin should use a background thread.
+2015-05-11 20:21:42.421 MEC_App[29703:299218] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:21:42.422 MEC_App[29703:299218] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:21:42.424 MEC_App[29703:299218] Unlimited access to network resources
+2015-05-11 20:21:42.577 MEC_App[29703:299218] Resetting plugins due to page load.
+2015-05-11 20:21:42.853 MEC_App[29703:299218] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/990A5500-419F-4D21-A83F-C44348177CAA/MEC_App.app/www/index.html
+2015-05-11 20:21:52.251 MEC_App[29703:299218] THREAD WARNING: ['Notification'] took '14.262939' ms. Plugin should use a background thread.
+2015-05-11 20:21:54.450 MEC_App[29703:299218] THREAD WARNING: ['ListPicker'] took '10.738037' ms. Plugin should use a background thread.
+2015-05-11 20:22:55.639 MEC_App[30161:300706] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:22:55.640 MEC_App[30161:300706] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:22:55.641 MEC_App[30161:300706] Unlimited access to network resources
+2015-05-11 20:22:55.807 MEC_App[30161:300706] Resetting plugins due to page load.
+2015-05-11 20:22:56.077 MEC_App[30161:300706] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/D822BB32-5FD3-41E9-A893-F1EB86260420/MEC_App.app/www/index.html
+2015-05-11 20:23:04.220 MEC_App[30161:300706] THREAD WARNING: ['Notification'] took '16.370117' ms. Plugin should use a background thread.
+2015-05-11 20:24:05.467 MEC_App[30619:302190] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:24:05.468 MEC_App[30619:302190] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:24:05.470 MEC_App[30619:302190] Unlimited access to network resources
+2015-05-11 20:24:05.613 MEC_App[30619:302190] Resetting plugins due to page load.
+2015-05-11 20:24:05.875 MEC_App[30619:302190] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/CBEDB567-808A-4640-B1E3-D069336789D7/MEC_App.app/www/index.html
+2015-05-11 20:24:13.886 MEC_App[30619:302190] THREAD WARNING: ['Notification'] took '11.631104' ms. Plugin should use a background thread.
+2015-05-11 20:24:53.541 MEC_App[31081:303847] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:24:53.542 MEC_App[31081:303847] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:24:53.544 MEC_App[31081:303847] Unlimited access to network resources
+2015-05-11 20:24:53.770 MEC_App[31081:303847] Resetting plugins due to page load.
+2015-05-11 20:24:54.049 MEC_App[31081:303847] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/247F39F6-863A-4D2C-9E13-51CB2803581D/MEC_App.app/www/index.html
+2015-05-11 20:25:22.779 MEC_App[31081:303847] THREAD WARNING: ['Notification'] took '16.608887' ms. Plugin should use a background thread.
+2015-05-11 20:25:31.487 MEC_App[31081:303847] *** Terminating app due to uncaught exception 'NSRangeException', reason: '*** -[__NSArrayM objectAtIndex:]: index 0 beyond bounds for empty array'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x003d5746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0314ca97 objc_exception_throw + 44
+	2   CoreFoundation                      0x002a9b73 -[__NSArrayM objectAtIndex:] + 243
+	3   MEC_App                             0x0005da0c -[ListPicker sendResultsFromPickerView:withButtonIndex:] + 172
+	4   MEC_App                             0x0005d54b -[ListPicker dismissModalView:withButtonIndex:animated:] + 491
+	5   MEC_App                             0x0005d17b -[ListPicker didDismissWithCancelButton:] + 283
+	6   libobjc.A.dylib                     0x031627cd -[NSObject performSelector:withObject:withObject:] + 84
+	7   UIKit                               0x00795a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	8   UIKit                               0x00b1bbba -[UIBarButtonItem(UIInternal) _sendAction:withEvent:] + 139
+	9   libobjc.A.dylib                     0x031627cd -[NSObject performSelector:withObject:withObject:] + 84
+	10  UIKit                               0x00795a90 -[UIApplication sendAction:to:from:forEvent:] + 99
+	11  UIKit                               0x00795a22 -[UIApplication sendAction:toTarget:fromSender:forEvent:] + 64
+	12  UIKit                               0x008d618a -[UIControl sendAction:to:forEvent:] + 69
+	13  UIKit                               0x008d65a7 -[UIControl _sendActionsForEvents:withEvent:] + 598
+	14  UIKit                               0x008d5811 -[UIControl touchesEnded:withEvent:] + 660
+	15  UIKit                               0x007edcfa -[UIWindow _sendTouchesForEvent:] + 874
+	16  UIKit                               0x007ee7d6 -[UIWindow sendEvent:] + 792
+	17  UIKit                               0x007ac6d1 -[UIApplication sendEvent:] + 242
+	18  UIKit                               0x007bcb08 _UIApplicationHandleEventFromQueueEvent + 21484
+	19  UIKit                               0x00790337 _UIApplicationHandleEventQueue + 2300
+	20  CoreFoundation                      0x002f706f __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 15
+	21  CoreFoundation                      0x002ecb7d __CFRunLoopDoSources0 + 253
+	22  CoreFoundation                      0x002ec0d8 __CFRunLoopRun + 952
+	23  CoreFoundation                      0x002eba5b CFRunLoopRunSpecific + 443
+	24  CoreFoundation                      0x002eb88b CFRunLoopRunInMode + 123
+	25  GraphicsServices                    0x0461a2c9 GSEventRunModal + 192
+	26  GraphicsServices                    0x0461a106 GSEventRun + 104
+	27  UIKit                               0x00794106 UIApplicationMain + 1526
+	28  MEC_App                             0x000594f9 main + 89
+	29  libdyld.dylib                       0x0381aac9 start + 1
+	30  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
+2015-05-11 20:28:15.650 MEC_App[31544:306271] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:28:15.652 MEC_App[31544:306271] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:28:15.653 MEC_App[31544:306271] Unlimited access to network resources
+2015-05-11 20:28:15.816 MEC_App[31544:306271] Resetting plugins due to page load.
+2015-05-11 20:28:16.111 MEC_App[31544:306271] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/24067051-90B5-4C8F-B1DB-E6375D22BE10/MEC_App.app/www/index.html
+2015-05-11 20:28:24.049 MEC_App[31544:306271] THREAD WARNING: ['Notification'] took '13.095703' ms. Plugin should use a background thread.
+2015-05-11 20:30:41.364 MEC_App[32013:308351] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:30:41.365 MEC_App[32013:308351] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:30:41.367 MEC_App[32013:308351] Unlimited access to network resources
+2015-05-11 20:30:41.527 MEC_App[32013:308351] Resetting plugins due to page load.
+2015-05-11 20:30:41.794 MEC_App[32013:308351] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F0683CB2-4D34-4EFD-9920-66211EBB0179/MEC_App.app/www/index.html
+2015-05-11 20:31:00.303 MEC_App[32013:308351] THREAD WARNING: ['Notification'] took '11.657227' ms. Plugin should use a background thread.
+2015-05-11 20:31:02.948 MEC_App[32013:308351] THREAD WARNING: ['ListPicker'] took '10.082031' ms. Plugin should use a background thread.
+2015-05-11 20:34:45.329 MEC_App[32472:310349] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:34:45.330 MEC_App[32472:310349] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:34:45.332 MEC_App[32472:310349] Unlimited access to network resources
+2015-05-11 20:34:45.493 MEC_App[32472:310349] Resetting plugins due to page load.
+2015-05-11 20:34:45.863 MEC_App[32472:310349] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/0B7CFF28-A3EC-406F-B5D8-EBFB1959D90D/MEC_App.app/www/index.html
+2015-05-11 20:34:55.000 MEC_App[32472:310349] THREAD WARNING: ['Notification'] took '15.312744' ms. Plugin should use a background thread.
+2015-05-11 20:44:29.638 MEC_App[32472:310349] THREAD WARNING: ['Notification'] took '18.593994' ms. Plugin should use a background thread.
+2015-05-11 20:44:50.274 MEC_App[32472:310349] THREAD WARNING: ['Notification'] took '19.283936' ms. Plugin should use a background thread.
+2015-05-11 20:44:59.530 MEC_App[32472:310349] THREAD WARNING: ['Notification'] took '20.862061' ms. Plugin should use a background thread.
+2015-05-11 20:45:30.692 MEC_App[32472:310349] THREAD WARNING: ['Notification'] took '19.854736' ms. Plugin should use a background thread.
+2015-05-11 20:47:35.856 MEC_App[33008:315316] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:47:35.857 MEC_App[33008:315316] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:47:35.859 MEC_App[33008:315316] Unlimited access to network resources
+2015-05-11 20:47:36.038 MEC_App[33008:315316] Resetting plugins due to page load.
+2015-05-11 20:47:36.419 MEC_App[33008:315316] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B6F09B4E-36EE-4F22-94AB-9E47A014F021/MEC_App.app/www/index.html
+2015-05-11 20:47:45.370 MEC_App[33008:315316] THREAD WARNING: ['ProgressIndicator'] took '16.875488' ms. Plugin should use a background thread.
+2015-05-11 20:47:46.652 MEC_App[33008:315316] THREAD WARNING: ['Notification'] took '17.935059' ms. Plugin should use a background thread.
+2015-05-11 20:49:37.598 MEC_App[33473:317193] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:49:37.599 MEC_App[33473:317193] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:49:37.600 MEC_App[33473:317193] Unlimited access to network resources
+2015-05-11 20:49:37.757 MEC_App[33473:317193] Resetting plugins due to page load.
+2015-05-11 20:49:38.079 MEC_App[33473:317193] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/D291EDC3-3376-4309-BE16-5BB317B70060/MEC_App.app/www/index.html
+2015-05-11 20:50:33.699 MEC_App[33473:317193] THREAD WARNING: ['InAppBrowser'] took '39.788818' ms. Plugin should use a background thread.
+2015-05-11 20:50:59.444 MEC_App[33938:318863] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:50:59.445 MEC_App[33938:318863] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:50:59.446 MEC_App[33938:318863] Unlimited access to network resources
+2015-05-11 20:50:59.700 MEC_App[33938:318863] Resetting plugins due to page load.
+2015-05-11 20:51:00.116 MEC_App[33938:318863] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B85E098A-B367-4D17-B793-AC958C770CEF/MEC_App.app/www/index.html
+2015-05-11 20:52:50.457 MEC_App[34398:320626] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:52:50.458 MEC_App[34398:320626] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:52:50.460 MEC_App[34398:320626] Unlimited access to network resources
+2015-05-11 20:52:50.620 MEC_App[34398:320626] Resetting plugins due to page load.
+2015-05-11 20:52:51.357 MEC_App[34398:320626] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/299E1836-0CD2-4ABB-8D71-438F2A98966B/MEC_App.app/www/index.html
+2015-05-11 20:53:30.682 MEC_App[34398:320626] THREAD WARNING: ['ListPicker'] took '10.239990' ms. Plugin should use a background thread.
+2015-05-11 20:53:34.766 MEC_App[34398:320626] THREAD WARNING: ['Notification'] took '16.953369' ms. Plugin should use a background thread.
+2015-05-11 20:55:04.318 MEC_App[34858:322368] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:55:04.319 MEC_App[34858:322368] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:55:04.321 MEC_App[34858:322368] Unlimited access to network resources
+2015-05-11 20:55:04.536 MEC_App[34858:322368] Resetting plugins due to page load.
+2015-05-11 20:55:05.175 MEC_App[34858:322368] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/30227396-641B-4C8C-8272-20A35BD803CC/MEC_App.app/www/index.html
+2015-05-11 20:56:00.424 MEC_App[35317:323909] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:56:00.424 MEC_App[35317:323909] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:56:00.427 MEC_App[35317:323909] Unlimited access to network resources
+2015-05-11 20:56:00.674 MEC_App[35317:323909] Resetting plugins due to page load.
+2015-05-11 20:56:00.941 MEC_App[35317:323909] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/EEDDA895-C1C0-41EC-9F94-FF71FF801E58/MEC_App.app/www/index.html
+2015-05-11 20:56:59.099 MEC_App[35317:323909] THREAD WARNING: ['Notification'] took '16.959961' ms. Plugin should use a background thread.
+2015-05-11 20:58:33.053 MEC_App[35824:326402] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-11 20:58:33.054 MEC_App[35824:326402] Multi-tasking -> Device: YES, App: YES
+2015-05-11 20:58:33.056 MEC_App[35824:326402] Unlimited access to network resources
+2015-05-11 20:58:33.202 MEC_App[35824:326402] Resetting plugins due to page load.
+2015-05-11 20:58:33.562 MEC_App[35824:326402] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/6C55BB5D-A977-495A-AB22-0FD84C71AD2F/MEC_App.app/www/index.html

@@ -523,7 +523,7 @@ https://dl.dropboxusercontent.com/s/fqbluiaj5ub6md1/Download.htm?dl=0
         {
  
 
- 
+
     }else{
 
 
@@ -536,3 +536,9 @@ https://dl.dropboxusercontent.com/s/fqbluiaj5ub6md1/Download.htm?dl=0
 
 
     }
+
+
+
+
+     Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+              
