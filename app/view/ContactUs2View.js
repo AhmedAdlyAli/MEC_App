@@ -73,7 +73,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'panel',
-                        html: '<ul><li><a class="call" href="tel:+97444494500">+97444494500</a></li><li><a class="call" href="tel:8005000">8005000</a></li></ul>'
+                        html: '<ul><li><a class="call" href="tel:+97440122222">+97440122222</a></li></ul>'
                     },
                     {
                         xtype: 'label',
@@ -83,7 +83,7 @@ Ext.define('MEC_App.view.ContactUs2View', {
                     },
                     {
                         xtype: 'panel',
-                        html: '<ul><li><a class="mail" href="mailto:cpd@mec.gov.qa">cpd@mec.gov.qa</a></li></ul>'
+                        html: '<ul><li><a class="mail" href="mailto:info@mec.gov.qa">info@mec.gov.qa</a></li></ul>'
                     },
                     {
                         xtype: 'panel',

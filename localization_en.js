@@ -516,7 +516,9 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[
-				{itemId:"viewLbl", xtype: "label",value:"About Ministry"}
+				{itemId:"viewLbl", xtype: "label",value:"About Ministry"},
+				{itemId:"AboutMinstryTxt", xtype: "label",value:"As stipulated under Article (12) of Amiri Decree No (16) of 2009, the Ministry of Business and Trade is responsible to:<br/>Develop programs necessary to execute policies related to development of business and trade sector, monitor business activity and provide guidelines and directions in line with national development requirements, propose and implement policies and programs that aim at attracting investments, support and develop exports, develop measures and channels used to provide public services to business and investment sector, monitor commercial professional practices, record and register investment and commercial establishments and corporations, issue licenses required to operate, regulate and control local markets, take necessary measures and arrangements to protect consumer and combat commercial fraud, protect competitiveness and prevent monopoly practices, and monitor implementation of policies related to tourism, exhibitions, transportation and telecommunications."},
+				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
 			]
 		},
 
