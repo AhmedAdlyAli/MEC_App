@@ -136,6 +136,16 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                html: 'تاريخ التاسيس',
+                                itemId: 'lbl11'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                itemId: 'establishmentDate'
+                            },
+                            {
+                                xtype: 'label',
                                 html: ' رقم السجل التجاري',
                                 itemId: 'lbl1'
                             },
@@ -154,16 +164,6 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                                 xtype: 'label',
                                 cls: 'label-value',
                                 itemId: 'commercialRegistrationIssueDate'
-                            },
-                            {
-                                xtype: 'label',
-                                html: 'تاريخ التاسيس',
-                                itemId: 'lbl11'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'label-value',
-                                itemId: 'establishmentDate'
                             },
                             {
                                 xtype: 'label',

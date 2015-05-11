@@ -906,7 +906,9 @@ var localeEn =
 	            Failure: 'Connection lost, please try again later',
 	            errUserPass: 'Username or Password is not correct',
 	            errConnection: 'There was a problem connecting to the System',
-	            errNoSearchData: 'No Data available for your Search Query'
+	            errNoSearchData: 'No Data available for your Search Query',
+	            NoData: 'Sorry, No Data available',
+	            Message:'Message'
 				}
 
 }

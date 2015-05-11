@@ -46,7 +46,7 @@ Ext.define('MEC_App.controller.ConsumerEducationController', {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                console.log(json);
+                //console.log(json);
 
 
                 var store = new Ext.data.Store({

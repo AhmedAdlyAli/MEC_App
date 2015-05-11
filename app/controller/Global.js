@@ -160,7 +160,14 @@ Ext.define('MEC_App.controller.Global', {
 
     FormatJsonDate: function(JsonDate) {
 
-        if(JsonDate && JsonDate!=='')
+        if(JsonDate==='')return;
+
+
+
+        try{
+
+
+        if(JsonDate && JsonDate!=='' & JsobData!==null)
         {
             var ds = JsonDate;
 
@@ -176,6 +183,8 @@ Ext.define('MEC_App.controller.Global', {
                     if(tz== '-') off*= -1;
                 }
                 else off= 0;
+
+
                 return new Date(T+= off).toUTCString();
             }
 
@@ -256,6 +265,7 @@ Ext.define('MEC_App.controller.Global', {
                         };
 
                     return mask.replace(token, function ($0) {
+
                         return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
                     });
                 };
@@ -291,13 +301,21 @@ Ext.define('MEC_App.controller.Global', {
 
             // For convenience...
             Date.prototype.format = function (mask, utc) {
+                //alert(dateFormat(this, mask, utc));
+
                 return dateFormat(this, mask, utc);
             };
 
-
+           // alert(dateFormat(date, "ddd, mmm dS, yyyy"));
             return dateFormat(date, "ddd, mmm dS, yyyy");
         }
 
+
+            }
+        catch(err){
+
+            return JsonDate;
+        }
 
     },
 
