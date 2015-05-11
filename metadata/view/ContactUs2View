@@ -104,6 +104,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "layout": null,
                 "layout|flex": 2.7
             },
             "name": "MyPanel12",
@@ -134,7 +135,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<ul><li><a class=\"call\" href=\"tel:+97444494500\">+97444494500</a></li><li><a class=\"call\" href=\"tel:8005000\">8005000</a></li></ul>"
+                        "html": "<ul><li><a class=\"call\" href=\"tel:+97440122222\">+97440122222</a></li></ul>"
                     },
                     "name": "MyPanel10",
                     "designerId": "897cc892-5135-407c-93cf-999fc3dd8c3a"
@@ -164,7 +165,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<ul><li><a class=\"mail\" href=\"mailto:cpd@mec.gov.qa\">cpd@mec.gov.qa</a></li></ul>"
+                        "html": "<ul><li><a class=\"mail\" href=\"mailto:info@mec.gov.qa\">info@mec.gov.qa</a></li></ul>"
                     },
                     "name": "MyPanel13",
                     "designerId": "a3bc3796-e40e-485c-9650-491aff5dfa1b"
