@@ -20,6 +20,7 @@ Ext.define('MEC_App.view.LanguageView', {
     requires: [
         'Ext.Panel',
         'Ext.Img',
+        'Ext.Spacer',
         'Ext.Button'
     ],
 
@@ -48,7 +49,7 @@ Ext.define('MEC_App.view.LanguageView', {
                                     {
                                         xtype: 'image',
                                         cls: 'img-lang',
-                                        height: 201,
+                                        height: '80%',
                                         src: '/resources/images/lang-logo.png'
                                     }
                                 ]
@@ -60,11 +61,15 @@ Ext.define('MEC_App.view.LanguageView', {
                         flex: 2.2,
                         cls: 'inner-panel',
                         height: 'auto',
+                        layout: 'vbox',
                         scrollable: {
                             direction: 'vertical',
                             directionLock: true
                         },
                         items: [
+                            {
+                                xtype: 'spacer'
+                            },
                             {
                                 xtype: 'button',
                                 cls: 'btn-lang-1',
@@ -76,6 +81,9 @@ Ext.define('MEC_App.view.LanguageView', {
                                 cls: 'btn-lang-2',
                                 itemId: 'btnEnglish',
                                 text: 'English'
+                            },
+                            {
+                                xtype: 'spacer'
                             }
                         ]
                     }

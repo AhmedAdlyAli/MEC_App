@@ -79,7 +79,7 @@
                                         "cls": [
                                             "img-lang"
                                         ],
-                                        "height": 201,
+                                        "height": "80%",
                                         "src": "/resources/images/lang-logo.png"
                                     },
                                     "name": "MyImg",
@@ -101,6 +101,7 @@
                             "inner-panel"
                         ],
                         "height": "auto",
+                        "layout": "vbox",
                         "layout|flex": 2.2,
                         "scrollable": [
                             "{ direction: 'vertical', directionLock: true }"
@@ -112,6 +113,16 @@
                     },
                     "designerId": "cb114c1b-4038-4dec-a307-f1e3276ea7a1",
                     "cn": [
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer1",
+                            "designerId": "88d1b832-f9b4-4a7e-9f66-73b360019bb4"
+                        },
                         {
                             "type": "Ext.Button",
                             "reference": {
@@ -145,6 +156,16 @@
                             },
                             "name": "MyButton1",
                             "designerId": "559f15fc-324f-41c8-a5ac-b5a7534b6185"
+                        },
+                        {
+                            "type": "Ext.Spacer",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "name": "MySpacer5",
+                            "designerId": "f3161af5-d999-49c5-87fd-8235dd97a2be"
                         }
                     ]
                 }
