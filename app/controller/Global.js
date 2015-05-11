@@ -183,8 +183,7 @@ Ext.define('MEC_App.controller.Global', {
         if(JsonDate==='')return;
 
 
-        if(JsonDate && JsonDate!=='' & JsonDate!==null)
-        {
+
             var ds = JsonDate;
 
             function timeconvert(ds){
@@ -324,7 +323,7 @@ Ext.define('MEC_App.controller.Global', {
 
            // alert(dateFormat(date, "ddd, mmm dS, yyyy"));
             return dateFormat(date, "ddd, mmm dS, yyyy");
-        }
+
 
 
 
