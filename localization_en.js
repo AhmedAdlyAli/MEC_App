@@ -946,7 +946,9 @@ var localeEn =
 	            Message:'Message',
 	            NoDataPrintoffs:'You can\'t submit PrintOff request for CR or CP because you don\'t have any establishments',
 	            errNOC:'You can\'t request this type of Certificate because you have associated companies',
-	            NoDataSupply: 'You don\'t have data in the supply System'
+	            NoDataSupply: 'You don\'t have data in the supply System',
+	            ComplaintsConfirmation:'Thank You, Complaint has been sent successfully',
+	            GeneralError: 'Sorry, Error occured'
 				}
 
 }

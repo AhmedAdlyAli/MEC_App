@@ -72,6 +72,9 @@ Ext.define('MEC_App.controller.Global', {
 
 
             CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
+             CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
+
+
             BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 
 

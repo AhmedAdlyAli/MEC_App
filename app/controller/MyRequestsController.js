@@ -62,18 +62,35 @@ Ext.define('MEC_App.controller.MyRequestsController', {
             jsonData :requestData,
             success : function (response) {
 
+
+                Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                //Requests
+        if(json.listOfMecBssAllRequestsWs.mecLlcEstablishment.length>0)
+                {
+
+
                 var storeRequests = new Ext.data.Store({
                     data : json.listOfMecBssAllRequestsWs.mecLlcEstablishment
                 });
-
-
                 var lstRequests = view.down('#lstMyRequests');
                 lstRequests.setStore(storeRequests);
+                }else{
 
-                Ext.AnimationHelper.HideLoading();
+
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
+                                message: Ext.Localization.GetMessage('NoData')
+                            });
+
+
+
+                }
+
+
 
             }
         });

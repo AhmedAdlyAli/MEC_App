@@ -80,11 +80,6 @@ Ext.define('MEC_App.view.NotificationView', {
         };
 
 
-
-
-
-
-
         var me = this;
 
         Ext.Ajax.request({
@@ -93,6 +88,11 @@ Ext.define('MEC_App.view.NotificationView', {
             method : 'POST',
             jsonData :requestData,
             success : function (response) {
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
@@ -106,10 +106,21 @@ Ext.define('MEC_App.view.NotificationView', {
 
                     var lst = view.down('#lstItems');
                     lst.setStore(store);
+                }else	{
+
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
+                                message: Ext.Localization.GetMessage('NoData')
+                            });
+
+
+
+
                 }
 
 
-                Ext.AnimationHelper.HideLoading();
 
             }
         });
