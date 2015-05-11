@@ -47,7 +47,7 @@ Ext.define('MEC_App.controller.MyRequestsController', {
             "serviceId": "3",
             "token": Ext.Global.userToken,
             "language": Ext.Global.LanguageFlag,
-            "identityType": 'QID',
+            "identityType": Ext.Global.identityTypeCode,//'QID',
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };

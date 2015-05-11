@@ -345,6 +345,39 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "html": "تاريخ التاسيس",
+                                "id": null,
+                                "itemId": "lbl11"
+                            },
+                            "name": "MyLabel9",
+                            "designerId": "0e6b2f0d-e603-40b6-b134-bc4d1a06a1df"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": null,
+                                "itemId": "establishmentDate"
+                            },
+                            "name": "MyLabel27",
+                            "designerId": "cd665ee3-c6ad-4216-8abc-7bdca4359303"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "designer|createAlias": null,
                                 "designer|displayName": null,
                                 "html": " رقم السجل التجاري",
@@ -382,7 +415,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ إنشاء السجل",
+                                "html": "تاريخ التأسيس",
                                 "id": null,
                                 "itemId": "lbl2"
                             },
@@ -406,39 +439,6 @@
                             },
                             "name": "MyLabel17",
                             "designerId": "fddee7f3-b2bf-4326-a5a1-a8c9762b0c93"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "html": "تاريخ التأسيس",
-                                "id": null,
-                                "itemId": "lbl11"
-                            },
-                            "name": "MyLabel9",
-                            "designerId": "0e6b2f0d-e603-40b6-b134-bc4d1a06a1df"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "label-value"
-                                ],
-                                "html": null,
-                                "id": null,
-                                "itemId": "establishmentDate"
-                            },
-                            "name": "MyLabel27",
-                            "designerId": "cd665ee3-c6ad-4216-8abc-7bdca4359303"
                         },
                         {
                             "type": "Ext.Label",

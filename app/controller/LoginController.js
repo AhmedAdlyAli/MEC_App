@@ -98,15 +98,25 @@ Ext.define('MEC_App.controller.LoginController', {
 
                     //console.log(json);
 
+
                     Ext.Global.identityType = json.listOfMecContactInfoIo.contact[0].identityType;
                     Ext.Global.identityNum = json.listOfMecContactInfoIo.contact[0].identityNum;
                     Ext.Global.identityNationality = json.listOfMecContactInfoIo.contact[0].identityNationality;
 
 
                     Ext.Global.identityNameAr = json.listOfMecContactInfoIo.contact[0].fullNameACalc;
-
                     Ext.Global.identityNameEn = json.listOfMecContactInfoIo.contact[0].fullNameECalc;
 
+
+
+                    var identityTypeCode = json.listOfMecContactInfoIo.contact[0].identityTypeCode;
+
+
+                    if(identityTypeCode==='SSN') identityTypeCode = 'QID';
+                    if(identityTypeCode==='Passport') identityTypeCode = 'PASSPORT';
+
+
+                    Ext.Global.identityTypeCode = identityTypeCode;
 
 
 

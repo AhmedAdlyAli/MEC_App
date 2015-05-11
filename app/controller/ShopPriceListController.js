@@ -37,7 +37,7 @@ Ext.define('MEC_App.controller.ShopPriceListController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetShop/'+data.Id+'?culture=ar',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetShop/'+data.Id+'?culture='+ Ext.Global.LanguageFlag,
             method : 'Get',
             success : function (response) {
 

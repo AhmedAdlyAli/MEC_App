@@ -101,7 +101,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":"21463400042",
+                var requestData2 = {"qid":Ext.Global.identityNum,//"21463400042",
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "sessionID": Ext.Global.userSupplyToken};
@@ -274,7 +274,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
             var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-            var requestData =  {"qid":"24263400239",
+            var requestData =  {"qid":Ext.Global.identityNum,//"24263400239",
                                 "languageID":language,
                                 "mobileDeviceID":"1231",
                                 "restrictDealerBasedOnStock":"true",
@@ -383,19 +383,21 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 //alert('code: '    + error.code    + '\n' +
                   //'message: ' + error.message + '\n');
 
+                 Ext.AnimationHelper.HideLoading();
+
+
                 gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
                 gMap.setZoom(11);
 
 
 
-             var m = Ext.Localization.GetMessage('LocationNotEnabled');
+                var m = Ext.Localization.GetMessage('LocationNotEnabled');
                             Ext.device.Notification.show({
                                 title: Ext.Localization.GetMessage('Error'),
                                 buttons:[Ext.Localization.GetMessage('OK')],
                                 message: m
                             });
 
-          Ext.AnimationHelper.HideLoading();
 
 
         });
@@ -431,8 +433,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItems';
 
         var requestData =
-            {"qid":"21463400042",
-             "languageID": 2,
+            {"qid":Ext.Global.identityNum,//"21463400042",
+             "languageID": Ext.Global.LanguageFlag,
              "mobileDeviceID":"1231",
              "dealerID": view2Data.DealerID,
              orderItems: orderItems,
@@ -692,7 +694,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         var requestData=
-            {"qid":"21463400042",
+            {"qid":Ext.Global.identityNum,//"21463400042",
              "languageID":language,
              "mobileDeviceID":"1231",
             "sessionID": Ext.Global.userSupplyToken};
@@ -777,7 +779,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData =  {"qid":"24263400239",
+                var requestData =  {"qid":Ext.Global.identityNum,//"24263400239",
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "restrictDealerBasedOnStock":"false",

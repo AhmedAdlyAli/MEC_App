@@ -132,7 +132,7 @@ Ext.define('MEC_App.controller.DeviceController', {
 
             },
             function (error) {
-                alert("Scanning failed: " + error);
+                alert("Barcode Scanning failed: " + error);
             }
         );
 

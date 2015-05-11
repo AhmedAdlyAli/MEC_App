@@ -58,7 +58,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             "serviceId": "2",
             "token": Ext.Global.userToken,
             "language": Ext.Global.LanguageFlag,
-            "identityType":'QID', //Ext.Global.identityType,
+            "identityType":Ext.Global.identityTypeCode,//'QID', //Ext.Global.identityType,
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };
@@ -223,15 +223,18 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate));
-                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
+                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate):'');
+                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate):'');
                 view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                 view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                 view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
                 view.down('#companyCapital').setHtml(company.companyCapital);
                 view.down('#commercialPermit').setHtml(company.commercialPermit);
                 view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
+
+
+
+                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate)!==undefined ? Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate):'');
                 view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);

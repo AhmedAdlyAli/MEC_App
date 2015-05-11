@@ -54,7 +54,7 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture=ar&pageIndex=0&pageSize=20&typeId='+typeID,
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&typeId='+typeID,
             method : 'Get',
             success : function (response) {
 

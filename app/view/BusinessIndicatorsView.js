@@ -19,6 +19,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
     requires: [
         'Ext.Label',
+        'Ext.field.Hidden',
         'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate'
@@ -42,6 +43,188 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 docked: 'top',
                 html: 'مؤشرات الأعمال',
                 itemId: 'lblViewTitle'
+            },
+            {
+                xtype: 'hiddenfield',
+                id: 'hiddenCatID',
+                itemId: 'myhiddenfield'
+            },
+            {
+                xtype: 'textfield',
+                itemId: 'txtFilter',
+                label: 'التقرير',
+                placeHolder: 'التقرير',
+                readOnly: true,
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+
+                            // Create Native drop down
+                            var me = this;
+
+
+
+                            me.element.on('tap', function(){
+
+
+                                var data = me.up('BusinessIndicatorsView').getData();
+
+                                var items = [];
+
+                                Ext.each(data, function(item){
+
+
+                                    if(Ext.Global.LanguageFlag=='ar')
+                                    items.push({ text: item.NameAr, value: item.Id });
+                                    else
+                                    items.push({ text: item.Name, value: item.Id });
+                                });
+
+
+
+
+                                var btn = this;
+                                var config = {
+                                    title: Ext.Localization.GetMessage('EstName'),
+                                    items: items,
+                                    doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                    cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
+                                };
+
+
+
+
+                                var hiddenCatID = Ext.ComponentQuery.query("#hiddenCatID")[0];
+
+
+                                // Show the picker
+                                window.plugins.listpicker.showPicker(config,
+                                //select item
+                                function(selectedValue) {
+
+
+                                    //check if the company has CR Or CP
+
+                                    hiddenCatID.setValue(selectedValue);
+
+                                    Ext.each(config.items, function(item){
+                                        if(item.value==selectedValue){
+                                            me.setValue(item.text);
+                                        }
+                                    });
+
+
+
+                                    //get report
+                                    Ext.AnimationHelper.ShowLoading();
+
+
+
+                                    Ext.Ajax.request({
+
+                                        url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=2&categoryId='+selectedValue,
+                                        method : 'Get',
+                                        success : function (response) {
+
+                                            var json = Ext.util.JSON.decode(response.responseText);
+
+                                            Ext.AnimationHelper.HideLoading();
+
+
+                                            var view = btn.up('BusinessIndicatorsView');
+
+                                            if(json.length>0)
+                                            {
+                                                var store = new Ext.data.Store({
+                                                    data : json
+                                                });
+
+
+
+
+
+                                                view.down('#GridHeader').show();
+                                                view.down('#GridSubHeader').show();
+                                                view.down('#grdMainCRs').show();
+                                                view.down('#GridSubHeader1').show();
+                                                view.down('#grdSubCRs').show();
+                                                view.down('#GridHeader1').show();
+                                                view.down('#GridSubHeader2').show();
+                                                view.down('#grdMainCRs2').show();
+                                                view.down('#GridSubHeader3').show();
+                                                view.down('#grdSubCRs2').show();
+
+
+
+
+                                                view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+
+
+
+
+                                            }else{
+
+
+                                                view.down('#GridHeader').hide();
+                                                view.down('#GridSubHeader').hide();
+                                                view.down('#grdMainCRs').hide();
+                                                view.down('#GridSubHeader1').hide();
+                                                view.down('#grdSubCRs').hide();
+                                                view.down('#GridHeader1').hide();
+                                                view.down('#GridSubHeader2').hide();
+                                                view.down('#grdMainCRs2').hide();
+                                                view.down('#GridSubHeader3').hide();
+                                                view.down('#grdSubCRs2').hide();
+
+
+
+
+                                                Ext.device.Notification.show({
+                                                    title:Ext.Localization.GetMessage('Message'),
+                                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                                    message:  Ext.Localization.GetMessage('NoData')
+                                                });
+
+
+
+
+
+                                            }
+
+
+
+                                        }
+                                    });
+
+
+
+
+
+
+                                },
+                                //cancel
+                                function() {
+                                    //  alert("You have cancelled");
+                                }
+                                );
+
+
+
+                            }, me);
+
+
+
+
+
+
+
+                        },
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'panel',

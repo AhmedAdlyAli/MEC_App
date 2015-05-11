@@ -35,7 +35,7 @@ Ext.define('MEC_App.controller.GoodPriceListController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+data.Id+'?culture=ar',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+data.Id+'?culture='+Ext.Global.LanguageFlag,
             method : 'Get',
             success : function (response) {
 
