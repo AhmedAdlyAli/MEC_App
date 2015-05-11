@@ -53,6 +53,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             },
             "menu#SideMenu": {
                 show: 'onSideMenuShow'
+            },
+            "button#btnAboutApp": {
+                tap: 'onBtnAboutAppTap'
             }
         }
     },
@@ -225,6 +228,20 @@ Ext.define('MEC_App.controller.SideMenuController', {
             menu.down('#btnLogout').hide();
         }
 
+    },
+
+    onBtnAboutAppTap: function(button, e, eOpts) {
+                Ext.Viewport.toggleMenu('right');
+
+                if(Ext.Viewport.getActiveItem()._activeItem._itemId == "SettingsView"){
+                    return;
+                }
+                else {
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: 'AboutAppView',
+                        title: Ext.Global.GetFixedTitle()
+                    });
+                }
     }
 
 });

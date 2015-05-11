@@ -419,6 +419,40 @@
             },
             "name": "onSideMenuShow",
             "designerId": "2ab3b88b-ddfa-430c-91b4-89c755b98dfc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnAboutApp",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnAboutAppTap",
+                "implHandler": [
+                    "        Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "        if(Ext.Viewport.getActiveItem()._activeItem._itemId == \"SettingsView\"){",
+                    "            return;",
+                    "        }",
+                    "        else {",
+                    "            Ext.Viewport.getActiveItem().push({",
+                    "                xtype: 'AboutAppView',",
+                    "                title: Ext.Global.GetFixedTitle()",
+                    "            });",
+                    "        }"
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnAboutAppTap",
+            "designerId": "916ed308-a3b9-4471-8b09-a483ff9d6ed3"
         }
     ]
 }

@@ -523,6 +523,22 @@ var localeEn =
 		},
 
 
+
+		{
+			itemId:"AboutAppView",
+			description: "About app",
+			cls: "ltr-cls",
+			items:
+			[
+				{itemId:"viewLbl", xtype: "label",value:"About The Application"},
+				
+				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+
+
+
 		{
 			itemId:"ComplaintsView",
 			description: "Complaints...",
@@ -814,7 +830,8 @@ var localeEn =
 				{itemId:"btnReports", "xtype": "button","value":"Indicators & Reports"},
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
-				{itemId:"btnLogout", "xtype": "button","value":"Logout"}
+				{itemId:"btnLogout", "xtype": "button","value":"Logout"},
+				{itemId:"btnAboutApp", "xtype": "button","value":"About the App"}
 
 			]
 

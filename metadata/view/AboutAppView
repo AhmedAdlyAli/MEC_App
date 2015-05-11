@@ -1,0 +1,156 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "AboutAppView",
+        "designer|userClassName": "AboutAppView",
+        "fullscreen": true,
+        "itemId": "AboutAppView",
+        "layout": "vbox"
+    },
+    "name": "AboutView1",
+    "designerId": "76a24f79-3218-416e-9d98-d37abe4dba1f",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "html": "عن التطبيق",
+                "itemId": "viewLbl",
+                "layout|flex": null
+            },
+            "name": "MyLabel2",
+            "designerId": "09313805-97d6-480c-addd-dae5229aeced"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "services-header"
+                ],
+                "docked": null,
+                "height": "30%",
+                "layout": null,
+                "layout|flex": 1
+            },
+            "name": "MyPanel6",
+            "designerId": "3842fd83-86a3-4cb0-8350-3b02874eb66d",
+            "cn": [
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "services-header-overlay"
+                        ],
+                        "height": "100%",
+                        "layout": null
+                    },
+                    "name": "MyPanel8",
+                    "designerId": "250d9d7c-918a-4954-a630-e2ba665e7ac0",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "img-logo"
+                                ],
+                                "height": "100%",
+                                "src": "resources/images/img-logo.png"
+                            },
+                            "name": "MyImg5",
+                            "designerId": "483fffde-9fd0-4bb1-97f5-c08826e63509"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inner-panel"
+                ],
+                "height": null,
+                "layout|flex": 2.7,
+                "scrollable": [
+                    "{ direction: 'vertical', directionLock: true }"
+                ]
+            },
+            "name": "MyPanel7",
+            "configAlternates": {
+                "scrollable": "object"
+            },
+            "designerId": "b3d2b840-e869-442b-ae86-e4621bbf52fa",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "about-text"
+                        ],
+                        "html": null,
+                        "itemId": "AboutMinstryTxt"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "afaa0544-d097-430f-a65a-f39c506688b1"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "ff697a59-143f-42c3-93ae-39b4f837bf6b"
+        }
+    ]
+}

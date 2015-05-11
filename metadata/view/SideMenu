@@ -253,6 +253,27 @@
                                 "cls": [
                                     "menuBtn"
                                 ],
+                                "hidden": false,
+                                "iconAlign": "right",
+                                "iconCls": "m-icon8",
+                                "itemId": "btnAboutApp",
+                                "layout|flex": 1,
+                                "text": "عن التطبيق"
+                            },
+                            "name": "MyButton1",
+                            "designerId": "a94c5b60-1c03-460e-8b24-329bfc405a43"
+                        },
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "menuBtn"
+                                ],
                                 "iconAlign": "right",
                                 "iconCls": "m-icon9",
                                 "itemId": "btnLogin",
