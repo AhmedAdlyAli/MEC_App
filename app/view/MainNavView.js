@@ -133,7 +133,7 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                     setInterval(function(){
                                         carousel.next();
-                                    },3000);
+                                    },3500);
                                 },
                                 event: 'initialize'
                             }
@@ -420,7 +420,7 @@ Ext.define('MEC_App.view.MainNavView', {
     onNewsCarouselActiveItemChange: function(container, value, oldValue, eOpts) {
         if(container.activeIndex == container.items.length-1) {
             setTimeout(function(){
-                container.setActiveItem(0);
+                container.previous().previous();
             },3501);
         }
     },
