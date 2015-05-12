@@ -27,6 +27,10 @@ Ext.define('MEC_App.controller.ShopPriceListController', {
     onShopPriceListViewInitialize: function(component, eOpts) {
         var view = component;
 
+        Ext.Localization.LocalizeView(view);
+
+
+
         var data = view.getData();
 
         view.down('#lblTitle').setHtml(data.ShopName);

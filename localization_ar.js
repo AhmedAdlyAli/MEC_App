@@ -234,7 +234,8 @@ var localeAr =
 	            ComplaintType2:'عدم الاعلان عن الاسعار',
 	            ComplaintType3:'سوء تقديم خدمة',
 	            ComplaintType4:'اخرى',
-	            ComplaintType:'نوع الشكوى'
+	            ComplaintType:'نوع الشكوى',
+	            Product: 'المنتج'
 
 				}
 }

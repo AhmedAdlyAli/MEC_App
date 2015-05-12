@@ -720,7 +720,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             {"qid":Ext.Global.identityNum,//"21463400042",
              "languageID":language,
              "mobileDeviceID":"1231",
-            "sessionID": Ext.Global.userSupplyToken};
+             "sessionID": Ext.Global.userSupplyToken};
 
 
 
@@ -734,31 +734,50 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             jsonData :requestData,
             success : function (response) {
 
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
 
-               // console.log(json2);
+                // console.log(json2);
+
+
+                if(json2.length>0)
+                {
+
+
+                    var store = new Ext.data.Store({
+                        data : json2.Data.FamilyMembers
+                    });
+
+                    var lst = view.down('#lstFamily');
+                    lst.setStore(store);
+
+                    lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                    lst.setScrollable(false);
+
+
+                }else{
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('NoDataSupply')
+                    });
+
+
+
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+
+                }
 
 
 
 
-                        var store = new Ext.data.Store({
-                            data : json2.Data.FamilyMembers
-                        });
 
-                        var lst = view.down('#lstFamily');
-                        lst.setStore(store);
-
-                        lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
-                        lst.setScrollable(false);
-
-
-
-
-
-
-
-                Ext.AnimationHelper.HideLoading();
 
 
             },

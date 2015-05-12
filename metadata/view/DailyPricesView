@@ -103,7 +103,7 @@
                                         ],
                                         "html": "اسم المنتج",
                                         "itemId": "ProductName1",
-                                        "layout|flex": 1
+                                        "layout|flex": 3
                                     },
                                     "name": "MyLabel14",
                                     "designerId": "f20dac1a-96f8-420b-93a2-a85e01d112e2"
@@ -121,7 +121,7 @@
                                         ],
                                         "html": "سعر الكيلو",
                                         "itemId": "ProductPrice1",
-                                        "layout|flex": 1
+                                        "layout|flex": 2
                                     },
                                     "name": "MyLabel32",
                                     "designerId": "e8131e42-8992-4202-beac-ec11790a7b59"
@@ -245,7 +245,7 @@
                                         ],
                                         "html": "اسم المنتج",
                                         "itemId": "ProductName2",
-                                        "layout|flex": 1
+                                        "layout|flex": 3
                                     },
                                     "name": "MyLabel14",
                                     "designerId": "93dcae39-2d96-449d-aa31-5dab18db8735"
@@ -263,7 +263,7 @@
                                         ],
                                         "html": "سعر الكيلو",
                                         "itemId": "ProductPrice2",
-                                        "layout|flex": 1
+                                        "layout|flex": 2
                                     },
                                     "name": "MyLabel32",
                                     "designerId": "76b7c4ac-bfd5-49eb-bba3-c605ebd6fd8e"
@@ -387,7 +387,7 @@
                                         ],
                                         "html": "اسم المنتج",
                                         "itemId": "ProductName3",
-                                        "layout|flex": 1
+                                        "layout|flex": 3
                                     },
                                     "name": "MyLabel14",
                                     "designerId": "52d440c0-76b2-4956-9149-01b205ee28aa"
@@ -405,7 +405,7 @@
                                         ],
                                         "html": "سعر الكيلو",
                                         "itemId": "ProductPrice3",
-                                        "layout|flex": 1
+                                        "layout|flex": 2
                                     },
                                     "name": "MyLabel32",
                                     "designerId": "22480b06-3a77-48cd-966d-1139e1451f39"

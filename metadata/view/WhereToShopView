@@ -83,7 +83,7 @@
                             "",
                             "    var btn = this;",
                             "    var config = {",
-                            "        title: \"المنتج\",",
+                            "        title:  Ext.Localization.GetMessage('Product'),",
                             "        items: items,",
                             "        //selectedValue: \"2\",",
                             "        doneButtonLabel: Ext.Localization.GetMessage('Choose'),",
@@ -91,7 +91,7 @@
                             "    };",
                             "",
                             "",
-                            " var hiddenProductID = Ext.ComponentQuery.query(\"#hiddenProductID\")[0];",
+                            "    var hiddenProductID = Ext.ComponentQuery.query(\"#hiddenProductID\")[0];",
                             "",
                             "    Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);",
                             "",
@@ -137,7 +137,7 @@
                         "docked": null,
                         "html": "اسم المحل",
                         "itemId": "ShopName",
-                        "layout|flex": 1
+                        "layout|flex": 2
                     },
                     "name": "MyLabel34",
                     "designerId": "0cac6614-72b7-413c-b50a-ab37f2642d00"
@@ -224,9 +224,14 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='row-cell'>{Shop.ShopName}</div>    ",
-                            "<div class='row-cell'>{Quantity}({Unit.Name})</div>    ",
-                            "<div class='row-cell'>{Price}</div>    "
+                            "",
+                            "<div style='-webkit-box-orient:horizontal!important;display:-webkit-box;flex-direction:row;widh:100%'>",
+                            "<div class='row-cell' style='-webkit-box-flex:2'>{Shop.ShopName}</div>    ",
+                            "<div class='row-cell' style='-webkit-box-flex:1'>{Quantity}({Unit.Name})</div>    ",
+                            "<div class='row-cell' style='-webkit-box-flex:1'>{Price}</div> ",
+                            "    ",
+                            "    </div>    ",
+                            "    "
                         ]
                     },
                     "name": "itemTpl",
