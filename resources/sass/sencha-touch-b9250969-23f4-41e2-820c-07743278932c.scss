@@ -132,6 +132,9 @@ body {
             padding: 10px;
             color: #000;
             font-size: 85%;
+            position: absolute;
+            bottom: 8%;
+            right: 5%;
         }
     }
 }
@@ -1371,33 +1374,23 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .tap-panel {
 
-
-
     .x-tabbar-dark.x-docked-top   .x-tab-active{
 
         background: #701d45;
         color:#fff;
         border:solid 1px #701d45;
 
-
         .x-button-label{
             color:#fff
         }
-
-
-
     }
-
-
-
 
     .x-tab{
         -webkit-border-radius:0!important;
         border-radius: 0!important;
         border:solid 1px #701d45 !important;
         padding:5px 5px 0 5px !important;
-        min-width:7em;
-
+        -webkit-box-flex: 1;
 
         .x-button-label{
 
@@ -1409,13 +1402,10 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .x-tabbar-dark{
     background:#fff!important;
-
 }
 
 
 /* tap panel */
-
-
 
 .about-text{
 
@@ -1584,6 +1574,20 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     .FB {
         float: right;
+    }
+
+    .home-header,
+    .home-header2,
+    .home-header3{
+        direction: ltr;
+
+        .x-innerhtml {
+
+            .header-text-bg {
+                right: auto;
+                left: 5%;
+            }
+        }
     }
 
     .item-link,
@@ -1925,4 +1929,19 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .img-logo {
     background-size: auto 75% !important;
+}
+
+
+.x-scroll-bar-y.active {
+    width: 3px !important;
+    margin: 0 3px !important;
+
+    .x-scroll-indicator {
+        background: #888 !important;
+
+        &.rounded > * {
+            background: #888 !important;
+            content: "" !important;
+        }
+    }
 }

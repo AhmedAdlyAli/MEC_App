@@ -90,6 +90,7 @@ Ext.define('MEC_App.controller.Localization', {
                                 viewItem.setLabel(item.value);
                             }
                             if(item.xtype=='cls') viewItem.addCls(item.value);
+                            if(item.xtype=='r-cls') viewItem.removeCls(item.value);
                         }
 
 
