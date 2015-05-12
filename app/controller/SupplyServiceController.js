@@ -101,7 +101,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":"21463400042", //Ext.Global.identityNum,
+                var requestData2 = {"qid":"24263400239", //Ext.Global.identityNum,
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "sessionID": Ext.Global.userSupplyToken};

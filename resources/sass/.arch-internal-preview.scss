@@ -34,6 +34,21 @@ $list-rounded-radius: 0;
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Futura-Medium';
+  src: url('fonts/Futura-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/Futura-Medium.woff') format('woff'), url('Futura-Medium.ttf')  format('truetype'), url('fonts/Futura-Medium.svg#Futura-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GEDinarOne-Medium';
+  src: url('fonts/GEDinarOne-Medium.eot?#iefix') format('embedded-opentype'),  url('fonts/GEDinarOne-Medium.otf')  format('opentype'),
+	     url('fonts/GEDinarOne-Medium.woff') format('woff'), url('fonts/GEDinarOne-Medium.ttf')  format('truetype'), url('fonts/GEDinarOne-Medium.svg#GEDinarOne-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html,
 body {
     background-color: #671f48;
@@ -59,15 +74,15 @@ body {
 }
 
 .fixed-ar-title {
-    font-family: 'PFDinTextUniversal';
-    font-size: 20px;
+    font-family: 'GEDinarOne-Medium';
+    font-size: 19px;
     line-height: 22px;
 }
 
 .fixed-en-title {
-    font-size: 9px;
+    font-size: 8px;
     line-height: 19px;
-    font-family: 'PFDinTextUniversal';
+    font-family: 'Futura-Medium';
 }
 
 .home-wrapper {
@@ -1483,7 +1498,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 .notify-icon{
     background: url(../images/notify-icon.png) no-repeat 0 2px !important;
     width:52px;
-    heigt:22px;
+    height:22px;
     margin-left:1em !important
 }
 
