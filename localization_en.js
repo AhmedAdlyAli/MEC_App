@@ -434,7 +434,8 @@ var localeEn =
 				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Extracts"},
 				{itemId:"homeReports", xtype: "label",value:"Indicators & Reports"},
 				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
-				{itemId:"homeContact", xtype: "label",value:"Connect"}
+				{itemId:"homeContact", xtype: "label",value:"Connect"},
+				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"}
 			]
 		},
 

@@ -152,7 +152,8 @@ var localeAr =
 				{itemId:"homeInquire", xtype: "label",value:"الاستعلامات والاصدارات"},
 				{itemId:"homeReports", xtype: "label",value:"المؤشرات والتقارير"},
 				{itemId:"btnProjects", xtype: "label",value:"المبادرات والمشاريع"},
-				{itemId:"homeContact", xtype: "label",value:"التواصل"}
+				{itemId:"homeContact", xtype: "label",value:"التواصل"},
+				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"}
 
 			]
 		},
