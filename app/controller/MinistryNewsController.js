@@ -59,17 +59,27 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
             method : 'Get',
             success : function (response) {
 
+                Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
+                if(json.length > 0) {
+                    var store = new Ext.data.Store({
+                        data : json
+                    });
 
-                var store = new Ext.data.Store({
-                    data : json
-                });
+                    view.setStore(store);
+                }
+                else {
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('NoData')
+                    });
 
-                view.setStore(store);
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+                }
 
-
-                Ext.AnimationHelper.HideLoading();
             }
         });
 

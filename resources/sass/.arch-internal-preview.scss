@@ -347,7 +347,7 @@ body {
 
     .HListItem,
     .CompanyListItem {
-        background: url(../images/HListIcon.png) no-repeat 96% center;
+        background: url(../images/HListIcon.png) no-repeat 96% center  !important;
         padding: 0 36px 0 0;
         line-height: 35px;
     }
@@ -807,29 +807,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .acc-group{
     direction:rtl;
     background-color:#fff;
@@ -898,7 +875,7 @@ body {
     padding-top:1em;
     padding-bottom:1em;
     padding-right:3em;
-    background: url(../images/company.png) no-repeat 96% center;
+    background: url(../images/company.png) no-repeat 96% center !important;
 
 
     .tpl-company-1{
@@ -921,7 +898,7 @@ body {
     padding-top:1em;
     padding-bottom:1em;
     padding-right:3em;
-    background: url(../images/request.png) no-repeat 96% center;
+    background: url(../images/request.png) no-repeat 96% center  !important;
 
 
     .tpl-request-1{
@@ -946,7 +923,7 @@ body {
     padding-top:1em;
     padding-bottom:1em;
     padding-right:3em;
-    background: url(../images/person.png) no-repeat 96% center;
+    background: url(../images/person.png) no-repeat 96% center  !important;
 
 
     .tpl-signatory-1{
@@ -973,7 +950,7 @@ body {
 .item-activity{
     padding-right:3em;
     padding-bottom:2em;
-    background: #fff url(../images/activity.png) no-repeat 96% center;
+    background: #fff url(../images/activity.png) no-repeat 96% center  !important;
 
 
     .tpl-activity-1{
@@ -1209,8 +1186,8 @@ background: url(../images/toplogo.png) no-repeat center top;
     border-bottom:solid 1px #ebebeb;
     min-height:5em;
     padding-bottom:1em;
-    padding-left:2em;
-    background:#fff url(../images/more-arrow.png) no-repeat 3% center;
+    padding-left:1.5em;
+    background:#fff url(../images/more-arrow.png) no-repeat 5% center;
 }
 
 .ctr{
@@ -1302,7 +1279,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin:0 !important;
     padding:0.5em 0 0.5em 0;
     float:right;
-    width:60%;
+    width:50%;
     min-height:2.5em
 
 }
@@ -1314,7 +1291,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin:0 !important;
     padding:0.5em 0 0.5em 0;
     float:right;
-    width:40%;
+    width:50%;
     min-height:2.5em
 
 }
@@ -1523,7 +1500,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .item-education{
-    color:#000!important;
+    color:#701d45!important;
     height:19em;
     font-size:1.2em;
 
@@ -1606,7 +1583,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     .item-shop.x-list-item.x-item-selected.x-list-item-tpl{
         padding-left:3em;
         padding-right:0;
-        background: url(../images/request.png) no-repeat 4% center;
+        background: url(../images/request.png) no-repeat 4% center  !important;
 
         .tpl-shope-2{
             padding:0.5em 0.5em 0.5em 0;
@@ -1616,7 +1593,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     .item-product, .item-product.x-list-item.x-item-selected.x-list-item-tpl{
         padding-left:3em;
         padding-right:0;
-        background: url(../images/request.png) no-repeat 4% center;
+        background: url(../images/request.png) no-repeat 4% center  !important;
 
         .tpl-product-2{
             padding:0.5em 0.5em 0.5em 0;
@@ -1642,7 +1619,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     .item-company{
         padding-left:3em;
         padding-right:0;
-        background: url(../images/company.png) no-repeat 4% center;
+        background: url(../images/company.png) no-repeat 4% center  !important;
 
         .tpl-company-2{
             padding:0.5em 0.5em 0.5em 0;
@@ -1651,7 +1628,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     }
 
     .HListItem {
-        background: url(../images/HListIcon.png) no-repeat 4% center;
+        background: url(../images/HListIcon.png) no-repeat 4% center  !important;
         padding: 0 0 0 36px;
     }
 
@@ -1660,7 +1637,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
         padding-right:0;
         padding-left:3em;
-        background: url(../images/request.png) no-repeat 4% center;
+        background: url(../images/request.png) no-repeat 4% center  !important;
 
         .tpl-request-2{
             padding:0.5em 0.5em 0.5em 0;
@@ -1757,11 +1734,33 @@ background: url(../images/toplogo.png) no-repeat center top;
         padding: 0 0 0 50px;
     }
 
+    .item-indicator{
+        .tpl-indicator-1,
+        .tpl-indicator-2 {
+            float: left;
+        }
+    }
+
+    .ind-details-title {
+        margin: 2em 0 0 1em;
+    }
+
+    .ind-details-value2 {
+        margin: 0 0 0 1em;
+    }
+    
+    
+    .ind-details-item2{
+        padding-right:1.5em;
+        padding-left:0;
+        background:#fff url(../images/more-arrow-ar.png) no-repeat 95% center;
+    }
+
 
 }
 
-.complaint-view .ltr-cls .x-label {
-    margin: 5px 0 15px 10px;
+.x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl {
+    background-image: auto !important;
 }
 
 .language-button-wrapper {

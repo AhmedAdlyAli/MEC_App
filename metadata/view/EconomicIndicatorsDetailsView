@@ -248,6 +248,27 @@
                     "designerId": "ac5941c0-d021-4d76-8ff6-09b23e501ea2"
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Localization.LoadLocalization();",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "ee30eac1-de18-4d35-92be-f39069266e63"
         }
     ]
 }

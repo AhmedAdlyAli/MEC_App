@@ -1658,3 +1658,99 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-12 03:36:46.075 MEC_App[45771:461450] Resetting plugins due to page load.
 2015-05-12 03:36:46.346 MEC_App[45771:461450] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7FB1F2D5-5839-4BF5-8223-F31817A47D9D/MEC_App.app/www/index.html
 2015-05-12 03:37:51.212 MEC_App[45771:461450] THREAD WARNING: ['ListPicker'] took '12.662109' ms. Plugin should use a background thread.
+2015-05-12 04:31:44.349 MEC_App[3630:84779] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/591F93F4-F713-4979-8A5A-0AF1E3EB64DC/Library/Cookies/Cookies.binarycookies
+2015-05-12 04:31:44.604 MEC_App[3630:84779] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-12 04:31:44.604 MEC_App[3630:84779] Multi-tasking -> Device: YES, App: YES
+2015-05-12 04:31:44.624 MEC_App[3630:84779] Unlimited access to network resources
+2015-05-12 04:31:45.216 MEC_App[3630:84779] Resetting plugins due to page load.
+2015-05-12 04:31:45.843 MEC_App[3630:84779] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/78638328-82D2-420C-B68C-0C90DC35E99D/MEC_App.app/www/index.html
+2015-05-12 04:31:56.643 MEC_App[3630:84779] THREAD WARNING: ['ProgressIndicator'] took '17.652100' ms. Plugin should use a background thread.
+2015-05-12 04:32:06.652 MEC_App[3630:84779] THREAD WARNING: ['Notification'] took '42.199951' ms. Plugin should use a background thread.
+2015-05-12 04:32:06.659 MEC_App[3630:84779] -[__NSDictionaryI length]: unrecognized selector sent to instance 0x7b7b8ec0
+2015-05-12 04:32:06.689 MEC_App[3630:84779] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[__NSDictionaryI length]: unrecognized selector sent to instance 0x7b7b8ec0'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x003c1746 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x03138a97 objc_exception_throw + 44
+	2   CoreFoundation                      0x003c9705 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x00310287 ___forwarding___ + 1047
+	4   CoreFoundation                      0x0030fe4e _CF_forwarding_prep_0 + 14
+	5   UIKit                               0x009a2ffe -[UILabel _ensureBaselineMetricsReturningBounds] + 135
+	6   UIKit                               0x009a31f0 -[UILabel _firstBaselineOffsetFromTop] + 46
+	7   UIKit                               0x00efb870 -[UIView(AdditionalLayoutSupport) nsli_lowerAttribute:intoExpression:withCoefficient:forConstraint:] + 1183
+	8   Foundation                          0x02d1d03d lower_1_attribute + 194
+	9   Foundation                          0x02d1cab8 -[NSLayoutConstraint _lowerIntoExpression:reportingConstantIsRounded:] + 99
+	10  Foundation                          0x02d1189a -[NSLayoutConstraint _addToEngine:integralizationAdjustment:mutuallyExclusiveConstraints:] + 97
+	11  Foundation                          0x02d1c8a2 -[NSLayoutConstraint _addToEngine:] + 56
+	12  UIKit                               0x00ef8c5d __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 536
+	13  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	14  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	15  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	16  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	17  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	18  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	19  UIKit                               0x00ef8746 -[UIView(AdditionalLayoutSupport) _parentalLayoutEngineDidChangeTo:] + 57
+	20  UIKit                               0x00ef8b36 __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 241
+	21  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	22  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	23  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	24  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	25  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	26  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	27  UIKit                               0x0081cfd6 -[UIScrollView _switchToLayoutEngine:] + 78
+	28  UIKit                               0x00ef8746 -[UIView(AdditionalLayoutSupport) _parentalLayoutEngineDidChangeTo:] + 57
+	29  UIKit                               0x00ef8b36 __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 241
+	30  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	31  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	32  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	33  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	34  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	35  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	36  UIKit                               0x00ef8746 -[UIView(AdditionalLayoutSupport) _parentalLayoutEngineDidChangeTo:] + 57
+	37  UIKit                               0x00ef8b36 __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 241
+	38  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	39  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	40  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	41  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	42  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	43  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	44  UIKit                               0x00ef8746 -[UIView(AdditionalLayoutSupport) _parentalLayoutEngineDidChangeTo:] + 57
+	45  UIKit                               0x00ef8b36 __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 241
+	46  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	47  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	48  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	49  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	50  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	51  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	52  UIKit                               0x00ef8746 -[UIView(AdditionalLayoutSupport) _parentalLayoutEngineDidChangeTo:] + 57
+	53  UIKit                               0x00ef8b36 __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke_2 + 241
+	54  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	55  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	56  UIKit                               0x00ef912b -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 64
+	57  UIKit                               0x00ef8a2e __57-[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:]_block_invoke + 482
+	58  UIKit                               0x00ef9133 -[UIView(AdditionalLayoutSupport) _withAutomaticEngineOptimizationDisabledIfEngineExists:] + 72
+	59  UIKit                               0x00ef8823 -[UIView(AdditionalLayoutSupport) _switchToLayoutEngine:] + 216
+	60  UIKit                               0x0080500d __40-[UIView(Hierarchy) layoutBelowIfNeeded]_block_invoke + 46
+	61  Foundation                          0x02d21077 -[NSISEngine withBehaviors:performModifications:] + 150
+	62  Foundation                          0x02d245cf -[NSISEngine withAutomaticOptimizationDisabled:] + 48
+	63  UIKit                               0x00804de2 -[UIView(Hierarchy) layoutBelowIfNeeded] + 364
+	64  UIKit                               0x00804c61 -[UIView(Hierarchy) layoutIfNeeded] + 83
+	65  UIKit                               0x00c280cd -[_UIAlertControllerAnimatedTransitioning animateTransition:] + 588
+	66  UIKit                               0x008bca8c __56-[UIPresentationController runTransitionForCurrentState]_block_invoke + 2315
+	67  UIKit                               0x008f131b __40+[UIViewController _scheduleTransition:]_block_invoke + 18
+	68  UIKit                               0x007aa862 ___afterCACommitHandler_block_invoke + 15
+	69  UIKit                               0x007aa80d _applyBlockToCFArrayCopiedToStack + 415
+	70  UIKit                               0x007aa622 _afterCACommitHandler + 549
+	71  CoreFoundation                      0x002e286e __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__ + 30
+	72  CoreFoundation                      0x002e27b0 __CFRunLoopDoObservers + 400
+	73  CoreFoundation                      0x002d81ea __CFRunLoopRun + 1226
+	74  CoreFoundation                      0x002d7a5b CFRunLoopRunSpecific + 443
+	75  CoreFoundation                      0x002d788b CFRunLoopRunInMode + 123
+	76  GraphicsServices                    0x046062c9 GSEventRunModal + 192
+	77  GraphicsServices                    0x04606106 GSEventRun + 104
+	78  UIKit                               0x00780106 UIApplicationMain + 1526
+	79  MEC_App                             0x000454f9 main + 89
+	80  libdyld.dylib                       0x03806ac9 start + 1
+	81  ???                                 0x00000001 0x0 + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
