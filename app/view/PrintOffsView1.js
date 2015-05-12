@@ -291,8 +291,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         xtype: 'hiddenfield',
                         id: 'hiddenCompanyCR',
                         itemId: 'hiddenCompanyCR',
-                        name: 'hiddenCompanyCR',
-                        value: 429
+                        name: 'hiddenCompanyCR'
                     },
                     {
                         xtype: 'hiddenfield',
@@ -366,8 +365,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         xtype: 'hiddenfield',
                         id: 'hiddenDeliveryMethod',
                         itemId: 'hiddenDeliveryMethod',
-                        name: 'hiddenDeliveryMethod',
-                        value: 01
+                        name: 'hiddenDeliveryMethod'
                     },
                     {
                         xtype: 'spinnerfield',
@@ -423,117 +421,128 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 err+=Ext.Localization.GetMessage('errDeliveryMethod'); //"برجاء اختيار طريقة الاستلام";
                             }
 
+                            /*
 
 
                             if(err.length>0){
-                                navigator.vibrate(300);
+                            //   navigator.vibrate(300);
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons: [Ext.Localization.GetMessage('OK')],
+                                message: err
+                            });
+
+
+
+                        }else{
+                            */
+
+
+
+                            if(formData.hiddenPrintoutType==='50' && view.getData()!==null)
+                            {
+
 
                                 Ext.device.Notification.show({
                                     title: Ext.Localization.GetMessage('Error'),
                                     buttons: [Ext.Localization.GetMessage('OK')],
-                                    message: err
+                                    message: Ext.Localization.GetMessage('errNOC')
                                 });
-
-
-
-                            }else{
-
-
-
-
-                                if(formData.hiddenPrintoutType==='50' && view.getData()!==null)
-                                {
-
-
-                                    Ext.device.Notification.show({
-                                        title: Ext.Localization.GetMessage('Error'),
-                                        buttons: [Ext.Localization.GetMessage('OK')],
-                                        message: Ext.Localization.GetMessage('errNOC')
-                                    });
-                                    return;
-
-                                }
-
-                                var cr,cp;
-
-                                if(view.PrintoutType===53)
-                                {
-                                    cr='';
-                                    cp= view.down('#hiddenCompanyCR').getValue();
-                                }else{
-                                    cp='';
-                                    cr= view.down('#hiddenCompanyCR').getValue();
-                                }
-
-
-                                Ext.AnimationHelper.ShowLoading();
-
-                                var requestData = {
-                                    "serviceId": "9",
-                                    "token": Ext.Global.userToken,
-                                    "language": Ext.Global.LanguageFlag,
-                                    "identityType": 'QID',//Ext.Global.identityType,
-                                    "identityNum": Ext.Global.identityNum,
-                                    "identityNationality": Ext.Global.identityNationality,
-                                    "commercialRegistrationNum":cr,
-                                    "caseType":view.down('#hiddenPrintoutType').getValue(),
-                                    "deliveryMethod":view.down('#hiddenDeliveryMethod').getValue(),
-                                    "establishmentSpcId":"",
-                                    "caseSubType":"01",
-                                    "contactId":"",
-                                    "numOfCopies":view.down('#txtNoOfCopies').getValue(),
-                                    "moiEstablishmentNum":"",
-                                    "qatarChamberNum":"",
-                                    "commercialPermitNum":cp,
-                                    "economicalNum":""
-                                };
-
-
-
-                                Ext.Ajax.request({
-
-                                    url : Ext.Global.GetConfig('webServiceUrl'),
-                                    method : 'POST',
-                                    jsonData :requestData,
-                                    success : function (response) {
-                                        var json = Ext.util.JSON.decode(response.responseText);
-
-                                        json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
-
-
-
-
-
-                                        if(json.status==='Their is Active Cases for this account from the same case type !')
-                                        {
-
-                                            Ext.device.Notification.show({
-                                                title: Ext.Localization.GetMessage('Error'),
-                                                buttons: [Ext.Localization.GetMessage('OK')],
-                                                message: Ext.Localization.GetMessage('ActiveRequestError')
-                                            });
-
-
-                                        }else{
-
-
-                                            //              console.log(json);
-
-
-                                            Ext.Viewport.getActiveItem().push({
-                                                xtype: 'PrintOffsView2',
-                                                title: Ext.Global.GetFixedTitle(),
-                                                data: json
-                                            });
-
-                                        }
-
-                                        Ext.AnimationHelper.HideLoading();
-                                    }
-                                });
-
+                                return;
 
                             }
+
+                            var cr,cp;
+
+                            if(view.PrintoutType===53)
+                            {
+                                cr='';
+                                cp= view.down('#hiddenCompanyCR').getValue();
+                            }else{
+                                cp='';
+                                cr= view.down('#hiddenCompanyCR').getValue();
+                            }
+
+
+                            if(cr==='') cr='_';
+
+
+                            Ext.AnimationHelper.ShowLoading();
+
+                            var requestData = {
+                                "serviceId": "9",
+                                "token": Ext.Global.userToken,
+                                "language": Ext.Global.LanguageFlag,
+                                "identityType": 'QID',//Ext.Global.identityType,
+                                "identityNum": Ext.Global.identityNum,
+                                "identityNationality": Ext.Global.identityNationality,
+                                "commercialRegistrationNum":cr,
+                                "caseType":view.down('#hiddenPrintoutType').getValue(),
+                                "deliveryMethod":view.down('#hiddenDeliveryMethod').getValue(),
+                                "establishmentSpcId":"",
+                                "caseSubType":"01",
+                                "contactId":"",
+                                "numOfCopies":view.down('#txtNoOfCopies').getValue(),
+                                "moiEstablishmentNum":"",
+                                "qatarChamberNum":"",
+                                "commercialPermitNum":cp,
+                                "economicalNum":""
+                            };
+
+
+                            alert(requestData.commercialRegistrationNum + '==' + requestData.commercialPermitNum);
+
+
+                            Ext.Ajax.request({
+
+                                url : Ext.Global.GetConfig('webServiceUrl'),
+                                method : 'POST',
+                                jsonData :requestData,
+                                success : function (response) {
+                                    var json = Ext.util.JSON.decode(response.responseText);
+
+
+                                    console.log(json);
+                                    //invalid or insufficient input!
+
+
+                                    json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
+
+
+
+
+
+                                    if(json.status==='Their is Active Cases for this account from the same case type !')
+                                    {
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('ActiveRequestError')
+                                        });
+
+
+                                    }else{
+
+
+                                        //              console.log(json);
+
+
+                                        Ext.Viewport.getActiveItem().push({
+                                            xtype: 'PrintOffsView2',
+                                            title: Ext.Global.GetFixedTitle(),
+                                            data: json
+                                        });
+
+                                    }
+
+                                    Ext.AnimationHelper.HideLoading();
+                                }
+                            });
+
+
+                            //}
 
 
 
