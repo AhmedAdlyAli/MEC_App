@@ -70,7 +70,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
 
                                 var btn = this;
                                 var config = {
-                                    title: "المنتج",
+                                    title:  Ext.Localization.GetMessage('Product'),
                                     items: items,
                                     //selectedValue: "2",
                                     doneButtonLabel: Ext.Localization.GetMessage('Choose'),
@@ -98,7 +98,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 items: [
                     {
                         xtype: 'label',
-                        flex: 1,
+                        flex: 2,
                         cls: 'header-cell1',
                         html: 'اسم المحل',
                         itemId: 'ShopName'
@@ -125,9 +125,14 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 itemId: 'lstPrices',
                 itemCls: 'grid-row',
                 itemTpl: [
-                    '<div class=\'row-cell\'>{Shop.ShopName}</div>    ',
-                    '<div class=\'row-cell\'>{Quantity}({Unit.Name})</div>    ',
-                    '<div class=\'row-cell\'>{Price}</div>    '
+                    '',
+                    '<div style=\'-webkit-box-orient:horizontal!important;display:-webkit-box;flex-direction:row;widh:100%\'>',
+                    '<div class=\'row-cell\' style=\'-webkit-box-flex:2\'>{Shop.ShopName}</div>    ',
+                    '<div class=\'row-cell\' style=\'-webkit-box-flex:1\'>{Quantity}({Unit.Name})</div>    ',
+                    '<div class=\'row-cell\' style=\'-webkit-box-flex:1\'>{Price}</div> ',
+                    '    ',
+                    '    </div>    ',
+                    '    '
                 ],
                 striped: true,
                 items: [

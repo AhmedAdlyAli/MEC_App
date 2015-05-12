@@ -29,6 +29,10 @@
                 "implHandler": [
                     "var view = component;",
                     "",
+                    "Ext.Localization.LocalizeView(view);",
+                    "",
+                    "",
+                    "",
                     "var data = view.getData();",
                     "",
                     "view.down('#lblTitle').setHtml(data.ShopName);",

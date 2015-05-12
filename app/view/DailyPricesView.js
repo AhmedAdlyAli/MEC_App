@@ -63,14 +63,14 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 items: [
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 3,
                                         cls: 'header-cell1',
                                         html: 'اسم المنتج',
                                         itemId: 'ProductName1'
                                     },
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 2,
                                         cls: 'header-cell2',
                                         html: 'سعر الكيلو',
                                         itemId: 'ProductPrice1'
@@ -119,14 +119,14 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 items: [
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 3,
                                         cls: 'header-cell1',
                                         html: 'اسم المنتج',
                                         itemId: 'ProductName2'
                                     },
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 2,
                                         cls: 'header-cell2',
                                         html: 'سعر الكيلو',
                                         itemId: 'ProductPrice2'
@@ -175,14 +175,14 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 items: [
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 3,
                                         cls: 'header-cell1',
                                         html: 'اسم المنتج',
                                         itemId: 'ProductName3'
                                     },
                                     {
                                         xtype: 'label',
-                                        flex: 1,
+                                        flex: 2,
                                         cls: 'header-cell2',
                                         html: 'سعر الكيلو',
                                         itemId: 'ProductPrice3'

@@ -84,6 +84,7 @@
                         ],
                         "docked": null,
                         "html": "السعر",
+                        "itemId": "lblPrice",
                         "layout|flex": 2
                     },
                     "name": "MyLabel35",

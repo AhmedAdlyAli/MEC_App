@@ -26,6 +26,7 @@ Ext.define('MEC_App.controller.GoodPriceListController', {
 
     onGoodPriceListViewInitialize: function(component, eOpts) {
         var view = component;
+        Ext.Localization.LocalizeView(view);
 
         var data = view.getData();
 

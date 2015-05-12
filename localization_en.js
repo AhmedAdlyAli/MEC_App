@@ -755,6 +755,7 @@ var localeEn =
 		{
 			itemId:"WhereToShopView",
 			description: "Where to Shop",
+			cls:'ltr-cls',
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Where to Shop"},
@@ -780,6 +781,7 @@ var localeEn =
 		{
 			itemId:"BusinessIndicatorsView",
 			description: "Business Indicators",
+			cls:'ltr-cls',
 			items:
 			[
 				{itemId:"lblViewTitle", xtype: "label",value:"Business Indicators"},
@@ -800,7 +802,8 @@ var localeEn =
 				{itemId:"GridSubHeader2", xtype: "cls",value:"ltr-cls"},
 				{itemId:"grdMainCRs2", xtype: "cls",value:"ltr-cls"},
 				{itemId:"GridSubHeader3", xtype: "cls",value:"ltr-cls"},
-				{itemId:"grdSubCRs2", xtype: "cls",value:"ltr-cls"}
+				{itemId:"grdSubCRs2", xtype: "cls",value:"ltr-cls"},
+				{itemId:"txtFilter", xtype: "textfield",value:"Report"}
 			]
 		},
 
@@ -898,8 +901,29 @@ var localeEn =
 				{itemId:"btnSubmitComplaint1", xtype: "button",value:"Send"},
 				{itemId:"FeedbackForm", xtype: "cls",value:"ltr-cls"}
 			]
-		}
+		},
 
+		{
+			itemId:"ShopPriceListView",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[				
+			{itemId:"lblPrice", xtype: "label",value:"Price"},
+			{itemId:"productName", xtype: "label",value:"Product"}			
+			]
+		},
+
+		{
+			itemId:"GoodPriceListView",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[				
+			{itemId:"lblPrice", xtype: "label",value:"Price"},
+			{itemId:"shopName", xtype: "label",value:"Shop"}			
+			]
+		}
 
 	],
 
@@ -956,7 +980,8 @@ var localeEn =
 	            ComplaintType2:'Price Not Announced',
 	            ComplaintType3:'Bad Service',
 	            ComplaintType4:'Other',
-	            ComplaintType:'Complaint Type'
+	            ComplaintType:'Complaint Type',
+	            Product: 'Product'
 				}
 
 }

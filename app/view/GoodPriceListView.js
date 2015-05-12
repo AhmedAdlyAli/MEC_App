@@ -57,7 +57,8 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                         xtype: 'label',
                         flex: 2,
                         cls: 'header-cell1',
-                        html: 'السعر'
+                        html: 'السعر',
+                        itemId: 'lblPrice'
                     }
                 ]
             },
