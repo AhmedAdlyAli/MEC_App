@@ -54,7 +54,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		NT5VFCGM2e7mHib40hE/t+yIbm0=
+		zJhThoomMzzcqgxe6wgbGsKitMY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		KYuw9nrq3pVsVT9j0JiXk2eGgXM=
+		d2fuJpwHB/xd3SOsSrEJCr9Offw=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		CgkSYSVBYrQBwaIU+TGvK95FiLw=
+		X7keI0a9QGnSHKOSy6r9iaFjDAY=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -236,6 +236,38 @@
 		<data>
 		CerFkVmIrUNE9PQrSwib7jwrQ/M=
 		</data>
+		<key>www/resources/css/fonts/Futura-Medium.eot</key>
+		<data>
+		1I4cVGGKChVUU3Dz6ilc+NbPEPc=
+		</data>
+		<key>www/resources/css/fonts/Futura-Medium.svg</key>
+		<data>
+		SFbAdv0EFjGsYLa9dqv2fnutUxY=
+		</data>
+		<key>www/resources/css/fonts/Futura-Medium.ttf</key>
+		<data>
+		0zyKsK2eLwrTW6nqjyVcb/82b7g=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.eot</key>
+		<data>
+		MeLBDlal3dAsngQdBvKQ6fDotrU=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.otf</key>
+		<data>
+		4ZBo8xmEbkFtrnLS71xtwPJ8m0U=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.svg</key>
+		<data>
+		y/gUupZF/M9Z1nWG3kjxjX47HB8=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.ttf</key>
+		<data>
+		VV6bd8yh8bOnHZEGL+9vJenY7C0=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.woff</key>
+		<data>
+		1jzPVhPAgLwhMb0mMEi8DVQxQLI=
+		</data>
 		<key>www/resources/css/fonts/PFDinTextUniversal-Light.eot</key>
 		<data>
 		4wBSbM68bHHq3P1bvHXptqkGquU=
@@ -302,7 +334,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		zYfeRbgi+nT2SS26WmfJCrcT6G0=
+		tRM23bh/PZbyKNMfNbw1zP9gLOo=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -797,7 +829,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		NT5VFCGM2e7mHib40hE/t+yIbm0=
+		zJhThoomMzzcqgxe6wgbGsKitMY=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -877,11 +909,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		KYuw9nrq3pVsVT9j0JiXk2eGgXM=
+		d2fuJpwHB/xd3SOsSrEJCr9Offw=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		CgkSYSVBYrQBwaIU+TGvK95FiLw=
+		X7keI0a9QGnSHKOSy6r9iaFjDAY=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -975,6 +1007,38 @@
 		<data>
 		CerFkVmIrUNE9PQrSwib7jwrQ/M=
 		</data>
+		<key>www/resources/css/fonts/Futura-Medium.eot</key>
+		<data>
+		1I4cVGGKChVUU3Dz6ilc+NbPEPc=
+		</data>
+		<key>www/resources/css/fonts/Futura-Medium.svg</key>
+		<data>
+		SFbAdv0EFjGsYLa9dqv2fnutUxY=
+		</data>
+		<key>www/resources/css/fonts/Futura-Medium.ttf</key>
+		<data>
+		0zyKsK2eLwrTW6nqjyVcb/82b7g=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.eot</key>
+		<data>
+		MeLBDlal3dAsngQdBvKQ6fDotrU=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.otf</key>
+		<data>
+		4ZBo8xmEbkFtrnLS71xtwPJ8m0U=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.svg</key>
+		<data>
+		y/gUupZF/M9Z1nWG3kjxjX47HB8=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.ttf</key>
+		<data>
+		VV6bd8yh8bOnHZEGL+9vJenY7C0=
+		</data>
+		<key>www/resources/css/fonts/GEDinarOne-Medium.woff</key>
+		<data>
+		1jzPVhPAgLwhMb0mMEi8DVQxQLI=
+		</data>
 		<key>www/resources/css/fonts/PFDinTextUniversal-Light.eot</key>
 		<data>
 		4wBSbM68bHHq3P1bvHXptqkGquU=
@@ -1041,7 +1105,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		zYfeRbgi+nT2SS26WmfJCrcT6G0=
+		tRM23bh/PZbyKNMfNbw1zP9gLOo=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
