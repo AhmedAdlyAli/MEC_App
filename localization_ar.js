@@ -183,7 +183,7 @@ var localeAr =
 		]
 ,
 	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار',
-				EstName:'اسم النشرة',
+				EstName:'اسم التقرير',
 				Choose:'إختيار',
 				Cancel:'إلغاء',
 				PrintType1:'مستخرج سجل تجاري - العربية',
