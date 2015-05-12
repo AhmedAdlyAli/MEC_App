@@ -509,6 +509,8 @@ Ext.define('MEC_App.view.MainNavView', {
         });
 
 
+        navBar.setAnimation(false);
+
 
         //Localization
 

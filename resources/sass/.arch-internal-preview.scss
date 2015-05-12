@@ -110,6 +110,10 @@ body {
                 -webkit-mask: none;
                 background: none;
             }
+            
+            &.x-button-pressing {
+                background: none !important;
+            }
         }
 
         .x-innerhtml {
@@ -1478,7 +1482,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .notify-icon{
     background: url(../images/notify-icon.png) no-repeat 0 2px !important;
-    width:16px;
+    width:52px;
     heigt:22px;
     margin-left:1em !important
 }
@@ -1748,8 +1752,8 @@ background: url(../images/toplogo.png) no-repeat center top;
     .ind-details-value2 {
         margin: 0 0 0 1em;
     }
-    
-    
+
+
     .ind-details-item2{
         padding-right:1.5em;
         padding-left:0;
