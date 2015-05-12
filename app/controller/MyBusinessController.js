@@ -91,34 +91,34 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
                 {
 
-                var storeCompanies = new Ext.data.Store({
-                    data : json.listOfPrimaryEstablishment.primaryEstablishment
-                });
+                    var storeCompanies = new Ext.data.Store({
+                        data : json.listOfPrimaryEstablishment.primaryEstablishment
+                    });
 
 
                     var lstComapnies = view.down('#lstMyCompanies');
 
-                     lstComapnies.setStore(storeCompanies);
+                    lstComapnies.setStore(storeCompanies);
 
-            }else{
-
-
-                            Ext.device.Notification.show({
-                                title: Ext.Localization.GetMessage('Error'),
-                                buttons:[Ext.Localization.GetMessage('OK')],
-                                message: Ext.Localization.GetMessage('NoData')
-                            });
+                }else{
 
 
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('NoData')
+                    });
 
-            }
 
 
+                }
 
 
 
 
-        /*
+
+
+                /*
 
                 var lstComapnies = view.add({
                         xtype: 'list',

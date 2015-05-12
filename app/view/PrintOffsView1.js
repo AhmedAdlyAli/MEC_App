@@ -530,28 +530,28 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
 
 
-                                        if(json.status==='Success')
-                                        {
+                                        //   if(json.status==='Success')
+                                        //   {
 
 
-                                            Ext.Viewport.getActiveItem().push({
-                                                xtype: 'PrintOffsView2',
-                                                title: Ext.Global.GetFixedTitle(),
-                                                data: json
-                                            });
+                                        Ext.Viewport.getActiveItem().push({
+                                            xtype: 'PrintOffsView2',
+                                            title: Ext.Global.GetFixedTitle(),
+                                            data: json
+                                        });
 
-                                        }else{
+                                        /* }else{
 
-                                            Ext.device.Notification.show({
-                                                title: Ext.Localization.GetMessage('Error'),
-                                                buttons: [Ext.Localization.GetMessage('OK')],
-                                                message: Ext.Localization.GetMessage('GeneralError')
-                                            });
+                                        Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Error'),
+                                        buttons: [Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('GeneralError')
+                                        });
 
 
 
                                         }
-
+                                        */
                                     }
 
                                     Ext.AnimationHelper.HideLoading();

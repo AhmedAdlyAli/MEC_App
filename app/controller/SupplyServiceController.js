@@ -720,7 +720,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         var requestData=
-            {"qid":Ext.Global.identityNum,//"21463400042",
+            {"qid": "21463400042",//Ext.Global.identityNum,//"21463400042",
              "languageID":language,
              "mobileDeviceID":"1231",
              "sessionID": Ext.Global.userSupplyToken};
@@ -745,10 +745,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
 
-                // console.log(json2);
+                console.log(json2);
 
 
-                if(json2.length>0)
+                if(json2.Data.FamilyMembers.length>0)
                 {
 
 
