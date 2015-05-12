@@ -66,7 +66,7 @@
                         "docked": null,
                         "html": "اسم المنتج",
                         "itemId": "productName",
-                        "layout|flex": 1
+                        "layout|flex": 3
                     },
                     "name": "MyLabel36",
                     "designerId": "1e881821-f972-4670-aee0-665ed98e7e1c"
@@ -84,7 +84,7 @@
                         ],
                         "docked": null,
                         "html": "السعر",
-                        "layout|flex": 1
+                        "layout|flex": 2
                     },
                     "name": "MyLabel35",
                     "designerId": "ce637d0a-b28e-4b2b-bb6b-3ce42ac6c8af"
@@ -119,8 +119,11 @@
                         "designer|displayName": "itemTpl",
                         "implHandler": [
                             "",
+                            "",
                             "    <div class='row-cell1'>{Product.ProductName}</div>    ",
                             "    <div class='row-cell2'>{Price}</div>    ",
+                            "",
+                            "",
                             ""
                         ]
                     },

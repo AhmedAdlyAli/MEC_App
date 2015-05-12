@@ -205,6 +205,10 @@ Ext.define('MEC_App.controller.Global', {
 
             var date = timeconvert(JsonDate);
 
+        return this.FormatDate(date);
+    },
+
+    FormatDate: function(date) {
 
             var dateFormat = function () {
                 var	token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
@@ -323,7 +327,6 @@ Ext.define('MEC_App.controller.Global', {
 
            // alert(dateFormat(date, "ddd, mmm dS, yyyy"));
             return dateFormat(date, "ddd, mmm dS, yyyy");
-
 
 
 

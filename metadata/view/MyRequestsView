@@ -86,7 +86,7 @@
                                 ],
                                 "fn": "FormatDate",
                                 "implHandler": [
-                                    "return Ext.Global.FormatJsonDate(str);",
+                                    "return Ext.Global.FormatDate(str);",
                                     "",
                                     "",
                                     "",

@@ -152,7 +152,8 @@ var localeAr =
 				{itemId:"homeInquire", xtype: "label",value:"الاستعلامات والاصدارات"},
 				{itemId:"homeReports", xtype: "label",value:"المؤشرات والتقارير"},
 				{itemId:"btnProjects", xtype: "label",value:"المبادرات والمشاريع"},
-				{itemId:"homeContact", xtype: "label",value:"التواصل"}
+				{itemId:"homeContact", xtype: "label",value:"التواصل"},
+				{itemId:"home-links", xtype: "r-cls",value:"ltr-cls"}
 
 			]
 		},
@@ -185,7 +186,7 @@ var localeAr =
 				PrintType1:'مستخرج سجل تجاري - العربية',
 				PrintType2: 'مستخرج سجل تجاري - انجليزي',
 				PrintType3: 'شهادة رخصة تجارية بدل فاقد',
-				PrintType4: 'شهادة عدم ملكية او مشاركة في شجل تجاري',
+				PrintType4: 'شهادة عدم ملكية او مشاركة في سجل تجاري',
 				PrintType: 'نوع المستخرج' ,
 				DeliveryMethod: 'طريقة الاستلام',
 				Personal: 'شخصي',
@@ -225,8 +226,12 @@ var localeAr =
 	            errNOC:'لا يمكنط طلب هذه الشهادة لوجود منشآت مرتبطة بإسم المستخدم',
 	            NoDataSupply: 'لا يوجد بيانات متاحة لحسابك في نظام التموين',
 	            ComplaintsConfirmation:'شكرا٬ لقد تم ارسال الشكوى بنجاح',
-	            GeneralError: 'عفوا٬ لقد حدث خطأ'
-
+	            GeneralError: 'عفوا٬ لقد حدث خطأ',
+	            ComplaintType1:'غش تجاري',
+	            ComplaintType2:'عدم الاعلان عن الاسعار',
+	            ComplaintType3:'سوء تقديم خدمة',
+	            ComplaintType4:'اخرى',
+	            ComplaintType:'نوع الشكوى'
 
 				}
 }

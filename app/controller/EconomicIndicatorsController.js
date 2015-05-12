@@ -103,7 +103,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblPercentOfChange').setHtml(data.ChangePercent);
 
 
-        view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatJsonDate(data.LastUpdated));
+        view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatDate(data.LastUpdated));
 
 
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);

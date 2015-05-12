@@ -30,6 +30,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
         cls: 'rtl',
         fullscreen: true,
         id: 'TradeNameEstablishmentDetails',
+        itemId: 'TradeNameEstablishmentDetails',
         layout: 'vbox',
         scrollable: {
             direction: 'vertical',
@@ -117,7 +118,7 @@ Ext.define('MEC_App.view.TradeNameEstablishmentDetails', {
                             {
                                 xtype: 'label',
                                 html: 'رقم قيد المنشأة',
-                                id: 'establishmentStatus2'
+                                itemId: 'establishmentRegNumber1'
                             },
                             {
                                 xtype: 'label',

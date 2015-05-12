@@ -159,7 +159,7 @@ body {
         color: #fff;
         text-align: center;
         font-size: 85%;
-        
+
         .x-innerhtml {
             margin: 5% 0 0;
         }
@@ -1299,7 +1299,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin:0 !important;
     padding:0.5em 0 0.5em 0;
     float:right;
-    width:50%;
+    width:60%;
     min-height:2.5em
 
 }
@@ -1311,7 +1311,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin:0 !important;
     padding:0.5em 0 0.5em 0;
     float:right;
-    width:50%;
+    width:40%;
     min-height:2.5em
 
 }
@@ -1533,7 +1533,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .item-education{
-    color:#701d45!important;
+    color:#000!important;
     height:19em;
     font-size:1.2em;
 
@@ -1756,6 +1756,9 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 }
 
+.complaint-view .ltr-cls .x-label {
+    margin: 5px 0 15px 10px;
+}
 
 .language-button-wrapper {
     padding: 10px;

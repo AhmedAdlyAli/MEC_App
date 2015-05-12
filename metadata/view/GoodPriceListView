@@ -68,7 +68,7 @@
                         "docked": null,
                         "html": "اسم المحل",
                         "itemId": "shopName",
-                        "layout|flex": 1
+                        "layout|flex": 3
                     },
                     "name": "MyLabel34",
                     "designerId": "18e105c2-578b-44c6-936e-49a0d3e10156"
@@ -86,7 +86,7 @@
                         ],
                         "docked": null,
                         "html": "السعر",
-                        "layout|flex": 1
+                        "layout|flex": 2
                     },
                     "name": "MyLabel14",
                     "designerId": "329e6ae8-1b0c-4e48-907c-4ad74c2d9a15"

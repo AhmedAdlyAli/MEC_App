@@ -48,7 +48,7 @@ Ext.define('MEC_App.view.NotificationView', {
                     '<div class=\'notification-sub\'>{[this.FormatDate(values.date)]}</div>',
                     {
                         FormatDate: function(str) {
-                            return Ext.Global.FormatJsonDate(str);
+                            return Ext.Global.FormatDate(str);
 
 
                         }

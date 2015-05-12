@@ -365,6 +365,25 @@
                     "",
                     "    var date = timeconvert(JsonDate);",
                     "",
+                    "return this.FormatDate(date);"
+                ]
+            },
+            "name": "FormatJsonDate",
+            "designerId": "fc5bde52-4939-476f-9e44-de6c1e96cb62"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "date"
+                ],
+                "fn": "FormatDate",
+                "implHandler": [
                     "",
                     "    var dateFormat = function () {",
                     "        var\ttoken = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\\1?|[LloSZ]|\"[^\"]*\"|'[^']*'/g,",
@@ -486,12 +505,11 @@
                     "",
                     "",
                     "",
-                    "",
                     ""
                 ]
             },
-            "name": "FormatJsonDate",
-            "designerId": "fc5bde52-4939-476f-9e44-de6c1e96cb62"
+            "name": "FormatDate",
+            "designerId": "9e9e2eae-2dda-4960-a650-838fcb5540c0"
         },
         {
             "type": "basicfunction",

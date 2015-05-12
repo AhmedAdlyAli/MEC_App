@@ -13,7 +13,7 @@
         "designer|userClassName": "TradeNameEstablishmentDetails",
         "fullscreen": true,
         "id": "TradeNameEstablishmentDetails",
-        "itemId": null,
+        "itemId": "TradeNameEstablishmentDetails",
         "layout": "vbox",
         "requires": [
             "MEC_App.controller.AnimationHelper"
@@ -270,7 +270,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "html": "رقم قيد المنشأة",
-                                "id": "establishmentStatus2"
+                                "id": null,
+                                "itemId": "establishmentRegNumber1"
                             },
                             "name": "MyLabel30",
                             "designerId": "cd1c85d8-a423-4d47-abfe-74f11b37cac4"

@@ -83,7 +83,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
 
         this.down('#lblTitle').setHtml(data.NewsTitle);
-        this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));
+        this.down('#lblDate').setHtml(Ext.Global.FormatDate(data.NewsDate));
         this.down('#lblDetails').setHtml(data.NewsDescription);
         this.down('#imgNews').setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/EconomyNews/Image/"+data.Id);
 

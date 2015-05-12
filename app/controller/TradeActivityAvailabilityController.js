@@ -80,6 +80,7 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
 
+                Ext.AnimationHelper.HideLoading();
 
 
                 if(json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo.length>0)
@@ -91,11 +92,18 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
                     var lst = Ext.getCmp('lstTradeActivityResults');
 
                     lst.setStore(store);
+                }else{
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('errNoSearchData')
+                    });
+
                 }
 
 
 
-                Ext.AnimationHelper.HideLoading();
 
 
             },

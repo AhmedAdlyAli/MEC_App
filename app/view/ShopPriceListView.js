@@ -44,14 +44,14 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                 items: [
                     {
                         xtype: 'label',
-                        flex: 1,
+                        flex: 3,
                         cls: 'header-cell1',
                         html: 'اسم المنتج',
                         itemId: 'productName'
                     },
                     {
                         xtype: 'label',
-                        flex: 1,
+                        flex: 2,
                         cls: 'header-cell2',
                         html: 'السعر'
                     }
@@ -64,8 +64,11 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                 itemCls: 'grid-row',
                 itemTpl: [
                     '',
+                    '',
                     '    <div class=\'row-cell1\'>{Product.ProductName}</div>    ',
                     '    <div class=\'row-cell2\'>{Price}</div>    ',
+                    '',
+                    '',
                     ''
                 ]
             }

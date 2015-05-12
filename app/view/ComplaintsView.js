@@ -73,7 +73,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
-                        hidden: true,
+                        hidden: false,
                         id: 'txtCategory',
                         itemId: 'txtCategory',
                         labelWidth: '40%',
@@ -90,19 +90,17 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                                         var btn = this;
                                         var config = {
-                                            title: "نوع الشكوى",
+                                            title: Ext.Localization.GetMessage('ComplaintType'),
                                             items: [
-                                            { text: "Type 1", value: "Type 1" },
-                                            { text: "Type 2", value: "Type 2" },
-                                            { text: "Type 3", value: "Type 3" },
-                                            { text: "Type 4", value: "Type 4" },
-                                            { text: "Type 5", value: "Type 5" },
-                                            { text: "Type 6", value: "Type 6" }
+                                            { text: Ext.Localization.GetMessage('ComplaintType1'), value: Ext.Localization.GetMessage('ComplaintType1') },
+                                            { text: Ext.Localization.GetMessage('ComplaintType2'), value: Ext.Localization.GetMessage('ComplaintType2') },
+                                            { text: Ext.Localization.GetMessage('ComplaintType3'), value: Ext.Localization.GetMessage('ComplaintType3') },
+                                            { text: Ext.Localization.GetMessage('ComplaintType4'), value: Ext.Localization.GetMessage('ComplaintType4') }
 
                                             ],
                                             selectedValue: "1",
-                                            doneButtonLabel: "ٌختيار",
-                                            cancelButtonLabel: "الغاء"
+                                            doneButtonLabel: Ext.Localization.GetMessage('Choose'),
+                                            cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
                                         };
 
                                         Ext.DeviceController.ShowNativePicker(me,config);

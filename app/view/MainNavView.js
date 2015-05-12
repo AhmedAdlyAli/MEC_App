@@ -143,6 +143,7 @@ Ext.define('MEC_App.view.MainNavView', {
                         xtype: 'panel',
                         flex: 2,
                         cls: 'home-btns',
+                        itemId: 'home-links',
                         layout: 'vbox',
                         items: [
                             {

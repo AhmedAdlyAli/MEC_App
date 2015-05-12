@@ -50,7 +50,7 @@ Ext.define('MEC_App.view.MyRequestsView', {
                     '',
                     {
                         FormatDate: function(str) {
-                            return Ext.Global.FormatJsonDate(str);
+                            return Ext.Global.FormatDate(str);
 
 
 

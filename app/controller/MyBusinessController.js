@@ -249,8 +249,8 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
-                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate):'');
-                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate):'');
+                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatDate(company.commercialRegistrationIssueDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate):'');
+                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatDate(company.commercialRegistrationExpiryDate)!==undefined?Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate):'');
                 view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                 view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                 view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
@@ -260,8 +260,8 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate)!==undefined ? Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate):'');
-                view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
+                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatDate(company.commercialPermitExpiryDate)!==undefined ? Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate):'');
+                view.down('#establishmentDate').setHtml(Ext.Global.FormatDate(company.establishmentDate));
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);
@@ -440,18 +440,18 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                 view.down('#commercialRegistration').setHtml(company.commercialRegistration);
 
 
-                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationIssueDate));
+                view.down('#commercialRegistrationIssueDate').setHtml(Ext.Global.FormatDate(company.commercialRegistrationIssueDate));
 
 
-                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialRegistrationExpiryDate));
+                view.down('#commercialRegistrationExpiryDate').setHtml(Ext.Global.FormatDate(company.commercialRegistrationExpiryDate));
                 view.down('#commercialRegistrationStatus').setHtml(company.commercialRegistrationStatus);
                 view.down('#establishmentEnglishName').setHtml(company.establishmentEnglishName);
                 view.down('#establishmentArabicName').setHtml(company.establishmentArabicName);
                 view.down('#companyCapital').setHtml(company.companyCapital);
                 view.down('#commercialPermit').setHtml(company.commercialPermit);
                 view.down('#commercialPermitStatus').setHtml(company.commercialPermitStatus);
-                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatJsonDate(company.commercialPermitExpiryDate));
-                view.down('#establishmentDate').setHtml(Ext.Global.FormatJsonDate(company.establishmentDate));
+                view.down('#commercialPermitExpiryDate').setHtml(Ext.Global.FormatDate(company.commercialPermitExpiryDate));
+                view.down('#establishmentDate').setHtml(Ext.Global.FormatDate(company.establishmentDate));
                 view.down('#establishmentType').setHtml(company.establishmentType);
                 view.down('#establishmentLegalForm').setHtml(company.establishmentLegalForm);
                 view.down('#establishmentStatus').setHtml(company.establishmentStatus);

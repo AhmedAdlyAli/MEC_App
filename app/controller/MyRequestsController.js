@@ -160,8 +160,8 @@ Ext.define('MEC_App.controller.MyRequestsController', {
                 view.down('#caseStatus').setHtml(request.caseStatus);
                 view.down('#caseType').setHtml(request.caseType);
                 view.down('#caseEstablishmentCRN').setHtml(request.caseEstablishmentCRN);
-                view.down('#caseSubmissionDate').setHtml(Ext.Global.FormatJsonDate(request.caseSubmissionDate));
-                view.down('#caseLastUpdateDate').setHtml(Ext.Global.FormatJsonDate(request.caseLastUpdateDate));
+                view.down('#caseSubmissionDate').setHtml(Ext.Global.FormatDate(request.caseSubmissionDate));
+                view.down('#caseLastUpdateDate').setHtml(Ext.Global.FormatDate(request.caseLastUpdateDate));
                 view.down('#caseRepresentativeIDNum').setHtml(request.caseRepresentativeIDNum);
                 view.down('#caseRepresentativeName').setHtml(request.caseRepresentativeName);
                 view.down('#caseRepresentativeNameENU').setHtml(request.caseRepresentativeNameENU);

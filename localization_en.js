@@ -225,6 +225,7 @@ var localeEn =
 				{itemId:"lbl12", "xtype": "label","value":"Establishment Type"},
 				{itemId:"lbl13", "xtype": "label","value":"Legal Form"},
 				{itemId:"lbl14", "xtype": "label","value":"Establishment Status"},
+				{itemId:"lbl15", "xtype": "label","value":"Establishment Registration Number"},
 
 				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
 				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},
@@ -434,7 +435,9 @@ var localeEn =
 				{itemId:"homeInquire", xtype: "label",value:"Inquiries & Extracts"},
 				{itemId:"homeReports", xtype: "label",value:"Indicators & Reports"},
 				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
-				{itemId:"homeContact", xtype: "label",value:"Connect"}
+				{itemId:"homeContact", xtype: "label",value:"Connect"},
+				{itemId:"home-links", xtype: "cls",value:"ltr-cls"}
+
 			]
 		},
 
@@ -948,7 +951,12 @@ var localeEn =
 	            errNOC:'You can\'t request this type of Certificate because you have associated companies',
 	            NoDataSupply: 'You don\'t have data in the supply System',
 	            ComplaintsConfirmation:'Thank You, Complaint has been sent successfully',
-	            GeneralError: 'Sorry, Error occured'
+	            GeneralError: 'Sorry, Error occured',
+	            ComplaintType1:'Commercial Fraud',
+	            ComplaintType2:'Price Not Announced',
+	            ComplaintType3:'Bad Service',
+	            ComplaintType4:'Other',
+	            ComplaintType:'Complaint Type'
 				}
 
 }

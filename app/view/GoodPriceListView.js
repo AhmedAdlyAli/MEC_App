@@ -48,14 +48,14 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                 items: [
                     {
                         xtype: 'label',
-                        flex: 1,
+                        flex: 3,
                         cls: 'header-cell1',
                         html: 'اسم المحل',
                         itemId: 'shopName'
                     },
                     {
                         xtype: 'label',
-                        flex: 1,
+                        flex: 2,
                         cls: 'header-cell1',
                         html: 'السعر'
                     }

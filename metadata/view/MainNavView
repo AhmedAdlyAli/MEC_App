@@ -231,6 +231,7 @@
                         "cls": [
                             "home-btns"
                         ],
+                        "itemId": "home-links",
                         "layout": "vbox",
                         "layout|flex": 2
                     },
