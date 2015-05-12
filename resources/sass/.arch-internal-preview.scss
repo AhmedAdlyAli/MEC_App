@@ -110,7 +110,7 @@ body {
                 -webkit-mask: none;
                 background: none;
             }
-            
+
             &.x-button-pressing {
                 background: none !important;
             }
@@ -1131,11 +1131,8 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .item-indicator{
-
-    height:7em;
     font-size:0.9em;
     padding:0.5em 0 0.5em 0;
-
 
     .tpl-indicator-1{
         color: #010101;
@@ -1947,6 +1944,18 @@ background: url(../images/toplogo.png) no-repeat center top;
         &.rounded > * {
             background: #888 !important;
             content: "" !important;
+        }
+    }
+}
+
+.x-list-item {
+    .x-innerhtml {
+        &:after {
+            content: ".";
+            display: block;
+            visibility: hidden;
+            clear: both;
+            height: 0;
         }
     }
 }

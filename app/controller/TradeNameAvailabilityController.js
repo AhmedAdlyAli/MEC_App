@@ -256,19 +256,19 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                 Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
-                Ext.getCmp('commercialRegistrationIssueDate1').setHtml(Ext.Global.DateFormat(company.commercialRegistrationIssueDate));
+                Ext.getCmp('commercialRegistrationIssueDate1').setHtml(Ext.Global.FormatDate(company.commercialRegistrationIssueDate));
 
 
 
-                Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(Ext.Global.DateFormat(company.commercialRegistrationExpiryDate));
+                Ext.getCmp('commercialRegistrationExpiryDate1').setHtml(Ext.Global.FormatDate(company.commercialRegistrationExpiryDate));
                 Ext.getCmp('commercialRegistrationStatus1').setHtml(company.commercialRegistrationStatus);
                 Ext.getCmp('establishmentEnglishName1').setHtml(company.establishmentEnglishName);
                 Ext.getCmp('establishmentArabicName1').setHtml(company.establishmentArabicName);
                 Ext.getCmp('companyCapital1').setHtml(company.companyCapital);
                 Ext.getCmp('commercialPermit1').setHtml(company.commercialPermit);
                 Ext.getCmp('commercialPermitStatus1').setHtml(company.commercialPermitStatus);
-                Ext.getCmp('commercialPermitExpiryDate1').setHtml(Ext.Global.DateFormat(company.commercialPermitExpiryDate));
-                Ext.getCmp('establishmentDate1').setHtml(Ext.Global.DateFormat(company.establishmentDate));
+                Ext.getCmp('commercialPermitExpiryDate1').setHtml(Ext.Global.FormatDate(company.commercialPermitExpiryDate));
+                Ext.getCmp('establishmentDate1').setHtml(Ext.Global.FormatDate(company.establishmentDate));
                 Ext.getCmp('establishmentType1').setHtml(company.establishmentType);
                 Ext.getCmp('establishmentLegalForm1').setHtml(company.establishmentLegalForm);
                 Ext.getCmp('establishmentStatus1').setHtml(company.establishmentStatus);
