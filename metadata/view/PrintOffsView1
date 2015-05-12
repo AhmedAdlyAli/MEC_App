@@ -373,7 +373,9 @@
                         "id": "hiddenCompanyCR",
                         "itemId": "hiddenCompanyCR",
                         "name": "hiddenCompanyCR",
-                        "value": null
+                        "value": [
+                            "429"
+                        ]
                     },
                     "name": "MyHiddenField2",
                     "designerId": "00bb992f-3301-41b6-8775-87e5c0484a4e"
@@ -389,7 +391,9 @@
                         "id": "hiddenPrintoutType",
                         "itemId": "hiddenPrintoutType",
                         "name": "hiddenPrintoutType",
-                        "value": null
+                        "value": [
+                            "50"
+                        ]
                     },
                     "name": "MyHiddenField",
                     "designerId": "6d3e9556-7549-4535-9780-e10d9cb272db"
@@ -487,7 +491,9 @@
                         "id": "hiddenDeliveryMethod",
                         "itemId": "hiddenDeliveryMethod",
                         "name": "hiddenDeliveryMethod",
-                        "value": null
+                        "value": [
+                            "01"
+                        ]
                     },
                     "name": "MyHiddenField1",
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"

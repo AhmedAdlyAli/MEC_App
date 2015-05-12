@@ -10,15 +10,15 @@
 		</data>
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		KecLrqjij0W/51akx2oJrsDzlL0=
 		</data>
 		<key>Default-667h.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		gIRHq1NQi6ouqv6S4zYOVLG0mjE=
 		</data>
 		<key>Default-736h.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		omvnR6BS9zsIgu2osPrsh7KmdhE=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Default@2x~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		L1oZ7wSLmsK4+zzF2gsgZj+LdnU=
 		</data>
 		<key>Default~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		+DutGpYG9jEOvvwb/wDtQrwbYCc=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		R8e+TbKRJ5zXWyeA1tIF4Ol0U+4=
+		NT5VFCGM2e7mHib40hE/t+yIbm0=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -138,11 +138,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		2EwMv+lp7HXnnyLuocIhvF0EbWs=
+		KYuw9nrq3pVsVT9j0JiXk2eGgXM=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		7mm88Hs2g4ByFnptGIM//OnlPtM=
+		CgkSYSVBYrQBwaIU+TGvK95FiLw=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -302,7 +302,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		+R+50rJGOXhNunkeNeyCPpuC0fw=
+		zYfeRbgi+nT2SS26WmfJCrcT6G0=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -606,7 +606,7 @@
 		</data>
 		<key>www/resources/images/lang-logo.png</key>
 		<data>
-		lLWu+yVTtNDcLgnCBbhvQ6kbp3I=
+		SaLLqFXT431QzbzEhsPyMzWHQzU=
 		</data>
 		<key>www/resources/images/logo.png</key>
 		<data>
@@ -659,6 +659,10 @@
 		<key>www/resources/images/media-img.png</key>
 		<data>
 		4zokham8ssieVGblsUGKPnvBYVM=
+		</data>
+		<key>www/resources/images/more-arrow-ar.png</key>
+		<data>
+		D6kkIc4mYALE7Cmz7f3trox8Ok4=
 		</data>
 		<key>www/resources/images/more-arrow.png</key>
 		<data>
@@ -714,7 +718,7 @@
 		</data>
 		<key>www/resources/images/toplogo.png</key>
 		<data>
-		zb+tXNFqwKrjqymwniKHDS781fM=
+		DkwFBQLcQoRJUKVRc4g3D8zy8A8=
 		</data>
 		<key>www/resources/images/twitter.png</key>
 		<data>
@@ -753,15 +757,15 @@
 		</data>
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		KecLrqjij0W/51akx2oJrsDzlL0=
 		</data>
 		<key>Default-667h.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		gIRHq1NQi6ouqv6S4zYOVLG0mjE=
 		</data>
 		<key>Default-736h.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		omvnR6BS9zsIgu2osPrsh7KmdhE=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -785,15 +789,15 @@
 		</data>
 		<key>Default@2x~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		L1oZ7wSLmsK4+zzF2gsgZj+LdnU=
 		</data>
 		<key>Default~iphone.png</key>
 		<data>
-		UMBHkEKQbtI5zyF0o6TMdNUSSXQ=
+		+DutGpYG9jEOvvwb/wDtQrwbYCc=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		R8e+TbKRJ5zXWyeA1tIF4Ol0U+4=
+		NT5VFCGM2e7mHib40hE/t+yIbm0=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -873,11 +877,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		2EwMv+lp7HXnnyLuocIhvF0EbWs=
+		KYuw9nrq3pVsVT9j0JiXk2eGgXM=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		7mm88Hs2g4ByFnptGIM//OnlPtM=
+		CgkSYSVBYrQBwaIU+TGvK95FiLw=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -1037,7 +1041,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		+R+50rJGOXhNunkeNeyCPpuC0fw=
+		zYfeRbgi+nT2SS26WmfJCrcT6G0=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -1341,7 +1345,7 @@
 		</data>
 		<key>www/resources/images/lang-logo.png</key>
 		<data>
-		lLWu+yVTtNDcLgnCBbhvQ6kbp3I=
+		SaLLqFXT431QzbzEhsPyMzWHQzU=
 		</data>
 		<key>www/resources/images/logo.png</key>
 		<data>
@@ -1394,6 +1398,10 @@
 		<key>www/resources/images/media-img.png</key>
 		<data>
 		4zokham8ssieVGblsUGKPnvBYVM=
+		</data>
+		<key>www/resources/images/more-arrow-ar.png</key>
+		<data>
+		D6kkIc4mYALE7Cmz7f3trox8Ok4=
 		</data>
 		<key>www/resources/images/more-arrow.png</key>
 		<data>
@@ -1449,7 +1457,7 @@
 		</data>
 		<key>www/resources/images/toplogo.png</key>
 		<data>
-		zb+tXNFqwKrjqymwniKHDS781fM=
+		DkwFBQLcQoRJUKVRc4g3D8zy8A8=
 		</data>
 		<key>www/resources/images/twitter.png</key>
 		<data>
