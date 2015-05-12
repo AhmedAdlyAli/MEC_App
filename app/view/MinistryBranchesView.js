@@ -35,7 +35,8 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'فروع الوزارة'
+                html: 'فروع الوزارة',
+                itemId: 'viewLbl'
             },
             {
                 xtype: 'panel',
@@ -80,6 +81,9 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
         this.callParent();
 
         var view = this;
+
+        Ext.Localization.LocalizeView(this);
+
 
         var mapPanel = this.down('map');
         var gMap = mapPanel.getMap();
