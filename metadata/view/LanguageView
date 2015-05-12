@@ -80,7 +80,7 @@
                                             "img-lang"
                                         ],
                                         "height": "80%",
-                                        "src": "/resources/images/lang-logo.png"
+                                        "src": "resources/images/lang-logo.png"
                                     },
                                     "name": "MyImg",
                                     "designerId": "aee43638-b840-44ec-aaf8-7d4fe3efaec4"

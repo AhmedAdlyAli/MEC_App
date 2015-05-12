@@ -50,7 +50,7 @@ Ext.define('MEC_App.view.LanguageView', {
                                         xtype: 'image',
                                         cls: 'img-lang',
                                         height: '80%',
-                                        src: '/resources/images/lang-logo.png'
+                                        src: 'resources/images/lang-logo.png'
                                     }
                                 ]
                             }
