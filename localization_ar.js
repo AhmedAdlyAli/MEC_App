@@ -174,7 +174,8 @@ var localeAr =
 				{itemId:"btnReports", "xtype": "button","value":"المؤشرات والتقارير"},
 				{itemId:"btnSettings", "xtype": "button","value":"الاعدادات"},
 				{itemId:"btnLogin", "xtype": "button","value":"تسجيل الدخول"},
-				{itemId:"btnLogout", "xtype": "button","value":"تسجيل الخروج"}
+				{itemId:"btnLogout", "xtype": "button","value":"تسجيل الخروج"},
+				{itemId:"btnAboutApp", "xtype": "button","value":"عن التطبيق"}
 
 			]
 
