@@ -35,7 +35,7 @@
                 "id": "pnlMain",
                 "itemId": "pnlMain",
                 "layout": "vbox",
-                "title": "<div class=\\\"fixed-ar-title\\\">وزارة الاقتصاد و التجارة</div><div class=\\\"fixed-en-title\\\">MINISTRY OF ECONOMY AND COMMERCE</div>"
+                "title": "<div class=\\\"fixed-ar-title\\\">وزارة الاقتصاد و التجارة</div><div class=\\\"fixed-en-title\\\">Ministry of Economy and Commerce</div>"
             },
             "name": "MyPanel",
             "designerId": "c1a2e8dd-8b56-4ceb-b3d3-4813906c7d2b",
