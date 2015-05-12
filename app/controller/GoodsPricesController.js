@@ -96,22 +96,22 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
     },
 
     onLstShopsItemTap: function(dataview, index, target, record, e, eOpts) {
-            dataview.up('MainNavView').push({
+            /*dataview.up('MainNavView').push({
                     xtype: 'ShopPriceListView',
                     title: Ext.Global.GetFixedTitle(),
                     data: record.data
 
-                });
+                });*/
 
     },
 
     onLstProductsItemTap: function(dataview, index, target, record, e, eOpts) {
-            dataview.up('MainNavView').push({
+            /*dataview.up('MainNavView').push({
                     xtype: 'GoodPriceListView',
                     title: Ext.Global.GetFixedTitle(),
                     data: record.data
 
-                });
+                });*/
 
     }
 
