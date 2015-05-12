@@ -691,6 +691,7 @@ var localeEn =
 		{
 			itemId:"EconomicIndicatorsListing",
 			description: "Economic Indicators Listing",
+			cls:"ltr-cls",
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Economic Indicators"},
@@ -918,6 +919,28 @@ var localeEn =
 
 
 
+
+		{
+			itemId:"EconomicIndicatorsView",
+			description: "Economic Indicators",
+			cls:"ltr-cls",
+			items:
+			[
+				{itemId:"lstIndicators", xtype: "cls",value:"ltr-cls"}
+			]
+		},
+
+		{
+			itemId:"EconomicIndicatorsDetailsView",
+			description: "Economic Indicators Details",
+			cls:"ltr-cls",
+			items:
+			[
+				{itemId:"lblLastUpdate1", xtype: "label",value:"Last Updated"},
+				{itemId:"lblWhatIS", xtype: "label",value:"What is "},
+				{itemId:"lblLink", xtype: "label",value:"View Report (PDF)"}
+			]
+		},
 
 		{
 			itemId:"ShopPriceListView",

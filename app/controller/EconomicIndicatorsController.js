@@ -88,9 +88,14 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var data = view.getData();
 
         //console.log(data);
+        var currency=' مليون (ر.ق)';
+        if(Ext.Global.LanguageFlag == 'en'){
+            currency=' Million (QAR)';
+        }
+
 
         view.down('#lblTitle').setHtml(data.Title);
-        view.down('#lblValue').setHtml(data.Value+ ' مليون (ر.ق)') ;
+        view.down('#lblValue').setHtml(data.Value+ currency) ;
 
         if(data.ChangePercent>0){
             view.down('#lblPercentOfChange').addCls('arrow-up-details');
@@ -103,7 +108,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblPercentOfChange').setHtml(data.ChangePercent);
 
 
-        view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatDate(data.LastUpdated));
+        view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatJsonDate(data.LastUpdated));
 
 
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
