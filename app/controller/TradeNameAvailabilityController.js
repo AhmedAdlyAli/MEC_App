@@ -100,6 +100,10 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                         data : json.listOfMecReservedTradeNamesIo.mecReservedTradeNames
                     });
 
+
+                    //console.log(json.listOfMecReservedTradeNamesIo.mecReservedTradeNames);
+
+
                     var lst = Ext.getCmp('lstTradeNameResults');
                     lst.setStore(store);
                 }else{
@@ -194,6 +198,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
 
+        if(cr!=='')cp=null;
 
 
 

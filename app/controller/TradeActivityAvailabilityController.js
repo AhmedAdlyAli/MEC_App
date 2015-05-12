@@ -85,6 +85,10 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
                 if(json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo.length>0)
                 {
+
+
+                    console.log(json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo);
+
                     var store = new Ext.data.Store({
                         data : json.listOfMecBusinessActivitiesIo.mecBusinessActivitiesIo
                     });

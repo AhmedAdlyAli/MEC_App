@@ -101,10 +101,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":"21463400042",
-                                    "languageID":"2",
+                var requestData2 = {"qid": Ext.Global.identityNum,
+                                    "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
                                     "mobileDeviceID":"1231",
-                                    "sessionID": "123"};
+                                    "sessionID": Ext.Global.userSupplyToken};
+
+
+
+
 
                 Ext.Ajax.request({
 
@@ -720,7 +724,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         var requestData=
-            {"qid": "21463400042",//Ext.Global.identityNum,//"21463400042",
+            {"qid":  Ext.Global.identityNum,//"21463400042",
              "languageID":language,
              "mobileDeviceID":"1231",
              "sessionID": Ext.Global.userSupplyToken};

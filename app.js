@@ -145,7 +145,7 @@ Ext.application({
     name: 'MEC_App',
 
     launch: function() {
-        Ext.Ajax.setTimeout(15000);
+        Ext.Ajax.setTimeout(30000);
 
         Ext.Ajax.on('requestexception', function (conn, response, options) {
 

@@ -34,76 +34,76 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
 
 
         Ext.Ajax.request({
-                    url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetAllQuarterlyBusinessReportCategories?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
-                    method : 'Get',
-                    success : function (response) {
-
-                        var json = Ext.util.JSON.decode(response.responseText);
-
-                        console.log(json);
-
-                        view.setData(json);
-
-
-                        if(Ext.Global.LanguageFlag=='ar')
-                        view.down('#txtFilter').setValue(json[2].NameAr);
-                        else
-                        view.down('#txtFilter').setValue(json[2].Name);
-
-
-
-
-                        // success - get report
-
-        Ext.Ajax.request({
-
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=2&categoryId='+json[2].Id,
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetAllQuarterlyBusinessReportCategories?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
             method : 'Get',
             success : function (response) {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-
-
                 console.log(json);
 
+                view.setData(json);
 
 
-
-                var store = new Ext.data.Store({
-                    data : json
-                });
-
-
-                view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                if(Ext.Global.LanguageFlag=='ar')
+                    view.down('#txtFilter').setValue(json[2].NameAr);
+                else
+                    view.down('#txtFilter').setValue(json[2].Name);
 
 
 
 
-                Ext.AnimationHelper.HideLoading();
-            }
-        });
+                // success - get report
+
+                Ext.Ajax.request({
+
+                    url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=2&categoryId='+json[2].Id,
+                    method : 'Get',
+                    success : function (response) {
+
+                        var json = Ext.util.JSON.decode(response.responseText);
+
+
+
+                        console.log(json);
 
 
 
 
+                        var store = new Ext.data.Store({
+                            data : json
+                        });
+
+
+                        view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
 
 
 
 
-
-
-
-
-
-
-
-
+                        Ext.AnimationHelper.HideLoading();
                     }
                 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+        });
 
 
 

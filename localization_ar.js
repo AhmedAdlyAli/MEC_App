@@ -46,7 +46,7 @@ var localeAr =
 			itemId:"InquiriesView",
 			items: [
 				{Name:"البحث عن اسم تجاري", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
-				{Name:"البحث عن نشاط تجاري", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
+				{Name:"البحث عن نشاط تجاري ورسم النشاط", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
 				{Name:"الاستدعاءات", Url:"RecallsView", Icon:"ico-recall-item.png"},
 				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"},
 				{Name:"ثقافة المستهلك", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
@@ -226,7 +226,7 @@ var localeAr =
 	            NoData: 'عفوا لا يوجد بيانات',
 	            Message:'رسالة',
 	            NoDataPrintoffs:'عفوا لا يمكنك تقديم طلب مستخرجات سجل أو رخصة تجارية حيث لا يوجد لديك شركات',
-	            errNOC:'لا يمكنط طلب هذه الشهادة لوجود منشآت مرتبطة بإسم المستخدم',
+	            errNOC:'لا يمكنك طلب هذه الشهادة لوجود منشآت مرتبطة بإسم المستخدم',
 	            NoDataSupply: 'لا يوجد بيانات متاحة لحسابك في نظام التموين',
 	            ComplaintsConfirmation:'شكرا٬ لقد تم ارسال الشكوى بنجاح',
 	            GeneralError: 'عفوا٬ لقد حدث خطأ',
@@ -235,7 +235,8 @@ var localeAr =
 	            ComplaintType3:'سوء تقديم خدمة',
 	            ComplaintType4:'اخرى',
 	            ComplaintType:'نوع الشكوى',
-	            Product: 'المنتج'
+	            Product: 'المنتج',
+	            readnews: 'قراءة الخبر على الموقع'
 
 				}
 }

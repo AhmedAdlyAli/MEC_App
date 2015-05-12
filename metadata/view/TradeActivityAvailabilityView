@@ -118,12 +118,57 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='tpl-activity-1'>{businessActivityArabicName}</div>",
-                            "<div class='tpl-activity-2'><span class=FB> {fees} ر.ق</span> <span class=FA> {businessActivityCode}</span> </div>"
+                            "<div class='tpl-activity-1'>{[this.CheckLang(values.businessActivityArabicName,values.businessActivityEnglishName)]}</div>",
+                            "<div class='tpl-activity-2'><span class=FB> {fees} {[this.GetQAR()]} </span> <span class=FA> {businessActivityCode}</span> </div>"
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "e61ac0d1-b73b-4358-a3a3-e0afc6e7232a"
+                    "designerId": "e61ac0d1-b73b-4358-a3a3-e0afc6e7232a",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "businessActivityArabicName",
+                                    "businessActivityEnglishName"
+                                ],
+                                "fn": "CheckLang",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag==='ar')",
+                                    "return businessActivityArabicName;",
+                                    "else",
+                                    "return businessActivityEnglishName;",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckLang",
+                            "designerId": "0eed2a1a-7e32-445d-8a21-8f27ddb37590"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "GetQAR",
+                                "implHandler": [
+                                    "       if(Ext.Global.LanguageFlag==='ar')",
+                                    "                            return 'ر.ق';",
+                                    "                            else",
+                                    "                            return 'QR';"
+                                ]
+                            },
+                            "name": "GetQAR",
+                            "designerId": "77ab02a9-432f-4bff-a2cf-2622c387ecf5"
+                        }
+                    ]
                 }
             ]
         }

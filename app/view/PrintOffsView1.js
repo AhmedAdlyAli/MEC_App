@@ -465,8 +465,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             }
 
 
-                            if(cr==='') cr='_';
-
 
                             Ext.AnimationHelper.ShowLoading();
 
@@ -526,9 +524,10 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     }else{
 
 
-                                        //              console.log(json);
+                                        //console.log(json);
 
 
+                                        //alert(json.status);
 
                                         //   if(json.status==='Success')
                                         //   {

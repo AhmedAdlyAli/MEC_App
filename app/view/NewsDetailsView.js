@@ -59,13 +59,18 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                                 xtype: 'label',
                                 cls: 'date',
                                 id: 'lblDate'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'details',
+                                id: 'lblDetails'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'details',
+                                itemId: 'lblUrl'
                             }
                         ]
-                    },
-                    {
-                        xtype: 'label',
-                        cls: 'details',
-                        id: 'lblDetails'
                     }
                 ]
             }
@@ -81,11 +86,20 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
         var data = this.getData();
 
+        console.log(data);
+
 
         this.down('#lblTitle').setHtml(data.NewsTitle);
         this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));
         this.down('#lblDetails').setHtml(data.NewsDescription);
         this.down('#imgNews').setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/EconomyNews/Image/"+data.Id);
+
+
+        this.down('#lblUrl').setHtml("<a class=ext-link href="+ data.NewsLink+ " target='_system' >" + Ext.Localization.GetMessage('readnews') + "</a>");
+
+
+        //this.down('#lblUrl').setHtml(data.NewsLink);
+
 
     }
 

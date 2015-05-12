@@ -1020,7 +1020,8 @@ var localeEn =
 	            ComplaintType3:'Bad Service',
 	            ComplaintType4:'Other',
 	            ComplaintType:'Complaint Type',
-	            Product: 'Product'
+	            Product: 'Product',
+	            readnews: 'Read Full News'
 				}
 
 }

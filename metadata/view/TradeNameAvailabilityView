@@ -134,11 +134,39 @@
                     "userConfig": {
                         "designer|displayName": "itemTpl",
                         "implHandler": [
-                            "<div class='CompanyListItem'>{tradeName}</div>"
+                            "<div class='CompanyListItem'>{[this.CheckLang(values.tradeName,values.tradeNameENU)]}</div>",
+                            ""
                         ]
                     },
                     "name": "itemTpl",
-                    "designerId": "5d34c00f-78bd-45ef-83c3-ee82b0e89510"
+                    "designerId": "5d34c00f-78bd-45ef-83c3-ee82b0e89510",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "tradeName",
+                                    "tradeNameENU"
+                                ],
+                                "fn": "CheckLang",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag==='ar')",
+                                    "return tradeName;",
+                                    "else",
+                                    "return tradeNameENU;",
+                                    "",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckLang",
+                            "designerId": "03575759-9d8d-454c-8d56-cabcad3cba38"
+                        }
+                    ]
                 }
             ]
         }
