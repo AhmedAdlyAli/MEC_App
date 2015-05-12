@@ -406,7 +406,18 @@ var localeEn =
 			]
 		},
 
+{
+			itemId:"MinistryBranchesView",
+			description: "",
+			cls:'ltr',
+			items:
+			[
+				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"}
+				
+				
 
+			]
+		},
 
 
 		{
@@ -889,7 +900,7 @@ var localeEn =
 
 		{
 			itemId:"FeedbackFormView",
-			description: "Suggestions Form",
+			description: "",
 			cls: "ltr-cls",
 			items:
 			[
@@ -903,6 +914,11 @@ var localeEn =
 				{itemId:"FeedbackForm", xtype: "cls",value:"ltr-cls"}
 			]
 		},
+
+
+
+
+
 
 		{
 			itemId:"EconomicIndicatorsView",

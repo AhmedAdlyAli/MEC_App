@@ -34,7 +34,9 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "فروع الوزارة"
+                "html": "فروع الوزارة",
+                "id": null,
+                "itemId": "viewLbl"
             },
             "name": "MyLabel",
             "designerId": "141444f4-0d9e-4162-89c6-26a7188dd23c"
@@ -89,6 +91,9 @@
                     "this.callParent();",
                     "",
                     "var view = this;",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
                     "",
                     "var mapPanel = this.down('map');",
                     "var gMap = mapPanel.getMap();",
