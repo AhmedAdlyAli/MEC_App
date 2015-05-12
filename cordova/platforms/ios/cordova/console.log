@@ -1658,3 +1658,8 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-12 03:36:46.075 MEC_App[45771:461450] Resetting plugins due to page load.
 2015-05-12 03:36:46.346 MEC_App[45771:461450] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7FB1F2D5-5839-4BF5-8223-F31817A47D9D/MEC_App.app/www/index.html
 2015-05-12 03:37:51.212 MEC_App[45771:461450] THREAD WARNING: ['ListPicker'] took '12.662109' ms. Plugin should use a background thread.
+2015-05-12 03:45:53.850 MEC_App[47402:468470] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-12 03:45:53.851 MEC_App[47402:468470] Multi-tasking -> Device: YES, App: YES
+2015-05-12 03:45:53.853 MEC_App[47402:468470] Unlimited access to network resources
+2015-05-12 03:45:54.004 MEC_App[47402:468470] Resetting plugins due to page load.
+2015-05-12 03:45:54.302 MEC_App[47402:468470] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/5789965B-6E4E-4AC0-A86E-AC49334AE043/MEC_App.app/www/index.html
