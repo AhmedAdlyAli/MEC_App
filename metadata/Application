@@ -142,7 +142,7 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "",
+                    "Ext.Ajax.setTimeout(15000);",
                     "",
                     "Ext.Ajax.on('requestexception', function (conn, response, options) {",
                     "",
@@ -156,11 +156,11 @@
                     "",
                     "",
                     "    Ext.AnimationHelper.HideLoading();",
-                    "",
+                    "    ",
+                    "    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');",
                     "",
                     "",
                     "});",
-                    "",
                     "",
                     "",
                     "Ext.Global.LoadLocalization();",
