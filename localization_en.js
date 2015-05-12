@@ -968,7 +968,7 @@ var localeEn =
 
 	Messages: {
 				StockNotFound:'There is No stock on the selected dealer',
-				EstName:'Establishment Name',
+				EstName:'Report Name',
 				Choose:'Choose',
 				Cancel:'Cancel',
 				PrintType1:'CR Offprint - Arabic',

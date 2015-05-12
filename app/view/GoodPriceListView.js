@@ -56,7 +56,7 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                     {
                         xtype: 'label',
                         flex: 2,
-                        cls: 'header-cell1',
+                        cls: 'header-cell2',
                         html: 'السعر',
                         itemId: 'lblPrice'
                     }
@@ -68,10 +68,13 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                 itemCls: 'grid-row',
                 itemTpl: [
                     '',
-                    '    <div class=\'row-cell1\'>{Shop.ShopName}</div>    ',
-                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:3\'>{Shop.ShopName}</div>    ',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>{Price}</div>     ',
+                    '</div>',
                     ''
-                ]
+                ],
+                striped: true
             }
         ]
     }

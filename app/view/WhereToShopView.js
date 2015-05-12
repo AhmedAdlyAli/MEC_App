@@ -126,10 +126,10 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 itemCls: 'grid-row',
                 itemTpl: [
                     '',
-                    '<div style=\'-webkit-box-orient:horizontal!important;display:-webkit-box;flex-direction:row;widh:100%\'>',
-                    '<div class=\'row-cell\' style=\'-webkit-box-flex:2\'>{Shop.ShopName}</div>    ',
-                    '<div class=\'row-cell\' style=\'-webkit-box-flex:1\'>{Quantity}({Unit.Name})</div>    ',
-                    '<div class=\'row-cell\' style=\'-webkit-box-flex:1\'>{Price}</div> ',
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>{Shop.ShopName}</div>    ',
+                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Quantity}({Unit.Name})</div>    ',
+                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Price}</div> ',
                     '    ',
                     '    </div>    ',
                     '    '

@@ -82,7 +82,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "header-cell1"
+                            "header-cell2"
                         ],
                         "docked": null,
                         "html": "السعر",
@@ -106,7 +106,8 @@
                 "id": null,
                 "itemCls": "grid-row",
                 "itemId": "lstPrices",
-                "store": null
+                "store": null,
+                "striped": true
             },
             "name": "MyList1",
             "designerId": "29ab6af2-3dff-451c-a7df-c8318203f418",
@@ -122,8 +123,10 @@
                         "designer|displayName": "itemTpl",
                         "implHandler": [
                             "",
-                            "    <div class='row-cell1'>{Shop.ShopName}</div>    ",
-                            "    <div class='row-cell2'>{Price}</div>    ",
+                            "<div class=\"x-horizontal x-align-stretch x-pack-start x-layout-box\">",
+                            "    <div class='row-cell-fix x-layout-box-item x-flexed x-stretched' style='-webkit-box-flex:3'>{Shop.ShopName}</div>    ",
+                            "    <div class='row-cell-fix x-layout-box-item x-flexed x-stretched' style='-webkit-box-flex:2'>{Price}</div>     ",
+                            "</div>",
                             ""
                         ]
                     },

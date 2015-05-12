@@ -25,7 +25,7 @@ Ext.define('MEC_App.view.ShopPriceListView', {
     ],
 
     config: {
-        cls: 'complaint-view',
+        cls: 'complaint-view rtl',
         itemId: 'ShopPriceListView',
         layout: 'vbox',
         scrollable: false,
@@ -65,13 +65,12 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                 itemCls: 'grid-row',
                 itemTpl: [
                     '',
-                    '',
-                    '    <div class=\'row-cell1\'>{Product.ProductName}</div>    ',
-                    '    <div class=\'row-cell2\'>{Price}</div>    ',
-                    '',
-                    '',
-                    ''
-                ]
+                    '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:3\'>{Product.ProductName}</div>    ',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>{Price}</div>     ',
+                    '</div> '
+                ],
+                striped: true
             }
         ]
     }
