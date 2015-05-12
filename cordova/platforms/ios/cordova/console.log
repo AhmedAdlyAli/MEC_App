@@ -1764,3 +1764,17 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-12 09:07:46.243 MEC_App[68133:602879] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7EAB3EB0-C57D-4597-871A-58F4FD6864F9/MEC_App.app/www/index.html
 2015-05-12 09:07:56.997 MEC_App[68133:602879] THREAD WARNING: ['Notification'] took '32.907959' ms. Plugin should use a background thread.
 2015-05-12 09:07:59.092 MEC_App[68133:602879] THREAD WARNING: ['ListPicker'] took '10.657959' ms. Plugin should use a background thread.
+2015-05-12 09:20:47.911 MEC_App[69140:607984] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/FBAD09A3-1B0B-4A08-9794-220B8504B1B9/Library/Cookies/Cookies.binarycookies
+2015-05-12 09:20:47.984 MEC_App[69140:607984] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-12 09:20:47.984 MEC_App[69140:607984] Multi-tasking -> Device: YES, App: YES
+2015-05-12 09:20:47.986 MEC_App[69140:607984] Unlimited access to network resources
+2015-05-12 09:20:48.239 MEC_App[69140:607984] Resetting plugins due to page load.
+2015-05-12 09:20:48.896 MEC_App[69140:607984] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/EF5EA791-D75E-4B85-BBE2-6718F7F62FCB/MEC_App.app/www/index.html
+2015-05-12 09:21:23.456 MEC_App[69844:609763] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/E2805F36-033F-498E-AA17-1D239A85DCC2/Library/Cookies/Cookies.binarycookies
+2015-05-12 09:21:23.520 MEC_App[69844:609763] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-12 09:21:23.520 MEC_App[69844:609763] Multi-tasking -> Device: YES, App: YES
+2015-05-12 09:21:23.522 MEC_App[69844:609763] Unlimited access to network resources
+2015-05-12 09:21:23.699 MEC_App[69844:609763] Resetting plugins due to page load.
+2015-05-12 09:21:23.986 MEC_App[69844:609763] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F7C50B4E-700B-48D6-9A46-7C7061399719/MEC_App.app/www/index.html
+2015-05-12 09:21:31.462 MEC_App[69844:609763] THREAD WARNING: ['Notification'] took '15.399902' ms. Plugin should use a background thread.
+2015-05-12 09:21:35.644 MEC_App[69844:609763] THREAD WARNING: ['ListPicker'] took '11.434082' ms. Plugin should use a background thread.

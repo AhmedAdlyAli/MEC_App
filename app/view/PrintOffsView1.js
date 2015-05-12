@@ -491,7 +491,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             };
 
 
-                            alert(requestData.commercialRegistrationNum + '==' + requestData.commercialPermitNum);
+                            //alert(requestData.commercialRegistrationNum + '==' + requestData.commercialPermitNum);
 
 
                             Ext.Ajax.request({
@@ -529,11 +529,28 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         //              console.log(json);
 
 
-                                        Ext.Viewport.getActiveItem().push({
-                                            xtype: 'PrintOffsView2',
-                                            title: Ext.Global.GetFixedTitle(),
-                                            data: json
-                                        });
+
+                                        if(json.status==='Success')
+                                        {
+
+
+                                            Ext.Viewport.getActiveItem().push({
+                                                xtype: 'PrintOffsView2',
+                                                title: Ext.Global.GetFixedTitle(),
+                                                data: json
+                                            });
+
+                                        }else{
+
+                                            Ext.device.Notification.show({
+                                                title: Ext.Localization.GetMessage('Error'),
+                                                buttons: [Ext.Localization.GetMessage('OK')],
+                                                message: Ext.Localization.GetMessage('GeneralError')
+                                            });
+
+
+
+                                        }
 
                                     }
 
