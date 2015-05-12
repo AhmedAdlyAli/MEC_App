@@ -145,7 +145,7 @@ Ext.application({
     name: 'MEC_App',
 
     launch: function() {
-
+        Ext.Ajax.setTimeout(15000);
 
         Ext.Ajax.on('requestexception', function (conn, response, options) {
 
@@ -160,10 +160,10 @@ Ext.application({
 
             Ext.AnimationHelper.HideLoading();
 
+            Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
 
 
         });
-
 
 
         Ext.Global.LoadLocalization();
