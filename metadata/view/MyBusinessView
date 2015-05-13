@@ -13,7 +13,7 @@
         "designer|userAlias": "MyBusinessView",
         "designer|userClassName": "MyBusinessView",
         "itemId": "MyBusinessView",
-        "layout": "vbox"
+        "layout": "fit"
     },
     "name": "MyPanel",
     "configAlternates": {
@@ -47,11 +47,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "100%",
+                "height": null,
                 "hidden": false,
                 "itemCls": "item-company",
                 "itemId": "lstMyCompanies",
-                "layout|flex": 1,
                 "onItemDisclosure": false
             },
             "name": "MyList",

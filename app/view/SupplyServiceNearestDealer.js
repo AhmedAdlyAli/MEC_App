@@ -60,6 +60,12 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                 xtype: 'label',
                 cls: 'branch-address',
                 itemId: 'lblAddress'
+            },
+            {
+                xtype: 'label',
+                cls: 'branch-goto',
+                html: 'الذهاب إلى الموزع',
+                itemId: 'lblGoTo'
             }
         ]
     }

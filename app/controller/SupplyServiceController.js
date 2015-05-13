@@ -101,10 +101,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid":"24263400239", //Ext.Global.identityNum,
-                                    "languageID":language,
+                var requestData2 = {"qid": Ext.Global.identityNum,
+                                    "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
                                     "mobileDeviceID":"1231",
                                     "sessionID": Ext.Global.userSupplyToken};
+
+
+
 
 
                 Ext.Ajax.request({
@@ -121,7 +124,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         var json1 = Ext.util.JSON.decode(response.responseText);
                         var json2 = Ext.util.JSON.decode(json1.d);
 
-                        if(json2.length>0)
+
+                        console.log(json2);
+
+
+                        if(json2.Data.Items.length>0)
                         {
                         view.setData(json2.Data.Items);
 
@@ -271,8 +278,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                  gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+            var latLang = new google.maps.LatLng (position.coords.latitude,position.coords.longitude);
+
+                  gMap.setCenter(latLang);
                   gMap.setZoom(11);
+
+
+                                    //add user location marker
+                        var marker = new google.maps.Marker({
+                              position: latLang,
+                              map: gMap
+                          });
+
+
+
+
+
 
 
             // get dealers
@@ -359,6 +380,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                            view.down('#hiddenDealerName').setValue(marker.data.DealerName);
 
                         // console.log(marker.data.DealerID);
+
+                        var gotoElement  = view.down('#lblGoTo').element;
+
+
+                        gotoElement.on('tap', function(){
+                            window.open('http://maps.google.com?q='+item.Longtitude+','+item.Latitude,'_system');
+                        }, gotoElement);
 
 
                          viewData.DealerID = marker.data.DealerID;
@@ -648,8 +676,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             Ext.Function.defer(function(){
 
 
-                gMap.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                gMap.setCenter(latLang);
                 gMap.setZoom(11);
+
+
+
+                //add user location marker
+                var marker = new google.maps.Marker({
+                      position: latLang,
+                      map: gMap
+                  });
+
+
+
+
+
 
 
                 // get dealers
@@ -717,7 +759,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         var requestData=
-            {"qid":Ext.Global.identityNum,//"21463400042",
+            {"qid":  Ext.Global.identityNum,//"21463400042",
              "languageID":language,
              "mobileDeviceID":"1231",
              "sessionID": Ext.Global.userSupplyToken};
@@ -742,10 +784,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
 
-                // console.log(json2);
+                console.log(json2);
 
 
-                if(json2.length>0)
+                if(json2.Data.FamilyMembers.length>0)
                 {
 
 
@@ -878,6 +920,21 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                                 view.down('#lblTitle').setHtml(marker.data.DealerName);
                                 view.down('#lblAddress').setHtml(marker.data.Address);
+
+
+
+
+                        var gotoElement  = view.down('#lblGoTo').element;
+
+
+                        gotoElement.on('tap', function(){
+                            window.open('http://maps.google.com?q='+item.Longtitude+','+item.Latitude,'_system');
+                        }, gotoElement);
+
+
+
+
+
 
 
                             });

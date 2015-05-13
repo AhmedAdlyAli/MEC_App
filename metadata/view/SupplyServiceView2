@@ -108,6 +108,23 @@
             "designerId": "c30f2108-11db-4398-8d86-70fe3ac5a596"
         },
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-goto"
+                ],
+                "html": "الذهاب إلى الموزع",
+                "itemId": "lblGoTo"
+            },
+            "name": "MyLabel33",
+            "designerId": "5eb68cc9-b2d4-404d-9715-1817f62344fd"
+        },
+        {
             "type": "Ext.field.Hidden",
             "reference": {
                 "name": "items",

@@ -131,6 +131,19 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                     var carousel = this;
 
+
+
+                                    carousel.onDragStart = function(e){
+
+                                        //    alert(e);
+
+                                        return false;
+                                    };
+
+
+
+
+
                                     setInterval(function(){
                                         carousel.next();
                                     },3500);

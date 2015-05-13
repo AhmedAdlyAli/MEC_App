@@ -101,7 +101,8 @@ Ext.define('MEC_App.controller.LoginController', {
 
                     Ext.Global.identityType = json.listOfMecContactInfoIo.contact[0].identityType;
                     Ext.Global.identityNum = json.listOfMecContactInfoIo.contact[0].identityNum;
-                    Ext.Global.identityNationality = json.listOfMecContactInfoIo.contact[0].identityNationality;
+                    Ext.Global.identityNationality =
+                        json.listOfMecContactInfoIo.contact[0].identityNationalityCode;
 
 
                     Ext.Global.identityNameAr = json.listOfMecContactInfoIo.contact[0].fullNameACalc;

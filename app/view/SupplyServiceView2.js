@@ -64,6 +64,12 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 itemId: 'lblAddress'
             },
             {
+                xtype: 'label',
+                cls: 'branch-goto',
+                html: 'الذهاب إلى الموزع',
+                itemId: 'lblGoTo'
+            },
+            {
                 xtype: 'hiddenfield',
                 itemId: 'hiddenDealerID'
             },

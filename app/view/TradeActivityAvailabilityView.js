@@ -67,10 +67,25 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 id: 'lstTradeActivityResults',
                 itemId: 'lstTradeActivityResults',
                 itemCls: 'item-activity',
-                itemTpl: [
-                    '<div class=\'tpl-activity-1\'>{businessActivityArabicName}</div>',
-                    '<div class=\'tpl-activity-2\'><span class=FB> {fees} ر.ق</span> <span class=FA> {businessActivityCode}</span> </div>'
-                ]
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class=\'tpl-activity-1\'>{[this.CheckLang(values.businessActivityArabicName,values.businessActivityEnglishName)]}</div>',
+                    '<div class=\'tpl-activity-2\'><span class=FB> {fees} {[this.GetQAR()]} </span> <span class=FA> {businessActivityCode}</span> </div>',
+                    {
+                        CheckLang: function(businessActivityArabicName, businessActivityEnglishName) {
+                            if(Ext.Global.LanguageFlag==='ar')
+                            return businessActivityArabicName;
+                            else
+                            return businessActivityEnglishName;
+
+                        },
+                        GetQAR: function() {
+                            if(Ext.Global.LanguageFlag==='ar')
+                            return 'ر.ق';
+                            else
+                            return 'QR';
+                        }
+                    }
+                )
             }
         ]
     }

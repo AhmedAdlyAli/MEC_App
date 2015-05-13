@@ -319,8 +319,8 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         itemCls: 'item-signatory',
                         itemTpl: [
                             '',
-                            '    <div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
-                            '    <div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
+                            '<div class=\'tpl-signatory-1\'>{fullNameARA}</div>',
+                            '<div class=\'tpl-signatory-2\'><span class=\'FA\'>{type}</span> <span class=\'FB\'>{nationality}</span></div>',
                             '',
                             ''
                         ],

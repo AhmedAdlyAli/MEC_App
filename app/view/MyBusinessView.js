@@ -25,7 +25,7 @@ Ext.define('MEC_App.view.MyBusinessView', {
 
     config: {
         itemId: 'MyBusinessView',
-        layout: 'vbox',
+        layout: 'fit',
         cls: [
             'complaint-view',
             'rtl'
@@ -40,8 +40,6 @@ Ext.define('MEC_App.view.MyBusinessView', {
             },
             {
                 xtype: 'list',
-                flex: 1,
-                height: '100%',
                 hidden: false,
                 itemId: 'lstMyCompanies',
                 itemCls: 'item-company',

@@ -73,9 +73,20 @@ Ext.define('MEC_App.view.TradeNameAvailabilityView', {
                 cls: 'CompanyList',
                 height: '100%',
                 id: 'lstTradeNameResults',
-                itemTpl: [
-                    '<div class=\'CompanyListItem\'>{tradeName}</div>'
-                ]
+                itemTpl: Ext.create('Ext.XTemplate', 
+                    '<div class=\'CompanyListItem\'>{[this.CheckLang(values.tradeName,values.tradeNameENU)]}</div>',
+                    '',
+                    {
+                        CheckLang: function(tradeName, tradeNameENU) {
+                            if(Ext.Global.LanguageFlag==='ar')
+                            return tradeName;
+                            else
+                            return tradeNameENU;
+
+
+                        }
+                    }
+                )
             }
         ]
     }

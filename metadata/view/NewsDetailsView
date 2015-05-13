@@ -117,24 +117,42 @@
                             },
                             "name": "MyLabel1",
                             "designerId": "7341e5e3-a50d-4453-93ca-cdc02aa82730"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "details"
+                                ],
+                                "id": "lblDetails"
+                            },
+                            "name": "MyLabel2",
+                            "designerId": "a31d47de-224d-477d-a056-45a1064ae8ad"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "ext-lnk",
+                                    "details"
+                                ],
+                                "html": "قراءة الخبر على الموقع",
+                                "itemId": "lblUrl"
+                            },
+                            "name": "MyLabel3",
+                            "designerId": "99ab2878-00f2-4963-b98f-97d53d5da478"
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "details"
-                        ],
-                        "id": "lblDetails"
-                    },
-                    "name": "MyLabel2",
-                    "designerId": "a31d47de-224d-477d-a056-45a1064ae8ad"
                 }
             ]
         },
@@ -156,11 +174,27 @@
                     "",
                     "var data = this.getData();",
                     "",
+                    "console.log(data);",
+                    "",
                     "",
                     "this.down('#lblTitle').setHtml(data.NewsTitle);",
                     "this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));",
                     "this.down('#lblDetails').setHtml(data.NewsDescription);",
                     "this.down('#imgNews').setSrc(Ext.Global.GetConfig('CMSWSUrl')+\"/EconomyNews/Image/\"+data.Id);",
+                    "",
+                    "",
+                    "var lblUrl = this.down('#lblUrl');",
+                    "//lblUrl.setHtml(data.NewsLink);",
+                    "",
+                    "lblUrl.element.on('tap', function(){",
+                    "",
+                    "    window.open(data.NewsLink,'_system');",
+                    "    ",
+                    "});",
+                    "",
+                    "",
+                    "//this.down('#lblUrl').setHtml(data.NewsLink);",
+                    "",
                     ""
                 ]
             },

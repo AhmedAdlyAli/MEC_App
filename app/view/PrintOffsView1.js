@@ -465,8 +465,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             }
 
 
-                            if(cr==='') cr='_';
-
 
                             Ext.AnimationHelper.ShowLoading();
 
@@ -474,7 +472,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 "serviceId": "9",
                                 "token": Ext.Global.userToken,
                                 "language": Ext.Global.LanguageFlag,
-                                "identityType": 'QID',//Ext.Global.identityType,
+                                "identityType": Ext.Global.identityTypeCode,
                                 "identityNum": Ext.Global.identityNum,
                                 "identityNationality": Ext.Global.identityNationality,
                                 "commercialRegistrationNum":cr,
@@ -526,32 +524,33 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     }else{
 
 
-                                        //              console.log(json);
+                                        //console.log(json);
 
 
+                                        //alert(json.status);
 
-                                        if(json.status==='Success')
-                                        {
+                                        //   if(json.status==='Success')
+                                        //   {
 
 
-                                            Ext.Viewport.getActiveItem().push({
-                                                xtype: 'PrintOffsView2',
-                                                title: Ext.Global.GetFixedTitle(),
-                                                data: json
-                                            });
+                                        Ext.Viewport.getActiveItem().push({
+                                            xtype: 'PrintOffsView2',
+                                            title: Ext.Global.GetFixedTitle(),
+                                            data: json
+                                        });
 
-                                        }else{
+                                        /* }else{
 
-                                            Ext.device.Notification.show({
-                                                title: Ext.Localization.GetMessage('Error'),
-                                                buttons: [Ext.Localization.GetMessage('OK')],
-                                                message: Ext.Localization.GetMessage('GeneralError')
-                                            });
+                                        Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Error'),
+                                        buttons: [Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('GeneralError')
+                                        });
 
 
 
                                         }
-
+                                        */
                                     }
 
                                     Ext.AnimationHelper.HideLoading();
@@ -585,7 +584,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
             "serviceId": "2",
             "token": Ext.Global.userToken,
             "language": Ext.Global.LanguageFlag,
-            "identityType":'QID',
+            "identityType":Ext.Global.identityTypeCode,
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };
