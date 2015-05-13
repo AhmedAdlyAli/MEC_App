@@ -207,8 +207,8 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         view.down('#lblFax').setHtml(marker.data.Fax);
 
 
-                         view.down('#lat').setValue(marker.data.Lat);
-                          view.down('#lng').setValue(marker.data.Lng);
+                        view.down('#lat').setValue(marker.data.Lat);
+                        view.down('#lng').setValue(marker.data.Lng);
 
 
 

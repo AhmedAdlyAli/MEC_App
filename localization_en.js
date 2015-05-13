@@ -494,7 +494,7 @@ var localeEn =
 
 		{
 			itemId:"ReportsView",
-			description: "Reportss...",
+			description: "Reportss..",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Indicators & Reports"},

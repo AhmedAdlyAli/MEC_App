@@ -96,6 +96,16 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
+                                html: 'نوع المنشأة',
+                                itemId: 'lbl12'
+                            },
+                            {
+                                xtype: 'label',
+                                cls: 'label-value',
+                                itemId: 'establishmentType'
+                            },
+                            {
+                                xtype: 'label',
                                 html: 'حالة المنشأة',
                                 itemId: 'lbl14'
                             },
@@ -116,16 +126,6 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'نوع المنشأة',
-                                itemId: 'lbl12'
-                            },
-                            {
-                                xtype: 'label',
-                                cls: 'label-value',
-                                itemId: 'establishmentType'
-                            },
-                            {
-                                xtype: 'label',
                                 html: 'رقم قيد المنشأة',
                                 itemId: 'lbl15'
                             },
@@ -136,7 +136,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التاسيس',
+                                html: 'تاريخ التأسيس',
                                 itemId: 'lbl11'
                             },
                             {
@@ -157,7 +157,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ التأسيس',
+                                html: 'تاريخ انشاء السجل التجاري',
                                 itemId: 'lbl2'
                             },
                             {
