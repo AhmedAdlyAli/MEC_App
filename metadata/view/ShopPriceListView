@@ -83,7 +83,7 @@
                             "header-cell2"
                         ],
                         "docked": null,
-                        "html": "السعر",
+                        "html": "السعر (ر.ق)",
                         "itemId": "lblPrice",
                         "layout|flex": 2
                     },

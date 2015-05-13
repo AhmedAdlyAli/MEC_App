@@ -131,7 +131,7 @@ Ext.define('MEC_App.view.SideMenu', {
                                 hidden: false,
                                 itemId: 'btnAboutApp',
                                 iconAlign: 'right',
-                                iconCls: 'm-icon8',
+                                iconCls: 'm-icon10',
                                 text: 'عن التطبيق'
                             },
                             {

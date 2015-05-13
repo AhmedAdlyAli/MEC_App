@@ -72,7 +72,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 2,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو',
+                                        html: 'سعر الكيلو (ر.ق)',
                                         itemId: 'ProductPrice1'
                                     }
                                 ]
@@ -128,7 +128,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 2,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو',
+                                        html: 'سعر الكيلو (ر.ق)',
                                         itemId: 'ProductPrice2'
                                     }
                                 ]
@@ -184,7 +184,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                         xtype: 'label',
                                         flex: 2,
                                         cls: 'header-cell2',
-                                        html: 'سعر الكيلو',
+                                        html: 'سعر الكيلو (ر.ق)',
                                         itemId: 'ProductPrice3'
                                     }
                                 ]

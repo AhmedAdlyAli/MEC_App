@@ -34,11 +34,11 @@ var localeAr =
 			itemId:"MediaCenterView",
 			items: [
 				{Name:"أخبار الوزارة", CatID:1, Icon:"ico-ministry-news.png"},
-				{Name:"اخبار عن الوزارة", CatID:8, Icon:"ico-news-about.png"},
-				{Name:"أخبار جهات رسمية اقليمية مشابهة", CatID:2, Icon:"ico-news-local-similar.png"},
-				{Name:"أخبار اقتصادية اقليمية", CatID:4, Icon:"ico-news-local-economic.png"},
-				{Name:"أخبار جهات رسمية دولية مشابهة", CatID:6, Icon:"ico-news-international-similar.png"},
-				{Name:"أخبار اقتصادية دولية", CatID:9, Icon:"ico-news-international-economic.png"}
+				{Name:"آراء وانعكاسات", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"أخبار إقليمية رسمية", CatID:2, Icon:"ico-news-local-similar.png"},
+				{Name:"أخبار دولية رسمية", CatID:6, Icon:"ico-news-local-economic.png"},
+				{Name:"المشهد الاقتصادي الإقليمي", CatID:4, Icon:"ico-news-international-similar.png"},
+				{Name:"المشهد الاقتصادي الدولي", CatID:9, Icon:"ico-news-international-economic.png"}
 			]
 		},
 
@@ -69,9 +69,9 @@ var localeAr =
 			items: [
 				{Name:'عن الوزارة',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'موظفو الوزارة',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
-             	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
+             	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'},
+             	{Name:'موظفو الوزارة',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'}
 			]
 		},
 

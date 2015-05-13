@@ -36,7 +36,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'البحث عن نشاط تجاري',
+                html: 'البحث عن نشاط تجاري ورسم النشاط',
                 itemId: 'lblTitle'
             },
             {

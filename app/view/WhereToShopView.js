@@ -114,7 +114,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
                         xtype: 'label',
                         flex: 1,
                         cls: 'header-cell2',
-                        html: 'السعر',
+                        html: 'السعر (ر.ق)',
                         itemId: 'Price'
                     }
                 ]

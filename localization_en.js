@@ -33,11 +33,11 @@ var localeEn =
 			itemId:"MediaCenterView",
 			items: [
 				{Name:"Ministry News", CatID:1, Icon:"ico-ministry-news.png"},
-				{Name:"News About the Ministry", CatID:8, Icon:"ico-news-about.png"},
-				{Name:"Similar Regional Official News", CatID:2, Icon:"ico-news-local-similar.png"},
-				{Name:"Regional Economic News", CatID:4, Icon:"ico-news-local-economic.png"},
-				{Name:"Similar Int. Official News", CatID:6, Icon:"ico-news-international-similar.png"},
-				{Name:"International Economic News", CatID:9, Icon:"ico-news-international-economic.png"}
+				{Name:"Opinions & Reflections", CatID:8, Icon:"ico-news-about.png"},
+				{Name:"Official Regional News", CatID:2, Icon:"ico-news-local-similar.png"},
+				{Name:"Official International News", CatID:6, Icon:"ico-news-local-economic.png"},
+				{Name:"Regional Economic Scenery", CatID:4, Icon:"ico-news-international-similar.png"},
+				{Name:"International Economic Scenery", CatID:9, Icon:"ico-news-international-economic.png"}
 			]
 		},
 
@@ -68,9 +68,9 @@ var localeEn =
 			items: [
 				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
-             	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
+             	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'},
+             	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'}
 			]
 		},
 
@@ -654,10 +654,12 @@ var localeEn =
 		{
 			itemId:"SupplyServiceNearestDealer",
 			description: "Supply Service Nearby Dealer",
+			cls: "ltr-cls",
 			items:
 			[
 	
-				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Dealers"}
+				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Distributor"},
+				{itemId:"lblGoTo", "xtype": "label","value":"Get Directions"}
 			]
 		},
 		{

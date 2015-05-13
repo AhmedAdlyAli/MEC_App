@@ -53,7 +53,7 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                         xtype: 'label',
                         flex: 2,
                         cls: 'header-cell2',
-                        html: 'السعر',
+                        html: 'السعر (ر.ق)',
                         itemId: 'lblPrice'
                     }
                 ]
