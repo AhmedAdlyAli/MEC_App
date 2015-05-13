@@ -1043,7 +1043,8 @@ var localeEn =
 	            ComplaintType4:'Other',
 	            ComplaintType:'Complaint Type',
 	            Product: 'Product',
-	            readnews: 'Read Full News'
+	            readnews: 'Read Full News',
+	            errSelectDealer: 'Please Select Dealer'
 				}
 
 }
