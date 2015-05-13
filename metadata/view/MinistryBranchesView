@@ -186,13 +186,12 @@
                     "                view.down('#lblTel').setHtml(marker.data.Tel);",
                     "                view.down('#lblFax').setHtml(marker.data.Fax);",
                     "",
-                    "                var gotoElement  = view.down('#lblGoTo').element;",
+                    "                ",
+                    "                 view.down('#lat').setValue(marker.data.Lat);",
+                    "                  view.down('#lng').setValue(marker.data.Lng);",
                     "                ",
                     "                ",
-                    "                gotoElement.on('tap', function(){",
-                    "                    window.open('http://maps.google.com?q='+item.Lat+','+item.Lng,'_system');",
-                    "                }, gotoElement);",
-                    "                ",
+                    "            ",
                     "",
                     "",
                     "            });",
@@ -263,75 +262,109 @@
             "userConfig": {
                 "layout|flex": 1
             },
-            "name": "MyPanel6",
-            "designerId": "3bbe6c67-b982-4c8c-9a16-d74c3618ac52",
+            "name": "MyLabel1",
+            "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-goto"
+                ],
+                "html": "الذهاب إلي الفرع",
+                "itemId": "lblGoTo"
+            },
+            "name": "MyLabel4",
+            "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980",
             "cn": [
                 {
-                    "type": "Ext.Label",
+                    "type": "basiceventbinding",
                     "reference": {
-                        "name": "items",
+                        "name": "listeners",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "cls": [
-                            "branch-title"
+                        "fn": "onLblGoToInitialize",
+                        "implHandler": [
+                            "",
+                            "",
+                            "var me = this;",
+                            "",
+                            "                me.element.on('tap', function(){",
+                            "                    window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');",
+                            "                }, me.element);",
+                            ""
                         ],
-                        "itemId": "lblTitle"
+                        "name": "initialize"
                     },
-                    "name": "MyLabel1",
-                    "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "branch-goto"
-                        ],
-                        "html": "الذهاب إلي الفرع",
-                        "itemId": "lblGoTo"
-                    },
-                    "name": "MyLabel4",
-                    "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "branch-tel"
-                        ],
-                        "itemId": "lblTel"
-                    },
-                    "name": "MyLabel5",
-                    "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "branch-fax"
-                        ],
-                        "itemId": "lblFax"
-                    },
-                    "name": "MyLabel7",
-                    "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
+                    "name": "onLblGoToInitialize",
+                    "designerId": "70883ec1-75f4-493f-8448-80aaf9b130b6"
                 }
             ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-tel"
+                ],
+                "itemId": "lblTel"
+            },
+            "name": "MyLabel5",
+            "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "branch-fax"
+                ],
+                "itemId": "lblFax"
+            },
+            "name": "MyLabel7",
+            "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lat"
+            },
+            "name": "MyHiddenField",
+            "designerId": "48bd3d91-7cf6-45b5-bc02-8ab56b3e7120"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lng"
+            },
+            "name": "MyHiddenField1",
+            "designerId": "69e3a4ba-8ac9-444b-94e5-3d0ebbe415d7"
         }
     ]
 }

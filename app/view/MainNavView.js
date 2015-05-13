@@ -424,6 +424,10 @@ Ext.define('MEC_App.view.MainNavView', {
             {
                 fn: 'onMainNavViewActiveItemChange',
                 event: 'activeitemchange'
+            },
+            {
+                fn: 'onMainNavViewBack',
+                event: 'back'
             }
         ]
     },
@@ -450,6 +454,37 @@ Ext.define('MEC_App.view.MainNavView', {
             Ext.Localization.LoadLocalization();
             Ext.Localization.LocalizeView(container);
             Ext.Localization.LocalizeView(Ext.Viewport.getMenus().right);
+
+        }
+
+    },
+
+    onMainNavViewBack: function(navigationview, eOpts) {
+        //console.log(navigationview);
+
+        //alert(navigationview.innerItems.length);
+        if(navigationview.innerItems.length>1)
+        {
+
+
+
+
+
+        if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='LoginFomView')
+            {
+
+                //alert('123');
+
+               // alert(navigationview.innerItems[navigationview.innerItems.length-2]._itemId);
+
+               // navigationview.getNavigationBar().fireEvent('back',
+               //      navigationview.innerItems[navigationview.innerItems.length-1]);
+
+            }
+
+
+
+
 
         }
 

@@ -67,7 +67,22 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 xtype: 'label',
                 cls: 'branch-goto',
                 html: 'الذهاب إلى الموزع',
-                itemId: 'lblGoTo'
+                itemId: 'lblGoTo',
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+
+
+                            var me = this;
+
+                            me.element.on('tap', function(){
+                                window.open('http://maps.google.com?q='+me.up('SupplyServiceView2').down('#lat').getValue()+','+me.up('SupplyServiceView2').down('#lng').getValue(),'_system');
+                            }, me.element);
+
+                        },
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'hiddenfield',
@@ -82,6 +97,14 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                 cls: 'btn-send',
                 itemId: 'btnSupplyNext2',
                 text: 'التالي'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lat'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lng'
             }
         ]
     }

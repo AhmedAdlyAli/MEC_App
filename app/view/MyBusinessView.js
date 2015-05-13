@@ -25,7 +25,7 @@ Ext.define('MEC_App.view.MyBusinessView', {
 
     config: {
         itemId: 'MyBusinessView',
-        layout: 'fit',
+        layout: 'vbox',
         cls: [
             'complaint-view',
             'rtl'
@@ -40,7 +40,10 @@ Ext.define('MEC_App.view.MyBusinessView', {
             },
             {
                 xtype: 'list',
+                height: '100%',
+                hidden: false,
                 itemId: 'lstMyCompanies',
+                autoDestroy: false,
                 itemCls: 'item-company',
                 itemTpl: Ext.create('Ext.XTemplate', 
                     '    <div class=\'tpl-signatory-1\'>{[this.CheckLang(values.establishmentArabicName, values.establishmentEnglishName)]}</div>',

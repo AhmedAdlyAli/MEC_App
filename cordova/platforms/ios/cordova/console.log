@@ -2022,3 +2022,10 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-13 09:53:31.133 MEC_App[43018:341584] Unlimited access to network resources
 2015-05-13 09:53:31.287 MEC_App[43018:341584] Resetting plugins due to page load.
 2015-05-13 09:53:31.542 MEC_App[43018:341584] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C7B215B6-2524-41B6-8E88-9A177A6576D1/MEC_App.app/www/index.html
+2015-05-13 13:10:55.915 MEC_App[45470:415666] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-13 13:10:55.916 MEC_App[45470:415666] Multi-tasking -> Device: YES, App: YES
+2015-05-13 13:10:55.918 MEC_App[45470:415666] Unlimited access to network resources
+2015-05-13 13:10:56.078 MEC_App[45470:415666] Resetting plugins due to page load.
+2015-05-13 13:10:56.342 MEC_App[45470:415666] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/0A42FAF4-B2DC-4FE0-AB6E-64B69D5DFFC7/MEC_App.app/www/index.html
+2015-05-13 13:11:19.810 MEC_App[45470:415666] THREAD WARNING: ['InAppBrowser'] took '659.395752' ms. Plugin should use a background thread.
+2015-05-13 13:20:58.723 MEC_App[45470:420833] Terminating since there is no system app.

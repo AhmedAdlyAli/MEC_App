@@ -155,6 +155,8 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 err='';
                             console.log(formData);
 
+
+
                             if(formData.fullName===''){
 
                                 err+=Ext.Localization.GetMessage('errFullName');
@@ -185,17 +187,58 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                             }else{
 
 
-                                Ext.device.Notification.show({
-                                    title: Ext.Localization.GetMessage('Confirm'),
-                                    buttons: [Ext.Localization.GetMessage('OK')],
-                                    message:  Ext.Localization.GetMessage('FeedbackSubmitted'),
-                                    callback: function(button) {
 
-                                        //return user to home page
 
-                                        Ext.Viewport.getActiveItem().reset();
+                                var requestData = {
+
+
+                                    "fullName":formData.fullName,
+                                    "email":formData.email,
+                                    "mobile":formData.mobile,
+                                    "comment": formData.comment
+
+                                };
+
+
+
+                                console.log(requestData);
+
+
+                                var me = this;
+
+                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaintsEmail';
+
+
+                                Ext.AnimationHelper.ShowLoading();
+
+                                Ext.Ajax.request({
+
+                                    url : url,
+                                    method : 'POST',
+                                    jsonData :requestData,
+                                    success : function (response) {
+
+                                        Ext.AnimationHelper.HideLoading();
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons:[Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                            callback: function(button) {
+
+                                                //return user to home page
+
+                                                Ext.Viewport.getActiveItem().reset();
+
+                                            }
+                                        });
+
+
 
                                     }
+
+
                                 });
 
 

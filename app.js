@@ -113,7 +113,8 @@ Ext.application({
         'SupplyServiceNearestDealer',
         'SupplyServiceMyData',
         'WebFrameView1',
-        'AboutAppView'
+        'AboutAppView',
+        'MyBisunessFixed'
     ],
     controllers: [
         'HomeController',

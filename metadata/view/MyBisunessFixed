@@ -1,0 +1,281 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view",
+            "rtl"
+        ],
+        "designer|userAlias": "MyBisunessFixed",
+        "designer|userClassName": "MyBisunessFixed",
+        "itemId": "MyBisunessFixed",
+        "layout": "vbox"
+    },
+    "name": "MyRequestsView1",
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "f6ffd1b6-fecd-4ce2-aff1-3d5f1d0f4ddf",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "بياناتي الخاصة",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel",
+            "designerId": "f3ef0e9e-ff4b-441b-bd20-e8566e30bd1c"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "itemCls": "item-request",
+                "itemId": "lstEstablishments",
+                "layout|flex": 1
+            },
+            "name": "MyList",
+            "designerId": "c5d8c64b-ce17-48bc-9514-e06427230a06",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "    <div class='tpl-signatory-1'>{[this.CheckLang(values.establishmentArabicName, values.establishmentEnglishName)]}</div>",
+                            "    <div class='tpl-signatory-2'><span class='FA'>{[this.CheckCrName()]} {commercialRegistration}</span> <span class='FB'>{companyStatus}</span></div>",
+                            ""
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "eec3fd66-c19f-48c0-a93e-d79a3a400ace",
+                    "cn": [
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "ar",
+                                    "en"
+                                ],
+                                "fn": "CheckLang",
+                                "implHandler": [
+                                    "if(Ext.Global.LanguageFlag=='ar')",
+                                    "    return ar;",
+                                    "else",
+                                    "    return en;",
+                                    ""
+                                ]
+                            },
+                            "name": "CheckLang",
+                            "designerId": "9380ea42-0c72-40b8-a008-fb4c7b20f906"
+                        },
+                        {
+                            "type": "templatefunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "CheckCrName",
+                                "implHandler": [
+                                    " if(Ext.Global.LanguageFlag=='ar')",
+                                    "     return 'سجل تجاري:';",
+                                    "else",
+                                    "    return 'CR:';"
+                                ]
+                            },
+                            "name": "CheckCrName",
+                            "designerId": "88d43e95-a9eb-465f-860c-7dd0a5468699"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstItemTap",
+                        "implHandler": [
+                            "",
+                            "",
+                            "var cr = record.data.commercialRegistration;",
+                            "var cp = record.data.commercialPermit;",
+                            "",
+                            "",
+                            "",
+                            "if(cr==='' && cp===''){",
+                            "",
+                            "",
+                            "    Ext.device.Notification.show({",
+                            "        title: Ext.Localization.GetMessage('Error'),",
+                            "        buttons: [Ext.Localization.GetMessage('OK')],",
+                            "        message:  Ext.Localization.GetMessage('ErrNocrcp')",
+                            "    });",
+                            "",
+                            "",
+                            "}else{",
+                            "",
+                            "",
+                            "",
+                            "dataview.up('MainNavView').push({",
+                            "    xtype: 'MyEstablishmentDetails',",
+                            "    title: Ext.Global.GetFixedTitle(),",
+                            "    data: record.data",
+                            "",
+                            "});",
+                            "",
+                            "}",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstItemTap",
+                    "designerId": "72e3a407-6425-44ad-861a-7a6ce7d90862"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "var view = this;",
+                    "",
+                    "Ext.Localization.LocalizeView(view);",
+                    "",
+                    "",
+                    "Ext.AnimationHelper.ShowLoading();",
+                    "",
+                    "",
+                    "",
+                    "var requestData = {",
+                    "    \"serviceId\": \"2\",",
+                    "    \"token\": Ext.Global.userToken,",
+                    "    \"language\": Ext.Global.LanguageFlag,",
+                    "    \"identityType\":Ext.Global.identityTypeCode,//'QID', //Ext.Global.identityType,",
+                    "    \"identityNum\": Ext.Global.identityNum,",
+                    "    \"identityNationality\":  Ext.Global.identityNationality",
+                    "};",
+                    "",
+                    "//console.log(requestData);",
+                    "",
+                    "",
+                    "var me = this;",
+                    "",
+                    "Ext.Ajax.request({",
+                    "",
+                    "    url : Ext.Global.GetConfig('webServiceUrl'),",
+                    "    method : 'POST',",
+                    "    jsonData :requestData,",
+                    "    success : function (response) {",
+                    "",
+                    "",
+                    "",
+                    "        Ext.AnimationHelper.HideLoading();",
+                    "",
+                    "        var json = Ext.util.JSON.decode(response.responseText);",
+                    "",
+                    "        //Companies",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "        if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)",
+                    "        {",
+                    "",
+                    "            var storeCompanies = new Ext.data.Store({",
+                    "                data : json.listOfPrimaryEstablishment.primaryEstablishment",
+                    "            });",
+                    "",
+                    "",
+                    "            var lstComapnies = view.down('#lstEstablishments');",
+                    "            //lstComapnies.refresh();",
+                    "            lstComapnies.setStore(storeCompanies);",
+                    "",
+                    "",
+                    "        }else{",
+                    "",
+                    "",
+                    "            Ext.device.Notification.show({",
+                    "                title: Ext.Localization.GetMessage('Error'),",
+                    "                buttons:[Ext.Localization.GetMessage('OK')],",
+                    "                message: Ext.Localization.GetMessage('NoData')",
+                    "            });",
+                    "",
+                    "        }",
+                    "",
+                    "",
+                    "",
+                    "        /*",
+                    "",
+                    "        var lstComapnies = view.add({",
+                    "                xtype: 'list',",
+                    "                //flex: 1,",
+                    "                height: '100px',",
+                    "                itemId: 'lstMyCompanies',",
+                    "                itemCls: 'item-company',",
+                    "                itemTpl: [",
+                    "                    '    <div class=\\'tpl-signatory-1\\'>{establishmentArabicName}</div>',",
+                    "                    '    <div class=\\'tpl-signatory-2\\'><span class=\\'FA\\'>سجل تجاري: {commercialRegistration}</span> <span class=\\'FB\\'>{companyStatus}</span></div>',",
+                    "                    ''",
+                    "                ],",
+                    "                onItemDisclosure: false",
+                    "            });",
+                    "",
+                    "*/",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "    }",
+                    "});",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "6f145e2b-c6b7-4637-9f6b-bb2b24b438e5"
+        }
+    ]
+}

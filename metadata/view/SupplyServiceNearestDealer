@@ -127,7 +127,59 @@
                 "itemId": "lblGoTo"
             },
             "name": "MyLabel31",
-            "designerId": "e8252595-43f4-4955-b67e-4517edf53671"
+            "designerId": "e8252595-43f4-4955-b67e-4517edf53671",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLblGoToInitialize",
+                        "implHandler": [
+                            "",
+                            "",
+                            "var me = this;",
+                            "",
+                            "                me.element.on('tap', function(){",
+                            "                    window.open('http://maps.google.com?q='+me.up('SupplyServiceNearestDealer').down('#lat').getValue()+','+me.up('SupplyServiceNearestDealer').down('#lng').getValue(),'_system');",
+                            "                }, me.element);",
+                            ""
+                        ],
+                        "name": "initialize"
+                    },
+                    "name": "onLblGoToInitialize",
+                    "designerId": "e1277be7-0193-4a91-a24f-76229136c510"
+                }
+            ]
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lat"
+            },
+            "name": "MyHiddenField4",
+            "designerId": "6f7f4605-5fb2-4a11-abdb-5d24e521ef25"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lng"
+            },
+            "name": "MyHiddenField5",
+            "designerId": "0605cf94-c76f-403a-a1a8-fb9190553f03"
         }
     ]
 }

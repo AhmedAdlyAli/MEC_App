@@ -67,7 +67,6 @@ Ext.define('MEC_App.view.AboutView', {
                     {
                         xtype: 'label',
                         cls: 'about-text',
-                        html: 'تختص وزارة الاقتصاد والتجارة وفقاً للمادة (11) من القرار الأميري رقم ( 16) لسنة 2014 م ، بما يلي:<br/>بالإشراف على النشاط الاقتصادي والتجاري، وتوجيهه بما يتفق مع متطلبات التنمية الوطنية، واقتراح أهداف وأدوات وبرامج السياسات الاقتصادية، والعمل على تنمية الأعمال وجذب الاستثمارات ودعم وتنمية الصادرات، وتطوير أساليب وإجراءات تقديم الخدمات العامة لقطاع الأعمال والاستثمار، والإشراف على مزاولة المهن التجارية، وقيد وتسجيل المنشآت التجارية والاستثمارية، وإصدار التراخيص اللازمة لممارسة نشاطها، والإشراف على تنظيم ومراقبة الأسواق في مجال اختصاصها، واتخاذ التدابير اللازمة لحماية المستهلك ومكافحة الغش التجاري وحماية المنافسة ومنع الممارسات الاحتكارية، وحماية حقوق الملكية الفكرية.',
                         itemId: 'AboutMinstryTxt'
                     }
                 ]
@@ -78,9 +77,34 @@ Ext.define('MEC_App.view.AboutView', {
     initialize: function() {
         this.callParent();
 
-        Ext.Localization.LoadLocalization();
 
         Ext.Localization.LocalizeView(this);
+
+        //
+
+
+                Ext.AnimationHelper.ShowLoading();
+
+
+                var me = this;
+
+                Ext.Ajax.request({
+
+                    url : Ext.Global.GetConfig('CMSWSUrl')+ '/AboutUS?culture='+Ext.Global.LanguageFlag,
+                    method : 'Get',
+                    success : function (response) {
+
+                        Ext.AnimationHelper.HideLoading();
+
+                        var json = Ext.util.JSON.decode(response.responseText);
+
+                        me.down('#AboutMinstryTxt').setHtml(json);
+                    }
+                });
+
+
+
+
     }
 
 });

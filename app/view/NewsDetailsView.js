@@ -68,7 +68,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                             {
                                 xtype: 'label',
                                 cls: [
-                                    'ext-lnk',
+                                    'ext-link',
                                     'details'
                                 ],
                                 html: 'قراءة الخبر على الموقع',
