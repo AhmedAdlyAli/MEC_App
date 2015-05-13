@@ -1045,7 +1045,8 @@ var localeEn =
 	            ComplaintType:'Complaint Type',
 	            Product: 'Product',
 	            readnews: 'Read Full News',
-	            errSelectDealer: 'Please Select Dealer'
+	            errSelectDealer: 'Please Select Dealer',
+	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details'
 				}
 
 }
