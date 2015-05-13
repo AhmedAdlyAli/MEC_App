@@ -155,7 +155,7 @@ var localeAr =
 				{itemId:"homeContact", xtype: "label",value:"التواصل"},
 				{itemId:"home-links", xtype: "r-cls",value:"ltr-cls"},
 				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"تشغيل تجريبي"}
+				{itemId:"beta", xtype: "label",value:"تشغيل أولي"}
 			]
 		},
 
@@ -183,6 +183,7 @@ var localeAr =
 ,
 	Messages: {StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار',
 				EstName:'اسم التقرير',
+				CmpnyName:'اسم الشرنة'،
 				Choose:'إختيار',
 				Cancel:'إلغاء',
 				PrintType1:'مستخرج سجل تجاري - العربية',

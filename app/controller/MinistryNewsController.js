@@ -48,8 +48,9 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
 
     GetNews: function(view, categoryID) {
 
-        Ext.AnimationHelper.ShowLoading();
+        view.hide();
 
+        Ext.AnimationHelper.ShowLoading();
 
         var me = this;
 
@@ -69,6 +70,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
                     });
 
                     view.setStore(store);
+                    view.show();
                 }
                 else {
                     Ext.device.Notification.show({

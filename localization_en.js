@@ -992,6 +992,7 @@ var localeEn =
 	Messages: {
 				StockNotFound:'There is no stock avaialble at the selected dealer',
 				EstName:'Report Name',
+				CmpnyName:'Company Name',
 				Choose:'Choose',
 				Cancel:'Cancel',
 				PrintType1:'CR Offprint - Arabic',
