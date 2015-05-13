@@ -58,8 +58,10 @@ Ext.define('MEC_App.controller.DailyPricesController', {
             method : 'Get',
             success : function (response) {
 
-                var json = Ext.util.JSON.decode(response.responseText);
 
+                Ext.AnimationHelper.HideLoading();
+
+                var json = Ext.util.JSON.decode(response.responseText);
 
                 var store = new Ext.data.Store({
                     data : json
@@ -73,7 +75,6 @@ Ext.define('MEC_App.controller.DailyPricesController', {
                 lstPrices.setScrollable(false);
 
 
-                Ext.AnimationHelper.HideLoading();
             }
         });
 
