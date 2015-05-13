@@ -974,6 +974,14 @@ var localeEn =
 			{itemId:"lblPrice", xtype: "label",value:"Price (QAR)"},
 			{itemId:"shopName", xtype: "label",value:"Shop"}			
 			]
+		},
+
+		{
+			itemId:"EconomicIndicatorsBrief",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[]
 		}
 
 	],

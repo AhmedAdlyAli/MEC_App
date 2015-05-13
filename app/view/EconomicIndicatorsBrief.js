@@ -59,6 +59,16 @@ Ext.define('MEC_App.view.EconomicIndicatorsBrief', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+
+        this.callParent();
+
+        Ext.Localization.LoadLocalization();
+
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });
