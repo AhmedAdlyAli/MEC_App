@@ -56,40 +56,46 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 ]
             },
             {
-                xtype: 'label',
-                cls: 'branch-title',
-                itemId: 'lblTitle'
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-goto',
-                html: 'الذهاب إلي الفرع',
-                itemId: 'lblGoTo',
-                listeners: [
+                xtype: 'panel',
+                flex: 1,
+                items: [
                     {
-                        fn: function(component, eOpts) {
+                        xtype: 'label',
+                        cls: 'branch-title',
+                        itemId: 'lblTitle'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-goto',
+                        html: 'الذهاب إلي الفرع',
+                        itemId: 'lblGoTo',
+                        listeners: [
+                            {
+                                fn: function(component, eOpts) {
 
 
-                            var me = this;
+                                    var me = this;
 
-                            me.element.on('tap', function(){
-                                window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');
-                            }, me.element);
+                                    me.element.on('tap', function(){
+                                        window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');
+                                    }, me.element);
 
-                        },
-                        event: 'initialize'
+                                },
+                                event: 'initialize'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-tel',
+                        itemId: 'lblTel'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-fax',
+                        itemId: 'lblFax'
                     }
                 ]
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-tel',
-                itemId: 'lblTel'
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-fax',
-                itemId: 'lblFax'
             },
             {
                 xtype: 'hiddenfield',

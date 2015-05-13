@@ -263,82 +263,100 @@
                 "layout|flex": 1
             },
             "name": "MyLabel1",
-            "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-goto"
-                ],
-                "html": "الذهاب إلي الفرع",
-                "itemId": "lblGoTo"
-            },
-            "name": "MyLabel4",
-            "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980",
+            "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3",
             "cn": [
                 {
-                    "type": "basiceventbinding",
+                    "type": "Ext.Label",
                     "reference": {
-                        "name": "listeners",
+                        "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "fn": "onLblGoToInitialize",
-                        "implHandler": [
-                            "",
-                            "",
-                            "var me = this;",
-                            "",
-                            "                me.element.on('tap', function(){",
-                            "                    window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');",
-                            "                }, me.element);",
-                            ""
+                        "cls": [
+                            "branch-title"
                         ],
-                        "name": "initialize"
+                        "itemId": "lblTitle"
                     },
-                    "name": "onLblGoToInitialize",
-                    "designerId": "70883ec1-75f4-493f-8448-80aaf9b130b6"
+                    "name": "MyLabel2",
+                    "designerId": "f7570d53-2789-4d99-be4a-02e26cd80dba"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-goto"
+                        ],
+                        "html": "الذهاب إلي الفرع",
+                        "itemId": "lblGoTo"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onLblGoToInitialize",
+                                "implHandler": [
+                                    "",
+                                    "",
+                                    "var me = this;",
+                                    "",
+                                    "                me.element.on('tap', function(){",
+                                    "                    window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');",
+                                    "                }, me.element);",
+                                    ""
+                                ],
+                                "name": "initialize"
+                            },
+                            "name": "onLblGoToInitialize",
+                            "designerId": "70883ec1-75f4-493f-8448-80aaf9b130b6"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-tel"
+                        ],
+                        "itemId": "lblTel"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-fax"
+                        ],
+                        "itemId": "lblFax"
+                    },
+                    "name": "MyLabel7",
+                    "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
                 }
             ]
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-tel"
-                ],
-                "itemId": "lblTel"
-            },
-            "name": "MyLabel5",
-            "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-fax"
-                ],
-                "itemId": "lblFax"
-            },
-            "name": "MyLabel7",
-            "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
         },
         {
             "type": "Ext.field.Hidden",

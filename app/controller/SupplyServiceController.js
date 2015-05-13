@@ -958,6 +958,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                     }
                 });
+            }
+        });
     },
 
     domEvent: function(evt, el, o) {
