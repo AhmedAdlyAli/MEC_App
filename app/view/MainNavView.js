@@ -36,7 +36,7 @@ Ext.define('MEC_App.view.MainNavView', {
         items: [
             {
                 xtype: 'panel',
-                title: '<div class=\"fixed-ar-title\">وزارة الاقتصاد و التجارة</div><div class=\"fixed-en-title\">Ministry of Economy and Commerce</div>',
+                title: '<img src="resources/images/toplogo.png" />',
                 id: 'pnlMain',
                 itemId: 'pnlMain',
                 layout: 'vbox',
