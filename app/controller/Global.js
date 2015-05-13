@@ -73,11 +73,13 @@ Ext.define('MEC_App.controller.Global', {
 
             //BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 
-            supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
+            supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',
 
             //supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
 
-            SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
+            SupplyServicePaymentUrl: 'https://supply.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
+
+            //SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
             CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
             CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',

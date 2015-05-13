@@ -521,16 +521,45 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                         });
 
 
+
+                                    }else if(json.status==='invalid or insufficient input!')
+                                    {
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('invalidInputError')
+                                        });
+
+
+
+
+                                    }else if(json.status==='Contact not found !')
+                                    {
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('contactError')
+                                        });
+
+
+
+                                    }else if(json.status==='Establishment not found !')
+                                    {
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Error'),
+                                            buttons: [Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('EstablishmentError')
+                                        });
+
+
                                     }else{
 
-
-                                        //console.log(json);
-
-
-                                        //alert(json.status);
-
-                                        //   if(json.status==='Success')
-                                        //   {
 
 
                                         Ext.Viewport.getActiveItem().push({
@@ -539,18 +568,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             data: json
                                         });
 
-                                        /* }else{
 
-                                        Ext.device.Notification.show({
-                                        title: Ext.Localization.GetMessage('Error'),
-                                        buttons: [Ext.Localization.GetMessage('OK')],
-                                        message: Ext.Localization.GetMessage('GeneralError')
-                                        });
-
-
-
-                                        }
-                                        */
                                     }
 
                                     Ext.AnimationHelper.HideLoading();

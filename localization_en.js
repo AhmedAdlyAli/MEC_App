@@ -1046,7 +1046,11 @@ var localeEn =
 	            Product: 'Product',
 	            readnews: 'Read Full News',
 	            errSelectDealer: 'Please Select Dealer',
-	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details'
+	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details',
+	            invalidInputError: 'Sorry, an Error has occured',
+	            contactError: 'Sorry, There is missing user information',
+	            EstablishmentError: 'Sorry, There is missing Establishment information'	
+
 				}
 
 }

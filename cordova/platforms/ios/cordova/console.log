@@ -2060,3 +2060,24 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-13 23:15:53.499 MEC_App[66817:617915] Unlimited access to network resources
 2015-05-13 23:15:53.660 MEC_App[66817:617915] Resetting plugins due to page load.
 2015-05-13 23:15:53.933 MEC_App[66817:617915] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/6421033E-5C70-4E36-BB97-C078135CC3C9/MEC_App.app/www/index.html
+2015-05-14 01:58:03.279 MEC_App[74799:677895] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 01:58:03.279 MEC_App[74799:677895] Multi-tasking -> Device: YES, App: YES
+2015-05-14 01:58:03.281 MEC_App[74799:677895] Unlimited access to network resources
+2015-05-14 01:58:03.462 MEC_App[74799:677895] Resetting plugins due to page load.
+2015-05-14 01:58:04.130 MEC_App[74799:677895] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C6FD8BA3-0AAF-4D84-A505-727FFC792198/MEC_App.app/www/index.html
+2015-05-14 01:58:53.981 MEC_App[75386:679647] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 01:58:53.983 MEC_App[75386:679647] Multi-tasking -> Device: YES, App: YES
+2015-05-14 01:58:53.985 MEC_App[75386:679647] Unlimited access to network resources
+2015-05-14 01:58:54.156 MEC_App[75386:679647] Resetting plugins due to page load.
+2015-05-14 01:58:54.683 MEC_App[75386:679647] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8DD17AE0-B1A5-4A0E-916D-A014346026DD/MEC_App.app/www/index.html
+2015-05-14 01:59:29.320 MEC_App[75971:681221] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 01:59:29.321 MEC_App[75971:681221] Multi-tasking -> Device: YES, App: YES
+2015-05-14 01:59:29.323 MEC_App[75971:681221] Unlimited access to network resources
+2015-05-14 01:59:29.488 MEC_App[75971:681221] Resetting plugins due to page load.
+2015-05-14 01:59:29.766 MEC_App[75971:681221] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7E708588-591C-4B73-A5BF-1DC5D2047419/MEC_App.app/www/index.html
+2015-05-14 02:17:29.431 MEC_App[76752:688243] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 02:17:29.433 MEC_App[76752:688243] Multi-tasking -> Device: YES, App: YES
+2015-05-14 02:17:29.447 MEC_App[76752:688243] Unlimited access to network resources
+2015-05-14 02:17:30.112 MEC_App[76752:688243] Resetting plugins due to page load.
+2015-05-14 02:17:30.739 MEC_App[76752:688243] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/900C58F7-796C-4098-A0E5-75668E5406EE/MEC_App.app/www/index.html
+2015-05-14 02:39:43.270 MEC_App[76752:699837] Terminating since there is no system app.

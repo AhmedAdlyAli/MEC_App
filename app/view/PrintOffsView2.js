@@ -128,6 +128,22 @@ Ext.define('MEC_App.view.PrintOffsView2', {
 
 
 
+                            if(!serialNo || serialNo==='')
+                            {
+
+                                Ext.device.Notification.show({
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                    message:  Ext.Localization.GetMessage('GenericError')
+                                });
+
+                            }
+
+
+
+
+
+
 
                             Ext.AnimationHelper.ShowLoading();
 
