@@ -461,6 +461,7 @@ Ext.define('MEC_App.view.MainNavView', {
             Ext.Localization.LoadLocalization();
             Ext.Localization.LocalizeView(container);
             Ext.Localization.LocalizeView(Ext.Viewport.getMenus().right);
+            Ext.Viewport.down('carousel').fireEvent('initialize');
 
         }
 
