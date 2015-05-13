@@ -560,6 +560,7 @@ var localeEn =
 		{
 			itemId:"ComplaintsView",
 			description: "Complaints...",
+			cls: "ltr-cls",
 			items:
 			[
 				{itemId:"frmComplaint", xtype: "cls",value:"ltr-cls"},

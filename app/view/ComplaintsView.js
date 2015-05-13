@@ -251,7 +251,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                             if(formData.shopName===''){
 
-                                err+=Ext.Global.GetValidationMsg('errShopName');
+                                err+=Ext.Localization.GetMessage('errShopName');
                             }
 
 
@@ -264,20 +264,20 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
                             if(formData.txtComplaint===''){
 
-                                err+=Ext.Global.GetValidationMsg('errComplaintText');
+                                err+=Ext.Localization.GetMessage('errComplaintText');
                             }
 
 
 
                             if(formData.fullName===''){
 
-                                err+=Ext.Global.GetValidationMsg('errFullName');
+                                err+=Ext.Localization.GetMessage('errFullName');
                             }
 
 
-                            if(formData.mobile===''){
+                            if(formData.mobile===null){
 
-                                err+=Ext.Global.GetValidationMsg('errMobile');
+                                err+=Ext.Localization.GetMessage('errMobile');
                             }
 
 
