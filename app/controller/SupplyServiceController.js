@@ -150,7 +150,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     minValue: 0,
                                     maxValue:item.AllocatedQty
                                 }
-
                             );
 
                         });
