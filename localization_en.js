@@ -450,7 +450,7 @@ var localeEn =
 				{itemId:"homeContact", xtype: "label",value:"Connect"},
 				{itemId:"home-links", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"Beta Version"}
+				{itemId:"beta", xtype: "label",value:"Initial Run"}
 			]
 		},
 
