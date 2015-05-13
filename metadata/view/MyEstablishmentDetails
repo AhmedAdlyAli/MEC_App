@@ -448,7 +448,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ إنتهاء السجل",
+                                "html": "تاريخ إنتهاء السجل التجاري",
                                 "id": null,
                                 "itemId": "lbl3"
                             },
@@ -930,7 +930,7 @@
                         ],
                         "docked": "top",
                         "itemId": "titlebar4",
-                        "title": "المخولين بالتوقيع",
+                        "title": "المدراء (المخولون بالتوقيع)",
                         "titleAlign": "right"
                     },
                     "name": "MyTitleBar",

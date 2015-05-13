@@ -67,7 +67,28 @@ Ext.define('MEC_App.view.AboutAppView', {
                     {
                         xtype: 'label',
                         cls: 'about-text',
+                        html: 'تطبيق وزارة الاقتصــاد والتجــارة في قطــر ،                يحتوي على العديد من الخدمات التي تقدمها الوزارة للمستثمر والمستهلك ، منها خدمات البحث عن الاسم التجاري والانشطة التجاريه، طلب المستخرجات التجاريه، تقديم وشراء خدمات التموين، الاستعلام عن أسعار السلع، متابعه كافه الاغلاقات والاستدعاءات، والاطلاع على اهم المؤشرات والتقارير الاقتصاديه والتجاريه، إرسال الشكاوى والمقترحات.',
                         itemId: 'AboutMinstryTxt'
+                    },
+                    {
+                        xtype: 'panel',
+                        layout: 'hbox',
+                        items: [
+                            {
+                                xtype: 'image',
+                                flex: 1,
+                                height: 50,
+                                imageCls: 'mal-logo',
+                                src: 'resources/images/malomatia-logo.png'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1.3,
+                                cls: 'mal-text',
+                                html: 'تم تطوير التطبيق بواسطة شركةمعلوماتية (ش.م.ق)',
+                                itemId: 'MalText'
+                            }
+                        ]
                     }
                 ]
             }

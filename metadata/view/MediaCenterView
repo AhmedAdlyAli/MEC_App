@@ -110,7 +110,7 @@
                                 "cls": [
                                     "service-header-title"
                                 ],
-                                "html": "المركز الاعلامي",
+                                "html": "المركز الإعلامي",
                                 "itemId": "viewLbl",
                                 "layout|flex": 1
                             },

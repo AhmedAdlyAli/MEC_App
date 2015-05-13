@@ -382,7 +382,7 @@
                         ],
                         "id": "btnSubmitComplaint1",
                         "itemId": "btnSubmitComplaint1",
-                        "text": "ارسال"
+                        "text": "إرسال"
                     },
                     "name": "MyButton20",
                     "designerId": "02495b69-c9f3-407e-a1e1-09662f1ebace",

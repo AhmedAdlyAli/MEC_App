@@ -76,7 +76,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "cls": [
-                                            "service-header-icon"
+                                            "connect-header-icon"
                                         ],
                                         "layout|flex": 2
                                     },

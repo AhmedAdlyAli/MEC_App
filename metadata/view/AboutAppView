@@ -124,11 +124,61 @@
                         "cls": [
                             "about-text"
                         ],
-                        "html": null,
+                        "html": "تطبيق وزارة الاقتصــاد والتجــارة في قطــر ،                يحتوي على العديد من الخدمات التي تقدمها الوزارة للمستثمر والمستهلك ، منها خدمات البحث عن الاسم التجاري والانشطة التجاريه، طلب المستخرجات التجاريه، تقديم وشراء خدمات التموين، الاستعلام عن أسعار السلع، متابعه كافه الاغلاقات والاستدعاءات، والاطلاع على اهم المؤشرات والتقارير الاقتصاديه والتجاريه، إرسال الشكاوى والمقترحات.",
                         "itemId": "AboutMinstryTxt"
                     },
                     "name": "MyLabel4",
                     "designerId": "afaa0544-d097-430f-a65a-f39c506688b1"
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "name": "MyPanel10",
+                    "designerId": "0b0ec8e3-71cf-45fa-8055-f0f909f6f03d",
+                    "cn": [
+                        {
+                            "type": "Ext.Img",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "height": 50,
+                                "html": null,
+                                "imageCls": "mal-logo",
+                                "layout|flex": 1,
+                                "src": "resources/images/malomatia-logo.png"
+                            },
+                            "name": "MyImg",
+                            "designerId": "4f818b38-f8fc-45e8-9326-d60e53b1bcf0"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "mal-text"
+                                ],
+                                "html": "تم تطوير التطبيق بواسطة شركةمعلوماتية (ش.م.ق)",
+                                "itemId": "MalText",
+                                "layout|flex": 1.3
+                            },
+                            "name": "MyLabel1",
+                            "designerId": "3f77a5bf-6ccb-43b7-8f80-4782e9751088"
+                        }
+                    ]
                 }
             ]
         },
