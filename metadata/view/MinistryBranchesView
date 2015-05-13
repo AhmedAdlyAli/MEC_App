@@ -51,7 +51,8 @@
             "userConfig": {
                 "cls": [
                     "map-panel"
-                ]
+                ],
+                "layout|flex": 2.5
             },
             "name": "MyPanel24",
             "designerId": "84597015-aea5-4907-a46c-cb7a2bd69bc4",
@@ -65,7 +66,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "docked": null,
-                        "height": 420,
+                        "height": "100%",
                         "id": "mymap1",
                         "itemId": "mymap",
                         "mapOptions": [
@@ -253,69 +254,84 @@
             "designerId": "90c5cd80-0217-47e0-b37b-cf6f434c0e55"
         },
         {
-            "type": "Ext.Label",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "cls": [
-                    "branch-title"
-                ],
-                "itemId": "lblTitle"
+                "layout|flex": 1
             },
-            "name": "MyLabel1",
-            "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-goto"
-                ],
-                "html": "الذهاب إلي الفرع",
-                "itemId": "lblGoTo"
-            },
-            "name": "MyLabel4",
-            "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-tel"
-                ],
-                "itemId": "lblTel"
-            },
-            "name": "MyLabel5",
-            "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
-        },
-        {
-            "type": "Ext.Label",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "cls": [
-                    "branch-fax"
-                ],
-                "itemId": "lblFax"
-            },
-            "name": "MyLabel7",
-            "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
+            "name": "MyPanel6",
+            "designerId": "3bbe6c67-b982-4c8c-9a16-d74c3618ac52",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-title"
+                        ],
+                        "itemId": "lblTitle"
+                    },
+                    "name": "MyLabel1",
+                    "designerId": "a17c7d26-e14a-46bf-baaf-71812226bdb3"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-goto"
+                        ],
+                        "html": "الذهاب إلي الفرع",
+                        "itemId": "lblGoTo"
+                    },
+                    "name": "MyLabel4",
+                    "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-tel"
+                        ],
+                        "itemId": "lblTel"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "549caf13-ee89-407b-abd2-dd7053736566"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "branch-fax"
+                        ],
+                        "itemId": "lblFax"
+                    },
+                    "name": "MyLabel7",
+                    "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
+                }
+            ]
         }
     ]
 }

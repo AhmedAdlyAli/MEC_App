@@ -1462,14 +1462,14 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 .branch-address{
-    margin: 5px 10px;
+    margin: 5px 10px!important;
     padding-right:40px;
     background: url(../images/b-address.png) no-repeat right center;
 }
 
 
 .branch-tel{
-    margin: 5px 10px;
+    margin: 5px 10px!important;
     padding-right:40px;
     background: url(../images/b-tel.png) no-repeat right center;
 }
@@ -1477,18 +1477,22 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .branch-goto{
-    margin: 5px 10px;
-    padding-left:1em;
+    margin: 5px 10px!important;
     color:#701d45;
     text-align:left;
-    background: url(../images/goto.png) no-repeat 34% center;
-    text-decoration:underline;
+    
+    .x-innerhtml {
+        display: inline;
+        background: url(../images/goto.png) no-repeat right center;
+        text-decoration:underline;
+        padding:0 1em;
+    }
 }
 
 
 
 .branch-fax{
-    margin: 5px 10px;
+    margin: 5px 10px!important;
     padding-right:40px;
     background: url(../images/b-fax.png) no-repeat right center;
 }
@@ -1707,8 +1711,18 @@ background: url(../images/toplogo.png) no-repeat center top;
         background: url(../images/pro1.png) no-repeat 4% 90%;
     }
 
-    &.complaint-view .x-label {
-        margin: 5px 0 15px 10px;
+    &.complaint-view{
+        .x-label {
+            margin: 5px 0 15px 10px;
+        }
+
+        .x-form-fieldset {
+            direction: ltr;
+
+            .x-spinner.x-field-grouped-buttons .x-input-el {
+                text-align: right;
+            }
+      }
     }
 
     .lstng-img {
@@ -1772,6 +1786,37 @@ background: url(../images/toplogo.png) no-repeat center top;
         padding-right:1.5em;
         padding-left:0;
         background:#fff url(../images/more-arrow-ar.png) no-repeat 95% center;
+    }
+    
+    .branch-address{
+        padding-left:40px;
+        padding-right:0px;
+        background: url(../images/b-address.png) no-repeat left center;
+    }
+
+
+    .branch-tel{
+        padding-left:40px;
+        padding-right:0px;
+        background: url(../images/b-tel.png) no-repeat left center;
+    }
+
+
+    .branch-goto{
+        text-align:right;
+
+        .x-innerhtml {
+            display: inline;
+            background: url(../images/goto.png) no-repeat left center;
+            text-decoration:underline;
+            padding:0 1em;
+        }
+    }
+
+    .branch-fax{
+        padding-left:40px;
+        padding-right:0px;
+        background: url(../images/b-fax.png) no-repeat left center;
     }
 
 

@@ -80,7 +80,10 @@ Ext.define('MEC_App.controller.Localization', {
                         if(viewItem){
                             if(item.xtype=='button') viewItem.setText(item.value);
                             if(item.xtype=='label') viewItem.setHtml(item.value);
-                            if(item.xtype=='titlebar') viewItem.setTitle(item.value).setTitleAlign(item.align);
+                            if(item.xtype=='titlebar') {
+                                viewItem.setTitle(item.value);
+                                viewItem.setTitleAlign(item.align);
+                            }
 
                             if(item.xtype=='container') viewItem.tab.setTitle(item.value);
 

@@ -40,11 +40,12 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
             },
             {
                 xtype: 'panel',
+                flex: 2.5,
                 cls: 'map-panel',
                 items: [
                     {
                         xtype: 'map',
-                        height: 420,
+                        height: '100%',
                         id: 'mymap1',
                         itemId: 'mymap',
                         mapOptions: {
@@ -54,25 +55,31 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 ]
             },
             {
-                xtype: 'label',
-                cls: 'branch-title',
-                itemId: 'lblTitle'
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-goto',
-                html: 'الذهاب إلي الفرع',
-                itemId: 'lblGoTo'
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-tel',
-                itemId: 'lblTel'
-            },
-            {
-                xtype: 'label',
-                cls: 'branch-fax',
-                itemId: 'lblFax'
+                xtype: 'panel',
+                flex: 1,
+                items: [
+                    {
+                        xtype: 'label',
+                        cls: 'branch-title',
+                        itemId: 'lblTitle'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-goto',
+                        html: 'الذهاب إلي الفرع',
+                        itemId: 'lblGoTo'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-tel',
+                        itemId: 'lblTel'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'branch-fax',
+                        itemId: 'lblFax'
+                    }
+                ]
             }
         ]
     },

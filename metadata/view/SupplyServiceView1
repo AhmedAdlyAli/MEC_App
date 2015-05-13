@@ -118,7 +118,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "html": "الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم"
+                "html": "الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم",
+                "itemId": "lblAllowedQuantities"
             },
             "name": "MyLabel42",
             "designerId": "3331af87-5732-4483-b125-43a2db10a549"

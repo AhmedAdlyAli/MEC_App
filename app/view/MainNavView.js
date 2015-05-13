@@ -51,19 +51,16 @@ Ext.define('MEC_App.view.MainNavView', {
                             {
                                 xtype: 'panel',
                                 cls: 'home-header',
-                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                                 itemId: 'pnlNews'
                             },
                             {
                                 xtype: 'panel',
                                 cls: 'home-header2',
-                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                                 itemId: 'pnlNews1'
                             },
                             {
                                 xtype: 'panel',
                                 cls: 'home-header3',
-                                html: '<div class="header-text-bg"><b>اخبار عامّة اخبار عامّة اخبار عامّة</b><br />اخبار عامّة اخبار عامّة  </div>',
                                 itemId: 'pnlNews2'
                             }
                         ],

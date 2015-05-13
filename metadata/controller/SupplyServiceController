@@ -534,6 +534,18 @@
                     "",
                     "",
                     "});",
+                    "",
+                    "mapPanel.element.on({",
+                    "    tap: this.domEvent,",
+                    "    touchstart:this.domEvent,",
+                    "    touchmove:this.domEvent,",
+                    "    touchdown:this.domEvent,",
+                    "    scroll:this.domEvent,",
+                    "    pinch:this.domEvent,",
+                    "    pinchstart:this.domEvent,",
+                    "    pinchend:this.domEvent,",
+                    "    swipe:this.domEvent",
+                    "});",
                     ""
                 ],
                 "name": "initialize"
@@ -1165,6 +1177,27 @@
             },
             "name": "onSupplyServiceMyDataInitialize",
             "designerId": "55a7d54f-884e-4bbe-b6dd-427be09417d8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "evt",
+                    "el",
+                    "o"
+                ],
+                "fn": "domEvent",
+                "implHandler": [
+                    "evt.stopPropagation();"
+                ]
+            },
+            "name": "domEvent",
+            "designerId": "7f2326a1-4d7c-49b6-a418-b311e5d3c6ee"
         }
     ]
 }

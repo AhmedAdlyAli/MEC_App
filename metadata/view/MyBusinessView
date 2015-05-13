@@ -48,10 +48,10 @@
             "codeClass": null,
             "userConfig": {
                 "height": null,
-                "hidden": false,
+                "hidden": null,
                 "itemCls": "item-company",
                 "itemId": "lstMyCompanies",
-                "onItemDisclosure": false
+                "onItemDisclosure": null
             },
             "name": "MyList",
             "designerId": "8236bac8-764a-41d6-9a0d-531cc802a0eb",

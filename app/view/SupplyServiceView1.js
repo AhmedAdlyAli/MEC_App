@@ -68,7 +68,8 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
             },
             {
                 xtype: 'label',
-                html: 'الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم'
+                html: 'الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم',
+                itemId: 'lblAllowedQuantities'
             }
         ]
     }

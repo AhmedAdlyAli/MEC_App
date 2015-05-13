@@ -453,6 +453,18 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         });
 
+        mapPanel.element.on({
+            tap: this.domEvent,
+            touchstart:this.domEvent,
+            touchmove:this.domEvent,
+            touchdown:this.domEvent,
+            scroll:this.domEvent,
+            pinch:this.domEvent,
+            pinchstart:this.domEvent,
+            pinchend:this.domEvent,
+            swipe:this.domEvent
+        });
+
     },
 
     onBtnSupplyNext2Tap: function(button, e, eOpts) {
@@ -961,6 +973,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         });
                     }
                 });
+    },
+
+    domEvent: function(evt, el, o) {
+        evt.stopPropagation();
     }
 
 });

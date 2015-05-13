@@ -119,7 +119,8 @@
                     "branch-goto"
                 ],
                 "html": "الذهاب إلى الموزع",
-                "itemId": "lblGoTo"
+                "itemId": "lblGoTo",
+                "right": null
             },
             "name": "MyLabel33",
             "designerId": "5eb68cc9-b2d4-404d-9715-1817f62344fd"

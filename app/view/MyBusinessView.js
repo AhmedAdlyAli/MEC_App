@@ -40,7 +40,6 @@ Ext.define('MEC_App.view.MyBusinessView', {
             },
             {
                 xtype: 'list',
-                hidden: false,
                 itemId: 'lstMyCompanies',
                 itemCls: 'item-company',
                 itemTpl: Ext.create('Ext.XTemplate', 
@@ -62,8 +61,7 @@ Ext.define('MEC_App.view.MyBusinessView', {
                             return 'CR:';
                         }
                     }
-                ),
-                onItemDisclosure: false
+                )
             }
         ]
     }

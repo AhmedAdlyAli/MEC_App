@@ -409,10 +409,11 @@ var localeEn =
 {
 			itemId:"MinistryBranchesView",
 			description: "",
-			cls:'ltr',
+			cls:'ltr-cls',
 			items:
 			[
-				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"}
+				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"},
+				{itemId:"lblGoTo", "xtype": "label","value":"Get directions"}
 				
 				
 
@@ -600,12 +601,14 @@ var localeEn =
 		{
 			itemId:"SupplyServiceView1",
 			description: "Supply Services...",
+			cls: "ltr-cls",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
 				{itemId:"itemQuantityTitle", xtype: "titlebar",value:"Items and Quantities", align:"left"},
 				{itemId:"frmSupplyService1", xtype: "cls",value:"ltr-cls"},
-				{itemId:"btnSupplyNext1", xtype: "button",value:"Next"}
+				{itemId:"btnSupplyNext1", xtype: "button",value:"Next"},
+				{itemId:"lblAllowedQuantities", xtype: "label",value:"Quantities above are the available quantities in user's balance"}
 			]
 		},
 
@@ -613,10 +616,12 @@ var localeEn =
 		{
 			itemId:"SupplyServiceView2",
 			description: "Supply Services...",
+			cls: "ltr-cls",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
-				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"}
+				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"},
+				{itemId:"lblGoTo", xtype: "label",value:"Get directions"}
 			]
 		},
 
