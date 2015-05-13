@@ -119,7 +119,7 @@
                                         "cls": [
                                             "header-cell2"
                                         ],
-                                        "html": "سعر الكيلو",
+                                        "html": "سعر الكيلو (ر.ق)",
                                         "itemId": "ProductPrice1",
                                         "layout|flex": 2
                                     },
@@ -261,7 +261,7 @@
                                         "cls": [
                                             "header-cell2"
                                         ],
-                                        "html": "سعر الكيلو",
+                                        "html": "سعر الكيلو (ر.ق)",
                                         "itemId": "ProductPrice2",
                                         "layout|flex": 2
                                     },
@@ -403,7 +403,7 @@
                                         "cls": [
                                             "header-cell2"
                                         ],
-                                        "html": "سعر الكيلو",
+                                        "html": "سعر الكيلو (ر.ق)",
                                         "itemId": "ProductPrice3",
                                         "layout|flex": 2
                                     },

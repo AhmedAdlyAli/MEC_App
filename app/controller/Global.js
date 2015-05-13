@@ -114,7 +114,7 @@ Ext.define('MEC_App.controller.Global', {
     },
 
     GetFixedTitle: function() {
-                return '<img src="resources/images/toplogo.png" />';
+                return '<div class=\"fixed-ar-title\">وزارة الاقتصاد و التجارة</div><div class=\"fixed-en-title\">Ministry of Economy and Commerce</div>';
     },
 
     LoadSessionVariables: function() {

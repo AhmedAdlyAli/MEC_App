@@ -30,7 +30,7 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "البحث عن نشاط تجاري",
+                "html": "البحث عن نشاط تجاري ورسم النشاط",
                 "itemId": "lblTitle"
             },
             "name": "MyLabel1",

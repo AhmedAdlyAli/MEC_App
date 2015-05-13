@@ -255,7 +255,7 @@
                                 ],
                                 "hidden": false,
                                 "iconAlign": "right",
-                                "iconCls": "m-icon8",
+                                "iconCls": "m-icon10",
                                 "itemId": "btnAboutApp",
                                 "layout|flex": 1,
                                 "text": "عن التطبيق"
