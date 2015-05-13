@@ -749,6 +749,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.MinistryNewsView": [],
   "MEC_App.view.MinistryPublicationView": [],
   "MEC_App.view.MonthlyFruitView": [],
+  "MEC_App.view.MyBisunessFixed": [],
   "MEC_App.view.MyBranchDetails": [],
   "MEC_App.view.MyBusinessView": [],
   "MEC_App.view.MyEstablishmentDetails": [],
@@ -1691,6 +1692,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.MonthlyFruitView": [
     "widget.MonthlyFruitView"
+  ],
+  "MEC_App.view.MyBisunessFixed": [
+    "widget.MyBisunessFixed"
   ],
   "MEC_App.view.MyBranchDetails": [
     "widget.MyBranchDetails"

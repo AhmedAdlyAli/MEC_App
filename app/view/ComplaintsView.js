@@ -298,15 +298,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-
-
-
-
-
-
-                                //alert('loading');
-
-
                                 var requestData = {
                                     "shopName": formData.shopName,
                                     "shopLocation": formData.shopLocation,

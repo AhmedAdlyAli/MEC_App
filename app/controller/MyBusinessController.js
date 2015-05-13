@@ -97,8 +97,9 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                     var lstComapnies = view.down('#lstMyCompanies');
-
+                    lstComapnies.refresh();
                     lstComapnies.setStore(storeCompanies);
+
 
                 }else{
 
@@ -109,12 +110,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
                         message: Ext.Localization.GetMessage('NoData')
                     });
 
-
-
                 }
-
-
-
 
 
 

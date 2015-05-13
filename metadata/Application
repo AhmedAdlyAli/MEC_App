@@ -126,7 +126,8 @@
             "SupplyServiceNearestDealer",
             "SupplyServiceMyData",
             "WebFrameView1",
-            "AboutAppView"
+            "AboutAppView",
+            "MyBisunessFixed"
         ]
     },
     "name": "Application",

@@ -20,7 +20,8 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.Map'
+        'Ext.Map',
+        'Ext.field.Hidden'
     ],
 
     config: {
@@ -62,7 +63,22 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 xtype: 'label',
                 cls: 'branch-goto',
                 html: 'الذهاب إلي الفرع',
-                itemId: 'lblGoTo'
+                itemId: 'lblGoTo',
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+
+
+                            var me = this;
+
+                            me.element.on('tap', function(){
+                                window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');
+                            }, me.element);
+
+                        },
+                        event: 'initialize'
+                    }
+                ]
             },
             {
                 xtype: 'label',
@@ -73,6 +89,14 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                 xtype: 'label',
                 cls: 'branch-fax',
                 itemId: 'lblFax'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lat'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lng'
             }
         ]
     },
@@ -175,12 +199,11 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         view.down('#lblTel').setHtml(marker.data.Tel);
                         view.down('#lblFax').setHtml(marker.data.Fax);
 
-                        var gotoElement  = view.down('#lblGoTo').element;
+
+                         view.down('#lat').setValue(marker.data.Lat);
+                          view.down('#lng').setValue(marker.data.Lng);
 
 
-                        gotoElement.on('tap', function(){
-                            window.open('http://maps.google.com?q='+item.Lat+','+item.Lng,'_system');
-                        }, gotoElement);
 
 
 

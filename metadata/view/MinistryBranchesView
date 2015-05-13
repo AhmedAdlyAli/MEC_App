@@ -185,13 +185,12 @@
                     "                view.down('#lblTel').setHtml(marker.data.Tel);",
                     "                view.down('#lblFax').setHtml(marker.data.Fax);",
                     "",
-                    "                var gotoElement  = view.down('#lblGoTo').element;",
+                    "                ",
+                    "                 view.down('#lat').setValue(marker.data.Lat);",
+                    "                  view.down('#lng').setValue(marker.data.Lng);",
                     "                ",
                     "                ",
-                    "                gotoElement.on('tap', function(){",
-                    "                    window.open('http://maps.google.com?q='+item.Lat+','+item.Lng,'_system');",
-                    "                }, gotoElement);",
-                    "                ",
+                    "            ",
                     "",
                     "",
                     "            });",
@@ -283,7 +282,33 @@
                 "itemId": "lblGoTo"
             },
             "name": "MyLabel4",
-            "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980"
+            "designerId": "29a293f4-bf61-4e9c-b132-baa01b260980",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLblGoToInitialize",
+                        "implHandler": [
+                            "",
+                            "",
+                            "var me = this;",
+                            "",
+                            "                me.element.on('tap', function(){",
+                            "                    window.open('http://maps.google.com?q='+me.up('MinistryBranchesView').down('#lat').getValue()+','+me.up('MinistryBranchesView').down('#lng').getValue(),'_system');",
+                            "                }, me.element);",
+                            ""
+                        ],
+                        "name": "initialize"
+                    },
+                    "name": "onLblGoToInitialize",
+                    "designerId": "70883ec1-75f4-493f-8448-80aaf9b130b6"
+                }
+            ]
         },
         {
             "type": "Ext.Label",
@@ -316,6 +341,32 @@
             },
             "name": "MyLabel7",
             "designerId": "9283c81f-c205-4733-8d38-0e2feca211ab"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lat"
+            },
+            "name": "MyHiddenField",
+            "designerId": "48bd3d91-7cf6-45b5-bc02-8ab56b3e7120"
+        },
+        {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "lng"
+            },
+            "name": "MyHiddenField1",
+            "designerId": "69e3a4ba-8ac9-444b-94e5-3d0ebbe415d7"
         }
     ]
 }

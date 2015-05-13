@@ -20,7 +20,8 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.Map'
+        'Ext.Map',
+        'Ext.field.Hidden'
     ],
 
     config: {
@@ -65,7 +66,30 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                 xtype: 'label',
                 cls: 'branch-goto',
                 html: 'الذهاب إلى الموزع',
-                itemId: 'lblGoTo'
+                itemId: 'lblGoTo',
+                listeners: [
+                    {
+                        fn: function(component, eOpts) {
+
+
+                            var me = this;
+
+                            me.element.on('tap', function(){
+                                window.open('http://maps.google.com?q='+me.up('SupplyServiceNearestDealer').down('#lat').getValue()+','+me.up('SupplyServiceNearestDealer').down('#lng').getValue(),'_system');
+                            }, me.element);
+
+                        },
+                        event: 'initialize'
+                    }
+                ]
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lat'
+            },
+            {
+                xtype: 'hiddenfield',
+                itemId: 'lng'
             }
         ]
     }

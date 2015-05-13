@@ -68,7 +68,7 @@ var localeEn =
 			items: [
 				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'Ministry Staff',Url:'http://www.mec.gov.qa/English/Pages/Home.aspx', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
@@ -77,9 +77,9 @@ var localeEn =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
-				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png'},
-             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png'},
-             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png'}
+				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:1},
+             	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png',cat:2},
+             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:3}
 			]
 		},
 
@@ -102,7 +102,7 @@ var localeEn =
 
 		{
 			itemId:"InvestorServiceView",
-			items: [{Name:'My Establishments',Url:'MyBusinessView',RequireLogin:true , Icon:'ico-myBusiness.png', OpenExternalWindow:false},
+			items: [{Name:'My Establishments',Url:'MyBisunessFixed',RequireLogin:true , Icon:'ico-myBusiness.png', OpenExternalWindow:false},
                     {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png', OpenExternalWindow:false},
                     {Name:'Print Off Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
@@ -128,12 +128,12 @@ var localeEn =
 	Views: [
 
 		{
-			itemId:"MyBusinessView",
+			itemId:"MyBisunessFixed",
 			description: "",
 			items:
 			[
 				{itemId:"lblTitle", "xtype": "label","value":"My Establishments"},
-				{itemId:"lstMyCompanies", "xtype": "cls","value":"ltr-cls"}
+				{itemId:"lstEstablishments", "xtype": "cls","value":"ltr-cls"}
 			]
 		},
 
@@ -412,7 +412,8 @@ var localeEn =
 			cls:'ltr',
 			items:
 			[
-				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"}
+				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"},
+				{itemId:"lblGoTo", "xtype": "label","value":"Go to Branch"}
 				
 				
 
@@ -532,7 +533,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"About Ministry"},
-				{itemId:"AboutMinstryTxt", xtype: "label",value:"As stipulated under Article (12) of Amiri Decree No (16) of 2009, the Ministry of Business and Trade is responsible to:<br/>Develop programs necessary to execute policies related to development of business and trade sector, monitor business activity and provide guidelines and directions in line with national development requirements, propose and implement policies and programs that aim at attracting investments, support and develop exports, develop measures and channels used to provide public services to business and investment sector, monitor commercial professional practices, record and register investment and commercial establishments and corporations, issue licenses required to operate, regulate and control local markets, take necessary measures and arrangements to protect consumer and combat commercial fraud, protect competitiveness and prevent monopoly practices, and monitor implementation of policies related to tourism, exhibitions, transportation and telecommunications."},
+			
 				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
 			]
 		},
@@ -750,11 +751,11 @@ var localeEn =
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"PricesGrid", xtype: "cls",value:"ltr-cls"},
 				{itemId:"ProductName1", xtype: "label",value:"Product Name"},
-				{itemId:"ProductPrice1", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductPrice1", xtype: "label",value:"Price(QAR) / Kilo"},
 				{itemId:"ProductName2", xtype: "label",value:"Product Name"},
-				{itemId:"ProductPrice2", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductPrice2", xtype: "label",value:"Price(QAR) / Kilo"},
 				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
-				{itemId:"ProductPrice3", xtype: "label",value:"Price / Kilo"},
+				{itemId:"ProductPrice3", xtype: "label",value:"Price(QAR) / Kilo"},
 				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegentsbles"},
 				{itemId:"FruitsContainer", xtype: "container",value:"Fruits"},
 				{itemId:"FishContainer", xtype: "container",value:"Fish"}
@@ -776,7 +777,7 @@ var localeEn =
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"ShopName", xtype: "label",value:"Shop Name"},
 				{itemId:"Quantity", xtype: "label",value:"Quantity"},
-				{itemId:"Price", xtype: "label",value:"Price"}
+				{itemId:"Price", xtype: "label",value:"Price (QAR)"}
 			]
 		},
 
@@ -949,7 +950,7 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[				
-			{itemId:"lblPrice", xtype: "label",value:"Price"},
+			{itemId:"lblPrice", xtype: "label",value:"Price (QAR)"},
 			{itemId:"productName", xtype: "label",value:"Product"}			
 			]
 		},
@@ -960,7 +961,7 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[				
-			{itemId:"lblPrice", xtype: "label",value:"Price"},
+			{itemId:"lblPrice", xtype: "label",value:"Price (QAR)"},
 			{itemId:"shopName", xtype: "label",value:"Shop"}			
 			]
 		}

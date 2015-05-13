@@ -69,7 +69,7 @@ var localeAr =
 			items: [
 				{Name:'عن الوزارة',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
              	{Name:'الفروع',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
-             	{Name:'موظفو الوزارة',Url:'http://www.mec.gov.qa/arabic/Pages/home.aspx', OpenExternalWindow:true ,Icon:'ico-employees.png'},
+             	{Name:'موظفو الوزارة',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'},
              	{Name:'تواصل معنا',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'المقترحات',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'}
 			]
@@ -78,9 +78,9 @@ var localeAr =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
-				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView', Icon:'ico-month.png'},
-             	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png'},
-             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView', Icon:'ico-year.png'}
+				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:1},
+             	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png',cat:2},
+             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:3}
 			]
 		},
 
@@ -102,7 +102,7 @@ var localeAr =
 		},
 		{
 			itemId:"InvestorServiceView",
-			items: [{Name:'بياناتي الخاصة',Url:'MyBusinessView',RequireLogin:true ,  Icon:'ico-myBusiness.png', OpenExternalWindow:false},
+			items: [{Name:'بياناتي الخاصة',Url:'MyBisunessFixed',RequireLogin:true ,  Icon:'ico-myBusiness.png', OpenExternalWindow:false},
                     {Name:'الخدمات الادارية',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png', OpenExternalWindow:false},
                     {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},

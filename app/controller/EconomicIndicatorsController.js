@@ -40,25 +40,32 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
     onEconomicIndicatorsViewInitialize: function(component, eOpts) {
         var view = component;//me.getMyBusinessView();
 
+        var cat = view.getData().cat;
 
         Ext.AnimationHelper.ShowLoading();
 
 
-        view.down('#lblTitle').setHtml(view.getData());
+        view.down('#lblTitle').setHtml(view.getData().Name);
 
+
+        console.log(view.getData());
+
+        var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&EconomicINdocatorsCatory='+cat;
+
+        console.log(url);
 
 
         var me = this;
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
+            url : url,
             method : 'Get',
             success : function (response) {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                console.log(json);
+                //console.log(json);
 
 
                 var store = new Ext.data.Store({
@@ -87,8 +94,14 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;
         var data = view.getData();
 
-        //console.log(data);
+        console.log(data);
+
+
+
+
         var currency=' مليون (ر.ق)';
+
+
         if(Ext.Global.LanguageFlag == 'en'){
             currency=' Million (QAR)';
         }
@@ -114,7 +127,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
 
         view.down('#pnlPDF').element.on('tap', function () {
-            window.open("http://www.google.com", "_blank");
+            window.open( Ext.Global.GetConfig('CMSWSUrl') + '/IndicatorsAndReport/PDFReport/'+ data.Id, "_blank");
         });
 
 

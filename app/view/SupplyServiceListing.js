@@ -18,7 +18,6 @@ Ext.define('MEC_App.view.SupplyServiceListing', {
     alias: 'widget.SupplyServiceListing',
 
     requires: [
-        'Ext.Panel',
         'Ext.Label',
         'Ext.dataview.List',
         'Ext.XTemplate'
@@ -30,33 +29,19 @@ Ext.define('MEC_App.view.SupplyServiceListing', {
         layout: 'vbox',
         items: [
             {
-                xtype: 'panel',
-                flex: 2.2,
-                cls: 'inner-panel',
-                height: 'auto',
-                items: [
-                    {
-                        xtype: 'panel',
-                        layout: 'vbox',
-                        items: [
-                            {
-                                xtype: 'label',
-                                cls: 'service-title',
-                                html: 'خدمات التموين',
-                                itemId: 'lblTitle'
-                            }
-                        ]
-                    },
-                    {
-                        xtype: 'list',
-                        cls: 'CompanyList',
-                        height: 325,
-                        itemId: 'lstLinks2',
-                        itemCls: 'item-link',
-                        itemTpl: [
-                            '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
-                        ]
-                    }
+                xtype: 'label',
+                cls: 'service-title',
+                html: 'خدمات التموين',
+                itemId: 'lblTitle'
+            },
+            {
+                xtype: 'list',
+                cls: 'CompanyList',
+                height: 261,
+                itemId: 'lstLinks2',
+                itemCls: 'item-link',
+                itemTpl: [
+                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
                 ]
             }
         ],

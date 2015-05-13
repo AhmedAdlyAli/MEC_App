@@ -62,7 +62,7 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
         Ext.Viewport.getActiveItem().push({
             xtype: record.data.Url,
             title: Ext.Global.GetFixedTitle(),
-            data: record.data.Name
+            data: record.data
         });
 
     },

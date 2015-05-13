@@ -1047,6 +1047,50 @@
             },
             "name": "onMainNavViewActiveItemChange",
             "designerId": "ccc6e08d-b7da-45fc-aaa2-d091c630b10d"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMainNavViewBack",
+                "implHandler": [
+                    "//console.log(navigationview);",
+                    "",
+                    "//alert(navigationview.innerItems.length);",
+                    "if(navigationview.innerItems.length>1)",
+                    "{",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='LoginFomView')",
+                    "    {",
+                    "",
+                    "        //alert('123');",
+                    "",
+                    "       // alert(navigationview.innerItems[navigationview.innerItems.length-2]._itemId);",
+                    "",
+                    "       // navigationview.getNavigationBar().fireEvent('back',",
+                    "       //      navigationview.innerItems[navigationview.innerItems.length-1]);",
+                    "",
+                    "    }",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "}",
+                    ""
+                ],
+                "name": "back"
+            },
+            "name": "onMainNavViewBack",
+            "designerId": "b71b3438-74ec-4127-8497-0223a179bb77"
         }
     ]
 }
