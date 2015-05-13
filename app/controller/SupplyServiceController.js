@@ -278,8 +278,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                  gMap.setCenter(new google.maps.LatLng (position.coords.latitude,position.coords.longitude));
+            var latLang = new google.maps.LatLng (position.coords.latitude,position.coords.longitude);
+
+                  gMap.setCenter(latLang);
                   gMap.setZoom(11);
+
+
+                                    //add user location marker
+                        var marker = new google.maps.Marker({
+                              position: latLang,
+                              map: gMap
+                          });
+
+
+
+
+
 
 
             // get dealers
@@ -366,6 +380,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                            view.down('#hiddenDealerName').setValue(marker.data.DealerName);
 
                         // console.log(marker.data.DealerID);
+
+                        var gotoElement  = view.down('#lblGoTo').element;
+
+
+                        gotoElement.on('tap', function(){
+                            window.open('http://maps.google.com?q='+item.Longtitude+','+item.Latitude,'_system');
+                        }, gotoElement);
 
 
                          viewData.DealerID = marker.data.DealerID;
@@ -655,8 +676,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             Ext.Function.defer(function(){
 
 
-                gMap.setCenter(new google.maps.LatLng(position.coords.latitude,position.coords.longitude));
+                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                gMap.setCenter(latLang);
                 gMap.setZoom(11);
+
+
+
+                //add user location marker
+                var marker = new google.maps.Marker({
+                      position: latLang,
+                      map: gMap
+                  });
+
+
+
+
+
 
 
                 // get dealers
@@ -885,6 +920,21 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                                 view.down('#lblTitle').setHtml(marker.data.DealerName);
                                 view.down('#lblAddress').setHtml(marker.data.Address);
+
+
+
+
+                        var gotoElement  = view.down('#lblGoTo').element;
+
+
+                        gotoElement.on('tap', function(){
+                            window.open('http://maps.google.com?q='+item.Longtitude+','+item.Latitude,'_system');
+                        }, gotoElement);
+
+
+
+
+
 
 
                             });

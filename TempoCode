@@ -547,6 +547,8 @@ https://dl.dropboxusercontent.com/s/fqbluiaj5ub6md1/Download.htm?dl=0
 
 selfreg1
 
+5123456789012346
+
 
 
 
@@ -556,3 +558,16 @@ selfreg1
               شركة الجيدة للسيارات
      44638787   44638786
 Jaidahautomotivecrm@jaida.com.qa
+
+
+
+
+
+
+
+
+
+ var infowindow = new google.maps.InfoWindow();
+
+
+الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم

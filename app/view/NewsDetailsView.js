@@ -67,7 +67,11 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                             },
                             {
                                 xtype: 'label',
-                                cls: 'details',
+                                cls: [
+                                    'ext-lnk',
+                                    'details'
+                                ],
+                                html: 'قراءة الخبر على الموقع',
                                 itemId: 'lblUrl'
                             }
                         ]
@@ -95,7 +99,14 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         this.down('#imgNews').setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/EconomyNews/Image/"+data.Id);
 
 
-        this.down('#lblUrl').setHtml("<a class=ext-link href="+ data.NewsLink+ " target='_system' >" + Ext.Localization.GetMessage('readnews') + "</a>");
+        var lblUrl = this.down('#lblUrl');
+        //lblUrl.setHtml(data.NewsLink);
+
+        lblUrl.element.on('tap', function(){
+
+            window.open(data.NewsLink,'_system');
+
+        });
 
 
         //this.down('#lblUrl').setHtml(data.NewsLink);

@@ -50,7 +50,7 @@
                 "cls": [
                     "acc-container"
                 ],
-                "height": 400,
+                "height": 300,
                 "itemId": "frmSupplyService1"
             },
             "name": "MyPanel5",
@@ -109,6 +109,19 @@
             },
             "name": "MyButton",
             "designerId": "34fb0a35-b57f-4131-8472-55487e4ad096"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم"
+            },
+            "name": "MyLabel42",
+            "designerId": "3331af87-5732-4483-b125-43a2db10a549"
         }
     ]
 }

@@ -472,7 +472,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 "serviceId": "9",
                                 "token": Ext.Global.userToken,
                                 "language": Ext.Global.LanguageFlag,
-                                "identityType": 'QID',//Ext.Global.identityType,
+                                "identityType": Ext.Global.identityTypeCode,
                                 "identityNum": Ext.Global.identityNum,
                                 "identityNationality": Ext.Global.identityNationality,
                                 "commercialRegistrationNum":cr,
@@ -584,7 +584,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
             "serviceId": "2",
             "token": Ext.Global.userToken,
             "language": Ext.Global.LanguageFlag,
-            "identityType":'QID',
+            "identityType":Ext.Global.identityTypeCode,
             "identityNum": Ext.Global.identityNum,
             "identityNationality":  Ext.Global.identityNationality
         };

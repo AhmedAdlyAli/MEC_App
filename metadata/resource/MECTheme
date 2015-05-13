@@ -2034,7 +2034,10 @@
                     "",
                     "",
                     "",
-                    ".ext-link{color:#000}",
+                    ".ext-link{",
+                    "    color:#000;",
+                    "    text-decoration:underline;",
+                    "}",
                     "",
                     "",
                     ""

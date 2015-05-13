@@ -63,12 +63,15 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-              webServiceUrl : 'https://wsvcs.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+              //webServiceUrl : 'https://wsvcs.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+
+               webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
 
 
-        BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 
-        //    BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+        //BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+
+            BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 
 
 
@@ -86,8 +89,6 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-
-            //webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
 
 
 

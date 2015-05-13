@@ -25,8 +25,8 @@ var localeEn =
 				{Name:"How to Request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"My Details", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
-				{Name:"Nearest Distributor", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"},
-				{Name:"Department Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
+				{Name:"Nearest Distributor", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"}
+				//{Name:"Department Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
 		{
@@ -468,7 +468,8 @@ var localeEn =
 			description: "News Details",
 			items:
 			[
-				{itemId:"NewsDetailsPanel", xtype: "cls", value:"ltr-cls"}
+				{itemId:"NewsDetailsPanel", xtype: "cls", value:"ltr-cls"},
+				{itemId:"lblUrl", xtype: "label", value:"Read the Full Article"}
 			]
 		},
 

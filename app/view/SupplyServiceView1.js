@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
             {
                 xtype: 'panel',
                 cls: 'acc-container',
-                height: 400,
+                height: 300,
                 itemId: 'frmSupplyService1',
                 items: [
                     {
@@ -65,6 +65,10 @@ Ext.define('MEC_App.view.SupplyServiceView1', {
                 cls: 'btn-send',
                 itemId: 'btnSupplyNext1',
                 text: 'التالي'
+            },
+            {
+                xtype: 'label',
+                html: 'الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم'
             }
         ]
     }

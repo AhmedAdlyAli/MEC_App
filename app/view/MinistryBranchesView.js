@@ -176,9 +176,12 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         view.down('#lblFax').setHtml(marker.data.Fax);
 
                         var gotoElement  = view.down('#lblGoTo').element;
+
+
                         gotoElement.on('tap', function(){
-                            window.open('maps:q='+item.Lat+','+item.Lng,'_system');
+                            window.open('http://maps.google.com?q='+item.Lat+','+item.Lng,'_system');
                         }, gotoElement);
+
 
 
                     });
