@@ -426,7 +426,7 @@ Ext.Localization.LocalizeView(this);
 .setSrc(Ext.Global.GetConfig('CMSWSUrl')+"/Recall/Image/"+data.Id);
 
 
-
+selfreg1
 
 
 
@@ -583,4 +583,7 @@ Jaidahautomotivecrm@jaida.com.qa
 New release:
 - All content from CMS
 
+
+24463400244 no data 
+23663400477 Blocked
 

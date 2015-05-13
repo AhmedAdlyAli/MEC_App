@@ -236,7 +236,8 @@ var localeAr =
 	            ComplaintType:'نوع الشكوى',
 	            Product: 'المنتج',
 	            readnews: 'قراءة الخبر على الموقع',
-	            errSelectDealer: 'برجاء اختيار الموزع'
+	            errSelectDealer: 'برجاء اختيار الموزع',
+	            FamilyBlockedSupply: 'البطاقة التموينية الخاصة بك تم ٌيقافها٬ برجاء التواصل مع الوزارة لمزيد من المعلومات'
 
 				}
 }

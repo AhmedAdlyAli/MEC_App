@@ -82,13 +82,15 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
 
             form.setValues({
                 vpc_MerchTxnRef: data.AllocationID, //'Ahmed Adly Ali',
-                vpc_OrderInfo: '' + '_' + Ext.Global.userSupplyToken +'_'   + Ext.Global.identityNum    ,//'Test',
-                vpc_Amount: data.TotalPrice,
+                vpc_OrderInfo: ''  +'_'   + Ext.Global.identityNum    ,//'Test',
+                vpc_sessionID: Ext.Global.userSupplyToken,
+                vpc_Amount: data.TotalPrice * 100,
                 vpc_Locale : Ext.Global.LanguageFlag
+
 
             });
 
-            console.log(form.getValues());
+          //  console.log(form.getValues());
 
 
 

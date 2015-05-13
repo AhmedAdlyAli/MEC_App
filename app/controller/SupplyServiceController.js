@@ -105,7 +105,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData2 = {"qid": Ext.Global.identityNum,
+                var requestData2 = {"qid":Ext.Global.identityNum,
                                     "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
                                     "mobileDeviceID":"",
                                     "sessionID": Ext.Global.userSupplyToken};
@@ -132,9 +132,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         //console.log(json2);
 
 
-                        if(json2.Data && json2.Data.Items.length>0)
+                        if(json2.Data && json2.Data.Items.length>0 && json2.Status==='Success')
                         {
-                        view.setData(json2.Data.Items);
+
+                            view.setData(json2.Data.Items);
 
                         var fsItems = view.down('#fsItems');
 
@@ -155,11 +156,58 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         });
                         }else{
 
+
+
+
+                            if(json2.ErrorMessage==='FamilyBlocked')
+                            {
+
+
                         Ext.device.Notification.show({
                             title: Ext.Localization.GetMessage('Error'),
                             buttons: [Ext.Localization.GetMessage('OK')],
                             message:  Ext.Localization.GetMessage('NoDataSupply')
                         });
+
+
+                            } else if(json2.ErrorMessage==='NoItemAllocated') {
+
+
+                        Ext.device.Notification.show({
+                            title: Ext.Localization.GetMessage('Error'),
+                            buttons: [Ext.Localization.GetMessage('OK')],
+                            message:  Ext.Localization.GetMessage('NoDataSupply')
+                        });
+
+
+
+
+                            }else{
+
+                        Ext.device.Notification.show({
+                            title: Ext.Localization.GetMessage('Error'),
+                            buttons: [Ext.Localization.GetMessage('OK')],
+                            message:  Ext.Localization.GetMessage('NoDataSupply')
+                        });
+
+
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

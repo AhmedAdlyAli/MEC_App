@@ -109,7 +109,8 @@ Ext.define('MEC_App.view.SettingsView', {
                             {
                                 xtype: 'label',
                                 cls: 'about-text',
-                                html: 'Build Number:120'
+                                hidden: true,
+                                html: 'Build Number:121'
                             },
                             {
                                 xtype: 'button',
