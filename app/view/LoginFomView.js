@@ -91,7 +91,6 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 label: 'اسم المستخدم',
                                 labelWidth: '40%',
                                 name: 'txtUserName',
-                                value: 28163402253,
                                 placeHolder: 'اسم المستخدم'
                             },
                             {
@@ -100,7 +99,6 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 label: 'كلمة المرور',
                                 labelWidth: '40%',
                                 name: 'txtPassword',
-                                value: 'mhammadi',
                                 placeHolder: 'كلمة المرور'
                             },
                             {
