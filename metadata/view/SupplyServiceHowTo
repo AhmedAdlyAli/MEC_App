@@ -71,12 +71,64 @@
                     "codeClass": null,
                     "userConfig": {
                         "cls": [
-                            "text-container"
+                            "inner-title"
                         ],
-                        "html": null
+                        "html": "البطاقة التموينية",
+                        "itemId": "SuppliesCardTitle"
                     },
                     "name": "MyLabel4",
                     "designerId": "34a5392b-bc03-401f-adf5-e64040af774c"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container"
+                        ],
+                        "html": "صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>صورة من شهادة الميلاد للأبناء موضح بها الارقام الشخصية. <ol><li>في حالة عدم وجود ابناء:<ul><li> صورة من عقد الزواج</li><li> صورة من البطاقة الشخصية للزوج و الزوجة</li></ul></li><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>",
+                        "itemId": "SuppliesCardDesc"
+                    },
+                    "name": "MyLabel",
+                    "designerId": "59f07b7e-78c3-4c9f-b30e-a30679e5270f"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-title"
+                        ],
+                        "html": "بطاقة الاعلاف",
+                        "itemId": "FodderCardTitle"
+                    },
+                    "name": "MyLabel2",
+                    "designerId": "77d2b8b3-d879-4216-bcaf-c4022d29d7c0"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "text-container"
+                        ],
+                        "html": "صورة من البطاقة الشخصية<br />شهادة حيازة مواشي صادرة من وزارة البيئة ادارة الثروة الحيوانية",
+                        "itemId": "FodderCardDesc"
+                    },
+                    "name": "MyLabel5",
+                    "designerId": "fb030b34-ca93-407e-a894-81fd1f8267ea"
                 }
             ]
         },

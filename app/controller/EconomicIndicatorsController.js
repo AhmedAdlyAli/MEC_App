@@ -181,7 +181,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
 
         view.down('#pnlPDF').element.on('tap', function () {
-            window.open( Ext.Global.GetConfig('CMSWSUrl') + '/IndicatorsAndReport/PDFReport/'+ data.Id, "_blank");
+            window.open( Ext.Global.GetConfig('CMSWSUrl') + '/IndicatorsAndReport/PDFReport/'+ data.Id, "_system");
         });
 
 

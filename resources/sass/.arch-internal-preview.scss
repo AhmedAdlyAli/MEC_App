@@ -1482,7 +1482,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin: 5px 10px!important;
     color:#701d45;
     text-align:left;
-    
+
     .x-innerhtml {
         display: inline;
         background: url(../images/goto.png) no-repeat right center;
@@ -1565,6 +1565,233 @@ background: url(../images/toplogo.png) no-repeat center top;
     color:#701d45;
     font-size:1.3em;
     margin-top:1em;
+}
+
+
+.x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl {
+    background-image: auto !important;
+}
+
+.language-button-wrapper {
+    padding: 10px;
+    background: #fff;
+
+    .language-button-title {
+        color: #701d45;
+        line-height: 1.8em;
+    }
+
+    .language-buttons {
+        .x-button {
+            background: #fff;
+            border: solid 1px #e5e5e5;
+            color: #701d45;
+            overflow: visible;
+
+            &.x-button-pressed,
+            &.x-button-pressing {
+                background:#701d45;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.action-button {
+    background: #691e49;
+    margin: 10px;
+    height:2.5em;
+
+    .x-button-label {
+        text-align: center;
+        color: #fff;
+    }
+}
+
+
+.list-inner{
+    direction:rtl;
+    background-color:#fff;
+    border-bottom: solid 1px #eeeeee;
+
+    .x-label{
+        padding:0 2em 0 0 !important ;
+        border:0 !important;
+        color: #6f2f51;
+        font-weight:bold;
+    }
+
+    .label-value{
+        padding: 0 !important;
+        border: 0 !important;
+        color:#010101;
+        font-weight:500;
+
+    }
+
+}
+
+
+.text-panel{
+    background:#fff;
+
+
+
+    .text-container{
+        height: 100%;
+        padding:1em;
+        margin:0 !important;
+        line-height:1.5em;
+
+        li {
+            list-style: inherit;
+            margin-right: 1em;
+
+
+            li {
+                margin-right: 10px;
+            }
+        }
+    }
+
+}
+
+
+
+.text-container2{
+    height: 100%;
+    padding:1em;
+    margin:0 !important;
+    line-height:2.5em;
+    border-bottom: solid 1px #eeeeee;
+}
+
+
+
+.recall-label-1{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
+    color: #6f2f51;
+    background: url(../images/recall1.png) no-repeat 96% 90%;
+
+
+}
+
+.recall-label-2{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
+    color: #6f2f51;
+    background: url(../images/recall2.png) no-repeat 96% 90%;
+
+}
+
+
+.recall-label-3{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
+    color: #6f2f51;
+    background: url(../images/recall3.png) no-repeat 96% 90%;
+
+}
+
+.violation-label-1{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.2em 0 0;
+    color: #6f2f51;
+    background: url(../images/vio1.png) no-repeat 96% 90%;
+}
+
+.violation-label-2{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 2.5em 0 0;
+    color: #6f2f51;
+    background: url(../images/vio2.png) no-repeat 96% 90%;
+}
+
+.violation-label-3{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
+    color: #6f2f51;
+    background: url(../images/vio3.png) no-repeat 96% 90%;
+}
+
+.violation-label-4{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
+    color: #6f2f51;
+    background: url(../images/vio4.png) no-repeat 96% 90%;
+}
+
+.project-label-1{
+    font-family: 'PFDinTextUniversal-Medium';
+    padding:1em 3em 0 0;
+    color: #6f2f51;
+    background: url(../images/pro1.png) no-repeat 96% 90%;
+}
+
+
+
+
+// fix purple issue
+.x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl
+{
+    background-color:#fff!important;
+
+}
+
+
+.x-list-normal .x-list-item.x-item-selected.x-list-item-tpl, .x-list-normal .x-list-item.x-item-selected .x-dock-horizontal
+{
+
+    border-top-color:#cccccc;
+}
+
+
+.img-logo {
+    background-size: auto 75% !important;
+}
+
+
+.x-scroll-bar-y.active {
+    width: 3px !important;
+    margin: 0 3px !important;
+
+    .x-scroll-indicator {
+        background: #888 !important;
+
+        &.rounded > * {
+            background: #888 !important;
+            content: "" !important;
+        }
+    }
+}
+
+.x-list-item {
+    .x-innerhtml {
+        &:after {
+            content: ".";
+            display: block;
+            visibility: hidden;
+            clear: both;
+            height: 0;
+        }
+    }
+}
+
+
+
+.ext-link{
+    color:#000;
+    text-decoration:underline;
+}
+
+
+.inner-title {
+    background: #e1e1e1;
+    color: #682048;
+    font-family: "PFDinTextUniversal-Medium";
+    margin: 0 !important;
+    padding: 0.5em;
 }
 
 
@@ -1789,7 +2016,7 @@ background: url(../images/toplogo.png) no-repeat center top;
         padding-left:0;
         background:#fff url(../images/more-arrow-ar.png) no-repeat 95% center;
     }
-    
+
     .branch-address{
         padding-left:40px;
         padding-right:0px;
@@ -1821,223 +2048,21 @@ background: url(../images/toplogo.png) no-repeat center top;
         background: url(../images/b-fax.png) no-repeat left center;
     }
 
-    
-    .branch-goto{
-        margin: 5px 10px;
-        padding-left:1em;
-        color:#701d45;
-        text-align:left;
-        background: url(../images/goto.png) no-repeat 95% center;
-        text-decoration:underline;
-    }
+    .text-panel{
+        .text-container{
+            li {
+                list-style: inherit;
+                margin-right: 0px;
+                margin-left: 1em;
 
-}
-
-.x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl {
-    background-image: auto !important;
-}
-
-.language-button-wrapper {
-    padding: 10px;
-    background: #fff;
-
-    .language-button-title {
-        color: #701d45;
-        line-height: 1.8em;
-    }
-
-    .language-buttons {
-        .x-button {
-            background: #fff;
-            border: solid 1px #e5e5e5;
-            color: #701d45;
-            overflow: visible;
-
-            &.x-button-pressed,
-            &.x-button-pressing {
-                background:#701d45;
-                color: #fff;
+                li {
+                    margin-right: 0px;
+                    margin-left: 10px;
+                }
             }
         }
-    }
-}
-
-.action-button {
-    background: #691e49;
-    margin: 10px;
-    height:2.5em;
-
-    .x-button-label {
-        text-align: center;
-        color: #fff;
-    }
-}
-
-
-.list-inner{
-    direction:rtl;
-    background-color:#fff;
-    border-bottom: solid 1px #eeeeee;
-
-    .x-label{
-        padding:0 2em 0 0 !important ;
-        border:0 !important;
-        color: #6f2f51;
-        font-weight:bold;
-    }
-
-    .label-value{
-        padding: 0 !important;
-        border: 0 !important;
-        color:#010101;
-        font-weight:500;
 
     }
 
-}
-
-
-.text-panel{
-    background:#fff;
-
-
-
-    .text-container{
-        height: 100%;
-        padding:1em;
-        margin:0 !important;
-        line-height:2.5em;
-    }
 
 }
-
-
-
-.text-container2{
-    height: 100%;
-    padding:1em;
-    margin:0 !important;
-    line-height:2.5em;
-    border-bottom: solid 1px #eeeeee;
-}
-
-
-
-.recall-label-1{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 2.2em 0 0;
-    color: #6f2f51;
-    background: url(../images/recall1.png) no-repeat 96% 90%;
-
-
-}
-
-.recall-label-2{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 2.2em 0 0;
-    color: #6f2f51;
-    background: url(../images/recall2.png) no-repeat 96% 90%;
-
-}
-
-
-.recall-label-3{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 2.2em 0 0;
-    color: #6f2f51;
-    background: url(../images/recall3.png) no-repeat 96% 90%;
-
-}
-
-.violation-label-1{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 2.2em 0 0;
-    color: #6f2f51;
-    background: url(../images/vio1.png) no-repeat 96% 90%;
-}
-
-.violation-label-2{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 2.5em 0 0;
-    color: #6f2f51;
-    background: url(../images/vio2.png) no-repeat 96% 90%;
-}
-
-.violation-label-3{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 3em 0 0;
-    color: #6f2f51;
-    background: url(../images/vio3.png) no-repeat 96% 90%;
-}
-
-.violation-label-4{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 3em 0 0;
-    color: #6f2f51;
-    background: url(../images/vio4.png) no-repeat 96% 90%;
-}
-
-.project-label-1{
-    font-family: 'PFDinTextUniversal-Medium';
-    padding:1em 3em 0 0;
-    color: #6f2f51;
-    background: url(../images/pro1.png) no-repeat 96% 90%;
-}
-
-
-
-
-// fix purple issue
-.x-list .x-list-item.x-item-selected .x-dock-horizontal, .x-list .x-list-item.x-item-selected.x-list-item-tpl
-{
-    background-color:#fff!important;
-
-}
-
-
-.x-list-normal .x-list-item.x-item-selected.x-list-item-tpl, .x-list-normal .x-list-item.x-item-selected .x-dock-horizontal
-{
-
-    border-top-color:#cccccc;
-}
-
-
-.img-logo {
-    background-size: auto 75% !important;
-}
-
-
-.x-scroll-bar-y.active {
-    width: 3px !important;
-    margin: 0 3px !important;
-
-    .x-scroll-indicator {
-        background: #888 !important;
-
-        &.rounded > * {
-            background: #888 !important;
-            content: "" !important;
-        }
-    }
-}
-
-.x-list-item {
-    .x-innerhtml {
-        &:after {
-            content: ".";
-            display: block;
-            visibility: hidden;
-            clear: both;
-            height: 0;
-        }
-    }
-}
-
-
-
-.ext-link{
-    color:#000;
-    text-decoration:underline;
-}
-
-

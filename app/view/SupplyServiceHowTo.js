@@ -51,7 +51,27 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                 items: [
                     {
                         xtype: 'label',
-                        cls: 'text-container'
+                        cls: 'inner-title',
+                        html: 'البطاقة التموينية',
+                        itemId: 'SuppliesCardTitle'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'text-container',
+                        html: 'صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>صورة من شهادة الميلاد للأبناء موضح بها الارقام الشخصية. <ol><li>في حالة عدم وجود ابناء:<ul><li> صورة من عقد الزواج</li><li> صورة من البطاقة الشخصية للزوج و الزوجة</li></ul></li><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>',
+                        itemId: 'SuppliesCardDesc'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'inner-title',
+                        html: 'بطاقة الاعلاف',
+                        itemId: 'FodderCardTitle'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'text-container',
+                        html: 'صورة من البطاقة الشخصية<br />شهادة حيازة مواشي صادرة من وزارة البيئة ادارة الثروة الحيوانية',
+                        itemId: 'FodderCardDesc'
                     }
                 ]
             }
