@@ -49,7 +49,7 @@ Ext.define('MEC_App.view.ContactUsView', {
                                     {
                                         xtype: 'panel',
                                         flex: 2,
-                                        cls: 'service-header-icon'
+                                        cls: 'connect-header-icon'
                                     },
                                     {
                                         xtype: 'label',

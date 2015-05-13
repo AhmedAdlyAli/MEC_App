@@ -51,7 +51,7 @@ Ext.define('MEC_App.view.MediaCenterView', {
                                 xtype: 'label',
                                 flex: 1,
                                 cls: 'service-header-title',
-                                html: 'المركز الاعلامي',
+                                html: 'المركز الإعلامي',
                                 itemId: 'viewLbl'
                             }
                         ]

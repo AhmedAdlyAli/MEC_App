@@ -53,16 +53,21 @@ Ext.define('MEC_App.view.NewsDetailsView', {
                                 xtype: 'label',
                                 cls: 'title',
                                 html: '',
-                                id: 'lblTitle'
+                                itemId: 'lblTitle'
                             },
                             {
                                 xtype: 'label',
                                 cls: 'date',
                                 id: 'lblDate'
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'panel',
+                        cls: 'details',
+                        items: [
                             {
                                 xtype: 'label',
-                                cls: 'details',
                                 id: 'lblDetails'
                             },
                             {

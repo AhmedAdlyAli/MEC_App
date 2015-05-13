@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.MainNavView', {
                 items: [
                     {
                         xtype: 'carousel',
-                        flex: 1,
+                        flex: 7,
                         cls: 'home-carousel',
                         itemId: 'NewsCarousel',
                         indicator: false,
@@ -151,7 +151,7 @@ Ext.define('MEC_App.view.MainNavView', {
                     },
                     {
                         xtype: 'panel',
-                        flex: 2,
+                        flex: 14,
                         cls: 'home-btns',
                         itemId: 'home-links',
                         layout: 'vbox',
@@ -216,7 +216,7 @@ Ext.define('MEC_App.view.MainNavView', {
                                                 xtype: 'label',
                                                 flex: 1,
                                                 cls: 'home-icon-text',
-                                                html: 'المركز الاعلامي',
+                                                html: 'المركز الإعلامي',
                                                 itemId: 'btnMediaCenter'
                                             },
                                             {
@@ -398,6 +398,13 @@ Ext.define('MEC_App.view.MainNavView', {
                                 ]
                             }
                         ]
+                    },
+                    {
+                        xtype: 'label',
+                        flex: 0.75,
+                        cls: 'beta-version',
+                        html: 'تشغيل تجريبي',
+                        itemId: 'beta'
                     }
                 ],
                 listeners: [

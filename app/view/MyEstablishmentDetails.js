@@ -167,7 +167,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                             },
                             {
                                 xtype: 'label',
-                                html: 'تاريخ إنتهاء السجل',
+                                html: 'تاريخ إنتهاء السجل التجاري',
                                 itemId: 'lbl3'
                             },
                             {
@@ -338,7 +338,7 @@ Ext.define('MEC_App.view.MyEstablishmentDetails', {
                         cls: 'acc-header',
                         docked: 'top',
                         itemId: 'titlebar4',
-                        title: 'المخولين بالتوقيع',
+                        title: 'المدراء (المخولون بالتوقيع)',
                         titleAlign: 'right',
                         listeners: [
                             {

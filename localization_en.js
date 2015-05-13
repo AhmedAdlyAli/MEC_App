@@ -67,7 +67,7 @@ var localeEn =
 			itemId:"ConnectView",
 			items: [
 				{Name:'About The Ministry',Url:'AboutView',OpenExternalWindow:false, Icon:'about-minstry.png'},
-             	{Name:'Ministry Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
+             	{Name:'Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'},
              	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'}
@@ -412,7 +412,7 @@ var localeEn =
 			cls:'ltr-cls',
 			items:
 			[
-				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"},
+				{itemId:"viewLbl", "xtype": "label","value":"Branches"},
 				{itemId:"lblGoTo", "xtype": "label","value":"Get Directions"}
 				
 				
@@ -449,7 +449,8 @@ var localeEn =
 				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
 				{itemId:"homeContact", xtype: "label",value:"Connect"},
 				{itemId:"home-links", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"}
+				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"beta", xtype: "label",value:"Beta Version"}
 			]
 		},
 
@@ -546,8 +547,9 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[
-				{itemId:"viewLbl", xtype: "label",value:"About The Application"},
-				
+				{itemId:"viewLbl", xtype: "label",value:"About the Application"},
+				{itemId:"AboutMinstryTxt", xtype: "label",value:"The application of the Ministry of Economy and Commerce in Qatar, contains many of the services provided by the ministry for the investor and the consumer, including search services for the commercial names and business activities, request the commercial documents, request and buy supply goods and services, query on the prices of goods, following up all the shops closures and products calls, explore the most important economic indicators and commercial reports, Send complaints and suggestions."},
+				{itemId:"MalText", xtype: "label",value:"Developed by Malomatia (Q.S.C)"},
 				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
 			]
 		},
@@ -857,7 +859,7 @@ var localeEn =
 				{itemId:"btnSettings", "xtype": "button","value":"Settings"},
 				{itemId:"btnLogin", "xtype": "button","value":"Login"},
 				{itemId:"btnLogout", "xtype": "button","value":"Logout"},
-				{itemId:"btnAboutApp", "xtype": "button","value":"About the App"}
+				{itemId:"btnAboutApp", "xtype": "button","value":"About the Application"}
 
 			]
 

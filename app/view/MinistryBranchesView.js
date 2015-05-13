@@ -36,7 +36,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'فروع الوزارة',
+                html: 'الفروع',
                 itemId: 'viewLbl'
             },
             {

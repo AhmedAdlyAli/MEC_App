@@ -148,14 +148,14 @@ var localeAr =
 			items:
 			[
 				{itemId:"homeServices", xtype: "label",value:"الخدمات العامة"},
-				{itemId:"btnMediaCenter", xtype: "label",value:"المركز الاعلامي"},
+				{itemId:"btnMediaCenter", xtype: "label",value:"المركز الإعلامي"},
 				{itemId:"homeInquire", xtype: "label",value:"الاستعلامات والاصدارات"},
 				{itemId:"homeReports", xtype: "label",value:"المؤشرات والتقارير"},
 				{itemId:"btnProjects", xtype: "label",value:"المبادرات والمشاريع"},
 				{itemId:"homeContact", xtype: "label",value:"التواصل"},
 				{itemId:"home-links", xtype: "r-cls",value:"ltr-cls"},
-				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"}
-
+				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"},
+				{itemId:"beta", xtype: "label",value:"تشغيل تجريبي"}
 			]
 		},
 

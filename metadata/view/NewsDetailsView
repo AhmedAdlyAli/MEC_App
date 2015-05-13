@@ -96,7 +96,8 @@
                                 ],
                                 "height": null,
                                 "html": "",
-                                "id": "lblTitle"
+                                "id": null,
+                                "itemId": "lblTitle"
                             },
                             "name": "MyLabel",
                             "designerId": "67a0cb63-b32a-403c-a1de-3869a2b30248"
@@ -117,7 +118,24 @@
                             },
                             "name": "MyLabel1",
                             "designerId": "7341e5e3-a50d-4453-93ca-cdc02aa82730"
-                        },
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "details"
+                        ]
+                    },
+                    "name": "MyPanel6",
+                    "designerId": "2d14af90-5254-4074-8e82-e6bf4b733a9c",
+                    "cn": [
                         {
                             "type": "Ext.Label",
                             "reference": {
@@ -126,9 +144,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "cls": [
-                                    "details"
-                                ],
                                 "id": "lblDetails"
                             },
                             "name": "MyLabel2",

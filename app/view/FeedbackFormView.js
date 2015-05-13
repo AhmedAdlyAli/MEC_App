@@ -249,7 +249,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                         cls: 'btn-send',
                         id: 'btnSubmitComplaint1',
                         itemId: 'btnSubmitComplaint1',
-                        text: 'ارسال'
+                        text: 'إرسال'
                     }
                 ]
             }
