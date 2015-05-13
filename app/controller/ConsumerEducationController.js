@@ -44,19 +44,18 @@ Ext.define('MEC_App.controller.ConsumerEducationController', {
             method : 'Get',
             success : function (response) {
 
+                Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
-
-                //console.log(json);
-
 
                 var store = new Ext.data.Store({
                     data : json
                 });
 
+
                 var lstEducation = view.down('#lstEducation');
                 lstEducation.setStore(store);
 
-                Ext.AnimationHelper.HideLoading();
             }
         });
 

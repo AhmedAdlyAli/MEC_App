@@ -209,7 +209,7 @@
                                 "cls": [
                                     "login-links"
                                 ],
-                                "html": "نسيت كلمة السر",
+                                "html": "نسيت كلمة المرور",
                                 "itemId": "lblForgotPassword"
                             },
                             "name": "MyLabel14",

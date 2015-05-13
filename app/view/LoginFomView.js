@@ -104,7 +104,7 @@ Ext.define('MEC_App.view.LoginFomView', {
                             {
                                 xtype: 'label',
                                 cls: 'login-links',
-                                html: 'نسيت كلمة السر',
+                                html: 'نسيت كلمة المرور',
                                 itemId: 'lblForgotPassword',
                                 listeners: [
                                     {

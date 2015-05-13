@@ -61,14 +61,9 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
                     method : 'Get',
                     success : function (response) {
 
+                        Ext.AnimationHelper.HideLoading();
+
                         var json = Ext.util.JSON.decode(response.responseText);
-
-
-
-                        console.log(json);
-
-
-
 
                         var store = new Ext.data.Store({
                             data : json
@@ -80,10 +75,6 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
                         view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
                         view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
 
-
-
-
-                        Ext.AnimationHelper.HideLoading();
                     }
                 });
 
