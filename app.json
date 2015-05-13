@@ -38,18 +38,6 @@
          "update": "delta"
       }
    ],
-   "css": [
-      {
-         "update": "delta",
-         "platform": [
-            "phone",
-            "tablet",
-            "desktop"
-         ],
-         "theme": "Default",
-         "path": "resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css"
-      }
-   ],
    "appCache": {
       "cache": [
          "index.html"

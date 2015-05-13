@@ -140,11 +140,17 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     },
 
     onLstTradeNameResultsItemTap: function(dataview, index, target, record, e, eOpts) {
+        var cr='';
+        var cp='';
 
 
-        var cr = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
-        var cp = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialPermit;
+        if(record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2.length>0)
 
+         {
+             cr = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialRegistration;
+             cp = record.data.listOfMecPrimaryEstablishment2.mecPrimaryEstablishment2[0].commercialPermit;
+
+        }
 
 
         if(cr==='' && cp===''){

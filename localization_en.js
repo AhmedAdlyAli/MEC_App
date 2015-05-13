@@ -118,7 +118,7 @@ var localeEn =
              {Name:'Change Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'Change Signatories',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'Terminate Branch',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true},
-             {Name:'Terminate Main Commercial Registration',Url:'https://services.mec.gov.qa/enu/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
+             {Name:'Terminate Main Commercial Registration',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
             ]
 		}
 
@@ -1014,7 +1014,7 @@ var localeEn =
 				cantSubmitCP:'This establishment doesn\'t have Commercial Permit',
 				FeedbackSubmitted:'Thanks for sending your suggesstion',
 				Thanks:'Thanks',
-				ErrNocrcp:"Can't view the reserved trade name details",
+				ErrNocrcp:"Sorry, this reserved name is not associated with an establishment yet",
 				errShopName:'Please enter shop name\n',
 	            errComplaintType:'Please select complaint type\n',
 	            errComplaintText:'Please enter your complaint\n',

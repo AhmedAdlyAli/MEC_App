@@ -33,7 +33,6 @@ Ext.define('MEC_App.controller.AnimationHelper', {
         element.on('tap', function () {
 
 
-
             if (panel.isHidden()) {
                 panel.show({type: 'slide', direction: 'down'});
 
@@ -43,7 +42,6 @@ Ext.define('MEC_App.controller.AnimationHelper', {
                 panel.hide();
                 element.addCls('acc-header2');
                 //{type: 'slide', direction: 'up'}
-
             }
 
         });

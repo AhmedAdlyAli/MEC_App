@@ -129,7 +129,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         var json2 = Ext.util.JSON.decode(json1.d);
 
 
-                        console.log(json2);
+                        //console.log(json2);
 
 
                         if(json2.Data && json2.Data.Items.length>0)

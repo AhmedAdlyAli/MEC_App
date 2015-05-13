@@ -208,7 +208,7 @@ var localeAr =
 				cantSubmitCP:'هذه المنشأة ليس لها رخصة تجارية',
 				FeedbackSubmitted:'شكرا على ارسال المقترح، يسعدنا تواصلك',
 				Thanks:'شكرا',
-				ErrNocrcp:'لا يمكن عرض بيانات اسم تجاري محجوز',
+				ErrNocrcp:'لا يمكن عرض بيانات اسم تجاري محجوز غير مرتبط بمنشأة بعد',
 				errShopName:'فضلا ادخل اسم المتجر\n',
 	            errComplaintType:'فضلا اختر نوع الشكوى\n',
 	            errComplaintText:'فضلا ادخل نص الشكوى\n',
