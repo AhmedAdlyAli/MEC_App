@@ -67,7 +67,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": "20em",
+                        "height": "18em",
                         "itemId": "mapDealers"
                     },
                     "name": "MyMap1",

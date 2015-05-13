@@ -107,7 +107,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var requestData2 = {"qid": Ext.Global.identityNum,
                                     "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
-                                    "mobileDeviceID":"1231",
+                                    "mobileDeviceID":"",
                                     "sessionID": Ext.Global.userSupplyToken};
 
 
@@ -469,13 +469,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     onBtnSupplyNext2Tap: function(button, e, eOpts) {
 
-
-
-
-
         var view = this.getSupplyServiceView2();
         var view2Data = view.getData();
-
 
 
         var orderItems =[];

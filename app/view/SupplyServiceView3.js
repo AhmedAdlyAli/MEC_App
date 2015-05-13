@@ -60,7 +60,7 @@ Ext.define('MEC_App.view.SupplyServiceView3', {
                     {
                         xtype: 'panel',
                         cls: 'list-inner',
-                        height: 170,
+                        height: 220,
                         itemId: 'pnlItems',
                         layout: 'vbox'
                     },
