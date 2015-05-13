@@ -235,7 +235,8 @@ var localeAr =
 	            ComplaintType4:'أخرى',
 	            ComplaintType:'نوع الشكوى',
 	            Product: 'المنتج',
-	            readnews: 'قراءة الخبر على الموقع'
+	            readnews: 'قراءة الخبر على الموقع',
+	            errSelectDealer: 'برجاء اختيار الموزع'
 
 				}
 }

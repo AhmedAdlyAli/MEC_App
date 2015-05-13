@@ -473,6 +473,20 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view2Data = view.getData();
 
 
+        if(!view2Data.DealerID){
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message:  Ext.Localization.GetMessage('errSelectDealer')
+            });
+
+
+
+            return;
+        }
+
+
         var orderItems =[];
 
 
@@ -493,7 +507,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData =
             {"qid": Ext.Global.identityNum,//"21463400042",//
              "languageID": Ext.Global.LanguageFlag=='ar'?2:1,
-             "mobileDeviceID":"1231",
+             "mobileDeviceID":"",
              "dealerID": view2Data.DealerID,
              orderItems: orderItems,
              "sessionID": Ext.Global.userSupplyToken
@@ -512,12 +526,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             jsonData :requestData,
             success : function (response) {
 
+                Ext.AnimationHelper.HideLoading();
 
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
-
-                //console.log(json2);
 
 
 
@@ -527,8 +540,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                     var m = Ext.Localization.GetMessage('StockNotFound');
                     Ext.device.Notification.show({
-                        title: 'خطأ',
-                        buttons:["موافق"],
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
                         message: m
                     });
 
@@ -555,20 +568,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 }
 
 
-            },
-            failure: function(request, resp) {
-                Ext.device.Notification.show({
-                    title: Ext.Localization.GetMessage('Error'),
-                    buttons: [Ext.Localization.GetMessage('OK')],
-                    message:  Ext.Localization.GetMessage('Failure'),
-                    callback: function(button) {
-
-                        //return user to home page
-
-                        Ext.Viewport.getActiveItem().reset();
-
-                    }
-                });
             }
         });
 
