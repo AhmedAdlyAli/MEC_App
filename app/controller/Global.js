@@ -63,35 +63,21 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-              //webServiceUrl : 'https://wsvcs.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
+            webServiceUrl : 'https://wsvcs.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
 
-               webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
-
-
-
-        //BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
-
-            BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+            //webServiceUrl : 'https://webservicesstg.mec.gov.qa/MECBSSGateway/mecbssgw/bssgateway/accept',
 
 
+
+            BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+
+            //BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 
             supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
             SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
-
-
-
             CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
-             CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
-
-
-
-
-
-
-
-
-
+            CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
 
 
 
@@ -340,72 +326,9 @@ Ext.define('MEC_App.controller.Global', {
 
     },
 
-    SubmitCase: function() {
-        /*
+    GetTelHtml: function(str) {
+        var telArr = str.split('_');
 
-        var caseData = Ext.Viewport.getActiveItem().down('PrintOffsView3').getData();
-
-
-
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-        var requestData = {
-            "serviceId": "10",
-            "token": Ext.Global.userToken,
-            "objectSpcId": caseData.recordID,
-            "caseSerialNum":""
-        };
-
-
-        Ext.Ajax.request({
-
-            url : Ext.Global.GetConfig('webServiceUrl'),
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
-                var json = Ext.util.JSON.decode(response.responseText);
-
-
-
-
-                Ext.AnimationHelper.HideLoading();
-
-
-                if(json.statusMsg!='success')
-                {
-
-                    Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Confirm'),
-                        buttons: [Ext.Localization.GetMessage('OK')],
-                        message:  Ext.Localization.GetMessage('CaseSubmitted')
-                    });
-
-
-                    // go back to Home
-                    Ext.Viewport.getActiveItem().reset();
-
-
-
-                }else{
-
-
-                    Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
-                        buttons: [Ext.Localization.GetMessage('OK')],
-                        message:  Ext.Localization.GetMessage('GenericError')
-                    });
-
-                }
-
-
-
-            }
-        });
-
-
-        */
 
 
 

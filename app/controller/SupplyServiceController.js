@@ -90,6 +90,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1.d);
 
+                console.log(json1);
+                        console.log(json2);
+
+
 
                 Ext.Global.userSupplyToken = json2.Data.SessionID;
 
@@ -128,7 +132,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                         console.log(json2);
 
 
-                        if(json2.Data.Items.length>0)
+                        if(json2.Data && json2.Data.Items.length>0)
                         {
                         view.setData(json2.Data.Items);
 

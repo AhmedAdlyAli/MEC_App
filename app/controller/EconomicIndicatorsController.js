@@ -41,6 +41,42 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;//me.getMyBusinessView();
 
         var cat = view.getData().cat;
+        var catName='';
+
+        switch(cat) {
+            case 1:
+
+                if(Ext.Global.LanguageFlag==='ar')
+                    catName = 'شهري';
+                else
+                    catName = 'Monthly';
+
+                break;
+
+            case 2:
+
+                if(Ext.Global.LanguageFlag==='ar')
+                    catName = 'ربعي';
+                else
+                    catName = 'Quarterly';
+
+                break;
+
+            case 3:
+
+                if(Ext.Global.LanguageFlag==='ar')
+                    catName = 'سنوي';
+                else
+                    catName = 'Yearly';
+
+                break;
+
+
+
+            default:
+            break;
+        }
+
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -48,11 +84,11 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblTitle').setHtml(view.getData().Name);
 
 
-        console.log(view.getData());
+        //console.log(view.getData());
 
         var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&EconomicINdocatorsCatory='+cat;
 
-        console.log(url);
+        //console.log(url);
 
 
         var me = this;
@@ -68,8 +104,26 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
                 //console.log(json);
 
 
+               var json2= [];
+
+
+                Ext.each(json,function(item){
+                    //alert(item.Name);
+                    if(item.Title.indexOf(catName)>-1)
+                    {
+
+                        json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value});
+                    }
+
+                });
+
+
+                console.log(json2);
+
+
+
                 var store = new Ext.data.Store({
-                    data : json
+                    data : json2
                 });
 
                 var lstIndicators = view.down('#lstIndicators');

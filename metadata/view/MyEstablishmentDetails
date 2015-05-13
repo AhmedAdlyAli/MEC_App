@@ -213,6 +213,39 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "html": "نوع المنشأة",
+                                "id": null,
+                                "itemId": "lbl12"
+                            },
+                            "name": "MyLabel10",
+                            "designerId": "aeb2e07c-fe62-495f-bf77-0294ba0ef70e"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "label-value"
+                                ],
+                                "html": null,
+                                "id": null,
+                                "itemId": "establishmentType"
+                            },
+                            "name": "MyLabel28",
+                            "designerId": "6fa2ee1a-84b7-4f30-b488-7351e2d8d19c"
+                        },
+                        {
+                            "type": "Ext.Label",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
                                 "html": "حالة المنشأة",
                                 "id": null,
                                 "itemId": "lbl14"
@@ -279,39 +312,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "نوع المنشأة",
-                                "id": null,
-                                "itemId": "lbl12"
-                            },
-                            "name": "MyLabel10",
-                            "designerId": "aeb2e07c-fe62-495f-bf77-0294ba0ef70e"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "cls": [
-                                    "label-value"
-                                ],
-                                "html": null,
-                                "id": null,
-                                "itemId": "establishmentType"
-                            },
-                            "name": "MyLabel28",
-                            "designerId": "6fa2ee1a-84b7-4f30-b488-7351e2d8d19c"
-                        },
-                        {
-                            "type": "Ext.Label",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
                                 "html": "رقم قيد المنشأة",
                                 "id": null,
                                 "itemId": "lbl15"
@@ -345,7 +345,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ التاسيس",
+                                "html": "تاريخ التأسيس",
                                 "id": null,
                                 "itemId": "lbl11"
                             },
@@ -415,7 +415,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "html": "تاريخ التأسيس",
+                                "html": "تاريخ انشاء السجل التجاري",
                                 "id": null,
                                 "itemId": "lbl2"
                             },

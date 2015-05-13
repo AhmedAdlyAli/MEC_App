@@ -184,8 +184,8 @@ form.submit(); //{target: 'paymentframe'}
 
 
 
-open /Applications/Google\ Chrome.app --args --disable-web-security
 
+open /Applications/Google\ Chrome.app --args --disable-web-security
 
 https://dl.dropboxusercontent.com/s/ubwbruegf0sn96a/Download.htm?dl=0
 
@@ -575,3 +575,12 @@ Jaidahautomotivecrm@jaida.com.qa
 
 
 الكميات بالاعلي هي الكميات المتاحة في رصيد المستخدم
+
+
+
+
+
+New release:
+- All content from CMS
+
+
