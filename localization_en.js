@@ -48,8 +48,8 @@ var localeEn =
 				{Name:"Find a Commercial Activity", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
 				{Name:"Recalls", Url:"RecallsView", Icon:"ico-recall-item.png"},
 				{Name:"Violations & Closures", Url:"ViolationsView", Icon:"ico-violations.png"},
-				{Name:"Consumer Awarness", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
-				{Name:"Investor Awarness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"}
+				{Name:"Consumer Awareness", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
+				{Name:"Investor Awareness", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"}
 			]
 		},
 
@@ -104,7 +104,7 @@ var localeEn =
 			itemId:"InvestorServiceView",
 			items: [{Name:'My Establishments',Url:'MyBisunessFixed',RequireLogin:true , Icon:'ico-myBusiness.png', OpenExternalWindow:false},
                     {Name:'Administrative Services',Url:'AdminServicesView',RequireLogin:false ,Icon:'ico-adminServices.png', OpenExternalWindow:false},
-                    {Name:'Print Off Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
+                    {Name:'Offprint Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
                     {Name:'Establishment Services',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png', OpenExternalWindow:true},
                     {Name:'Reserve a Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true}
@@ -118,7 +118,7 @@ var localeEn =
              {Name:'Change Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'Change Signatories',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Change+Services+General+Instructions+View+eService', OpenExternalWindow:true},
              {Name:'Terminate Branch',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true},
-             {Name:'Terminate Commercial Registration',Url:'https://services.mec.gov.qa/enu/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
+             {Name:'Terminate Main Commercial Registration',Url:'https://services.mec.gov.qa/enu/eservice_enu/start.swe?SWECmd=GotoView&SWEView=MEC+Delete+CR+General+Instructions+View+eService', OpenExternalWindow:true}
             ]
 		}
 
@@ -169,11 +169,11 @@ var localeEn =
 			[
 				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"companyName", "xtype": "textfield","value":"Company Name"},
-				{itemId:"txtPrintoutType", "xtype": "textfield","value":"Print Off Type"},
+				{itemId:"txtPrintoutType", "xtype": "textfield","value":"Offprint Type"},
 				{itemId:"txtDeliveryMethod", "xtype": "textfield","value":"Delivery Method"},
 				{itemId:"txtNoOfCopies", "xtype": "textfield","value":"No of Copies"},
 				{itemId:"btnPrintoffsNext", "xtype": "button","value":"Next"},
-				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
+				{itemId:"lblTitle", "xtype": "label","value":"Offprint Request"}
 			]
 		},
 
@@ -183,14 +183,14 @@ var localeEn =
 			items:
 			[
 				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"lbl1", "xtype": "label","value":"Print Off Type"},
+				{itemId:"lbl1", "xtype": "label","value":"Offprint Type"},
 				{itemId:"lbl2", "xtype": "label","value":"No Of Copies"},
 				{itemId:"lbl3", "xtype": "label","value":"Establishment Name"},
 				{itemId:"lbl4", "xtype": "label","value":"Total Fees"},
 				{itemId:"lbl5", "xtype": "label","value":"Request Number"},
 				{itemId:"lbl6", "xtype": "label","value":"Request Status"},
-				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confrim & Pay"},
-				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
+				{itemId:"btnPrintoffs2Next", "xtype": "button","value":"Confirm & Pay"},
+				{itemId:"lblTitle", "xtype": "label","value":"Offprint Request"}
 			]
 		},
 
@@ -200,7 +200,7 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblTitle", "xtype": "label","value":"Print Off Request"}
+				{itemId:"lblTitle", "xtype": "label","value":"Offprint Request"}
 			]
 		},	
 
@@ -301,8 +301,8 @@ var localeEn =
 			description: "",
 			items:
 			[
-				{itemId:"lblTitle", "xtype": "label","value":"Trade Activity Availability Search"},
-				{itemId:"txtActivity", "xtype": "textfield","value":"Trade Activity"},
+				{itemId:"lblTitle", "xtype": "label","value":"Business Activity Search"},
+				{itemId:"txtActivity", "xtype": "textfield","value":"Business Activity"},
 				{itemId:"btnSubmitActivity", "xtype": "button","value":"Search"},
 				{itemId:"lstTradeActivityResults", "xtype": "cls","value":"ltr-cls"} ,
 				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"}
@@ -374,7 +374,7 @@ var localeEn =
 				{itemId:"pnl2", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"pnl3", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"pnl4", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"lbl1", "xtype": "label","value":"Violated Shop"},
+				{itemId:"lbl1", "xtype": "label","value":"Violating Shop"},
 				{itemId:"lbl2", "xtype": "label","value":"Violation"},
 				{itemId:"lbl3", "xtype": "label","value":"Punishment"},
 				{itemId:"lbl4", "xtype": "label","value":"Decision Number"}
@@ -413,7 +413,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"viewLbl", "xtype": "label","value":"Ministry Branches"},
-				{itemId:"lblGoTo", "xtype": "label","value":"Get directions"}
+				{itemId:"lblGoTo", "xtype": "label","value":"Get Directions"}
 				
 				
 
@@ -483,7 +483,7 @@ var localeEn =
 
 		{
 			itemId:"InquiriesView",
-			description: "inquiries and Extracts...",
+			description: "Inquiries & Extracts...",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Inquiries & Extracts"},
@@ -494,7 +494,7 @@ var localeEn =
 
 		{
 			itemId:"ReportsView",
-			description: "Reportss...",
+			description: "Reports..",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Indicators & Reports"},
@@ -505,7 +505,7 @@ var localeEn =
 
 		{
 			itemId:"ConnectView",
-			description: "Contactus...",
+			description: "Connect...",
 			items:
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Connect"},
@@ -516,7 +516,7 @@ var localeEn =
 
 		{
 			itemId:"ContactUsView",
-			description: "Contactus...",
+			description: "Contact Us...",
 			cls: "ltr-cls",
 			items:
 			[
@@ -542,7 +542,7 @@ var localeEn =
 
 		{
 			itemId:"AboutAppView",
-			description: "About app",
+			description: "About App",
 			cls: "ltr-cls",
 			items:
 			[
@@ -621,7 +621,7 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
 				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"},
-				{itemId:"lblGoTo", xtype: "label",value:"Get directions"}
+				{itemId:"lblGoTo", xtype: "label",value:"Get Directions"}
 			]
 		},
 
@@ -760,7 +760,7 @@ var localeEn =
 				{itemId:"ProductPrice2", xtype: "label",value:"Price(QAR) / Kilo"},
 				{itemId:"ProductName3", xtype: "label",value:"Product Name"},
 				{itemId:"ProductPrice3", xtype: "label",value:"Price(QAR) / Kilo"},
-				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegentsbles"},
+				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegetables"},
 				{itemId:"FruitsContainer", xtype: "container",value:"Fruits"},
 				{itemId:"FishContainer", xtype: "container",value:"Fish"}
 
@@ -806,11 +806,11 @@ var localeEn =
 				{itemId:"NewCommercialReg", "xtype": "label", "value":"New CRs"},
 				{itemId:"ValueQAR", xtype: "label",value:"Value (QAR)"},
 				{itemId:"ValueQAR2", xtype: "label",value:"Value (QAR)"},
-				{itemId:"MainCrs", xtype: "label",value:"Main Commercial Registerations"},
-				{itemId:"MainCrs2", xtype: "label",value:"Main Commercial Registerations"},
-				{itemId:"BranchCRs", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"MainCrs", xtype: "label",value:"Main Commercial Registrations"},
+				{itemId:"MainCrs2", xtype: "label",value:"Main Commercial Registrations"},
+				{itemId:"BranchCRs", xtype: "label",value:"Branch Commercial Registrations"},
 				{itemId:"RenewedCRs", xtype: "label",value:"Renewed CRs"},
-				{itemId:"BranchCRs2", xtype: "label",value:"Branch Commercial Registerations"},
+				{itemId:"BranchCRs2", xtype: "label",value:"Branch Commercial Registrations"},
 				{itemId:"GridHeader", xtype: "cls",value:"ltr-cls"},
 				{itemId:"GridSubHeader", xtype: "cls",value:"ltr-cls"},
 				{itemId:"grdMainCRs", xtype: "cls",value:"ltr-cls"},
@@ -891,7 +891,11 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[
-				{itemId:"lblTitle", xtype: "label",value:"How to Request Supply Service"}
+				{itemId:"lblTitle", xtype: "label",value:"How to Request Supply Service"},
+				{itemId:"SuppliesCardTitle", xtype: "label",value:"Supplies Card"},
+				{itemId:"SuppliesCardDesc", xtype: "label",value:"Copy of the personal identification cards of the husband, wife and family members.<br/>Copy of the children birth certificates showing personal identification numbers.<ol><li>In the absence of children:<ul><li>Copy of the marriage certificate</li><li>Copy of the personal identification cards of the husband and wife</li></ul></li><li>In the case the father is deceased:<ul><li>Copy of the death certificate</li><li>Copy of the personal identification cards and birth certificates of the children</li></ul></li><li>In the case of divorce:<ul><li>Copy of the divorce certificate</li><li>Copy of the personal identification card</li><li>Copy of the birth certificates of children</li><li>Copy of the certificate of custody rights for children</li></ul></li></ol>"},
+				{itemId:"FodderCardTitle", xtype: "label",value:"Fodder Card"},
+				{itemId:"FodderCardDesc", xtype: "label",value:"Copy of the personal identification card.<br/>Certificate of livestock ownership issued by the Ministry of Environment's Livestock."}
 			]
 		},
 
@@ -973,34 +977,34 @@ var localeEn =
 	],
 
 	Messages: {
-				StockNotFound:'There is No stock on the selected dealer',
+				StockNotFound:'There is no stock avaialble at the selected dealer',
 				EstName:'Report Name',
 				Choose:'Choose',
 				Cancel:'Cancel',
 				PrintType1:'CR Offprint - Arabic',
 				PrintType2: 'CR Offprint - English',
-				PrintType3: 'CP Replacement Certificate',
+				PrintType3: 'CP Replacement',
 				PrintType4: 'CR Clearance Certificate'	,
-				PrintType: 'Print Off Type' ,
+				PrintType: 'Offprint Type' ,
 				DeliveryMethod: 'Delivery Method',
 				Personal: 'Personal',
 				Email: 'Email',
-				ActiveRequestError: 'There is already active request of the same type for this Establishment',
+				ActiveRequestError: 'There is already active request of the same type for this establishment',
 				Error: 'Error',
 				OK: 'Ok',
 				ErrSearchKeyword: 'Please enter the search keyword',
-				GenericError: 'Sorry an Error has occured during the communication with the System',
+				GenericError: 'Sorry, an error has occured, please try again',
 				Confirm:'Confirm',
-				CaseSubmitted:'Request has been Submitted to MEC, Thank you for using MEC Mobile Application',
-				LocationNotEnabled:'Location service is required to use this feature',
-				errPrintType: 'Please choose Printout Type \n',
-				errCompanyCr: 'Please choose the Company \n',
+				CaseSubmitted:'Request has been submitted to MEC, Thank you for using MEC Mobile Application',
+				LocationNotEnabled:'It is recommended to enable location service before using this feature',
+				errPrintType: 'Please choose the Offprint Type \n',
+				errCompanyCr: 'Please choose the Establishment \n',
 				errDeliveryMethod:'Please choose the Delivery Method \n',
-				cantSubmitCR:'This Establishment doesn\'t have Commercial Registeration',
-				cantSubmitCP:'This Establishment doesn\'t have Commercial Permit',
-				FeedbackSubmitted:'Thanks for sending a suggesstion',
+				cantSubmitCR:'This establishment doesn\'t have Commercial Registeration',
+				cantSubmitCP:'This establishment doesn\'t have Commercial Permit',
+				FeedbackSubmitted:'Thanks for sending your suggesstion',
 				Thanks:'Thanks',
-				ErrNocrcp:"Can't view a reserved Trade Name",
+				ErrNocrcp:"Can't view the reserved trade name details",
 				errShopName:'Please enter shop name\n',
 	            errComplaintType:'Please select complaint type\n',
 	            errComplaintText:'Please enter your complaint\n',
@@ -1010,17 +1014,17 @@ var localeEn =
 	            errPassword:'Please enter password\n',
 	            errSuggestion: 'Please enter your suggesstion\n',
 	            errMail: 'Please enter correct email address\n',
-	            Failure: 'Connection lost, please try again later',
+	            Failure: 'Sorry, an error has occured, please try again',
 	            errUserPass: 'Username or Password is not correct',
-	            errConnection: 'There was a problem connecting to the System',
-	            errNoSearchData: 'No Data available for your Search Query',
-	            NoData: 'Sorry, No Data available',
+	            errConnection: 'Sorry, an error has occured, please try again',
+	            errNoSearchData: 'No data matches your search query',
+	            NoData: 'Sorry, no data available',
 	            Message:'Message',
-	            NoDataPrintoffs:'You can\'t submit PrintOff request for CR or CP because you don\'t have any establishments',
-	            errNOC:'You can\'t request this type of Certificate because you have associated companies',
-	            NoDataSupply: 'You don\'t have data in the supply System',
-	            ComplaintsConfirmation:'Thank You, Complaint has been sent successfully',
-	            GeneralError: 'Sorry, Error occured',
+	            NoDataPrintoffs:'You can\'t submit offprint request for CR or CP because you don\'t have any establishments',
+	            errNOC:'You can\'t request this certificate because you have associated establishments',
+	            NoDataSupply: 'You don\'t have data in the supply system',
+	            ComplaintsConfirmation:'Thank You, your complaint has been sent successfully',
+	            GeneralError: 'Sorry, an error has occured, please try again',
 	            ComplaintType1:'Commercial Fraud',
 	            ComplaintType2:'Price Not Announced',
 	            ComplaintType3:'Bad Service',
