@@ -450,7 +450,7 @@ var localeEn =
 				{itemId:"homeContact", xtype: "label",value:"Connect"},
 				{itemId:"home-links", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"Beta Version"}
+				{itemId:"beta", xtype: "label",value:"Initial Run"}
 			]
 		},
 
@@ -1047,7 +1047,11 @@ var localeEn =
 	            Product: 'Product',
 	            readnews: 'Read Full News',
 	            errSelectDealer: 'Please Select Dealer',
-	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details'
+	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details',
+	            invalidInputError: 'Sorry, an Error has occured',
+	            contactError: 'Sorry, There is missing user information',
+	            EstablishmentError: 'Sorry, There is missing Establishment information'	
+
 				}
 
 }

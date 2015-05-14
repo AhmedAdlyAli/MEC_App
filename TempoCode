@@ -587,3 +587,6 @@ New release:
 24463400244 no data 
 23663400477 Blocked
 
+invalidInputError
+contactError
+EstablishmentError
