@@ -1038,6 +1038,7 @@ var localeEn =
 	            errNOC:'You can\'t request this certificate because you have associated establishments',
 	            NoDataSupply: 'You don\'t have data in the supply system',
 	            ComplaintsConfirmation:'Thank You, your complaint has been sent successfully',
+	            FeedbackConfirmation:'Thank You, your Feedback has been sent successfully',
 	            GeneralError: 'Sorry, an error has occured, please try again',
 	            ComplaintType1:'Commercial Fraud',
 	            ComplaintType2:'Price Not Announced',

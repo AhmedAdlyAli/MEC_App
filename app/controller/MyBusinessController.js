@@ -105,7 +105,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
                     Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
+                        title: Ext.Localization.GetMessage('Message'),
                         buttons:[Ext.Localization.GetMessage('OK')],
                         message: Ext.Localization.GetMessage('NoData')
                     });
@@ -153,7 +153,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [Ext.Localization.GetMessage('OK')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
@@ -190,7 +190,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         if(cr==='' && cp===''){
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [ Ext.Localization.GetMessage('Ok')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
@@ -354,7 +354,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
         if(record.data.branchCR==='' && record.data.branchCP===''){
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [ Ext.Localization.GetMessage('Ok')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
@@ -489,12 +489,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
 
 
-
-            },
-            failure:function(response){
-
-
-                console.log(response);
 
             }
         });

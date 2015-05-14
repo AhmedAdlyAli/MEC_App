@@ -195,6 +195,42 @@
             },
             "name": "GetBarcode",
             "designerId": "3673f7e8-f232-4d8a-9e97-71c910c2a7bb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "img"
+                ],
+                "fn": "UploadImage",
+                "implHandler": [
+                    "    var jsonFile= {",
+                    "               file : img,",
+                    "        filename : img.getSrc()? img.getSrc() : img.getItemId()",
+                    "          };",
+                    "",
+                    "          Ext.Ajax.request({",
+                    "               url: Ext.Global.GetConfig('CMSWSUrlEmails') +'/UploadImage',",
+                    "               methode: 'POST',",
+                    "               jsonData : jsonFile,",
+                    "               success: function(response, opts) {",
+                    "                    //var obj = Ext.decode(response.responseText);",
+                    "                    //console.dir(obj);",
+                    "               },",
+                    "               failure: function(response, opts) {",
+                    "                    //console.log('server-side failure with status code ' + response.status);",
+                    "               }",
+                    "          });",
+                    ""
+                ]
+            },
+            "name": "UploadImage",
+            "designerId": "863df4cd-3070-49dd-82bf-25870c13cae2"
         }
     ]
 }

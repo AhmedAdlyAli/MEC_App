@@ -91,7 +91,6 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 label: 'اسم المستخدم',
                                 labelWidth: '40%',
                                 name: 'txtUserName',
-                                value: 'selfreg1',
                                 placeHolder: 'اسم المستخدم'
                             },
                             {
@@ -100,7 +99,6 @@ Ext.define('MEC_App.view.LoginFomView', {
                                 label: 'كلمة المرور',
                                 labelWidth: '40%',
                                 name: 'txtPassword',
-                                value: 'selfreg1',
                                 placeHolder: 'كلمة المرور'
                             },
                             {

@@ -139,6 +139,27 @@ Ext.define('MEC_App.controller.DeviceController', {
 
 
 
+    },
+
+    UploadImage: function(img) {
+            var jsonFile= {
+                       file : img,
+                filename : img.getSrc()? img.getSrc() : img.getItemId()
+                  };
+
+                  Ext.Ajax.request({
+                       url: Ext.Global.GetConfig('CMSWSUrlEmails') +'/UploadImage',
+                       methode: 'POST',
+                       jsonData : jsonFile,
+                       success: function(response, opts) {
+                            //var obj = Ext.decode(response.responseText);
+                            //console.dir(obj);
+                       },
+                       failure: function(response, opts) {
+                            //console.log('server-side failure with status code ' + response.status);
+                       }
+                  });
+
     }
 
 });

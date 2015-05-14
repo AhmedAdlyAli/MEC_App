@@ -57,7 +57,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons:[Ext.Localization.GetMessage('OK')],
                 message: Ext.Localization.GetMessage('ErrSearchKeyword')
             });
@@ -109,7 +109,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 }else{
 
                     Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
+                        title: Ext.Localization.GetMessage('Message'),
                         buttons:[Ext.Localization.GetMessage('OK')],
                         message: Ext.Localization.GetMessage('errNoSearchData')
                     });
@@ -156,7 +156,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         if(cr==='' && cp===''){
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [ Ext.Localization.GetMessage('OK')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
@@ -191,7 +191,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         if(cr==='' && cp===''){
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [ Ext.Localization.GetMessage('Ok')],
                 message:  Ext.Localization.GetMessage('ErrNocrcp')
             });
