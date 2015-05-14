@@ -43,7 +43,7 @@ Ext.define('MEC_App.view.MainNavView', {
                 items: [
                     {
                         xtype: 'carousel',
-                        flex: 7,
+                        flex: 1,
                         cls: 'home-carousel',
                         itemId: 'NewsCarousel',
                         indicator: false,
@@ -151,7 +151,7 @@ Ext.define('MEC_App.view.MainNavView', {
                     },
                     {
                         xtype: 'panel',
-                        flex: 14,
+                        flex: 2,
                         cls: 'home-btns',
                         itemId: 'home-links',
                         layout: 'vbox',
@@ -398,13 +398,6 @@ Ext.define('MEC_App.view.MainNavView', {
                                 ]
                             }
                         ]
-                    },
-                    {
-                        xtype: 'label',
-                        flex: 0.75,
-                        cls: 'beta-version',
-                        html: 'تشغيل تجريبي',
-                        itemId: 'beta'
                     }
                 ],
                 listeners: [

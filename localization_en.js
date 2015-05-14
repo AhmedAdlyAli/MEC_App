@@ -449,8 +449,8 @@ var localeEn =
 				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
 				{itemId:"homeContact", xtype: "label",value:"Connect"},
 				{itemId:"home-links", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"Initial Run"}
+				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"}
+				
 			]
 		},
 
@@ -550,7 +550,8 @@ var localeEn =
 				{itemId:"viewLbl", xtype: "label",value:"About the Application"},
 				{itemId:"AboutMinstryTxt", xtype: "label",value:"The application of the Ministry of Economy and Commerce in Qatar, contains many of the services provided by the ministry for the investor and the consumer, including search services for the commercial names and business activities, request the commercial documents, request and buy supply goods and services, query on the prices of goods, following up all the shops closures and products calls, explore the most important economic indicators and commercial reports, Send complaints and suggestions."},
 				{itemId:"MalText", xtype: "label",value:"Developed by Malomatia (Q.S.C)"},
-				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
+				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"},
+				{itemId:"beta", xtype: "label",value:"Initial run for new services"}
 			]
 		},
 
@@ -985,6 +986,61 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[]
+		},
+
+		{
+			itemId:"TradeNameEstablishmentDetails",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[				
+			{itemId:"mytitlebar", xtype: "titlebar",value:"Establishment Information"},
+			{itemId:"CRArabicName", xtype: "label",value:"Establishment Arabic Name"},
+			{itemId:"CREnglishName", xtype: "label",value:"Establishment English Name"},
+			{itemId:"CompanyCapital", xtype: "label",value:"Capital"},
+			{itemId:"establishmentLegalForm", xtype: "label",value:"Legal Form"},
+			{itemId:"establishmentType", xtype: "label",value:"Establishment Type"},
+			{itemId:"establishmentRegNumber1", xtype: "label",value:"MOI Establishment Number"},
+			{itemId:"commercialRegistration", xtype: "label",value:"CR Number"},
+			{itemId:"commercialRegistrationIssueDate", xtype: "label",value:"CR Issuance Date"},
+			{itemId:"commercialRegistrationExpiryDate", xtype: "label",value:"CR Expiry Date"},
+			{itemId:"commercialRegistrationStatus", xtype: "label",value:"CR Status"},
+			{itemId:"commercialPermit", xtype: "label",value:"CP Number"},
+			{itemId:"commercialPermitExpiryDate", xtype: "label",value:"CP Expiry Date"},
+			{itemId:"commercialPermitStatus", xtype: "label",value:"CP Status"},
+			{itemId:"establishmentDate", xtype: "label",value:"Establishment Date"},
+			{itemId:"establishmentStatus", xtype: "label",value:"Establishment Status"},
+			{itemId:"mytitlebar2", xtype: "titlebar",value:"Business Activities"},
+			{itemId:"mytitlebar3", xtype: "titlebar",value:"Branches"},
+			{itemId:"mytitlebar4", xtype: "titlebar",value:"Signatories"}
+			]
+		},
+
+		{
+			itemId:"TradeNameBranchDetails",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[
+			{itemId:"mytitlebar", xtype: "titlebar",value:"Branch Information"},		
+			{itemId:"commercialRegistrationNumber", xtype: "label",value:"CR Number"},
+			{itemId:"commercialRegistrationIssueDate1", xtype: "label",value:"CR Issuance Date"},
+			{itemId:"commercialRegistrationExpiryDate1", xtype: "label",value:"CR Expiry Date"},
+			{itemId:"commercialRegistrationStatus1", xtype: "label",value:"CR Status"},
+			{itemId:"CREnglishName1", xtype: "label",value:"Branch English Name"},
+			{itemId:"CRArabicName1", xtype: "label",value:"Branch Arabic Name"},
+			{itemId:"CompanyCapital1", xtype: "label",value:"Capital"},
+			{itemId:"commercialPermit1", xtype: "label",value:"CP Number"},
+			{itemId:"commercialPermitStatus1", xtype: "label",value:"CP Status"},
+			{itemId:"commercialPermitExpiryDate1", xtype: "label",value:"CP Expiry Date"},
+			{itemId:"establishmentDate1", xtype: "label",value:"Establishment Date"},
+			{itemId:"establishmentType1", xtype: "label",value:"Establishment Type"},
+			{itemId:"establishmentLegalForm1", xtype: "label",value:"Legal Form"},
+			{itemId:"establishmentStatus1", xtype: "label",value:"Establishment Status"},
+			{itemId:"establishmentRegNumber1", xtype: "label",value:"MOI Establishment Number"},
+			{itemId:"mytitlebar2", xtype: "titlebar",value:"Business Activities"},
+			{itemId:"mytitlebar3", xtype: "titlebar",value:"Signatories"}
+			]
 		}
 
 	],
