@@ -71,6 +71,12 @@ Ext.define('MEC_App.view.AboutAppView', {
                         itemId: 'AboutMinstryTxt'
                     },
                     {
+                        xtype: 'label',
+                        cls: 'beta-version',
+                        html: 'تشغيل أولي لخدمات الوزارة الجديدة',
+                        itemId: 'beta'
+                    },
+                    {
                         xtype: 'panel',
                         layout: 'hbox',
                         items: [

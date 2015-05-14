@@ -1809,7 +1809,9 @@ background: url(../images/toplogo.png) no-repeat center top;
     background: #fff;
     color: #682048;
     text-align: center;
-    font-size: 75%;
+    font-size: 90%;
+    padding: 1em 0.5em;
+    margin: 0 0 0.7em;
 }
 
 .mal-logo {
@@ -1825,7 +1827,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 .ltr-cls {
     direction:ltr !important;
-    
+
     .inner-panel {
         direction: ltr;
     }
@@ -2095,13 +2097,13 @@ background: url(../images/toplogo.png) no-repeat center top;
         }
 
     }
-    
+
     .mal-text {
         padding: 1.5em 1em 0 0;
         font-size: 70%;
         color: #682048;
     }
-    
+
     .mal-logo {
         margin: 0 0 0.5em 0.5em;
     }

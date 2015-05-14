@@ -53,7 +53,7 @@
                         ],
                         "indicator": false,
                         "itemId": "NewsCarousel",
-                        "layout|flex": 7,
+                        "layout|flex": 1,
                         "showAnimation": null,
                         "ui": null
                     },
@@ -246,7 +246,7 @@
                         ],
                         "itemId": "home-links",
                         "layout": "vbox",
-                        "layout|flex": 14
+                        "layout|flex": 2
                     },
                     "name": "MyPanel2",
                     "designerId": "87c9e345-c1c2-4441-83eb-6382b9e673c6",
@@ -868,24 +868,6 @@
                             ]
                         }
                     ]
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "beta-version"
-                        ],
-                        "html": "تشغيل تجريبي",
-                        "itemId": "beta",
-                        "layout|flex": 0.75
-                    },
-                    "name": "MyLabel",
-                    "designerId": "23711c26-046a-4419-b9a0-3cf62ced1e86"
                 },
                 {
                     "type": "basiceventbinding",

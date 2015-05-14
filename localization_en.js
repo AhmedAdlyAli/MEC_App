@@ -449,8 +449,8 @@ var localeEn =
 				{itemId:"btnProjects", xtype: "label",value:"Projects & Initiatives"},
 				{itemId:"homeContact", xtype: "label",value:"Connect"},
 				{itemId:"home-links", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"Initial Run"}
+				{itemId:"NewsCarousel", "xtype": "cls","value":"ltr-cls"}
+				
 			]
 		},
 
@@ -550,7 +550,8 @@ var localeEn =
 				{itemId:"viewLbl", xtype: "label",value:"About the Application"},
 				{itemId:"AboutMinstryTxt", xtype: "label",value:"The application of the Ministry of Economy and Commerce in Qatar, contains many of the services provided by the ministry for the investor and the consumer, including search services for the commercial names and business activities, request the commercial documents, request and buy supply goods and services, query on the prices of goods, following up all the shops closures and products calls, explore the most important economic indicators and commercial reports, Send complaints and suggestions."},
 				{itemId:"MalText", xtype: "label",value:"Developed by Malomatia (Q.S.C)"},
-				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"}
+				{itemId:"AboutMinstryTxt", xtype: "cls",value:"ltr-cls"},
+				{itemId:"beta", xtype: "label",value:"Initial run for new services"}
 			]
 		},
 

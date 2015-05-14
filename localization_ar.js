@@ -154,8 +154,7 @@ var localeAr =
 				{itemId:"btnProjects", xtype: "label",value:"المبادرات والمشاريع"},
 				{itemId:"homeContact", xtype: "label",value:"التواصل"},
 				{itemId:"home-links", xtype: "r-cls",value:"ltr-cls"},
-				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"},
-				{itemId:"beta", xtype: "label",value:"تشغيل أولي"}
+				{itemId:"NewsCarousel", "xtype": "r-cls","value":"ltr-cls"}
 			]
 		},
 

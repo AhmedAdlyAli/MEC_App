@@ -131,6 +131,23 @@
                     "designerId": "afaa0544-d097-430f-a65a-f39c506688b1"
                 },
                 {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "beta-version"
+                        ],
+                        "html": "تشغيل أولي لخدمات الوزارة الجديدة",
+                        "itemId": "beta"
+                    },
+                    "name": "MyLabel7",
+                    "designerId": "5a06e7b7-af3d-462a-a256-dff92a1b9874"
+                },
+                {
                     "type": "Ext.Panel",
                     "reference": {
                         "name": "items",
