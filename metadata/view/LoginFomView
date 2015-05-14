@@ -175,9 +175,7 @@
                                 "labelWidth": "40%",
                                 "name": "txtUserName",
                                 "placeHolder": "اسم المستخدم",
-                                "value": [
-                                    "selfreg1"
-                                ]
+                                "value": null
                             },
                             "name": "MyTextField",
                             "designerId": "b200a8b6-5d53-4210-afc7-a693b2a0a0ce"
@@ -195,9 +193,7 @@
                                 "labelWidth": "40%",
                                 "name": "txtPassword",
                                 "placeHolder": "كلمة المرور",
-                                "value": [
-                                    "selfreg1"
-                                ]
+                                "value": null
                             },
                             "name": "MyPasswordField",
                             "designerId": "21eeec9a-b1f4-4d8a-811e-6e13beebf59a"

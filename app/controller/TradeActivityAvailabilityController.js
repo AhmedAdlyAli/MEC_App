@@ -42,7 +42,7 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
 
             Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Error'),
+                title: Ext.Localization.GetMessage('Message'),
                 buttons: [Ext.Localization.GetMessage('OK')],
                 message:  Ext.Localization.GetMessage('ErrSearchKeyword')
             });
@@ -99,7 +99,7 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
                 }else{
 
                     Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
+                        title: Ext.Localization.GetMessage('Message'),
                         buttons:[Ext.Localization.GetMessage('OK')],
                         message: Ext.Localization.GetMessage('errNoSearchData')
                     });

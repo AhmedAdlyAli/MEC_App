@@ -228,6 +228,7 @@ var localeAr =
 	            errNOC:'لا يمكنك طلب هذه الشهادة لوجود منشآت مرتبطة بإسم المستخدم',
 	            NoDataSupply: 'لا يوجد بيانات متاحة لحسابك في نظام التموين',
 	            ComplaintsConfirmation:'شكرا٬ لقد تم ارسال الشكوى بنجاح',
+	            FeedbackConfirmation:'شكرا٬ لقد تم ارسال الرسالة بنجاح',
 	            GeneralError: 'عفوا, حدث خطأ عام, يرجى المحاولة مرة أخرى',
 	            ComplaintType1:'غش تجاري',
 	            ComplaintType2:'عدم الاعلان عن الاسعار',

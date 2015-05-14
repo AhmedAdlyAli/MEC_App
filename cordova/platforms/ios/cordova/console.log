@@ -2106,3 +2106,18 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-14 10:45:26.577 MEC_App[9664:904976] Resetting plugins due to page load.
 2015-05-14 10:45:26.948 MEC_App[9664:904976] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/92FCB414-4D70-41E7-BF91-1451CB8C7570/MEC_App.app/www/index.html
 2015-05-14 10:45:43.219 MEC_App[9664:904976] THREAD WARNING: ['ListPicker'] took '12.920654' ms. Plugin should use a background thread.
+2015-05-14 11:38:16.513 MEC_App[13887:928796] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 11:38:16.514 MEC_App[13887:928796] Multi-tasking -> Device: YES, App: YES
+2015-05-14 11:38:16.516 MEC_App[13887:928796] Unlimited access to network resources
+2015-05-14 11:38:16.670 MEC_App[13887:928796] Resetting plugins due to page load.
+2015-05-14 11:38:17.360 MEC_App[13887:928796] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/84DA1A62-B83C-4621-A13C-CCE7F4AC98DD/MEC_App.app/www/index.html
+2015-05-14 11:40:08.484 MEC_App[14382:930551] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 11:40:08.486 MEC_App[14382:930551] Multi-tasking -> Device: YES, App: YES
+2015-05-14 11:40:08.488 MEC_App[14382:930551] Unlimited access to network resources
+2015-05-14 11:40:08.710 MEC_App[14382:930551] Resetting plugins due to page load.
+2015-05-14 11:40:09.382 MEC_App[14382:930551] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/EC476B08-D150-4CE1-88F7-6C0C08C2699A/MEC_App.app/www/index.html
+2015-05-14 11:41:26.445 MEC_App[14866:932150] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 11:41:26.446 MEC_App[14866:932150] Multi-tasking -> Device: YES, App: YES
+2015-05-14 11:41:26.448 MEC_App[14866:932150] Unlimited access to network resources
+2015-05-14 11:41:26.632 MEC_App[14866:932150] Resetting plugins due to page load.
+2015-05-14 11:41:26.992 MEC_App[14866:932150] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C3CD1A88-6F5C-4670-BEA4-1105E349583D/MEC_App.app/www/index.html

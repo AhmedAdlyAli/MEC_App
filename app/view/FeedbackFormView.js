@@ -188,58 +188,124 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
 
-
-                                var requestData = {
-
-
-                                    "fullName":formData.fullName,
-                                    "email":formData.email,
-                                    "mobile":formData.mobile,
-                                    "comment": formData.comment
-
-                                };
+                                try{
 
 
 
-                                //console.log(requestData);
+
+                                    Ext.AnimationHelper.ShowLoading();
 
 
-                                var me = this;
 
-                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedbackEmail';
+                                    var strImages='';
 
+                                    //upload
 
-                                Ext.AnimationHelper.ShowLoading();
-
-                                Ext.Ajax.request({
-
-                                    url : url,
-                                    method : 'POST',
-                                    jsonData :requestData,
-                                    success : function (response) {
-
-                                        Ext.AnimationHelper.HideLoading();
+                                    var img1 = frm.down('img1');
+                                    if(img1.getSrc()&&img1.getSrc()!=='')
+                                    {
+                                        Ext.DeviceController.UploadImage(img1);
+                                        strImages+=img1.getSrc()+'-';
+                                    }
 
 
-                                        Ext.device.Notification.show({
-                                            title: Ext.Localization.GetMessage('Error'),
-                                            buttons:[Ext.Localization.GetMessage('OK')],
-                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                            callback: function(button) {
+                                    var img2 = frm.down('img2');
+                                    if(img2.getSrc()&&img2.getSrc()!=='')
+                                    {
+                                        Ext.DeviceController.UploadImage(img2);
+                                        strImages+=img2.getSrc()+'-';
 
-                                                //return user to home page
+                                    }
+                                    var img3 = frm.down('img3');
+                                    if(img3.getSrc()&&img3.getSrc()!=='')
+                                    {
+                                        Ext.DeviceController.UploadImage(img3);
+                                        strImages+=img1.getSrc()+'-';
+                                    }
 
-                                                Ext.Viewport.getActiveItem().reset();
-
-                                            }
-                                        });
-
-
+                                    var img4 = frm.down('img4');
+                                    if(img4.getSrc()&&img4.getSrc()!=='')
+                                    {
+                                        Ext.DeviceController.UploadImage(img4);
+                                        strImages+=img1.getSrc()+'-';
 
                                     }
 
 
-                                });
+                                    var requestData = {
+
+
+                                        "fullName":formData.fullName,
+                                        "email":formData.email,
+                                        "mobile":formData.mobile,
+                                        "comment": formData.comment
+
+                                    };
+
+
+
+                                    //console.log(requestData);
+
+
+                                    var me = this;
+
+                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedbackEmail';
+
+
+                                    Ext.AnimationHelper.ShowLoading();
+
+                                    Ext.Ajax.request({
+
+                                        url : url,
+                                        method : 'POST',
+                                        jsonData :requestData,
+                                        success : function (response) {
+
+                                            Ext.AnimationHelper.HideLoading();
+
+
+                                            Ext.device.Notification.show({
+                                                title: Ext.Localization.GetMessage('Message'),
+                                                buttons:[Ext.Localization.GetMessage('OK')],
+                                                message: Ext.Localization.GetMessage('FeedbackConfirmation'),
+                                                callback: function(button) {
+
+                                                    //return user to home page
+
+                                                    Ext.Viewport.getActiveItem().reset();
+
+                                                }
+                                            });
+
+                                        }
+
+                                    });
+
+
+                                }
+                                catch(er){
+
+
+                                    Ext.AnimationHelper.HideLoading();
+
+                                    Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Message'),
+                                        buttons:[Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('FeedbackConfirmation'),
+                                        callback: function(button) {
+
+                                            //return user to home page
+
+                                            Ext.Viewport.getActiveItem().reset();
+
+                                        }
+                                    });
+
+
+
+
+
+                                }
 
 
                             }

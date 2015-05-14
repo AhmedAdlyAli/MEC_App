@@ -468,23 +468,14 @@ Ext.define('MEC_App.view.MainNavView', {
         {
 
 
-
-
-
-        if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='LoginFomView')
+        if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='SupplyServiceView3')
             {
 
-                //alert('123');
 
-               // alert(navigationview.innerItems[navigationview.innerItems.length-2]._itemId);
-
-               // navigationview.getNavigationBar().fireEvent('back',
-               //      navigationview.innerItems[navigationview.innerItems.length-1]);
+                Ext.Viewport.getActiveItem().pop();
+        //
 
             }
-
-
-
 
 
         }
