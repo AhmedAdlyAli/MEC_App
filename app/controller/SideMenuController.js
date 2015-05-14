@@ -233,7 +233,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
     onBtnAboutAppTap: function(button, e, eOpts) {
                 Ext.Viewport.toggleMenu('right');
 
-                if(Ext.Viewport.getActiveItem()._activeItem._itemId == "SettingsView"){
+                if(Ext.Viewport.getActiveItem()._activeItem._itemId == "AboutAppView"){
                     return;
                 }
                 else {

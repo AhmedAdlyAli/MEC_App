@@ -91,8 +91,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var json2 = Ext.util.JSON.decode(json1);
 
-                alert(json2.Data);
-
                 Ext.Global.userSupplyToken = json2.Data.SessionID;
 
 

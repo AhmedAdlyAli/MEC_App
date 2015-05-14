@@ -2081,3 +2081,28 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-14 02:17:30.112 MEC_App[76752:688243] Resetting plugins due to page load.
 2015-05-14 02:17:30.739 MEC_App[76752:688243] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/900C58F7-796C-4098-A0E5-75668E5406EE/MEC_App.app/www/index.html
 2015-05-14 02:39:43.270 MEC_App[76752:699837] Terminating since there is no system app.
+2015-05-14 10:28:33.266 MEC_App[7925:895938] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 10:28:33.268 MEC_App[7925:895938] Multi-tasking -> Device: YES, App: YES
+2015-05-14 10:28:33.282 MEC_App[7925:895938] Unlimited access to network resources
+2015-05-14 10:28:33.927 MEC_App[7925:895938] Resetting plugins due to page load.
+2015-05-14 10:28:34.330 MEC_App[7925:895938] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/E31AA819-9984-4B0D-B2DC-62F3EBA9711B/MEC_App.app/www/index.html
+2015-05-14 10:29:00.254 MEC_App[7925:896282] Terminating since there is no system app.
+2015-05-14 10:32:28.992 MEC_App[8686:899671] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 10:32:28.993 MEC_App[8686:899671] Multi-tasking -> Device: YES, App: YES
+2015-05-14 10:32:28.995 MEC_App[8686:899671] Unlimited access to network resources
+2015-05-14 10:32:29.184 MEC_App[8686:899671] Resetting plugins due to page load.
+2015-05-14 10:32:29.986 MEC_App[8686:899671] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7D596E06-8149-4A8C-A95F-B4B8C373A3B0/MEC_App.app/www/index.html
+2015-05-14 10:33:07.898 MEC_App[8686:899671] THREAD WARNING: ['ListPicker'] took '38.399170' ms. Plugin should use a background thread.
+2015-05-14 10:38:30.325 MEC_App[9175:902283] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 10:38:30.327 MEC_App[9175:902283] Multi-tasking -> Device: YES, App: YES
+2015-05-14 10:38:30.329 MEC_App[9175:902283] Unlimited access to network resources
+2015-05-14 10:38:30.578 MEC_App[9175:902283] Resetting plugins due to page load.
+2015-05-14 10:38:30.940 MEC_App[9175:902283] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/6C24FB38-1458-4E72-9897-2915AFB471B7/MEC_App.app/www/index.html
+2015-05-14 10:38:43.071 MEC_App[9175:902283] THREAD WARNING: ['ListPicker'] took '12.320068' ms. Plugin should use a background thread.
+2015-05-14 10:38:51.073 MEC_App[9175:902283] THREAD WARNING: ['Notification'] took '52.941162' ms. Plugin should use a background thread.
+2015-05-14 10:45:26.360 MEC_App[9664:904976] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-14 10:45:26.362 MEC_App[9664:904976] Multi-tasking -> Device: YES, App: YES
+2015-05-14 10:45:26.364 MEC_App[9664:904976] Unlimited access to network resources
+2015-05-14 10:45:26.577 MEC_App[9664:904976] Resetting plugins due to page load.
+2015-05-14 10:45:26.948 MEC_App[9664:904976] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/92FCB414-4D70-41E7-BF91-1451CB8C7570/MEC_App.app/www/index.html
+2015-05-14 10:45:43.219 MEC_App[9664:904976] THREAD WARNING: ['ListPicker'] took '12.920654' ms. Plugin should use a background thread.

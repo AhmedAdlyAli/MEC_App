@@ -455,7 +455,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                             var cr,cp;
 
-                            if(view.PrintoutType===53)
+                            if(view.PrintoutType==='53')
                             {
                                 cr='';
                                 cp= view.down('#hiddenCompanyCR').getValue();
@@ -489,7 +489,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                             };
 
 
-                            //alert(requestData.commercialRegistrationNum + '==' + requestData.commercialPermitNum);
+                            //alert(Ext.util.JSON.encode(requestData));
 
 
                             Ext.Ajax.request({
@@ -504,11 +504,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                     console.log(json);
                                     //invalid or insufficient input!
 
-
                                     json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
-
-
-
 
 
                                     if(json.status==='Their is Active Cases for this account from the same case type !')
@@ -520,8 +516,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             message: Ext.Localization.GetMessage('ActiveRequestError')
                                         });
 
-
-
                                     }else if(json.status==='invalid or insufficient input!')
                                     {
 
@@ -531,7 +525,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             buttons: [Ext.Localization.GetMessage('OK')],
                                             message: Ext.Localization.GetMessage('invalidInputError')
                                         });
-
 
 
 

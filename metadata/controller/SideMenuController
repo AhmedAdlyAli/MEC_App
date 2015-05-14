@@ -439,7 +439,7 @@
                 "implHandler": [
                     "        Ext.Viewport.toggleMenu('right');",
                     "",
-                    "        if(Ext.Viewport.getActiveItem()._activeItem._itemId == \"SettingsView\"){",
+                    "        if(Ext.Viewport.getActiveItem()._activeItem._itemId == \"AboutAppView\"){",
                     "            return;",
                     "        }",
                     "        else {",
