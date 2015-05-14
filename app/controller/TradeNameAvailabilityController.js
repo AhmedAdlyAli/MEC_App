@@ -267,7 +267,7 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
 
                 Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);
-                Ext.getCmp('commercialRegistrationIssueDate1').setHtml(Ext.Global.FormatDate(company.commercialRegistrationIssueDate));
+                Ext.getCmp('commercialRegistrationIssueDate1').setHtml(company.commercialRegistrationIssueDate);
 
 
 

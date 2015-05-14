@@ -986,6 +986,61 @@ var localeEn =
 			cls: "ltr-cls",
 			items:
 			[]
+		},
+
+		{
+			itemId:"TradeNameEstablishmentDetails",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[				
+			{itemId:"mytitlebar", xtype: "titlebar",value:"Establishment Information"},
+			{itemId:"CRArabicName", xtype: "label",value:"Establishment Arabic Name"},
+			{itemId:"CREnglishName", xtype: "label",value:"Establishment English Name"},
+			{itemId:"CompanyCapital", xtype: "label",value:"Capital"},
+			{itemId:"establishmentLegalForm", xtype: "label",value:"Legal Form"},
+			{itemId:"establishmentType", xtype: "label",value:"Establishment Type"},
+			{itemId:"establishmentRegNumber1", xtype: "label",value:"MOI Establishment Number"},
+			{itemId:"commercialRegistration", xtype: "label",value:"CR Number"},
+			{itemId:"commercialRegistrationIssueDate", xtype: "label",value:"CR Issuance Date"},
+			{itemId:"commercialRegistrationExpiryDate", xtype: "label",value:"CR Expiry Date"},
+			{itemId:"commercialRegistrationStatus", xtype: "label",value:"CR Status"},
+			{itemId:"commercialPermit", xtype: "label",value:"CP Number"},
+			{itemId:"commercialPermitExpiryDate", xtype: "label",value:"CP Expiry Date"},
+			{itemId:"commercialPermitStatus", xtype: "label",value:"CP Status"},
+			{itemId:"establishmentDate", xtype: "label",value:"Establishment Date"},
+			{itemId:"establishmentStatus", xtype: "label",value:"Establishment Status"},
+			{itemId:"mytitlebar2", xtype: "titlebar",value:"Business Activities"},
+			{itemId:"mytitlebar3", xtype: "titlebar",value:"Branches"},
+			{itemId:"mytitlebar4", xtype: "titlebar",value:"Signatories"}
+			]
+		},
+
+		{
+			itemId:"TradeNameBranchDetails",
+			description: "",
+			cls: "ltr-cls",
+			items:
+			[
+			{itemId:"mytitlebar", xtype: "titlebar",value:"Branch Information"},		
+			{itemId:"commercialRegistrationNumber", xtype: "label",value:"CR Number"},
+			{itemId:"commercialRegistrationIssueDate1", xtype: "label",value:"CR Issuance Date"},
+			{itemId:"commercialRegistrationExpiryDate1", xtype: "label",value:"CR Expiry Date"},
+			{itemId:"commercialRegistrationStatus1", xtype: "label",value:"CR Status"},
+			{itemId:"CREnglishName1", xtype: "label",value:"Branch English Name"},
+			{itemId:"CRArabicName1", xtype: "label",value:"Branch Arabic Name"},
+			{itemId:"CompanyCapital1", xtype: "label",value:"Capital"},
+			{itemId:"commercialPermit1", xtype: "label",value:"CP Number"},
+			{itemId:"commercialPermitStatus1", xtype: "label",value:"CP Status"},
+			{itemId:"commercialPermitExpiryDate1", xtype: "label",value:"CP Expiry Date"},
+			{itemId:"establishmentDate1", xtype: "label",value:"Establishment Date"},
+			{itemId:"establishmentType1", xtype: "label",value:"Establishment Type"},
+			{itemId:"establishmentLegalForm1", xtype: "label",value:"Legal Form"},
+			{itemId:"establishmentStatus1", xtype: "label",value:"Establishment Status"},
+			{itemId:"establishmentRegNumber1", xtype: "label",value:"MOI Establishment Number"},
+			{itemId:"mytitlebar2", xtype: "titlebar",value:"Business Activities"},
+			{itemId:"mytitlebar3", xtype: "titlebar",value:"Signatories"}
+			]
 		}
 
 	],
