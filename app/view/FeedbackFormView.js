@@ -201,12 +201,12 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
 
-                                console.log(requestData);
+                                //console.log(requestData);
 
 
                                 var me = this;
 
-                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaintsEmail';
+                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedbackEmail';
 
 
                                 Ext.AnimationHelper.ShowLoading();

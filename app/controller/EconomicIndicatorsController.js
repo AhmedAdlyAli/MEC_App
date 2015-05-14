@@ -112,7 +112,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
                     if(item.Title.indexOf(catName)>-1)
                     {
 
-                        json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value});
+                        json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value, Description:item.Description});
                     }
 
                 });
@@ -206,6 +206,8 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;
                 var data = view.getData();
 
+
+        console.log(data);
          view.down('#lblTitle').setHtml(data.Title);
         view.down('#lblBrief').setHtml(data.Description);
 

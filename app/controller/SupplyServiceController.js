@@ -88,12 +88,10 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             success : function (response) {
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
 
-                console.log(json1);
-                        console.log(json2);
+                var json2 = Ext.util.JSON.decode(json1);
 
-
+                alert(json2.Data);
 
                 Ext.Global.userSupplyToken = json2.Data.SessionID;
 
@@ -126,10 +124,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
                         var json1 = Ext.util.JSON.decode(response.responseText);
-                        var json2 = Ext.util.JSON.decode(json1.d);
+                        var json2 = Ext.util.JSON.decode(json1);
 
-
-                        //console.log(json2);
 
 
                         if(json2.Data && json2.Data.Items.length>0 && json2.Status==='Success')
@@ -392,7 +388,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 success : function (response) {
 
                     var json1 = Ext.util.JSON.decode(response.responseText);
-                    var json2 = Ext.util.JSON.decode(json1.d);
+                    var json2 = Ext.util.JSON.decode(json1);
 
 
                     Ext.AnimationHelper.HideLoading();
@@ -577,7 +573,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
+                var json2 = Ext.util.JSON.decode(json1);
 
 
 
@@ -835,7 +831,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
+                var json2 = Ext.util.JSON.decode(json1);
 
                 console.log(json2);
 
@@ -939,7 +935,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             success : function (response) {
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1.d);
+                var json2 = Ext.util.JSON.decode(json1);
 
 
                 Ext.AnimationHelper.HideLoading();

@@ -65,7 +65,6 @@ Ext.define('MEC_App.view.EconomicIndicatorsBrief', {
 
         this.callParent();
 
-        Ext.Localization.LoadLocalization();
 
         Ext.Localization.LocalizeView(this);
 

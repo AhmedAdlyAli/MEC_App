@@ -15,7 +15,7 @@ var localeEn =
 		{
 			itemId:"ConsumerServiceView",
 			items: [
-				{Name:"Report Complaint", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
+				{Name:"Report Complaint", Url:"ComplaintsView", RequireLogin:true, Icon:"ico-complaints.png"},
 				{Name:"Supply Services", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},

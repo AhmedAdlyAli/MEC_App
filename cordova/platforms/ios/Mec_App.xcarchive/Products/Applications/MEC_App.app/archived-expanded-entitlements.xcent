@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>D2DHSYGQ7A.MEC.MECAPP</string>
+	<string>J98KS528GJ.com.mec.mecqatar</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>D2DHSYGQ7A.MEC.MECAPP</string>
+		<string>J98KS528GJ.com.mec.mecqatar</string>
 	</array>
 </dict>
 </plist>
