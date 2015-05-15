@@ -1041,7 +1041,23 @@ var localeEn =
 			{itemId:"mytitlebar2", xtype: "titlebar",value:"Business Activities"},
 			{itemId:"mytitlebar3", xtype: "titlebar",value:"Signatories"}
 			]
+		},
+
+		{
+			itemId:"GenericSelectView",
+			description: "",
+			items:
+			[
+				
+				{itemId:"lstLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
 		}
+
+
+
+
+
 
 	],
 
@@ -1107,7 +1123,9 @@ var localeEn =
 	            FamilyBlockedSupply: 'Your Supply card is blocked on the system, Please contact the Ministry for More Details',
 	            invalidInputError: 'Sorry, an Error has occured',
 	            contactError: 'Sorry, There is missing user information',
-	            EstablishmentError: 'Sorry, There is missing Establishment information'	
+	            EstablishmentError: 'Sorry, There is missing Establishment information'	,
+	            SelectProduct:'Select Product',
+	            SelectReport: 'Select Report'
 
 				}
 

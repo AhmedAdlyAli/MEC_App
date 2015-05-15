@@ -612,3 +612,117 @@ selfreg1
 
 
 alert(Ext.util.JSON.encode(requestData));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+var me = this;
+me.element.on('tap', function(){
+
+    var data = {TitleKey:'SelectProduct', ReturnView:'WhereToShopView', links: me.up('WhereToShopView').links, KeyField:'Id',ValueField:'ProductName'};
+
+    Ext.Viewport.getActiveItem().push({
+                xtype: 'GenericSelectView',
+                title: Ext.Global.GetFixedTitle(),
+                data:data
+
+            });
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+                                             //get report
+                                             Ext.AnimationHelper.ShowLoading();
+
+
+
+                                             Ext.Ajax.request({
+
+                                                 url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=2&categoryId='+selectedValue,
+                                                 method : 'Get',
+                                                 success : function (response) {
+
+                                                     var json = Ext.util.JSON.decode(response.responseText);
+
+                                                     Ext.AnimationHelper.HideLoading();
+
+
+                                                     var view = btn.up('BusinessIndicatorsView');
+
+                                                     if(json.length>0)
+                                                     {
+                                                         var store = new Ext.data.Store({
+                                                             data : json
+                                                         });
+
+
+
+
+
+                                                         view.down('#GridHeader').show();
+                                                         view.down('#GridSubHeader').show();
+                                                         view.down('#grdMainCRs').show();
+                                                         view.down('#GridSubHeader1').show();
+                                                         view.down('#grdSubCRs').show();
+                                                         view.down('#GridHeader1').show();
+                                                         view.down('#GridSubHeader2').show();
+                                                         view.down('#grdMainCRs2').show();
+                                                         view.down('#GridSubHeader3').show();
+                                                         view.down('#grdSubCRs2').show();
+
+
+
+
+                                                         view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                         view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                         view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                                                         view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+
+
+
+
+                                                     }else{
+
+
+                                                         view.down('#GridHeader').hide();
+                                                         view.down('#GridSubHeader').hide();
+                                                         view.down('#grdMainCRs').hide();
+                                                         view.down('#GridSubHeader1').hide();
+                                                         view.down('#grdSubCRs').hide();
+                                                         view.down('#GridHeader1').hide();
+                                                         view.down('#GridSubHeader2').hide();
+                                                         view.down('#grdMainCRs2').hide();
+                                                         view.down('#GridSubHeader3').hide();
+                                                         view.down('#grdSubCRs2').hide();
+
+
+
+
+                                                         Ext.device.Notification.show({
+                                                             title:Ext.Localization.GetMessage('Message'),
+                                                             buttons: [Ext.Localization.GetMessage('OK')],
+                                                             message:  Ext.Localization.GetMessage('NoData')
+                                                         });
+
+

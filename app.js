@@ -114,7 +114,8 @@ Ext.application({
         'SupplyServiceMyData',
         'WebFrameView1',
         'AboutAppView',
-        'MyBisunessFixed'
+        'MyBisunessFixed',
+        'GenericSelectListView'
     ],
     controllers: [
         'HomeController',

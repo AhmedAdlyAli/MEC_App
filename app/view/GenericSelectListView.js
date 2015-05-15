@@ -15,72 +15,96 @@
 
 Ext.define('MEC_App.view.GenericSelectListView', {
     extend: 'Ext.Panel',
-    alias: 'widget.GenericSelectListView',
+    alias: 'widget.GenericSelectView',
 
     requires: [
         'Ext.Label',
-        'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.dataview.List'
     ],
 
     config: {
         fullscreen: true,
-        itemId: 'GenericSelectListView',
+        itemId: 'GenericSelectView',
         layout: 'vbox',
         items: [
             {
                 xtype: 'label',
                 cls: 'service-title',
-                html: 'خدمات التموين',
+                html: 'Test',
                 itemId: 'lblTitle'
             },
             {
                 xtype: 'list',
+                flex: 1,
                 cls: 'CompanyList',
-                height: 261,
-                itemId: 'lstLinks2',
-                itemCls: 'item-link',
-                itemTpl: [
-                    '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{Name}</div>'
-                ]
+                itemId: 'lstLinks',
+                autoDestroy: false,
+                itemCls: 'item-link'
             }
         ],
         listeners: [
             {
                 fn: 'onLstLinks1ItemTap1',
                 event: 'itemtap',
-                delegate: '#lstLinks2'
+                delegate: '#lstLinks'
+            },
+            {
+                fn: 'onLstLinksItemTap',
+                event: 'itemtap',
+                delegate: '#lstLinks'
             }
         ]
     },
 
     onLstLinks1ItemTap1: function(dataview, index, target, record, e, eOpts) {
-                    Ext.Global.RedirectToView(record.data);
+        var viewData = dataview.up('GenericSelectView').getData();
+
+        var data ={Id: record.data[viewData.KeyField], Title: record.data[viewData.ValueField]};
+
+
+
+
+            Ext.Viewport.getActiveItem().push({
+                        xtype: viewData.ReturnView,
+                        title: Ext.Global.GetFixedTitle(),
+                        data:data
+                    });
+
+
+
+
+
+
+    },
+
+    onLstLinksItemTap: function(dataview, index, target, record, e, eOpts) {
 
     },
 
     initialize: function() {
-        this.callParent();
 
+        var view = this;
+        Ext.Localization.LocalizeView(view);
 
-        Ext.Localization.LocalizeView(this);
+        var viewData = view.getData();
 
-        var links = Ext.Localization.getLinks(this);
+        view.down('#lblTitle').setHtml(Ext.Localization.GetMessage(viewData.TitleKey));
 
         var store = new Ext.data.Store({
-            data : links
+            data : viewData.links
         });
 
-        var lst = this.down('#lstLinks2');
+        //console.log(viewData.links);
+
+        var lst = this.down('#lstLinks');
+        lst.setItemTpl(new Ext.XTemplate( '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{'+viewData.ValueField+'}</div>'));
+
         lst.setStore(store);
-        lst.setScrollable(false);
 
 
 
 
-
-
-
+        this.callParent();
 
     }
 

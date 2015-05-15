@@ -54,9 +54,15 @@ Ext.define('MEC_App.controller.DeviceController', {
                     success: function(url) {
                         //show the newly captured image in a full screen Ext.Img component:
                         image.setSrc(url);
+
+
+
                     }
                 });
             }
+
+
+
 
         });
 
@@ -146,6 +152,11 @@ Ext.define('MEC_App.controller.DeviceController', {
                        file : img,
                 filename : img.getSrc()? img.getSrc() : img.getItemId()
                   };
+
+
+
+        console.log(img.getSize());
+
 
                   Ext.Ajax.request({
                        url: Ext.Global.GetConfig('CMSWSUrlEmails') +'/UploadImage',

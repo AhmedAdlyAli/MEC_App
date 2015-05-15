@@ -6,10 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userAlias": "GenericSelectListView",
+        "designer|userAlias": "GenericSelectView",
         "designer|userClassName": "GenericSelectListView",
         "fullscreen": true,
-        "itemId": "GenericSelectListView",
+        "itemId": "GenericSelectView",
         "layout": "vbox",
         "scrollable": null
     },
@@ -27,7 +27,7 @@
                 "cls": [
                     "service-title"
                 ],
-                "html": "خدمات التموين",
+                "html": "Test",
                 "id": null,
                 "itemId": "lblTitle"
             },
@@ -42,32 +42,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "autoDestroy": false,
                 "cls": [
                     "CompanyList"
                 ],
-                "height": 261,
+                "height": null,
                 "itemCls": "item-link",
-                "itemId": "lstLinks2"
+                "itemId": "lstLinks",
+                "layout|flex": 1
             },
             "name": "MyList4",
             "designerId": "80f2eb83-b894-47d8-a1b9-40e64fae5287",
             "cn": [
-                {
-                    "type": "Ext.XTemplate",
-                    "reference": {
-                        "name": "itemTpl",
-                        "type": "object"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "designer|displayName": "itemTpl",
-                        "implHandler": [
-                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
-                        ]
-                    },
-                    "name": "itemTpl",
-                    "designerId": "90b8ca88-461f-47ec-929d-66e2308f47e6"
-                },
                 {
                     "type": "basiceventbinding",
                     "reference": {
@@ -78,13 +64,43 @@
                     "userConfig": {
                         "fn": "onLstLinks1ItemTap1",
                         "implHandler": [
-                            "            Ext.Global.RedirectToView(record.data);",
+                            "var viewData = dataview.up('GenericSelectView').getData();",
+                            "",
+                            "var data ={Id: record.data[viewData.KeyField], Title: record.data[viewData.ValueField]};",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "    Ext.Viewport.getActiveItem().push({",
+                            "                xtype: viewData.ReturnView,",
+                            "                title: Ext.Global.GetFixedTitle(),",
+                            "                data:data",
+                            "            });",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
                             ""
                         ],
                         "name": "itemtap"
                     },
                     "name": "onLstLinks1ItemTap1",
                     "designerId": "9d38a3e1-7f0a-4325-ba76-087105f7961d"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinksItemTap",
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinksItemTap",
+                    "designerId": "0175079a-bc14-4d10-b32c-5b1943f6b905"
                 }
             ]
         },
@@ -98,27 +114,29 @@
             "userConfig": {
                 "fn": "initialize",
                 "implHandler": [
-                    "this.callParent();",
                     "",
+                    "var view = this;",
+                    "Ext.Localization.LocalizeView(view);",
                     "",
-                    "Ext.Localization.LocalizeView(this);",
+                    "var viewData = view.getData();",
                     "",
-                    "var links = Ext.Localization.getLinks(this);",
+                    "view.down('#lblTitle').setHtml(Ext.Localization.GetMessage(viewData.TitleKey));",
                     "",
                     "var store = new Ext.data.Store({",
-                    "    data : links",
+                    "    data : viewData.links",
                     "});",
                     "",
-                    "var lst = this.down('#lstLinks2');",
+                    "//console.log(viewData.links);",
+                    "",
+                    "var lst = this.down('#lstLinks');",
+                    "lst.setItemTpl(new Ext.XTemplate( '<div class=\\'nav-item\\' style=\\'background:url(resources/images/{Icon})\\'>{'+viewData.ValueField+'}</div>'));",
+                    "",
                     "lst.setStore(store);",
-                    "lst.setScrollable(false);",
                     "",
                     "",
                     "",
                     "",
-                    "",
-                    "",
-                    "",
+                    "this.callParent();",
                     ""
                 ]
             },

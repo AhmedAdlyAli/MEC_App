@@ -30,83 +30,54 @@ Ext.define('MEC_App.controller.WhereToShopController', {
         control: {
             "panel#WhereToShopView": {
                 initialize: 'onWhereToShopViewInitialize'
-            },
-            "hiddenfield#hiddenProductID": {
-                change: 'onHiddenProductIDChange'
             }
         }
     },
 
     onWhereToShopViewInitialize: function(component, eOpts) {
-        Ext.AnimationHelper.ShowLoading();
 
-        var me = this;
+        var view = component;
 
+        var json;
 
-        Ext.Ajax.request({
+            Ext.Localization.LocalizeView(view);
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=20',
-            method : 'Get',
-            success : function (response) {
+            Ext.AnimationHelper.ShowLoading();
 
-                var json = Ext.util.JSON.decode(response.responseText);
+            Ext.Ajax.request({
 
+                url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=20',
+                method : 'Get',
+                success : function (response) {
+                    Ext.AnimationHelper.HideLoading();
 
-                var view = me.getWhereToShopView();
+                     json = Ext.util.JSON.decode(response.responseText);
+                     view.links = json;
 
-                view.setData(json);
+                    if(!view.getData())// initial run
+                    {
 
-                Ext.AnimationHelper.HideLoading();
+                        view.down('#hiddenProductID').setValue(json[0].Id);
+                        view.down('#txtProductName').setValue(json[0].ProductName);
 
-            }
-        });
+                    }else{ // selected key is pushed from the select view
 
+                        view.down('#hiddenProductID').setValue(view.getData().Id);
+                        view.down('#txtProductName').setValue(view.getData().Title);
 
-    },
-
-    onHiddenProductIDChange: function(textfield, newValue, oldValue, eOpts) {
-
-        var me = this;
-
-        var view = me.getWhereToShopView();
-
-        Ext.AnimationHelper.ShowLoading();
-
-        Ext.Ajax.request({
-
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+newValue+'?culture='+Ext.Global.LanguageFlag,
-            method : 'Get',
-            success : function (response) {
-                Ext.AnimationHelper.HideLoading();
-                var json = Ext.util.JSON.decode(response.responseText);
-
-        if(json.ProductPrices.length>0)
-                {
-
-                var store = new Ext.data.Store({
-                    data : json.ProductPrices
-                });
-                var lstPrices = view.down('#lstPrices');
-                lstPrices.setStore(store);
-
-                }else{
+                    }
 
 
-                            Ext.device.Notification.show({
-                                title: Ext.Localization.GetMessage('Error'),
-                                buttons:[Ext.Localization.GetMessage('OK')],
-                                message: Ext.Localization.GetMessage('NoData')
-                            });
-
-
-
-            }
+                }
+            });
 
 
 
 
-            }
-        });
+
+
+
+
 
     }
 
