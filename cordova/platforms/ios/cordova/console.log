@@ -2188,3 +2188,31 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-15 14:34:54.921 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
 2015-05-15 14:35:29.712 MEC_App[33334:1234759] THREAD WARNING: ['Notification'] took '19.149902' ms. Plugin should use a background thread.
 2015-05-15 14:35:35.587 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
+2015-05-15 16:22:25.663 MEC_App[38104:1314859] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 16:22:25.664 MEC_App[38104:1314859] Multi-tasking -> Device: YES, App: YES
+2015-05-15 16:22:25.666 MEC_App[38104:1314859] Unlimited access to network resources
+2015-05-15 16:22:25.745 MEC_App[38104:1314859] [CDVTimer][file] 2.358019ms
+2015-05-15 16:22:25.745 MEC_App[38104:1314859] [CDVTimer][TotalPluginStartup] 2.867997ms
+2015-05-15 16:22:25.872 MEC_App[38104:1314859] Resetting plugins due to page load.
+2015-05-15 16:22:26.442 MEC_App[38104:1314859] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/9A289B8F-FB94-4248-A03D-C67D317D097B/MEC_App.app/www/index.html
+2015-05-15 16:23:07.359 MEC_App[38753:1316710] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 16:23:07.359 MEC_App[38753:1316710] Multi-tasking -> Device: YES, App: YES
+2015-05-15 16:23:07.362 MEC_App[38753:1316710] Unlimited access to network resources
+2015-05-15 16:23:07.440 MEC_App[38753:1316710] [CDVTimer][file] 1.044989ms
+2015-05-15 16:23:07.440 MEC_App[38753:1316710] [CDVTimer][TotalPluginStartup] 1.244962ms
+2015-05-15 16:23:07.529 MEC_App[38753:1316710] Resetting plugins due to page load.
+2015-05-15 16:23:08.022 MEC_App[38753:1316710] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/E1E8B54A-2407-45FF-BAD0-D3F4210E44CA/MEC_App.app/www/index.html
+2015-05-15 16:24:12.689 MEC_App[39503:1319653] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 16:24:12.690 MEC_App[39503:1319653] Multi-tasking -> Device: YES, App: YES
+2015-05-15 16:24:12.692 MEC_App[39503:1319653] Unlimited access to network resources
+2015-05-15 16:24:12.766 MEC_App[39503:1319653] [CDVTimer][file] 1.680970ms
+2015-05-15 16:24:12.766 MEC_App[39503:1319653] [CDVTimer][TotalPluginStartup] 1.902044ms
+2015-05-15 16:24:12.849 MEC_App[39503:1319653] Resetting plugins due to page load.
+2015-05-15 16:24:13.347 MEC_App[39503:1319653] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/40A7E9CA-12EF-4652-BDD2-50AF0CD37B4E/MEC_App.app/www/index.html
+2015-05-15 16:29:55.800 MEC_App[39503:1319653] Failed to load webpage with error: The URL can’t be shown
+2015-05-15 16:29:56.592 MEC_App[39503:1319653] Failed to load webpage with error: The URL can’t be shown
+2015-05-15 16:29:57.479 MEC_App[39503:1319653] Failed to load webpage with error: The URL can’t be shown
+2015-05-15 16:29:59.538 MEC_App[39503:1319653] Failed to load webpage with error: The URL can’t be shown
+2015-05-15 16:36:31.284 MEC_App[39503:1329631] Communications error: <OS_xpc_error: <error: 0x3aff5f4> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x3aff83c> { length = 22, contents = "Connection interrupted" }
+}>

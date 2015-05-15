@@ -471,12 +471,17 @@ Ext.define('MEC_App.view.MainNavView', {
             if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='SupplyServiceView3')
             {
 
-                 navigationview.callParent();
-                  Ext.Viewport.getActiveItem().reset();
 
-               // return false;
+                // return false;
 
                 //alert('asd');
+
+
+
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'SupplyServiceListing',
+                title: Ext.Global.GetFixedTitle()
+            });
 
             }
 

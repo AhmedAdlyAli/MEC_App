@@ -630,7 +630,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-
         var userName = Ext.Global.LanguageFlag == 'ar' ? Ext.Global.identityNameAr : Ext.Global.identityNameEn;
 
         view.down('#lblUserName2').setHtml(userName);
