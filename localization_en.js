@@ -898,10 +898,15 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"How to Request Supply Service"},
-				{itemId:"SuppliesCardTitle", xtype: "label",value:"Supplies Card"},
-				{itemId:"SuppliesCardDesc", xtype: "label",value:"Copy of the personal identification cards of the husband, wife and family members.<br/>Copy of the children birth certificates showing personal identification numbers.<ol><li>In the absence of children:<ul><li>Copy of the marriage certificate</li><li>Copy of the personal identification cards of the husband and wife</li></ul></li><li>In the case the father is deceased:<ul><li>Copy of the death certificate</li><li>Copy of the personal identification cards and birth certificates of the children</li></ul></li><li>In the case of divorce:<ul><li>Copy of the divorce certificate</li><li>Copy of the personal identification card</li><li>Copy of the birth certificates of children</li><li>Copy of the certificate of custody rights for children</li></ul></li></ol>"},
-				{itemId:"FodderCardTitle", xtype: "label",value:"Fodder Card"},
-				{itemId:"FodderCardDesc", xtype: "label",value:"Copy of the personal identification card.<br/>Certificate of livestock ownership issued by the Ministry of Environment's Livestock."}
+				{itemId:"GeneralInfo", xtype: "label",value:"If you possess a food supply card, you can login and request the food supply service by entering your Qatari ID number and the password that you have selected when creating the account through the app, and you will then receive a text message to activate your account.<br/>If you do not possess a food supply card, please go to the following link ***add link here*** and complete the form, attach it to an email and send to the following address: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>If you have any queries, please contact the supply department by telephone on: <a href='tel:44378160'>4437 8160</a> / <a href='tel:44378162'>4437 8162</a>, or by email: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>Alternatively, you can visit our offices, located in Al Muntaza area, Al Rawabi Street."},
+				{itemId:"SuppliesCardTitle2", xtype: "label",value:"The following documents are required when applying for a food supply card"},
+				{itemId:"SuppliesCardDesc2", xtype: "label",value:"A copy of the Qatari ID card of the husband, wife and family members.<br/>Marriage certificate if you do not have children.<br/>If you do not have ID cards for your children, they can be registered using their birth certificates, ensuring that the personal numbers are visible."},
+				{itemId:"SuppliesCardTitle", xtype: "label",value:"Please note that specific documents are required in the following cases"},
+				{itemId:"SuppliesCardDesc", xtype: "label",value:"<ol><li>In the case of the death of the head of the family<ul><li>a copy of the death certificate</li><li>a copy of the Qatari ID card or birth certificate for children</li></ul></li><li>In the event of divorce<ul><li>a copy of the divorce certificate</li><li>a copy of the identity card</li><li>a copy of the birth certificate for children</li><li>a copy of the proof of custody of children certificate</li></ul></li></ol>"},
+				{itemId:"FodderCardTitle", xtype: "label",value:"Documents required for fodder supply card"},
+				{itemId:"FodderCardDesc", xtype: "label",value:"a copy of the Qatari ID card.<br/>possession of livestock management certificate issued by the Ministry of Environment."},
+				{itemId:"SuppliesCardTitle1", xtype: "label",value:"Food Supply distribution mechanism"},
+				{itemId:"SuppliesCardDesc1", xtype: "label",value:"Rice and sugar:<br/>1 bag of rice and 1 bag of sugar for each three members of the family per month.<br/>Oil and milk:<br/>1 box of oil and 1 box of milk for each four members of the family per month."},
 			]
 		},
 
