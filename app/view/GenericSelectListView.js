@@ -36,10 +36,10 @@ Ext.define('MEC_App.view.GenericSelectListView', {
             {
                 xtype: 'list',
                 flex: 1,
-                cls: 'CompanyList',
+                cls: 'HList',
                 itemId: 'lstLinks',
                 autoDestroy: false,
-                itemCls: 'item-link'
+                itemCls: 'HListItem'
             }
         ],
         listeners: [

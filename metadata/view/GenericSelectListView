@@ -44,10 +44,10 @@
             "userConfig": {
                 "autoDestroy": false,
                 "cls": [
-                    "CompanyList"
+                    "HList"
                 ],
                 "height": null,
-                "itemCls": "item-link",
+                "itemCls": "HListItem",
                 "itemId": "lstLinks",
                 "layout|flex": 1
             },

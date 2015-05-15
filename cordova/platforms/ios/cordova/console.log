@@ -2166,3 +2166,25 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-15 13:27:01.161 MEC_App[31742:1208528] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/13168D9C-763E-4142-AE0B-BFC9F92340E6/MEC_App.app/www/index.html
 2015-05-15 13:28:56.163 MEC_App[31742:1208528] Failed to load webpage with error: The URL can’t be shown
 2015-05-15 13:29:07.048 MEC_App[31742:1210032] Camera.getPicture: source type 1 not available.
+2015-05-15 13:31:11.023 MEC_App[31742:1211383] Connection to assetsd was interrupted or assetsd died
+2015-05-15 14:32:11.793 MEC_App[32787:1232915] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 14:32:11.794 MEC_App[32787:1232915] Multi-tasking -> Device: YES, App: YES
+2015-05-15 14:32:11.796 MEC_App[32787:1232915] Unlimited access to network resources
+2015-05-15 14:32:11.868 MEC_App[32787:1232915] [CDVTimer][file] 2.093017ms
+2015-05-15 14:32:11.868 MEC_App[32787:1232915] [CDVTimer][TotalPluginStartup] 2.250016ms
+2015-05-15 14:32:11.949 MEC_App[32787:1232915] Resetting plugins due to page load.
+2015-05-15 14:32:12.443 MEC_App[32787:1232915] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8AF81928-8755-4D57-A9C4-CEB7DE2F7BF2/MEC_App.app/www/index.html
+2015-05-15 14:32:56.791 MEC_App[32787:1232915] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
+2015-05-15 14:33:00.660 MEC_App[32787:1232915] THREAD WARNING: ['Notification'] took '12.714355' ms. Plugin should use a background thread.
+2015-05-15 14:33:48.744 MEC_App[33334:1234759] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-15 14:33:48.746 MEC_App[33334:1234759] Multi-tasking -> Device: YES, App: YES
+2015-05-15 14:33:48.747 MEC_App[33334:1234759] Unlimited access to network resources
+2015-05-15 14:33:48.820 MEC_App[33334:1234759] [CDVTimer][file] 0.990987ms
+2015-05-15 14:33:48.820 MEC_App[33334:1234759] [CDVTimer][TotalPluginStartup] 1.168013ms
+2015-05-15 14:33:48.894 MEC_App[33334:1234759] Resetting plugins due to page load.
+2015-05-15 14:33:49.203 MEC_App[33334:1234759] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/CC865581-29CF-4A8B-9013-01EB1C0DDAD4/MEC_App.app/www/index.html
+2015-05-15 14:34:42.224 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
+2015-05-15 14:34:48.887 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
+2015-05-15 14:34:54.921 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default
+2015-05-15 14:35:29.712 MEC_App[33334:1234759] THREAD WARNING: ['Notification'] took '19.149902' ms. Plugin should use a background thread.
+2015-05-15 14:35:35.587 MEC_App[33334:1234759] Can't find keyplane that supports type 5 for keyboard iPhone-Portrait-PhonePad; using 1188396531_Portrait_iPhone-Complex-Pad_Default

@@ -4,21 +4,25 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		/zN5LQnOH9oeDAtw7dOpPumZOMc=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		bEGIrQhpZm7bGaquAO4ert2nxRw=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		rZAYDWYqwbG3xlspCgeNZES9BH8=
+		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
 		/kSUVvLLJcbtfXnxFEolil3/NRk=
 		</data>
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
-		KecLrqjij0W/51akx2oJrsDzlL0=
-		</data>
-		<key>Default-667h.png</key>
-		<data>
-		gIRHq1NQi6ouqv6S4zYOVLG0mjE=
-		</data>
-		<key>Default-736h.png</key>
-		<data>
-		omvnR6BS9zsIgu2osPrsh7KmdhE=
+		S5fB65AVphzua2sjTxJ8r2ORoH4=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -34,27 +38,31 @@
 		</data>
 		<key>Default-Portrait@2x~ipad.png</key>
 		<data>
-		Nim0AhsbkZJKWuKHPZTZfiq67lg=
+		9PRUnsf57ER5LSDOXEna6xIEwgs=
 		</data>
 		<key>Default-Portrait~ipad.png</key>
 		<data>
-		EziB8rHFrGAAmA+auXVgT39OIl0=
+		E4Hr1MwwVv47DjNSpH+vrb0JOUc=
 		</data>
 		<key>Default@2x~iphone.png</key>
 		<data>
-		L1oZ7wSLmsK4+zzF2gsgZj+LdnU=
+		sBNl/17CIBaSBC4Nw1IfxPRkbN0=
 		</data>
 		<key>Default~iphone.png</key>
 		<data>
-		+DutGpYG9jEOvvwb/wDtQrwbYCc=
+		m4X9s/Jxxaq+tzdgqNXsnzWwa2U=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VhRy9MidRRPe4JVpkUFI/RlJ5rI=
+		OK+3jeplIjPsT1u2bthPY2Vj0c0=
+		</data>
+		<key>LaunchImage-700-568h@2x.png</key>
+		<data>
+		S5fB65AVphzua2sjTxJ8r2ORoH4=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		EncIOuQRYRLSa+lSI3AO/phWGRI=
+		kuevnYd6yYyE+aC4UuYjhEqGj/8=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -70,7 +78,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		TB4BFSCXt7l/QnJFJeEYld3o+lQ=
+		Sl0cfK0/c6sBPZqzl1+gjL09Skk=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -138,11 +146,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		vjpSZkB2tOwgm8G0x91fXxw2N5Q=
+		tsphNQO9uEiaYIP9EppMLGh+8zY=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		SqSnypoHVghNvOKxVc14e2GLh1Q=
+		BIzVVBEtp1/ni8GACLqv+YbKvzc=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -150,7 +158,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		/xmoBjXc8k0G2Ko+w+h8RwB52tI=
+		aOQ+U3Xn1Mx7+JPjQg+PP4czhL4=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -199,6 +207,98 @@
 		<key>www/plugins/cordova-plugin-dialogs/www/notification.js</key>
 		<data>
 		p8ZuSuooY9gm+YEuH5uNFvs5NIo=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransfer.js</key>
+		<data>
+		4op+2HXZegDPaw3xZx/RWYvABtY=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransferError.js</key>
+		<data>
+		A3CMVfKWKtcUFE5XjCDVI1OdKvI=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
+		<data>
+		+75Ob4w4lRyyeczgdFWDInlELKQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryReader.js</key>
+		<data>
+		5GZLrI+1A4rNxAW+8Qukyi5fUUQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Entry.js</key>
+		<data>
+		UU2pSK6yL/4tbpQEXu/KygbQvj0=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/File.js</key>
+		<data>
+		irEgrkTKQIjrI2vmwoK7yng+uic=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileEntry.js</key>
+		<data>
+		eIDLyQCF/3lnipLLTxZUy67qjAA=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileError.js</key>
+		<data>
+		gnVtzn+3H6fhbfZaTkQv7+PWp1Q=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileReader.js</key>
+		<data>
+		CEPeP6/N/u55RU2GzG+dKugtRYU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileSystem.js</key>
+		<data>
+		TOu46CUKL4UMC+zdbr1/8W0JbGc=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadOptions.js</key>
+		<data>
+		jv9QBwsq4j/vyPIG5pRFSmKLRXQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadResult.js</key>
+		<data>
+		tYjNpj6NMrX8OC5q3z5KN8W7m5A=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileWriter.js</key>
+		<data>
+		NvpNsd5P40mmFf4E2WPm980OWYc=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Flags.js</key>
+		<data>
+		mbovk/KNvEXiP40OQoQSdpvRp6A=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/LocalFileSystem.js</key>
+		<data>
+		OxT/HssGr2AJYUjHsyFyHMu18RM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Metadata.js</key>
+		<data>
+		Gnq2pwzaRcYg8ixte8BiuM/rglg=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ProgressEvent.js</key>
+		<data>
+		IkfNKwoaQS+OehTdor38RXiEQCM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystemPaths.js</key>
+		<data>
+		GqPib7MdOFI3rK8Q/lDcjdnBuyU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems-roots.js</key>
+		<data>
+		p7wU+SWUwYG5l9G67I6srGei9WE=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems.js</key>
+		<data>
+		6yquQivJyWMqF5eucLnOb6FZnkQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ios/FileSystem.js</key>
+		<data>
+		SRP8HOW37O10WESWElE8o98bc9w=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/requestFileSystem.js</key>
+		<data>
+		PLvvYAlaeRjM6337X4wU/fAnlNI=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js</key>
+		<data>
+		fcaq1ZNO8iXU+v/0fE9KeMdfANA=
 		</data>
 		<key>www/plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js</key>
 		<data>
@@ -338,7 +438,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		cTGkSiDZ/a0OuEYEf1Zo/4atyN8=
+		y32YF8XHpaBYGrW7UoeeqWHiC/E=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -799,21 +899,25 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon40x40@2x.png</key>
+		<data>
+		/zN5LQnOH9oeDAtw7dOpPumZOMc=
+		</data>
+		<key>AppIcon60x60@2x.png</key>
+		<data>
+		bEGIrQhpZm7bGaquAO4ert2nxRw=
+		</data>
+		<key>Assets.car</key>
+		<data>
+		rZAYDWYqwbG3xlspCgeNZES9BH8=
+		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
 		/kSUVvLLJcbtfXnxFEolil3/NRk=
 		</data>
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
-		KecLrqjij0W/51akx2oJrsDzlL0=
-		</data>
-		<key>Default-667h.png</key>
-		<data>
-		gIRHq1NQi6ouqv6S4zYOVLG0mjE=
-		</data>
-		<key>Default-736h.png</key>
-		<data>
-		omvnR6BS9zsIgu2osPrsh7KmdhE=
+		S5fB65AVphzua2sjTxJ8r2ORoH4=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -829,23 +933,27 @@
 		</data>
 		<key>Default-Portrait@2x~ipad.png</key>
 		<data>
-		Nim0AhsbkZJKWuKHPZTZfiq67lg=
+		9PRUnsf57ER5LSDOXEna6xIEwgs=
 		</data>
 		<key>Default-Portrait~ipad.png</key>
 		<data>
-		EziB8rHFrGAAmA+auXVgT39OIl0=
+		E4Hr1MwwVv47DjNSpH+vrb0JOUc=
 		</data>
 		<key>Default@2x~iphone.png</key>
 		<data>
-		L1oZ7wSLmsK4+zzF2gsgZj+LdnU=
+		sBNl/17CIBaSBC4Nw1IfxPRkbN0=
 		</data>
 		<key>Default~iphone.png</key>
 		<data>
-		+DutGpYG9jEOvvwb/wDtQrwbYCc=
+		m4X9s/Jxxaq+tzdgqNXsnzWwa2U=
+		</data>
+		<key>LaunchImage-700-568h@2x.png</key>
+		<data>
+		S5fB65AVphzua2sjTxJ8r2ORoH4=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		EncIOuQRYRLSa+lSI3AO/phWGRI=
+		kuevnYd6yYyE+aC4UuYjhEqGj/8=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -857,7 +965,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		TB4BFSCXt7l/QnJFJeEYld3o+lQ=
+		Sl0cfK0/c6sBPZqzl1+gjL09Skk=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -925,11 +1033,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		vjpSZkB2tOwgm8G0x91fXxw2N5Q=
+		tsphNQO9uEiaYIP9EppMLGh+8zY=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		SqSnypoHVghNvOKxVc14e2GLh1Q=
+		BIzVVBEtp1/ni8GACLqv+YbKvzc=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -937,7 +1045,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		/xmoBjXc8k0G2Ko+w+h8RwB52tI=
+		aOQ+U3Xn1Mx7+JPjQg+PP4czhL4=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -986,6 +1094,98 @@
 		<key>www/plugins/cordova-plugin-dialogs/www/notification.js</key>
 		<data>
 		p8ZuSuooY9gm+YEuH5uNFvs5NIo=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransfer.js</key>
+		<data>
+		4op+2HXZegDPaw3xZx/RWYvABtY=
+		</data>
+		<key>www/plugins/cordova-plugin-file-transfer/www/FileTransferError.js</key>
+		<data>
+		A3CMVfKWKtcUFE5XjCDVI1OdKvI=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
+		<data>
+		+75Ob4w4lRyyeczgdFWDInlELKQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryReader.js</key>
+		<data>
+		5GZLrI+1A4rNxAW+8Qukyi5fUUQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Entry.js</key>
+		<data>
+		UU2pSK6yL/4tbpQEXu/KygbQvj0=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/File.js</key>
+		<data>
+		irEgrkTKQIjrI2vmwoK7yng+uic=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileEntry.js</key>
+		<data>
+		eIDLyQCF/3lnipLLTxZUy67qjAA=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileError.js</key>
+		<data>
+		gnVtzn+3H6fhbfZaTkQv7+PWp1Q=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileReader.js</key>
+		<data>
+		CEPeP6/N/u55RU2GzG+dKugtRYU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileSystem.js</key>
+		<data>
+		TOu46CUKL4UMC+zdbr1/8W0JbGc=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadOptions.js</key>
+		<data>
+		jv9QBwsq4j/vyPIG5pRFSmKLRXQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadResult.js</key>
+		<data>
+		tYjNpj6NMrX8OC5q3z5KN8W7m5A=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileWriter.js</key>
+		<data>
+		NvpNsd5P40mmFf4E2WPm980OWYc=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Flags.js</key>
+		<data>
+		mbovk/KNvEXiP40OQoQSdpvRp6A=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/LocalFileSystem.js</key>
+		<data>
+		OxT/HssGr2AJYUjHsyFyHMu18RM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Metadata.js</key>
+		<data>
+		Gnq2pwzaRcYg8ixte8BiuM/rglg=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ProgressEvent.js</key>
+		<data>
+		IkfNKwoaQS+OehTdor38RXiEQCM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystemPaths.js</key>
+		<data>
+		GqPib7MdOFI3rK8Q/lDcjdnBuyU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems-roots.js</key>
+		<data>
+		p7wU+SWUwYG5l9G67I6srGei9WE=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems.js</key>
+		<data>
+		6yquQivJyWMqF5eucLnOb6FZnkQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ios/FileSystem.js</key>
+		<data>
+		SRP8HOW37O10WESWElE8o98bc9w=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/requestFileSystem.js</key>
+		<data>
+		PLvvYAlaeRjM6337X4wU/fAnlNI=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js</key>
+		<data>
+		fcaq1ZNO8iXU+v/0fE9KeMdfANA=
 		</data>
 		<key>www/plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js</key>
 		<data>
@@ -1125,7 +1325,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		cTGkSiDZ/a0OuEYEf1Zo/4atyN8=
+		y32YF8XHpaBYGrW7UoeeqWHiC/E=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>

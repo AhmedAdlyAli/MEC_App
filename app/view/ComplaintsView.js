@@ -296,98 +296,125 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-
-
-
-                                Ext.AnimationHelper.ShowLoading();
-
-
-
-                                var img1 = frm.down('#img1');
-                                var img2 = frm.down('#img2');
-                                var img3 = frm.down('#img3');
-                                var img4 = frm.down('#img4');
-
-                                //send mail
-
-                                var requestData = {
-                                    "shopName": formData.shopName,
-                                    "shopLocation": formData.shopLocation,
-                                    "complaint": formData.txtComplaint,
-                                    "email":formData.email,
-                                    "barcode":formData.txtBarCode,
-                                    "fullName":formData.fullName,
-                                    "mobile":formData.mobile,
-                                    "identityNationality":  Ext.Global.identityNationality,
-                                    "img1": img1.getSrc(),
-                                    "img2": img2.getSrc(),
-                                    "img3": img3.getSrc(),
-                                    "img4": img4.getSrc()
-                                };
-
-
-
-                                var me = this;
-
-                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaint';
-
-
-
-                                Ext.Ajax.request({
-
-                                    url : url,
-                                    method : 'POST',
-                                    jsonData :requestData,
-                                    success : function (response) {
+                                try{
 
 
 
 
-                                        try{
-
-
-                                            // upload images
+                                    Ext.AnimationHelper.ShowLoading();
 
 
 
-                                            Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
-                                            Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
-                                            Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
-                                            Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
+                                    var img1 = frm.down('#img1');
+                                    var img2 = frm.down('#img2');
+                                    var img3 = frm.down('#img3');
+                                    var img4 = frm.down('#img4');
+
+                                    //send mail
+
+                                    var requestData = {
+                                        "shopName": formData.shopName,
+                                        "shopLocation": formData.shopLocation,
+                                        "complaint": formData.txtComplaint,
+                                        "email":formData.email,
+                                        "barcode":formData.txtBarCode,
+                                        "fullName":formData.fullName,
+                                        "mobile":formData.mobile,
+                                        "identityNationality":  Ext.Global.identityNationality,
+                                        "img1": img1.getSrc(),
+                                        "img2": img2.getSrc(),
+                                        "img3": img3.getSrc(),
+                                        "img4": img4.getSrc()
+                                    };
+
+
+
+                                    var me = this;
+
+                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaint';
+
+
+
+                                    Ext.Ajax.request({
+
+                                        url : url,
+                                        method : 'POST',
+                                        jsonData :requestData,
+                                        success : function (response) {
 
 
 
 
-                                        }catch(er){}
+                                            try{
+
+
+                                                // upload images
+
+
+
+                                                Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
 
 
 
 
-                                            Ext.AnimationHelper.HideLoading();
-
-
-                                            Ext.device.Notification.show({
-                                                title: Ext.Localization.GetMessage('Message'),
-                                                buttons:[Ext.Localization.GetMessage('OK')],
-                                                message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                                callback: function(button) {
-
-                                                    //return user to home page
-
-                                                    Ext.Viewport.getActiveItem().reset();
-
-                                                }
-                                            });
+                                            }catch(er){}
 
 
 
-                                        }
+
+                                                Ext.AnimationHelper.HideLoading();
 
 
-                                    });
+                                                Ext.device.Notification.show({
+                                                    title: Ext.Localization.GetMessage('Message'),
+                                                    buttons:[Ext.Localization.GetMessage('OK')],
+                                                    message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                                    callback: function(button) {
+
+                                                        //return user to home page
+
+                                                        Ext.Viewport.getActiveItem().reset();
+
+                                                    }
+                                                });
 
 
 
+                                            }
+
+
+                                        });
+
+
+                                    }catch(er2){
+
+
+
+
+
+                                        Ext.AnimationHelper.HideLoading();
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Message'),
+                                            buttons:[Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                            callback: function(button) {
+
+                                                //return user to home page
+
+                                                Ext.Viewport.getActiveItem().reset();
+
+                                            }
+                                        });
+
+
+
+
+                                    }
 
 
 

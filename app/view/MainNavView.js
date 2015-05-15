@@ -468,12 +468,15 @@ Ext.define('MEC_App.view.MainNavView', {
         {
 
 
-        if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='SupplyServiceView3')
+            if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='SupplyServiceView3')
             {
 
+                 navigationview.callParent();
+                  Ext.Viewport.getActiveItem().reset();
 
-                Ext.Viewport.getActiveItem().pop();
-        //
+               // return false;
+
+                //alert('asd');
 
             }
 
@@ -546,7 +549,7 @@ Ext.define('MEC_App.view.MainNavView', {
         });
 
 
-        navBar.setAnimation(false);
+
 
 
         //Localization
