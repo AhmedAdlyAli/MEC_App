@@ -48,7 +48,8 @@
             "codeClass": null,
             "userConfig": {
                 "cls": [
-                    "text-panel"
+                    "text-panel",
+                    "supply-text"
                 ],
                 "height": "auto",
                 "layout|flex": 1,
@@ -70,7 +71,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<h1>للحصول على السلع التموينية او الاعلاف يرجى ملى النموذج التالي وارساله من خلال البريد الالكتروني: <a href=\"mailto:tamween@mec.gov.qa\">tamween@mec.gov.qa</a></h1>"
+                        "html": "ان كنت حاصلاً على بطاقة الحصص التموينية، يمكن الدخول على خدمة طلب شراء المواد التموينية وذلك بأدخال رقم بطاقتك الشخصيه  وكلمة المرور الخاصه بك بعد انشاء حسابك من خلال البرنامج، وسيتم إرسال رسالة نصية لتفعيل الحساب الخاص بك.<br/>في حال عدم حيازتك لبطاقة السلع التموينية وتطابق الشروط التالي بيانها على أفراد اسرتك، يرجى التكرم بملئ النموذج على الرابط التالي () وإرساله على البريد الالكتروني: <a href=\"mailto:tamween@mec.gov.qa\">tamween@mec.gov.qa</a><br/><br/>لأي استفسارات يرجى التكرم بالتواصل مع ادارة التموين عبر المعلومات التالية:<br/>هاتف رقم: <a href=\"tel:44378160\">٤٤٣٧٨١٦٠</a> / <a href=\"tel:44378162\">٤٤٣٧٨١٦٢</a><br/>بريد إلكتروني: <a href=\"mailto:tamween@mec.gov.qa\">tamween@mec.gov.qa</a><br/>او عبر مقر الادارة الكائن في منطقة المنتزه، شارع الروابي",
+                        "itemId": "GeneralInfo"
                     },
                     "name": "MyLabel32",
                     "designerId": "edf9135d-d8a8-48bb-9b9e-9073aa3c58f5"
@@ -86,7 +88,7 @@
                         "cls": [
                             "inner-title"
                         ],
-                        "html": "مع ضرورة ارفاق البيانات التالية",
+                        "html": "المستندات التأهيلية للحصول على بطاقة الحصص التموينية",
                         "itemId": "SuppliesCardTitle2"
                     },
                     "name": "MyLabel33",
@@ -100,7 +102,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>صورة من شهادة الميلاد للأبناء موضح بها الارقام الشخصية. "
+                        "html": "صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>عقد الزواج ان لم يكن هناك أبناء.<br/>في حالة عدم توفر البطاقة الشخصية للابناء فيمكن التسجيل باستخدام شهادة الميلاد موضحاً بها الأرقام الشخصية.",
+                        "itemId": "SuppliesCardDesc2"
                     },
                     "name": "MyLabel14",
                     "designerId": "07d5dd63-a5a1-43b9-9689-1995bc1cbc08"
@@ -116,37 +119,7 @@
                         "cls": [
                             "inner-title"
                         ],
-                        "html": "لطلب الاعلاف",
-                        "itemId": "SuppliesCardTitle1"
-                    },
-                    "name": "MyLabel18",
-                    "designerId": "5775cf58-a5c1-4b14-9201-d91f9b38c8b4"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "html": "صورة من البطاقة الشخصية<br/>شهادة حيازة مواشي صادرة من وزارة البيئة - ادارة الثروة الحيوانية"
-                    },
-                    "name": "MyLabel36",
-                    "designerId": "924e6c02-77a5-4859-81b3-fc31ad2a6294"
-                },
-                {
-                    "type": "Ext.Label",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "cls": [
-                            "inner-title"
-                        ],
-                        "html": "الاستثناءات",
+                        "html": "هناك متطلبات خاصة بالحالات التالية",
                         "itemId": "SuppliesCardTitle"
                     },
                     "name": "MyLabel4",
@@ -163,7 +136,7 @@
                         "cls": [
                             "text-container"
                         ],
-                        "html": "<ol><li>في حالة عدم وجود ابناء:<ul><li> صورة من عقد الزواج</li><li> صورة من البطاقة الشخصية للزوج و الزوجة</li></ul></li><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>",
+                        "html": "<ol><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>",
                         "itemId": "SuppliesCardDesc"
                     },
                     "name": "MyLabel",
@@ -180,8 +153,39 @@
                         "cls": [
                             "inner-title"
                         ],
-                        "html": "آلية صرف المواد التموينية",
+                        "html": "المستندات التأهيلية للحصول على بطاقة تموين الأعلاف",
                         "itemId": "FodderCardTitle"
+                    },
+                    "name": "MyLabel18",
+                    "designerId": "5775cf58-a5c1-4b14-9201-d91f9b38c8b4"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "صورة من البطاقة الشخصية<br/>شهادة حيازة مواشي صادرة من وزارة البيئة - ادارة الثروة الحيوانية",
+                        "itemId": "FodderCardDesc"
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "924e6c02-77a5-4859-81b3-fc31ad2a6294"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-title"
+                        ],
+                        "html": "الحصص التموينية الشهرية",
+                        "itemId": "SuppliesCardTitle1"
                     },
                     "name": "MyLabel2",
                     "designerId": "77d2b8b3-d879-4216-bcaf-c4022d29d7c0"
@@ -197,8 +201,8 @@
                         "cls": [
                             "text-container"
                         ],
-                        "html": "يصرف كيس مادةا لارز بالاضافة كيس سكر لكل ٣ افرادا لاسرة<br/>يصرف صندوق زيت وحليب لكل ٤ افراد من الاسرة<br/><br/>يتم اضافة عدد )٢( خدم لكل آسرة",
-                        "itemId": "FodderCardDesc"
+                        "html": "الرز والسكر:<br/>يصرف عدد ١ كيس رز اضافة الى عدد ١ كيس سكر لكل ٣ أفراد من الاسرة شهرياً.<br/>الزيت والحليب:<br/>يصرف عدد ١ كرتون زيت وعدد ١ كرتون حليب لكل ٤ أفراد من الاسرة شهرياً.",
+                        "itemId": "SuppliesCardDesc1"
                     },
                     "name": "MyLabel5",
                     "designerId": "fb030b34-ca93-407e-a894-81fd1f8267ea"
