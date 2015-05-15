@@ -296,19 +296,17 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-                                //    try{
-
 
 
 
                                 Ext.AnimationHelper.ShowLoading();
 
 
+
                                 var img1 = frm.down('#img1');
                                 var img2 = frm.down('#img2');
                                 var img3 = frm.down('#img3');
                                 var img4 = frm.down('#img4');
-
 
                                 //send mail
 
@@ -342,71 +340,73 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                     jsonData :requestData,
                                     success : function (response) {
 
-                                        Ext.AnimationHelper.HideLoading();
-
-
-                                        Ext.device.Notification.show({
-                                            title: Ext.Localization.GetMessage('Message'),
-                                            buttons:[Ext.Localization.GetMessage('OK')],
-                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                            callback: function(button) {
-
-                                                //return user to home page
-
-                                                Ext.Viewport.getActiveItem().reset();
-
-                                            }
-                                        });
 
 
 
-                                    }
+                                        try{
 
 
-                                });
+                                            // upload images
 
 
 
-                                //------------------------
+                                            Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
 
 
 
 
-
-                                /*
-                                }catch(er){
+                                        }catch(er){}
 
 
-                                Ext.AnimationHelper.HideLoading();
 
-                                Ext.device.Notification.show({
-                                title: Ext.Localization.GetMessage('Message'),
-                                buttons:[Ext.Localization.GetMessage('OK')],
-                                message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                callback: function(button) {
 
-                                //return user to home page
+                                            Ext.AnimationHelper.HideLoading();
 
-                                Ext.Viewport.getActiveItem().reset();
 
-                            }
-                        });
+                                            Ext.device.Notification.show({
+                                                title: Ext.Localization.GetMessage('Message'),
+                                                buttons:[Ext.Localization.GetMessage('OK')],
+                                                message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                                callback: function(button) {
+
+                                                    //return user to home page
+
+                                                    Ext.Viewport.getActiveItem().reset();
+
+                                                }
+                                            });
+
+
+
+                                        }
+
+
+                                    });
 
 
 
 
 
-                    }
-
-                    */
-
-
-                    //==========================================
 
 
 
 
-                }
+                                    //------------------------
+
+
+
+
+
+
+                                    //==========================================
+
+
+
+
+                                }
 
 
                         },

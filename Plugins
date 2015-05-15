@@ -15,6 +15,7 @@ cordova plugin add nl.x-services.plugins.actionsheet
 
 cordova plugin add org.apache.cordova.vibration
 
+cordova plugin add cordova-plugin-file-transfer
 
 
 
