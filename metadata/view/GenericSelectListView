@@ -1,0 +1,129 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "GenericSelectListView",
+        "designer|userClassName": "GenericSelectListView",
+        "fullscreen": true,
+        "itemId": "GenericSelectListView",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "SupplyServiceListing1",
+    "designerId": "ce6d1aa1-9095-469d-96b1-d14b6e46d6ec",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "service-title"
+                ],
+                "html": "خدمات التموين",
+                "id": null,
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel1",
+            "designerId": "19730a0c-9022-4cf4-a052-f650ff2b36ca"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": 261,
+                "itemCls": "item-link",
+                "itemId": "lstLinks2"
+            },
+            "name": "MyList4",
+            "designerId": "80f2eb83-b894-47d8-a1b9-40e64fae5287",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div class='nav-item' style='background:url(resources/images/{Icon})'>{Name}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "90b8ca88-461f-47ec-929d-66e2308f47e6"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinks1ItemTap1",
+                        "implHandler": [
+                            "            Ext.Global.RedirectToView(record.data);",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinks1ItemTap1",
+                    "designerId": "9d38a3e1-7f0a-4325-ba76-087105f7961d"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "var links = Ext.Localization.getLinks(this);",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : links",
+                    "});",
+                    "",
+                    "var lst = this.down('#lstLinks2');",
+                    "lst.setStore(store);",
+                    "lst.setScrollable(false);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "a9c1ee19-2079-429b-a73f-195c56463289"
+        }
+    ]
+}
