@@ -29,8 +29,6 @@
 		308D05371370CCF300D202BF /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052E1370CCF300D202BF /* icon-72.png */; };
 		308D05381370CCF300D202BF /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D052F1370CCF300D202BF /* icon.png */; };
 		308D05391370CCF300D202BF /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 308D05301370CCF300D202BF /* icon@2x.png */; };
-		30B4F30019D5E07200D9F7D8 /* Default-667h.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B4F2FD19D5E07200D9F7D8 /* Default-667h.png */; };
-		30B4F30119D5E07200D9F7D8 /* Default-736h.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B4F2FE19D5E07200D9F7D8 /* Default-736h.png */; };
 		30B4F30219D5E07200D9F7D8 /* Default-Landscape-736h.png in Resources */ = {isa = PBXBuildFile; fileRef = 30B4F2FF19D5E07200D9F7D8 /* Default-Landscape-736h.png */; };
 		30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C1856519D5FC0A00212699 /* icon-60@3x.png */; };
 		30FC414916E50CA1004E6F35 /* icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FC414816E50CA1004E6F35 /* icon-72@2x.png */; };
@@ -40,6 +38,7 @@
 		621713B41AF950E4000054AF /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99CFF17F62146B9A2FF45DA /* ImageIO.framework */; };
 		621713B51AF9512F000054AF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB8CADB85CA84DBD9D370D4B /* CoreLocation.framework */; };
 		621713C71AF95EB1000054AF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 621713C61AF95EB1000054AF /* Security.framework */; };
+		625F38931B04C60B00E3B591 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 625F38921B04C60B00E3B591 /* Images.xcassets */; };
 		6CAB8D1BFC1746EA9B04E637 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F688966764B4760A9F954F2 /* CDVDevice.m */; };
 		751C069E9D774855BAFD55E0 /* CDVBarcodeScanner.mm in Sources */ = {isa = PBXBuildFile; fileRef = 00C2FA4447AD42F898347666 /* CDVBarcodeScanner.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7E7966DE1810823500FA85AD /* icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966D41810823500FA85AD /* icon-40.png */; };
@@ -64,6 +63,10 @@
 		F3710BE2EF89439293522C87 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DC76242E183433C863B0BBA /* CDVLocation.m */; };
 		F8420CBB73D54F4693EB5B42 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F1D37292514207AD1FF769 /* CDVCamera.m */; };
 		FBCCE8525C494F328863A3ED /* UIImage+CropScaleOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9BD3BF1F6E46C9BF6CB526 /* UIImage+CropScaleOrientation.m */; };
+		3D40788509A249BD9C8BF654 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCF054248B4A6092A62209 /* CDVFile.m */; };
+		A5EB1657A23E41C1A2835C41 /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B923B8711C4433827EC32C /* CDVLocalFilesystem.m */; };
+		72411910AE5B4BB7A068D12C /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FF54DCF58646E88697FDBB /* CDVAssetLibraryFilesystem.m */; };
+		107F33736D424869BE42794A /* CDVFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C88ED26544743308EEFF67A /* CDVFileTransfer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,8 +133,6 @@
 		308D052E1370CCF300D202BF /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
 		308D052F1370CCF300D202BF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		308D05301370CCF300D202BF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		30B4F2FD19D5E07200D9F7D8 /* Default-667h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h.png"; sourceTree = "<group>"; };
-		30B4F2FE19D5E07200D9F7D8 /* Default-736h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h.png"; sourceTree = "<group>"; };
 		30B4F2FF19D5E07200D9F7D8 /* Default-Landscape-736h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape-736h.png"; sourceTree = "<group>"; };
 		30C1856519D5FC0A00212699 /* icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-60@3x.png"; sourceTree = "<group>"; };
 		30FC414816E50CA1004E6F35 /* icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72@2x.png"; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		5C6B4C49ABEC43389FA264A0 /* Polyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Polyline.h; path = plugin.google.maps/Polyline.h; sourceTree = "<group>"; };
 		605B23EE4B27494FA06E756A /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Circle.m; path = plugin.google.maps/Circle.m; sourceTree = "<group>"; };
 		621713C61AF95EB1000054AF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		625F38921B04C60B00E3B591 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MEC_App/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		674DB10160994B538FEB3E65 /* CDVLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVLocation.h; path = org.apache.cordova.geolocation/CDVLocation.h; sourceTree = "<group>"; };
 		6995CD11656B4F78B644A46F /* libicucore.dylib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		6ACEC15093194A0A9CC2C73B /* Polygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Polygon.m; path = plugin.google.maps/Polygon.m; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 		FEAF5845319C46AE96C80D8A /* GoogleMaps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleMaps.h; path = plugin.google.maps/GoogleMaps.h; sourceTree = "<group>"; };
 		FEFBF89B8E7645D8B2C8B77D /* GoogleMaps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleMaps.m; path = plugin.google.maps/GoogleMaps.m; sourceTree = "<group>"; };
 		FFB5403587924FD0936A2E54 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Circle.h; path = plugin.google.maps/Circle.h; sourceTree = "<group>"; };
+		E7DCF054248B4A6092A62209 /* CDVFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A9B923B8711C4433827EC32C /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		A8FF54DCF58646E88697FDBB /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		9A92243016574634AF3F61EB /* CDVFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		A053AE157C244EEE882CEE38 /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		557A2DDBA4554A0C90F0C8CA /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		7C88ED26544743308EEFF67A /* CDVFileTransfer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVFileTransfer.m"; path = "cordova-plugin-file-transfer/CDVFileTransfer.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		32ADADB58D61417CB7B17C0E /* CDVFileTransfer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVFileTransfer.h"; path = "cordova-plugin-file-transfer/CDVFileTransfer.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +304,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				625F38921B04C60B00E3B591 /* Images.xcassets */,
 				308D052D1370CCF300D202BF /* icons */,
 				308D05311370CCF300D202BF /* splash */,
 				8D1107310486CEB800E47090 /* MEC_App-Info.plist */,
@@ -413,6 +424,14 @@
 				FC0A98B388B14E358DC02444 /* CDVInAppBrowser.h */,
 				2F9C227B836F484EBF2509B0 /* CDVVibration.m */,
 				B13202B8A52A4FBFA52E6894 /* CDVVibration.h */,
+				E7DCF054248B4A6092A62209 /* CDVFile.m */,
+				A9B923B8711C4433827EC32C /* CDVLocalFilesystem.m */,
+				A8FF54DCF58646E88697FDBB /* CDVAssetLibraryFilesystem.m */,
+				9A92243016574634AF3F61EB /* CDVFile.h */,
+				A053AE157C244EEE882CEE38 /* CDVLocalFilesystem.h */,
+				557A2DDBA4554A0C90F0C8CA /* CDVAssetLibraryFilesystem.h */,
+				7C88ED26544743308EEFF67A /* CDVFileTransfer.m */,
+				32ADADB58D61417CB7B17C0E /* CDVFileTransfer.h */,
 			);
 			name = Plugins;
 			path = MEC_App/Plugins;
@@ -443,8 +462,6 @@
 		308D05311370CCF300D202BF /* splash */ = {
 			isa = PBXGroup;
 			children = (
-				30B4F2FD19D5E07200D9F7D8 /* Default-667h.png */,
-				30B4F2FE19D5E07200D9F7D8 /* Default-736h.png */,
 				30B4F2FF19D5E07200D9F7D8 /* Default-Landscape-736h.png */,
 				D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */,
 				3088BBB7154F3926009F9C59 /* Default-Landscape@2x~ipad.png */,
@@ -497,7 +514,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = D2DHSYGQ7A;
+						DevelopmentTeam = J98KS528GJ;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -553,7 +570,6 @@
 				7E7966E41810823500FA85AD /* icon-76.png in Resources */,
 				7E7966DF1810823500FA85AD /* icon-40@2x.png in Resources */,
 				308D05371370CCF300D202BF /* icon-72.png in Resources */,
-				30B4F30119D5E07200D9F7D8 /* Default-736h.png in Resources */,
 				308D05381370CCF300D202BF /* icon.png in Resources */,
 				308D05391370CCF300D202BF /* icon@2x.png in Resources */,
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
@@ -565,12 +581,12 @@
 				3088BBBF154F3926009F9C59 /* Default-Portrait@2x~ipad.png in Resources */,
 				7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */,
 				3088BBC0154F3926009F9C59 /* Default-Portrait~ipad.png in Resources */,
-				30B4F30019D5E07200D9F7D8 /* Default-667h.png in Resources */,
 				7E7966DE1810823500FA85AD /* icon-40.png in Resources */,
 				3088BBC1154F3926009F9C59 /* Default@2x~iphone.png in Resources */,
 				7E7966E21810823500FA85AD /* icon-60.png in Resources */,
 				3088BBC2154F3926009F9C59 /* Default~iphone.png in Resources */,
 				D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */,
+				625F38931B04C60B00E3B591 /* Images.xcassets in Resources */,
 				30B4F30219D5E07200D9F7D8 /* Default-Landscape-736h.png in Resources */,
 				30C1856619D5FC0A00212699 /* icon-60@3x.png in Resources */,
 				7E7966E11810823500FA85AD /* icon-50@2x.png in Resources */,
@@ -624,6 +640,10 @@
 				F3710BE2EF89439293522C87 /* CDVLocation.m in Sources */,
 				F006496C78934EE393EA05DE /* CDVInAppBrowser.m in Sources */,
 				0FF8E15F130A43CF906E5D3B /* CDVVibration.m in Sources */,
+				3D40788509A249BD9C8BF654 /* CDVFile.m in Sources */,
+				A5EB1657A23E41C1A2835C41 /* CDVLocalFilesystem.m in Sources */,
+				72411910AE5B4BB7A068D12C /* CDVAssetLibraryFilesystem.m in Sources */,
+				107F33736D424869BE42794A /* CDVFileTransfer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,9 +663,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -672,7 +694,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
+				PROVISIONING_PROFILE = "79951e3e-77ae-4a1a-8e7f-4aab85bb762e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -682,9 +704,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -709,7 +733,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = MEC_App;
-				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
+				PROVISIONING_PROFILE = "79951e3e-77ae-4a1a-8e7f-4aab85bb762e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

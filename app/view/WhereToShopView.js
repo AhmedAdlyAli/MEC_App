@@ -20,16 +20,15 @@ Ext.define('MEC_App.view.WhereToShopView', {
     requires: [
         'Ext.Label',
         'Ext.Panel',
-        'Ext.dataview.List',
         'Ext.field.Hidden',
+        'Ext.dataview.List',
         'Ext.XTemplate'
     ],
 
     config: {
-        id: 'WhereToShopView',
+        fullscreen: true,
         itemId: 'WhereToShopView',
         layout: 'fit',
-        scrollable: false,
         cls: [
             'complaint-view',
             'rtl'
@@ -39,6 +38,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
+                hidden: false,
                 html: 'أين تتسوق',
                 itemId: 'lblTitle'
             },
@@ -54,37 +54,22 @@ Ext.define('MEC_App.view.WhereToShopView', {
                     {
                         fn: function(component, eOpts) {
 
-                            // Create Native drop down
                             var me = this;
                             me.element.on('tap', function(){
 
-                                var data = me.up('WhereToShopView').getData();
+                                var data = {TitleKey:'SelectProduct', ReturnView:'WhereToShopView', links: me.up('WhereToShopView').links, KeyField:'Id',ValueField:'ProductName'};
 
+                                Ext.Viewport.getActiveItem().push({
+                                    xtype: 'GenericSelectView',
+                                    title: Ext.Global.GetFixedTitle(),
+                                    data:data
 
-                                var items = [];
-
-                                Ext.each(data, function(item){
-                                    items.push({ text: item.ProductName, value: item.Id});
                                 });
 
 
-                                var btn = this;
-                                var config = {
-                                    title:  Ext.Localization.GetMessage('Product'),
-                                    items: items,
-                                    //selectedValue: "2",
-                                    doneButtonLabel: Ext.Localization.GetMessage('Choose'),
-                                    cancelButtonLabel: Ext.Localization.GetMessage('Cancel')
-                                };
 
 
-                                var hiddenProductID = Ext.ComponentQuery.query("#hiddenProductID")[0];
-
-                                Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);
-
-
-                            }, me);
-
+                            });
                         },
                         event: 'initialize'
                     }
@@ -94,6 +79,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 xtype: 'panel',
                 cls: 'grid-header',
                 docked: 'top',
+                hidden: false,
                 layout: 'hbox',
                 items: [
                     {
@@ -120,9 +106,12 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 ]
             },
             {
+                xtype: 'hiddenfield',
+                itemId: 'hiddenProductID'
+            },
+            {
                 xtype: 'list',
-                height: '100%',
-                itemId: 'lstPrices',
+                itemId: 'lstPrices1234',
                 itemCls: 'grid-row',
                 itemTpl: [
                     '',
@@ -135,23 +124,54 @@ Ext.define('MEC_App.view.WhereToShopView', {
                     '    '
                 ],
                 striped: true,
-                items: [
-                    {
-                        xtype: 'hiddenfield',
-                        itemId: 'hiddenProductID'
-                    }
-                ]
+                variableHeights: true
+            }
+        ],
+        listeners: [
+            {
+                fn: 'onHiddenProductIDChange',
+                event: 'change',
+                delegate: '#hiddenProductID'
             }
         ]
     },
 
-    initialize: function() {
+    onHiddenProductIDChange: function(textfield, newValue, oldValue, eOpts) {
 
-        this.callParent();
+        var view = textfield.up('WhereToShopView');
 
-        Ext.Localization.LoadLocalization();
+        Ext.AnimationHelper.ShowLoading();
 
-        Ext.Localization.LocalizeView(this);
+        Ext.Ajax.request({
+
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+newValue+'?culture='+Ext.Global.LanguageFlag,
+            method : 'Get',
+            success : function (response) {
+                Ext.AnimationHelper.HideLoading();
+                var json = Ext.util.JSON.decode(response.responseText);
+
+        if(json.ProductPrices.length>0)
+                {
+
+                var store = new Ext.data.Store({
+                    data : json.ProductPrices
+                });
+
+
+                var lstPrices = view.down('#lstPrices1234');
+                lstPrices.setStore(store);
+
+                }else{
+
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
+                                message: Ext.Localization.GetMessage('NoData')
+                            });
+            }
+            }
+        });
 
     }
 

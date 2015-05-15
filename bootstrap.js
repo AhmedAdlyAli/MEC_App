@@ -730,6 +730,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.EconomicIndicatorsView": [],
   "MEC_App.view.EconomyNewsView": [],
   "MEC_App.view.FeedbackFormView": [],
+  "MEC_App.view.GenericSelectListView": [],
   "MEC_App.view.GoodPriceListView": [],
   "MEC_App.view.GoodsPricesView": [],
   "MEC_App.view.InquiriesView": [],
@@ -1635,6 +1636,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.FeedbackFormView": [
     "widget.FeedbackFormView"
+  ],
+  "MEC_App.view.GenericSelectListView": [
+    "widget.GenericSelectView"
   ],
   "MEC_App.view.GoodPriceListView": [
     "widget.GoodPriceListView"

@@ -199,6 +199,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
+                                hidden: false,
                                 id: 'img1',
                                 itemId: 'img1',
                                 src: 'resources/images/attach-default.png'
@@ -206,6 +207,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                             {
                                 xtype: 'image',
                                 flex: 1,
+                                hidden: false,
                                 id: 'img2',
                                 itemId: 'img2',
                                 src: 'resources/images/attach-default.png'
@@ -294,80 +296,72 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-                                try{
+
+
+
+                                Ext.AnimationHelper.ShowLoading();
+
+
+
+                                var img1 = frm.down('#img1');
+                                var img2 = frm.down('#img2');
+                                var img3 = frm.down('#img3');
+                                var img4 = frm.down('#img4');
+
+                                //send mail
+
+                                var requestData = {
+                                    "shopName": formData.shopName,
+                                    "shopLocation": formData.shopLocation,
+                                    "complaint": formData.txtComplaint,
+                                    "email":formData.email,
+                                    "barcode":formData.txtBarCode,
+                                    "fullName":formData.fullName,
+                                    "mobile":formData.mobile,
+                                    "identityNationality":  Ext.Global.identityNationality,
+                                    "img1": img1.getSrc(),
+                                    "img2": img2.getSrc(),
+                                    "img3": img3.getSrc(),
+                                    "img4": img4.getSrc()
+                                };
+
+
+
+                                var me = this;
+
+                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaint';
+
+
+
+                                Ext.Ajax.request({
+
+                                    url : url,
+                                    method : 'POST',
+                                    jsonData :requestData,
+                                    success : function (response) {
 
 
 
 
-                                    Ext.AnimationHelper.ShowLoading();
+                                        try{
+
+
+                                            // upload images
 
 
 
-                                    var strImages='';
-
-                                    //upload
-
-                                    var img1 = frm.down('img1');
-                                    if(img1.getSrc()&&img1.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img1);
-                                        strImages+=img1.getSrc()+'-';
-                                    }
-
-
-                                    var img2 = frm.down('img2');
-                                    if(img2.getSrc()&&img2.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img2);
-                                        strImages+=img2.getSrc()+'-';
-
-                                    }
-                                    var img3 = frm.down('img3');
-                                    if(img3.getSrc()&&img3.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img3);
-                                        strImages+=img1.getSrc()+'-';
-                                    }
-
-                                    var img4 = frm.down('img4');
-                                    if(img4.getSrc()&&img4.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img4);
-                                        strImages+=img1.getSrc()+'-';
-
-                                    }
+                                            Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
+                                            Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
 
 
 
-                                    //send mail
 
-                                    var requestData = {
-                                        "shopName": formData.shopName,
-                                        "shopLocation": formData.shopLocation,
-                                        "complaint": formData.txtComplaint,
-                                        "email":formData.email,
-                                        "barcode":formData.txtBarCode,
-                                        "fullName":formData.fullName,
-                                        "mobile":formData.mobile,
-                                        "identityNationality":  Ext.Global.identityNationality,
-                                        "strImages": strImages
-
-                                    };
+                                        }catch(er){}
 
 
 
-                                    var me = this;
-
-                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaintsEmail';
-
-
-
-                                    Ext.Ajax.request({
-
-                                        url : url,
-                                        method : 'POST',
-                                        jsonData :requestData,
-                                        success : function (response) {
 
                                             Ext.AnimationHelper.HideLoading();
 
@@ -394,40 +388,25 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-                                }
-                                catch(er){
 
 
-                                    Ext.AnimationHelper.HideLoading();
 
-                                    Ext.device.Notification.show({
-                                        title: Ext.Localization.GetMessage('Message'),
-                                        buttons:[Ext.Localization.GetMessage('OK')],
-                                        message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                        callback: function(button) {
 
-                                            //return user to home page
 
-                                            Ext.Viewport.getActiveItem().reset();
 
-                                        }
-                                    });
+                                    //------------------------
 
+
+
+
+
+
+                                    //==========================================
 
 
 
 
                                 }
-
-
-
-
-                                //==========================================
-
-
-
-
-                            }
 
 
                         },

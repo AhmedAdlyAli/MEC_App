@@ -1,0 +1,147 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "GenericSelectView",
+        "designer|userClassName": "GenericSelectListView",
+        "fullscreen": true,
+        "itemId": "GenericSelectView",
+        "layout": "vbox",
+        "scrollable": null
+    },
+    "name": "SupplyServiceListing1",
+    "designerId": "ce6d1aa1-9095-469d-96b1-d14b6e46d6ec",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "service-title"
+                ],
+                "html": "Test",
+                "id": null,
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel1",
+            "designerId": "19730a0c-9022-4cf4-a052-f650ff2b36ca"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoDestroy": false,
+                "cls": [
+                    "CompanyList"
+                ],
+                "height": null,
+                "itemCls": "item-link",
+                "itemId": "lstLinks",
+                "layout|flex": 1
+            },
+            "name": "MyList4",
+            "designerId": "80f2eb83-b894-47d8-a1b9-40e64fae5287",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinks1ItemTap1",
+                        "implHandler": [
+                            "var viewData = dataview.up('GenericSelectView').getData();",
+                            "",
+                            "var data ={Id: record.data[viewData.KeyField], Title: record.data[viewData.ValueField]};",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "    Ext.Viewport.getActiveItem().push({",
+                            "                xtype: viewData.ReturnView,",
+                            "                title: Ext.Global.GetFixedTitle(),",
+                            "                data:data",
+                            "            });",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinks1ItemTap1",
+                    "designerId": "9d38a3e1-7f0a-4325-ba76-087105f7961d"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinksItemTap",
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinksItemTap",
+                    "designerId": "0175079a-bc14-4d10-b32c-5b1943f6b905"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "",
+                    "var view = this;",
+                    "Ext.Localization.LocalizeView(view);",
+                    "",
+                    "var viewData = view.getData();",
+                    "",
+                    "view.down('#lblTitle').setHtml(Ext.Localization.GetMessage(viewData.TitleKey));",
+                    "",
+                    "var store = new Ext.data.Store({",
+                    "    data : viewData.links",
+                    "});",
+                    "",
+                    "//console.log(viewData.links);",
+                    "",
+                    "var lst = this.down('#lstLinks');",
+                    "lst.setItemTpl(new Ext.XTemplate( '<div class=\\'nav-item\\' style=\\'background:url(resources/images/{Icon})\\'>{'+viewData.ValueField+'}</div>'));",
+                    "",
+                    "lst.setStore(store);",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "this.callParent();",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "a9c1ee19-2079-429b-a73f-195c56463289"
+        }
+    ]
+}

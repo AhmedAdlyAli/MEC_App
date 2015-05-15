@@ -12,10 +12,12 @@
         ],
         "designer|userAlias": "WhereToShopView",
         "designer|userClassName": "WhereToShopView",
-        "id": "WhereToShopView",
+        "fullscreen": true,
+        "height": null,
+        "id": null,
         "itemId": "WhereToShopView",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "DailyPricesView3",
     "designerId": "61ac0178-7f48-4f70-8280-c365ccca1374",
@@ -32,6 +34,7 @@
                     "inners-title"
                 ],
                 "docked": "top",
+                "hidden": false,
                 "html": "أين تتسوق",
                 "itemId": "lblTitle"
             },
@@ -67,37 +70,22 @@
                         "fn": "onTxtProductNameInitialize",
                         "implHandler": [
                             "",
-                            "// Create Native drop down",
                             "var me = this;",
                             "me.element.on('tap', function(){",
                             "",
-                            "    var data = me.up('WhereToShopView').getData();",
+                            "    var data = {TitleKey:'SelectProduct', ReturnView:'WhereToShopView', links: me.up('WhereToShopView').links, KeyField:'Id',ValueField:'ProductName'};",
+                            "",
+                            "    Ext.Viewport.getActiveItem().push({",
+                            "                xtype: 'GenericSelectView',",
+                            "                title: Ext.Global.GetFixedTitle(),",
+                            "                data:data",
+                            "",
+                            "            });",
                             "",
                             "",
-                            "    var items = [];",
-                            "",
-                            "    Ext.each(data, function(item){",
-                            "        items.push({ text: item.ProductName, value: item.Id});",
-                            "    });",
                             "",
                             "",
-                            "    var btn = this;",
-                            "    var config = {",
-                            "        title:  Ext.Localization.GetMessage('Product'),",
-                            "        items: items,",
-                            "        //selectedValue: \"2\",",
-                            "        doneButtonLabel: Ext.Localization.GetMessage('Choose'),",
-                            "        cancelButtonLabel: Ext.Localization.GetMessage('Cancel')",
-                            "    };",
-                            "",
-                            "",
-                            "    var hiddenProductID = Ext.ComponentQuery.query(\"#hiddenProductID\")[0];",
-                            "",
-                            "    Ext.DeviceController.ShowNativePickerWithValue(me, hiddenProductID,config);",
-                            "",
-                            "",
-                            "}, me);",
-                            ""
+                            "});"
                         ],
                         "name": "initialize"
                     },
@@ -118,6 +106,7 @@
                     "grid-header"
                 ],
                 "docked": "top",
+                "hidden": false,
                 "layout": "hbox"
             },
             "name": "MyPanel",
@@ -183,6 +172,73 @@
             ]
         },
         {
+            "type": "Ext.field.Hidden",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "hiddenProductID"
+            },
+            "name": "MyHiddenField",
+            "designerId": "658fc1b7-f5c3-4bb9-9672-61f35618df36",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onHiddenProductIDChange",
+                        "implHandler": [
+                            "",
+                            "var view = textfield.up('WhereToShopView');",
+                            "",
+                            "Ext.AnimationHelper.ShowLoading();",
+                            "",
+                            "Ext.Ajax.request({",
+                            "",
+                            "    url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetProduct/'+newValue+'?culture='+Ext.Global.LanguageFlag,",
+                            "    method : 'Get',",
+                            "    success : function (response) {",
+                            "        Ext.AnimationHelper.HideLoading();",
+                            "        var json = Ext.util.JSON.decode(response.responseText);",
+                            "",
+                            "if(json.ProductPrices.length>0)",
+                            "        {",
+                            "",
+                            "        var store = new Ext.data.Store({",
+                            "            data : json.ProductPrices",
+                            "        });",
+                            "",
+                            "",
+                            "        var lstPrices = view.down('#lstPrices1234');",
+                            "        lstPrices.setStore(store);",
+                            "",
+                            "        }else{",
+                            "",
+                            "",
+                            "                    Ext.device.Notification.show({",
+                            "                        title: Ext.Localization.GetMessage('Error'),",
+                            "                        buttons:[Ext.Localization.GetMessage('OK')],",
+                            "                        message: Ext.Localization.GetMessage('NoData')",
+                            "                    });",
+                            "    }",
+                            "    }",
+                            "});",
+                            ""
+                        ],
+                        "name": "change"
+                    },
+                    "name": "onHiddenProductIDChange",
+                    "designerId": "63037f90-aa37-43fe-bcaa-c6dd415b05a9"
+                }
+            ]
+        },
+        {
             "type": "Ext.dataview.List",
             "reference": {
                 "name": "items",
@@ -191,29 +247,17 @@
             "codeClass": null,
             "userConfig": {
                 "docked": null,
-                "height": "100%",
+                "height": null,
                 "id": null,
                 "itemCls": "grid-row",
-                "itemId": "lstPrices",
+                "itemId": "lstPrices1234",
                 "store": null,
-                "striped": true
+                "striped": true,
+                "variableHeights": true
             },
             "name": "MyList1",
             "designerId": "657e92a7-9d2b-439c-bdbf-7d6959f67b8f",
             "cn": [
-                {
-                    "type": "Ext.field.Hidden",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "itemId": "hiddenProductID"
-                    },
-                    "name": "MyHiddenField",
-                    "designerId": "658fc1b7-f5c3-4bb9-9672-61f35618df36"
-                },
                 {
                     "type": "Ext.XTemplate",
                     "reference": {
@@ -238,28 +282,6 @@
                     "designerId": "aadbe0a2-36a6-4161-9f15-ef189666185f"
                 }
             ]
-        },
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "initialize",
-                "implHandler": [
-                    "",
-                    "this.callParent();",
-                    "",
-                    "Ext.Localization.LoadLocalization();",
-                    "",
-                    "Ext.Localization.LocalizeView(this);",
-                    ""
-                ]
-            },
-            "name": "initialize",
-            "designerId": "435a6196-1714-4058-b893-abaa438fcc3a"
         }
     ]
 }

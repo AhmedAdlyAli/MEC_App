@@ -104,14 +104,12 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
-                                id: 'img5',
                                 itemId: 'img1',
                                 src: 'resources/images/attach-default.png'
                             },
                             {
                                 xtype: 'image',
                                 flex: 1,
-                                id: 'img6',
                                 itemId: 'img2',
                                 src: 'resources/images/attach-default.png'
                             }
@@ -125,7 +123,6 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
-                                id: 'img7',
                                 itemId: 'img3',
                                 src: 'resources/images/attach-default.png'
                             },
@@ -133,7 +130,6 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
-                                id: 'img8',
                                 itemId: 'img4',
                                 width: 200,
                                 src: 'resources/images/attach-default.png'
@@ -197,39 +193,15 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
 
-                                    var strImages='';
-
-                                    //upload
-
-                                    var img1 = frm.down('img1');
-                                    if(img1.getSrc()&&img1.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img1);
-                                        strImages+=img1.getSrc()+'-';
-                                    }
 
 
-                                    var img2 = frm.down('img2');
-                                    if(img2.getSrc()&&img2.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img2);
-                                        strImages+=img2.getSrc()+'-';
+                                    var img1 = frm.down('#img1');
+                                    var img2 = frm.down('#img2');
+                                    var img3 = frm.down('#img3');
+                                    var img4 = frm.down('#img4');
 
-                                    }
-                                    var img3 = frm.down('img3');
-                                    if(img3.getSrc()&&img3.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img3);
-                                        strImages+=img1.getSrc()+'-';
-                                    }
 
-                                    var img4 = frm.down('img4');
-                                    if(img4.getSrc()&&img4.getSrc()!=='')
-                                    {
-                                        Ext.DeviceController.UploadImage(img4);
-                                        strImages+=img1.getSrc()+'-';
 
-                                    }
 
 
                                     var requestData = {
@@ -238,8 +210,11 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                         "fullName":formData.fullName,
                                         "email":formData.email,
                                         "mobile":formData.mobile,
-                                        "comment": formData.comment
-
+                                        "comment": formData.comment,
+                                        "img1": img1.getSrc(),
+                                        "img2": img2.getSrc(),
+                                        "img3": img3.getSrc(),
+                                        "img4": img4.getSrc()
                                     };
 
 
@@ -249,7 +224,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
                                     var me = this;
 
-                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedbackEmail';
+                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedback';
 
 
                                     Ext.AnimationHelper.ShowLoading();
@@ -261,54 +236,81 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                         jsonData :requestData,
                                         success : function (response) {
 
-                                            Ext.AnimationHelper.HideLoading();
+
+                                            try{
 
 
-                                            Ext.device.Notification.show({
-                                                title: Ext.Localization.GetMessage('Message'),
-                                                buttons:[Ext.Localization.GetMessage('OK')],
-                                                message: Ext.Localization.GetMessage('FeedbackConfirmation'),
-                                                callback: function(button) {
 
-                                                    //return user to home page
+                                                // upload images
 
-                                                    Ext.Viewport.getActiveItem().reset();
 
-                                                }
-                                            });
 
-                                        }
+                                                Ext.DeviceController.UploadImage('img5',img1.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img6',img2.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img7',img3.getSrc(),formData.mobile);
+                                                Ext.DeviceController.UploadImage('img8',img4.getSrc(),formData.mobile);
 
-                                    });
+
+
+
+                                            }catch(er){ }
+
+
+
+
+
+
+
+
+
+                                                Ext.AnimationHelper.HideLoading();
+
+
+                                                Ext.device.Notification.show({
+                                                    title: Ext.Localization.GetMessage('Message'),
+                                                    buttons:[Ext.Localization.GetMessage('OK')],
+                                                    message: Ext.Localization.GetMessage('FeedbackConfirmation'),
+                                                    callback: function(button) {
+
+                                                        //return user to home page
+
+                                                        Ext.Viewport.getActiveItem().reset();
+
+                                                    }
+                                                });
+
+                                            }
+
+                                        });
+
+
+                                    }
+                                    catch(er){
+
+
+                                        Ext.AnimationHelper.HideLoading();
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Message'),
+                                            buttons:[Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('FeedbackConfirmation'),
+                                            callback: function(button) {
+
+                                                //return user to home page
+
+                                                Ext.Viewport.getActiveItem().reset();
+
+                                            }
+                                        });
+
+
+
+
+
+                                    }
 
 
                                 }
-                                catch(er){
-
-
-                                    Ext.AnimationHelper.HideLoading();
-
-                                    Ext.device.Notification.show({
-                                        title: Ext.Localization.GetMessage('Message'),
-                                        buttons:[Ext.Localization.GetMessage('OK')],
-                                        message: Ext.Localization.GetMessage('FeedbackConfirmation'),
-                                        callback: function(button) {
-
-                                            //return user to home page
-
-                                            Ext.Viewport.getActiveItem().reset();
-
-                                        }
-                                    });
-
-
-
-
-
-                                }
-
-
-                            }
 
 
                         },
@@ -324,22 +326,22 @@ Ext.define('MEC_App.view.FeedbackFormView', {
             {
                 fn: 'onImg1Tap',
                 event: 'tap',
-                delegate: '#img5'
+                delegate: '#img1'
             },
             {
                 fn: 'onImg2Tap',
                 event: 'tap',
-                delegate: '#img6'
+                delegate: '#img2'
             },
             {
                 fn: 'onImg3Tap',
                 event: 'tap',
-                delegate: '#img7'
+                delegate: '#img3'
             },
             {
                 fn: 'onImg4Tap',
                 event: 'tap',
-                delegate: '#img8'
+                delegate: '#img4'
             }
         ]
     },

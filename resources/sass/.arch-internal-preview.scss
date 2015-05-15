@@ -2100,6 +2100,9 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     }
 
+
+
+
     .mal-text {
         padding: 1.5em 1em 0 0;
         font-size: 70%;
@@ -2109,10 +2112,25 @@ background: url(../images/toplogo.png) no-repeat center top;
     .mal-logo {
         margin: 0 0 0.5em 0.5em;
     }
-    
+
     .acc-group {
         direction: ltr;
     }
 
 
+}   
+
+
+
+
+
+
+.upload{
+
+    background: transparent url(http://localhost:1841/resources/images/attach-default.png);
+    with:120px;
+    heigh:120px;border:0
+
+
 }
+

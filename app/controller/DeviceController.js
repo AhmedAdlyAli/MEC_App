@@ -54,9 +54,15 @@ Ext.define('MEC_App.controller.DeviceController', {
                     success: function(url) {
                         //show the newly captured image in a full screen Ext.Img component:
                         image.setSrc(url);
+
+
+
                     }
                 });
             }
+
+
+
 
         });
 
@@ -141,24 +147,39 @@ Ext.define('MEC_App.controller.DeviceController', {
 
     },
 
-    UploadImage: function(img) {
-            var jsonFile= {
-                       file : img,
-                filename : img.getSrc()? img.getSrc() : img.getItemId()
-                  };
+    UploadImage: function(key, imgUrl, phone) {
 
-                  Ext.Ajax.request({
-                       url: Ext.Global.GetConfig('CMSWSUrlEmails') +'/UploadImage',
-                       methode: 'POST',
-                       jsonData : jsonFile,
-                       success: function(response, opts) {
-                            //var obj = Ext.decode(response.responseText);
-                            //console.dir(obj);
-                       },
-                       failure: function(response, opts) {
-                            //console.log('server-side failure with status code ' + response.status);
-                       }
-                  });
+        var win = function (r) {
+            console.log("Code = " + r.responseCode);
+            console.log("Response = " + r.response);
+            console.log("Sent = " + r.bytesSent);
+        };
+
+        var fail = function (error) {
+            //alert("An error has occurred: Code = " + error.code);
+            console.log("upload error source " + error.source);
+            console.log("upload error target " + error.target);
+        };
+
+
+
+
+
+
+        var options = new FileUploadOptions();
+        options.fileKey = key;
+        options.fileName = imgUrl.substr(fileURL.lastIndexOf('/') + 1);
+        options.mimeType = "image/jpeg";
+
+        var params = {};
+        params.Phone = phone;
+
+        options.params = params;
+
+        var ft = new FileTransfer();
+        ft.upload(fileURL,Ext.Global.GetConfig('CMSWSUrlEmails')+'/Upload'  , win, fail, options);
+
+
 
     }
 
