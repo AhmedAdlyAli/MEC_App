@@ -70,10 +70,83 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "html": "<h1>للحصول على السلع التموينية او الاعلاف يرجى ملى النموذج التالي وارساله من خلال البريد الالكتروني: <a href=\"mailto:tamween@mec.gov.qa\">tamween@mec.gov.qa</a></h1>"
+                    },
+                    "name": "MyLabel32",
+                    "designerId": "edf9135d-d8a8-48bb-9b9e-9073aa3c58f5"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
                         "cls": [
                             "inner-title"
                         ],
-                        "html": "البطاقة التموينية",
+                        "html": "مع ضرورة ارفاق البيانات التالية",
+                        "itemId": "SuppliesCardTitle2"
+                    },
+                    "name": "MyLabel33",
+                    "designerId": "3cea2c8c-f624-4943-8278-3773bd2b1eba"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>صورة من شهادة الميلاد للأبناء موضح بها الارقام الشخصية. "
+                    },
+                    "name": "MyLabel14",
+                    "designerId": "07d5dd63-a5a1-43b9-9689-1995bc1cbc08"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-title"
+                        ],
+                        "html": "لطلب الاعلاف",
+                        "itemId": "SuppliesCardTitle1"
+                    },
+                    "name": "MyLabel18",
+                    "designerId": "5775cf58-a5c1-4b14-9201-d91f9b38c8b4"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "صورة من البطاقة الشخصية<br/>شهادة حيازة مواشي صادرة من وزارة البيئة - ادارة الثروة الحيوانية"
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "924e6c02-77a5-4859-81b3-fc31ad2a6294"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "inner-title"
+                        ],
+                        "html": "الاستثناءات",
                         "itemId": "SuppliesCardTitle"
                     },
                     "name": "MyLabel4",
@@ -90,7 +163,7 @@
                         "cls": [
                             "text-container"
                         ],
-                        "html": "صورة من البطاقة الشخصية للزوج والزوجة وأفراد الاسرة. <br/>صورة من شهادة الميلاد للأبناء موضح بها الارقام الشخصية. <ol><li>في حالة عدم وجود ابناء:<ul><li> صورة من عقد الزواج</li><li> صورة من البطاقة الشخصية للزوج و الزوجة</li></ul></li><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>",
+                        "html": "<ol><li>في حالة عدم وجود ابناء:<ul><li> صورة من عقد الزواج</li><li> صورة من البطاقة الشخصية للزوج و الزوجة</li></ul></li><li>في حالة وفاة رب الاسرة :<ul><li>صورة من شهادة الوفاة</li><li>صورة من البطاقة الشخصية او شهادة الميلاد للأبناء</li></ul></li><li>في حالة الطلاق<ul><li>صورة من شهادة الطلاق</li><li>صورة من البطاقة الشخصية</li><li>صورة من شهادة الميلاد للأبناء</li><li>صورة من حضانة على الابناء</li></ul></li></ol>",
                         "itemId": "SuppliesCardDesc"
                     },
                     "name": "MyLabel",
@@ -107,7 +180,7 @@
                         "cls": [
                             "inner-title"
                         ],
-                        "html": "بطاقة الاعلاف",
+                        "html": "آلية صرف المواد التموينية",
                         "itemId": "FodderCardTitle"
                     },
                     "name": "MyLabel2",
@@ -124,7 +197,7 @@
                         "cls": [
                             "text-container"
                         ],
-                        "html": "صورة من البطاقة الشخصية<br />شهادة حيازة مواشي صادرة من وزارة البيئة ادارة الثروة الحيوانية",
+                        "html": "يصرف كيس مادةا لارز بالاضافة كيس سكر لكل ٣ افرادا لاسرة<br/>يصرف صندوق زيت وحليب لكل ٤ افراد من الاسرة<br/><br/>يتم اضافة عدد )٢( خدم لكل آسرة",
                         "itemId": "FodderCardDesc"
                     },
                     "name": "MyLabel5",
