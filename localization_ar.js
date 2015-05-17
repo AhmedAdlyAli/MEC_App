@@ -15,7 +15,7 @@ var localeAr =
 		{
 			itemId:"ConsumerServiceView",
 			items: [
-				{Name:"ابلاغ عن شكوى", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
+				{Name:"ابلاغ عن شكوى", Url:"ComplaintsView", RequireLogin:true, Icon:"ico-complaints.png"},
 				{Name:"خدمات التموين", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
@@ -87,9 +87,9 @@ var localeAr =
 		{
 			itemId:"ConsumerIndicatorsListing",
 			items: [
-				{Name:'النشرة اليومية',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
-             	{Name:'اين تتسوق',Url:'WhereToShopView',Icon:'ico-where.png'},
-             	{Name:'التقرير الاسبوعي للخضر والفاكهة',Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
+				{Name:'النشرة اليومية',Url:'DailyReportView',OpenExternalWindow:false,Icon:'ico-daily-prices.png'},
+             	{Name:'اين تتسوق',Url:'WhereToShopView',OpenExternalWindow:false,Icon:'ico-where.png'},
+             	{Name:'التقرير الاسبوعي للخضر والفاكهة',OpenExternalWindow:true,Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
 			]
 		},
 
@@ -194,7 +194,7 @@ var localeAr =
 				Personal: 'شخصي',
 				Email: 'البريد الالكتروني',
 				ActiveRequestError: 'يوجد طلب قيد الاجراء من نفس النوع لهذه المنشأة',
-				Error: 'خطأ',
+				Error: 'تنبيه',
 				OK: 'موافق',
 				ErrSearchKeyword: 'يجب إدخال كلمة البحث',
 				GenericError: 'عفوا, حدث خطأ عام, يرجى المحاولة مرة أخرى',

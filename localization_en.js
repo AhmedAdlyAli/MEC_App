@@ -86,9 +86,9 @@ var localeEn =
 		{
 			itemId:"ConsumerIndicatorsListing",
 			items: [
-				{Name:'Daily Bulletin',Url:'DailyReportView',Icon:'ico-daily-prices.png'},
-             	{Name:'Where to Shop',Url:'WhereToShopView',Icon:'ico-where.png'},
-             	{Name:'Weekly Report for Fruit & Vegetable',Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
+				{Name:'Daily Bulletin',Url:'DailyReportView',OpenExternalWindow:false,Icon:'ico-daily-prices.png'},
+             	{Name:'Where to Shop',Url:'WhereToShopView',OpenExternalWindow:false,Icon:'ico-where.png'},
+             	{Name:'Weekly Report for Fruit & Vegetable',OpenExternalWindow:true,Url:'http://www.mec.gov.qa/Arabic/Documents/التقرير%20الاسبوعى%20لأسعار%20الخضار%20و%20الفاكهه%20و%20الاسماك%20%20بالسوق%20المركزي%20حتى%20ي.pdf',Icon:'ico-report.png'}
 			]
 		},
 
@@ -898,9 +898,9 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"How to Request Supply Service"},
-				{itemId:"GeneralInfo", xtype: "label",value:"If you possess a food supply card, you can login and request the food supply service by entering your Qatari ID number and the password that you have selected when creating the account through the app, and you will then receive a text message to activate your account.<br/><ol>If you do not possess a food supply card, please go to the following link ***add link here*** and complete the form, attach it to an email and send to the following address: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>If you have any queries, please contact the supply department by telephone on: <a href='tel:44378160'>4437 8160</a> / <a href='tel:44378162'>4437 8162</a>, or by email: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>Alternatively, you can visit our offices, located in Al Muntaza area, Al Rawabi Street."},
+				{itemId:"GeneralInfo", xtype: "label",value:"If you possess a food supply card, you can login and request the food supply service by entering your Qatari ID number and the password that you have selected when creating the account through the app, and you will then receive a text message to activate your account.<br/><ol>If you do not possess a food supply card, please go to <a id=lnk1 href='http://www.mec.gov.qa/English/Services/Pages/AllServices.aspx'> the  following link</a> and complete the form, attach it to an email and send to the following address: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>If you have any queries, please contact the supply department by telephone on: <a href='tel:44378160'>4437 8160</a> / <a href='tel:44378162'>4437 8162</a>, or by email: <a href='mailto:Tamween@mec.gov.qa'>Tamween@mec.gov.qa</a><br/>Alternatively, you can visit our offices, located in Al Muntaza area, Al Rawabi Street."},
 				{itemId:"SuppliesCardTitle2", xtype: "label",value:"The following documents are required when applying for a food supply card"},
-				{itemId:"SuppliesCardDesc2", xtype: "label",value:"<ol><li>A copy of the Qatari ID card of the husband, wife and family members</li><li>Marriage certificate if you do not have children</li></ol><br/>If you do not have ID cards for your children, they can be registered using their birth certificates, ensuring that the personal numbers are visible."},
+				{itemId:"SuppliesCardDesc2", xtype: "label",value:"<ol><li>A copy of the Qatari ID card of the husband, wife and family members</li><li>Marriage certificate if you do not have children</li></ol><br/> * If you do not have ID cards for your children, they can be registered using their birth certificates, ensuring that the personal numbers are visible."},
 				{itemId:"SuppliesCardTitle", xtype: "label",value:"Please note that specific documents are required in the following cases"},
 				{itemId:"SuppliesCardDesc", xtype: "label",value:"<ol><li>In the case of the death of the head of the family<ul><li>A copy of the death certificate</li><li>A copy of the Qatari ID card or birth certificate for children</li></ul></li><li>In the event of divorce<ul><li>A copy of the divorce certificate</li><li>A copy of the identity card</li><li>A copy of the birth certificate for children</li><li>A copy of the proof of custody of children certificate</li></ul></li></ol>"},
 				{itemId:"FodderCardTitle", xtype: "label",value:"Documents required for fodder supply card"},

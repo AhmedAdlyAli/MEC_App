@@ -71,7 +71,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
                 }
                 else {
                     Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Error'),
+                        title: Ext.Localization.GetMessage('Message'),
                         buttons:[Ext.Localization.GetMessage('OK')],
                         message: Ext.Localization.GetMessage('NoData')
                     });

@@ -184,133 +184,82 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
 
-                                try{
 
 
 
 
-                                    Ext.AnimationHelper.ShowLoading();
+                                Ext.AnimationHelper.ShowLoading();
 
 
 
 
 
-                                    var img1 = frm.down('#img1');
-                                    var img2 = frm.down('#img2');
-                                    var img3 = frm.down('#img3');
-                                    var img4 = frm.down('#img4');
+                                var img1 = frm.down('#img1');
+                                var img2 = frm.down('#img2');
+                                var img3 = frm.down('#img3');
+                                var img4 = frm.down('#img4');
 
 
+                                var requestData = {
 
 
+                                    "fullName":formData.fullName,
+                                    "email":formData.email,
+                                    "mobile":formData.mobile,
+                                    "comment": formData.comment,
+                                    "img1": img1.getSrc(),
+                                    "img2": img2.getSrc(),
+                                    "img3": img3.getSrc(),
+                                    "img4": img4.getSrc()
+                                };
 
-                                    var requestData = {
 
 
-                                        "fullName":formData.fullName,
-                                        "email":formData.email,
-                                        "mobile":formData.mobile,
-                                        "comment": formData.comment,
-                                        "img1": img1.getSrc(),
-                                        "img2": img2.getSrc(),
-                                        "img3": img3.getSrc(),
-                                        "img4": img4.getSrc()
-                                    };
+                                //console.log(requestData);
 
 
+                                var me = this;
 
-                                    //console.log(requestData);
+                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedback';
 
 
-                                    var me = this;
+                                Ext.AnimationHelper.ShowLoading();
 
-                                    var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendFeedback';
 
 
-                                    Ext.AnimationHelper.ShowLoading();
 
-                                    Ext.Ajax.request({
+                                Ext.defer(function(){
 
-                                        url : url,
-                                        method : 'POST',
-                                        jsonData :requestData,
-                                        success : function (response) {
 
+                                    Ext.AnimationHelper.HideLoading();
 
-                                            try{
 
+                                    Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Message'),
+                                        buttons:[Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('FeedbackConfirmation'),
+                                        callback: function(button) {
 
+                                            //return user to home page
 
-                                                // upload images
+                                            Ext.Viewport.getActiveItem().reset();
 
+                                        }
+                                    });
 
+                                },2000);
 
-                                                Ext.DeviceController.UploadImage('img5',img1.getSrc(),formData.mobile);
-                                                Ext.DeviceController.UploadImage('img6',img2.getSrc(),formData.mobile);
-                                                Ext.DeviceController.UploadImage('img7',img3.getSrc(),formData.mobile);
-                                                Ext.DeviceController.UploadImage('img8',img4.getSrc(),formData.mobile);
 
 
 
 
-                                            }catch(er){ }
 
 
 
+                            }
 
 
 
-
-
-
-                                                Ext.AnimationHelper.HideLoading();
-
-
-                                                Ext.device.Notification.show({
-                                                    title: Ext.Localization.GetMessage('Message'),
-                                                    buttons:[Ext.Localization.GetMessage('OK')],
-                                                    message: Ext.Localization.GetMessage('FeedbackConfirmation'),
-                                                    callback: function(button) {
-
-                                                        //return user to home page
-
-                                                        Ext.Viewport.getActiveItem().reset();
-
-                                                    }
-                                                });
-
-                                            }
-
-                                        });
-
-
-                                    }
-                                    catch(er){
-
-
-                                        Ext.AnimationHelper.HideLoading();
-
-                                        Ext.device.Notification.show({
-                                            title: Ext.Localization.GetMessage('Message'),
-                                            buttons:[Ext.Localization.GetMessage('OK')],
-                                            message: Ext.Localization.GetMessage('FeedbackConfirmation'),
-                                            callback: function(button) {
-
-                                                //return user to home page
-
-                                                Ext.Viewport.getActiveItem().reset();
-
-                                            }
-                                        });
-
-
-
-
-
-                                    }
-
-
-                                }
 
 
                         },

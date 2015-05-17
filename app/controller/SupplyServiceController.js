@@ -555,7 +555,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             };
 
 
-        //console.log(requestData);
+        console.log(requestData);
 
 
         Ext.AnimationHelper.ShowLoading();

@@ -4,18 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>AppIcon40x40@2x.png</key>
-		<data>
-		/zN5LQnOH9oeDAtw7dOpPumZOMc=
-		</data>
-		<key>AppIcon60x60@2x.png</key>
-		<data>
-		bEGIrQhpZm7bGaquAO4ert2nxRw=
-		</data>
-		<key>Assets.car</key>
-		<data>
-		rZAYDWYqwbG3xlspCgeNZES9BH8=
-		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
 		/kSUVvLLJcbtfXnxFEolil3/NRk=
@@ -23,6 +11,14 @@
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
 		S5fB65AVphzua2sjTxJ8r2ORoH4=
+		</data>
+		<key>Default-667h.png</key>
+		<data>
+		rMv+hRLQdwVcby/SuPMMUIyMFY4=
+		</data>
+		<key>Default-736h.png</key>
+		<data>
+		o2E6LWMRcc1xTQM5YYwa/qgwh+4=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -54,15 +50,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		OK+3jeplIjPsT1u2bthPY2Vj0c0=
-		</data>
-		<key>LaunchImage-700-568h@2x.png</key>
-		<data>
-		S5fB65AVphzua2sjTxJ8r2ORoH4=
+		dOTDcrla6MxNwbdPMdl5HdEp948=
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		kuevnYd6yYyE+aC4UuYjhEqGj/8=
+		FYgtGY/4Ujs10TZ0YM0shobXaM0=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -78,7 +70,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		Sl0cfK0/c6sBPZqzl1+gjL09Skk=
+		yNi2pfCAyDQpcwbShdDDl2Qecik=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -146,11 +138,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		tsphNQO9uEiaYIP9EppMLGh+8zY=
+		/+dBGunlZTM2f2upjMXIDmmC82w=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		BIzVVBEtp1/ni8GACLqv+YbKvzc=
+		G08bOaZHO3jebqewFNSxNsjpl4M=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -158,7 +150,107 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		aOQ+U3Xn1Mx7+JPjQg+PP4czhL4=
+		cHLHmX6Fd+zj+A5gQEMLldenw2Y=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.eot</key>
+		<data>
+		pVrVNKW1QpjuEiwJbnU2jyFnJgc=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.svg</key>
+		<data>
+		yNOYj7dM7ziPSfZ4/6NTkg4hWAI=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.ttf</key>
+		<data>
+		1EE6tabLbY8smCQoReVPHc5q1Ms=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.woff</key>
+		<data>
+		Nw//2wRmgvVnwa05UkKWhBHB2PQ=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.eot</key>
+		<data>
+		MeLBDlal3dAsngQdBvKQ6fDotrU=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.otf</key>
+		<data>
+		4ZBo8xmEbkFtrnLS71xtwPJ8m0U=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.svg</key>
+		<data>
+		y/gUupZF/M9Z1nWG3kjxjX47HB8=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.ttf</key>
+		<data>
+		VV6bd8yh8bOnHZEGL+9vJenY7C0=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.woff</key>
+		<data>
+		1jzPVhPAgLwhMb0mMEi8DVQxQLI=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.eot</key>
+		<data>
+		4wBSbM68bHHq3P1bvHXptqkGquU=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.otf</key>
+		<data>
+		qBpAc4F7uYfWLW/BGazaJCFuILQ=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.svg</key>
+		<data>
+		+0DhfTjofSYoyYqPWtnJFEG2T0E=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.ttf</key>
+		<data>
+		QASq0si+bb6zQLUHqT2l/qBCGhg=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.woff</key>
+		<data>
+		gJZGhClbgOW2vXnn1Wz6YqCh0v8=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.eot</key>
+		<data>
+		Y/5/Xn6jJ4UGaTm8BSclXOq/5Qk=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.otf</key>
+		<data>
+		iqxP2UWeeOfflCXd7yplxG67S0k=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.svg</key>
+		<data>
+		VcQerDUvw9KJmUOcG0I2nAeAamk=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.ttf</key>
+		<data>
+		E/LVLsT0rs6V3j8HiXopfiLuFoM=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.woff</key>
+		<data>
+		h1/ZsBPDfgoQCbR0ZOFCgOmnj3s=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium_gdi.ttf</key>
+		<data>
+		nXcffycBaGd6VhEDdslhrhxxeU0=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.eot</key>
+		<data>
+		wJcdn3ChvBw4uhi7dhHmKc7EA5s=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.otf</key>
+		<data>
+		wZ8+GN9YxF8qq1K/HtS9+Me69hI=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.svg</key>
+		<data>
+		5sdtuvMnou8Qi67cL4SqqldLHA4=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.ttf</key>
+		<data>
+		Wj57XcA1VR0pbSFOO+Kdqa+T16o=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.woff</key>
+		<data>
+		xFaoRSex+zoaI+uN4nY5LMJuLHg=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -178,7 +270,11 @@
 		</data>
 		<key>www/localization_ar.js</key>
 		<data>
-		kJASA4U/siw61FGasWTHDCuBZ0w=
+		CP3QFEXGoBmWNEDUd3YGg7I0mSM=
+		</data>
+		<key>www/localization_en.js</key>
+		<data>
+		ek7V1Qojdz5n1Pr6cFdESLX+Oog=
 		</data>
 		<key>www/plugins/am.armsoft.plugins.ListPicker/www/ListPicker.js</key>
 		<data>
@@ -438,7 +534,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		y32YF8XHpaBYGrW7UoeeqWHiC/E=
+		qDgNMEi0hXyCa4xle8+HJ33jCUg=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>
@@ -899,18 +995,6 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>AppIcon40x40@2x.png</key>
-		<data>
-		/zN5LQnOH9oeDAtw7dOpPumZOMc=
-		</data>
-		<key>AppIcon60x60@2x.png</key>
-		<data>
-		bEGIrQhpZm7bGaquAO4ert2nxRw=
-		</data>
-		<key>Assets.car</key>
-		<data>
-		rZAYDWYqwbG3xlspCgeNZES9BH8=
-		</data>
 		<key>CDVNotification.bundle/beep.wav</key>
 		<data>
 		/kSUVvLLJcbtfXnxFEolil3/NRk=
@@ -918,6 +1002,14 @@
 		<key>Default-568h@2x~iphone.png</key>
 		<data>
 		S5fB65AVphzua2sjTxJ8r2ORoH4=
+		</data>
+		<key>Default-667h.png</key>
+		<data>
+		rMv+hRLQdwVcby/SuPMMUIyMFY4=
+		</data>
+		<key>Default-736h.png</key>
+		<data>
+		o2E6LWMRcc1xTQM5YYwa/qgwh+4=
 		</data>
 		<key>Default-Landscape-736h.png</key>
 		<data>
@@ -947,13 +1039,9 @@
 		<data>
 		m4X9s/Jxxaq+tzdgqNXsnzWwa2U=
 		</data>
-		<key>LaunchImage-700-568h@2x.png</key>
-		<data>
-		S5fB65AVphzua2sjTxJ8r2ORoH4=
-		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		kuevnYd6yYyE+aC4UuYjhEqGj/8=
+		FYgtGY/4Ujs10TZ0YM0shobXaM0=
 		</data>
 		<key>ProgressIndicator.bundle/37x-Checkmark.png</key>
 		<data>
@@ -965,7 +1053,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		Sl0cfK0/c6sBPZqzl1+gjL09Skk=
+		yNi2pfCAyDQpcwbShdDDl2Qecik=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1033,11 +1121,11 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		tsphNQO9uEiaYIP9EppMLGh+8zY=
+		/+dBGunlZTM2f2upjMXIDmmC82w=
 		</data>
 		<key>www/app.js</key>
 		<data>
-		BIzVVBEtp1/ni8GACLqv+YbKvzc=
+		G08bOaZHO3jebqewFNSxNsjpl4M=
 		</data>
 		<key>www/cordova.js</key>
 		<data>
@@ -1045,7 +1133,107 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		aOQ+U3Xn1Mx7+JPjQg+PP4czhL4=
+		cHLHmX6Fd+zj+A5gQEMLldenw2Y=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.eot</key>
+		<data>
+		pVrVNKW1QpjuEiwJbnU2jyFnJgc=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.svg</key>
+		<data>
+		yNOYj7dM7ziPSfZ4/6NTkg4hWAI=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.ttf</key>
+		<data>
+		1EE6tabLbY8smCQoReVPHc5q1Ms=
+		</data>
+		<key>www/css/fonts/FuturaBT-MediumCondensed.woff</key>
+		<data>
+		Nw//2wRmgvVnwa05UkKWhBHB2PQ=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.eot</key>
+		<data>
+		MeLBDlal3dAsngQdBvKQ6fDotrU=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.otf</key>
+		<data>
+		4ZBo8xmEbkFtrnLS71xtwPJ8m0U=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.svg</key>
+		<data>
+		y/gUupZF/M9Z1nWG3kjxjX47HB8=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.ttf</key>
+		<data>
+		VV6bd8yh8bOnHZEGL+9vJenY7C0=
+		</data>
+		<key>www/css/fonts/GEDinarOne-Medium.woff</key>
+		<data>
+		1jzPVhPAgLwhMb0mMEi8DVQxQLI=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.eot</key>
+		<data>
+		4wBSbM68bHHq3P1bvHXptqkGquU=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.otf</key>
+		<data>
+		qBpAc4F7uYfWLW/BGazaJCFuILQ=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.svg</key>
+		<data>
+		+0DhfTjofSYoyYqPWtnJFEG2T0E=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.ttf</key>
+		<data>
+		QASq0si+bb6zQLUHqT2l/qBCGhg=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Light.woff</key>
+		<data>
+		gJZGhClbgOW2vXnn1Wz6YqCh0v8=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.eot</key>
+		<data>
+		Y/5/Xn6jJ4UGaTm8BSclXOq/5Qk=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.otf</key>
+		<data>
+		iqxP2UWeeOfflCXd7yplxG67S0k=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.svg</key>
+		<data>
+		VcQerDUvw9KJmUOcG0I2nAeAamk=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.ttf</key>
+		<data>
+		E/LVLsT0rs6V3j8HiXopfiLuFoM=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium.woff</key>
+		<data>
+		h1/ZsBPDfgoQCbR0ZOFCgOmnj3s=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal-Medium_gdi.ttf</key>
+		<data>
+		nXcffycBaGd6VhEDdslhrhxxeU0=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.eot</key>
+		<data>
+		wJcdn3ChvBw4uhi7dhHmKc7EA5s=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.otf</key>
+		<data>
+		wZ8+GN9YxF8qq1K/HtS9+Me69hI=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.svg</key>
+		<data>
+		5sdtuvMnou8Qi67cL4SqqldLHA4=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.ttf</key>
+		<data>
+		Wj57XcA1VR0pbSFOO+Kdqa+T16o=
+		</data>
+		<key>www/css/fonts/PFDinTextUniversal.woff</key>
+		<data>
+		xFaoRSex+zoaI+uN4nY5LMJuLHg=
 		</data>
 		<key>www/css/index.css</key>
 		<data>
@@ -1065,7 +1253,11 @@
 		</data>
 		<key>www/localization_ar.js</key>
 		<data>
-		kJASA4U/siw61FGasWTHDCuBZ0w=
+		CP3QFEXGoBmWNEDUd3YGg7I0mSM=
+		</data>
+		<key>www/localization_en.js</key>
+		<data>
+		ek7V1Qojdz5n1Pr6cFdESLX+Oog=
 		</data>
 		<key>www/plugins/am.armsoft.plugins.ListPicker/www/ListPicker.js</key>
 		<data>
@@ -1325,7 +1517,7 @@
 		</data>
 		<key>www/resources/css/sencha-touch-b9250969-23f4-41e2-820c-07743278932c.css</key>
 		<data>
-		y32YF8XHpaBYGrW7UoeeqWHiC/E=
+		qDgNMEi0hXyCa4xle8+HJ33jCUg=
 		</data>
 		<key>www/resources/images/HListIcon.png</key>
 		<data>

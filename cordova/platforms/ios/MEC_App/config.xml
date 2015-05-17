@@ -20,8 +20,19 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+    <preference name="CameraUsesGeolocation" value="false" />
     <feature name="Notification">
         <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="ios-package" value="CDVFileTransfer" />
     </feature>
     <feature name="ActionSheet">
         <param name="ios-package" value="ActionSheet" />
@@ -29,13 +40,6 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
-    <feature name="ProgressIndicator">
-        <param name="ios-package" value="ProgressIndicator" />
-    </feature>
-    <feature name="Camera">
-        <param name="ios-package" value="CDVCamera" />
-    </feature>
-    <preference name="CameraUsesGeolocation" value="false" />
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
@@ -45,12 +49,8 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
-    <feature name="File">
-        <param name="ios-package" value="CDVFile" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="FileTransfer">
-        <param name="ios-package" value="CDVFileTransfer" />
+    <feature name="ProgressIndicator">
+        <param name="ios-package" value="ProgressIndicator" />
     </feature>
     <name>MEC_App</name>
     <description>

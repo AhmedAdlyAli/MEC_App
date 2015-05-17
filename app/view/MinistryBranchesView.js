@@ -62,6 +62,7 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                     {
                         xtype: 'label',
                         cls: 'branch-title',
+                        html: 'Test',
                         itemId: 'lblTitle'
                     },
                     {
@@ -203,7 +204,10 @@ Ext.define('MEC_App.view.MinistryBranchesView', {
                         infowindow.open(gMap,marker);
 
                         view.down('#lblTitle').setHtml(marker.data.Name);
-                        view.down('#lblTel').setHtml(marker.data.Tel);
+                        view.down('#lblTel').setHtml('<a href="tel:'+marker.data.Tel+'">'+marker.data.Tel+'</a>');
+
+
+
                         view.down('#lblFax').setHtml(marker.data.Fax);
 
 

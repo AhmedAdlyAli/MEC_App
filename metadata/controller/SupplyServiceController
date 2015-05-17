@@ -657,7 +657,7 @@
                     "    };",
                     "",
                     "",
-                    "//console.log(requestData);",
+                    "console.log(requestData);",
                     "",
                     "",
                     "Ext.AnimationHelper.ShowLoading();",

@@ -17,7 +17,23 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
                             "count": 1
                         },
                         {
@@ -26,18 +42,6 @@
                         },
                         {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
                             "count": 1
                         },
                         {
@@ -53,11 +57,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -124,15 +124,7 @@
                             "xml": true,
                             "count": 2
                         }
-                    ],
-                    "CoreData.framework": [],
-                    "CoreText.framework": [],
-                    "GLKit.framework": [],
-                    "libc++.dylib": [],
-                    "libicucore.dylib": [],
-                    "libz.dylib": [],
-                    "OpenGLES.framework": [],
-                    "SystemConfiguration.framework": []
+                    ]
                 }
             },
             "*-Info.plist": {
@@ -142,37 +134,34 @@
                             "xml": "<string />",
                             "count": 2
                         }
-                    ],
-                    "Google Maps API Key": [],
-                    "NSLocationAlwaysUsageDescription": [],
-                    "CFBundleURLTypes": []
+                    ]
                 }
             }
         }
     },
     "installed_plugins": {
         "am.armsoft.plugins.ListPicker": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
+            "PACKAGE_NAME": "MEC.MECAPP"
         },
         "com.phonegap.plugins.barcodescanner": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "nl.x-services.plugins.actionsheet": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
-        },
-        "org.pbernasconi.progressindicator": {
-            "PACKAGE_NAME": "com.domain.MEC_App"
+            "PACKAGE_NAME": "MEC.MECAPP"
         },
         "cordova-plugin-camera": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "nl.x-services.plugins.actionsheet": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.apache.cordova.geolocation": {
@@ -184,7 +173,7 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
-        "cordova-plugin-file-transfer": {
+        "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },
