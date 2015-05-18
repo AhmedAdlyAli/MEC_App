@@ -30,3 +30,13 @@ cordova plugin add plugin.google.maps --variable API_KEY_FOR_ANDROID="AIzaSyAeJH
 cordova plugin add org.apache.cordova.geolocation
 cordova plugin add org.apache.cordova.inappbrowser
 
+cordova plugin add org.apache.cordova.splashscreen
+<preference name="AutoHideSplashScreen" value="false" />
+<script type="text/javascript" charset="utf-8">
+ document.addEventListener('deviceready', function() {
+ setTimeout(function() {
+ navigator.splashscreen.hide();
+ }, 1000);
+ });
+</script>
+

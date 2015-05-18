@@ -147,11 +147,10 @@ Ext.application({
     name: 'MEC_App',
 
     launch: function() {
+
         Ext.Ajax.setTimeout(90000);
 
         Ext.Ajax.on('requestexception', function (conn, response, options) {
-
-
 
             Ext.device.Notification.show({
                 title: Ext.Localization.GetMessage('Error'),
@@ -174,6 +173,19 @@ Ext.application({
 
         Ext.Global.Loading=false;
 
+        if (Ext.os.is('Android')) {
+
+            document.addEventListener("backbutton", Ext.bind(onBackKeyDown, this), false);
+
+            function onBackKeyDown(eve) {
+
+                eve.preventDefault();
+
+                //do something
+                Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
+
+            }
+        }
 
         Ext.create('MEC_App.view.LanguageView', {fullscreen: true});
     }

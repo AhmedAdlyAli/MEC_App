@@ -15,46 +15,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-        "id": "cordova-plugin-dialogs.notification_android",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
-        "id": "cordova-plugin-whitelist.whitelist",
-        "runs": true
-    },
-    {
-        "file": "plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js",
-        "id": "nl.x-services.plugins.actionsheet.ActionSheet",
-        "clobbers": [
-            "window.plugins.actionsheet"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.device/www/device.js",
-        "id": "org.apache.cordova.device.device",
-        "clobbers": [
-            "device"
-        ]
-    },
-    {
-        "file": "plugins/org.pbernasconi.progressindicator/www/progressIndicator.js",
-        "id": "org.pbernasconi.progressindicator.ProgressIndicator",
-        "clobbers": [
-            "ProgressIndicator"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "id": "cordova-plugin-camera.Camera",
         "clobbers": [
@@ -83,32 +43,17 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
-        "id": "org.apache.cordova.inappbrowser.inappbrowser",
-        "clobbers": [
-            "window.open"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
-        "id": "org.apache.cordova.vibration.notification",
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
         "merges": [
-            "navigator.notification",
-            "navigator"
+            "navigator.notification"
         ]
     },
     {
-        "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-        "id": "cordova-plugin-file-transfer.FileTransferError",
-        "clobbers": [
-            "window.FileTransferError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-        "id": "cordova-plugin-file-transfer.FileTransfer",
-        "clobbers": [
-            "window.FileTransfer"
+        "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+        "id": "cordova-plugin-dialogs.notification_android",
+        "merges": [
+            "navigator.notification"
         ]
     },
     {
@@ -256,24 +201,97 @@ module.exports = [
             "cordova"
         ],
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+        "id": "cordova-plugin-file-transfer.FileTransferError",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+        "id": "cordova-plugin-file-transfer.FileTransfer",
+        "clobbers": [
+            "window.FileTransfer"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+        "id": "cordova-plugin-whitelist.whitelist",
+        "runs": true
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js",
+        "id": "nl.x-services.plugins.actionsheet.ActionSheet",
+        "clobbers": [
+            "window.plugins.actionsheet"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.inappbrowser/www/inappbrowser.js",
+        "id": "org.apache.cordova.inappbrowser.inappbrowser",
+        "clobbers": [
+            "window.open"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.plugin.ActivityIndicator/www/activityIndicator.js",
+        "id": "org.apache.cordova.plugin.ActivityIndicator.ActivityIndicator",
+        "clobbers": [
+            "ActivityIndicator"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/org.pbernasconi.progressindicator/www/progressIndicator.js",
+        "id": "org.pbernasconi.progressindicator.ProgressIndicator",
+        "clobbers": [
+            "ProgressIndicator"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "am.armsoft.plugins.ListPicker": "2.2.0",
+    "com.google.playservices": "23.0.0",
+    "com.googlemaps.ios": "1.9.2",
     "com.phonegap.plugins.barcodescanner": "2.0.1",
+    "cordova-plugin-camera": "1.0.0",
     "cordova-plugin-dialogs": "1.0.0",
-    "cordova-plugin-whitelist": "1.0.1-dev",
+    "cordova-plugin-file": "2.0.0",
+    "cordova-plugin-file-transfer": "1.1.0",
+    "cordova-plugin-whitelist": "1.0.0",
     "nl.x-services.plugins.actionsheet": "1.1.4",
     "org.apache.cordova.device": "0.3.0",
-    "org.pbernasconi.progressindicator": "1.1.0",
-    "cordova-plugin-camera": "1.0.0",
     "org.apache.cordova.geolocation": "0.3.12",
     "org.apache.cordova.inappbrowser": "0.6.0",
+    "org.apache.cordova.plugin.ActivityIndicator": "1.0.0",
+    "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.vibration": "0.3.13",
-    "cordova-plugin-file-transfer": "1.1.0",
-    "cordova-plugin-file": "2.0.0"
+    "org.pbernasconi.progressindicator": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

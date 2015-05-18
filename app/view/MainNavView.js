@@ -33,6 +33,10 @@ Ext.define('MEC_App.view.MainNavView', {
         fullscreen: true,
         itemId: 'MainNavView',
         defaultBackButtonText: ' ',
+        layout: {
+            type: 'card',
+            animation: 'fade'
+        },
         items: [
             {
                 xtype: 'panel',
@@ -503,7 +507,9 @@ Ext.define('MEC_App.view.MainNavView', {
         Ext.Localization.LocalizeView(this);
 
 
-
+        if (Ext.os.is('Android')) {
+            this.addCls('android');
+        }
 
 
 
@@ -554,7 +560,7 @@ Ext.define('MEC_App.view.MainNavView', {
         });
 
 
-
+        navBar.setAnimation(false);
 
 
         //Localization
@@ -574,18 +580,18 @@ Ext.define('MEC_App.view.MainNavView', {
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
 
             //if (node.closest('.x-carousel-item')) {
-                //event.stopPropagation();
+            //event.stopPropagation();
             //}
 
             //else {
-                if (event.direction == 'left' && theMenu.isHidden()) {
-                    Ext.Viewport.showMenu('right');
-                } else if (event.direction == 'right') {
-                    if (theMenu.isHidden()) {
-                        Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().fireAction('tap');
-                    }
-
+            if (event.direction == 'left' && theMenu.isHidden()) {
+                Ext.Viewport.showMenu('right');
+            } else if (event.direction == 'right') {
+                if (theMenu.isHidden()) {
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
                 }
+
+            }
             //}
 
         });

@@ -51,10 +51,19 @@ Ext.define('MEC_App.controller.AnimationHelper', {
     },
 
     ShowLoading: function() {
+
+        var message = 'جاري التحميل';
+
+        if(Ext.Global.LanguageFlag == 'en'){
+            message = 'Loading';
+        }
+
         if(Ext.Global.Loading === false)
         {
             try {
-                ProgressIndicator.showSimple(true);
+
+                ActivityIndicator.show(message);
+                //ProgressIndicator.showSimple(true);
 
             }
             catch(err) {
@@ -78,7 +87,11 @@ Ext.define('MEC_App.controller.AnimationHelper', {
         if(Ext.Global.Loading === true)
         {
             try {
-                ProgressIndicator.hide();
+
+                ActivityIndicator.hide();
+
+
+                //ProgressIndicator.hide();
 
             }
             catch(err) {

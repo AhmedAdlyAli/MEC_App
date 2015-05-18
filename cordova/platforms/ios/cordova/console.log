@@ -2216,3 +2216,69 @@ libc++abi.dylib: terminating with uncaught exception of type NSException
 2015-05-15 16:36:31.284 MEC_App[39503:1329631] Communications error: <OS_xpc_error: <error: 0x3aff5f4> { count = 1, contents =
 	"XPCErrorDescription" => <string: 0x3aff83c> { length = 22, contents = "Connection interrupted" }
 }>
+2015-05-17 19:08:46.884 MEC_App[8312:155517] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/3EC4AEBB-F730-41FE-AAEF-3DE7D2ED2363/Library/Cookies/Cookies.binarycookies
+2015-05-17 19:08:47.136 MEC_App[8312:155517] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-17 19:08:47.137 MEC_App[8312:155517] Multi-tasking -> Device: YES, App: YES
+2015-05-17 19:08:47.152 MEC_App[8312:155517] Unlimited access to network resources
+2015-05-17 19:08:47.462 MEC_App[8312:155517] [CDVTimer][file] 2.417982ms
+2015-05-17 19:08:47.463 MEC_App[8312:155517] [CDVTimer][TotalPluginStartup] 3.222048ms
+2015-05-17 19:08:47.672 MEC_App[8312:155517] Resetting plugins due to page load.
+2015-05-17 19:08:48.086 MEC_App[8312:155517] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/97FF10AC-7EE0-441D-851F-F4F0D41C422E/MEC_App.app/www/index.html
+2015-05-17 19:09:01.637 MEC_App[8312:155517] THREAD WARNING: ['ActivityIndicator'] took '18.580811' ms. Plugin should use a background thread.
+2015-05-17 19:11:21.781 MEC_App[8867:157577] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/E2F44EA3-4E1B-417F-9D4F-D427C54A68E5/Library/Cookies/Cookies.binarycookies
+2015-05-17 19:11:21.856 MEC_App[8867:157577] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-17 19:11:21.856 MEC_App[8867:157577] Multi-tasking -> Device: YES, App: YES
+2015-05-17 19:11:21.857 MEC_App[8867:157577] Unlimited access to network resources
+2015-05-17 19:11:21.923 MEC_App[8867:157577] [CDVTimer][file] 0.883996ms
+2015-05-17 19:11:21.923 MEC_App[8867:157577] [CDVTimer][TotalPluginStartup] 1.058996ms
+2015-05-17 19:11:22.010 MEC_App[8867:157577] Resetting plugins due to page load.
+2015-05-17 19:11:22.484 MEC_App[8867:157577] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/5606D61E-FB79-467B-AD79-72C7AD2FEE1E/MEC_App.app/www/index.html
+2015-05-17 19:11:25.284 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:25.285 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:25.285 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:31.391 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:31.392 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:31.392 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:31.822 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:31.822 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:31.822 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:32.052 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:32.052 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:32.052 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:33.864 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:33.864 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:33.864 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:33.886 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:33.886 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:33.886 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:36.652 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:36.652 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:36.652 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:36.676 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:36.676 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:36.676 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:38.777 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:38.777 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:38.777 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:38.800 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:38.800 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:38.800 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:38.932 MEC_App[8867:157577] THREAD WARNING: ['Notification'] took '131.405273' ms. Plugin should use a background thread.
+2015-05-17 19:11:41.644 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:41.644 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:41.644 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:41.666 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:41.666 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:41.666 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:43.492 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:43.492 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:43.492 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:43.715 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:43.715 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:43.715 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
+2015-05-17 19:11:45.696 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:45.696 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:45.696 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","showSimple",[true]]
+2015-05-17 19:11:45.890 MEC_App[8867:157577] CDVPlugin class ProgressIndicator (pluginName: ProgressIndicator) does not exist.
+2015-05-17 19:11:45.890 MEC_App[8867:157577] ERROR: Plugin 'ProgressIndicator' not found, or is not a CDVPlugin. Check your plugin mapping in config.xml.
+2015-05-17 19:11:45.890 MEC_App[8867:157577] -[CDVCommandQueue executePending] [Line 159] FAILED pluginJSON = ["INVALID","ProgressIndicator","hide",[]]
