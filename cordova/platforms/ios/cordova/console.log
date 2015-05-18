@@ -12,3 +12,11 @@
 2015-05-15 21:51:22.810 MEC_App[59524:1687096] [CDVTimer][TotalPluginStartup] 4.657984ms
 2015-05-15 21:51:23.015 MEC_App[59524:1687096] Resetting plugins due to page load.
 2015-05-15 21:51:23.516 MEC_App[59524:1687096] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/4FF70A8D-E005-41F2-AEDF-A6AF25904F08/MEC_App.app/www/index.html
+2015-05-18 13:52:54.569 MEC_App[74964:2247100] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-18 13:52:54.570 MEC_App[74964:2247100] Multi-tasking -> Device: YES, App: YES
+2015-05-18 13:52:54.587 MEC_App[74964:2247100] Unlimited access to network resources
+2015-05-18 13:52:54.938 MEC_App[74964:2247100] [CDVTimer][file] 2.613008ms
+2015-05-18 13:52:54.938 MEC_App[74964:2247100] [CDVTimer][TotalPluginStartup] 3.228962ms
+2015-05-18 13:52:55.129 MEC_App[74964:2247100] Resetting plugins due to page load.
+2015-05-18 13:52:55.973 MEC_App[74964:2247100] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F82C6F1E-76CD-4AB6-B030-A843A41A7FB8/MEC_App.app/www/index.html
+2015-05-18 13:53:05.412 MEC_App[74964:2247100] THREAD WARNING: ['InAppBrowser'] took '33.969971' ms. Plugin should use a background thread.

@@ -204,7 +204,7 @@
                         "cls": [
                             "ind-details-title"
                         ],
-                        "html": "ما هو ",
+                        "html": "تعريف ",
                         "id": null,
                         "itemId": "lblWhatIS"
                     },
