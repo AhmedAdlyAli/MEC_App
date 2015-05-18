@@ -69,7 +69,7 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-            BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
+            BSSPaymentGatewayUrl: 'https://services.mec.gov.qa/QNB_PaymentGateway/mob_pay_go.aspx',
 
             //BSSPaymentGatewayUrl: 'https://eservicesstg.mec.gov.qa/QNB_Paymentgateway/mob_pay_go.aspx',
 

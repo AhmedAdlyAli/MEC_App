@@ -7,8 +7,18 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
     </feature>
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
@@ -20,9 +30,23 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="ActivityIndicator">
+        <param name="android-package" value="org.apache.cordova.plugin.ActivityIndicator" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
     <feature name="ProgressIndicator">
         <param name="android-package" value="org.apache.cordova.plugin.ProgressIndicator" />
     </feature>
+    <allow-intent href="market:*" />
     <name>MEC_App</name>
     <description>
     </description>
@@ -31,40 +55,30 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
     <preference name="BackupWebStorage" value="local" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
     <icon src="www/img/logo.png" />
-    <icon height="180" src="resources/icons/icon-60@3x.png" width="180" />
-    <icon height="60" src="resources/icons/icon-60.png" width="60" />
-    <icon height="120" src="resources/icons/icon-60@2x.png" width="120" />
-    <icon height="72" src="resources/icons/icon-72.png" width="72" />
-    <icon height="144" src="resources/icons/icon-72@2x.png" width="144" />
-    <icon height="76" src="resources/icons/icon-76.png" width="76" />
-    <icon height="152" src="resources/icons/icon-76@2x.png" width="152" />
-    <splash height="480" src="resources/splash/splash.png" width="320" />
-    <splash height="960" src="resources/splash/splash.png" width="640" />
-    <splash height="1024" src="resources/splash/splash.png" width="768" />
-    <splash height="2048" src="resources/splash/splash.png" width="1536" />
-    <splash height="768" src="resources/splash/splash.png" width="1024" />
-    <splash height="1536" src="resources/splash/splash.png" width="2048" />
-    <splash height="1136" src="resources/splash/splash.png" width="640" />
-    <splash height="1334" src="resources/splash/splash.png" width="750" />
-    <splash height="2208" src="resources/splash/splash.png" width="1242" />
-    <splash height="1242" src="resources/splash/splash.png" width="2208" />
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="Vibration">
-        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="FileTransfer">
-        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
-    </feature>
+    <icon height="180" src="platforms/ios/MEC_App/Resources/icons/icon-60@3x.png" width="180" />
+    <icon height="60" src="platforms/ios/MEC_App/Resources/icons/icon-60.png" width="60" />
+    <icon height="120" src="platforms/ios/MEC_App/Resources/icons/icon-60@2x.png" width="120" />
+    <icon height="72" src="platforms/ios/MEC_App/Resources/icons/icon-72.png" width="72" />
+    <icon height="144" src="platforms/ios/MEC_App/Resources/icons/icon-72@2x.png" width="144" />
+    <icon height="76" src="platforms/ios/MEC_App/Resources/icons/icon-76.png" width="76" />
+    <icon height="152" src="platforms/ios/MEC_App/Resources/icons/icon-76@2x.png" width="152" />
+    <splash height="480" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="320" />
+    <splash height="960" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" />
+    <splash height="1024" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="768" />
+    <splash height="2048" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1536" />
+    <splash height="768" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1024" />
+    <splash height="1536" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2048" />
+    <splash height="1136" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" />
+    <splash height="1334" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="750" />
+    <splash height="2208" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1242" />
+    <splash height="1242" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2208" />
 </widget>
