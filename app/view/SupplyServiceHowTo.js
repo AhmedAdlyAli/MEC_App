@@ -54,7 +54,7 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                 items: [
                     {
                         xtype: 'label',
-                        html: 'ان كنت حاصلاً على بطاقة الحصص التموينية، يمكن الدخول على خدمة طلب شراء المواد التموينية وذلك بأدخال رقم بطاقتك الشخصيه  وكلمة المرور الخاصه بك بعد انشاء حسابك من خلال البرنامج، وسيتم إرسال رسالة نصية لتفعيل الحساب الخاص بك.<br/>في حال عدم حيازتك لبطاقة السلع التموينية وتطابق الشروط التالي بيانها على أفراد اسرتك، يرجى التكرم بملئ النموذج على الرابط التالي <a  id=lnkServices href=http://www.mec.gov.qa/Arabic/Services/Pages/AllServices.aspx> http://www.mec.gov.qa/Arabic/Services/Pages/AllServices.aspx</a>  وإرساله على البريد الالكتروني: <a href="mailto:tamween@mec.gov.qa">tamween@mec.gov.qa</a><br/><br/>لأي استفسارات يرجى التكرم بالتواصل مع ادارة التموين عبر المعلومات التالية:<br/>هاتف رقم: <a href="tel:44378160">٤٤٣٧٨١٦٠</a> / <a href="tel:44378162">٤٤٣٧٨١٦٢</a><br/>بريد إلكتروني: <a href="mailto:tamween@mec.gov.qa">tamween@mec.gov.qa</a><br/>او عبر مقر الادارة الكائن في منطقة المنتزه، شارع الروابي',
+                        html: 'ان كنت حاصلاً على بطاقة الحصص التموينية، يمكن الدخول على خدمة طلب شراء المواد التموينية وذلك بأدخال رقم بطاقتك الشخصيه  وكلمة المرور الخاصه بك بعد انشاء حسابك من خلال البرنامج، وسيتم إرسال رسالة نصية لتفعيل الحساب الخاص بك.<br/> <br /> في حال عدم حيازتك لبطاقة السلع التموينية وتطابق الشروط التالي بيانها على أفراد اسرتك، يرجى التكرم بملئ النموذج على <a id="lnk1" href="#"> الرابط التالي </a>   وإرساله على البريد الالكتروني: <a href="mailto:tamween@mec.gov.qa">tamween@mec.gov.qa</a><br/><br/>لأي استفسارات يرجى التكرم بالتواصل مع ادارة التموين عبر المعلومات التالية:<br/>هاتف رقم: <a href="tel:44378160">٤٤٣٧٨١٦٠</a> / <a href="tel:44378162">٤٤٣٧٨١٦٢</a><br/>بريد إلكتروني: <a href="mailto:tamween@mec.gov.qa">tamween@mec.gov.qa</a><br/>او عبر مقر الادارة الكائن في منطقة المنتزه، شارع الروابي',
                         itemId: 'GeneralInfo'
                     },
                     {
@@ -116,6 +116,27 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
         Ext.Localization.LoadLocalization();
 
         Ext.Localization.LocalizeView(this);
+
+        Ext.defer(function(){
+            document.getElementById('lnk1').addEventListener("click",
+                                                             function(){
+
+                                                                 //alert(2);
+        if(Ext.Global.LanguageFlag=='ar')
+        {
+            window.open("http://www.mec.gov.qa/Arabic/Services/Pages/AllServices.aspx","_system");
+        }else{
+        window.open("http://www.mec.gov.qa/English/Services/Pages/AllServices.aspx","_system");
+        }
+
+
+
+
+
+                                                             });
+
+
+        },400);
     }
 
 });

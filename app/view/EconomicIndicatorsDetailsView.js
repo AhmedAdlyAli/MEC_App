@@ -93,7 +93,7 @@ Ext.define('MEC_App.view.EconomicIndicatorsDetailsView', {
                     {
                         xtype: 'label',
                         cls: 'ind-details-title',
-                        html: 'ما هو ',
+                        html: 'تعريف ',
                         itemId: 'lblWhatIS'
                     }
                 ]

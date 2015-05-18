@@ -66,7 +66,7 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
                             }else{ // selected key is pushed from the select view
 
                                 view.down('#hiddenCatID').setValue(view.getData().Id);
-                                view.down('#txtFilter').setValue(json[0][valueField]);
+                                view.down('#txtFilter').setValue(view.getData().Title);
 
                             }
 
