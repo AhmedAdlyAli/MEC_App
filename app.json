@@ -5,7 +5,7 @@
          "packager": "cordova",
          "cordova": {
             "config": {
-               "platforms": "android",
+               "platforms": "ios",
                "id": "MEC.MEC_App"
             }
          }

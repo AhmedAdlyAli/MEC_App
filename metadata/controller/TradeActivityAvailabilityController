@@ -156,6 +156,48 @@
             },
             "name": "onTradenameavailabilityview1Initialize",
             "designerId": "d20a2dd9-3f24-49f0-a275-670cbe7020e5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#txtActivity",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onTxtActivityAction",
+                "implHandler": [
+                    "",
+                    "var btn = this.getBtnSubmitActivity();",
+                    "btn.fireEvent('tap');",
+                    "",
+                    ""
+                ],
+                "name": "action"
+            },
+            "name": "onTxtActivityAction",
+            "designerId": "0eebe178-c613-44d3-be27-9b10c9e1181c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnSubmitActivity",
+                "selector": "#btnSubmitActivity"
+            },
+            "name": "btnSubmitActivity",
+            "designerId": "0aeab20f-185e-467c-99d1-5dcfd5fdc06c"
         }
     ]
 }

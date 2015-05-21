@@ -48,6 +48,9 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
             method : 'Get',
             success : function (response) {
 
+
+                Ext.AnimationHelper.HideLoading();
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
 
@@ -58,9 +61,61 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
                 var lstShops = view.down('#lstShops');
                 lstShops.setStore(store);
 
+            }
+        });
+
+
+
+
+
+        // read XML
+
+        /*
+        Ext.Ajax.request({
+
+            url : 'http://market.mec.gov.qa/data/shortpricelist.asmx/GetStores',
+            method : 'POST',
+            success : function (response) {
+
+                //var json = Ext.util.JSON.decode(response.responseText);
+
+                var store = new Ext.data.Store({
+                    data:response.responseXML,
+                    autoLoad: true,
+                     model:'MEC_App.model.EmptyModel',
+                    proxy: {
+                type: 'memory',
+
+                reader: {
+                    type: 'xml',
+                    rootProperty: 'NewDataSet',
+                    record: 'Table'
+
+                    }
+            }
+                });
+
+
+                var lstShops = view.down('#lstShops');
+                lstShops.setStore(store);
+
+
+
+
+
+        //console.log(response.responseText.replace('<?xml version="1.0" encoding="utf-8"?>',''));
+
+
+
+
                 Ext.AnimationHelper.HideLoading();
             }
         });
+
+
+        */
+
+
 
 
 

@@ -34,7 +34,8 @@
             "SettingsViewController"
         ],
         "models": [
-            "MenuModel"
+            "MenuModel",
+            "EmptyModel"
         ],
         "name": "MEC_App",
         "requires": [

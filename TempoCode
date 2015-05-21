@@ -726,3 +726,44 @@ me.element.on('tap', function(){
                                                          });
 
 
+
+
+
+
+60fdb2b78b6e60508686afe63fcb0a9c4cedf019
+
+
+
+
+<NewDataSet xmlns=""><Table diffgr:id="Table1" msdata:rowOrder="0"><Store_x0020_ID>01</Store_x0020_ID><Store_x0020_Name>Carrefour</Store_x0020_Name><Store_x0020_Name_x0020_Arabic>كارفور</Store_x0020_Name_x0020_Arabic></Table></NewDataSet>
+
+
+
+
+
+    - CMS updates
+        ○ Economic indicators to use category
+        ○ Economic indicators details:
+            § Remove Million to be part of the CMS
+            § Add % sign to change percent 
+            § Daily price: add buildin material
+            § Weekly price (Consumer) - add category
+Web service
+
+
+
+
+
+
+
+- Sizing
+- WS 
+- send list of 3.1
+
+
+
+
+
+
+a533f1e0907fa3cabe7e08dd2dd660ea01ddb42e
+Omar: oabusalibah@mec.gov.qa

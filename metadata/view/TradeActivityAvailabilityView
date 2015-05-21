@@ -52,20 +52,20 @@
             "designerId": "9341e4b3-f7e8-4719-a18c-3cf77252735e",
             "cn": [
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Search",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "txtActivity",
+                        "id": null,
+                        "itemId": "txtActivity",
                         "label": "اسم النشاط",
                         "labelWidth": "40%",
-                        "name": "txtActivity",
-                        "placeHolder": "اسم النشاط"
+                        "name": "txtActivity"
                     },
-                    "name": "MyTextField8",
+                    "name": "MySearchField1",
                     "designerId": "9cafc0e1-66d9-43ec-a44e-05b2a936ffd1"
                 },
                 {

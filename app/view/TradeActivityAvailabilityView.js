@@ -20,7 +20,7 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
     requires: [
         'Ext.Label',
         'Ext.form.FieldSet',
-        'Ext.field.Text',
+        'Ext.field.Search',
         'Ext.Button',
         'Ext.dataview.List',
         'Ext.XTemplate'
@@ -45,12 +45,11 @@ Ext.define('MEC_App.view.TradeActivityAvailabilityView', {
                 itemId: 'fsForm',
                 items: [
                     {
-                        xtype: 'textfield',
-                        id: 'txtActivity',
+                        xtype: 'searchfield',
+                        itemId: 'txtActivity',
                         label: 'اسم النشاط',
                         labelWidth: '40%',
-                        name: 'txtActivity',
-                        placeHolder: 'اسم النشاط'
+                        name: 'txtActivity'
                     },
                     {
                         xtype: 'button',
