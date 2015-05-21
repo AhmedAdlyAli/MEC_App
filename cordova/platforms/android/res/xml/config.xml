@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="mec.mecapp" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.mbt.mbt" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="ListPicker">
         <param name="android-package" value="am.armsoft.plugins.ListPicker" />
@@ -47,7 +47,20 @@
         <param name="android-package" value="org.apache.cordova.plugin.ProgressIndicator" />
     </feature>
     <allow-intent href="market:*" />
-    <name>MEC_App</name>
+    <preference name="KeepRunning" value="false" />
+    <icon density="ldpi" src="www/img/icon-32.png" />
+    <icon density="mdpi" src="www/img/icon-48.png" />
+    <icon density="hdpi" src="www/img/icon-72.png" />
+    <icon density="xhdpi" src="www/img/icon-96.png" />
+    <icon density="xxhdpi" src="www/img/icon-144.png" />
+    <icon density="xxxhdpi" src="www/img/icon-192.png" />
+    <splash density="port-ldpi" src="www/img/splash-200.png" />
+    <splash density="port-mdpi" src="www/img/splash-320.png" />
+    <splash density="port-hdpi" src="www/img/splash-480.png" />
+    <splash density="port-xhdpi" src="www/img/splash-720.png" />
+    <preference name="splash-screen-duration" value="10000" />
+    <preference name="Orientation" value="portrait" />
+    <name>MEC_Qatar</name>
     <description>
     </description>
     <author email="aadly@malomatia.com" href="http://malomatia.com">
@@ -63,22 +76,4 @@
     <allow-intent href="geo:*" />
     <preference name="BackupWebStorage" value="local" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
-    <icon src="www/img/logo.png" />
-    <icon height="180" src="platforms/ios/MEC_App/Resources/icons/icon-60@3x.png" width="180" />
-    <icon height="60" src="platforms/ios/MEC_App/Resources/icons/icon-60.png" width="60" />
-    <icon height="120" src="platforms/ios/MEC_App/Resources/icons/icon-60@2x.png" width="120" />
-    <icon height="72" src="platforms/ios/MEC_App/Resources/icons/icon-72.png" width="72" />
-    <icon height="144" src="platforms/ios/MEC_App/Resources/icons/icon-72@2x.png" width="144" />
-    <icon height="76" src="platforms/ios/MEC_App/Resources/icons/icon-76.png" width="76" />
-    <icon height="152" src="platforms/ios/MEC_App/Resources/icons/icon-76@2x.png" width="152" />
-    <splash height="480" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="320" />
-    <splash height="960" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" />
-    <splash height="1024" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="768" />
-    <splash height="2048" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1536" />
-    <splash height="768" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1024" />
-    <splash height="1536" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2048" />
-    <splash height="1136" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" />
-    <splash height="1334" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="750" />
-    <splash height="2208" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1242" />
-    <splash height="1242" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2208" />
 </widget>
