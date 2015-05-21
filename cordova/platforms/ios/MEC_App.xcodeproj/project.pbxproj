@@ -578,7 +578,7 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_NAME = MEC_App;
+				PRODUCT_NAME = "MEC_App";
 				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -610,7 +610,7 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_NAME = MEC_App;
+				PRODUCT_NAME = "MEC_App";
 				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

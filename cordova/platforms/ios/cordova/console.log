@@ -84,3 +84,12 @@
 2015-05-21 23:13:27.936 MEC_App[5413:3343459] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/24EFE58D-4D67-4FF6-A00E-BFE9BAA4A01A/MEC_App.app/www/index.html
 2015-05-21 23:14:17.346 MEC_App[5413:3343459] THREAD WARNING: ['Notification'] took '14.690186' ms. Plugin should use a background thread.
 2015-05-21 23:14:23.038 MEC_App[5413:3344315] Terminating since there is no system app.
+2015-05-21 23:24:38.079 MEC_Qatar[7210:3357334] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/9EB7141B-3051-4187-BE64-9C56485B3412/Library/Cookies/Cookies.binarycookies
+2015-05-21 23:24:38.468 MEC_Qatar[7210:3357334] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-21 23:24:38.469 MEC_Qatar[7210:3357334] Multi-tasking -> Device: YES, App: YES
+2015-05-21 23:24:38.500 MEC_Qatar[7210:3357334] Unlimited access to network resources
+2015-05-21 23:24:38.998 MEC_Qatar[7210:3357334] [CDVTimer][file] 2.700984ms
+2015-05-21 23:24:38.998 MEC_Qatar[7210:3357334] [CDVTimer][TotalPluginStartup] 3.795028ms
+2015-05-21 23:24:39.465 MEC_Qatar[7210:3357334] Resetting plugins due to page load.
+2015-05-21 23:24:40.405 MEC_Qatar[7210:3357334] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C33ACAB8-00C2-45A4-89A2-F7786A796A45/MEC_Qatar.app/www/index.html
+2015-05-21 23:24:50.985 MEC_Qatar[7210:3357334] THREAD WARNING: ['Notification'] took '50.514893' ms. Plugin should use a background thread.
