@@ -46,6 +46,11 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             },
             {
                 xtype: 'hiddenfield',
+                id: 'hiddenCatType',
+                itemId: 'hiddenCatType'
+            },
+            {
+                xtype: 'hiddenfield',
                 id: 'hiddenCatID',
                 itemId: 'myhiddenfield'
             },
@@ -53,6 +58,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                 xtype: 'textfield',
                 itemId: 'txtFilter',
                 label: 'التقرير',
+                labelWidth: '25%',
                 placeHolder: 'التقرير',
                 readOnly: true,
                 listeners: [
@@ -325,84 +331,126 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
     onHiddenCatIDChange: function(textfield, newValue, oldValue, eOpts) {
 
-                                                     //get report
-                                                     Ext.AnimationHelper.ShowLoading();
+        //get report
+        Ext.AnimationHelper.ShowLoading();
 
 
-                                                             var view = textfield.up('BusinessIndicatorsView');
+        var view = textfield.up('BusinessIndicatorsView');
 
 
-                                                     Ext.Ajax.request({
+        Ext.Ajax.request({
 
-                    url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag + '&pageIndex=0&pageSize=2&categoryId='+view.down('#hiddenCatID').getValue(),
-                                                         method : 'Get',
-                                                         success : function (response) {
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/QuarterlyBusinessReport/GetLastQuarterlyBusinessReports?culture='+ Ext.Global.LanguageFlag + '&pageIndex=0&pageSize=2&categoryId='+view.down('#hiddenCatID').getValue(),
+            method : 'Get',
+            success : function (response) {
 
-                                                             var json = Ext.util.JSON.decode(response.responseText);
+                var json = Ext.util.JSON.decode(response.responseText);
 
-                                                             Ext.AnimationHelper.HideLoading();
+                Ext.AnimationHelper.HideLoading();
 
-
-                                                             if(json.length>0)
-                                                             {
-                                                                 var store = new Ext.data.Store({
-                                                                     data : json
-                                                                 });
-
+                if(json.length>0)
+                {
+                    var store = new Ext.data.Store({
+                        data : json
+                    });
 
 
+        console.log(view.down('#hiddenCatType').getValue());
+
+                    var count = 'العدد';
+
+                    if(Ext.Global.LanguageFlag == 'en'){
+                        count = 'Count';
+                    }
 
 
-                                                                 view.down('#GridHeader').show();
-                                                                 view.down('#GridSubHeader').show();
-                                                                 view.down('#grdMainCRs').show();
-                                                                 view.down('#GridSubHeader1').show();
-                                                                 view.down('#grdSubCRs').show();
-                                                                 view.down('#GridHeader1').show();
-                                                                 view.down('#GridSubHeader2').show();
-                                                                 view.down('#grdMainCRs2').show();
-                                                                 view.down('#GridSubHeader3').show();
-                                                                 view.down('#grdSubCRs2').show();
+                    if(view.down('#hiddenCatType').getValue() == 1){
+                        view.down('#GridHeader').show();
+                        view.down('#GridSubHeader').show();
+                        view.down('#grdMainCRs').show();
+                        view.down('#GridSubHeader1').show();
+                        view.down('#grdSubCRs').show();
+                        view.down('#GridHeader1').show();
+                        view.down('#GridSubHeader2').show();
+                        view.down('#grdMainCRs2').show();
+                        view.down('#GridSubHeader3').show();
+                        view.down('#grdSubCRs2').show();
+
+                        view.down('#ValueQAR').setHtml(count);
+                        view.down('#ValueQAR2').setHtml(count);
+
+                        view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                    }
+
+                    else if(view.down('#hiddenCatType').getValue() == 2){
+                        view.down('#GridHeader').show();
+                        view.down('#GridSubHeader').show();
+                        view.down('#grdMainCRs').show();
+                        view.down('#GridSubHeader1').hide();
+                        view.down('#grdSubCRs').hide();
+                        view.down('#GridHeader1').show();
+                        view.down('#GridSubHeader2').show();
+                        view.down('#grdMainCRs2').show();
+                        view.down('#GridSubHeader3').hide();
+                        view.down('#grdSubCRs2').hide();
+
+                        view.down('#ValueQAR').setHtml(count);
+                        view.down('#ValueQAR2').setHtml(count);
+
+                        view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                    }
+
+                    else if(view.down('#hiddenCatType').getValue() == 3){
+                        view.down('#GridHeader').show();
+                        view.down('#GridSubHeader').show();
+                        view.down('#grdMainCRs').show();
+                        view.down('#GridSubHeader1').hide();
+                        view.down('#grdSubCRs').hide();
+                        view.down('#GridHeader1').show();
+                        view.down('#GridSubHeader2').show();
+                        view.down('#grdMainCRs2').show();
+                        view.down('#GridSubHeader3').hide();
+                        view.down('#grdSubCRs2').hide();
+
+                        view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                        view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                    }
 
 
 
 
-                                                                 view.down('#grdMainCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                                                                 view.down('#grdSubCRs').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                                                                 view.down('#grdMainCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
-                                                                 view.down('#grdSubCRs2').setStore(store).setHeight(json.length * 2.3 +'em').setScrollable(false);
+                }else{
+
+
+                    view.down('#GridHeader').hide();
+                    view.down('#GridSubHeader').hide();
+                    view.down('#grdMainCRs').hide();
+                    view.down('#GridSubHeader1').hide();
+                    view.down('#grdSubCRs').hide();
+                    view.down('#GridHeader1').hide();
+                    view.down('#GridSubHeader2').hide();
+                    view.down('#grdMainCRs2').hide();
+                    view.down('#GridSubHeader3').hide();
+                    view.down('#grdSubCRs2').hide();
 
 
 
 
-                                                             }else{
+                    Ext.device.Notification.show({
+                        title:Ext.Localization.GetMessage('Message'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('NoData')
+                    });
+                }
+
+            }
 
 
-                                                                 view.down('#GridHeader').hide();
-                                                                 view.down('#GridSubHeader').hide();
-                                                                 view.down('#grdMainCRs').hide();
-                                                                 view.down('#GridSubHeader1').hide();
-                                                                 view.down('#grdSubCRs').hide();
-                                                                 view.down('#GridHeader1').hide();
-                                                                 view.down('#GridSubHeader2').hide();
-                                                                 view.down('#grdMainCRs2').hide();
-                                                                 view.down('#GridSubHeader3').hide();
-                                                                 view.down('#grdSubCRs2').hide();
-
-
-
-
-                                                                 Ext.device.Notification.show({
-                                                                     title:Ext.Localization.GetMessage('Message'),
-                                                                     buttons: [Ext.Localization.GetMessage('OK')],
-                                                                     message:  Ext.Localization.GetMessage('NoData')
-                                                                 });
-                                                             }
-
-                                                             }
-
-
-                                                         });
+        });
     },
 
     initialize: function() {
