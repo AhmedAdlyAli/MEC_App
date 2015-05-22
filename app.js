@@ -32,7 +32,8 @@ Ext.application({
         'Ext.Ajax'
     ],
     models: [
-        'MenuModel'
+        'MenuModel',
+        'EmptyModel'
     ],
     stores: [
         'MenuArrayStore'

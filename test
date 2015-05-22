@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSet 
+    xmlns="http://market.mec.gov.qa/">
+    <xs:schema id="NewDataSet" 
+        xmlns="" 
+        xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+            <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="Table">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="Store_x0020_ID" type="xs:string" minOccurs="0" />
+                                <xs:element name="Store_x0020_Name" type="xs:string" minOccurs="0" />
+                                <xs:element name="Store_x0020_Name_x0020_Arabic" type="xs:string" minOccurs="0" />
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
+    <diffgr:diffgram 
+        xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" 
+        xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+        <NewDataSet 
+            xmlns="">
+            <Table diffgr:id="Table1" msdata:rowOrder="0">
+                <Store_x0020_ID>01</Store_x0020_ID>
+                <Store_x0020_Name>Carrefour</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>كارفور</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table2" msdata:rowOrder="1">
+                <Store_x0020_ID>02</Store_x0020_ID>
+                <Store_x0020_Name>Al Meera</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>الميرة</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table3" msdata:rowOrder="2">
+                <Store_x0020_ID>03</Store_x0020_ID>
+                <Store_x0020_Name>Geant</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>جيان</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table4" msdata:rowOrder="3">
+                <Store_x0020_ID>04</Store_x0020_ID>
+                <Store_x0020_Name>Lulu</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>اللولو</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table5" msdata:rowOrder="4">
+                <Store_x0020_ID>06</Store_x0020_ID>
+                <Store_x0020_Name>Daheel</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>دحيل</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table6" msdata:rowOrder="5">
+                <Store_x0020_ID>07</Store_x0020_ID>
+                <Store_x0020_Name>Safari</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>سفاري</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table7" msdata:rowOrder="6">
+                <Store_x0020_ID>08</Store_x0020_ID>
+                <Store_x0020_Name>Family Food Centre</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>التموين العائلي</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table8" msdata:rowOrder="7">
+                <Store_x0020_ID>09</Store_x0020_ID>
+                <Store_x0020_Name>Al Safeer</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>السفير</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table9" msdata:rowOrder="8">
+                <Store_x0020_ID>10</Store_x0020_ID>
+                <Store_x0020_Name>Mega Mart</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>ميجا مارت</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table10" msdata:rowOrder="9">
+                <Store_x0020_ID>12</Store_x0020_ID>
+                <Store_x0020_Name>Food Palace</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>قصر الأغذية</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table11" msdata:rowOrder="10">
+                <Store_x0020_ID>13</Store_x0020_ID>
+                <Store_x0020_Name>Food World</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>عالم الأغذية</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table12" msdata:rowOrder="11">
+                <Store_x0020_ID>14</Store_x0020_ID>
+                <Store_x0020_Name>Saudia Hyper market</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>هايبرماركت السعودية</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table13" msdata:rowOrder="12">
+                <Store_x0020_ID>15</Store_x0020_ID>
+                <Store_x0020_Name>Al Rawabi</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>الروابي</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table14" msdata:rowOrder="13">
+                <Store_x0020_ID>18</Store_x0020_ID>
+                <Store_x0020_Name>Quality</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>كوليتي</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table15" msdata:rowOrder="14">
+                <Store_x0020_ID>19</Store_x0020_ID>
+                <Store_x0020_Name>Grand</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>جراند</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table16" msdata:rowOrder="15">
+                <Store_x0020_ID>20</Store_x0020_ID>
+                <Store_x0020_Name>Masskar</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>مسكر</Store_x0020_Name_x0020_Arabic>
+            </Table>
+            <Table diffgr:id="Table17" msdata:rowOrder="16">
+                <Store_x0020_ID>21</Store_x0020_ID>
+                <Store_x0020_Name>Grand Mart</Store_x0020_Name>
+                <Store_x0020_Name_x0020_Arabic>جراند مارت</Store_x0020_Name_x0020_Arabic>
+            </Table>
+        </NewDataSet>
+    </diffgr:diffgram>
+</DataSet>

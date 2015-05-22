@@ -69,20 +69,20 @@
                     "designerId": "4de38e4e-f80a-4c36-98d1-eb132771fdba"
                 },
                 {
-                    "type": "Ext.field.Text",
+                    "type": "Ext.field.Search",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "id": "txtActivityName",
+                        "id": null,
+                        "itemId": "txtActivityName",
                         "label": "الاسم التجاري",
                         "labelWidth": "35%",
-                        "name": "txtActivityName",
-                        "placeHolder": "الاسم التجاري"
+                        "name": "txtActivityName"
                     },
-                    "name": "MyTextField8",
+                    "name": "MySearchField",
                     "designerId": "585f7ca2-bdeb-4fd2-a533-df90fac42fba"
                 },
                 {

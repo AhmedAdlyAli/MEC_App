@@ -69,7 +69,7 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                                 itemCls: 'item-shop',
                                 itemTpl: [
                                     '',
-                                    '    <div class=\'tpl-shop1-1\'>{ShopName}</div>    ',
+                                    '    <div class=\'tpl-shop1-1\'>{Store_x0020_Name_x0020_Arabic}</div>    ',
                                     '    <div class=\'tpl-shop1-2\'>{ShopAddress}</div>    ',
                                     ''
                                 ]
@@ -103,8 +103,6 @@ Ext.define('MEC_App.view.GoodsPricesView', {
 
     initialize: function() {
         this.callParent();
-
-        Ext.Localization.LoadLocalization();
 
         Ext.Localization.LocalizeView(this);
     }

@@ -642,6 +642,46 @@
             },
             "name": "onTradeNameAvailabilityViewInitialize",
             "designerId": "7763c91c-e6f8-47d7-a018-5c565f5817c9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#txtActivityName",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onTxtActivityNameAction",
+                "implHandler": [
+                    "",
+                    "var btn = this.getBtnSubmit();",
+                    "btn.fireEvent('tap');"
+                ],
+                "name": "action"
+            },
+            "name": "onTxtActivityNameAction",
+            "designerId": "227dc2b0-28ba-46e0-8c63-4c56fa2f903c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "btnSubmit",
+                "selector": "#btnSubmit"
+            },
+            "name": "btnSubmit",
+            "designerId": "2b02b543-cf97-4792-ac1f-4fff968db575"
         }
     ]
 }

@@ -1,0 +1,29 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "EmptyModel",
+        "designer|userClassName": "EmptyModel"
+    },
+    "name": "MyModel",
+    "designerId": "9a0dcafc-9dab-4752-81d9-24f42de877ef",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Store_x0020_Name_x0020_Arabic"
+            },
+            "name": "field",
+            "designerId": "99253320-fcb1-458c-a990-99a101d44cda"
+        }
+    ]
+}

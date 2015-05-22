@@ -19,7 +19,8 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
     config: {
         refs: {
             txtActivityName: '#txtActivityName',
-            lstResults: '#lstResults'
+            lstResults: '#lstResults',
+            btnSubmit: '#btnSubmit'
         },
 
         control: {
@@ -40,6 +41,9 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
             },
             "formpanel#TradeNameAvailabilityView": {
                 initialize: 'onTradeNameAvailabilityViewInitialize'
+            },
+            "searchfield#txtActivityName": {
+                action: 'onTxtActivityNameAction'
             }
         }
     },
@@ -520,6 +524,12 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
 
     onTradeNameAvailabilityViewInitialize: function(component, eOpts) {
         Ext.Localization.LocalizeView(component);
+    },
+
+    onTxtActivityNameAction: function(textfield, e, eOpts) {
+
+        var btn = this.getBtnSubmit();
+        btn.fireEvent('tap');
     }
 
 });

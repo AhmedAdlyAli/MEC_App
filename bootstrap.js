@@ -709,6 +709,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.ViolationsController": [],
   "MEC_App.controller.WebformViewController": [],
   "MEC_App.controller.WhereToShopController": [],
+  "MEC_App.model.EmptyModel": [],
   "MEC_App.model.MenuModel": [],
   "MEC_App.store.MenuArrayStore": [],
   "MEC_App.store.override.MenuArrayStore": [],
@@ -1577,6 +1578,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.controller.WhereToShopController": [
     "controller.WhereToShopController"
+  ],
+  "MEC_App.model.EmptyModel": [
+    "model.EmptyModel"
   ],
   "MEC_App.model.MenuModel": [
     "model.menumodel"

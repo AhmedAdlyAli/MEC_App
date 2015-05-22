@@ -18,7 +18,8 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
     config: {
         refs: {
-            txtActivity: '#txtActivity'
+            txtActivity: '#txtActivity',
+            btnSubmitActivity: '#btnSubmitActivity'
         },
 
         control: {
@@ -27,6 +28,9 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
             },
             "formpanel#tradenameavailabilityview1": {
                 initialize: 'onTradenameavailabilityview1Initialize'
+            },
+            "searchfield#txtActivity": {
+                action: 'onTxtActivityAction'
             }
         }
     },
@@ -122,6 +126,14 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
     onTradenameavailabilityview1Initialize: function(component, eOpts) {
         Ext.Localization.LocalizeView(component);
+    },
+
+    onTxtActivityAction: function(textfield, e, eOpts) {
+
+        var btn = this.getBtnSubmitActivity();
+        btn.fireEvent('tap');
+
+
     }
 
 });
