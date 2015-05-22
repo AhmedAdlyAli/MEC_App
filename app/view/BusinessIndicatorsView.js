@@ -355,7 +355,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     });
 
 
-        console.log(view.down('#hiddenCatType').getValue());
+                    console.log(view.down('#hiddenCatType').getValue());
 
                     var count = 'العدد';
 

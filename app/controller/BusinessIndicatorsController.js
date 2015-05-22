@@ -41,7 +41,7 @@ Ext.define('MEC_App.controller.BusinessIndicatorsController', {
                 var json = Ext.util.JSON.decode(response.responseText);
 
                 //view.setData(json);
-                    view.links = json;
+                view.links = json;
 
 
                 var valueField,
