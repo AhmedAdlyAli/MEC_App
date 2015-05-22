@@ -116,12 +116,15 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 itemTpl: [
                     '',
                     '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
-                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>{Shop.ShopName}</div>    ',
-                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Quantity}({Unit.Name})</div>    ',
-                    '<div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Price}</div> ',
-                    '    ',
-                    '    </div>    ',
-                    '    '
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2.2\'>{Shop.ShopName}</div>    ',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Quantity}({Unit.Name})</div>    ',
+                    '    <tpl if="Price == 0">',
+                    '        <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>-</div>',
+                    '    <tpl else>',
+                    '        <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:1\'>{Price}</div>',
+                    '    </tpl>',
+                    '</div>',
+                    ''
                 ],
                 striped: true,
                 variableHeights: true

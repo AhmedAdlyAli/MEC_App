@@ -59,7 +59,7 @@ var localeEn =
 				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'Trademark Report',Url:'http://www.mec.gov.qa/English/Pages/Home.aspx',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'Trademark Report',Url:'http://cms.mec.gov.qa/cms/trdmrkrpt/217edition.pdf',OpenExternalWindow:true,Icon:'ico-trade.png'}
 			]
 		},
 

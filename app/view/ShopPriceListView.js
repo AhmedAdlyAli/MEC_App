@@ -67,7 +67,13 @@ Ext.define('MEC_App.view.ShopPriceListView', {
                     '',
                     '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
                     '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:3\'>{Product.ProductName}</div>    ',
-                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>{Price}</div>     ',
+                    '    <div class=\'row-cell-fix x-layout-box-item x-flexed x-stretched\' style=\'-webkit-box-flex:2\'>',
+                    '        <tpl if="Price == 0">',
+                    '            -',
+                    '        <tpl else>',
+                    '            {Price}',
+                    '        </tpl>',
+                    '    </div>     ',
                     '</div> '
                 ],
                 striped: true

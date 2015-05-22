@@ -60,7 +60,7 @@ var localeAr =
 				{Name:'مؤشرات اقتصادية',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'مؤشرات الاعمال',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'مؤشرات استهلاكية',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'تقرير العلامات التجارية',Url:'http://www.mec.gov.qa/arabic/Pages/home.aspx',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'تقرير العلامات التجارية',Url:'http://cms.mec.gov.qa/cms/trdmrkrpt/217edition.pdf',OpenExternalWindow:true,Icon:'ico-trade.png'}
 			]
 		},
 
