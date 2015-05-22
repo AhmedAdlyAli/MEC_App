@@ -30,7 +30,7 @@
                     "inners-title"
                 ],
                 "docked": "top",
-                "html": "الاستدعاءات",
+                "html": "استدعاءات السلع المعيبة",
                 "itemId": "lblTitle"
             },
             "name": "MyLabel3",

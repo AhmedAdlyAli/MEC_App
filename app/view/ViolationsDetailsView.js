@@ -32,7 +32,7 @@ Ext.define('MEC_App.view.ViolationsDetailsView', {
             {
                 xtype: 'label',
                 cls: 'inners-title',
-                html: 'المخالفات',
+                html: 'إغلاق إداري',
                 itemId: 'lblTitle'
             },
             {

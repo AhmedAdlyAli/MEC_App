@@ -47,7 +47,7 @@ var localeAr =
 			items: [
 				{Name:"البحث عن اسم تجاري", Url:"TradeNameAvailabilityView", Icon:"ico-search-trade-name.png"},
 				{Name:"البحث عن نشاط تجاري ورسم النشاط", Url:"TradeActivityAvailabilityView", Icon:"ico-search-trade-activity.png"},
-				{Name:"الاستدعاءات", Url:"RecallsView", Icon:"ico-recall-item.png"},
+				{Name:"استدعاءات السلع المعيبة", Url:"RecallsView", Icon:"ico-recall-item.png"},
 				{Name:"المخالفات والاغلاقات", Url:"ViolationsView", Icon:"ico-violations.png"},
 				{Name:"ثقافة المستهلك", Url:"ConsumerEducationView", Icon:"ico-consumer-cultuer.png"},
 				{Name:"ثقافة المستثمر", Url:"InvestorEducationView", Icon:"ico-investor-culture.png"}

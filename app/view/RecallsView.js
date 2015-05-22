@@ -33,7 +33,7 @@ Ext.define('MEC_App.view.RecallsView', {
                 xtype: 'label',
                 cls: 'inners-title',
                 docked: 'top',
-                html: 'الاستدعاءات',
+                html: 'استدعاءات السلع المعيبة',
                 itemId: 'lblTitle'
             },
             {

@@ -173,13 +173,13 @@
                                     "menuBtn"
                                 ],
                                 "iconAlign": "right",
-                                "iconCls": "m-icon6",
-                                "itemId": "btnProjects",
+                                "iconCls": "m-icon7",
+                                "itemId": "btnReports",
                                 "layout|flex": 1,
-                                "text": "المبادرات والمشاريع"
+                                "text": "المؤشرات والتقارير"
                             },
-                            "name": "MyButton9",
-                            "designerId": "5385f99e-6dd5-40eb-b467-872dc0b1e782"
+                            "name": "MyButton12",
+                            "designerId": "165253c3-fdbd-416a-beea-ad03f218bf80"
                         },
                         {
                             "type": "Ext.Button",
@@ -193,13 +193,13 @@
                                     "menuBtn"
                                 ],
                                 "iconAlign": "right",
-                                "iconCls": "m-icon7",
-                                "itemId": "btnReports",
+                                "iconCls": "m-icon6",
+                                "itemId": "btnProjects",
                                 "layout|flex": 1,
-                                "text": "المؤشرات والتقارير"
+                                "text": "المبادرات والمشاريع"
                             },
-                            "name": "MyButton12",
-                            "designerId": "165253c3-fdbd-416a-beea-ad03f218bf80"
+                            "name": "MyButton9",
+                            "designerId": "5385f99e-6dd5-40eb-b467-872dc0b1e782"
                         },
                         {
                             "type": "Ext.Button",

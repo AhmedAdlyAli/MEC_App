@@ -38,7 +38,7 @@
                 "cls": [
                     "inners-title"
                 ],
-                "html": "المخالفات",
+                "html": "إغلاق إداري",
                 "itemId": "lblTitle"
             },
             "name": "MyLabel",

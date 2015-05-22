@@ -45,7 +45,7 @@ Ext.define('MEC_App.controller.RecallsController', {
 
         Ext.Ajax.request({
 
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Recall/GetAllRecalls?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
+            url : Ext.Global.GetConfig('CMSWSUrl')+ '/Recall/GetAllRecalls?culture='+Ext.Global.LanguageFlag+'&pageSize=100&pageIndex=0',
             method : 'Get',
             success : function (response) {
 
