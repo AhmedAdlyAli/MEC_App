@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-               BuildableName = "MEC_App.app"
-               BlueprintName = "MEC_App"
-               ReferencedContainer = "container:MEC_App.xcodeproj">
+               BuildableName = "MEC_APP.app"
+               BlueprintName = "MEC_APP"
+               ReferencedContainer = "container:MEC_APP.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MEC_App.app"
-            BlueprintName = "MEC_App"
-            ReferencedContainer = "container:MEC_App.xcodeproj">
+            BuildableName = "MEC_APP.app"
+            BlueprintName = "MEC_APP"
+            ReferencedContainer = "container:MEC_APP.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MEC_App.app"
-            BlueprintName = "MEC_App"
-            ReferencedContainer = "container:MEC_App.xcodeproj">
+            BuildableName = "MEC_APP.app"
+            BlueprintName = "MEC_APP"
+            ReferencedContainer = "container:MEC_APP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
-            BuildableName = "MEC_App.app"
-            BlueprintName = "MEC_App"
-            ReferencedContainer = "container:MEC_App.xcodeproj">
+            BuildableName = "MEC_APP.app"
+            BlueprintName = "MEC_APP"
+            ReferencedContainer = "container:MEC_APP.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

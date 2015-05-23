@@ -17,7 +17,7 @@
        under the License.
  */
 
-package MEC.MECAPP;
+package MEC.MECQATAR;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

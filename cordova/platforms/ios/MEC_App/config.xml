@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="MEC.MECAPP" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="MEC.MECAPP" version="3.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />
@@ -52,7 +52,7 @@
     <feature name="ProgressIndicator">
         <param name="ios-package" value="ProgressIndicator" />
     </feature>
-    <name>MEC_App</name>
+    <name>MEC_APP</name>
     <description>
     </description>
     <author email="aadly@malomatia.com" href="http://malomatia.com">

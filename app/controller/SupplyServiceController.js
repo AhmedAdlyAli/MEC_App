@@ -286,6 +286,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         });
 
 
+        console.log(consolidatedData);
+
         Ext.Viewport.getActiveItem().push({
             xtype: 'SupplyServiceView2',
             title:  Ext.Global.GetFixedTitle(),

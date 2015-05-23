@@ -46,7 +46,7 @@ Ext.define('MEC_App.controller.WhereToShopController', {
 
             Ext.Ajax.request({
 
-                url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=20',
+                url : Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=1000',
                 method : 'Get',
                 success : function (response) {
                     Ext.AnimationHelper.HideLoading();

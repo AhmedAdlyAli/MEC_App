@@ -35,7 +35,7 @@ Ext.define('MEC_App.view.MainNavView', {
         defaultBackButtonText: ' ',
         layout: {
             type: 'card',
-            animation: 'fade'
+            animation: 'slide'
         },
         items: [
             {
