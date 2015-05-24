@@ -1445,6 +1445,12 @@ background: url(../images/toplogo.png) no-repeat center top;
     margin: 5% 0;
 }
 
+.projects-header-icon {
+    background: url(../images/projects-img.png) no-repeat center;
+    background-size: contain;
+    margin: 5% 0;
+}
+
 .settings-header-icon {
     background: url(../images/setting-img.png) no-repeat center;
     background-size: contain;
@@ -2141,5 +2147,11 @@ background: url(../images/toplogo.png) no-repeat center top;
 .android {
     .x-toolbar-dark {
         padding-top: 0;
+    }
+}
+
+.x-list-paging {
+    .x-list-paging-msg {
+        color: #000;
     }
 }

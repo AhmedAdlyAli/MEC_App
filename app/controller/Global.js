@@ -354,6 +354,53 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
+    },
+
+    LoadAjaxWithPaging: function(ajaxAndPagingParams) {
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : ajaxAndPagingParams.url+'&pageSize='+ajaxAndPagingParams.pageSize*2+'&pageIndex=0',
+            method : 'Get',
+            success : function (response) {
+
+                var json = Ext.util.JSON.decode(response.responseText);
+
+                var store = new Ext.data.Store({
+                    data : json,
+                    pageSize: ajaxAndPagingParams.pageSize,
+                    proxy: {
+                        type: 'rest',
+                        url: ajaxAndPagingParams.url,
+                        pageParam: 'pageIndex',
+                        limitParam: 'pageSize'
+                    }
+                });
+
+                store.onBefore('load',function(store, operation, eOpts){
+                    ajaxAndPagingParams.list.getPlugins()[0].setLoadMoreText(ajaxAndPagingParams.moreText).setNoMoreRecordsText(ajaxAndPagingParams.noRecords);
+                    var records = store.data.items;
+                    records.length = store.data.length;
+
+                    var pageSize = store.getPageSize();
+                    var pageIndex = store.currentPage;    // Page numbers start at 1
+                    var mod = records.length % pageSize;
+
+                    if (mod){
+                        //Set count to disable 'loading' message
+                        var totalRecords = records.length;
+                        store.setTotalCount(totalRecords);//The new value is set, but something sets it back to 'null' afterwards...
+                    }
+                });
+
+                ajaxAndPagingParams.list.setStore(store);
+
+                Ext.AnimationHelper.HideLoading();
+            }
+        });
+
     }
 
 });

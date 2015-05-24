@@ -13,7 +13,7 @@
         "designer|userClassName": "RecallsView",
         "itemId": "RecallsView",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "AdminServicesView1",
     "designerId": "c85da1e8-84b4-4f06-a867-c60c5382f409",
@@ -53,6 +53,7 @@
                 "itemId": "lstRecalls",
                 "onItemDisclosure": true,
                 "pinHeaders": false,
+                "scrollToTopOnRefresh": false,
                 "store": null,
                 "useSimpleItems": false
             },
@@ -99,6 +100,19 @@
                             "designerId": "43ce001b-13c1-4b4b-a6bf-d4f4952b2222"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.plugin.ListPaging",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoPaging": true
+                    },
+                    "name": "MyListPagingPlugin3",
+                    "designerId": "466789e5-23e1-4e3e-921f-2a156b725dce"
                 }
             ]
         }

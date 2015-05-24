@@ -20,7 +20,8 @@ Ext.define('MEC_App.view.ConsumerEducationView', {
     requires: [
         'Ext.Label',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
@@ -54,7 +55,14 @@ Ext.define('MEC_App.view.ConsumerEducationView', {
                             return src;
                         }
                     }
-                )
+                ),
+                scrollToTopOnRefresh: false,
+                plugins: [
+                    {
+                        autoPaging: true,
+                        type: 'listpaging'
+                    }
+                ]
             }
         ]
     }

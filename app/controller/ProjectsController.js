@@ -31,37 +31,18 @@ Ext.define('MEC_App.controller.ProjectsController', {
     },
 
     onProjectsViewInitialize: function(component, eOpts) {
-        var view = component;//me.getMyBusinessView();
 
+        var view = component;
 
-        Ext.AnimationHelper.ShowLoading();
+        var ajaxAndPagingParams = {
+            list: view.down('#lstProjects'),
+            moreText: Ext.Localization.GetMessage('LoadMore'),
+            noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
+            url: Ext.Global.GetConfig('CMSWSUrl')+ '/InitiativesAndProject/GetAllInitiativesAndProjects?culture='+ Ext.Global.LanguageFlag,
+            pageSize: 10
+        };
 
-
-
-
-        var me = this;
-
-        Ext.Ajax.request({
-
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InitiativesAndProject/GetAllInitiativesAndProjects?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20',
-            method : 'Get',
-            success : function (response) {
-
-                var json = Ext.util.JSON.decode(response.responseText);
-
-                console.log(json);
-
-
-                var store = new Ext.data.Store({
-                    data : json
-                });
-
-                var lstProjects = view.down('#lstProjects');
-                lstProjects.setStore(store);
-
-                Ext.AnimationHelper.HideLoading();
-            }
-        });
+        Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);
 
     },
 

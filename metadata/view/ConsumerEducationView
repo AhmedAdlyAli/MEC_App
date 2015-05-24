@@ -51,6 +51,7 @@
                 "id": null,
                 "itemCls": "item-education",
                 "itemId": "lstEducation",
+                "scrollToTopOnRefresh": false,
                 "store": null
             },
             "name": "MyList1",
@@ -97,6 +98,19 @@
                             "designerId": "2d7c5e40-0965-40e2-a743-274a2e5f2aa4"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.plugin.ListPaging",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoPaging": true
+                    },
+                    "name": "MyListPagingPlugin1",
+                    "designerId": "e5662da2-b80a-4ee7-a885-e3515a3cee92"
                 }
             ]
         }

@@ -18,32 +18,52 @@ Ext.define('MEC_App.view.ProjectsView', {
     alias: 'widget.ProjectsView',
 
     requires: [
-        'Ext.Label',
         'Ext.Panel',
+        'Ext.Label',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
         cls: 'complaint-view',
+        fullscreen: true,
         itemId: 'ProjectsView',
-        layout: 'fit',
-        scrollable: false,
+        layout: 'vbox',
         items: [
             {
-                xtype: 'label',
-                cls: 'inners-title',
-                docked: 'top',
-                html: 'المبادرات والمشاريع',
-                itemId: 'lblTitle'
-            },
-            {
-                xtype: 'panel'
+                xtype: 'panel',
+                flex: 1,
+                cls: 'services-header',
+                layout: 'vbox',
+                items: [
+                    {
+                        xtype: 'panel',
+                        cls: 'services-header-overlay',
+                        height: '100%',
+                        layout: 'vbox',
+                        items: [
+                            {
+                                xtype: 'panel',
+                                flex: 2,
+                                cls: 'projects-header-icon'
+                            },
+                            {
+                                xtype: 'label',
+                                flex: 1,
+                                cls: 'service-header-title',
+                                html: 'المبادرات والمشاريع',
+                                itemId: 'lblTitle'
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 xtype: 'list',
+                flex: 2.7,
                 cls: 'news-lstng',
-                height: '100%',
+                height: 'auto',
                 itemId: 'lstProjects',
                 itemTpl: Ext.create('Ext.XTemplate', 
                     '<div class="x-horizontal x-align-stretch x-pack-start x-layout-box">',
@@ -59,9 +79,16 @@ Ext.define('MEC_App.view.ProjectsView', {
                         }
                     }
                 ),
+                scrollToTopOnRefresh: false,
                 onItemDisclosure: true,
                 pinHeaders: false,
-                useSimpleItems: false
+                useSimpleItems: false,
+                plugins: [
+                    {
+                        autoPaging: true,
+                        type: 'listpaging'
+                    }
+                ]
             }
         ]
     },
