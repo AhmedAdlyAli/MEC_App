@@ -178,8 +178,7 @@ var localeAr =
 			]
 
 		}		
-		]
-,
+	],
 	Messages: {
 		StockNotFound:'لا يوجد رصيد متوفر عند الموزع المختار',
 		EstName:'اسم التقرير',
@@ -245,9 +244,11 @@ var localeAr =
         EstablishmentError: 'عفوا, هناك بيانات مفقودة في بيانات المنشأة'	,
         SelectProduct:'اختر منتج',
         SelectReport: 'اختر تقرير',
+        errSupplyQuantity:'برجاء اختيار الكمية لصنف واحد على الأقل',
         LoadMore: 'حمل المزيد...',
 		NoMoreInfo: 'لا يوجد المزيد من البيانات'
 	}
+
 }
 
 

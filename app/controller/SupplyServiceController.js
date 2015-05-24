@@ -274,6 +274,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view = this.getSupplyServiceView1();
 
 
+        var TotalQuantity = 0;
+
         var consolidatedData= [];
 
         var formData = view.getValues();
@@ -283,10 +285,24 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.each(viewData,function(item){
             var price = formData[item.ItemID] * item.Price;
             consolidatedData.push({ ItemID: item.ItemID,ItemName:item.Name,  Quantity: formData[item.ItemID],ItemPrice:price});
+            TotalQuantity += formData[item.ItemID];
         });
 
 
-        console.log(consolidatedData);
+
+
+        if(TotalQuantity<1)
+        {
+
+
+            Ext.device.Notification.show({
+                title:Ext.Localization.GetMessage('Error'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message:  Ext.Localization.GetMessage('errSupplyQuantity')
+            });
+
+
+        }else{
 
         Ext.Viewport.getActiveItem().push({
             xtype: 'SupplyServiceView2',
@@ -295,6 +311,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         });
 
 
+            }
 
 
 

@@ -1131,8 +1131,12 @@ var localeEn =
         EstablishmentError: 'Sorry, There is missing Establishment information',
         SelectProduct:'Select Product',
         SelectReport: 'Select Report',
+		errSupplyQuantity:'Please select at least 1 item Quantity',
         LoadMore: 'Load More...',
 		NoMoreInfo: 'No More Records'
 	}
+
+
+				}
 
 }

@@ -25,6 +25,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
         'Ext.field.Number',
         'Ext.Panel',
         'Ext.Img',
+        'Ext.field.File',
         'Ext.Button',
         'Ext.device.Camera',
         'Ext.device.Notification',
@@ -54,7 +55,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                 items: [
                     {
                         xtype: 'textfield',
-                        id: 'shopName',
                         itemId: 'shopName',
                         label: '',
                         labelWidth: '40%',
@@ -64,7 +64,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
-                        id: 'shopLocation',
                         itemId: 'shopLocation',
                         label: '',
                         labelWidth: '40%',
@@ -74,7 +73,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'textfield',
                         hidden: false,
-                        id: 'txtCategory',
                         itemId: 'txtCategory',
                         labelWidth: '40%',
                         name: 'txtCategory',
@@ -117,7 +115,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textareafield',
-                        id: 'txtComplaint',
                         itemId: 'txtComplaint',
                         label: '',
                         labelWidth: '40%',
@@ -127,7 +124,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'textfield',
-                        id: 'fullName',
                         itemId: 'fullName',
                         label: '',
                         labelWidth: '40%',
@@ -137,7 +133,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'emailfield',
-                        id: 'email',
                         itemId: 'email',
                         label: '',
                         labelWidth: '40%',
@@ -146,7 +141,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     },
                     {
                         xtype: 'numberfield',
-                        id: 'mobile',
                         itemId: 'mobile',
                         component: {
                             type: 'tel'
@@ -164,7 +158,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         itemId: 'mytextfield',
                         label: '',
                         labelWidth: '40%',
-                        name: 'txtBarCode',
                         placeHolder: 'barcode',
                         readOnly: true,
                         listeners: [
@@ -188,7 +181,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                     {
                         xtype: 'label',
                         html: 'ارفق صورة',
-                        id: 'lblAttachImage',
                         itemId: 'lblAttachImage'
                     },
                     {
@@ -200,7 +192,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 flex: 1,
                                 height: 120,
                                 hidden: false,
-                                id: 'img1',
                                 itemId: 'img1',
                                 src: 'resources/images/attach-default.png'
                             },
@@ -208,7 +199,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 xtype: 'image',
                                 flex: 1,
                                 hidden: false,
-                                id: 'img2',
                                 itemId: 'img2',
                                 src: 'resources/images/attach-default.png'
                             }
@@ -222,7 +212,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
-                                id: 'img3',
                                 itemId: 'img3',
                                 src: 'resources/images/attach-default.png'
                             },
@@ -230,12 +219,15 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 xtype: 'image',
                                 flex: 1,
                                 height: 120,
-                                id: 'img4',
                                 itemId: 'img4',
                                 width: 200,
                                 src: 'resources/images/attach-default.png'
                             }
                         ]
+                    },
+                    {
+                        xtype: 'filefield',
+                        label: 'Field'
                     },
                     {
                         xtype: 'button',
@@ -296,6 +288,12 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
+
+
+
+
+
+
                                 //  try{
 
 
@@ -306,10 +304,10 @@ Ext.define('MEC_App.view.ComplaintsView', {
 
 
 
-                                var img1 = frm.down('#img1');
-                                var img2 = frm.down('#img2');
-                                var img3 = frm.down('#img3');
-                                var img4 = frm.down('#img4');
+                                //var img1 = frm.down('#img1');
+                                //var img2 = frm.down('#img2');
+                                //var img3 = frm.down('#img3');
+                                //var img4 = frm.down('#img4');
 
                                 //send mail
 
@@ -321,130 +319,101 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                     "barcode":formData.txtBarCode,
                                     "fullName":formData.fullName,
                                     "mobile":formData.mobile,
-                                    "identityNationality":  Ext.Global.identityNationality,
-                                    "img1": img1.getSrc(),
-                                    "img2": img2.getSrc(),
-                                    "img3": img3.getSrc(),
-                                    "img4": img4.getSrc()
+                                    "identityNationality":  Ext.Global.identityNationality
+                                    // "img1": img1.getSrc(),
+                                    // "img2": img2.getSrc(),
+                                    //  "img3": img3.getSrc(),
+                                    //  "img4": img4.getSrc()
                                 };
 
 
 
                                 var me = this;
 
-                                var url =  Ext.Global.GetConfig('CMSWSUrlEmails') +'/SendComplaint';
+                                var url =  Ext.Global.GetConfig('CMSWSUrl') +'/Complaint/SendComplaint';
 
 
-                                //alert(1);
+                                //alert(button.up('ComplaintsView').element.dom);
 
-                                /*
+
                                 Ext.Ajax.request({
 
-                                url : url,
-                                method : 'POST',
-                                jsonData :requestData,
-                                success : function (response) {
+                                    url : url,
+                                    method : 'POST',
+                                    jsonData :requestData,
+                                    //headers: {'Content-type':'multipart/form-data'},
+                                    form: button.up('ComplaintsView').element.dom,
+                                    isUpload: true,
+                                    success : function (response) {
+                                        //var json = Ext.util.JSON.decode(response.responseText);
+
+                                        alert(response);
 
 
 
 
-                                try{
-
-
-                                // upload images
-
-
-
-                                Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
-                                Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
-                                Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
-                                Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
+                                        //   try{
+                                        // upload images
 
 
 
-
-                            }catch(er){}
+                                        //  Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
+                                        ///  Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
+                                        //   Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
+                                        //   Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
 
 
 
 
-                                // Ext.AnimationHelper.HideLoading();
+                                        //    }catch(er){}
+                                        //
 
-                                /*
-                                Ext.device.Notification.show({
-                                title: Ext.Localization.GetMessage('Message'),
-                                buttons:[Ext.Localization.GetMessage('OK')],
-                                message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                callback: function(button) {
 
-                                //return user to home page
 
-                                Ext.Viewport.getActiveItem().reset();
+                                        Ext.AnimationHelper.HideLoading();
+
+
+                                        Ext.device.Notification.show({
+                                            title: Ext.Localization.GetMessage('Message'),
+                                            buttons:[Ext.Localization.GetMessage('OK')],
+                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                            callback: function(button) {
+
+                                                //return user to home page
+
+                                                //Ext.Viewport.getActiveItem().reset();
+
+                                            }
+                                        });
+
+
+
+
+                                    }
+
+                                });
+
+
+
+
+
+                                //------------------------
+
+
+
+
+
+
+                                //==========================================
+
+
+
 
                             }
-                        });
-
-
-
-
-                    }
-
-                });
-
-
-            }catch(er2){
-
-
-                */
-
-
-
-
-
-                //    }
-
-
-
-                Ext.defer(function(){
-
-
-                    Ext.AnimationHelper.HideLoading();
-
-
-                    Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Message'),
-                        buttons:[Ext.Localization.GetMessage('OK')],
-                        message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                        callback: function(button) {
-
-                            //return user to home page
-
-                            Ext.Viewport.getActiveItem().reset();
-
-                        }
-                    });
-
-                },2000);
-
-
-                //------------------------
-
-
-
-
-
-
-                //==========================================
-
-
-
-
-            }
 
 
                         },
                         cls: 'btn-send',
-                        id: 'btnSubmitComplaint',
                         itemId: 'btnSubmitComplaint',
                         text: 'ارسال'
                     }

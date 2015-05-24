@@ -194,3 +194,62 @@
 2015-05-23 18:35:12.689 MEC_APP[23002:3762468] [CDVTimer][TotalPluginStartup] 3.464043ms
 2015-05-23 18:35:13.151 MEC_APP[23002:3762468] Resetting plugins due to page load.
 2015-05-23 18:35:13.704 MEC_APP[23002:3762468] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/28D467D9-EFA6-4090-BE13-9D4160C21FA7/MEC_APP.app/www/index.html
+2015-05-24 13:54:54.480 MEC_APP[25800:3951351] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/82BCB6B9-7A29-42A0-9544-6C4D038419EF/Library/Cookies/Cookies.binarycookies
+2015-05-24 13:54:54.755 MEC_APP[25800:3951351] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 13:54:54.756 MEC_APP[25800:3951351] Multi-tasking -> Device: YES, App: YES
+2015-05-24 13:54:54.774 MEC_APP[25800:3951351] Unlimited access to network resources
+2015-05-24 13:54:55.108 MEC_APP[25800:3951351] [CDVTimer][file] 3.036022ms
+2015-05-24 13:54:55.108 MEC_APP[25800:3951351] [CDVTimer][TotalPluginStartup] 3.948033ms
+2015-05-24 13:54:55.337 MEC_APP[25800:3951351] Resetting plugins due to page load.
+2015-05-24 13:54:55.948 MEC_APP[25800:3951351] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/884FFC4B-92B9-4C59-B270-B4476906DCB8/MEC_APP.app/www/index.html
+2015-05-24 13:56:19.116 MEC_APP[25800:3951351] THREAD WARNING: ['ProgressIndicator'] took '15.388916' ms. Plugin should use a background thread.
+2015-05-24 13:56:30.030 MEC_APP[25800:3951351] THREAD WARNING: ['ListPicker'] took '22.008057' ms. Plugin should use a background thread.
+2015-05-24 13:56:35.430 MEC_APP[25800:3951351] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-24 13:56:45.769 MEC_APP[25800:3951351] THREAD WARNING: ['Notification'] took '27.733887' ms. Plugin should use a background thread.
+2015-05-24 14:55:41.178 MEC_APP[25800:4007222] Terminating since there is no system app.
+2015-05-24 14:56:51.980 MEC_APP[26619:4009489] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/3472E10F-D635-4D22-8A87-040807EFCAD1/Library/Cookies/Cookies.binarycookies
+2015-05-24 14:56:52.122 MEC_APP[26619:4009489] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 14:56:52.122 MEC_APP[26619:4009489] Multi-tasking -> Device: YES, App: YES
+2015-05-24 14:56:52.124 MEC_APP[26619:4009489] Unlimited access to network resources
+2015-05-24 14:56:52.208 MEC_APP[26619:4009489] [CDVTimer][file] 3.621995ms
+2015-05-24 14:56:52.208 MEC_APP[26619:4009489] [CDVTimer][TotalPluginStartup] 4.503965ms
+2015-05-24 14:56:52.349 MEC_APP[26619:4009489] Resetting plugins due to page load.
+2015-05-24 14:56:52.784 MEC_APP[26619:4009489] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/D5621597-48F6-41C9-A6A1-7D9271973A56/MEC_APP.app/www/index.html
+2015-05-24 14:57:16.247 MEC_APP[26619:4009489] THREAD WARNING: ['ProgressIndicator'] took '20.072021' ms. Plugin should use a background thread.
+2015-05-24 14:57:41.571 MEC_APP[26619:4009489] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-24 15:36:29.959 MEC_APP[27369:4053374] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/BE7B0235-BA01-427A-8D0C-57A523852C69/Library/Cookies/Cookies.binarycookies
+2015-05-24 15:36:30.029 MEC_APP[27369:4053374] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 15:36:30.029 MEC_APP[27369:4053374] Multi-tasking -> Device: YES, App: YES
+2015-05-24 15:36:30.031 MEC_APP[27369:4053374] Unlimited access to network resources
+2015-05-24 15:36:30.110 MEC_APP[27369:4053374] [CDVTimer][file] 1.405001ms
+2015-05-24 15:36:30.110 MEC_APP[27369:4053374] [CDVTimer][TotalPluginStartup] 1.670957ms
+2015-05-24 15:36:30.179 MEC_APP[27369:4053374] Resetting plugins due to page load.
+2015-05-24 15:36:30.543 MEC_APP[27369:4053374] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/4431F0A7-027E-4363-A81A-F2517C07FCF6/MEC_APP.app/www/index.html
+2015-05-24 18:00:12.066 MEC_APP[28270:4113167] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/066B2E1E-77C7-4968-B5F4-6DA4F241DE45/Library/Cookies/Cookies.binarycookies
+2015-05-24 18:00:12.323 MEC_APP[28270:4113167] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 18:00:12.324 MEC_APP[28270:4113167] Multi-tasking -> Device: YES, App: YES
+2015-05-24 18:00:12.343 MEC_APP[28270:4113167] Unlimited access to network resources
+2015-05-24 18:00:12.691 MEC_APP[28270:4113167] [CDVTimer][file] 2.124012ms
+2015-05-24 18:00:12.691 MEC_APP[28270:4113167] [CDVTimer][TotalPluginStartup] 2.290010ms
+2015-05-24 18:00:12.925 MEC_APP[28270:4113167] Resetting plugins due to page load.
+2015-05-24 18:00:13.362 MEC_APP[28270:4113167] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/CF7A4E12-1C49-4CBE-AD16-317646A6037A/MEC_APP.app/www/index.html
+2015-05-24 18:00:27.259 MEC_APP[28270:4113167] THREAD WARNING: ['ProgressIndicator'] took '14.704834' ms. Plugin should use a background thread.
+2015-05-24 18:00:38.423 MEC_APP[28270:4113167] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-24 18:01:00.203 MEC_APP[28270:4113795] Terminating since there is no system app.
+2015-05-24 18:16:34.793 MEC_APP[29129:4129764] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/21AE1561-1BEC-4052-BC70-E7E31BC41C8D/Library/Cookies/Cookies.binarycookies
+2015-05-24 18:16:35.132 MEC_APP[29129:4129764] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 18:16:35.133 MEC_APP[29129:4129764] Multi-tasking -> Device: YES, App: YES
+2015-05-24 18:16:35.153 MEC_APP[29129:4129764] Unlimited access to network resources
+2015-05-24 18:16:35.521 MEC_APP[29129:4129764] [CDVTimer][file] 3.123045ms
+2015-05-24 18:16:35.521 MEC_APP[29129:4129764] [CDVTimer][TotalPluginStartup] 3.889978ms
+2015-05-24 18:16:35.794 MEC_APP[29129:4129764] Resetting plugins due to page load.
+2015-05-24 18:16:36.252 MEC_APP[29129:4129764] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F1A76D61-C736-45BE-9602-6299FD98ACC8/MEC_APP.app/www/index.html
+2015-05-24 18:18:07.870 MEC_APP[29129:4129764] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-24 18:29:24.797 MEC_APP[29800:4144721] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/DDB60105-C640-4237-9169-F5D3229F40FC/Library/Cookies/Cookies.binarycookies
+2015-05-24 18:29:24.854 MEC_APP[29800:4144721] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-24 18:29:24.855 MEC_APP[29800:4144721] Multi-tasking -> Device: YES, App: YES
+2015-05-24 18:29:24.857 MEC_APP[29800:4144721] Unlimited access to network resources
+2015-05-24 18:29:24.932 MEC_APP[29800:4144721] [CDVTimer][file] 1.221001ms
+2015-05-24 18:29:24.932 MEC_APP[29800:4144721] [CDVTimer][TotalPluginStartup] 1.425028ms
+2015-05-24 18:29:25.000 MEC_APP[29800:4144721] Resetting plugins due to page load.
+2015-05-24 18:29:25.732 MEC_APP[29800:4144721] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/26B9CA96-1DD4-4204-87C3-30FDC21C44B3/MEC_APP.app/www/index.html
