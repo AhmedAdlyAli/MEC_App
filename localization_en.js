@@ -1136,7 +1136,4 @@ var localeEn =
 		NoMoreInfo: 'No More Records'
 	}
 
-
-				}
-
 }
