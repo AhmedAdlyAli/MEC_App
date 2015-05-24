@@ -1130,7 +1130,9 @@ var localeEn =
 	            contactError: 'Sorry, There is missing user information',
 	            EstablishmentError: 'Sorry, There is missing Establishment information'	,
 	            SelectProduct:'Select Product',
-	            SelectReport: 'Select Report'
+	            SelectReport: 'Select Report',
+	            errSupplyQuantity:'Please select at least 1 item Quantity'
+
 
 				}
 

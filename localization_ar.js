@@ -243,7 +243,8 @@ var localeAr =
 	            contactError: 'عفوا, هناك بيانات مفقودة في بيانات المستخدم',
 	            EstablishmentError: 'عفوا, هناك بيانات مفقودة في بيانات المنشأة'	,
 	            SelectProduct:'اختر منتج',
-	            SelectReport: 'اختر تقرير'
+	            SelectReport: 'اختر تقرير',
+	            errSupplyQuantity:'برجاء اختيار الكمية لصنف واحد على الأقل'
 
 
 				}
