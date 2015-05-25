@@ -22,14 +22,14 @@ Ext.define('MEC_App.view.DailyPricesView', {
         'Ext.tab.Panel',
         'Ext.Panel',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
         cls: 'complaint-view',
         itemId: 'DailyPricesView',
         layout: 'fit',
-        scrollable: false,
         items: [
             {
                 xtype: 'label',
@@ -51,14 +51,11 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         title: 'الخضروات',
                         itemId: 'VegentsblesContainer',
                         layout: 'vbox',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionlock: true
-                        },
                         items: [
                             {
                                 xtype: 'panel',
                                 cls: 'grid-header',
+                                docked: 'top',
                                 layout: 'hbox',
                                 items: [
                                     {
@@ -79,26 +76,23 @@ Ext.define('MEC_App.view.DailyPricesView', {
                             },
                             {
                                 xtype: 'list',
+                                flex: 1,
                                 height: '100%',
                                 itemId: 'lstPrices',
                                 itemCls: 'grid-row',
-                                itemTpl: Ext.create('Ext.XTemplate', 
+                                itemTpl: [
                                     '',
                                     '    <div class=\'row-cell1\'>{ProductName}</div>    ',
-                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '',
+                                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                                    ''
+                                ],
+                                scrollToTopOnRefresh: false,
+                                plugins: [
                                     {
-                                        CheckPercentOfChange: function(changePercent) {
-                                            if(changePercent>0){
-                                                return 'arrow-up-cell';
-                                            }else{
-                                                return 'arrow-down-cell';
-
-                                            }
-
-                                        }
+                                        autoPaging: true,
+                                        type: 'listpaging'
                                     }
-                                )
+                                ]
                             }
                         ]
                     },
@@ -107,14 +101,11 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         title: 'الفاكهة',
                         itemId: 'FruitsContainer',
                         layout: 'vbox',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionlock: true
-                        },
                         items: [
                             {
                                 xtype: 'panel',
                                 cls: 'grid-header',
+                                docked: 'top',
                                 layout: 'hbox',
                                 items: [
                                     {
@@ -135,26 +126,23 @@ Ext.define('MEC_App.view.DailyPricesView', {
                             },
                             {
                                 xtype: 'list',
+                                flex: 1,
                                 height: '100%',
                                 itemId: 'lstPrices',
                                 itemCls: 'grid-row',
-                                itemTpl: Ext.create('Ext.XTemplate', 
+                                itemTpl: [
                                     '',
                                     '    <div class=\'row-cell1\'>{ProductName}</div>    ',
-                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '',
+                                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                                    ''
+                                ],
+                                scrollToTopOnRefresh: false,
+                                plugins: [
                                     {
-                                        CheckPercentOfChange: function(changePercent) {
-                                            if(changePercent>0){
-                                                return 'arrow-up-cell';
-                                            }else{
-                                                return 'arrow-down-cell';
-
-                                            }
-
-                                        }
+                                        autoPaging: true,
+                                        type: 'listpaging'
                                     }
-                                )
+                                ]
                             }
                         ]
                     },
@@ -163,14 +151,11 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         title: 'الأسماك',
                         itemId: 'FishContainer',
                         layout: 'vbox',
-                        scrollable: {
-                            direction: 'vertical',
-                            directionlock: true
-                        },
                         items: [
                             {
                                 xtype: 'panel',
                                 cls: 'grid-header',
+                                docked: 'top',
                                 layout: 'hbox',
                                 items: [
                                     {
@@ -191,26 +176,23 @@ Ext.define('MEC_App.view.DailyPricesView', {
                             },
                             {
                                 xtype: 'list',
+                                flex: 1,
                                 height: '100%',
                                 itemId: 'lstPrices',
                                 itemCls: 'grid-row',
-                                itemTpl: Ext.create('Ext.XTemplate', 
+                                itemTpl: [
                                     '',
                                     '    <div class=\'row-cell1\'>{ProductName}</div>    ',
-                                    '    <div class=\'row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}\'>{Price}</div>    ',
-                                    '',
+                                    '    <div class=\'row-cell2\'>{Price}</div>    ',
+                                    ''
+                                ],
+                                scrollToTopOnRefresh: false,
+                                plugins: [
                                     {
-                                        CheckPercentOfChange: function(changePercent) {
-                                            if(changePercent>0){
-                                                return 'arrow-up-cell';
-                                            }else{
-                                                return 'arrow-down-cell';
-
-                                            }
-
-                                        }
+                                        autoPaging: true,
+                                        type: 'listpaging'
                                     }
-                                )
+                                ]
                             }
                         ]
                     }

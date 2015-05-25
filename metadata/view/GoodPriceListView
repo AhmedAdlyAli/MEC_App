@@ -14,7 +14,7 @@
         "designer|userClassName": "GoodPriceListView",
         "itemId": "GoodPriceListView",
         "layout": "vbox",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "ShopPricesView1",
     "designerId": "6cf9fdcb-bdf7-49da-874e-8829f83f5296",
@@ -106,6 +106,8 @@
                 "id": null,
                 "itemCls": "grid-row",
                 "itemId": "lstPrices",
+                "layout|flex": 1,
+                "scrollToTopOnRefresh": false,
                 "store": null,
                 "striped": true
             },

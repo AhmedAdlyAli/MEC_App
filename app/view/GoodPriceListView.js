@@ -27,7 +27,6 @@ Ext.define('MEC_App.view.GoodPriceListView', {
     config: {
         itemId: 'GoodPriceListView',
         layout: 'vbox',
-        scrollable: false,
         cls: [
             'complaint-view',
             'rtl'
@@ -64,6 +63,7 @@ Ext.define('MEC_App.view.GoodPriceListView', {
             },
             {
                 xtype: 'list',
+                flex: 1,
                 itemId: 'lstPrices',
                 itemCls: 'grid-row',
                 itemTpl: [
@@ -80,6 +80,7 @@ Ext.define('MEC_App.view.GoodPriceListView', {
                     '</div>',
                     ''
                 ],
+                scrollToTopOnRefresh: false,
                 striped: true
             }
         ]

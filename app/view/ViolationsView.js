@@ -20,14 +20,14 @@ Ext.define('MEC_App.view.ViolationsView', {
     requires: [
         'Ext.Label',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
         cls: 'complaint-view',
         itemId: 'ViolationsView',
         layout: 'fit',
-        scrollable: false,
         items: [
             {
                 xtype: 'label',
@@ -52,9 +52,16 @@ Ext.define('MEC_App.view.ViolationsView', {
                         }
                     }
                 ),
+                scrollToTopOnRefresh: false,
                 onItemDisclosure: true,
                 pinHeaders: false,
-                useSimpleItems: false
+                useSimpleItems: false,
+                plugins: [
+                    {
+                        autoPaging: true,
+                        type: 'listpaging'
+                    }
+                ]
             }
         ]
     }

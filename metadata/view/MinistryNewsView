@@ -13,13 +13,14 @@
         "designer|userAlias": "MinistryNewsView",
         "designer|userClassName": "MinistryNewsView",
         "fullscreen": true,
-        "height": "100%",
-        "infinite": true,
+        "height": null,
+        "infinite": null,
         "itemHeight": 80,
         "itemId": "MinistryNewsView",
         "onItemDisclosure": true,
         "padding": null,
         "pinHeaders": false,
+        "scrollToTopOnRefresh": false,
         "store": null,
         "useSimpleItems": false,
         "variableHeights": true
@@ -63,6 +64,19 @@
             },
             "name": "itemTpl",
             "designerId": "9a8ae2fd-c7af-4712-a486-9a39aee8d81f"
+        },
+        {
+            "type": "Ext.plugin.ListPaging",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoPaging": true
+            },
+            "name": "MyListPagingPlugin",
+            "designerId": "103d852f-58d3-4958-81a4-7adf7277616b"
         }
     ]
 }

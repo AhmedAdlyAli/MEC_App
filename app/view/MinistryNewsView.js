@@ -19,16 +19,16 @@ Ext.define('MEC_App.view.MinistryNewsView', {
 
     requires: [
         'Ext.Label',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
         cls: 'news-lstng',
         fullscreen: true,
-        height: '100%',
         itemId: 'MinistryNewsView',
         defaultType: 'NewsListItem',
-        infinite: true,
+        scrollToTopOnRefresh: false,
         itemHeight: 80,
         onItemDisclosure: true,
         pinHeaders: false,
@@ -41,6 +41,12 @@ Ext.define('MEC_App.view.MinistryNewsView', {
                 docked: 'top',
                 html: 'اخبار الوزارة',
                 itemId: 'lblTitle'
+            }
+        ],
+        plugins: [
+            {
+                autoPaging: true,
+                type: 'listpaging'
             }
         ]
     }

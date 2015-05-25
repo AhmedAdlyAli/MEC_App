@@ -13,7 +13,7 @@
         "designer|userClassName": "ShopPriceListView",
         "itemId": "ShopPriceListView",
         "layout": "vbox",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "DailyPricesView2",
     "designerId": "965094a2-f33a-4d98-9445-875ac45eca83",
@@ -47,6 +47,7 @@
                 "cls": [
                     "grid-header"
                 ],
+                "docked": "top",
                 "layout": "hbox"
             },
             "name": "MyPanel1",
@@ -100,10 +101,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": "100%",
+                "height": null,
                 "id": null,
                 "itemCls": "grid-row",
                 "itemId": "lstProducts",
+                "layout|flex": 1,
+                "scrollToTopOnRefresh": false,
                 "store": null,
                 "striped": true
             },

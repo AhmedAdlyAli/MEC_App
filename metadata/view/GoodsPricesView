@@ -14,7 +14,7 @@
         "designer|userClassName": "GoodsPricesView",
         "itemId": "GoodsPricesView",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "DailyPricesView1",
     "designerId": "1f3af3ec-2e82-403f-a07e-04a10de66770",
@@ -97,6 +97,7 @@
                                 "id": null,
                                 "itemCls": "item-shop",
                                 "itemId": "lstShops",
+                                "scrollToTopOnRefresh": false,
                                 "store": null
                             },
                             "name": "MyList1",
@@ -120,6 +121,19 @@
                                     },
                                     "name": "itemTpl",
                                     "designerId": "81e46e9c-8fbb-4bee-a81f-e9f02c92e7bf"
+                                },
+                                {
+                                    "type": "Ext.plugin.ListPaging",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoPaging": true
+                                    },
+                                    "name": "MyListPagingPlugin4",
+                                    "designerId": "ac310adf-653e-4457-8429-a62285e3c9eb"
                                 }
                             ]
                         }
@@ -154,6 +168,7 @@
                                 "id": null,
                                 "itemCls": "item-product",
                                 "itemId": "lstProducts",
+                                "scrollToTopOnRefresh": false,
                                 "store": null
                             },
                             "name": "MyList4",
@@ -177,6 +192,19 @@
                                     },
                                     "name": "itemTpl",
                                     "designerId": "3774d315-463d-455c-a612-a1801ebe8d05"
+                                },
+                                {
+                                    "type": "Ext.plugin.ListPaging",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoPaging": true
+                                    },
+                                    "name": "MyListPagingPlugin5",
+                                    "designerId": "9b7ce83b-e71f-4825-8461-f1a42c20c248"
                                 }
                             ]
                         }

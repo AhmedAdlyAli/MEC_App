@@ -26,36 +26,19 @@ Ext.define('MEC_App.controller.InvestorEducationController', {
     },
 
     onInvestorEducationViewInitialize: function(component, eOpts) {
-        var view = component;//me.getMyBusinessView();
+
+        var view = component;
         Ext.Localization.LocalizeView(view);
 
-        Ext.AnimationHelper.ShowLoading();
+        var ajaxAndPagingParams = {
+            list: view.down('#lstEducation'),
+            moreText: Ext.Localization.GetMessage('LoadMore'),
+            noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
+            url: Ext.Global.GetConfig('CMSWSUrl')+ '/InvestorEducation/GetAllInvestorEducations?culture='+Ext.Global.LanguageFlag,
+            pageSize: 10
+        };
 
-
-        var me = this;
-
-        Ext.Ajax.request({
-
-            url : Ext.Global.GetConfig('CMSWSUrl')+ '/InvestorEducation/GetAllInvestorEducations?culture='+Ext.Global.LanguageFlag+'&pageSize=20&pageIndex=0',
-            method : 'Get',
-            success : function (response) {
-
-                var json = Ext.util.JSON.decode(response.responseText);
-
-                console.log(json);
-
-
-                var store = new Ext.data.Store({
-                    data : json
-                });
-
-                var lstEducation = view.down('#lstEducation');
-                lstEducation.setStore(store);
-
-                Ext.AnimationHelper.HideLoading();
-            }
-        });
-
+        Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);
 
     }
 

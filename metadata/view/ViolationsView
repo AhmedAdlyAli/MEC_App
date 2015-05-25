@@ -13,7 +13,7 @@
         "designer|userClassName": "ViolationsView",
         "itemId": "ViolationsView",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "RecallsView1",
     "designerId": "ddcefd0a-5e9d-4fc7-86d3-2d696a530b0a",
@@ -53,6 +53,7 @@
                 "itemId": "lstViolations",
                 "onItemDisclosure": true,
                 "pinHeaders": false,
+                "scrollToTopOnRefresh": false,
                 "store": null,
                 "useSimpleItems": false
             },
@@ -98,6 +99,19 @@
                             "designerId": "d65de8c1-0e93-4367-8b76-d459d04f1487"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.plugin.ListPaging",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoPaging": true
+                    },
+                    "name": "MyListPagingPlugin2",
+                    "designerId": "52bd8db9-71a3-4c0c-b042-60a0ce0c2c03"
                 }
             ]
         }

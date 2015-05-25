@@ -22,13 +22,13 @@ Ext.define('MEC_App.view.GoodsPricesView', {
         'Ext.tab.Panel',
         'Ext.tab.Bar',
         'Ext.dataview.List',
-        'Ext.XTemplate'
+        'Ext.XTemplate',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
         itemId: 'GoodsPricesView',
         layout: 'fit',
-        scrollable: false,
         cls: [
             'complaint-view',
             'rtl'
@@ -72,6 +72,13 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                                     '<div class=\'tpl-shop1-1\'>{ShopName}</div>    ',
                                     '<div class=\'tpl-shop1-2\'>{ShopAddress}</div>    ',
                                     ''
+                                ],
+                                scrollToTopOnRefresh: false,
+                                plugins: [
+                                    {
+                                        autoPaging: true,
+                                        type: 'listpaging'
+                                    }
                                 ]
                             }
                         ]
@@ -92,6 +99,13 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                                     '    <div class=\'tpl-product-1\'>{ProductName}</div>    ',
                                     '    <div class=\'tpl-product-2\'>{ProductType}</div>    ',
                                     ''
+                                ],
+                                scrollToTopOnRefresh: false,
+                                plugins: [
+                                    {
+                                        autoPaging: true,
+                                        type: 'listpaging'
+                                    }
                                 ]
                             }
                         ]
