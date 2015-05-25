@@ -128,6 +128,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "buffer": 500,
+                                "delay": 100,
                                 "fn": "onNewsCarouselInitialize",
                                 "implHandler": [
                                     "// loaad top 3 news",
@@ -143,6 +145,8 @@
                                     "    success : function (response) {",
                                     "",
                                     "        var json = Ext.util.JSON.decode(response.responseText);",
+                                    "",
+                                    "        console.log(json);",
                                     "",
                                     "        var pnlNews1 = me.down('#pnlNews');",
                                     "        var pnlNews2 = me.down('#pnlNews1');",
@@ -194,9 +198,9 @@
                                     "",
                                     "",
                                     "carousel.onDragStart = function(e){",
-                                    "    ",
+                                    "",
                                     "//    alert(e);",
-                                    "    ",
+                                    "",
                                     "    return false;",
                                     "};",
                                     "",
@@ -208,7 +212,8 @@
                                     "    carousel.next();",
                                     "},3500);"
                                 ],
-                                "name": "initialize"
+                                "name": "initialize",
+                                "single": null
                             },
                             "name": "onNewsCarouselInitialize",
                             "designerId": "aa17ae18-c4a1-4255-8bbe-00806521788a"
