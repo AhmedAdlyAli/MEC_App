@@ -34,6 +34,12 @@ Ext.define('MEC_App.controller.LoginController', {
             },
             "button#btnRegister": {
                 tap: 'onBtnRegisterTap'
+            },
+            "textfield#txtUserName": {
+                action: 'onTxtUserNameAction'
+            },
+            "passwordfield#txtPassword": {
+                action: 'onTxtPasswordAction'
             }
         }
     },
@@ -192,6 +198,14 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
 
+    },
+
+    onTxtUserNameAction: function(textfield, e, eOpts) {
+        this.onBtnSubmitLoginTap();
+    },
+
+    onTxtPasswordAction: function(textfield, e, eOpts) {
+        this.onBtnSubmitLoginTap();
     }
 
 });

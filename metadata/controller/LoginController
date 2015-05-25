@@ -243,6 +243,54 @@
             },
             "name": "onBtnRegisterTap",
             "designerId": "487bbc82-baf7-4bfa-b664-3d7bc88dff8b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "textfield#txtUserName",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Text",
+                "fn": "onTxtUserNameAction",
+                "implHandler": [
+                    "this.onBtnSubmitLoginTap();"
+                ],
+                "name": "action"
+            },
+            "name": "onTxtUserNameAction",
+            "designerId": "b682a9f6-0be6-4b33-89e8-31e883d52551"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "passwordfield#txtPassword",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Password",
+                "fn": "onTxtPasswordAction",
+                "implHandler": [
+                    "this.onBtnSubmitLoginTap();"
+                ],
+                "name": "action"
+            },
+            "name": "onTxtPasswordAction",
+            "designerId": "22507abf-00bd-41dd-ab25-4145aeb4091d"
         }
     ]
 }
