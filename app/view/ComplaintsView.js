@@ -25,7 +25,6 @@ Ext.define('MEC_App.view.ComplaintsView', {
         'Ext.field.Number',
         'Ext.Panel',
         'Ext.Img',
-        'Ext.field.File',
         'Ext.Button',
         'Ext.device.Camera',
         'Ext.device.Notification',
@@ -226,18 +225,12 @@ Ext.define('MEC_App.view.ComplaintsView', {
                         ]
                     },
                     {
-                        xtype: 'filefield',
-                        label: 'Field'
-                    },
-                    {
                         xtype: 'button',
                         handler: function(button, e) {
 
                             var frm = button.up('ComplaintsView');
 
 
-
-                            //alert(frm.getValues().shopName);
                             var formData =frm.getValues();
 
 
@@ -286,125 +279,84 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 });
                             }else{
 
+                                // generate Complaint Key
+                                var ran = Math.floor(Math.random() * 1000000000);
+
+
+                                //upload files, in the last file send the email
+                                var files = [];
 
 
 
+                                var img1 = frm.down('#img1');
+                                if(img1.getSrc()!=='resources/images/attach-default.png')
+                                files.push(img1.getSrc());
+
+
+                                var img2 = frm.down('#img2');
+                                if(img2.getSrc()!=='resources/images/attach-default.png')
+                                files.push(img2.getSrc());
 
 
 
+                                var img3 = frm.down('#img3');
+                                if(img3.getSrc()!=='resources/images/attach-default.png')
+                                files.push(img3.getSrc());
 
 
-                                //  try{
-
-
+                                var img4 = frm.down('#img4');
+                                if(img4.getSrc()!=='resources/images/attach-default.png')
+                                files.push(img4.getSrc());
 
 
 
                                 Ext.AnimationHelper.ShowLoading();
 
 
-
-                                //var img1 = frm.down('#img1');
-                                //var img2 = frm.down('#img2');
-                                //var img3 = frm.down('#img3');
-                                //var img4 = frm.down('#img4');
-
-                                //send mail
-
-                                var requestData = {
-                                    "shopName": formData.shopName,
-                                    "shopLocation": formData.shopLocation,
-                                    "complaint": formData.txtComplaint,
-                                    "email":formData.email,
-                                    "barcode":formData.txtBarCode,
-                                    "fullName":formData.fullName,
-                                    "mobile":formData.mobile,
-                                    "identityNationality":  Ext.Global.identityNationality
-                                    // "img1": img1.getSrc(),
-                                    // "img2": img2.getSrc(),
-                                    //  "img3": img3.getSrc(),
-                                    //  "img4": img4.getSrc()
-                                };
+                                var uploadUrl = Ext.Global.GetConfig('CMSWSUrl').replace('/CMS/api','/Complaints/upload.ashx');
 
 
+                                if(files.length>0)
+                                {
 
-                                var me = this;
-
-                                var url =  Ext.Global.GetConfig('CMSWSUrl') +'/Complaint/SendComplaint';
-
-
-                                //alert(button.up('ComplaintsView').element.dom);
-
-
-                                Ext.Ajax.request({
-
-                                    url : url,
-                                    method : 'POST',
-                                    jsonData :requestData,
-                                    //headers: {'Content-type':'multipart/form-data'},
-                                    form: button.up('ComplaintsView').element.dom,
-                                    isUpload: true,
-                                    success : function (response) {
-                                        //var json = Ext.util.JSON.decode(response.responseText);
-
-                                        alert(response);
-
-
-
-
-                                        //   try{
-                                        // upload images
-
-
-
-                                        //  Ext.DeviceController.UploadImage('img1',img1.getSrc(),formData.mobile);
-                                        ///  Ext.DeviceController.UploadImage('img2',img2.getSrc(),formData.mobile);
-                                        //   Ext.DeviceController.UploadImage('img3',img3.getSrc(),formData.mobile);
-                                        //   Ext.DeviceController.UploadImage('img4',img4.getSrc(),formData.mobile);
-
-
-
-
-                                        //    }catch(er){}
-                                        //
-
-
-
-                                        Ext.AnimationHelper.HideLoading();
-
-
-                                        Ext.device.Notification.show({
-                                            title: Ext.Localization.GetMessage('Message'),
-                                            buttons:[Ext.Localization.GetMessage('OK')],
-                                            message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                            callback: function(button) {
-
-                                                //return user to home page
-
-                                                //Ext.Viewport.getActiveItem().reset();
-
-                                            }
-                                        });
-
-
-
+                                    for (i = 0; i < files.length; i++) {
+                                        alert(files[i]);
+                                        var isLast = false;
+                                        if(i===files.length-1) isLast = true;
+                                        Ext.DeviceController.UploadImage(ran,files[i],isLast,formData,uploadUrl);
 
                                     }
 
-                                });
+                                }else{
+                                    //alert('go');
+                                    Ext.DeviceController.UploadImage(ran,img1.getSrc(),true,formData,uploadUrl);
 
-
-
-
-
-                                //------------------------
+                                }
 
 
 
 
 
 
-                                //==========================================
+                                Ext.defer(function(){
+                                    Ext.AnimationHelper.HideLoading();
+
+                                    Ext.device.Notification.show({
+                                        title: Ext.Localization.GetMessage('Message'),
+                                        buttons:[Ext.Localization.GetMessage('OK')],
+                                        message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
+                                        callback: function(button) {
+
+                                            //return user to home page
+
+                                            Ext.Viewport.getActiveItem().reset();
+
+                                        }
+                                    });
+
+
+                                },2000);
+
 
 
 

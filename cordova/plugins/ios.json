@@ -59,6 +59,10 @@
                         {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -174,6 +178,9 @@
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.pbernasconi.progressindicator": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },

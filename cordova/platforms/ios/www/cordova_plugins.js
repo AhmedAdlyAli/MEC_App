@@ -128,6 +128,20 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
+        "id": "org.apache.cordova.console.console",
+        "clobbers": [
+            "console"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.console/www/logger.js",
+        "id": "org.apache.cordova.console.logger",
+        "clobbers": [
+            "cordova.logger"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -289,6 +303,7 @@ module.exports.metadata =
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.vibration": "0.3.13",
     "org.pbernasconi.progressindicator": "1.1.0",
+    "org.apache.cordova.console": "0.2.13",
     "cordova-plugin-file": "2.0.0"
 }
 // BOTTOM OF METADATA

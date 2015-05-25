@@ -304,14 +304,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         }else{
 
-        Ext.Viewport.getActiveItem().push({
-            xtype: 'SupplyServiceView2',
-            title:  Ext.Global.GetFixedTitle(),
-            data: consolidatedData
-        });
+            Ext.Viewport.getActiveItem().push({
+                xtype: 'SupplyServiceView2',
+                title:  Ext.Global.GetFixedTitle(),
+                data: consolidatedData
+            });
 
 
-            }
+        }
 
 
 

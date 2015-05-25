@@ -67,6 +67,7 @@
 		DB27A92BD0364923B1675BC7 /* CDVCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3C24C10D48898AE93C5E /* CDVCamera.m */; };
 		F914222891BC46C08D3647C6 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CB4FC3253343429EC6C547 /* CDVLocation.m */; };
 		FA4EDF56625F440B9A178FC0 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E5DC41E8024015B4C05FE8 /* zxing-all-in-one.cpp */; };
+		2537687E2D9C4F62982EEFAC /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A56E0272456641898E702E94 /* CDVLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,8 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = MEC_APP/config.xml; sourceTree = "<group>"; };
 		FBF936ED50F04B2398E2C582 /* CDVFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVFile.h; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; };
 		FD6129849323437590E422CD /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
+		A56E0272456641898E702E94 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DF6DC11EF2E04C2A93DD0ADA /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +330,8 @@
 				3A16CD4C82E143AE87EBFF7D /* ProgressIndicator.m */,
 				3CE5A1FE98F14061BDEBFF4C /* MBProgressHUD.h */,
 				463878ED561F40D2B2AD8772 /* ProgressIndicator.h */,
+				A56E0272456641898E702E94 /* CDVLogger.m */,
+				DF6DC11EF2E04C2A93DD0ADA /* CDVLogger.h */,
 			);
 			name = Plugins;
 			path = MEC_APP/Plugins;
@@ -537,6 +542,7 @@
 				6D8FB48FB58245D296EB0FED /* CDVVibration.m in Sources */,
 				7CA1B2472923455699D1E010 /* MBProgressHUD.m in Sources */,
 				5827607CD77A41AC9EE974DD /* ProgressIndicator.m in Sources */,
+				2537687E2D9C4F62982EEFAC /* CDVLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
