@@ -29,15 +29,11 @@ Ext.define('MEC_App.controller.ShopPriceListController', {
 
         Ext.Localization.LocalizeView(view);
 
-
-
         var data = view.getData();
 
         view.down('#lblTitle').setHtml(data.ShopName);
 
-
         Ext.AnimationHelper.ShowLoading();
-
 
         Ext.Ajax.request({
 
@@ -52,7 +48,7 @@ Ext.define('MEC_App.controller.ShopPriceListController', {
                     data : json.ProductPrices
                 });
 
-                var lstProducts = view.down('#lstProducts').setHeight(json.ProductPrices.length * 2.5 + 'em');
+                var lstProducts = view.down('#lstProducts');
                 lstProducts.setStore(store);
 
                 Ext.AnimationHelper.HideLoading();

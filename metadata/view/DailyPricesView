@@ -13,7 +13,7 @@
         "designer|userClassName": "DailyPricesView",
         "itemId": "DailyPricesView",
         "layout": "fit",
-        "scrollable": false
+        "scrollable": null
     },
     "name": "DailyReportView1",
     "designerId": "fbe3614a-6aa8-4a62-9573-23f478101682",
@@ -63,9 +63,7 @@
                     "userConfig": {
                         "itemId": "VegentsblesContainer",
                         "layout": "vbox",
-                        "scrollable": [
-                            "{direction:'vertical',directionlock:true}"
-                        ],
+                        "scrollable": null,
                         "title": "الخضروات"
                     },
                     "name": "MyContainer",
@@ -85,6 +83,7 @@
                                 "cls": [
                                     "grid-header"
                                 ],
+                                "docked": "top",
                                 "layout": "hbox"
                             },
                             "name": "MyPanel2",
@@ -140,6 +139,8 @@
                                 "id": null,
                                 "itemCls": "grid-row",
                                 "itemId": "lstPrices",
+                                "layout|flex": 1,
+                                "scrollToTopOnRefresh": false,
                                 "store": null
                             },
                             "name": "MyList1",
@@ -157,39 +158,25 @@
                                         "implHandler": [
                                             "",
                                             "    <div class='row-cell1'>{ProductName}</div>    ",
-                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "    <div class='row-cell2'>{Price}</div>    ",
                                             ""
                                         ]
                                     },
                                     "name": "itemTpl",
-                                    "designerId": "165caebc-6fba-448f-8e53-4326629e36f3",
-                                    "cn": [
-                                        {
-                                            "type": "templatefunction",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|params": [
-                                                    "changePercent"
-                                                ],
-                                                "fn": "CheckPercentOfChange",
-                                                "implHandler": [
-                                                    "if(changePercent>0){",
-                                                    "    return 'arrow-up-cell';",
-                                                    "}else{",
-                                                    "    return 'arrow-down-cell';",
-                                                    "",
-                                                    "}",
-                                                    ""
-                                                ]
-                                            },
-                                            "name": "CheckPercentOfChange",
-                                            "designerId": "2e359cfb-5b58-40b0-9440-ba4b21411b90"
-                                        }
-                                    ]
+                                    "designerId": "165caebc-6fba-448f-8e53-4326629e36f3"
+                                },
+                                {
+                                    "type": "Ext.plugin.ListPaging",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoPaging": true
+                                    },
+                                    "name": "MyListPagingPlugin",
+                                    "designerId": "fb5a2c2d-d331-46f9-b1e2-39e0994848e7"
                                 }
                             ]
                         }
@@ -205,9 +192,7 @@
                     "userConfig": {
                         "itemId": "FruitsContainer",
                         "layout": "vbox",
-                        "scrollable": [
-                            "{direction:'vertical',directionlock:true}"
-                        ],
+                        "scrollable": null,
                         "title": "الفاكهة"
                     },
                     "name": "MyContainer1",
@@ -227,6 +212,7 @@
                                 "cls": [
                                     "grid-header"
                                 ],
+                                "docked": "top",
                                 "layout": "hbox"
                             },
                             "name": "MyPanel7",
@@ -282,6 +268,8 @@
                                 "id": null,
                                 "itemCls": "grid-row",
                                 "itemId": "lstPrices",
+                                "layout|flex": 1,
+                                "scrollToTopOnRefresh": false,
                                 "store": null
                             },
                             "name": "MyList4",
@@ -299,39 +287,25 @@
                                         "implHandler": [
                                             "",
                                             "    <div class='row-cell1'>{ProductName}</div>    ",
-                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "    <div class='row-cell2'>{Price}</div>    ",
                                             ""
                                         ]
                                     },
                                     "name": "itemTpl",
-                                    "designerId": "240a62ba-085f-45fd-b9ab-4df936a6fd3a",
-                                    "cn": [
-                                        {
-                                            "type": "templatefunction",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|params": [
-                                                    "changePercent"
-                                                ],
-                                                "fn": "CheckPercentOfChange",
-                                                "implHandler": [
-                                                    "if(changePercent>0){",
-                                                    "    return 'arrow-up-cell';",
-                                                    "}else{",
-                                                    "    return 'arrow-down-cell';",
-                                                    "",
-                                                    "}",
-                                                    ""
-                                                ]
-                                            },
-                                            "name": "CheckPercentOfChange",
-                                            "designerId": "a5fcb236-d438-4a8b-964d-db2cd9801ac1"
-                                        }
-                                    ]
+                                    "designerId": "240a62ba-085f-45fd-b9ab-4df936a6fd3a"
+                                },
+                                {
+                                    "type": "Ext.plugin.ListPaging",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoPaging": true
+                                    },
+                                    "name": "MyListPagingPlugin1",
+                                    "designerId": "b48a9558-5b72-4446-a7cd-23f5fe3bc209"
                                 }
                             ]
                         }
@@ -347,9 +321,7 @@
                     "userConfig": {
                         "itemId": "FishContainer",
                         "layout": "vbox",
-                        "scrollable": [
-                            "{direction:'vertical',directionlock:true}"
-                        ],
+                        "scrollable": null,
                         "title": "الأسماك"
                     },
                     "name": "MyContainer2",
@@ -369,6 +341,7 @@
                                 "cls": [
                                     "grid-header"
                                 ],
+                                "docked": "top",
                                 "layout": "hbox"
                             },
                             "name": "MyPanel8",
@@ -424,6 +397,8 @@
                                 "id": null,
                                 "itemCls": "grid-row",
                                 "itemId": "lstPrices",
+                                "layout|flex": 1,
+                                "scrollToTopOnRefresh": false,
                                 "store": null
                             },
                             "name": "MyList5",
@@ -441,39 +416,25 @@
                                         "implHandler": [
                                             "",
                                             "    <div class='row-cell1'>{ProductName}</div>    ",
-                                            "    <div class='row-cell2 {[this.CheckPercentOfChange(values.ChangePercent)]}'>{Price}</div>    ",
+                                            "    <div class='row-cell2'>{Price}</div>    ",
                                             ""
                                         ]
                                     },
                                     "name": "itemTpl",
-                                    "designerId": "137c16ad-9ec9-4f46-8ec2-915d75a53ed8",
-                                    "cn": [
-                                        {
-                                            "type": "templatefunction",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "designer|params": [
-                                                    "changePercent"
-                                                ],
-                                                "fn": "CheckPercentOfChange",
-                                                "implHandler": [
-                                                    "if(changePercent>0){",
-                                                    "    return 'arrow-up-cell';",
-                                                    "}else{",
-                                                    "    return 'arrow-down-cell';",
-                                                    "",
-                                                    "}",
-                                                    ""
-                                                ]
-                                            },
-                                            "name": "CheckPercentOfChange",
-                                            "designerId": "9cf1ee9a-1aa1-4deb-8aa3-800dbbf42998"
-                                        }
-                                    ]
+                                    "designerId": "137c16ad-9ec9-4f46-8ec2-915d75a53ed8"
+                                },
+                                {
+                                    "type": "Ext.plugin.ListPaging",
+                                    "reference": {
+                                        "name": "plugins",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoPaging": true
+                                    },
+                                    "name": "MyListPagingPlugin2",
+                                    "designerId": "d75f5062-a7ec-4e8e-8e93-e8c55674f351"
                                 }
                             ]
                         }
