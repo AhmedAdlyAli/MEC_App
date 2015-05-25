@@ -13,40 +13,5 @@
         ]
     },
     "name": "MyController",
-    "designerId": "d795d76e-8b9e-461e-a672-d06c3253047b",
-    "cn": [
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "designer|controlQuery": "button#mybutton",
-                "designer|params": [
-                    "button",
-                    "e",
-                    "eOpts"
-                ],
-                "designer|targetType": "Ext.Button",
-                "fn": "onMybuttonTap",
-                "implHandler": [
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    "",
-                    ""
-                ],
-                "name": "tap"
-            },
-            "name": "onMybuttonTap",
-            "designerId": "28a5d79b-0549-469a-ac4f-4a1027912b2d"
-        }
-    ]
+    "designerId": "d795d76e-8b9e-461e-a672-d06c3253047b"
 }

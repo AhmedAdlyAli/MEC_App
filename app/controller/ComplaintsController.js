@@ -22,24 +22,5 @@ Ext.define('MEC_App.controller.ComplaintsController', {
     ],
 
     config: {
-        control: {
-            "button#mybutton": {
-                tap: 'onMybuttonTap'
-            }
-        }
-    },
-
-    onMybuttonTap: function(button, e, eOpts) {
-
-
-
-
-
-
-
-
-
-
     }
-
 });

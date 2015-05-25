@@ -147,38 +147,46 @@ Ext.define('MEC_App.controller.DeviceController', {
 
     },
 
-    UploadImage: function(key, imgUrl, phone) {
-
-        var win = function (r) {
-            console.log("Code = " + r.responseCode);
-            console.log("Response = " + r.response);
-            console.log("Sent = " + r.bytesSent);
-        };
-
-        var fail = function (error) {
-            //alert("An error has occurred: Code = " + error.code);
-            console.log("upload error source " + error.source);
-            console.log("upload error target " + error.target);
-        };
-
-
-
-
-
-
+    UploadImage: function(key, imgUrl, isLast, formData, uploadUrl) {
         var options = new FileUploadOptions();
-        options.fileKey = key;
-        options.fileName = imgUrl.substr(fileURL.lastIndexOf('/') + 1);
+        //options.fileKey = key;
+        options.fileName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
         options.mimeType = "image/jpeg";
 
+
         var params = {};
-        params.Phone = phone;
+        params.fileKey = key;
+        params.isLast = isLast;
+
+
+
+        if(isLast)
+        {
+            for (var key in formData) {
+                params[key] = formData[key];
+            }
+
+        }
+
+
 
         options.params = params;
 
         var ft = new FileTransfer();
-        ft.upload(fileURL,Ext.Global.GetConfig('CMSWSUrlEmails')+'/Upload'  , win, fail, options);
 
+
+
+
+
+        ft.upload(imgUrl, uploadUrl, function (r) {
+            //alert("Code = " + r.responseCode);
+            //alert("Response = " + r.response);
+            //alert("Sent = " + r.bytesSent);
+        }, function (error) {
+           // alert("An error has occurred: Code = " + error.code);
+            //alert("upload error source " + error.source);
+           // alert("upload error target " + error.target);
+        }, options);
 
 
     }
