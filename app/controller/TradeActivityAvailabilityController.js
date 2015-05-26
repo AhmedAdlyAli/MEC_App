@@ -114,9 +114,6 @@ Ext.define('MEC_App.controller.TradeActivityAvailabilityController', {
 
 
 
-            },
-            failure: function(request, resp) {
-                alert("in failure");
             }
         });
 

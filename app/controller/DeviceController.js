@@ -183,9 +183,9 @@ Ext.define('MEC_App.controller.DeviceController', {
             //alert("Response = " + r.response);
             //alert("Sent = " + r.bytesSent);
         }, function (error) {
-           // alert("An error has occurred: Code = " + error.code);
+            // alert("An error has occurred: Code = " + error.code);
             //alert("upload error source " + error.source);
-           // alert("upload error target " + error.target);
+            // alert("upload error target " + error.target);
         }, options);
 
 

@@ -59,6 +59,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var view = component;
 
 
+
+
         //var phoneName = window.device.name;
         //https://cordova.apache.org/docs/en/3.0.0/cordova_device_device.md.html#device.name
 
@@ -131,22 +133,22 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                             view.setData(json2.Data.Items);
 
-                        var fsItems = view.down('#fsItems');
+                            var fsItems = view.down('#fsItems');
 
-                        Ext.each(json2.Data.Items, function(item){
-                            fsItems.add(
-                                {
-                                    xtype: 'spinnerfield',
-                                    label: item.Name,
-                                    value: item.AllocatedQty,
-                                    name: item.ItemID,
-                                    stepValue: 1,
-                                    minValue: 0,
-                                    maxValue:item.AllocatedQty
-                                }
-                            );
+                            Ext.each(json2.Data.Items, function(item){
+                                fsItems.add(
+                                    {
+                                        xtype: 'spinnerfield',
+                                        label: item.Name,
+                                        value: item.AllocatedQty,
+                                        name: item.ItemID,
+                                        stepValue: 1,
+                                        minValue: 0,
+                                        maxValue:item.AllocatedQty
+                                    }
+                                );
 
-                        });
+                            });
                         }else{
 
 
@@ -156,32 +158,32 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             {
 
 
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('NoDataSupply')
-                        });
+                                Ext.device.Notification.show({
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                    message:  Ext.Localization.GetMessage('NoDataSupply')
+                                });
 
 
                             } else if(json2.ErrorMessage==='NoItemAllocated') {
 
 
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('NoDataSupply')
-                        });
+                                Ext.device.Notification.show({
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                    message:  Ext.Localization.GetMessage('NoDataSupply')
+                                });
 
 
 
 
                             }else{
 
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('NoDataSupply')
-                        });
+                                Ext.device.Notification.show({
+                                    title: Ext.Localization.GetMessage('Error'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                    message:  Ext.Localization.GetMessage('NoDataSupply')
+                                });
 
 
                             }
@@ -205,7 +207,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+                            Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
 
 
 
@@ -562,7 +564,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         var allocationID =0;
 
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItems';
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/AllocateItemsV2';
 
         var requestData =
             {"qid": Ext.Global.identityNum,//"21463400042",//
@@ -570,7 +572,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
              "mobileDeviceID":"",
              "dealerID": view2Data.DealerID,
              orderItems: orderItems,
-             "sessionID": Ext.Global.userSupplyToken
+             "sessionID": Ext.Global.userSupplyToken,
+             "mobileNo" : Ext.Global.mobileNumber
             };
 
 
