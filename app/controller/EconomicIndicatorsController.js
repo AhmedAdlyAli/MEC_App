@@ -41,42 +41,6 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;//me.getMyBusinessView();
 
         var cat = view.getData().cat;
-        var catName='';
-
-        switch(cat) {
-            case 1:
-
-                if(Ext.Global.LanguageFlag==='ar')
-                    catName = 'شهري';
-                else
-                    catName = 'Monthly';
-
-                break;
-
-            case 2:
-
-                if(Ext.Global.LanguageFlag==='ar')
-                    catName = 'ربعي';
-                else
-                    catName = 'Quarterly';
-
-                break;
-
-            case 3:
-
-                if(Ext.Global.LanguageFlag==='ar')
-                    catName = 'سنوي';
-                else
-                    catName = 'Yearly';
-
-                break;
-
-
-
-            default:
-            break;
-        }
-
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -86,7 +50,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
         //console.log(view.getData());
 
-        var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&EconomicINdocatorsCatory='+cat;
+        var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&isCurrent=true&periodType='+cat;
 
         //console.log(url);
 
@@ -172,7 +136,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
 
 
-        view.down('#lblPercentOfChange').setHtml(data.ChangePercent);
+        view.down('#lblPercentOfChange').setHtml(data.ChangePercent+'%');
 
 
         view.down('#lblLastUpdate2').setHtml(Ext.Global.FormatJsonDate(data.LastUpdated));

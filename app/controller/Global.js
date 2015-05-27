@@ -95,7 +95,7 @@ Ext.define('MEC_App.controller.Global', {
 
             //SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
-            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
+            CMSWSUrl : 'http://192.168.1.107/ws/api',
 
 
             //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
@@ -366,7 +366,7 @@ Ext.define('MEC_App.controller.Global', {
         Ext.Ajax.request({
 
             url : ajaxAndPagingParams.url+'&pageSize='+ajaxAndPagingParams.pageSize*2+'&pageIndex=0',
-            method : 'Get',
+            method : ajaxAndPagingParams.method ? ajaxAndPagingParams.method : 'Get',
             success : function (response) {
 
                 var json = Ext.util.JSON.decode(response.responseText);

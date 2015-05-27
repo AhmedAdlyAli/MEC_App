@@ -1183,21 +1183,18 @@ background: url(../images/toplogo.png) no-repeat center top;
     display:block
 }
 
-.arrow-up{
-    background: url(../images/ind-up.png) no-repeat 75% center;
+.arrow-up,
+.arrow-down {
+    background: url(../images/ind-up.png) no-repeat 90% center;
     height:54px;
     padding: 18px 0 0 0;
     text-align:left;
+    direction: ltr;
 
 }
 
-
 .arrow-down{
-    background: url(../images/ind-down.png) no-repeat 75% center;
-    height:54px;
-    padding: 18px 0 0 0;
-    text-align:left;
-
+    background: url(../images/ind-down.png) no-repeat 90% center;
 }
 
 .ind-details-item{
@@ -1245,20 +1242,18 @@ background: url(../images/toplogo.png) no-repeat center top;
 }
 
 
-.arrow-up-details{
-    background: url(../images/ind-up.png) no-repeat 61% center;
+.arrow-up-details,
+.arrow-down-details {
+    background: url(../images/ind-up.png) no-repeat 62% center;
     height:54px;
     padding: 18px 0 0 0;
     text-align:center;
+    direction: ltr;
 }
 
 
 .arrow-down-details{
-    background: url(../images/ind-down.png) no-repeat 61% center;
-    height:54px;
-    padding: 18px 0 0 0;
-    text-align:center;
-
+    background: url(../images/ind-down.png) no-repeat 62% center;
 }
 
 
@@ -1831,6 +1826,33 @@ background: url(../images/toplogo.png) no-repeat center top;
     color: #682048;
 }
 
+.x-field-search {
+    .x-field-input {
+        &:before {
+            right: .5em;
+            left: auto;
+        }
+
+        .x-form-field {
+            margin-left: 0;
+            margin-right: 0;
+            padding: .4em 1.8em .4em .4em;
+        }
+    }
+}
+
+.x-field-clearable {
+    .x-field-input {
+        padding-left: 2.2em;
+        padding-right: 0;
+        
+        .x-clear-icon {
+            left: -0.5em;
+            right: auto;
+        }
+    }
+}
+
 .ltr-cls {
     direction:ltr !important;
 
@@ -2124,6 +2146,32 @@ background: url(../images/toplogo.png) no-repeat center top;
     .supply-text {
         a {
             padding: 0;
+        }
+    }
+    
+    .x-field-search {
+        .x-field-input {
+            &:before {
+                left: .5em;
+                right: auto;
+            }
+            
+            .x-form-field {
+                margin-left: 0;
+                padding: .4em .4em .4em 1.4em;
+            }
+        }
+    }
+    
+    .x-field-clearable {
+        .x-field-input {
+            padding-right: 2.2em;
+            padding-left: 0;
+            
+            .x-clear-icon {
+                right: -0.5em;
+                left: auto;
+            }
         }
     }
 

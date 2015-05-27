@@ -26,14 +26,14 @@
         "generateArchitectVersion": true,
         "projectHasEnabledWebServer": true,
         "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
+            "value": "emulate",
+            "display": "Native Build & Emulate"
         },
         "lockUrlPrefix": true,
         "installStatus": "Not Installed"
     },
     "xdsVersion": "3.2.0",
-    "xdsBuild": 75,
+    "xdsBuild": 193,
     "schemaVersion": 1,
     "upgradeVersion": 310000000001,
     "framework": "touch24",

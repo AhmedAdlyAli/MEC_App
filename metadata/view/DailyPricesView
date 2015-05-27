@@ -11,6 +11,7 @@
         ],
         "designer|userAlias": "DailyPricesView",
         "designer|userClassName": "DailyPricesView",
+        "id": null,
         "itemId": "DailyPricesView",
         "layout": "fit",
         "scrollable": null
@@ -72,6 +73,23 @@
                     },
                     "designerId": "729a98da-66c9-42f5-908b-c008433414d5",
                     "cn": [
+                        {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "itemId": "mysearchfield",
+                                "label": null,
+                                "margin": 10,
+                                "placeHolder": "بحث"
+                            },
+                            "name": "MySearchField",
+                            "designerId": "1c867b0d-db3d-4e0f-9076-7c90fc5573f3"
+                        },
                         {
                             "type": "Ext.Panel",
                             "reference": {
@@ -135,6 +153,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "deferEmptyText": false,
+                                "emptyText": "لايوجد بيانات",
                                 "height": "100%",
                                 "id": null,
                                 "itemCls": "grid-row",
@@ -202,6 +222,23 @@
                     "designerId": "9f39846c-ba0c-49d9-bfce-b9f4b8ba6faa",
                     "cn": [
                         {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "itemId": "mysearchfield1",
+                                "label": null,
+                                "margin": 10,
+                                "placeHolder": "بحث"
+                            },
+                            "name": "MySearchField1",
+                            "designerId": "c91c0614-6782-44ce-8e82-30a029908a8a"
+                        },
+                        {
                             "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
@@ -264,10 +301,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "deferEmptyText": false,
+                                "emptyText": "لايوجد بيانات",
                                 "height": "100%",
                                 "id": null,
                                 "itemCls": "grid-row",
-                                "itemId": "lstPrices",
+                                "itemId": "lstPrices1",
                                 "layout|flex": 1,
                                 "scrollToTopOnRefresh": false,
                                 "store": null
@@ -331,6 +370,23 @@
                     "designerId": "a2aeab2f-d467-47fe-83dc-b61cd05d6e2e",
                     "cn": [
                         {
+                            "type": "Ext.field.Search",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "docked": "top",
+                                "itemId": "mysearchfield2",
+                                "label": null,
+                                "margin": 10,
+                                "placeHolder": "بحث"
+                            },
+                            "name": "MySearchField2",
+                            "designerId": "8e7b2e84-74fb-4274-9b4e-ccae090e1a34"
+                        },
+                        {
                             "type": "Ext.Panel",
                             "reference": {
                                 "name": "items",
@@ -393,10 +449,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "deferEmptyText": false,
+                                "emptyText": "لايوجد بيانات",
                                 "height": "100%",
                                 "id": null,
                                 "itemCls": "grid-row",
-                                "itemId": "lstPrices",
+                                "itemId": "lstPrices2",
                                 "layout|flex": 1,
                                 "scrollToTopOnRefresh": false,
                                 "store": null

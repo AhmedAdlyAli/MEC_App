@@ -20,6 +20,7 @@ Ext.define('MEC_App.view.DailyPricesView', {
     requires: [
         'Ext.Label',
         'Ext.tab.Panel',
+        'Ext.field.Search',
         'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate',
@@ -53,6 +54,13 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         layout: 'vbox',
                         items: [
                             {
+                                xtype: 'searchfield',
+                                docked: 'top',
+                                itemId: 'mysearchfield',
+                                margin: 10,
+                                placeHolder: 'بحث'
+                            },
+                            {
                                 xtype: 'panel',
                                 cls: 'grid-header',
                                 docked: 'top',
@@ -79,6 +87,8 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 flex: 1,
                                 height: '100%',
                                 itemId: 'lstPrices',
+                                deferEmptyText: false,
+                                emptyText: 'لايوجد بيانات',
                                 itemCls: 'grid-row',
                                 itemTpl: [
                                     '',
@@ -102,6 +112,13 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         itemId: 'FruitsContainer',
                         layout: 'vbox',
                         items: [
+                            {
+                                xtype: 'searchfield',
+                                docked: 'top',
+                                itemId: 'mysearchfield1',
+                                margin: 10,
+                                placeHolder: 'بحث'
+                            },
                             {
                                 xtype: 'panel',
                                 cls: 'grid-header',
@@ -128,7 +145,9 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 xtype: 'list',
                                 flex: 1,
                                 height: '100%',
-                                itemId: 'lstPrices',
+                                itemId: 'lstPrices1',
+                                deferEmptyText: false,
+                                emptyText: 'لايوجد بيانات',
                                 itemCls: 'grid-row',
                                 itemTpl: [
                                     '',
@@ -152,6 +171,13 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         itemId: 'FishContainer',
                         layout: 'vbox',
                         items: [
+                            {
+                                xtype: 'searchfield',
+                                docked: 'top',
+                                itemId: 'mysearchfield2',
+                                margin: 10,
+                                placeHolder: 'بحث'
+                            },
                             {
                                 xtype: 'panel',
                                 cls: 'grid-header',
@@ -178,7 +204,9 @@ Ext.define('MEC_App.view.DailyPricesView', {
                                 xtype: 'list',
                                 flex: 1,
                                 height: '100%',
-                                itemId: 'lstPrices',
+                                itemId: 'lstPrices2',
+                                deferEmptyText: false,
+                                emptyText: 'لايوجد بيانات',
                                 itemCls: 'grid-row',
                                 itemTpl: [
                                     '',
