@@ -102,7 +102,23 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.Global.isLogged = true;
                     Ext.Global.userToken = json.token;
 
-                    //console.log(json);
+                    console.log(json);
+
+
+                    if( !json.listOfMecContactInfoIo.contact[0].identityNum || json.listOfMecContactInfoIo.contact[0].identityNum==='')
+                        {
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons:[Ext.Localization.GetMessage('OK')],
+                                message: Ext.Localization.GetMessage('errConnection')
+                            });
+
+
+                            Ext.AnimationHelper.HideLoading();
+
+
+                        }else{
 
 
                     Ext.Global.identityType = json.listOfMecContactInfoIo.contact[0].identityType;
@@ -113,6 +129,11 @@ Ext.define('MEC_App.controller.LoginController', {
 
                     Ext.Global.identityNameAr = json.listOfMecContactInfoIo.contact[0].fullNameACalc;
                     Ext.Global.identityNameEn = json.listOfMecContactInfoIo.contact[0].fullNameECalc;
+
+                    Ext.Global.mobileNumber = json.listOfMecContactInfoIo.contact[0].phoneNumber;
+
+
+
 
 
 
@@ -146,6 +167,11 @@ Ext.define('MEC_App.controller.LoginController', {
                         Ext.Viewport.getActiveItem().reset();// redirect to home
 
                     }
+
+
+                        }
+
+
 
 
                 }else{

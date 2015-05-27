@@ -15,7 +15,7 @@ var localeAr =
 		{
 			itemId:"ConsumerServiceView",
 			items: [
-				{Name:"ابلاغ عن شكوى", Url:"ComplaintsView", RequireLogin:false, Icon:"ico-complaints.png"},
+				{Name:"ابلاغ عن شكوى", Url:"ComplaintsView", RequireLogin:true, Icon:"ico-complaints.png"},
 				{Name:"خدمات التموين", Url:"SupplyServiceListing", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
