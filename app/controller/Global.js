@@ -95,7 +95,7 @@ Ext.define('MEC_App.controller.Global', {
 
             //SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
-            CMSWSUrl : 'http://192.168.1.107/ws/api',
+            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
 
 
             //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
