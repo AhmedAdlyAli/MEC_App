@@ -231,13 +231,48 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
                                         var isLast = false;
                                         if(i===files.length-1) isLast = true;
-                                        Ext.DeviceController.UploadImage(ran,files[i],isLast,formData,uploadUrl);
+                                        Ext.DeviceController.UploadImage(ran,files[i],isLast,formData,uploadUrl,'FeedbackSubmitted');
 
                                     }
 
                                 }else{
+                                    //alert('go');
+                                    //Ext.DeviceController.UploadImage(ran,'/'+img1.getSrc(),true,formData,uploadUrl);
 
-                                    Ext.DeviceController.UploadImage(ran,img1.getSrc(),true,formData,uploadUrl);
+                                    var requestData = {
+                                        "upload": false
+                                    };
+
+                                    for (var key in formData) {
+                                        requestData[key] = formData[key];
+                                    }
+
+                                    Ext.Ajax.request({
+                                        url : uploadUrl,
+                                        method : 'POST',
+                                        jsonData :requestData,
+                                        form: frm.element.dom ,
+                                        success : function (response) {
+                                            //console.log(response.responseText);
+
+                                            Ext.AnimationHelper.HideLoading();
+
+                                            Ext.device.Notification.show({
+                                                title: Ext.Localization.GetMessage('Message'),
+                                                buttons:[Ext.Localization.GetMessage('OK')],
+                                                message: Ext.Localization.GetMessage('FeedbackSubmitted'),
+                                                callback: function(button) {
+
+                                                    //return user to home page
+
+                                                    Ext.Viewport.getActiveItem().reset();
+
+                                                }
+                                            });
+
+
+                                        }
+                                    });
 
                                 }
 
@@ -247,25 +282,6 @@ Ext.define('MEC_App.view.FeedbackFormView', {
 
 
 
-
-                                Ext.defer(function(){
-                                    Ext.AnimationHelper.HideLoading();
-
-                                    Ext.device.Notification.show({
-                                        title: Ext.Localization.GetMessage('Message'),
-                                        buttons:[Ext.Localization.GetMessage('OK')],
-                                        message: Ext.Localization.GetMessage('ComplaintsConfirmation'),
-                                        callback: function(button) {
-
-                                            //return user to home page
-
-                                            Ext.Viewport.getActiveItem().reset();
-
-                                        }
-                                    });
-
-
-                                },2000);
 
 
 

@@ -1100,7 +1100,7 @@ var localeEn =
 		errDeliveryMethod:'Please choose the Delivery Method \n',
 		cantSubmitCR:'This establishment doesn\'t have Commercial Registeration',
 		cantSubmitCP:'This establishment doesn\'t have Commercial Permit',
-		FeedbackSubmitted:'Thanks for sending your suggesstion',
+		FeedbackSubmitted:'Thanks for sending your Feedback',
 		Thanks:'Thanks',
 		ErrNocrcp:"Sorry, this reserved name is not associated with an establishment yet",
 		errShopName:'Please enter shop name\n',

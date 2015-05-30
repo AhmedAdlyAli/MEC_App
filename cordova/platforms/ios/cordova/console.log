@@ -2168,3 +2168,156 @@
 }
 2015-05-30 10:52:59.595 MEC_APP[3754:126161] THREAD WARNING: ['FileTransfer'] took '158615.506104' ms. Plugin should use a background thread.
 2015-05-30 10:52:59.600 MEC_APP[3754:126179] void SendDelegateMessage(NSInvocation *): delegate (webView:decidePolicyForNavigationAction:request:frame:decisionListener:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-05-30 11:01:35.266 MEC_APP[4786:134638] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/9FE1F6DC-28E2-40D8-96AC-75995A6B0B5F/Library/Cookies/Cookies.binarycookies
+2015-05-30 11:01:35.332 MEC_APP[4786:134638] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-30 11:01:35.332 MEC_APP[4786:134638] Multi-tasking -> Device: YES, App: YES
+2015-05-30 11:01:35.334 MEC_APP[4786:134638] Unlimited access to network resources
+2015-05-30 11:01:35.412 MEC_APP[4786:134638] [CDVTimer][file] 1.014054ms
+2015-05-30 11:01:35.413 MEC_APP[4786:134638] [CDVTimer][TotalPluginStartup] 1.219034ms
+2015-05-30 11:01:35.485 MEC_APP[4786:134638] Resetting plugins due to page load.
+2015-05-30 11:01:35.753 MEC_APP[4786:134638] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/9DBD05DC-B34D-421C-B4C0-450B74F77DD7/MEC_APP.app/www/index.html
+2015-05-30 11:02:09.562 MEC_APP[5541:136345] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/42F49EA1-BA95-4726-8081-B6CD6765F79B/Library/Cookies/Cookies.binarycookies
+2015-05-30 11:02:09.633 MEC_APP[5541:136345] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-30 11:02:09.633 MEC_APP[5541:136345] Multi-tasking -> Device: YES, App: YES
+2015-05-30 11:02:09.635 MEC_APP[5541:136345] Unlimited access to network resources
+2015-05-30 11:02:09.718 MEC_APP[5541:136345] [CDVTimer][file] 0.818968ms
+2015-05-30 11:02:09.718 MEC_APP[5541:136345] [CDVTimer][TotalPluginStartup] 0.977039ms
+2015-05-30 11:02:09.791 MEC_APP[5541:136345] Resetting plugins due to page load.
+2015-05-30 11:02:10.083 MEC_APP[5541:136345] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/12671F58-A41C-4F69-9334-F3851B03540C/MEC_APP.app/www/index.html
+2015-05-30 11:02:45.850 MEC_APP[5541:136345] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:02:50.656 MEC_APP[5541:136345] Error opening file /resources/images/attach-default.png: Error Domain=NSCocoaErrorDomain Code=260 "The operation couldn’t be completed. (Cocoa error 260.)" UserInfo=0x7b0402c0 {NSFilePath=/resources/images/attach-default.png, NSUnderlyingError=0x7b04b550 "The operation couldn’t be completed. No such file or directory"}
+2015-05-30 11:02:50.657 MEC_APP[5541:136345] FileTransferError {
+    code = 1;
+    source = "/resources/images/attach-default.png";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:03:03.174 MEC_APP[5541:136345] THREAD WARNING: ['FileTransfer'] took '12526.648193' ms. Plugin should use a background thread.
+2015-05-30 11:03:03.176 MEC_APP[5541:136357] void SendDelegateMessage(NSInvocation *): delegate (webView:decidePolicyForNavigationAction:request:frame:decisionListener:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2015-05-30 11:33:53.232 MEC_APP[6956:153315] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/BD8E657B-7F90-4C1C-B702-5797DDD90B8D/Library/Cookies/Cookies.binarycookies
+2015-05-30 11:33:53.291 MEC_APP[6956:153315] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-30 11:33:53.291 MEC_APP[6956:153315] Multi-tasking -> Device: YES, App: YES
+2015-05-30 11:33:53.293 MEC_APP[6956:153315] Unlimited access to network resources
+2015-05-30 11:33:53.364 MEC_APP[6956:153315] [CDVTimer][file] 0.946999ms
+2015-05-30 11:33:53.364 MEC_APP[6956:153315] [CDVTimer][TotalPluginStartup] 1.192987ms
+2015-05-30 11:33:53.429 MEC_APP[6956:153315] Resetting plugins due to page load.
+2015-05-30 11:33:53.709 MEC_APP[6956:153315] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/CCD46B6D-F04F-46E4-8A53-D6FAEF33130D/MEC_APP.app/www/index.html
+2015-05-30 11:34:26.540 MEC_APP[6956:153315] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:35:41.018 MEC_APP[6956:154216] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/BD8E657B-7F90-4C1C-B702-5797DDD90B8D/tmp/cdv_photo_016.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:35:41.018 MEC_APP[6956:154216] File Transfer Error: The request timed out.
+2015-05-30 11:39:23.385 MEC_APP[6956:153315] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:39:51.097 MEC_APP[6956:153315] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:41:01.421 MEC_APP[6956:156420] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/BD8E657B-7F90-4C1C-B702-5797DDD90B8D/tmp/cdv_photo_017.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:41:01.423 MEC_APP[6956:156420] File Transfer Error: The request timed out.
+2015-05-30 11:42:57.196 MEC_APP[7660:158827] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/213E0D31-54E5-4B1B-A219-A78F32F64EB2/Library/Cookies/Cookies.binarycookies
+2015-05-30 11:42:57.291 MEC_APP[7660:158827] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-30 11:42:57.292 MEC_APP[7660:158827] Multi-tasking -> Device: YES, App: YES
+2015-05-30 11:42:57.293 MEC_APP[7660:158827] Unlimited access to network resources
+2015-05-30 11:42:57.369 MEC_APP[7660:158827] [CDVTimer][file] 2.040029ms
+2015-05-30 11:42:57.369 MEC_APP[7660:158827] [CDVTimer][TotalPluginStartup] 2.196968ms
+2015-05-30 11:42:57.422 MEC_APP[7660:158827] Resetting plugins due to page load.
+2015-05-30 11:42:57.734 MEC_APP[7660:158827] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/8A7F2C92-FC57-4C7E-8160-B78624AAC0D4/MEC_APP.app/www/index.html
+2015-05-30 11:43:07.605 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:43:11.418 MEC_APP[7660:158827] THREAD WARNING: ['ProgressIndicator'] took '17.970215' ms. Plugin should use a background thread.
+2015-05-30 11:43:13.421 MEC_APP[7660:158827] THREAD WARNING: ['Notification'] took '19.381836' ms. Plugin should use a background thread.
+2015-05-30 11:43:35.697 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:44:26.851 MEC_APP[7660:158827] Warning: Attempt to present <UIAlertController: 0x7cf65ec0>  on <MainViewController: 0x7a04a830> which is already presenting <UIAlertController: 0x79e69f30>
+2015-05-30 11:44:46.478 MEC_APP[7660:159599] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/213E0D31-54E5-4B1B-A219-A78F32F64EB2/tmp/cdv_photo_018.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:44:46.478 MEC_APP[7660:159599] File Transfer Error: The request timed out.
+2015-05-30 11:46:21.147 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:47:43.692 MEC_APP[7660:161086] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/213E0D31-54E5-4B1B-A219-A78F32F64EB2/tmp/cdv_photo_019.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:47:43.694 MEC_APP[7660:161086] File Transfer Error: The request timed out.
+2015-05-30 11:47:58.747 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:49:07.921 MEC_APP[7660:161990] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/213E0D31-54E5-4B1B-A219-A78F32F64EB2/tmp/cdv_photo_020.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:49:07.923 MEC_APP[7660:161990] File Transfer Error: The request timed out.
+2015-05-30 11:58:40.245 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:59:25.612 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 11:59:53.121 MEC_APP[7660:166586] FileTransferError {
+    body = "";
+    code = 3;
+    "http_status" = 0;
+    source = "file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/213E0D31-54E5-4B1B-A219-A78F32F64EB2/tmp/cdv_photo_021.jpg";
+    target = "http://192.168.1.107/ws/api";
+}
+2015-05-30 11:59:53.122 MEC_APP[7660:166586] File Transfer Error: The request timed out.
+2015-05-30 12:16:10.211 MEC_APP[7660:158827] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 12:46:14.526 MEC_APP[8569:200351] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/3B8164D6-95A1-4A06-A4A0-AB205B579FC6/Library/Cookies/Cookies.binarycookies
+2015-05-30 12:46:14.812 MEC_APP[8569:200351] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-30 12:46:14.812 MEC_APP[8569:200351] Multi-tasking -> Device: YES, App: YES
+2015-05-30 12:46:14.826 MEC_APP[8569:200351] Unlimited access to network resources
+2015-05-30 12:46:15.057 MEC_APP[8569:200351] [CDVTimer][file] 2.242982ms
+2015-05-30 12:46:15.057 MEC_APP[8569:200351] [CDVTimer][TotalPluginStartup] 2.969980ms
+2015-05-30 12:46:15.201 MEC_APP[8569:200351] Resetting plugins due to page load.
+2015-05-30 12:46:15.567 MEC_APP[8569:200351] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/B6ED0FE1-C89F-4527-9B95-0E70013356EE/MEC_APP.app/www/index.html
+2015-05-30 12:46:16.371 MEC_APP[8569:200351] [{"Id":229,"NewsTitle":"وزارة الاقتصاد تعلن عن استدعاء هوندا موتور سيكل  طراز  NC700/750  موديل 2014","NewsDescription":"أعلنت وزارة الاقتصاد والتجارة بالتعاون مع دوماسكو  وكيل هوندا موتور سيكل عن استدعاء دراجة هوندا طراز NC700/750   موديل2014 ، لوجود خلل في قراءة عداد السرعة والوقود ، ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين . \r\nوأكدت الوزارة أنه سيتم التنسيق مع وكيل الشركة لمتابعة عمليات الصيانة والتصليح والتواصل مع العملاء للتأكد من تنفيذ الإجراءات وتصحيح الخلل والعيوب في السيارات التي تشملها العيوب .\r\n","NewsBrief":"أعلنت وزارة الاقتصاد والتجارة بالتعاون مع دوماسكو  وكيل هوندا موتور سيكل عن استدعاء دراجة هوندا طراز NC700/750   موديل2014 ، ","NewsDate":"/Date(1432760400000+0300)/","NewsLink":"http://mec.gov.qa/","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"},{"Id":230,"NewsTitle":"وزارة الاقتصاد تؤكد على حق غير الوكيل في توريد السيارات الى الاسواق المحلية","NewsDescription":"في اطار مبادرة وزارة الاقتصاد والتجارة وحرصها على ضبط الاسواق والتنظيم ودعم المنافسة العادلة في قطاع السيارات ومن منطلق حرصها على ضمان حقوق المستهلكين، تود الوزارة توضيح حقيقة الحماية القانونية التي يتمتع بها وكلاء السيارات وفقا لأحكام القانون رقم 8 لسنة 2002 بشأن تنظيم أعمال الوكلاء التجاريين وذلك لرفع اي التباس لدى الجهات المعنية والمستهلكين بهذا القانون، خاصة فيما يتعلق بمدى احقية غير الوكلاء في توريد السيارات الجديدة من خارج حدود الدولة.\r\n\r\nحيث تم في القانون رقم 8 لسنة 2002 والخاص بتنظيم اعمال الوكلاء التجاريين فتح المجال امام غير الوكيل لتوريد السلعة محل الوكالة، وذلك طبقا للمادة 4 منه والتي تنص على التالي: \"يجوز للتجار المقيدين في سجل المستوردين ان يستوردوا السلع المشمولة في الوكالة، ولو كان لهذه السلع وكلاء محليون، وللوزير ان يضع الضوابط والشروط المتعلقة بمبدأ المعاملة بالمثل بالنسبة للدول المصدرة لتلك السلع.\"\r\n\r\nوبالنظر في القانون المذكور اعلاه، يتبين انه بالنسبة لماركات السيارات التي يوجد لها وكيل محلي، فإن امتياز الوكيل المذكور يقتصر على كونه مخولا لوحده بالتوريد من عند الشركة الصانعة وفقا لما ينص عليه عقد الوكالة ودون ان يمنع ذلك بقية تجار السيارات المقيدين بسجل المستوردين من توريد السيارات الحاملة لذات الماركة التي يستوردها الوكيل من اي جهة أخرى غير الشركة الصانعة، سواء كانت وكيل تلك الشركة بدولة اخرى او موزع سيارات معتمد او مستقل.\r\nلقد شدد القانون على حق المستهلكين في معرفة نوع الضمان وطبيعته والإعلان عن المواصفات الكاملة للسيارة اضافة الى وان المعارض التي لا تلتزم بتلك المواد سيتم معاقبتها بموجب القانون رقم 8 لسنة 2008 بشأن حماية المستهلك، كما شدد القانون على عدم التضييق على المعارض في استيراد السيارات ان كان من قبل الوكلاء المحليين او الشركات المصنعة سواء كان ذلك بالفعل او بالتعرض المقصود او بالدعاية الكاذبة حيث ان من حق أي شخص ممارسة نشاطه المشروع في توريد وبيع السيارات الجديدة طالما لم يخالف قوانين الدولة وانظمتها.\r\n \r\n","NewsBrief":"في اطار مبادرة وزارة الاقتصاد والتجارة وحرصها على ضبط الاسواق والتنظيم ودعم المنافسة العادلة في قطاع السيارات ومن منطلق حرصها على ضمان حقوق المستهلكين، تود الوزارة توضيح حقيقة الحماية القانونية التي يتمتع بها وكلاء السيارات وفقا لأحكام القانون رقم 8 لسنة 2002 بشأن تنظيم أعمال الوكلاء التجاريين.","NewsDate":"/Date(1432760400000+0300)/","NewsLink":"http://mec.gov.qa/ar/news-and-media/news/Pages/default.aspx?NewsStartDate=2012/05/28&NewsEndtDate=2015/05/30&SelectedFilter=DateRange","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"},{"Id":231,"NewsTitle":"وزارة الاقتصاد والتجارة تقوم بحملة تفتيشية مفاجئة على محلات بيع الكمبيوتر","NewsDescription":"قامت وزارة الاقتصاد والتجارة بحملة تفتيشية مفاجئة بمنطقة المطار العتيق، شملت محلات تجارية لأنشطة بيع وخدمات الكمبيوتر، لمراقبة مدى التزام هذه المحال بأنظمة وقوانين حقوق الملكية الفكرية. \r\nوأسفرت هذه الحملة التفتيشية التي قام بها مفتشو إدارة حماية حقوق الملكية الفكرية \r\nعن ضبط وتحرير مخالفة لمحل بيع وخدمات الكمبيوتر، لقيامه ببيع برامج كمبيوتر مقلدة ومنسوخة على الأجهزة (ويندوز 7 ومايكروسوفت أوفيس2007). \r\nوتأتي هذه الحملات التفتيشية المستمرة والمفاجئة في إطار حرص وزارة الاقتصاد والتجارة على مراقبة الأسواق والأنشطة التجارية بالدولة، وبهدف الكشف عن أى منتجات مقلدة، وذلك حفاظاً على حقوق الملكية الفكرية.\r\nوبدورها تؤكد وزارة الاقتصاد والتجارة بأنها ستكون حازمة في وجه كل من يتهاون في القيام بالتزاماته المنصوص عليها بقوانين حماية الملكية الفكرية، وستحيل كل من يخالف القوانين إلى الجهات المختصة لاتخاذ الإجراءات المناسبة ضده.\r\n","NewsBrief":"قامت وزارة الاقتصاد والتجارة بحملة تفتيشية مفاجئة بمنطقة المطار العتيق، شملت محلات تجارية لأنشطة بيع وخدمات الكمبيوتر، لمراقبة مدى التزام هذه المحال بأنظمة وقوانين حقوق الملكية الفكرية. ","NewsDate":"/Date(1432760400000+0300)/","NewsLink":"http://mec.gov.qa/ar/news-and-media/news/Pages/default.aspx?NewsStartDate=2012/05/28&NewsEndtDate=2015/05/30&SelectedFilter=DateRange","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"}]
+2015-05-30 12:47:09.797 MEC_APP[8569:200351] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-30 12:47:23.671 MEC_APP[8569:200351] THREAD WARNING: ['ProgressIndicator'] took '18.392090' ms. Plugin should use a background thread.
+2015-05-30 12:47:25.663 MEC_APP[8569:200351] THREAD WARNING: ['Notification'] took '10.510010' ms. Plugin should use a background thread.
+2015-05-30 12:47:27.072 MEC_APP[8569:200939] File Transfer Finished with response code 200
+2015-05-30 17:16:40.385 MEC_APP[8569:235475] Terminating since there is no system app.
+2015-05-31 01:33:32.053 MEC_APP[10608:274862] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/8F9CF437-101A-48D1-9756-98515977CE72/Library/Cookies/Cookies.binarycookies
+2015-05-31 01:33:32.378 MEC_APP[10608:274862] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-31 01:33:32.379 MEC_APP[10608:274862] Multi-tasking -> Device: YES, App: YES
+2015-05-31 01:33:32.391 MEC_APP[10608:274862] Unlimited access to network resources
+2015-05-31 01:33:32.779 MEC_APP[10608:274862] [CDVTimer][file] 3.535986ms
+2015-05-31 01:33:32.779 MEC_APP[10608:274862] [CDVTimer][TotalPluginStartup] 3.742993ms
+2015-05-31 01:33:33.031 MEC_APP[10608:274862] Resetting plugins due to page load.
+2015-05-31 01:33:33.453 MEC_APP[10608:274862] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/0F68A7A7-04F0-4AE1-9476-58CD171C4829/MEC_APP.app/www/index.html
+2015-05-31 01:33:34.323 MEC_APP[10608:274862] [{"Id":242,"NewsTitle":"وزارة الاقتصاد تغلق وكالة سيارات شهيرة والموزعين التابعين لها بسبب الغش التجاري","NewsDescription":"أعلنت وزارة الاقتصاد والتجارة عن تنفيذها الإغلاق الإداري للمعرض الرئيسي لإحدى وكالات بيع السيارات وموزعيها. هذا وتم تحديد مدة الاغلاق بشهر للوكيل وأسبوعين لأحد مراكز التوزيع وأسبوع لمركز التوزيع الآخر، وذلك بعد تمكن مأمورو الضبط القضائي بوزارة الاقتصاد والتجارة  خلال الحملات الرقابية والتفتيشية التي قامت  بها الوزارة من اكتشاف وضبط ارتكاب الوكالة  لمخالفات وتجاوزات تمثلت في بيع سيارات جديدة للمستهلكين دون ابلاغهم  بأنها تعرضت لعمليات إصلاح وطلاء بسبب تعرضها لحوادث ، الامر الذي يدخل في وصف السلعة أو الاعلان عنها أو عرضها بأسلوب يحتوي على بيانات كاذبة أو خادعة طبقاً  للمادة رقم 7 من القانون رقم 8 لسنة 2008 بشأن حماية المستهلك . وعليه تم تنفيذ الإغلاق الإداري للمعرض الرئيسي  للوكالة الكائن بشارع المطار لمدة شهر والمعارض الرئيسية للموزعين التابعين لها والكائنة بطريق سلوى  لمدة أسبوعين لاحد مراكز التوزيع وأسبوع لمركز التوزيع الاخر، وذلك لمخالفتهم للمادة رقم 7 من القانون رقم 8 لسنة 2008 والتي تنص على أن \" يلتزم المزود لدى عرض أي سلعة للتداول أن يبين على غلافها أو عبوتها ، وبشكل واضح نوع السلعة وطبيعتها ومكوناتها ، وكافة البيانات المتعلقة بها ، وذلك على النحو الذي تحدده اللائحة التنفيذية لهذا القانون وإذا كان استعمال السلعة ينطوي على خطورة وجب التنبيه إلى ذلك بشكل ظاهر ، ويحظر على المزود وصف السلعة أو الإعلان عنها أو عرضها بأسلوب يحتوي على بيانات كاذبة أو خادعة\". هذا وتؤكد الوزارة انها تضع دائما في أولوياتها أن يتم تعويض جميع المتضررين من الغش التجاري قبل تنفيذ عملية الاغلاق وهو الامر الذي تم بالفعل مثلما حدث مع كافة الإغلاقات التي نفذتها الوزارة مسبقا والتي تم فيها تعويض المتضررين قبل تنفيذ عملية الاغلاق.  هذا وسيتم نشر إعلان الإغلاق الإداري على نفقة الشركة وفقا للمادة رقم (3) من القانون رقم (8) لسنه 2008 والتي تنص على أن ( ينشر هذا القرار على الموقع الإلكتروني للوزارة وفي صحيفتين يوميتين على نفقة الشركة المخالفة، كما تتحمل الشركة المخالفة جميع مصروفات التنفيذ.","NewsBrief":"أعلنت وزارة الاقتصاد والتجارة عن تنفيذها الإغلاق الإداري للمعرض الرئيسي لإحدى وكالات بيع السيارات وموزعيها. هذا وتم تحديد مدة الاغلاق بشهر للوكيل وأسبوعين لأحد مراكز التوزيع وأسبوع لمركز التوزيع الآخر، ","NewsDate":"/Date(1432933200000+0300)/","NewsLink":"http://www.mec.gov.qa/ar/news-and-media/news/Pages/default.aspx?NewsStartDate=2012/05/30&NewsEndtDate=2015/06/01&SelectedFilter=DateRange","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"},{"Id":229,"NewsTitle":"وزارة الاقتصاد تعلن عن استدعاء هوندا موتور سيكل  طراز  NC700/750  موديل 2014","NewsDescription":"أعلنت وزارة الاقتصاد والتجارة بالتعاون مع دوماسكو  وكيل هوندا موتور سيكل عن استدعاء دراجة هوندا طراز NC700/750   موديل2014 ، لوجود خلل في قراءة عداد السرعة والوقود ، ويأتي هذا الاجراء في إطار التنسيق والمتابعة المستمرة من وزارة الاقتصاد والتجارة للتأكد من مدى التزام وتقيد وكلاء السيارات بمتابعة عيوب السيارات وتصحيحها لحماية حقوق المستهلكين . \r\nوأكدت الوزارة أنه سيتم التنسيق مع وكيل الشركة لمتابعة عمليات الصيانة والتصليح والتواصل مع العملاء للتأكد من تنفيذ الإجراءات وتصحيح الخلل والعيوب في السيارات التي تشملها العيوب .\r\n","NewsBrief":"أعلنت وزارة الاقتصاد والتجارة بالتعاون مع دوماسكو  وكيل هوندا موتور سيكل عن استدعاء دراجة هوندا طراز NC700/750   موديل2014 ، ","NewsDate":"/Date(1432760400000+0300)/","NewsLink":"http://mec.gov.qa/","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"},{"Id":230,"NewsTitle":"وزارة الاقتصاد تؤكد على حق غير الوكيل في توريد السيارات الى الاسواق المحلية","NewsDescription":"في اطار مبادرة وزارة الاقتصاد والتجارة وحرصها على ضبط الاسواق والتنظيم ودعم المنافسة العادلة في قطاع السيارات ومن منطلق حرصها على ضمان حقوق المستهلكين، تود الوزارة توضيح حقيقة الحماية القانونية التي يتمتع بها وكلاء السيارات وفقا لأحكام القانون رقم 8 لسنة 2002 بشأن تنظيم أعمال الوكلاء التجاريين وذلك لرفع اي التباس لدى الجهات المعنية والمستهلكين بهذا القانون، خاصة فيما يتعلق بمدى احقية غير الوكلاء في توريد السيارات الجديدة من خارج حدود الدولة.\r\n\r\nحيث تم في القانون رقم 8 لسنة 2002 والخاص بتنظيم اعمال الوكلاء التجاريين فتح المجال امام غير الوكيل لتوريد السلعة محل الوكالة، وذلك طبقا للمادة 4 منه والتي تنص على التالي: \"يجوز للتجار المقيدين في سجل المستوردين ان يستوردوا السلع المشمولة في الوكالة، ولو كان لهذه السلع وكلاء محليون، وللوزير ان يضع الضوابط والشروط المتعلقة بمبدأ المعاملة بالمثل بالنسبة للدول المصدرة لتلك السلع.\"\r\n\r\nوبالنظر في القانون المذكور اعلاه، يتبين انه بالنسبة لماركات السيارات التي يوجد لها وكيل محلي، فإن امتياز الوكيل المذكور يقتصر على كونه مخولا لوحده بالتوريد من عند الشركة الصانعة وفقا لما ينص عليه عقد الوكالة ودون ان يمنع ذلك بقية تجار السيارات المقيدين بسجل المستوردين من توريد السيارات الحاملة لذات الماركة التي يستوردها الوكيل من اي جهة أخرى غير الشركة الصانعة، سواء كانت وكيل تلك الشركة بدولة اخرى او موزع سيارات معتمد او مستقل.\r\nلقد شدد القانون على حق المستهلكين في معرفة نوع الضمان وطبيعته والإعلان عن المواصفات الكاملة للسيارة اضافة الى وان المعارض التي لا تلتزم بتلك المواد سيتم معاقبتها بموجب القانون رقم 8 لسنة 2008 بشأن حماية المستهلك، كما شدد القانون على عدم التضييق على المعارض في استيراد السيارات ان كان من قبل الوكلاء المحليين او الشركات المصنعة سواء كان ذلك بالفعل او بالتعرض المقصود او بالدعاية الكاذبة حيث ان من حق أي شخص ممارسة نشاطه المشروع في توريد وبيع السيارات الجديدة طالما لم يخالف قوانين الدولة وانظمتها.\r\n \r\n","NewsBrief":"في اطار مبادرة وزارة الاقتصاد والتجارة وحرصها على ضبط الاسواق والتنظيم ودعم المنافسة العادلة في قطاع السيارات ومن منطلق حرصها على ضمان حقوق المستهلكين، تود الوزارة توضيح حقيقة الحماية القانونية التي يتمتع بها وكلاء السيارات وفقا لأحكام القانون رقم 8 لسنة 2002 بشأن تنظيم أعمال الوكلاء التجاريين.","NewsDate":"/Date(1432760400000+0300)/","NewsLink":"http://mec.gov.qa/ar/news-and-media/news/Pages/default.aspx?NewsStartDate=2012/05/28&NewsEndtDate=2015/05/30&SelectedFilter=DateRange","NewsCategoryId":1,"CategoryName":"أخبار الوزارة"}]
+2015-05-31 01:33:48.647 MEC_APP[10608:274862] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-31 01:34:17.255 MEC_APP[10608:274862] THREAD WARNING: ['ProgressIndicator'] took '16.159912' ms. Plugin should use a background thread.
+2015-05-31 01:34:33.017 MEC_APP[10608:275252] Connection to assetsd was interrupted or assetsd died
+2015-05-31 01:35:40.661 MEC_APP[11304:277412] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/D407AE7B-A949-43D9-9D94-376A313D8DA3/Library/Cookies/Cookies.binarycookies
+2015-05-31 01:35:40.736 MEC_APP[11304:277412] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-31 01:35:40.737 MEC_APP[11304:277412] Multi-tasking -> Device: YES, App: YES
+2015-05-31 01:35:40.739 MEC_APP[11304:277412] Unlimited access to network resources
+2015-05-31 01:35:40.809 MEC_APP[11304:277412] [CDVTimer][file] 0.821948ms
+2015-05-31 01:35:40.809 MEC_APP[11304:277412] [CDVTimer][TotalPluginStartup] 1.405001ms
+2015-05-31 01:35:40.874 MEC_APP[11304:277412] Resetting plugins due to page load.
+2015-05-31 01:35:41.121 MEC_APP[11304:277412] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/F11AB981-18DB-4045-B3D0-68B13C3CAEB5/MEC_APP.app/www/index.html
+2015-05-31 01:36:00.951 MEC_APP[11304:277412] THREAD WARNING: ['Notification'] took '20.494873' ms. Plugin should use a background thread.
+2015-05-31 01:36:23.467 MEC_APP[11304:277412] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-31 01:38:00.669 MEC_APP[11952:279306] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/CA2BF224-6179-480A-BB96-5A5DCCB0C7B1/Library/Cookies/Cookies.binarycookies
+2015-05-31 01:38:00.754 MEC_APP[11952:279306] Apache Cordova native platform version 3.8.0 is starting.
+2015-05-31 01:38:00.755 MEC_APP[11952:279306] Multi-tasking -> Device: YES, App: YES
+2015-05-31 01:38:00.756 MEC_APP[11952:279306] Unlimited access to network resources
+2015-05-31 01:38:00.826 MEC_APP[11952:279306] [CDVTimer][file] 0.904977ms
+2015-05-31 01:38:00.826 MEC_APP[11952:279306] [CDVTimer][TotalPluginStartup] 1.091957ms
+2015-05-31 01:38:00.875 MEC_APP[11952:279306] Resetting plugins due to page load.
+2015-05-31 01:38:01.222 MEC_APP[11952:279306] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A904B97C-D392-468B-97A3-FEC1FDB42366/MEC_APP.app/www/index.html
+2015-05-31 01:38:17.908 MEC_APP[11952:279306] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-31 01:38:21.009 MEC_APP[11952:279306] THREAD WARNING: ['Notification'] took '11.839844' ms. Plugin should use a background thread.
+2015-05-31 01:38:32.859 MEC_APP[11952:279306] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-31 01:39:07.795 MEC_APP[11952:279592] File Transfer Finished with response code 200
+2015-05-31 01:58:14.705 MEC_APP[11952:279306] Can't find keyplane that supports type 5 for keyboard iPhone-PortraitChoco-PhonePad; using 3760611571_PortraitChoco_iPhone-Complex-Pad_Default
+2015-05-31 01:58:26.558 MEC_APP[11952:291314] File Transfer Finished with response code 200
+2015-05-31 01:59:01.727 MEC_APP[11952:291777] Terminating since there is no system app.
