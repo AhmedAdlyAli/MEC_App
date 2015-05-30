@@ -46,7 +46,7 @@ Ext.define('MEC_App.view.EconomicIndicatorsView', {
                 itemCls: 'item-indicator',
                 itemTpl: Ext.create('Ext.XTemplate', 
                     '<div class="tpl-indicator-1"><span>{Title}</span><br/><span class="sub-title">{Value} {[this.Translate()]}</span></div>',
-                    '    <div class="tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}</div>',
+                    '    <div class="tpl-indicator-2 {[this.CheckPercentOfChange(values.ChangePercent)]}"> {ChangePercent}%</div>',
                     {
                         CheckPercentOfChange: function(changePercent) {
                             if(changePercent>0){

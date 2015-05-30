@@ -92,6 +92,11 @@ Ext.define('MEC_App.controller.Localization', {
                                 viewItem.setPlaceHolder(item.value);
                                 viewItem.setLabel(item.value);
                             }
+
+                            if(item.xtype=='searchfield') viewItem.setPlaceHolder(item.value);
+
+                            if(item.xtype=='emptyText') viewItem.setEmptyText(item.value);
+
                             if(item.xtype=='cls') viewItem.addCls(item.value);
                             if(item.xtype=='r-cls') viewItem.removeCls(item.value);
                         }

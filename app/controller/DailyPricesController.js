@@ -27,33 +27,173 @@ Ext.define('MEC_App.controller.DailyPricesController', {
             },
             "container#FishContainer": {
                 show: 'onFishContainerShow'
+            },
+            "searchfield#mysearchfield2": {
+                action: 'onMysearchfield2Action',
+                clearicontap: 'onMysearchfield2Clearicontap'
+            },
+            "searchfield#mysearchfield1": {
+                action: 'onMysearchfield1Action',
+                clearicontap: 'onMysearchfield1Clearicontap'
+            },
+            "searchfield#mysearchfield": {
+                action: 'onMysearchfieldAction',
+                clearicontap: 'onMysearchfieldClearicontap'
             }
         }
     },
 
     onVegentsblesContainerShow: function(component, eOpts) {
-                this.GetPrices(component,1);
 
+        this.GetPrices(component,'#lstPrices',1);
 
     },
 
     onFruitsContainerShow: function(component, eOpts) {
-                this.GetPrices(component,2);
+
+        this.GetPrices(component,'#lstPrices1',2);
 
     },
 
     onFishContainerShow: function(component, eOpts) {
-                this.GetPrices(component,3);
+
+        this.GetPrices(component,'#lstPrices2',3);
 
     },
 
-    GetPrices: function(view, typeID) {
+    onMysearchfield2Action: function(textfield, e, eOpts) {
+
+        var me = this,
+            container = textfield.up('container');
+
+        if(textfield.getValue() === ""){
+            if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){
+                me.GetPrices(container,'#lstPrices2', 3);
+            }
+            else {
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Message'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('ErrSearchKeyword')
+                });
+            }
+        }
+        else {
+            var searchString = textfield.getValue();
+            this.SearchPrices(container,'#lstPrices2', 3, searchString);
+        }
+
+    },
+
+    onMysearchfield2Clearicontap: function(textfield, e, eOpts) {
+
+        container = textfield.up('container');
+
+        if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){
+            this.GetPrices(container,'#lstPrices2', 3);
+        }
+        else {
+            return;
+        }
+
+    },
+
+    onMysearchfield1Action: function(textfield, e, eOpts) {
+
+        var me = this,
+            container = textfield.up('container');
+
+        if(textfield.getValue() === ""){
+            if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){
+                me.GetPrices(container,'#lstPrices1', 2);
+            }
+            else {
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Message'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('ErrSearchKeyword')
+                });
+            }
+        }
+        else {
+            var searchString = textfield.getValue();
+            this.SearchPrices(container,'#lstPrices1', 2, searchString);
+        }
+
+    },
+
+    onMysearchfield1Clearicontap: function(textfield, e, eOpts) {
+
+        container = textfield.up('container');
+
+        if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){
+            this.GetPrices(container,'#lstPrices1', 2);
+        }
+        else {
+            return;
+        }
+
+    },
+
+    onMysearchfieldAction: function(textfield, e, eOpts) {
+
+        var me = this,
+            container = textfield.up('container');
+
+        if(textfield.getValue() === ""){
+            if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){
+                me.GetPrices(container,'#lstPrices', 1);
+            }
+            else {
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Message'),
+                    buttons: [Ext.Localization.GetMessage('OK')],
+                    message:  Ext.Localization.GetMessage('ErrSearchKeyword')
+                });
+            }
+        }
+        else {
+            var searchString = textfield.getValue();
+            this.SearchPrices(container,'#lstPrices', 1, searchString);
+        }
+
+    },
+
+    onMysearchfieldClearicontap: function(textfield, e, eOpts) {
+
+        container = textfield.up('container');
+
+        if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){
+            this.GetPrices(container,'#lstPrices', 1);
+        }
+        else {
+            return;
+        }
+
+    },
+
+    GetPrices: function(view, listID, typeID) {
 
         var ajaxAndPagingParams = {
-            list: view.down('#lstPrices'),
+            list: view.down(listID),
             moreText: Ext.Localization.GetMessage('LoadMore'),
             noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
             url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID,
+            pageSize: 20
+        };
+
+        Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);
+
+    },
+
+    SearchPrices: function(view, listID, typeID, searchString) {
+
+        var ajaxAndPagingParams = {
+            method: 'post',
+            list: view.down(listID),
+            moreText: Ext.Localization.GetMessage('LoadMore'),
+            noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
+            url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/SearchDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID+'&name='+searchString,
             pageSize: 20
         };
 

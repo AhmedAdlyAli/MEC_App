@@ -28,8 +28,8 @@
                 "designer|targetType": "Ext.Container",
                 "fn": "onVegentsblesContainerShow",
                 "implHandler": [
-                    "        this.GetPrices(component,1);",
                     "",
+                    "this.GetPrices(component,'#lstPrices',1);",
                     ""
                 ],
                 "name": "show"
@@ -53,7 +53,8 @@
                 "designer|targetType": "Ext.Container",
                 "fn": "onFruitsContainerShow",
                 "implHandler": [
-                    "        this.GetPrices(component,2);",
+                    "",
+                    "this.GetPrices(component,'#lstPrices1',2);",
                     ""
                 ],
                 "name": "show"
@@ -77,7 +78,8 @@
                 "designer|targetType": "Ext.Container",
                 "fn": "onFishContainerShow",
                 "implHandler": [
-                    "        this.GetPrices(component,3);",
+                    "",
+                    "this.GetPrices(component,'#lstPrices2',3);",
                     ""
                 ],
                 "name": "show"
@@ -95,13 +97,14 @@
             "userConfig": {
                 "designer|params": [
                     "view",
+                    "listID",
                     "typeID"
                 ],
                 "fn": "GetPrices",
                 "implHandler": [
                     "",
                     "var ajaxAndPagingParams = {",
-                    "    list: view.down('#lstPrices'),",
+                    "    list: view.down(listID),",
                     "    moreText: Ext.Localization.GetMessage('LoadMore'),",
                     "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
                     "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID,",
@@ -114,6 +117,270 @@
             },
             "name": "GetPrices",
             "designerId": "68229274-163f-4638-b284-fb9874b932d4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "view",
+                    "listID",
+                    "typeID",
+                    "searchString"
+                ],
+                "fn": "SearchPrices",
+                "implHandler": [
+                    "",
+                    "var ajaxAndPagingParams = {",
+                    "    method: 'post',",
+                    "    list: view.down(listID),",
+                    "    moreText: Ext.Localization.GetMessage('LoadMore'),",
+                    "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
+                    "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/SearchDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID+'&name='+searchString,",
+                    "    pageSize: 20",
+                    "};",
+                    "",
+                    "Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);",
+                    ""
+                ]
+            },
+            "name": "SearchPrices",
+            "designerId": "babe3e99-2591-4e0f-8518-10ffa7530bed"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield2",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfield2Action",
+                "implHandler": [
+                    "",
+                    "var me = this,",
+                    "    container = textfield.up('container');",
+                    "",
+                    "if(textfield.getValue() === \"\"){",
+                    "    if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "        me.GetPrices(container,'#lstPrices2', 3);",
+                    "    }",
+                    "    else {",
+                    "        Ext.device.Notification.show({",
+                    "            title: Ext.Localization.GetMessage('Message'),",
+                    "            buttons: [Ext.Localization.GetMessage('OK')],",
+                    "            message:  Ext.Localization.GetMessage('ErrSearchKeyword')",
+                    "        });",
+                    "    }",
+                    "}",
+                    "else {",
+                    "    var searchString = textfield.getValue();",
+                    "    this.SearchPrices(container,'#lstPrices2', 3, searchString);",
+                    "}",
+                    ""
+                ],
+                "name": "action"
+            },
+            "name": "onMysearchfield2Action",
+            "designerId": "d2663939-5ef8-4694-97ad-cbbf0b2c9d29"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield2",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfield2Clearicontap",
+                "implHandler": [
+                    "",
+                    "container = textfield.up('container');",
+                    "",
+                    "if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "    this.GetPrices(container,'#lstPrices2', 3);",
+                    "}",
+                    "else {",
+                    "    return;",
+                    "}",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onMysearchfield2Clearicontap",
+            "designerId": "5008dc0e-2729-4394-b040-1ce04bd916fe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield1",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfield1Action",
+                "implHandler": [
+                    "",
+                    "var me = this,",
+                    "    container = textfield.up('container');",
+                    "",
+                    "if(textfield.getValue() === \"\"){",
+                    "    if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "        me.GetPrices(container,'#lstPrices1', 2);",
+                    "    }",
+                    "    else {",
+                    "        Ext.device.Notification.show({",
+                    "            title: Ext.Localization.GetMessage('Message'),",
+                    "            buttons: [Ext.Localization.GetMessage('OK')],",
+                    "            message:  Ext.Localization.GetMessage('ErrSearchKeyword')",
+                    "        });",
+                    "    }",
+                    "}",
+                    "else {",
+                    "    var searchString = textfield.getValue();",
+                    "    this.SearchPrices(container,'#lstPrices1', 2, searchString);",
+                    "}",
+                    ""
+                ],
+                "name": "action"
+            },
+            "name": "onMysearchfield1Action",
+            "designerId": "6a5d0f13-5483-4943-a786-ce9ec674a2a7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield1",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfield1Clearicontap",
+                "implHandler": [
+                    "",
+                    "container = textfield.up('container');",
+                    "",
+                    "if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "    this.GetPrices(container,'#lstPrices1', 2);",
+                    "}",
+                    "else {",
+                    "    return;",
+                    "}",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onMysearchfield1Clearicontap",
+            "designerId": "7510c9bb-b86e-4622-be06-f0e78a329dc3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfieldAction",
+                "implHandler": [
+                    "",
+                    "var me = this,",
+                    "    container = textfield.up('container');",
+                    "",
+                    "if(textfield.getValue() === \"\"){",
+                    "    if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "        me.GetPrices(container,'#lstPrices', 1);",
+                    "    }",
+                    "    else {",
+                    "        Ext.device.Notification.show({",
+                    "            title: Ext.Localization.GetMessage('Message'),",
+                    "            buttons: [Ext.Localization.GetMessage('OK')],",
+                    "            message:  Ext.Localization.GetMessage('ErrSearchKeyword')",
+                    "        });",
+                    "    }",
+                    "}",
+                    "else {",
+                    "    var searchString = textfield.getValue();",
+                    "    this.SearchPrices(container,'#lstPrices', 1, searchString);",
+                    "}",
+                    ""
+                ],
+                "name": "action"
+            },
+            "name": "onMysearchfieldAction",
+            "designerId": "d0c9f908-e2c5-4d8e-945c-52351f275aa2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield#mysearchfield",
+                "designer|params": [
+                    "textfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onMysearchfieldClearicontap",
+                "implHandler": [
+                    "",
+                    "container = textfield.up('container');",
+                    "",
+                    "if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){",
+                    "    this.GetPrices(container,'#lstPrices', 1);",
+                    "}",
+                    "else {",
+                    "    return;",
+                    "}",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onMysearchfieldClearicontap",
+            "designerId": "6a8ebac8-7003-4fcd-82bf-f07ce85cdcda"
         }
     ]
 }

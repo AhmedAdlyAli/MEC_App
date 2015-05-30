@@ -77,6 +77,7 @@ var localeEn =
 		{
 			itemId:"EconomicIndicatorsListing",
 			items: [
+				{Name:'Weekly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-week.png',cat:4},
 				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:1},
              	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png',cat:2},
              	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:3}
@@ -759,6 +760,9 @@ var localeEn =
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Daily Prices"},
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lstPrices", xtype: "emptyText",value:"No Data Available"},
+				{itemId:"lstPrices1", xtype: "emptyText",value:"No Data Available"},
+				{itemId:"lstPrices2", xtype: "emptyText",value:"No Data Available"},
 				{itemId:"PricesGrid", xtype: "cls",value:"ltr-cls"},
 				{itemId:"ProductName1", xtype: "label",value:"Product Name"},
 				{itemId:"ProductPrice1", xtype: "label",value:"Price(QAR) / Kilo"},
@@ -768,7 +772,10 @@ var localeEn =
 				{itemId:"ProductPrice3", xtype: "label",value:"Price(QAR) / Kilo"},
 				{itemId:"VegentsblesContainer", xtype: "container",value:"Vegetables"},
 				{itemId:"FruitsContainer", xtype: "container",value:"Fruits"},
-				{itemId:"FishContainer", xtype: "container",value:"Fish"}
+				{itemId:"FishContainer", xtype: "container",value:"Fish"},
+				{itemId:"mysearchfield", xtype: "searchfield",value:"Search"},
+				{itemId:"mysearchfield1", xtype: "searchfield",value:"Search"},
+				{itemId:"mysearchfield2", xtype: "searchfield",value:"Search"}
 
 
 
