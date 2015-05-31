@@ -75,19 +75,9 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-
-
             supplyWebServiceUrl: 'https://supply.mec.gov.qa/mservice/mservice.svc',
 
             //supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/mservice.svc',
-
-
-
-
-
-
-
-
 
 
 
@@ -95,7 +85,10 @@ Ext.define('MEC_App.controller.Global', {
 
             //SupplyServicePaymentUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
-            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api',
+
+
+
+            CMSWSUrl : 'http://cms.mec.gov.qa/CMS/api', // 'http://192.168.1.107/ws/api',
 
 
             //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',

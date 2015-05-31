@@ -147,7 +147,7 @@ Ext.define('MEC_App.controller.DeviceController', {
 
     },
 
-    UploadImage: function(key, imgUrl, isLast, formData, uploadUrl) {
+    UploadImage: function(key, imgUrl, isLast, formData, uploadUrl, confirm) {
         var options = new FileUploadOptions();
         //options.fileKey = key;
         options.fileName = imgUrl.substr(imgUrl.lastIndexOf('/') + 1);
@@ -157,7 +157,7 @@ Ext.define('MEC_App.controller.DeviceController', {
         var params = {};
         params.fileKey = key;
         params.isLast = isLast;
-
+        params.upload = true;
 
 
         if(isLast)
@@ -168,24 +168,53 @@ Ext.define('MEC_App.controller.DeviceController', {
 
         }
 
-
-
         options.params = params;
-
         var ft = new FileTransfer();
 
 
 
-
-
         ft.upload(imgUrl, uploadUrl, function (r) {
-            //alert("Code = " + r.responseCode);
+
+
+            if(isLast)
+            {
+
+                Ext.AnimationHelper.HideLoading();
+                Ext.device.Notification.show({
+                    title: Ext.Localization.GetMessage('Message'),
+                    buttons:[Ext.Localization.GetMessage('OK')],
+                    message: Ext.Localization.GetMessage(confirm),
+                    callback: function(button) {
+                        //return user to home page
+                        Ext.Viewport.getActiveItem().reset();
+                    }
+                });
+
+            }
+
+
+            // alert("Code = " + r.responseCode);
             //alert("Response = " + r.response);
             //alert("Sent = " + r.bytesSent);
         }, function (error) {
+
+            Ext.AnimationHelper.HideLoading();
+
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Error'),
+                buttons:[Ext.Localization.GetMessage('OK')],
+                message: Ext.Localization.GetMessage('GenericError'),
+                callback: function(button) {
+                    //return user to home page
+                    Ext.Viewport.getActiveItem().reset();
+                }
+            });
+
+
             // alert("An error has occurred: Code = " + error.code);
-            //alert("upload error source " + error.source);
+            // alert("upload error source " + error.source);
             // alert("upload error target " + error.target);
+
         }, options);
 
 
