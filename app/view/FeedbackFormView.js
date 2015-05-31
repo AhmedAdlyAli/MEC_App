@@ -221,7 +221,7 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 Ext.AnimationHelper.ShowLoading();
 
 
-                                var uploadUrl = Ext.Global.GetConfig('CMSWSUrl').replace('/CMS/api','/FeedBack/upload.ashx');
+                                var uploadUrl = 'http://cms.mec.gov.qa/Feedback/upload.ashx'; //Ext.Global.GetConfig('CMSWSUrl').replace('/CMS/api','/Complaints/upload.ashx');
 
 
                                 if(files.length>0)

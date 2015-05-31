@@ -312,7 +312,7 @@ Ext.define('MEC_App.view.ComplaintsView', {
                                 Ext.AnimationHelper.ShowLoading();
 
 
-                                var uploadUrl = Ext.Global.GetConfig('CMSWSUrl').replace('/CMS/api','/Complaints/upload.ashx');
+                                var uploadUrl = 'http://cms.mec.gov.qa/Complaints/upload.ashx'; //Ext.Global.GetConfig('CMSWSUrl').replace('/CMS/api','/Complaints/upload.ashx');
 
 
                                 if(files.length>0)
