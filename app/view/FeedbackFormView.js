@@ -149,7 +149,6 @@ Ext.define('MEC_App.view.FeedbackFormView', {
                                 ereg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
                                 testResult = ereg.test(formData.email),
                                 err='';
-                            console.log(formData);
 
 
 

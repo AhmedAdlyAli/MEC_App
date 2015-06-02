@@ -224,8 +224,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
         // get establishment details
 
 
-        console.log(cr);
-
         requestData = {
             "serviceId": "88",
             "language": Ext.Global.LanguageFlag,
@@ -255,12 +253,6 @@ Ext.define('MEC_App.controller.TradeNameAvailabilityController', {
                 //Bind Data to controls
                 var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 
-
-
-                console.log(company.listOfCRBusinessActivities);
-                console.log(company.listOfBranches);
-
-                console.log(company.listOfSignatories);
 
 
                 Ext.getCmp('commercialRegistration1').setHtml(company.commercialRegistration);

@@ -47,8 +47,6 @@ Ext.define('MEC_App.view.PrintOffsView3', {
         var data = view.getData();
 
 
-
-        console.log(data);
         Ext.Localization.LocalizeView(view);
 
 

@@ -354,9 +354,6 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                         data : json
                     });
 
-
-                    console.log(view.down('#hiddenCatType').getValue());
-
                     var count = 'العدد';
 
                     if(Ext.Global.LanguageFlag == 'en'){

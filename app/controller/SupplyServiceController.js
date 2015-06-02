@@ -79,8 +79,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         var requestData = {"mobileDeviceID":Ext.Global.userToken};
 
-        console.log(Ext.Global.userToken);
-
 
         Ext.Ajax.request({
 
@@ -107,9 +105,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
                                     "mobileDeviceID":"",
                                     "sessionID": Ext.Global.userSupplyToken};
-
-
-
 
 
                 Ext.Ajax.request({
@@ -190,82 +185,17 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
-
-
-
-
-
 
 
                         }
 
 
-                    },
-                    failure: function(request, resp) {
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('Failure'),
-                            callback: function(button) {
-
-                                //return user to home page
-
-                                Ext.Viewport.getActiveItem().reset();
-
-                            }
-                        });
                     }
                 });
 
-
-            },
-            failure: function(request, resp) {
-                Ext.device.Notification.show({
-                    title: Ext.Localization.GetMessage('Error'),
-                    buttons: [Ext.Localization.GetMessage('OK')],
-                    message:  Ext.Localization.GetMessage('Failure'),
-                    callback: function(button) {
-
-                        //return user to home page
-
-                        Ext.Viewport.getActiveItem().reset();
-
-                    }
-                });
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     },
@@ -467,20 +397,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                         });
 
-                    },
-                    failure: function(request, resp) {
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('Failure'),
-                            callback: function(button) {
-
-                                //return user to home page
-
-                                Ext.Viewport.getActiveItem().reset();
-
-                            }
-                        });
                     }
                 });
 
@@ -575,9 +491,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
              "sessionID": Ext.Global.userSupplyToken,
              "mobileNo" : Ext.Global.mobileNumber
             };
-
-
-        console.log(requestData);
 
 
         Ext.AnimationHelper.ShowLoading();
@@ -827,6 +740,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
 
+        console.log(url);
+
         var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
 
@@ -855,8 +770,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1);
-
-                console.log(json2);
 
 
                 if(json2.Data.FamilyMembers.length>0)

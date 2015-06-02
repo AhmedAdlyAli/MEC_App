@@ -95,8 +95,6 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
         var data = this.getData();
 
-        console.log(data);
-
 
         this.down('#lblTitle').setHtml(data.NewsTitle);
         this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));

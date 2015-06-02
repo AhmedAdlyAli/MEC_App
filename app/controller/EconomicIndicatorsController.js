@@ -48,11 +48,11 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblTitle').setHtml(view.getData().Name);
 
 
-        //console.log(view.getData());
+        console.log(view.getData());
 
         var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&isCurrent=true&periodType='+cat;
 
-        //console.log(url);
+        console.log(url);
 
 
         var me = this;
@@ -72,17 +72,10 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
 
                 Ext.each(json,function(item){
-                    //alert(item.Name);
-                    if(item.Title.indexOf(catName)>-1)
-                    {
 
-                        json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value, Description:item.Description});
-                    }
+                    json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value, Description:item.Description});
 
                 });
-
-
-                console.log(json2);
 
 
 
@@ -111,10 +104,6 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
     onEconomicIndicatorsDetailsViewInitialize: function(component, eOpts) {
         var view = component;
         var data = view.getData();
-
-        console.log(data);
-
-
 
 
         var currency=' مليون (ر.ق)';
@@ -170,8 +159,6 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;
                 var data = view.getData();
 
-
-        console.log(data);
          view.down('#lblTitle').setHtml(data.Title);
         view.down('#lblBrief').setHtml(data.Description);
 

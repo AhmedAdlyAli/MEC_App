@@ -79,9 +79,9 @@ var localeAr =
 			itemId:"EconomicIndicatorsListing",
 			items: [
 				{Name:'مؤشرات اقتصادية اسبوعية',Url:'EconomicIndicatorsView', Icon:'ico-week.png',cat:4},
-				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:1},
+				{Name:'مؤشرات اقتصادية شهرية',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:3},
              	{Name:'مؤشرات اقتصادية ربع سنوية',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png',cat:2},
-             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:3}
+             	{Name:'مؤشرات اقتصادية سنوية',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:1}
 			]
 		},
 
@@ -222,6 +222,7 @@ var localeAr =
         Failure: 'عفوا, حدث خطأ عام, يرجى المحاولة مرة أخرى',
         errUserPass: 'إسم المستخدم أو كلمة المرور خطأ',
         errConnection: 'عفوا, حدث خطأ عام, يرجى المحاولة مرة أخرى',
+        errSuccess: 'هذه الخدمة غير متاحة مؤقتاً، الرجاء اعادة المحاولة لاحقاً',
         errNoSearchData: 'لا توجد نتائج لكلمة البحث المدخلة',
         NoData: 'عفوا لا يوجد بيانات',
         Message:'رسالة',

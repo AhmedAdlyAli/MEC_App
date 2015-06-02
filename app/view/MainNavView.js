@@ -32,6 +32,7 @@ Ext.define('MEC_App.view.MainNavView', {
         cls: 'home-wrapper',
         fullscreen: true,
         itemId: 'MainNavView',
+        autoDestroy: false,
         defaultBackButtonText: ' ',
         layout: {
             type: 'card',
@@ -85,8 +86,6 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                             var json = Ext.util.JSON.decode(response.responseText);
 
-                                            console.log(json);
-
                                             var pnlNews1 = me.down('#pnlNews');
                                             var pnlNews2 = me.down('#pnlNews1');
                                             var pnlNews3 = me.down('#pnlNews2');
@@ -132,24 +131,15 @@ Ext.define('MEC_App.view.MainNavView', {
                                     });
 
 
-                                    var carousel = this;
-
-
-
-                                    carousel.onDragStart = function(e){
-
-                                        //    alert(e);
-
+                                    me.onDragStart = function(e){
                                         return false;
                                     };
 
 
-
-
-
                                     setInterval(function(){
-                                        carousel.next();
+                                        me.next();
                                     },3500);
+
                                 },
                                 delay: 100,
                                 buffer: 500,
@@ -479,18 +469,17 @@ Ext.define('MEC_App.view.MainNavView', {
             if(navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='SupplyServiceView3')
             {
 
+                Ext.Viewport.getActiveItem().push({
+                    xtype: 'SupplyServiceListing',
+                    title: Ext.Global.GetFixedTitle()
+                });
 
-                // return false;
-
-                //alert('asd');
-
-
-
-            Ext.Viewport.getActiveItem().push({
-                xtype: 'SupplyServiceListing',
-                title: Ext.Global.GetFixedTitle()
-            });
-
+            }
+            else if (navigationview.innerItems[navigationview.innerItems.length-2]._itemId==='PrintOffsView3') {
+                Ext.Viewport.getActiveItem().push({
+                    xtype: 'PrintOffsView1',
+                    title: Ext.Global.GetFixedTitle()
+                });
             }
 
 
