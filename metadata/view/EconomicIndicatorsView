@@ -47,6 +47,8 @@
             },
             "codeClass": null,
             "userConfig": {
+                "deferEmptyText": false,
+                "emptyText": "عفوا٫ لا يوجد بيانات",
                 "height": "100%",
                 "itemCls": "item-indicator",
                 "itemId": "lstIndicators",

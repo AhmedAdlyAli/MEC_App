@@ -46,13 +46,11 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
             },
             {
                 xtype: 'hiddenfield',
-                id: 'hiddenCatType',
                 itemId: 'hiddenCatType'
             },
             {
                 xtype: 'hiddenfield',
-                id: 'hiddenCatID',
-                itemId: 'myhiddenfield'
+                itemId: 'hiddenCatID'
             },
             {
                 xtype: 'textfield',

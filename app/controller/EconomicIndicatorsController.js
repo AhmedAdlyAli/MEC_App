@@ -48,11 +48,9 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblTitle').setHtml(view.getData().Name);
 
 
-        console.log(view.getData());
 
         var url =  Ext.Global.GetConfig('CMSWSUrl')+ '/IndicatorsAndReport/GetAllIndicatorsAndReports?culture='+ Ext.Global.LanguageFlag +'&pageIndex=0&pageSize=20&isCurrent=true&periodType='+cat;
 
-        console.log(url);
 
 
         var me = this;
@@ -63,10 +61,14 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
             method : 'Get',
             success : function (response) {
 
+                Ext.AnimationHelper.HideLoading();
+
+
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                //console.log(json);
 
+          if(json.length>0)
+            {
 
                var json2= [];
 
@@ -78,15 +80,15 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
                 });
 
 
-
                 var store = new Ext.data.Store({
                     data : json2
                 });
 
                 var lstIndicators = view.down('#lstIndicators');
                 lstIndicators.setStore(store);
+            }
 
-                Ext.AnimationHelper.HideLoading();
+
             }
         });
 

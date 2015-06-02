@@ -61,7 +61,7 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                                 flex: 1,
                                 itemId: 'radDisplayNear',
                                 label: 'عرض الأقرب',
-                                labelWidth: '70%',
+                                labelWidth: '50%',
                                 name: 'field',
                                 checked: true
                             },
@@ -70,7 +70,7 @@ Ext.define('MEC_App.view.SupplyServiceNearestDealer', {
                                 flex: 1,
                                 itemId: 'radDisplayAll',
                                 label: 'عرض الكل',
-                                labelWidth: '70%',
+                                labelWidth: '50%',
                                 name: 'field'
                             }
                         ]

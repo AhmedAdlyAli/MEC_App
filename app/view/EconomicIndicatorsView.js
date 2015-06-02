@@ -43,6 +43,8 @@ Ext.define('MEC_App.view.EconomicIndicatorsView', {
                 flex: 1,
                 height: '100%',
                 itemId: 'lstIndicators',
+                deferEmptyText: false,
+                emptyText: 'عفوا٫ لا يوجد بيانات',
                 itemCls: 'item-indicator',
                 itemTpl: Ext.create('Ext.XTemplate', 
                     '<div class="tpl-indicator-1"><span>{Title}</span><br/><span class="sub-title">{Value} {[this.Translate()]}</span></div>',
