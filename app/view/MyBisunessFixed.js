@@ -152,8 +152,6 @@ Ext.define('MEC_App.view.MyBisunessFixed', {
 
                 //Companies
 
-                console.log(json);
-
 
                 if(json.listOfPrimaryEstablishment.primaryEstablishment.length>0)
                 {

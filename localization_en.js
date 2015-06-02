@@ -78,9 +78,9 @@ var localeEn =
 			itemId:"EconomicIndicatorsListing",
 			items: [
 				{Name:'Weekly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-week.png',cat:4},
-				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:1},
+				{Name:'Monthly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-month.png',cat:3},
              	{Name:'Quarterly Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-quarter.png',cat:2},
-             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:3}
+             	{Name:'Annual Economic Indicators',Url:'EconomicIndicatorsView', Icon:'ico-year.png',cat:1}
 			]
 		},
 
@@ -431,7 +431,7 @@ var localeEn =
 				{itemId:"lblTitle", "xtype": "label","value":"User Login"},
 				{itemId:"btnRegister", "xtype": "button","value":"New User"},
 				{itemId:"btnSubmitLogin", "xtype": "button","value":"Login"},
-				{itemId:"txtUserName", "xtype": "textfield","value":"User Name"},
+				{itemId:"txtUserName", "xtype": "textfield","value":"QID"},
 				{itemId:"txtPassword", "xtype": "textfield","value":"Password"},
 				{itemId:"fSet", "xtype": "cls","value":"ltr-cls"}
 			]
@@ -1115,6 +1115,7 @@ var localeEn =
         Failure: 'Sorry, an error has occured, please try again',
         errUserPass: 'Username or Password is not correct',
         errConnection: 'Sorry, an error has occured, please try again',
+        errSuccess: 'This Service is temporary unavailable, please try again later',
         errNoSearchData: 'No data matches your search query',
         NoData: 'Sorry, no data available',
         Message:'Message',

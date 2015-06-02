@@ -67,8 +67,6 @@ Ext.define('MEC_App.controller.MyRequestsController', {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                console.log(json);
-
 
 
         if(json.listOfMecBssAllRequestsWs.mecLlcEstablishment.length>0)

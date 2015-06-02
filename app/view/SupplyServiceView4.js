@@ -61,8 +61,6 @@ Ext.define('MEC_App.view.SupplyServiceView4', {
 
         var data = view.getData();
 
-        console.log(data);
-
         Ext.Function.defer(function(){
             // payment gateway redirection
 

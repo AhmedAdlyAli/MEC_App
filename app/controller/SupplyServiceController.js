@@ -23,8 +23,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             fsItems: '#fsItems',
             SupplyServiceView1: 'SupplyServiceView1',
             SupplyServiceView2: 'SupplyServiceView2',
-            SupplyServiceView3: 'SupplyServiceView3',
-            SupplyServiceNearestDealer: 'SupplyServiceNearestDealer'
+            SupplyServiceView3: 'SupplyServiceView3'
         },
 
         control: {
@@ -51,12 +50,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "panel#SupplyServiceMyData": {
                 initialize: 'onSupplyServiceMyDataInitialize'
-            },
-            "radiofield#radDisplayNear": {
-                check: 'onRadDisplayNearCheck'
-            },
-            "radiofield#radDisplayAll": {
-                check: 'onRadDisplayAllCheck'
             }
         }
     },
@@ -86,8 +79,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
         var requestData = {"mobileDeviceID":Ext.Global.userToken};
 
-        console.log(Ext.Global.userToken);
-
 
         Ext.Ajax.request({
 
@@ -114,9 +105,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     "languageID":Ext.Global.LanguageFlag=='ar'?2:1,
                                     "mobileDeviceID":"",
                                     "sessionID": Ext.Global.userSupplyToken};
-
-
-
 
 
                 Ext.Ajax.request({
@@ -197,82 +185,17 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                             Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
-
-
-
-
-
 
 
                         }
 
 
-                    },
-                    failure: function(request, resp) {
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('Failure'),
-                            callback: function(button) {
-
-                                //return user to home page
-
-                                Ext.Viewport.getActiveItem().reset();
-
-                            }
-                        });
                     }
                 });
 
-
-            },
-            failure: function(request, resp) {
-                Ext.device.Notification.show({
-                    title: Ext.Localization.GetMessage('Error'),
-                    buttons: [Ext.Localization.GetMessage('OK')],
-                    message:  Ext.Localization.GetMessage('Failure'),
-                    callback: function(button) {
-
-                        //return user to home page
-
-                        Ext.Viewport.getActiveItem().reset();
-
-                    }
-                });
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     },
@@ -474,20 +397,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                         });
 
-                    },
-                    failure: function(request, resp) {
-                        Ext.device.Notification.show({
-                            title: Ext.Localization.GetMessage('Error'),
-                            buttons: [Ext.Localization.GetMessage('OK')],
-                            message:  Ext.Localization.GetMessage('Failure'),
-                            callback: function(button) {
-
-                                //return user to home page
-
-                                Ext.Viewport.getActiveItem().reset();
-
-                            }
-                        });
                     }
                 });
 
@@ -582,9 +491,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
              "sessionID": Ext.Global.userSupplyToken,
              "mobileNo" : Ext.Global.mobileNumber
             };
-
-
-        console.log(requestData);
 
 
         Ext.AnimationHelper.ShowLoading();
@@ -731,108 +637,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
-        this.GetNearByDealers(component);
-    },
-
-    onSupplyServiceMyDataInitialize: function(component, eOpts) {
         var me = this;
         var view = component;
 
-
-        // localization
         Ext.Localization.LocalizeView(view);
 
-
-
-
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
-
-        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
-
-
-        var requestData=
-            {"qid":  Ext.Global.identityNum,//"21463400042",
-             "languageID":language,
-             "mobileDeviceID":"1231",
-             "sessionID": Ext.Global.userSupplyToken};
-
-
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-        Ext.Ajax.request({
-
-            url : url,
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
-
-
-                Ext.AnimationHelper.HideLoading();
-
-
-
-                var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1);
-
-                console.log(json2);
-
-
-                if(json2.Data.FamilyMembers.length>0)
-                {
-
-
-                    var store = new Ext.data.Store({
-                        data : json2.Data.FamilyMembers
-                    });
-
-                    var lst = view.down('#lstFamily');
-                    lst.setStore(store);
-
-                    lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
-                    lst.setScrollable(false);
-
-
-                }else{
-
-                    Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Message'),
-                        buttons: [Ext.Localization.GetMessage('OK')],
-                        message:  Ext.Localization.GetMessage('NoDataSupply')
-                    });
-
-
-
-                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
-
-                }
-
-
-            }
-        });
-
-
-
-
-
-
-
-
-
-
-
-    },
-
-    onRadDisplayNearCheck: function(checkboxfield, e, eOpts) {
-        this.GetNearByDealers(this.getSupplyServiceNearestDealer());
-    },
-
-    onRadDisplayAllCheck: function(checkboxfield, e, eOpts) {
-        var view = this.getSupplyServiceNearestDealer();
-
-
-        var me = this;
 
         Ext.AnimationHelper.ShowLoading();
 
@@ -866,8 +675,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+
+
+
+
                 // get dealers
-                me.GetDealers(gMap,0,0,[],view,'');
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
 
             }, 300,this);
 
@@ -906,6 +719,95 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                Ext.AnimationHelper.HideLoading();
 
         });
+
+
+
+
+
+
+    },
+
+    onSupplyServiceMyDataInitialize: function(component, eOpts) {
+        var me = this;
+        var view = component;
+
+
+        // localization
+        Ext.Localization.LocalizeView(view);
+
+
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
+
+        console.log(url);
+
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+
+        var requestData=
+            {"qid":  Ext.Global.identityNum,//"21463400042",
+             "languageID":language,
+             "mobileDeviceID":"1231",
+             "sessionID": Ext.Global.userSupplyToken};
+
+
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1);
+
+
+                if(json2.Data.FamilyMembers.length>0)
+                {
+
+
+                    var store = new Ext.data.Store({
+                        data : json2.Data.FamilyMembers
+                    });
+
+                    var lst = view.down('#lstFamily');
+                    lst.setStore(store);
+
+                    lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                    lst.setScrollable(false);
+
+
+                }else{
+
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Message'),
+                        buttons: [Ext.Localization.GetMessage('OK')],
+                        message:  Ext.Localization.GetMessage('NoDataSupply')
+                    });
+
+
+
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+
+                }
+
+
+            }
+        });
+
+
+
+
 
 
 
@@ -1006,96 +908,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     domEvent: function(evt, el, o) {
         evt.stopPropagation();
-    },
-
-    GetNearByDealers: function(view) {
-        var me = this;
-
-
-        Ext.Localization.LocalizeView(view);
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-
-        var mapPanel = view.down('#mapDealers');
-        var gMap = mapPanel.getMap();
-
-
-
-        // get user location then get near dealers
-        navigator.geolocation.getCurrentPosition(function(position){
-
-
-
-
-
-            Ext.Function.defer(function(){
-
-
-                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                gMap.setCenter(latLang);
-                gMap.setZoom(11);
-
-
-
-                //add user location marker
-                var marker = new google.maps.Marker({
-                      position: latLang,
-                      map: gMap
-                  });
-
-
-
-
-
-
-
-                // get dealers
-                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
-
-            }, 300,this);
-
-
-
-
-
-
-        }, function(error){
-
-
-           // alert('code: '    + error.code    + '\n' +
-           // 'message: ' + error.message + '\n');
-
-
-            var m = Ext.Localization.GetMessage('LocationNotEnabled');
-            Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Message'),
-                buttons: [Ext.Localization.GetMessage('OK')],
-                message: m
-            });
-
-
-
-
-           Ext.Function.defer(function(){
-
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
-
-                me.GetDealers(gMap,lat,lng,[],view,'');
-
-             }, 300,this);
-
-
-               Ext.AnimationHelper.HideLoading();
-
-        });
-
-
-
-
-
     }
 
 });

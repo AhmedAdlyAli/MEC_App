@@ -411,7 +411,6 @@
                                     "    ereg = /^\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$/,",
                                     "    testResult = ereg.test(formData.email),",
                                     "    err='';",
-                                    "console.log(formData);",
                                     "",
                                     "",
                                     "",

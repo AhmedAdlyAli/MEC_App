@@ -96,8 +96,6 @@ Ext.define('MEC_App.view.NotificationView', {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                console.log(json);
-
                 if(json.listOfMecMyNotificationsIo.mecAction.length>0)
                 {
                     var store = new Ext.data.Store({

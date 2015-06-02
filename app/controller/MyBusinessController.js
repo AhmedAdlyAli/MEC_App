@@ -63,8 +63,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             "identityNationality":  Ext.Global.identityNationality
         };
 
-        console.log(requestData);
-
 
         var me = this;
 
@@ -210,7 +208,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         var me = this;
 
-        console.log(cr);
 
         requestData = {
             "serviceId": "8",
@@ -235,8 +232,6 @@ Ext.define('MEC_App.controller.MyBusinessController', {
             jsonData :requestData,
             success : function (response) {
                 var json = Ext.util.JSON.decode(response.responseText);
-                console.log(json);
-
                 //Bind Data to controls
                 var company= json.listOfMecPrimaryEstablishment.companyEstablishment[0];
 

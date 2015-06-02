@@ -500,8 +500,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 success : function (response) {
                                     var json = Ext.util.JSON.decode(response.responseText);
 
-
-                                    console.log(json);
                                     //invalid or insufficient input!
 
                                     json.NoOfCopies = view.down('#txtNoOfCopies').getValue();

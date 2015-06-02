@@ -102,8 +102,6 @@ Ext.define('MEC_App.controller.LoginController', {
                     Ext.Global.isLogged = true;
                     Ext.Global.userToken = json.token;
 
-                    console.log(json);
-
 
                     if( !json.listOfMecContactInfoIo.contact[0].identityNum || json.listOfMecContactInfoIo.contact[0].identityNum==='')
                     {
@@ -186,19 +184,6 @@ Ext.define('MEC_App.controller.LoginController', {
 
 
                 }
-
-            },
-            failure: function(request, resp) {
-
-                Ext.AnimationHelper.HideLoading();
-
-
-                Ext.device.Notification.show({
-                    title: Ext.Localization.GetMessage('Error'),
-                    buttons:[Ext.Localization.GetMessage('OK')],
-                    message: Ext.Localization.GetMessage('errConnection')
-                });
-
 
             }
         });
