@@ -76,6 +76,55 @@
             ]
         },
         {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "set1",
+                "layout": "hbox",
+                "title": null
+            },
+            "name": "MyFieldSet2",
+            "designerId": "af4962ba-78d4-4561-a58a-58bfd5099868",
+            "cn": [
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "radRequestNearby",
+                        "label": "عرض الأقرب",
+                        "labelWidth": "50%",
+                        "layout|flex": 1
+                    },
+                    "name": "MyRadioButton2",
+                    "designerId": "bbc28add-392c-4c47-a614-412f7c787ffc"
+                },
+                {
+                    "type": "Ext.field.Radio",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemId": "radRequestAll",
+                        "label": "عرض الكل",
+                        "labelWidth": "50%",
+                        "layout|flex": 1
+                    },
+                    "name": "MyRadioButton3",
+                    "designerId": "7de48ba5-4a30-41af-a89c-9106a2db8415"
+                }
+            ]
+        },
+        {
             "type": "Ext.Label",
             "reference": {
                 "name": "items",

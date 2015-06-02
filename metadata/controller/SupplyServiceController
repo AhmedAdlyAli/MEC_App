@@ -336,8 +336,23 @@
                 "designer|targetType": "Ext.Panel",
                 "fn": "onSupplyServiceView2Initialize",
                 "implHandler": [
-                    "var view = component;",
+                    "    var view = component;",
+                    "    var orderItems =[];",
+                    "    var viewData={};",
+                    "        viewData.Items = view.getData();",
                     "",
+                    "        Ext.each(viewData.Items,function(item){",
+                    "            orderItems.push({ ItemID: item.ItemID, value: item.Quantity });",
+                    "",
+                    "        });",
+                    "",
+                    "",
+                    "",
+                    "this.GetNearByDealers(component,true, orderItems,true);",
+                    "this.markers = [];",
+                    "",
+                    "",
+                    "/*",
                     "",
                     "Ext.Localization.LocalizeView(view);",
                     "Ext.AnimationHelper.ShowLoading();",
@@ -374,21 +389,12 @@
                     "",
                     "",
                     "",
+                    "",
                     "        // get dealers",
                     "",
                     "        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';",
                     "",
                     "",
-                    "        var orderItems =[];",
-                    "        var viewData={};",
-                    "        viewData.Items = view.getData();",
-                    "",
-                    "",
-                    "        Ext.each(viewData.Items,function(item){",
-                    "            //alert(item.ItemID);",
-                    "            orderItems.push({ ItemID: item.ItemID, value: item.Quantity });",
-                    "",
-                    "        });",
                     "",
                     "",
                     "",
@@ -396,7 +402,7 @@
                     "",
                     "        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;",
                     "",
-                    "        var requestData =  {\"qid\":Ext.Global.identityNum,//\"24263400239\",",
+                    "        var requestData =  {\"qid\":Ext.Global.identityNum,",
                     "                            \"languageID\":language,",
                     "                            \"mobileDeviceID\":\"1231\",",
                     "                            \"restrictDealerBasedOnStock\":\"true\",",
@@ -405,10 +411,6 @@
                     "                            \"orderItems\": orderItems,",
                     "                            \"sessionID\": Ext.Global.userSupplyToken",
                     "                           };",
-                    "",
-                    "",
-                    "        //console.log(requestData);",
-                    "",
                     "",
                     "",
                     "        Ext.Ajax.request({",
@@ -482,7 +484,7 @@
                     "            }",
                     "        });",
                     "",
-                    "    }, 1100,this);",
+                    "    }, 300,this);",
                     "",
                     "",
                     "}, function(error){",
@@ -498,7 +500,7 @@
                     "",
                     "",
                     "    gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));",
-                    "    gMap.setZoom(11);",
+                    "    gMap.setZoom(9);",
                     "",
                     "",
                     "",
@@ -524,6 +526,7 @@
                     "    pinchend:this.domEvent,",
                     "    swipe:this.domEvent",
                     "});",
+                    "*/",
                     ""
                 ],
                 "name": "initialize"
@@ -797,7 +800,7 @@
                 "designer|targetType": "Ext.Panel",
                 "fn": "onSupplyServiceNearestDealerInitialize",
                 "implHandler": [
-                    "this.GetNearByDealers(component,true);",
+                    "this.GetNearByDealers(component,true,[],false);",
                     "this.markers = [];",
                     ""
                 ],
@@ -820,7 +823,8 @@
                     "lng",
                     "orderItems",
                     "view",
-                    "token"
+                    "token",
+                    "checkStock"
                 ],
                 "fn": "GetDealers",
                 "implHandler": [
@@ -833,7 +837,7 @@
                     "var requestData =  {\"qid\":Ext.Global.identityNum,//\"24263400239\",",
                     "                    \"languageID\":language,",
                     "                    \"mobileDeviceID\":\"1231\",",
-                    "                    \"restrictDealerBasedOnStock\":\"false\",",
+                    "                    \"restrictDealerBasedOnStock\":checkStock,",
                     "                    \"latitude\": lat, //\"25.321283\",//location.lat,",
                     "                    \"longtitude\":lng, //\"51.528329\", //location.lng,",
                     "                    \"orderItems\": orderItems,",
@@ -1056,7 +1060,7 @@
                 "designer|targetType": "Ext.field.Radio",
                 "fn": "onRadDisplayNearCheck",
                 "implHandler": [
-                    "this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true);",
+                    "this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true,[],false);",
                     "",
                     "",
                     ""
@@ -1083,7 +1087,7 @@
                 "designer|targetType": "Ext.field.Radio",
                 "fn": "onRadDisplayAllCheck",
                 "implHandler": [
-                    "        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false);",
+                    "        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false,[],false);",
                     ""
                 ],
                 "name": "check"
@@ -1101,7 +1105,9 @@
             "userConfig": {
                 "designer|params": [
                     "view",
-                    "getNearBy"
+                    "getNearBy",
+                    "orderItems",
+                    "checkStock"
                 ],
                 "fn": "GetNearByDealers",
                 "implHandler": [
@@ -1130,7 +1136,7 @@
                     "        gMap.setCenter(latLang);",
                     "",
                     "",
-                    "        var zoom=getNearBy === true ? zoom=11: zoom=9;",
+                    "        var zoom=getNearBy === true ? zoom=11: zoom=10;",
                     "",
                     "        gMap.setZoom(zoom);",
                     "",
@@ -1146,9 +1152,9 @@
                     "        // get dealers",
                     "",
                     "        if(getNearBy)",
-                    "        me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');",
+                    "        me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,'',checkStock);",
                     "        else",
-                    "        me.GetDealers(gMap,0,0,[],view,'');",
+                    "        me.GetDealers(gMap,0,0,orderItems,view,'',checkStock);",
                     "",
                     "    }, 300,this);",
                     "",
@@ -1165,8 +1171,8 @@
                     "",
                     "",
                     "    Ext.AnimationHelper.HideLoading();",
-                    "    ",
-                    "    ",
+                    "",
+                    "",
                     "    var m = Ext.Localization.GetMessage('LocationNotEnabled');",
                     "    Ext.device.Notification.show({",
                     "        title: Ext.Localization.GetMessage('Message'),",
@@ -1175,14 +1181,14 @@
                     "    });",
                     "",
                     "",
-                    "    ",
+                    "",
                     "    Ext.Function.defer(function(){",
                     "",
                     "",
                     "        var latLang = new google.maps.LatLng(25.321283,51.528329);",
                     "        gMap.setCenter(latLang);",
                     "",
-                    "         gMap.setZoom(9);",
+                    "         gMap.setZoom(10);",
                     "",
                     "",
                     "        // get dealers",
@@ -1190,9 +1196,9 @@
                     "        me.GetDealers(gMap,0,0,[],view,'');",
                     "",
                     "    }, 300,this);",
-                    "    ",
-                    "    ",
-                    "    ",
+                    "",
+                    "",
+                    "",
                     "",
                     "",
                     "});",
@@ -1219,6 +1225,80 @@
             },
             "name": "SupplyServiceNearestDealer",
             "designerId": "a2d221e1-54a8-4670-8d50-fd0ef78c0a47"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "radiofield#radRequestNearby",
+                "designer|params": [
+                    "checkboxfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Radio",
+                "fn": "onRadRequestNearbyCheck",
+                "implHandler": [
+                    "    var view = this.getSupplyServiceView2();",
+                    "    var orderItems =[];",
+                    "    var viewData={};",
+                    "        viewData.Items = view.getData();",
+                    "",
+                    "        Ext.each(viewData.Items,function(item){",
+                    "            orderItems.push({ ItemID: item.ItemID, value: item.Quantity });",
+                    "",
+                    "        });",
+                    "",
+                    "",
+                    "",
+                    "this.GetNearByDealers(component,true, orderItems,true);",
+                    ""
+                ],
+                "name": "check"
+            },
+            "name": "onRadRequestNearbyCheck",
+            "designerId": "7069dbaa-87bb-449e-8f49-64b80ca5e26d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "radiofield#radRequestAll",
+                "designer|params": [
+                    "checkboxfield",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.field.Radio",
+                "fn": "onRadRequestAllCheck",
+                "implHandler": [
+                    "    var view = this.getSupplyServiceView2();",
+                    "    var orderItems =[];",
+                    "    var viewData={};",
+                    "        viewData.Items = view.getData();",
+                    "",
+                    "        Ext.each(viewData.Items,function(item){",
+                    "            orderItems.push({ ItemID: item.ItemID, value: item.Quantity });",
+                    "",
+                    "        });",
+                    "",
+                    "",
+                    "",
+                    "this.GetNearByDealers(component,true, orderItems,false);",
+                    ""
+                ],
+                "name": "check"
+            },
+            "name": "onRadRequestAllCheck",
+            "designerId": "63758c35-7618-43f3-b086-7087ba59eea3"
         }
     ]
 }

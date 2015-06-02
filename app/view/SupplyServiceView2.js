@@ -21,6 +21,8 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
         'Ext.Label',
         'Ext.Panel',
         'Ext.Map',
+        'Ext.form.FieldSet',
+        'Ext.field.Radio',
         'Ext.field.Hidden',
         'Ext.Button'
     ],
@@ -50,6 +52,27 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                         xtype: 'map',
                         height: '18em',
                         itemId: 'mapDealers'
+                    }
+                ]
+            },
+            {
+                xtype: 'fieldset',
+                itemId: 'set1',
+                layout: 'hbox',
+                items: [
+                    {
+                        xtype: 'radiofield',
+                        flex: 1,
+                        itemId: 'radRequestNearby',
+                        label: 'عرض الأقرب',
+                        labelWidth: '50%'
+                    },
+                    {
+                        xtype: 'radiofield',
+                        flex: 1,
+                        itemId: 'radRequestAll',
+                        label: 'عرض الكل',
+                        labelWidth: '50%'
                     }
                 ]
             },

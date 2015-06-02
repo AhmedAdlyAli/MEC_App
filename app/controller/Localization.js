@@ -93,6 +93,10 @@ Ext.define('MEC_App.controller.Localization', {
                                 viewItem.setLabel(item.value);
                             }
 
+
+
+                            if(item.xtype=='radiofield') viewItem.setLabel(item.value);
+
                             if(item.xtype=='searchfield') viewItem.setPlaceHolder(item.value);
 
                             if(item.xtype=='emptyText') viewItem.setEmptyText(item.value);

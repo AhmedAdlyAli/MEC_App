@@ -626,7 +626,10 @@ var localeEn =
 			[
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Request Form"},
 				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"},
-				{itemId:"lblGoTo", xtype: "label",value:"Get Directions"}
+				{itemId:"lblGoTo", xtype: "label",value:"Get Directions"},
+				{itemId:"set1", "xtype": "cls",value:"ltr-cls"},
+				{itemId:"radRequestNearby", "xtype": "radiofield",value:"Display Nearest"},
+				{itemId:"radRequestAll", "xtype": "radiofield",value:"Display All"} 
 			]
 		},
 
@@ -664,7 +667,10 @@ var localeEn =
 			[
 	
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Distributor"},
-				{itemId:"lblGoTo", "xtype": "label","value":"Get Directions"}
+				{itemId:"lblGoTo", "xtype": "label",value:"Get Directions"},
+				{itemId:"set1", "xtype": "cls",value:"ltr-cls"},
+				{itemId:"radDisplayNear", "xtype": "radiofield",value:"Display Nearest"},
+				{itemId:"radDisplayAll", "xtype": "radiofield",value:"Display All"}
 			]
 		},
 		{

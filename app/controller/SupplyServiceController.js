@@ -57,6 +57,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "radiofield#radDisplayAll": {
                 check: 'onRadDisplayAllCheck'
+            },
+            "radiofield#radRequestNearby": {
+                check: 'onRadRequestNearbyCheck'
+            },
+            "radiofield#radRequestAll": {
+                check: 'onRadRequestAllCheck'
             }
         }
     },
@@ -261,8 +267,23 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceView2Initialize: function(component, eOpts) {
-        var view = component;
+            var view = component;
+            var orderItems =[];
+            var viewData={};
+                viewData.Items = view.getData();
 
+                Ext.each(viewData.Items,function(item){
+                    orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
+
+                });
+
+
+
+        this.GetNearByDealers(component,true, orderItems,true);
+        this.markers = [];
+
+
+        /*
 
         Ext.Localization.LocalizeView(view);
         Ext.AnimationHelper.ShowLoading();
@@ -299,21 +320,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+
                 // get dealers
 
                 var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
 
-                var orderItems =[];
-                var viewData={};
-                viewData.Items = view.getData();
-
-
-                Ext.each(viewData.Items,function(item){
-                    //alert(item.ItemID);
-                    orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
-
-                });
 
 
 
@@ -321,7 +333,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
                 var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
 
-                var requestData =  {"qid":Ext.Global.identityNum,//"24263400239",
+                var requestData =  {"qid":Ext.Global.identityNum,
                                     "languageID":language,
                                     "mobileDeviceID":"1231",
                                     "restrictDealerBasedOnStock":"true",
@@ -330,10 +342,6 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                                     "orderItems": orderItems,
                                     "sessionID": Ext.Global.userSupplyToken
                                    };
-
-
-                //console.log(requestData);
-
 
 
                 Ext.Ajax.request({
@@ -407,7 +415,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                     }
                 });
 
-            }, 1100,this);
+            }, 300,this);
 
 
         }, function(error){
@@ -423,7 +431,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
             gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-            gMap.setZoom(11);
+            gMap.setZoom(9);
 
 
 
@@ -449,6 +457,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             pinchend:this.domEvent,
             swipe:this.domEvent
         });
+        */
 
     },
 
@@ -644,7 +653,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
-        this.GetNearByDealers(component,true);
+        this.GetNearByDealers(component,true,[],false);
         this.markers = [];
 
     },
@@ -740,18 +749,52 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onRadDisplayNearCheck: function(checkboxfield, e, eOpts) {
-        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true);
+        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true,[],false);
 
 
 
     },
 
     onRadDisplayAllCheck: function(checkboxfield, e, eOpts) {
-                this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false);
+                this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false,[],false);
 
     },
 
-    GetDealers: function(gMap, lat, lng, orderItems, view, token) {
+    onRadRequestNearbyCheck: function(checkboxfield, e, eOpts) {
+            var view = this.getSupplyServiceView2();
+            var orderItems =[];
+            var viewData={};
+                viewData.Items = view.getData();
+
+                Ext.each(viewData.Items,function(item){
+                    orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
+
+                });
+
+
+
+        this.GetNearByDealers(component,true, orderItems,true);
+
+    },
+
+    onRadRequestAllCheck: function(checkboxfield, e, eOpts) {
+            var view = this.getSupplyServiceView2();
+            var orderItems =[];
+            var viewData={};
+                viewData.Items = view.getData();
+
+                Ext.each(viewData.Items,function(item){
+                    orderItems.push({ ItemID: item.ItemID, value: item.Quantity });
+
+                });
+
+
+
+        this.GetNearByDealers(component,true, orderItems,false);
+
+    },
+
+    GetDealers: function(gMap, lat, lng, orderItems, view, token, checkStock) {
         var me = this;
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
@@ -761,7 +804,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         var requestData =  {"qid":Ext.Global.identityNum,//"24263400239",
                             "languageID":language,
                             "mobileDeviceID":"1231",
-                            "restrictDealerBasedOnStock":"false",
+                            "restrictDealerBasedOnStock":checkStock,
                             "latitude": lat, //"25.321283",//location.lat,
                             "longtitude":lng, //"51.528329", //location.lng,
                             "orderItems": orderItems,
@@ -838,7 +881,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         evt.stopPropagation();
     },
 
-    GetNearByDealers: function(view, getNearBy) {
+    GetNearByDealers: function(view, getNearBy, orderItems, checkStock) {
         var me = this;
 
 
@@ -864,7 +907,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 gMap.setCenter(latLang);
 
 
-                var zoom=getNearBy === true ? zoom=11: zoom=9;
+                var zoom=getNearBy === true ? zoom=11: zoom=10;
 
                 gMap.setZoom(zoom);
 
@@ -880,9 +923,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 // get dealers
 
                 if(getNearBy)
-                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,'',checkStock);
                 else
-                me.GetDealers(gMap,0,0,[],view,'');
+                me.GetDealers(gMap,0,0,orderItems,view,'',checkStock);
 
             }, 300,this);
 
@@ -916,7 +959,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var latLang = new google.maps.LatLng(25.321283,51.528329);
                 gMap.setCenter(latLang);
 
-                 gMap.setZoom(9);
+                 gMap.setZoom(10);
 
 
                 // get dealers
