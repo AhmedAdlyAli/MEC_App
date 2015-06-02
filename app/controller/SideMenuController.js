@@ -68,6 +68,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'PublicServiceView',
                 title: Ext.Global.GetFixedTitle()
@@ -97,6 +100,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'MediaCenterView',
                 title: Ext.Global.GetFixedTitle()
@@ -113,6 +119,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'InquiriesView',
                 title: Ext.Global.GetFixedTitle()
@@ -129,6 +138,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'ContactUsView',
                 title:  Ext.Global.GetFixedTitle()
@@ -144,6 +156,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'ProjectsView',
                 title: Ext.Global.GetFixedTitle()
@@ -158,6 +173,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'ReportsView',
                 title:  Ext.Global.GetFixedTitle()
@@ -173,6 +191,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'SettingsView',
                 title: Ext.Global.GetFixedTitle()
@@ -189,6 +210,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
             return;
         }
         else {
+
+            Ext.Global.ResetHistory();
+
             Ext.Viewport.getActiveItem().push({
                 xtype: 'LoginFomView',
                 title:  Ext.Global.GetFixedTitle()
@@ -237,6 +261,9 @@ Ext.define('MEC_App.controller.SideMenuController', {
                     return;
                 }
                 else {
+
+                    Ext.Global.ResetHistory();
+
                     Ext.Viewport.getActiveItem().push({
                         xtype: 'AboutAppView',
                         title: Ext.Global.GetFixedTitle()

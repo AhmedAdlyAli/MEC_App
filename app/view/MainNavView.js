@@ -72,10 +72,8 @@ Ext.define('MEC_App.view.MainNavView', {
                         listeners: [
                             {
                                 fn: function(component, eOpts) {
+
                                     // loaad top 3 news
-
-
-
                                     var me = this;
 
                                     Ext.Ajax.request({
@@ -134,7 +132,6 @@ Ext.define('MEC_App.view.MainNavView', {
                                     me.onDragStart = function(e){
                                         return false;
                                     };
-
 
                                     setInterval(function(){
                                         me.next();
@@ -431,6 +428,7 @@ Ext.define('MEC_App.view.MainNavView', {
     },
 
     onNewsCarouselActiveItemChange: function(container, value, oldValue, eOpts) {
+
         if(container.activeIndex == container.items.length-1) {
             setTimeout(function(){
                 container.previous().previous();
@@ -448,18 +446,24 @@ Ext.define('MEC_App.view.MainNavView', {
     onMainNavViewActiveItemChange: function(container, value, oldValue, eOpts) {
 
         if(value.getId() == 'pnlMain' && oldValue.getId() == 'SettingsView') {
-
             Ext.Localization.LoadLocalization();
             Ext.Localization.LocalizeView(container);
             Ext.Localization.LocalizeView(Ext.Viewport.getMenus().right);
             Ext.Viewport.down('carousel').fireEvent('initialize');
+        }
 
+        console.log("Old: "+oldValue._itemId);
+        console.log("New: "+value._itemId);
+        console.log(Ext.Viewport.getActiveItem().innerItems.length);
+
+        if(oldValue._itemId == "GenericSelectView" || oldValue._itemId == "LoginFomView" || value._itemId == "GenericSelectView"){
+            Ext.Viewport.getActiveItem().innerItems.splice(Ext.Viewport.getActiveItem().innerItems.length-2,1);
         }
 
     },
 
     onMainNavViewBack: function(navigationview, eOpts) {
-        //console.log(navigationview);
+        console.log(navigationview.innerItems);
 
         //alert(navigationview.innerItems.length);
         if(navigationview.innerItems.length>1)
@@ -488,24 +492,21 @@ Ext.define('MEC_App.view.MainNavView', {
     },
 
     initialize: function() {
-        this.callParent();
 
+        this.callParent();
 
         // load Localization
         Ext.Localization.LoadLocalization();
-
 
 
         //Localize myself
         Ext.Localization.LocalizeView(this);
 
 
+        //Android
         if (Ext.os.is('Android')) {
             this.addCls('android');
         }
-
-
-
 
 
         //Create Menu
@@ -515,12 +516,6 @@ Ext.define('MEC_App.view.MainNavView', {
             reveal: false,
             cover: false
         });
-
-
-
-
-
-
 
 
 
@@ -556,27 +551,8 @@ Ext.define('MEC_App.view.MainNavView', {
         navBar.setAnimation(false);
 
 
-        //Localization
-
-
-        //Ext.Viewport.getActiveItem().getNavigationBar().titleComponent.setTitle(Ext.Global.GetViewTitle('Home'));
-
-        //this.down('#homeServices').setHtml(Ext.Global.GetViewTitle('PublicServices'));
-        //this.down('#btnMediaCenter').setHtml(Ext.Global.GetViewTitle('MediaCenter'));
-        //this.down('#homeInquire').setHtml(Ext.Global.GetViewTitle('Inquiries'));
-        //this.down('#btnProjects').setHtml(Ext.Global.GetViewTitle('Projects'));
-        //this.down('#homeReports').setHtml(Ext.Global.GetViewTitle('Reports'));
-        //this.down('#homeContact').setHtml(Ext.Global.GetViewTitle('ContactUs'));
-        //this.down('#pnlNews').setHtml(Ext.Global.GetGenericContent('HomeNews'));
-
-
         Ext.Viewport.bodyElement.on('swipe', function (event, node, options){
 
-            //if (node.closest('.x-carousel-item')) {
-            //event.stopPropagation();
-            //}
-
-            //else {
             if (event.direction == 'left' && theMenu.isHidden()) {
                 Ext.Viewport.showMenu('right');
             } else if (event.direction == 'right') {
@@ -585,7 +561,6 @@ Ext.define('MEC_App.view.MainNavView', {
                 }
 
             }
-            //}
 
         });
 

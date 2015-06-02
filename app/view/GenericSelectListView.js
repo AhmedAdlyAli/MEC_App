@@ -57,23 +57,15 @@ Ext.define('MEC_App.view.GenericSelectListView', {
     },
 
     onLstLinks1ItemTap1: function(dataview, index, target, record, e, eOpts) {
-        var viewData = dataview.up('GenericSelectView').getData();
 
-        var data ={Id: record.data[viewData.KeyField], Title: record.data[viewData.ValueField]};
+        var viewData = dataview.up('GenericSelectView').getData(),
+            data ={Id: record.data[viewData.KeyField], Title: record.data[viewData.ValueField]};
 
-
-
-
-            Ext.Viewport.getActiveItem().push({
-                        xtype: viewData.ReturnView,
-                        title: Ext.Global.GetFixedTitle(),
-                        data:data
-                    });
-
-
-
-
-
+        Ext.Viewport.getActiveItem().push({
+            xtype: viewData.ReturnView,
+            title: Ext.Global.GetFixedTitle(),
+            data:data
+        });
 
     },
 
@@ -100,9 +92,6 @@ Ext.define('MEC_App.view.GenericSelectListView', {
         lst.setItemTpl(new Ext.XTemplate( '<div class=\'nav-item\' style=\'background:url(resources/images/{Icon})\'>{'+viewData.ValueField+'}</div>'));
 
         lst.setStore(store);
-
-
-
 
         this.callParent();
 

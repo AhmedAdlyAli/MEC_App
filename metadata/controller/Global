@@ -606,6 +606,26 @@
             },
             "name": "LoadAjaxWithPaging",
             "designerId": "a621233d-e5dc-4b05-ab98-f04dd5e3e2c1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "ResetHistory",
+                "implHandler": [
+                    "var historyArray = Ext.Viewport.getActiveItem().innerItems;",
+                    "",
+                    "for (i = historyArray.length; i >0 ; i--) {",
+                    "    Ext.Viewport.getActiveItem().innerItems.splice(i,1);",
+                    "}"
+                ]
+            },
+            "name": "ResetHistory",
+            "designerId": "e02bdad9-dfc7-46e1-9b7d-4c4ae7dd66da"
         }
     ]
 }
