@@ -23,7 +23,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             fsItems: '#fsItems',
             SupplyServiceView1: 'SupplyServiceView1',
             SupplyServiceView2: 'SupplyServiceView2',
-            SupplyServiceView3: 'SupplyServiceView3'
+            SupplyServiceView3: 'SupplyServiceView3',
+            SupplyServiceNearestDealer: 'SupplyServiceNearestDealer'
         },
 
         control: {
@@ -50,6 +51,12 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
             },
             "panel#SupplyServiceMyData": {
                 initialize: 'onSupplyServiceMyDataInitialize'
+            },
+            "radiofield#radDisplayNear": {
+                check: 'onRadDisplayNearCheck'
+            },
+            "radiofield#radDisplayAll": {
+                check: 'onRadDisplayAllCheck'
             }
         }
     },
@@ -724,94 +731,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
-        var me = this;
-        var view = component;
-
-        Ext.Localization.LocalizeView(view);
-
-
-        Ext.AnimationHelper.ShowLoading();
-
-
-        var mapPanel = view.down('#mapDealers');
-        var gMap = mapPanel.getMap();
-
-
-
-        // get user location then get near dealers
-        navigator.geolocation.getCurrentPosition(function(position){
-
-
-
-
-
-            Ext.Function.defer(function(){
-
-
-                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-                gMap.setCenter(latLang);
-                gMap.setZoom(11);
-
-
-
-                //add user location marker
-                var marker = new google.maps.Marker({
-                      position: latLang,
-                      map: gMap
-                  });
-
-
-
-
-
-
-
-                // get dealers
-                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
-
-            }, 300,this);
-
-
-
-
-
-
-        }, function(error){
-
-
-           // alert('code: '    + error.code    + '\n' +
-           // 'message: ' + error.message + '\n');
-
-
-            var m = Ext.Localization.GetMessage('LocationNotEnabled');
-            Ext.device.Notification.show({
-                title: Ext.Localization.GetMessage('Message'),
-                buttons: [Ext.Localization.GetMessage('OK')],
-                message: m
-            });
-
-
-
-
-           Ext.Function.defer(function(){
-
-                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
-                gMap.setZoom(11);
-
-                me.GetDealers(gMap,lat,lng,[],view,'');
-
-             }, 300,this);
-
-
-               Ext.AnimationHelper.HideLoading();
-
-        });
-
-
-
-
-
-
+        this.GetNearByDealers(component);
     },
 
     onSupplyServiceMyDataInitialize: function(component, eOpts) {
@@ -895,6 +815,97 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+
+
+
+
+
+
+
+    },
+
+    onRadDisplayNearCheck: function(checkboxfield, e, eOpts) {
+        this.GetNearByDealers(this.getSupplyServiceNearestDealer());
+    },
+
+    onRadDisplayAllCheck: function(checkboxfield, e, eOpts) {
+        var view = this.getSupplyServiceNearestDealer();
+
+
+        var me = this;
+
+        Ext.AnimationHelper.ShowLoading();
+
+
+        var mapPanel = view.down('#mapDealers');
+        var gMap = mapPanel.getMap();
+
+
+
+        // get user location then get near dealers
+        navigator.geolocation.getCurrentPosition(function(position){
+
+
+
+
+
+            Ext.Function.defer(function(){
+
+
+                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                gMap.setCenter(latLang);
+                gMap.setZoom(11);
+
+
+
+                //add user location marker
+                var marker = new google.maps.Marker({
+                      position: latLang,
+                      map: gMap
+                  });
+
+
+
+                // get dealers
+                me.GetDealers(gMap,0,0,[],view,'');
+
+            }, 300,this);
+
+
+
+
+
+
+        }, function(error){
+
+
+           // alert('code: '    + error.code    + '\n' +
+           // 'message: ' + error.message + '\n');
+
+
+            var m = Ext.Localization.GetMessage('LocationNotEnabled');
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Message'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message: m
+            });
+
+
+
+
+           Ext.Function.defer(function(){
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+                me.GetDealers(gMap,lat,lng,[],view,'');
+
+             }, 300,this);
+
+
+               Ext.AnimationHelper.HideLoading();
+
+        });
 
 
 
@@ -995,6 +1006,96 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
     domEvent: function(evt, el, o) {
         evt.stopPropagation();
+    },
+
+    GetNearByDealers: function(view) {
+        var me = this;
+
+
+        Ext.Localization.LocalizeView(view);
+
+
+        Ext.AnimationHelper.ShowLoading();
+
+
+        var mapPanel = view.down('#mapDealers');
+        var gMap = mapPanel.getMap();
+
+
+
+        // get user location then get near dealers
+        navigator.geolocation.getCurrentPosition(function(position){
+
+
+
+
+
+            Ext.Function.defer(function(){
+
+
+                var latLang = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+                gMap.setCenter(latLang);
+                gMap.setZoom(11);
+
+
+
+                //add user location marker
+                var marker = new google.maps.Marker({
+                      position: latLang,
+                      map: gMap
+                  });
+
+
+
+
+
+
+
+                // get dealers
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,[],view,'');
+
+            }, 300,this);
+
+
+
+
+
+
+        }, function(error){
+
+
+           // alert('code: '    + error.code    + '\n' +
+           // 'message: ' + error.message + '\n');
+
+
+            var m = Ext.Localization.GetMessage('LocationNotEnabled');
+            Ext.device.Notification.show({
+                title: Ext.Localization.GetMessage('Message'),
+                buttons: [Ext.Localization.GetMessage('OK')],
+                message: m
+            });
+
+
+
+
+           Ext.Function.defer(function(){
+
+                gMap.setCenter(new google.maps.LatLng (25.321283,51.528329));
+                gMap.setZoom(11);
+
+                me.GetDealers(gMap,lat,lng,[],view,'');
+
+             }, 300,this);
+
+
+               Ext.AnimationHelper.HideLoading();
+
+        });
+
+
+
+
+
     }
 
 });

@@ -77,6 +77,57 @@
                     },
                     "name": "MyMap1",
                     "designerId": "b3d761cb-bfe8-4863-bbf3-e6ff7bba6790"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox",
+                        "title": null
+                    },
+                    "name": "MyFieldSet",
+                    "designerId": "97eabbc9-746f-4a2f-84e0-8ca1628b1d93",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "checked": true,
+                                "itemId": "radDisplayNear",
+                                "label": "عرض الأقرب",
+                                "labelWidth": "70%",
+                                "layout|flex": 1,
+                                "name": "field"
+                            },
+                            "name": "MyRadioButton",
+                            "designerId": "3f12042d-a9d4-4448-b021-4c7bc5ec9aaa"
+                        },
+                        {
+                            "type": "Ext.field.Radio",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "radDisplayAll",
+                                "label": "عرض الكل",
+                                "labelWidth": "70%",
+                                "layout|flex": 1,
+                                "name": "field"
+                            },
+                            "name": "MyRadioButton1",
+                            "designerId": "dc87a6ab-ee19-49fa-93f1-8ddf7cd79761"
+                        }
+                    ]
                 }
             ]
         },
