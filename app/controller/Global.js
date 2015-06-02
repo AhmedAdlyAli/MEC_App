@@ -397,6 +397,14 @@ Ext.define('MEC_App.controller.Global', {
             }
         });
 
+    },
+
+    ResetHistory: function() {
+        var historyArray = Ext.Viewport.getActiveItem().innerItems;
+
+        for (i = historyArray.length; i >0 ; i--) {
+            Ext.Viewport.getActiveItem().innerItems.splice(i,1);
+        }
     }
 
 });

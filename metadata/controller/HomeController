@@ -29,6 +29,8 @@
                 "fn": "onMybutton1Tap",
                 "implHandler": [
                     "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
                     "    xtype: 'ContactUsView',",
                     "    title: 'Contact Us'",
@@ -60,6 +62,9 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onMybutton2Tap",
                 "implHandler": [
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
                     "    xtype: 'EconomyNewsView',",
                     "    title: 'testttttt'",
@@ -118,10 +123,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeServicesTap",
                 "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "            xtype: 'PublicServiceView',",
-                    "            title: 'الخدمات العامة'",
-                    "        });"
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'PublicServiceView',",
+                    "    title: 'الخدمات العامة'",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -145,7 +153,8 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeNewsTap",
                 "implHandler": [
-                    "       ",
+                    "",
+                    "Ext.Global.ResetHistory();",
                     "",
                     "button.up('MainNavView').push({",
                     "            xtype: 'MediaCenterView',",
@@ -174,10 +183,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeInquireTap",
                 "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "             xtype: 'InquiriesView',",
-                    "             title: \"الاستعلامات و الاصدارات\"",
-                    "         });"
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'InquiriesView',",
+                    "    title: \"الاستعلامات و الاصدارات\"",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -201,10 +213,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeGeneralInfoTap",
                 "implHandler": [
-                    "        button.up('MainNavView').push({",
-                    "            xtype: 'InquiriesView',",
-                    "            title: \"معلومات عامة\"",
-                    "        });"
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'InquiriesView',",
+                    "    title: \"معلومات عامة\"",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -228,10 +243,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeReportsTap",
                 "implHandler": [
-                    "    button.up('MainNavView').push({",
-                    "        xtype: 'ReportsView',",
-                    "        title: \"المؤشرات و التقارير\"",
-                    "    });"
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'ReportsView',",
+                    "    title: \"المؤشرات و التقارير\"",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -255,10 +273,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeProjectsTap",
                 "implHandler": [
-                    "    button.up('MainNavView').push({",
-                    "        xtype: 'ProjectsView',",
-                    "        title: \"المبادرات و المشاريع\"",
-                    "    });"
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'ProjectsView',",
+                    "    title: \"المبادرات و المشاريع\"",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -282,10 +303,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeeContactTap",
                 "implHandler": [
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
-                    "        xtype: 'ContactUsView',",
-                    "        title: \"التواصل\"",
-                    "    });"
+                    "    xtype: 'ContactUsView',",
+                    "    title: \"التواصل\"",
+                    "});"
                 ],
                 "name": "tap"
             },
@@ -311,10 +335,12 @@
                 "implHandler": [
                     "//heeeeeee",
                     "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
-                    "                    xtype: 'PublicServiceView',",
-                    "                    title: Ext.Global.GetFixedTitle()",
-                    "                });",
+                    "    xtype: 'PublicServiceView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});",
                     "",
                     ""
                 ],
@@ -340,9 +366,12 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnMediaCenter1Tap",
                 "implHandler": [
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
                     "    xtype: 'MediaCenterView',",
-                    "    title: Ext.Global.GetFixedTitle() ",
+                    "    title: Ext.Global.GetFixedTitle()",
                     "});",
                     ""
                 ],
@@ -368,10 +397,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeInquire1Tap",
                 "implHandler": [
-                    " button.up('MainNavView').push({",
-                    "                     xtype: 'InquiriesView',",
-                    "                     title: Ext.Global.GetFixedTitle()",
-                    "                 });",
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'InquiriesView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});",
                     ""
                 ],
                 "name": "tap"
@@ -396,10 +428,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeReports1Tap",
                 "implHandler": [
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
-                    "                xtype: 'ReportsView',",
-                    "                title: Ext.Global.GetFixedTitle()",
-                    "            });",
+                    "    xtype: 'ReportsView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});",
                     "",
                     ""
                 ],
@@ -425,10 +460,13 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnProjects1Tap",
                 "implHandler": [
-                    " button.up('MainNavView').push({",
-                    "                xtype: 'ProjectsView',",
-                    "                title: Ext.Global.GetFixedTitle()",
-                    "            });",
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
+                    "button.up('MainNavView').push({",
+                    "    xtype: 'ProjectsView',",
+                    "    title: Ext.Global.GetFixedTitle()",
+                    "});",
                     ""
                 ],
                 "name": "tap"
@@ -453,6 +491,9 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onHomeContact1Tap",
                 "implHandler": [
+                    "",
+                    "Ext.Global.ResetHistory();",
+                    "",
                     "button.up('MainNavView').push({",
                     "    xtype: 'ContactUsView',",
                     "    title: Ext.Global.GetFixedTitle()",

@@ -71,6 +71,8 @@ Ext.define('MEC_App.controller.HomeController', {
 
     onMybutton1Tap: function(button, e, eOpts) {
 
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
             title: 'Contact Us'
@@ -82,6 +84,9 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onMybutton2Tap: function(button, e, eOpts) {
+
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
             xtype: 'EconomyNewsView',
             title: 'testttttt'
@@ -100,14 +105,18 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeServicesTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
-                    xtype: 'PublicServiceView',
-                    title: 'الخدمات العامة'
-                });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'PublicServiceView',
+            title: 'الخدمات العامة'
+        });
     },
 
     onHomeNewsTap: function(button, e, eOpts) {
 
+        Ext.Global.ResetHistory();
 
         button.up('MainNavView').push({
                     xtype: 'MediaCenterView',
@@ -116,52 +125,72 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeInquireTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
-                     xtype: 'InquiriesView',
-                     title: "الاستعلامات و الاصدارات"
-                 });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'InquiriesView',
+            title: "الاستعلامات و الاصدارات"
+        });
     },
 
     onHomeGeneralInfoTap: function(button, e, eOpts) {
-                button.up('MainNavView').push({
-                    xtype: 'InquiriesView',
-                    title: "معلومات عامة"
-                });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'InquiriesView',
+            title: "معلومات عامة"
+        });
     },
 
     onHomeReportsTap: function(button, e, eOpts) {
-            button.up('MainNavView').push({
-                xtype: 'ReportsView',
-                title: "المؤشرات و التقارير"
-            });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'ReportsView',
+            title: "المؤشرات و التقارير"
+        });
     },
 
     onHomeProjectsTap: function(button, e, eOpts) {
-            button.up('MainNavView').push({
-                xtype: 'ProjectsView',
-                title: "المبادرات و المشاريع"
-            });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'ProjectsView',
+            title: "المبادرات و المشاريع"
+        });
     },
 
     onHomeeContactTap: function(button, e, eOpts) {
+
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
-                xtype: 'ContactUsView',
-                title: "التواصل"
-            });
+            xtype: 'ContactUsView',
+            title: "التواصل"
+        });
     },
 
     onHomeServices1Tap: function(button, e, eOpts) {
         //heeeeeee
 
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
-                            xtype: 'PublicServiceView',
-                            title: Ext.Global.GetFixedTitle()
-                        });
+            xtype: 'PublicServiceView',
+            title: Ext.Global.GetFixedTitle()
+        });
 
 
     },
 
     onBtnMediaCenter1Tap: function(button, e, eOpts) {
+
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
             xtype: 'MediaCenterView',
             title: Ext.Global.GetFixedTitle()
@@ -170,31 +199,43 @@ Ext.define('MEC_App.controller.HomeController', {
     },
 
     onHomeInquire1Tap: function(button, e, eOpts) {
-         button.up('MainNavView').push({
-                             xtype: 'InquiriesView',
-                             title: Ext.Global.GetFixedTitle()
-                         });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'InquiriesView',
+            title: Ext.Global.GetFixedTitle()
+        });
 
     },
 
     onHomeReports1Tap: function(button, e, eOpts) {
+
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
-                        xtype: 'ReportsView',
-                        title: Ext.Global.GetFixedTitle()
-                    });
+            xtype: 'ReportsView',
+            title: Ext.Global.GetFixedTitle()
+        });
 
 
     },
 
     onBtnProjects1Tap: function(button, e, eOpts) {
-         button.up('MainNavView').push({
-                        xtype: 'ProjectsView',
-                        title: Ext.Global.GetFixedTitle()
-                    });
+
+        Ext.Global.ResetHistory();
+
+        button.up('MainNavView').push({
+            xtype: 'ProjectsView',
+            title: Ext.Global.GetFixedTitle()
+        });
 
     },
 
     onHomeContact1Tap: function(button, e, eOpts) {
+
+        Ext.Global.ResetHistory();
+
         button.up('MainNavView').push({
             xtype: 'ContactUsView',
             title: Ext.Global.GetFixedTitle()

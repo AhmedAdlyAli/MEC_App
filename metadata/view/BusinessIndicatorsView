@@ -51,7 +51,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "hiddenCatType",
+                "id": null,
                 "itemId": "hiddenCatType"
             },
             "name": "MyHiddenField1",
@@ -65,8 +65,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "id": "hiddenCatID",
-                "itemId": "myhiddenfield"
+                "id": null,
+                "itemId": "hiddenCatID"
             },
             "name": "MyHiddenField",
             "designerId": "997eb20f-3179-432c-a03f-3e2bb9f73ac6",
@@ -245,7 +245,7 @@
                             "            valueField =  'NameAr';",
                             "        else",
                             "            valueField = 'Name';",
-                            "    ",
+                            "",
                             "",
                             " var data = {TitleKey:'SelectReport', ReturnView:'BusinessIndicatorsView', links: me.up('BusinessIndicatorsView').links, KeyField:'Id',ValueField:valueField};",
                             "",
@@ -260,7 +260,7 @@
                             "",
                             "});",
                             "",
-                            "    ",
+                            "",
                             "",
                             ""
                         ],
