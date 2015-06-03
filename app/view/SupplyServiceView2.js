@@ -65,7 +65,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                         flex: 1,
                         itemId: 'radRequestNearby',
                         label: 'عرض الأقرب',
-                        labelWidth: '50%',
+                        labelWidth: '65%',
                         name: 'field',
                         checked: true
                     },
@@ -74,7 +74,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                         flex: 1,
                         itemId: 'radRequestAll',
                         label: 'عرض الكل',
-                        labelWidth: '50%',
+                        labelWidth: '65%',
                         name: 'field'
                     }
                 ]

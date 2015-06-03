@@ -104,7 +104,7 @@
                                 "checked": true,
                                 "itemId": "radDisplayNear",
                                 "label": "عرض الأقرب",
-                                "labelWidth": "60%",
+                                "labelWidth": "65%",
                                 "layout|flex": 1,
                                 "name": "field"
                             },
@@ -121,7 +121,7 @@
                             "userConfig": {
                                 "itemId": "radDisplayAll",
                                 "label": "عرض الكل",
-                                "labelWidth": "60%",
+                                "labelWidth": "65%",
                                 "layout|flex": 1,
                                 "name": "field"
                             },

@@ -101,7 +101,7 @@
                         "checked": true,
                         "itemId": "radRequestNearby",
                         "label": "عرض الأقرب",
-                        "labelWidth": "50%",
+                        "labelWidth": "65%",
                         "layout|flex": 1,
                         "name": "field"
                     },
@@ -118,7 +118,7 @@
                     "userConfig": {
                         "itemId": "radRequestAll",
                         "label": "عرض الكل",
-                        "labelWidth": "50%",
+                        "labelWidth": "65%",
                         "layout|flex": 1,
                         "name": "field"
                     },
