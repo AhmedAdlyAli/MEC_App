@@ -180,7 +180,7 @@
                     "",
                     "}else{",
                     "",
-                    "",
+                    "console.log(record.data);",
                     "",
                     "dataview.up('MainNavView').push({",
                     "    xtype: 'MyEstablishmentDetails',",

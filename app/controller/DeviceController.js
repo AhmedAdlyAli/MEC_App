@@ -147,6 +147,32 @@ Ext.define('MEC_App.controller.DeviceController', {
 
     },
 
+    GetBarcodeValue: function() {
+        cordova.plugins.barcodeScanner.scan(
+            function (result) {
+
+                /*  alert("We got a barcode\n" +
+                                        "Result: " + result.text + "\n" +
+                                        "Format: " + result.format + "\n" +
+                                        "Cancelled: " + result.cancelled);
+                                        */
+
+
+
+                return result.text;
+
+
+            },
+            function (error) {
+                alert("Barcode Scanning failed: " + error);
+            }
+        );
+
+
+
+
+    },
+
     UploadImage: function(key, imgUrl, isLast, formData, uploadUrl, confirm) {
         var options = new FileUploadOptions();
         //options.fileKey = key;

@@ -1,0 +1,88 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "BarCodeSearchView",
+        "designer|userClassName": "BarCodeSearchView",
+        "itemId": "BarCodeSearchView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "TradeNameAvailabilityView1",
+    "designerId": "274ce4e2-712c-4d60-a205-d948ea269f55",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "البحث عن معلومات المستخرجات",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "65c0b30b-424c-4cce-9ee7-75ba68ab7fb7"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "fsForm",
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "59f200c1-7003-4cf2-9576-1b94977cf1cd",
+            "cn": [
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "إرشادات عن الوثائق التي يمكن استعادة بياناتها ....... "
+                    },
+                    "name": "MyLabel",
+                    "designerId": "ea92ded8-9750-425a-9ccc-05a95fa22ba7"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "designer|displayName": null,
+                        "itemId": "btnSearch",
+                        "text": "بحث بالماسح الضوئي"
+                    },
+                    "name": "MyButton1",
+                    "designerId": "eb19e756-78e3-4b74-83cd-ca21552a2ea2"
+                }
+            ]
+        }
+    ]
+}

@@ -116,7 +116,8 @@ Ext.application({
         'WebFrameView1',
         'AboutAppView',
         'MyBisunessFixed',
-        'GenericSelectListView'
+        'GenericSelectListView',
+        'BarCodeSearchView'
     ],
     controllers: [
         'HomeController',
@@ -143,7 +144,8 @@ Ext.application({
         'ShopPriceListController',
         'WhereToShopController',
         'LanguageViewController',
-        'SettingsViewController'
+        'SettingsViewController',
+        'BarCodeSearchController'
     ],
     name: 'MEC_App',
 

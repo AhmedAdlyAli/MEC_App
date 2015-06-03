@@ -159,7 +159,7 @@ Ext.define('MEC_App.controller.MyBusinessController', {
 
         }else{
 
-
+        console.log(record.data);
 
         dataview.up('MainNavView').push({
             xtype: 'MyEstablishmentDetails',
