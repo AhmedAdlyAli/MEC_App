@@ -823,7 +823,6 @@
                     "lng",
                     "orderItems",
                     "view",
-                    "token",
                     "checkStock"
                 ],
                 "fn": "GetDealers",
@@ -841,7 +840,7 @@
                     "                    \"latitude\": lat, //\"25.321283\",//location.lat,",
                     "                    \"longtitude\":lng, //\"51.528329\", //location.lng,",
                     "                    \"orderItems\": orderItems,",
-                    "                    \"sessionID\": token",
+                    "                    \"sessionID\": Ext.Global.userSupplyToken",
                     "                   };",
                     "",
                     "",
@@ -854,7 +853,7 @@
                     "",
                     "        var json1 = Ext.util.JSON.decode(response.responseText);",
                     "        var json2 = Ext.util.JSON.decode(json1);",
-                    "",
+                    " ",
                     "",
                     "        Ext.AnimationHelper.HideLoading();",
                     "",
@@ -1152,9 +1151,9 @@
                     "        // get dealers",
                     "",
                     "        if(getNearBy)",
-                    "        me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,'',checkStock);",
+                    "        me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,checkStock);",
                     "        else",
-                    "        me.GetDealers(gMap,0,0,orderItems,view,'',checkStock);",
+                    "        me.GetDealers(gMap,0,0,orderItems,view,checkStock);",
                     "",
                     "    }, 300,this);",
                     "",
@@ -1255,7 +1254,7 @@
                     "",
                     "",
                     "",
-                    "this.GetNearByDealers(component,true, orderItems,true);",
+                    "this.GetNearByDealers(view,true, orderItems,true);",
                     ""
                 ],
                 "name": "check"
@@ -1292,7 +1291,7 @@
                     "",
                     "",
                     "",
-                    "this.GetNearByDealers(component,true, orderItems,false);",
+                    "this.GetNearByDealers(view,false, orderItems,true);",
                     ""
                 ],
                 "name": "check"

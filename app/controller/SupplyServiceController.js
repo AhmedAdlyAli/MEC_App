@@ -773,7 +773,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        this.GetNearByDealers(component,true, orderItems,true);
+        this.GetNearByDealers(view,true, orderItems,true);
 
     },
 
@@ -790,11 +790,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        this.GetNearByDealers(component,true, orderItems,false);
+        this.GetNearByDealers(view,false, orderItems,true);
 
     },
 
-    GetDealers: function(gMap, lat, lng, orderItems, view, token, checkStock) {
+    GetDealers: function(gMap, lat, lng, orderItems, view, checkStock) {
         var me = this;
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
@@ -808,7 +808,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             "latitude": lat, //"25.321283",//location.lat,
                             "longtitude":lng, //"51.528329", //location.lng,
                             "orderItems": orderItems,
-                            "sessionID": token
+                            "sessionID": Ext.Global.userSupplyToken
                            };
 
 
@@ -923,9 +923,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 // get dealers
 
                 if(getNearBy)
-                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,'',checkStock);
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,checkStock);
                 else
-                me.GetDealers(gMap,0,0,orderItems,view,'',checkStock);
+                me.GetDealers(gMap,0,0,orderItems,view,checkStock);
 
             }, 300,this);
 

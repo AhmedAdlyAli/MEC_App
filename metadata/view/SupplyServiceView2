@@ -98,10 +98,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "checked": true,
                         "itemId": "radRequestNearby",
                         "label": "عرض الأقرب",
                         "labelWidth": "50%",
-                        "layout|flex": 1
+                        "layout|flex": 1,
+                        "name": "field"
                     },
                     "name": "MyRadioButton2",
                     "designerId": "bbc28add-392c-4c47-a614-412f7c787ffc"
@@ -117,7 +119,8 @@
                         "itemId": "radRequestAll",
                         "label": "عرض الكل",
                         "labelWidth": "50%",
-                        "layout|flex": 1
+                        "layout|flex": 1,
+                        "name": "field"
                     },
                     "name": "MyRadioButton3",
                     "designerId": "7de48ba5-4a30-41af-a89c-9106a2db8415"
