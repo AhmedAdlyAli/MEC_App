@@ -844,11 +844,13 @@ body {
     border-bottom: solid 1px #fff !important;
 
 
-    .x-title{
-        color: #701d45 !important;
-        font-size:1em;
 
-    }
+     .x-title{
+
+    color: #701d45 !important;
+    font-size:1em;
+
+     }
 }
 
 
@@ -2195,6 +2197,9 @@ background: url(../images/toplogo.png) no-repeat center top;
             }
         }
     }
+    .mobile{
+    text-align:left
+    }
 
 
 }
@@ -2228,7 +2233,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .mobile{
-    
+
     direction:ltr;
-    text-align:right 
+    text-align:right
 }

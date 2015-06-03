@@ -215,7 +215,7 @@ var localeAr =
         errComplaintText:'فضلا ادخل نص الشكوى\n',
         errFullName:'فضلا ادخل الاسم بالكامل\n',
         errMobile:'فضلا ادخل رقم الجوال\n',
-        errUserName:'فضلا ادخل اسم المستخدم\n',
+        errUserName:'فضلا ادخل رقم إثبات الشخصية\n',
         errPassword:'فضلا ادخل كلمة السر\n',
         errSuggestion : 'فضلا ادخل المقترح\n	',
         errMail: 'فضلا ادخل بريد الكتروني صحيح\n	',

@@ -666,7 +666,13 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         // localization
         Ext.Localization.LocalizeView(view);
 
+
+        if(Ext.Global.LanguageFlag==='ar')
         view.down('#lblName').setHtml(Ext.Global.identityNameAr);
+        else
+        view.down('#lblName').setHtml(Ext.Global.identityNameEn);
+
+
         view.down('#lblQID').setHtml(Ext.Global.identityNum);
         view.down('#lblMobile').setHtml(Ext.Global.mobileNumber);
 

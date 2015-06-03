@@ -43,10 +43,12 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
             {
                 xtype: 'panel',
                 cls: 'acc-group',
+                itemId: 'pnlUser',
                 items: [
                     {
                         xtype: 'label',
-                        html: 'إسم المستخدم'
+                        html: 'إسم المستخدم',
+                        itemId: 'lblName1'
                     },
                     {
                         xtype: 'label',
@@ -55,7 +57,8 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
                     },
                     {
                         xtype: 'label',
-                        html: 'رقم البطاقة الشخصية'
+                        html: 'رقم البطاقة الشخصية',
+                        itemId: 'lblID1'
                     },
                     {
                         xtype: 'label',
@@ -64,7 +67,8 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
                     },
                     {
                         xtype: 'label',
-                        html: 'رقم الهاتف المسجل'
+                        html: 'رقم الهاتف المسجل',
+                        itemId: 'lblMobile1'
                     },
                     {
                         xtype: 'label',
@@ -78,11 +82,13 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
             },
             {
                 xtype: 'panel',
+                itemId: 'pnlFamily',
                 items: [
                     {
                         xtype: 'titlebar',
                         cls: 'acc-header4',
                         docked: 'top',
+                        itemId: 'familyTitle',
                         title: 'أفراد الأسرة المسجلين علي البطاقة',
                         titleAlign: 'right'
                     },

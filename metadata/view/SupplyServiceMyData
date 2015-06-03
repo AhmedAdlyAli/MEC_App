@@ -45,7 +45,8 @@
             "userConfig": {
                 "cls": [
                     "acc-group"
-                ]
+                ],
+                "itemId": "pnlUser"
             },
             "name": "MyPanel7",
             "designerId": "f05e039c-0913-4d80-bf7b-dd741e7f6ae3",
@@ -58,7 +59,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "إسم المستخدم"
+                        "html": "إسم المستخدم",
+                        "itemId": "lblName1"
                     },
                     "name": "MyLabel30",
                     "designerId": "b9a44ff3-12d5-4453-9923-b180dc33c53a"
@@ -87,7 +89,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "رقم البطاقة الشخصية"
+                        "html": "رقم البطاقة الشخصية",
+                        "itemId": "lblID1"
                     },
                     "name": "MyLabel33",
                     "designerId": "7525fc25-48e3-4a94-8492-5da056c5424c"
@@ -116,7 +119,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "رقم الهاتف المسجل"
+                        "html": "رقم الهاتف المسجل",
+                        "itemId": "lblMobile1"
                     },
                     "name": "MyLabel34",
                     "designerId": "f24a7207-adbc-49ae-8a84-8c1b75a28449"
@@ -147,6 +151,9 @@
                 "type": "array"
             },
             "codeClass": null,
+            "userConfig": {
+                "itemId": "pnlFamily"
+            },
             "name": "MyPanel5",
             "designerId": "e9ceae67-9bf0-4b90-9e1d-7633903945f3",
             "cn": [
@@ -162,12 +169,12 @@
                             "acc-header4"
                         ],
                         "docked": "top",
-                        "html": null,
+                        "itemId": "familyTitle",
                         "title": "أفراد الأسرة المسجلين علي البطاقة",
                         "titleAlign": "right"
                     },
-                    "name": "MyTitleBar1",
-                    "designerId": "b39fa444-f036-40ed-8efb-349d91a1f960"
+                    "name": "MyTitleBar",
+                    "designerId": "0dc9c970-4388-4fb4-bbd6-77a5f1b8c4e9"
                 },
                 {
                     "type": "Ext.dataview.List",
