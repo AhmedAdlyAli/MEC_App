@@ -119,6 +119,8 @@ Ext.define('MEC_App.controller.LoginController', {
                     }else{
 
 
+                        console.log(json);
+
                         Ext.Global.identityType = json.listOfMecContactInfoIo.contact[0].identityType;
                         Ext.Global.identityNum = json.listOfMecContactInfoIo.contact[0].identityNum;
                         Ext.Global.identityNationality =
@@ -129,9 +131,7 @@ Ext.define('MEC_App.controller.LoginController', {
                         Ext.Global.identityNameEn = json.listOfMecContactInfoIo.contact[0].fullNameECalc;
 
                         Ext.Global.mobileNumber = json.listOfMecContactInfoIo.contact[0].phoneNumber;
-
-
-
+                        Ext.Global.email = json.listOfMecContactInfoIo.contact[0].emailAddress;
 
 
 

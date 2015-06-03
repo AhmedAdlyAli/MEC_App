@@ -30,6 +30,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
     config: {
         itemId: 'SupplyServiceView2',
         zIndex: 1000,
+        scrollable: 'vertical',
         cls: [
             'complaint-view',
             'rtl'

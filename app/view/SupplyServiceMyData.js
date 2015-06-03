@@ -19,6 +19,8 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
+        'Ext.TitleBar',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -39,12 +41,59 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
                 itemId: 'viewLbl'
             },
             {
-                xtype: 'list',
-                flex: 2,
-                itemId: 'lstFamily',
-                itemCls: 'item-link',
-                itemTpl: [
-                    '<div>{Name}</div>'
+                xtype: 'panel',
+                cls: 'acc-group',
+                items: [
+                    {
+                        xtype: 'label',
+                        html: 'إسم المستخدم'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'label-value',
+                        itemId: 'lblName'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'رقم البطاقة الشخصية'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'label-value',
+                        itemId: 'lblQID'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'رقم الهاتف المسجل'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: [
+                            'label-value',
+                            'mobile'
+                        ],
+                        itemId: 'lblMobile'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header4',
+                        docked: 'top',
+                        title: 'أفراد الأسرة المسجلين علي البطاقة',
+                        titleAlign: 'right'
+                    },
+                    {
+                        xtype: 'list',
+                        itemId: 'lstFamily',
+                        itemCls: 'item-link',
+                        itemTpl: [
+                            '<div>{Name}</div>'
+                        ]
+                    }
                 ]
             }
         ]

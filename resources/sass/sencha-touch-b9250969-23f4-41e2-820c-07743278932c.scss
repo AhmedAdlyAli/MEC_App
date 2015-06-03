@@ -837,13 +837,34 @@ body {
 }
 
 
+.acc-header4{
+    background:#e1e1e1;
+    min-height:2.2em !important;
+    padding:0;
+    border-bottom: solid 1px #fff !important;
+
+
+    .x-title{
+        color: #701d45 !important;
+        font-size:1em;
+
+    }
+}
+
+
+
+
+
+
+
+
 .acc-group{
     direction:rtl;
     background-color:#fff;
     .x-label{
         padding:0 1.5em;
         color: #6f2f51;
-        padding-top:1em;
+        padding-top:0.5em;
         font-weight:bold;
     }
 
@@ -1845,7 +1866,7 @@ background: url(../images/toplogo.png) no-repeat center top;
     .x-field-input {
         padding-left: 2.2em;
         padding-right: 0;
-        
+
         .x-clear-icon {
             left: -0.5em;
             right: auto;
@@ -2148,26 +2169,26 @@ background: url(../images/toplogo.png) no-repeat center top;
             padding: 0;
         }
     }
-    
+
     .x-field-search {
         .x-field-input {
             &:before {
                 left: .5em;
                 right: auto;
             }
-            
+
             .x-form-field {
                 margin-left: 0;
                 padding: .4em .4em .4em 1.4em;
             }
         }
     }
-    
+
     .x-field-clearable {
         .x-field-input {
             padding-right: 2.2em;
             padding-left: 0;
-            
+
             .x-clear-icon {
                 right: -0.5em;
                 left: auto;
@@ -2202,4 +2223,12 @@ background: url(../images/toplogo.png) no-repeat center top;
     .x-list-paging-msg {
         color: #000;
     }
+}
+
+
+
+.mobile{
+    
+    direction:ltr;
+    text-align:right 
 }
