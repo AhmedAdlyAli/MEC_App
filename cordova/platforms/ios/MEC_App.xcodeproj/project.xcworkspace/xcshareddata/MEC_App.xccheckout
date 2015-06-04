@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>19B82BFC-F35F-493D-9CB7-B1DBBB2D9C15</string>
+	<string>A205AC29-E912-4B69-8689-1DECBC21FB1F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MEC_APP</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E47699A82A23B47D3092F52F2F70C9B278DB80A7</key>
-		<string>https://github.com/hhozien/MEC_App.git</string>
+		<string>https://github.com/AhmedAdlyAli/MEC_App</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>cordova/platforms/ios/MEC_APP.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hhozien/MEC_App.git</string>
+	<string>https://github.com/AhmedAdlyAli/MEC_App</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

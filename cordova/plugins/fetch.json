@@ -155,5 +155,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "com.malomatia.DropBoxChooser": {
+        "source": {
+            "type": "local",
+            "path": "../mal_plugins/Mal.DropBox.Chooser"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
