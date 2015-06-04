@@ -728,14 +728,6 @@ me.element.on('tap', function(){
 
 
 
-
-
-<<<<<<< HEAD
-60fdb2b78b6e60508686afe63fcb0a9c4cedf019
-
-
-
-
 <NewDataSet xmlns=""><Table diffgr:id="Table1" msdata:rowOrder="0"><Store_x0020_ID>01</Store_x0020_ID><Store_x0020_Name>Carrefour</Store_x0020_Name><Store_x0020_Name_x0020_Arabic>كارفور</Store_x0020_Name_x0020_Arabic></Table></NewDataSet>
 
 
@@ -768,13 +760,13 @@ Web service
 
 a533f1e0907fa3cabe7e08dd2dd660ea01ddb42e
 Omar: oabusalibah@mec.gov.qa
-=======
+
 
 MEC.MECQATAR
 
 
 
->>>>>>> 0d289da6276e188e69fabe8a8be729153182ca39
+
 
 
 

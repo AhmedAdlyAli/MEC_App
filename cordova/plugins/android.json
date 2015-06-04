@@ -598,6 +598,11 @@
                         }
                     ]
                 }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
             }
         }
     },
@@ -626,6 +631,9 @@
         "nl.x-services.plugins.actionsheet": {
             "PACKAGE_NAME": "mec.mecapp"
         },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "mec.mecapp"
         },
@@ -646,9 +654,6 @@
         },
         "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "mec.mecapp"
-        },
-        "org.apache.cordova.console": {
-            "PACKAGE_NAME": "MEC.MECAPP"
         }
     },
     "dependent_plugins": {}
