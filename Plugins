@@ -17,6 +17,8 @@ cordova plugin add org.apache.cordova.vibration
 
 cordova plugin add cordova-plugin-file-transfer
 
+cordova plugin add uk.co.cv-library.plugins.dropboxchooser
+
 
 
 http://docs.sencha.com/touch/2.3.0/#!/guide/cordova-section-before-creating-an-app

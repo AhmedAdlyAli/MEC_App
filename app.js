@@ -182,13 +182,25 @@ Ext.application({
 
             function onBackKeyDown(eve) {
 
-                eve.preventDefault();
+                if(Ext.Viewport.getActiveItem()._itemId != 'pnlMain') {
+                    alert(Ext.Viewport.getActiveItem()._itemId);
+                    eve.preventDefault();
 
-                //do something
-                Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
+                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
+                }
 
             }
         }
+
+        var dropScript = document.createElement('script');
+        dropScript.setAttribute('type','text/javascript');
+        dropScript.setAttribute('src','https://www.dropbox.com/static/api/2/dropins.js');
+        dropScript.setAttribute('id','dropboxjs');
+        dropScript.setAttribute('data-app-key','47so5uewkrqg9ym');
+
+        //'<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="47so5uewkrqg9ym"></script>';
+
+        Ext.getHead().dom.appendChild(dropScript);
 
         Ext.create('MEC_App.view.LanguageView', {fullscreen: true});
     }

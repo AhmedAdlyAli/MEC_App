@@ -602,6 +602,11 @@
                         }
                     ]
                 }
+            },
+            "config.xml": {
+                "parents": {
+                    "/*": []
+                }
             }
         }
     },
@@ -628,6 +633,9 @@
             "PACKAGE_NAME": "mec.mecapp"
         },
         "nl.x-services.plugins.actionsheet": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "mec.mecapp"
         },
         "org.apache.cordova.device": {
