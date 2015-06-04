@@ -60,18 +60,24 @@ enum {
                                             completion:^(NSArray *results)
      {
          if ([results count]) {
-           //  _result = results[0];
+           
              
+             
+             
+             DBChooserResult *_result = results[0];
              
              NSString* callbackId = [command callbackId];
              NSString* name = [[command arguments] objectAtIndex:0];
-             NSString* msg = [NSString stringWithFormat: results[0]];
+             NSString* msg = [NSString stringWithFormat: @"الملف المختار: %@", _result.link];
              
              CDVPluginResult* result = [CDVPluginResult
                                         resultWithStatus:CDVCommandStatus_OK
                                         messageAsString:msg];
              
              [self success:result callbackId:callbackId];
+             
+             
+             
              
              
          } else {

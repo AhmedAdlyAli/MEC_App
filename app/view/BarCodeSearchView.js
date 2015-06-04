@@ -50,6 +50,28 @@ Ext.define('MEC_App.view.BarCodeSearchView', {
                         cls: 'btn-send',
                         itemId: 'btnSearch',
                         text: 'بحث بالماسح الضوئي'
+                    },
+                    {
+                        xtype: 'button',
+                        handler: function(button, e) {
+
+                            DropBoxChooser.SelectFile("Test ...", function(message) {
+                                Ext.device.Notification.show({
+                                    title:Ext.Localization.GetMessage('Message'),
+                                    buttons: [Ext.Localization.GetMessage('OK')],
+                                    message:  message
+                                });
+
+
+
+                            }, function() {
+                                alert("Error calling Hello Plugin");
+                            });
+
+                        },
+                        cls: 'btn-send',
+                        itemId: 'btnDropbox',
+                        text: 'اختر ملف من دروب بوكس'
                     }
                 ]
             }

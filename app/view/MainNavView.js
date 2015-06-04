@@ -492,20 +492,6 @@ Ext.define('MEC_App.view.MainNavView', {
     },
 
     initialize: function() {
-        DropBoxChooser.SelectFile("Test ...", function(message) {
-            alert(message);
-
-
-
-        }, function() {
-            alert("Error calling Hello Plugin");
-        });
-
-
-
-
-
-
 
         this.callParent();
 

@@ -35,15 +35,15 @@ enum {
 
 - (void)greet:(CDVInvokedUrlCommand*)command
 {
-
+    
     NSString* callbackId = [command callbackId];
     NSString* name = [[command arguments] objectAtIndex:0];
     NSString* msg = [NSString stringWithFormat: @"Hello, %@", name];
-
+    
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
                                messageAsString:msg];
-
+    
     [self success:result callbackId:callbackId];
 }
 
@@ -51,43 +51,48 @@ enum {
 
 - (void)SelectFile:(CDVInvokedUrlCommand*)command
 {
-////////////////////
+    ////////////////////
     
     
-   // DBChooserResult *_result; // result received from last CHooser call
-
     
-   // DBChooserLinkType linkType = DBChooserLinkTypeDirect;
     
     [[DBChooser defaultChooser] openChooserForLinkType:DBChooserLinkTypeDirect fromViewController:self.viewController
                                             completion:^(NSArray *results)
      {
          if ([results count]) {
-           //  _result = results[0];
+             
+             
+             
+             
+             DBChooserResult *_result = results[0];
+             
+             NSString* callbackId = [command callbackId];
+             NSString* name = [[command arguments] objectAtIndex:0];
+             NSString* msg = [NSString stringWithFormat: @"الملف المختار: %@", _result.link];
+             
+             CDVPluginResult* result = [CDVPluginResult
+                                        resultWithStatus:CDVCommandStatus_OK
+                                        messageAsString:msg];
+             
+             [self success:result callbackId:callbackId];
+             
+             
+             
+             
+             
          } else {
-            // _result = nil;
+             // _result = nil;
              [[[UIAlertView alloc] initWithTitle:@"CANCELLED" message:@"user cancelled!"
                                         delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil]
               show];
          }
          
      }];
-
     
     
-        
     
     
-    ///////////////////
-    NSString* callbackId = [command callbackId];
-    NSString* name = [[command arguments] objectAtIndex:0];
-    NSString* msg = [NSString stringWithFormat: @"hhhhhh, %@", name];
-
-    CDVPluginResult* result = [CDVPluginResult
-                               resultWithStatus:CDVCommandStatus_OK
-                               messageAsString:msg];
-
-    [self success:result callbackId:callbackId];
+    
 }
 
 @end

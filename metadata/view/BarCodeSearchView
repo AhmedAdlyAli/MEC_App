@@ -81,6 +81,59 @@
                     },
                     "name": "MyButton1",
                     "designerId": "eb19e756-78e3-4b74-83cd-ca21552a2ea2"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn-send"
+                        ],
+                        "designer|displayName": null,
+                        "itemId": "btnDropbox",
+                        "text": "اختر ملف من دروب بوكس"
+                    },
+                    "name": "MyButton",
+                    "designerId": "0674c4bb-69d5-41c0-abd1-372f3db97aa7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "button",
+                                    "e"
+                                ],
+                                "fn": "handler",
+                                "implHandler": [
+                                    "",
+                                    "DropBoxChooser.SelectFile(\"Test ...\", function(message) {",
+                                    "    Ext.device.Notification.show({",
+                                    "        title:Ext.Localization.GetMessage('Message'),",
+                                    "        buttons: [Ext.Localization.GetMessage('OK')],",
+                                    "        message:  message",
+                                    "    });",
+                                    "",
+                                    "",
+                                    "",
+                                    "}, function() {",
+                                    "    alert(\"Error calling Hello Plugin\");",
+                                    "});",
+                                    ""
+                                ]
+                            },
+                            "name": "handler",
+                            "designerId": "db07609b-4950-4f4f-aeda-2b32301f077d"
+                        }
+                    ]
                 }
             ]
         }
