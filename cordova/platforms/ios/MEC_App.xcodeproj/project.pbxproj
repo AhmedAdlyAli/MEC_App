@@ -68,6 +68,7 @@
 		F914222891BC46C08D3647C6 /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93CB4FC3253343429EC6C547 /* CDVLocation.m */; };
 		FA4EDF56625F440B9A178FC0 /* zxing-all-in-one.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83E5DC41E8024015B4C05FE8 /* zxing-all-in-one.cpp */; };
 		2537687E2D9C4F62982EEFAC /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = A56E0272456641898E702E94 /* CDVLogger.m */; };
+		ACCADFE0B419449C968B439A /* DropBoxChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = C8049FB4B71D4AF598F18200 /* DropBoxChooser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		FD6129849323437590E422CD /* UIImage+CropScaleOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CropScaleOrientation.h"; path = "cordova-plugin-camera/UIImage+CropScaleOrientation.h"; sourceTree = "<group>"; };
 		A56E0272456641898E702E94 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		DF6DC11EF2E04C2A93DD0ADA /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		C8049FB4B71D4AF598F18200 /* DropBoxChooser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DropBoxChooser.m"; path = "com.malomatia.DropBoxChooser/DropBoxChooser/DropBoxChooser.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		1B8720351682407BAB2A7948 /* DropBoxChooser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DropBoxChooser.h"; path = "com.malomatia.DropBoxChooser/DropBoxChooser/DropBoxChooser.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +335,8 @@
 				463878ED561F40D2B2AD8772 /* ProgressIndicator.h */,
 				A56E0272456641898E702E94 /* CDVLogger.m */,
 				DF6DC11EF2E04C2A93DD0ADA /* CDVLogger.h */,
+				C8049FB4B71D4AF598F18200 /* DropBoxChooser.m */,
+				1B8720351682407BAB2A7948 /* DropBoxChooser.h */,
 			);
 			name = Plugins;
 			path = MEC_APP/Plugins;
@@ -543,6 +548,7 @@
 				7CA1B2472923455699D1E010 /* MBProgressHUD.m in Sources */,
 				5827607CD77A41AC9EE974DD /* ProgressIndicator.m in Sources */,
 				2537687E2D9C4F62982EEFAC /* CDVLogger.m in Sources */,
+				ACCADFE0B419449C968B439A /* DropBoxChooser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,6 +106,9 @@ Ext.define('MEC_App.controller.HomeController', {
 
     onHomeServicesTap: function(button, e, eOpts) {
 
+
+
+
         Ext.Global.ResetHistory();
 
         button.up('MainNavView').push({

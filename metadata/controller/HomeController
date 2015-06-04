@@ -124,6 +124,9 @@
                 "fn": "onHomeServicesTap",
                 "implHandler": [
                     "",
+                    "",
+                    "",
+                    "",
                     "Ext.Global.ResetHistory();",
                     "",
                     "button.up('MainNavView').push({",

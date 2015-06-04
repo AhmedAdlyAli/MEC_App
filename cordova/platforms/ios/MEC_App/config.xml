@@ -37,6 +37,9 @@
     <feature name="ActionSheet">
         <param name="ios-package" value="ActionSheet" />
     </feature>
+    <feature name="Console">
+        <param name="ios-package" value="CDVLogger" />
+    </feature>
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -46,14 +49,21 @@
     <feature name="InAppBrowser">
         <param name="ios-package" value="CDVInAppBrowser" />
     </feature>
+    <feature name="ActivityIndicator">
+        <param name="ios-package" value="ActivityIndicator" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
     <feature name="ProgressIndicator">
         <param name="ios-package" value="ProgressIndicator" />
     </feature>
-    <feature name="Console">
-        <param name="ios-package" value="CDVLogger" />
+    <feature name="DropBoxChooser">
+        <param name="ios-package" value="DropBoxChooser" />
     </feature>
     <name>MEC_APP</name>
     <description>

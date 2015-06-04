@@ -94,4 +94,7 @@
     <splash height="1334" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="750" />
     <splash height="2208" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1242" />
     <splash height="1242" src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2208" />
+    <feature name="DropBoxChooser">
+        <param name="android-package" value="com.malomatia.plugin.DropBoxChooser" />
+    </feature>
 </widget>

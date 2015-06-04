@@ -63,6 +63,10 @@
                         {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ProgressIndicator\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DropBoxChooser\"><param name=\"android-package\" value=\"com.malomatia.plugin.DropBoxChooser\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -648,6 +652,9 @@
             "PACKAGE_NAME": "mec.mecapp"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "com.malomatia.DropBoxChooser": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },

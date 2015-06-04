@@ -41,6 +41,10 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
@@ -53,15 +57,25 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"ActivityIndicator\"><param name=\"ios-package\" value=\"ActivityIndicator\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"Vibration\"><param name=\"ios-package\" value=\"CDVVibration\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"ios-package\" value=\"ProgressIndicator\" /></feature>",
                             "count": 1
-                        },
+                        }
+                    ],
+                    "/widget": [
                         {
-                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "xml": "<feature name=\"DropBoxChooser\"><param name=\"ios-package\" value=\"DropBoxChooser\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -114,7 +128,7 @@
                     "CoreGraphics.framework": [
                         {
                             "xml": false,
-                            "count": 3
+                            "count": 4
                         }
                     ],
                     "MobileCoreServices.framework": [
@@ -156,6 +170,9 @@
         "cordova-plugin-dialogs": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
         "cordova-plugin-file-transfer": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
@@ -163,6 +180,9 @@
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "nl.x-services.plugins.actionsheet": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.apache.cordova.device": {
@@ -174,19 +194,21 @@
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
+        "org.apache.cordova.plugin.ActivityIndicator": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "MEC.MECAPP"
+        },
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "MEC.MECAPP"
         },
-        "org.apache.cordova.console": {
+        "com.malomatia.DropBoxChooser": {
             "PACKAGE_NAME": "MEC.MECAPP"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "MEC.MECAPP"
-        }
-    }
+    "dependent_plugins": {}
 }
