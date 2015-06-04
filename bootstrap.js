@@ -673,6 +673,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.AnimationHelper": [
     "Ext.AnimationHelper"
   ],
+  "MEC_App.controller.BarCodeSearchController": [],
   "MEC_App.controller.BusinessIndicatorsController": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ConsumerEducationController": [],
@@ -716,6 +717,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.AboutAppView": [],
   "MEC_App.view.AboutView": [],
   "MEC_App.view.AdminServicesView": [],
+  "MEC_App.view.BarCodeSearchView": [],
   "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
   "MEC_App.view.ConsumerEducationView": [],
@@ -1529,6 +1531,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.AjaxHelper": [],
   "MEC_App.controller.AnimationHelper": [],
+  "MEC_App.controller.BarCodeSearchController": [
+    "controller.BarCodeSearchController"
+  ],
   "MEC_App.controller.BusinessIndicatorsController": [],
   "MEC_App.controller.ComplaintsController": [],
   "MEC_App.controller.ConsumerEducationController": [
@@ -1595,6 +1600,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.AdminServicesView": [
     "widget.AdminServicesView"
+  ],
+  "MEC_App.view.BarCodeSearchView": [
+    "widget.BarCodeSearchView"
   ],
   "MEC_App.view.BusinessIndicatorsView": [
     "widget.BusinessIndicatorsView"

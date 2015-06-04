@@ -431,7 +431,7 @@ var localeEn =
 				{itemId:"lblTitle", "xtype": "label","value":"User Login"},
 				{itemId:"btnRegister", "xtype": "button","value":"New User"},
 				{itemId:"btnSubmitLogin", "xtype": "button","value":"Login"},
-				{itemId:"txtUserName", "xtype": "textfield","value":"QID"},
+				{itemId:"txtUserName", "xtype": "textfield","value":"ID Number"},
 				{itemId:"txtPassword", "xtype": "textfield","value":"Password"},
 				{itemId:"fSet", "xtype": "cls","value":"ltr-cls"}
 			]
@@ -679,7 +679,13 @@ var localeEn =
 			items:
 			[
 	
-				{itemId:"viewLbl", xtype: "label",value:"My Family Details"}
+				{itemId:"viewLbl", xtype: "label",value:"My Family Details"},
+				{itemId:"pnlFamily", xtype: "cls",value:"ltr-cls"},
+				{itemId:"pnlUser", xtype: "cls",value:"ltr-cls"},
+				{itemId:"lblName1", xtype: "label",value:"User Name"},
+				{itemId:"lblID1", xtype: "label",value:"QID"},
+				{itemId:"lblMobile1", xtype: "label",value:"Mobile Number"},
+				{itemId:"familyTitle", xtype: "titlebar",value:"Family Members", align:"left"}
 			]
 		},
    
@@ -1114,7 +1120,7 @@ var localeEn =
         errComplaintText:'Please enter your complaint\n',
         errFullName:'Please enter full name\n',
         errMobile:'Please enter mobile number\n',
-        errUserName:'Please enter username\n',
+        errUserName:'Please enter the ID Number\n',
         errPassword:'Please enter password\n',
         errSuggestion: 'Please enter your suggesstion\n',
         errMail: 'Please enter correct email address\n',

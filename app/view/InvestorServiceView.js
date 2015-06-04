@@ -53,7 +53,7 @@ Ext.define('MEC_App.view.InvestorServiceView', {
                             {
                                 xtype: 'list',
                                 cls: 'CompanyList',
-                                height: 391,
+                                height: 455,
                                 itemId: 'lstLinks1',
                                 itemCls: 'item-link',
                                 itemTpl: [

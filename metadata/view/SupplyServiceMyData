@@ -36,35 +36,177 @@
             "designerId": "a5deeba0-eb66-448f-b5f3-e761390367a1"
         },
         {
-            "type": "Ext.dataview.List",
+            "type": "Ext.Panel",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "itemCls": "item-link",
-                "itemId": "lstFamily",
-                "layout|flex": 2
+                "cls": [
+                    "acc-group"
+                ],
+                "itemId": "pnlUser"
             },
-            "name": "MyList",
-            "designerId": "63108c7a-8892-4420-8433-5da6cbd77152",
+            "name": "MyPanel7",
+            "designerId": "f05e039c-0913-4d80-bf7b-dd741e7f6ae3",
             "cn": [
                 {
-                    "type": "Ext.XTemplate",
+                    "type": "Ext.Label",
                     "reference": {
-                        "name": "itemTpl",
-                        "type": "object"
+                        "name": "items",
+                        "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|displayName": "itemTpl",
-                        "implHandler": [
-                            "<div>{Name}</div>"
-                        ]
+                        "html": "إسم المستخدم",
+                        "itemId": "lblName1"
                     },
-                    "name": "itemTpl",
-                    "designerId": "52458c29-d66c-46c7-91ee-851f021f3d0a"
+                    "name": "MyLabel30",
+                    "designerId": "b9a44ff3-12d5-4453-9923-b180dc33c53a"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value"
+                        ],
+                        "itemId": "lblName"
+                    },
+                    "name": "MyLabel32",
+                    "designerId": "d598e219-df38-4458-8129-64a2c3bd1b04"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "رقم البطاقة الشخصية",
+                        "itemId": "lblID1"
+                    },
+                    "name": "MyLabel33",
+                    "designerId": "7525fc25-48e3-4a94-8492-5da056c5424c"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value"
+                        ],
+                        "itemId": "lblQID"
+                    },
+                    "name": "MyLabel35",
+                    "designerId": "1ddc0132-886d-4cfb-9902-8c89d4515cfc"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "html": "رقم الهاتف المسجل",
+                        "itemId": "lblMobile1"
+                    },
+                    "name": "MyLabel34",
+                    "designerId": "f24a7207-adbc-49ae-8a84-8c1b75a28449"
+                },
+                {
+                    "type": "Ext.Label",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "label-value",
+                            "mobile"
+                        ],
+                        "itemId": "lblMobile"
+                    },
+                    "name": "MyLabel36",
+                    "designerId": "11aebf9c-7789-4502-bcdb-2acd8c1d2329"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "pnlFamily"
+            },
+            "name": "MyPanel5",
+            "designerId": "e9ceae67-9bf0-4b90-9e1d-7633903945f3",
+            "cn": [
+                {
+                    "type": "Ext.TitleBar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "acc-header4"
+                        ],
+                        "docked": "top",
+                        "itemId": "familyTitle",
+                        "title": "أفراد الأسرة المسجلين علي البطاقة",
+                        "titleAlign": "right"
+                    },
+                    "name": "MyTitleBar",
+                    "designerId": "0dc9c970-4388-4fb4-bbd6-77a5f1b8c4e9"
+                },
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemCls": "item-link",
+                        "itemId": "lstFamily"
+                    },
+                    "name": "MyList",
+                    "designerId": "63108c7a-8892-4420-8433-5da6cbd77152",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div>{Name}</div>"
+                                ]
+                            },
+                            "name": "itemTpl",
+                            "designerId": "52458c29-d66c-46c7-91ee-851f021f3d0a"
+                        }
+                    ]
                 }
             ]
         }

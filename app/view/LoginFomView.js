@@ -88,10 +88,10 @@ Ext.define('MEC_App.view.LoginFomView', {
                             {
                                 xtype: 'textfield',
                                 itemId: 'txtUserName',
-                                label: 'رقم البطاقة الشخصية',
+                                label: 'رقم إثبات الشخصية',
                                 labelWidth: '40%',
                                 name: 'txtUserName',
-                                placeHolder: 'رقم البطاقة الشخصية'
+                                placeHolder: 'رقم إثبات الشخصية'
                             },
                             {
                                 xtype: 'passwordfield',

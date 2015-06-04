@@ -2354,27 +2354,25 @@
 2015-06-02 21:12:18.313 MEC_APP[14183:339289] [CDVTimer][TotalPluginStartup] 0.944018ms
 2015-06-02 21:12:18.374 MEC_APP[14183:339289] Resetting plugins due to page load.
 2015-06-02 21:12:19.615 MEC_APP[14183:339289] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/E3DF2AC1-15BF-4557-9CDC-0D183532834B/MEC_APP.app/www/index.html
-2015-06-04 17:14:59.304 MEC_APP[63356:757320] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Data/Application/F6FA734F-7D6D-47F1-A5B1-A2E1768217F5/Library/Cookies/Cookies.binarycookies
-2015-06-04 17:14:59.629 MEC_APP[63356:757320] Apache Cordova native platform version 3.8.0 is starting.
-2015-06-04 17:14:59.629 MEC_APP[63356:757320] Multi-tasking -> Device: YES, App: YES
-2015-06-04 17:14:59.652 MEC_APP[63356:757320] Unlimited access to network resources
-2015-06-04 17:15:00.028 MEC_APP[63356:757320] [CDVTimer][file] 2.880037ms
-2015-06-04 17:15:00.028 MEC_APP[63356:757320] [CDVTimer][TotalPluginStartup] 3.527999ms
-2015-06-04 17:15:00.259 MEC_APP[63356:757320] Resetting plugins due to page load.
-2015-06-04 17:15:00.646 MEC_APP[63356:757320] Finished load of: file:///Users/maluser/Library/Developer/CoreSimulator/Devices/5930E03E-D383-4C90-B7B8-57D67C9A6858/data/Containers/Bundle/Application/48957E97-706A-43ED-806B-6C0B99A7AA12/MEC_APP.app/www/index.html
-2015-06-04 17:15:02.109 MEC_APP[63356:757320] Old: pnlMain
-2015-06-04 17:15:02.109 MEC_APP[63356:757320] New: PublicServiceView
-2015-06-04 17:15:02.109 MEC_APP[63356:757320] 2
-2015-06-04 17:15:02.906 MEC_APP[63356:757320] Old: PublicServiceView
-2015-06-04 17:15:02.906 MEC_APP[63356:757320] New: ConsumerServiceView
-2015-06-04 17:15:02.906 MEC_APP[63356:757320] 3
-2015-06-04 17:15:04.143 MEC_APP[63356:757320] Old: ConsumerServiceView
-2015-06-04 17:15:04.143 MEC_APP[63356:757320] New: DropboxView
-2015-06-04 17:15:04.143 MEC_APP[63356:757320] 4
-2015-06-04 17:16:16.126 MEC_APP[63356:757320] Old: DropboxView
-2015-06-04 17:16:16.127 MEC_APP[63356:757320] New: ConsumerServiceView
-2015-06-04 17:16:16.127 MEC_APP[63356:757320] 4
-2015-06-04 17:16:16.127 MEC_APP[63356:757320] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
-2015-06-04 17:16:17.464 MEC_APP[63356:757320] Old: ConsumerServiceView
-2015-06-04 17:16:17.464 MEC_APP[63356:757320] New: DropboxView
-2015-06-04 17:16:17.464 MEC_APP[63356:757320] 4
+2015-06-03 18:29:18.833 MEC_APP[35476:1000081] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/171AE9C0-D905-439B-B77C-5EFE875EB487/Library/Cookies/Cookies.binarycookies
+2015-06-03 18:29:19.125 MEC_APP[35476:1000081] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-03 18:29:19.125 MEC_APP[35476:1000081] Multi-tasking -> Device: YES, App: YES
+2015-06-03 18:29:19.140 MEC_APP[35476:1000081] Unlimited access to network resources
+2015-06-03 18:29:19.506 MEC_APP[35476:1000081] [CDVTimer][file] 3.135979ms
+2015-06-03 18:29:19.506 MEC_APP[35476:1000081] [CDVTimer][TotalPluginStartup] 4.072964ms
+2015-06-03 18:29:19.734 MEC_APP[35476:1000081] Resetting plugins due to page load.
+2015-06-03 18:29:20.336 MEC_APP[35476:1000081] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/77CD0A1F-A1BE-4A02-93FC-6422E58B838D/MEC_APP.app/www/index.html
+2015-06-03 18:29:23.103 MEC_APP[35476:1000081] Old: pnlMain
+2015-06-03 18:29:23.103 MEC_APP[35476:1000081] New: PublicServiceView
+2015-06-03 18:29:23.103 MEC_APP[35476:1000081] 2
+2015-06-03 18:29:24.363 MEC_APP[35476:1000081] Old: PublicServiceView
+2015-06-03 18:29:24.363 MEC_APP[35476:1000081] New: InvestorServiceView
+2015-06-03 18:29:24.364 MEC_APP[35476:1000081] 3
+2015-06-03 18:29:25.818 MEC_APP[35476:1000081] Old: InvestorServiceView
+2015-06-03 18:29:25.818 MEC_APP[35476:1000081] New: LoginFomView
+2015-06-03 18:29:25.819 MEC_APP[35476:1000081] 4
+2015-06-03 18:29:35.134 MEC_APP[35476:1000081] THREAD WARNING: ['ProgressIndicator'] took '18.279053' ms. Plugin should use a background thread.
+2015-06-03 18:29:36.930 MEC_APP[35476:1000081] {"listOfMecContactInfoIo":{"contact":[{"birthDate":"05/01/1980","cityOfBirth":"قطر","fifthNameARA":"","fifthNameENU":"","firstName":"Jack","firstNameA":"جاك","fullNameACalc":"جاك محمد أحمد سبارو ","fullNameECalc":"Jack   Sparo ","grandFatherName":"","grandFatherNameA":"أحمد","lastName":"Sparo","lastNameA":"سبارو","middleName":"","middleNameA":"محمد","identityNationality":"قطر","identityNationalityCode":"Qatar","identityTypeCode":"SSN","identityNum":"99887766554","identityType":"رقم البطاقة الشخصية","emailAddress":"ragabovic@outlook.com","expiryDate":"05/23/2019","issueDate":"02/04/2015","phoneNumber":""}]},"result":"True","token":"9786315351433345377312695623834"}
+2015-06-03 18:29:36.931 MEC_APP[35476:1000081] Old: LoginFomView
+2015-06-03 18:29:36.931 MEC_APP[35476:1000081] New: BarCodeSearchView
+2015-06-03 18:29:36.931 MEC_APP[35476:1000081] 5

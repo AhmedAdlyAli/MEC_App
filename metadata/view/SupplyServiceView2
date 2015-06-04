@@ -17,7 +17,7 @@
         "requires": [
             "Ext.Map"
         ],
-        "scrollable": null,
+        "scrollable": "vertical",
         "zIndex": 1000
     },
     "name": "SupplyServiceView2",

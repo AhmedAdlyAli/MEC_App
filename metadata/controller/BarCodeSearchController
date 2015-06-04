@@ -1,0 +1,72 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "BarCodeSearchController",
+        "designer|userClassName": "BarCodeSearchController"
+    },
+    "name": "MyController",
+    "designerId": "fc20d5e4-186d-4351-b899-0464541332f3",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnSearch",
+                "designer|params": [
+                    "button",
+                    "e",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnSearchTap",
+                "implHandler": [
+                    "cordova.plugins.barcodeScanner.scan(",
+                    "    function (result) {",
+                    "",
+                    "",
+                    "",
+                    "        var data = {commercialRegistration:result.text};",
+                    "",
+                    "        Ext.Viewport.getActiveItem().push({",
+                    "            xtype: 'MyEstablishmentDetails',",
+                    "            title: Ext.Global.GetFixedTitle(),",
+                    "            data: data",
+                    "        });",
+                    "",
+                    "",
+                    "    },",
+                    "    function (error) {",
+                    "        alert(\"Barcode Scanning failed: \" + error);",
+                    "    }",
+                    ");",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onBtnSearchTap",
+            "designerId": "d0f8f92b-31f1-4315-9803-ca98566fadee"
+        }
+    ]
+}

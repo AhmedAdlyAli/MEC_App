@@ -19,6 +19,8 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
 
     requires: [
         'Ext.Label',
+        'Ext.Panel',
+        'Ext.TitleBar',
         'Ext.dataview.List',
         'Ext.XTemplate'
     ],
@@ -39,12 +41,65 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
                 itemId: 'viewLbl'
             },
             {
-                xtype: 'list',
-                flex: 2,
-                itemId: 'lstFamily',
-                itemCls: 'item-link',
-                itemTpl: [
-                    '<div>{Name}</div>'
+                xtype: 'panel',
+                cls: 'acc-group',
+                itemId: 'pnlUser',
+                items: [
+                    {
+                        xtype: 'label',
+                        html: 'إسم المستخدم',
+                        itemId: 'lblName1'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'label-value',
+                        itemId: 'lblName'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'رقم البطاقة الشخصية',
+                        itemId: 'lblID1'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: 'label-value',
+                        itemId: 'lblQID'
+                    },
+                    {
+                        xtype: 'label',
+                        html: 'رقم الهاتف المسجل',
+                        itemId: 'lblMobile1'
+                    },
+                    {
+                        xtype: 'label',
+                        cls: [
+                            'label-value',
+                            'mobile'
+                        ],
+                        itemId: 'lblMobile'
+                    }
+                ]
+            },
+            {
+                xtype: 'panel',
+                itemId: 'pnlFamily',
+                items: [
+                    {
+                        xtype: 'titlebar',
+                        cls: 'acc-header4',
+                        docked: 'top',
+                        itemId: 'familyTitle',
+                        title: 'أفراد الأسرة المسجلين علي البطاقة',
+                        titleAlign: 'right'
+                    },
+                    {
+                        xtype: 'list',
+                        itemId: 'lstFamily',
+                        itemCls: 'item-link',
+                        itemTpl: [
+                            '<div>{Name}</div>'
+                        ]
+                    }
                 ]
             }
         ]

@@ -279,7 +279,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        this.GetNearByDealers(component,true, orderItems,true);
+        this.GetNearByDealers(view,true, orderItems,true,viewData);
         this.markers = [];
 
 
@@ -653,7 +653,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
     },
 
     onSupplyServiceNearestDealerInitialize: function(component, eOpts) {
-        this.GetNearByDealers(component,true,[],false);
+        this.GetNearByDealers(component,true,[],false,{});
         this.markers = [];
 
     },
@@ -667,96 +667,59 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         Ext.Localization.LocalizeView(view);
 
 
+        if(Ext.Global.LanguageFlag==='ar')
+        view.down('#lblName').setHtml(Ext.Global.identityNameAr);
+        else
+        view.down('#lblName').setHtml(Ext.Global.identityNameEn);
 
 
-        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
-
-        console.log(url);
-
-        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
-
-
-        var requestData=
-            {"qid":  Ext.Global.identityNum,//"21463400042",
-             "languageID":language,
-             "mobileDeviceID":"1231",
-             "sessionID": Ext.Global.userSupplyToken};
-
+        view.down('#lblQID').setHtml(Ext.Global.identityNum);
+        view.down('#lblMobile').setHtml(Ext.Global.mobileNumber);
 
 
 
         Ext.AnimationHelper.ShowLoading();
 
-        Ext.Ajax.request({
+        if(!Ext.Global.userSupplyToken){
 
-            url : url,
-            method : 'POST',
-            jsonData :requestData,
-            success : function (response) {
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/CreateSession';
+        var requestData = {"mobileDeviceID":Ext.Global.userToken};
 
+            Ext.Ajax.request({
 
-                Ext.AnimationHelper.HideLoading();
+                url : url,
+                method : 'POST',
+                jsonData :requestData,
+                success : function (response) {
 
+                    var json1 = Ext.util.JSON.decode(response.responseText);
 
+                    var json2 = Ext.util.JSON.decode(json1);
 
-                var json1 = Ext.util.JSON.decode(response.responseText);
-                var json2 = Ext.util.JSON.decode(json1);
-
-
-                if(json2.Data.FamilyMembers.length>0)
-                {
-
-
-                    var store = new Ext.data.Store({
-                        data : json2.Data.FamilyMembers
-                    });
-
-                    var lst = view.down('#lstFamily');
-                    lst.setStore(store);
-
-                    lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
-                    lst.setScrollable(false);
+                    Ext.Global.userSupplyToken = json2.Data.SessionID;
 
 
-                }else{
+                    me.GetUserFamilyDetails(view);
+                    }
 
-                    Ext.device.Notification.show({
-                        title: Ext.Localization.GetMessage('Message'),
-                        buttons: [Ext.Localization.GetMessage('OK')],
-                        message:  Ext.Localization.GetMessage('NoDataSupply')
-                    });
+                });
 
+        }else{
 
-
-                    Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
-
-                }
-
-
-            }
-        });
-
-
-
-
-
-
-
-
-
-
+            me.GetUserFamilyDetails(view);
+        }
 
     },
 
     onRadDisplayNearCheck: function(checkboxfield, e, eOpts) {
-        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true,[],false);
+        this.GetNearByDealers(this.getSupplyServiceNearestDealer(),true,[],false,{});
 
 
 
     },
 
     onRadDisplayAllCheck: function(checkboxfield, e, eOpts) {
-                this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false,[],false);
+                this.GetNearByDealers(this.getSupplyServiceNearestDealer(),false,[],false,{});
 
     },
 
@@ -773,7 +736,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        this.GetNearByDealers(view,true, orderItems,true);
+        this.GetNearByDealers(view,true, orderItems,true,viewData);
 
     },
 
@@ -790,11 +753,11 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-        this.GetNearByDealers(view,false, orderItems,true);
+        this.GetNearByDealers(view,false, orderItems,true,viewData);
 
     },
 
-    GetDealers: function(gMap, lat, lng, orderItems, view, checkStock) {
+    GetDealers: function(gMap, lat, lng, orderItems, view, checkStock, viewData) {
         var me = this;
         var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetNearbyDealers';
 
@@ -811,6 +774,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                             "sessionID": Ext.Global.userSupplyToken
                            };
 
+
+        console.log(requestData);
 
         Ext.Ajax.request({
 
@@ -864,6 +829,17 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+                        if(checkStock)
+                            {
+                                view.down('#hiddenDealerID').setValue(marker.data.DealerID);
+
+                                view.down('#hiddenDealerName').setValue(marker.data.DealerName);
+                            }
+
+
+                                viewData.DealerID = marker.data.DealerID;
+                                viewData.DealerName = marker.data.DealerName;
+                                view.setData(viewData);
 
                     });
 
@@ -881,7 +857,7 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
         evt.stopPropagation();
     },
 
-    GetNearByDealers: function(view, getNearBy, orderItems, checkStock) {
+    GetNearByDealers: function(view, getNearBy, orderItems, checkStock, viewData) {
         var me = this;
 
 
@@ -923,9 +899,9 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 // get dealers
 
                 if(getNearBy)
-                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,checkStock);
+                me.GetDealers(gMap,position.coords.latitude,position.coords.longitude,orderItems,view,checkStock,viewData);
                 else
-                me.GetDealers(gMap,0,0,orderItems,view,checkStock);
+                me.GetDealers(gMap,0,0,orderItems,view,checkStock,viewData);
 
             }, 300,this);
 
@@ -977,6 +953,90 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
+
+    },
+
+    GetUserFamilyDetails: function(view) {
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/GetFamilyDetails';
+
+
+        var language = Ext.Global.LanguageFlag == 'en' ? 1 : 2;
+
+
+        var requestData=
+            {"qid":  Ext.Global.identityNum,//"21463400042",
+             "languageID":language,
+             "mobileDeviceID":"1231",
+             "sessionID": Ext.Global.userSupplyToken};
+
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+
+                Ext.AnimationHelper.HideLoading();
+
+
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1);
+
+
+                console.log(json2);
+
+
+                if(json2.Data)
+                    {
+
+                        if(json2.Data.FamilyMembers.length>0)
+                        {
+
+
+                            var store = new Ext.data.Store({
+                                data : json2.Data.FamilyMembers
+                            });
+
+                            var lst = view.down('#lstFamily');
+                            lst.setStore(store);
+
+                            lst.setHeight(json2.Data.FamilyMembers.length*3.3 + 'em');
+                            lst.setScrollable(false);
+
+
+                        }else{
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Message'),
+                                buttons: [Ext.Localization.GetMessage('OK')],
+                                message:  Ext.Localization.GetMessage('NoDataSupply')
+                            });
+
+
+
+                            Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+
+                        }
+                    }else{
+
+
+                            Ext.device.Notification.show({
+                                title: Ext.Localization.GetMessage('Error'),
+                                buttons: [Ext.Localization.GetMessage('OK')],
+                                message:  Ext.Localization.GetMessage('GenericError')
+                            });
+
+
+                            Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back', view);
+                    }
+
+            }
+        });
 
     }
 

@@ -108,7 +108,8 @@ var localeAr =
                     {Name:' خدمات المستخرجات',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:' متابعة المعاملات',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
                     {Name:' خدمات التسجيل ',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false, OpenExternalWindow:true, Icon:'ico-registerService.png'},
-                    {Name:'حجز اسم تجاري',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , OpenExternalWindow:true, Icon:'ico-reserveTradeName.png'}
+                    {Name:'حجز اسم تجاري',Url:'https://services.mec.gov.qa/ara/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , OpenExternalWindow:true, Icon:'ico-reserveTradeName.png'},
+                    {Name:' التحقق من المطبوعات',Url:'BarCodeSearchView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false}
                     ]
 		},
 		{
@@ -215,7 +216,7 @@ var localeAr =
         errComplaintText:'فضلا ادخل نص الشكوى\n',
         errFullName:'فضلا ادخل الاسم بالكامل\n',
         errMobile:'فضلا ادخل رقم الجوال\n',
-        errUserName:'فضلا ادخل اسم المستخدم\n',
+        errUserName:'فضلا ادخل رقم إثبات الشخصية\n',
         errPassword:'فضلا ادخل كلمة السر\n',
         errSuggestion : 'فضلا ادخل المقترح\n	',
         errMail: 'فضلا ادخل بريد الكتروني صحيح\n	',
