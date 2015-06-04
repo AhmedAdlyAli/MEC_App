@@ -95,9 +95,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                             {
                                 xtype: 'button',
                                 handler: function(button, e) {
-                                    window.open('http://www.instagram.com/mec_qatar','_system');
 
-
+                                    window.open('instagram://user?username=mec_qatar','_system');
 
                                 },
                                 cls: 'btn-instagram',
@@ -127,8 +126,8 @@ Ext.define('MEC_App.view.ContactUs2View', {
                             {
                                 xtype: 'button',
                                 handler: function(button, e) {
-                                    window.open('http://twitter.com/mec_qatar','_system');
 
+                                    window.open('twitter://user?screen_name=mec_qatar','_system');
 
                                 },
                                 cls: 'btn-twitter',

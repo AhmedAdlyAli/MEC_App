@@ -227,9 +227,8 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "window.open('http://www.instagram.com/mec_qatar','_system');",
                                             "",
-                                            "",
+                                            "window.open('instagram://user?username=mec_qatar','_system');",
                                             ""
                                         ]
                                     },
@@ -339,8 +338,8 @@
                                         ],
                                         "fn": "handler",
                                         "implHandler": [
-                                            "window.open('http://twitter.com/mec_qatar','_system');",
                                             "",
+                                            "window.open('twitter://user?screen_name=mec_qatar','_system');",
                                             ""
                                         ]
                                     },
