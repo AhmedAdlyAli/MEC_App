@@ -124,9 +124,9 @@ Ext.define('MEC_App.view.SupplyServiceHowTo', {
                                                                  //alert(2);
         if(Ext.Global.LanguageFlag=='ar')
         {
-            window.open("http://www.mec.gov.qa/Arabic/Services/Pages/AllServices.aspx","_system");
+            window.open("http://www.mec.gov.qa/ar/services/Services%20and%20Forms/NewIndividualForms/Supply%20Form.pdf","_system");
         }else{
-        window.open("http://www.mec.gov.qa/English/Services/Pages/AllServices.aspx","_system");
+        window.open("http://www.mec.gov.qa/en/services/Services%20and%20Forms/NewIndividualForms/Supply%20Form.pdf","_system");
         }
 
 
