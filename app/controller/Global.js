@@ -88,7 +88,7 @@ Ext.define('MEC_App.controller.Global', {
 
 
 
-            CMSWSUrl : 'http://cms.mec.gov.qa/WSV2/api', // 'http://192.168.1.107/ws/api',
+            CMSWSUrl : 'http://cms.mec.gov.qa/WSV2/api', // ,'http://192.168.1.104/ws/api', //
 
 
             //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
