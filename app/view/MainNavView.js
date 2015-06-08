@@ -461,8 +461,18 @@ Ext.define('MEC_App.view.MainNavView', {
         //console.log("New: "+value._itemId);
         //console.log(Ext.Viewport.getActiveItem().innerItems.length);
 
-        if(oldValue._itemId == "LoginFomView" || value._itemId == "GenericSelectView"){
+        if(value._itemId == "GenericSelectView"){
             Ext.Viewport.getActiveItem().innerItems.splice(Ext.Viewport.getActiveItem().innerItems.length-2,1);
+        }
+
+        if(oldValue._itemId == "LoginFomView") {
+            if(Ext.Viewport.getActiveItem().innerItems[Ext.Viewport.getActiveItem().innerItems.length-1]._itemId == "LoginFomView"){
+                return;
+            }
+            else {
+                Ext.Viewport.getActiveItem().innerItems.splice(Ext.Viewport.getActiveItem().innerItems.length-2,1);
+            }
+
         }
 
         if(oldValue._itemId == "GenericSelectView") {
