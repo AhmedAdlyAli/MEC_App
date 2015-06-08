@@ -346,6 +346,8 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
                 Ext.AnimationHelper.HideLoading();
 
+
+
                 if(json.length>0)
                 {
                     var store = new Ext.data.Store({
@@ -353,6 +355,9 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     });
 
                     var count = 'العدد';
+                     titleNew = Ext.Localization.GetMessage('BizIndicatorsTitleNewCR');
+                     titleReNew = Ext.Localization.GetMessage('BizIndicatorsTitleReNewCR');
+
 
                     if(Ext.Global.LanguageFlag == 'en'){
                         count = 'Count';
@@ -360,6 +365,17 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
 
 
                     if(view.down('#hiddenCatType').getValue() == 1){
+
+
+                        titleNew = Ext.Localization.GetMessage('BizIndicatorsTitleNewCR');
+                        titleReNew = Ext.Localization.GetMessage('BizIndicatorsTitleReNewCR');
+
+                        view.down('#NewCommercialReg').setHtml(titleNew);
+                        view.down('#RenewedCRs').setHtml(titleReNew);
+
+
+
+
                         view.down('#GridHeader').show();
                         view.down('#GridSubHeader').show();
                         view.down('#grdMainCRs').show();
@@ -381,6 +397,21 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                     }
 
                     else if(view.down('#hiddenCatType').getValue() == 2){
+
+
+
+                        titleNew = Ext.Localization.GetMessage('BizIndicatorsTitleNewCP');
+                        titleReNew = Ext.Localization.GetMessage('BizIndicatorsTitleReNewCP');
+
+                        view.down('#NewCommercialReg').setHtml(titleNew);
+                        view.down('#RenewedCRs').setHtml(titleReNew);
+
+
+
+                        view.down('#MainCrs').hide();
+                        view.down('#MainCrs2').hide();
+
+
                         view.down('#GridHeader').show();
                         view.down('#GridSubHeader').show();
                         view.down('#grdMainCRs').show();
@@ -391,6 +422,7 @@ Ext.define('MEC_App.view.BusinessIndicatorsView', {
                         view.down('#grdMainCRs2').show();
                         view.down('#GridSubHeader3').hide();
                         view.down('#grdSubCRs2').hide();
+
 
                         view.down('#ValueQAR').setHtml(count);
                         view.down('#ValueQAR2').setHtml(count);

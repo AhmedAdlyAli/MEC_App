@@ -249,7 +249,11 @@ var localeAr =
         SelectReport: 'اختر تقرير',
         errSupplyQuantity:'برجاء اختيار الكمية لصنف واحد على الأقل',
         LoadMore: 'حمل المزيد...',
-		NoMoreInfo: 'لا يوجد المزيد من البيانات'
+		NoMoreInfo: 'لا يوجد المزيد من البيانات',
+		BizIndicatorsTitleNewCR :'السجلات التجارية الجديدة',
+		BizIndicatorsTitleReNewCR :'السجلات التجارية المجددة',
+		BizIndicatorsTitleNewCP :'الرخص التجارية الجديدة',
+		BizIndicatorsTitleReNewCP :'الرخص التجارية المجددة'
 	}
 
 }

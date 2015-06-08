@@ -1153,7 +1153,11 @@ var localeEn =
         SelectReport: 'Select Report',
 		errSupplyQuantity:'Please select at least 1 item Quantity',
         LoadMore: 'Load More...',
-		NoMoreInfo: 'No More Records'
+		NoMoreInfo: 'No More Records',
+		BizIndicatorsTitleNewCR :'New CRs',
+		BizIndicatorsTitleReNewCR :'Renewed CRs',
+		BizIndicatorsTitleNewCP :'New CPs',
+		BizIndicatorsTitleReNewCP :'Renewed CPs'		
 	}
 
 }
