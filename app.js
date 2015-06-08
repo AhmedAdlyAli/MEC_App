@@ -182,11 +182,13 @@ Ext.application({
 
             function onBackKeyDown(eve) {
 
-                if(Ext.Viewport.getActiveItem()._itemId != 'pnlMain') {
-                    alert(Ext.Viewport.getActiveItem()._itemId);
+                if(Ext.Viewport.getActiveItem().innerItems.length > 1) {
                     eve.preventDefault();
 
                     Ext.Viewport.getActiveItem().getNavigationBar().fireEvent('back');
+                }
+                else {
+                    return;
                 }
 
             }

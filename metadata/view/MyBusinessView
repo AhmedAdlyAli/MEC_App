@@ -40,6 +40,20 @@
             "designerId": "9aae0f08-8d70-4243-a09f-4ddad8c08aa0"
         },
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "في حالة وجود خطأ في البيانات، يرجى التواصل مع الوزارة على الرقم <a href=\"tel:16001\">16001</a>",
+                "itemId": "lblWrongInfo"
+            },
+            "name": "MyLabel8",
+            "designerId": "b0ab65f5-461a-45c8-bea7-89217ccb5940"
+        },
+        {
             "type": "Ext.dataview.List",
             "reference": {
                 "name": "items",

@@ -439,7 +439,12 @@ Ext.define('MEC_App.view.MainNavView', {
     onMainNavPush: function(navigationview, view, eOpts) {
         //console.log(view);
 
-        Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').hide();
+        if(Ext.Viewport.getActiveItem().innerItems.length > 1){
+            Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').hide();
+        }
+        else {
+            Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').show();
+        }
 
     },
 
@@ -456,8 +461,22 @@ Ext.define('MEC_App.view.MainNavView', {
         //console.log("New: "+value._itemId);
         //console.log(Ext.Viewport.getActiveItem().innerItems.length);
 
-        if(oldValue._itemId == "GenericSelectView" || oldValue._itemId == "LoginFomView" || value._itemId == "GenericSelectView"){
+        if(oldValue._itemId == "LoginFomView" || value._itemId == "GenericSelectView"){
             Ext.Viewport.getActiveItem().innerItems.splice(Ext.Viewport.getActiveItem().innerItems.length-2,1);
+        }
+
+        if(oldValue._itemId == "GenericSelectView") {
+            if(Ext.Viewport.getActiveItem().innerItems[Ext.Viewport.getActiveItem().innerItems.length-1]._itemId == "GenericSelectView"){
+                return;
+            }
+            else {
+                Ext.Viewport.getActiveItem().innerItems.splice(Ext.Viewport.getActiveItem().innerItems.length-2,1);
+            }
+
+        }
+
+        if(value._itemId == "pnlMain") {
+            Ext.Viewport.getActiveItem().getNavigationBar().down('#btnNotofication').show();
         }
 
     },
@@ -466,7 +485,7 @@ Ext.define('MEC_App.view.MainNavView', {
         console.log(navigationview.innerItems);
 
         //alert(navigationview.innerItems.length);
-        if(navigationview.innerItems.length>1)
+        if(navigationview.innerItems.length>2)
         {
 
 
@@ -487,6 +506,10 @@ Ext.define('MEC_App.view.MainNavView', {
             }
 
 
+        }
+
+        else {
+            Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
         }
 
     },

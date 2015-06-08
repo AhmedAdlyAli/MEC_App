@@ -129,6 +129,7 @@ Ext.define('MEC_App.view.SettingsView', {
                                     }
 
                                     Ext.Viewport.getActiveItem().reset();
+                                    Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
 
                                 },
                                 cls: 'action-button',

@@ -287,6 +287,7 @@
                                             "}",
                                             "",
                                             "Ext.Viewport.getActiveItem().reset();",
+                                            "Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();",
                                             ""
                                         ]
                                     },

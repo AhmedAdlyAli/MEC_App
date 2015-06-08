@@ -237,6 +237,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
         Ext.Viewport.toggleMenu('right');
 
         Ext.Viewport.getActiveItem().reset();
+        Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
 
     },
 

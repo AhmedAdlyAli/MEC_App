@@ -131,9 +131,11 @@ var localeEn =
 		{
 			itemId:"MyBisunessFixed",
 			description: "",
+			cls: "ltr-cls",
 			items:
 			[
 				{itemId:"lblTitle", "xtype": "label","value":"My Establishments"},
+				{itemId:"lblWrongInfo", xtype: "label",value:"In case of wrong information, please contact the ministry on hot line <a href='tel:16001' style='padding:0'>16001</a>"},
 				{itemId:"lstEstablishments", "xtype": "cls","value":"ltr-cls"}
 			]
 		},
@@ -676,10 +678,12 @@ var localeEn =
 		{
 			itemId:"SupplyServiceMyData",
 			description: "Supply Service Nearby Dealer",
+			cls: "ltr-cls",
 			items:
 			[
 	
 				{itemId:"viewLbl", xtype: "label",value:"My Family Details"},
+				{itemId:"lblWrongInfo", xtype: "label",value:"In case of wrong information, please contact the ministry on hot line <a href='tel:16001' style='padding:0'>16001</a>"},
 				{itemId:"pnlFamily", xtype: "cls",value:"ltr-cls"},
 				{itemId:"pnlUser", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lblName1", xtype: "label",value:"User Name"},

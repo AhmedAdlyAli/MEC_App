@@ -39,6 +39,11 @@ Ext.define('MEC_App.view.MyBisunessFixed', {
                 itemId: 'lblTitle'
             },
             {
+                xtype: 'label',
+                html: 'في حالة وجود خطأ في البيانات، يرجى التواصل مع الوزارة على الرقم <a href="tel:16001">16001</a>',
+                itemId: 'lblWrongInfo'
+            },
+            {
                 xtype: 'list',
                 flex: 1,
                 height: '100%',

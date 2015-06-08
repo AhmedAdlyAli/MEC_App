@@ -41,6 +41,11 @@ Ext.define('MEC_App.view.SupplyServiceMyData', {
                 itemId: 'viewLbl'
             },
             {
+                xtype: 'label',
+                html: 'في حالة وجود خطأ في البيانات، يرجى التواصل مع الوزارة على الرقم <a href="tel:16001">16001</a>',
+                itemId: 'lblWrongInfo'
+            },
+            {
                 xtype: 'panel',
                 cls: 'acc-group',
                 itemId: 'pnlUser',

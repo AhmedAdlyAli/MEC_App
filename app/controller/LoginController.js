@@ -163,6 +163,7 @@ Ext.define('MEC_App.controller.LoginController', {
                         }else{
 
                             Ext.Viewport.getActiveItem().reset();// redirect to home
+                            Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
 
                         }
 
