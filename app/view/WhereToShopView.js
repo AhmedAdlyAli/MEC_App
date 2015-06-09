@@ -133,7 +133,7 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 xtype: 'label',
                 cls: 'latest-update',
                 docked: 'bottom',
-                html: 'اخر تحديث',
+                html: 'اخر تحديث ',
                 itemId: 'lblLastUpdate'
             }
         ],
@@ -158,7 +158,8 @@ Ext.define('MEC_App.view.WhereToShopView', {
             method : 'Get',
             success : function (response) {
                 Ext.AnimationHelper.HideLoading();
-                var json = Ext.util.JSON.decode(response.responseText);
+                var selector = Ext.util.JSON.decode(response.responseText),
+                    json = selector.ProductsPrice;
 
         if(json.ProductPrices.length>0)
                 {
@@ -180,6 +181,16 @@ Ext.define('MEC_App.view.WhereToShopView', {
                                 message: Ext.Localization.GetMessage('NoData')
                             });
             }
+
+                if(selector.LastUpdate) {
+                    Ext.Global.LastUpdatedTime = selector.LastUpdate;
+                    var lblLastUpdate = 'اخر تحديث ';
+                    if(Ext.Global.LanguageFlag == "en"){
+                        lblLastUpdate = 'Last Updated ';
+                    }
+                    view.down('#lblLastUpdate').setHtml(lblLastUpdate+Ext.Global.LastUpdatedTime);
+                }
+
             }
         });
 

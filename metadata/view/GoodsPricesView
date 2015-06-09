@@ -224,7 +224,7 @@
                     "latest-update"
                 ],
                 "docked": "bottom",
-                "html": "اخر تحديث",
+                "html": "اخر تحديث ",
                 "itemId": "lblLastUpdate"
             },
             "name": "MyLabel10",
@@ -242,7 +242,12 @@
                 "implHandler": [
                     "this.callParent();",
                     "",
-                    "Ext.Localization.LocalizeView(this);"
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "if(Ext.Global.LastUpdatedTime) {",
+                    "    this.down('#lblLastUpdate').setHtml(this.down('#lblLastUpdate').getHtml()+Ext.Global.LastUpdatedTime);",
+                    "}",
+                    ""
                 ]
             },
             "name": "initialize",

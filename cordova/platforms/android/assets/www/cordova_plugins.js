@@ -270,13 +270,6 @@ module.exports = [
         "clobbers": [
             "ProgressIndicator"
         ]
-    },
-    {
-        "file": "plugins/com.malomatia.DropBoxChooser/www/DropBoxChooser.js",
-        "id": "com.malomatia.DropBoxChooser.DropBoxChooser",
-        "clobbers": [
-            "DropBoxChooser"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -290,15 +283,14 @@ module.exports.metadata =
     "cordova-plugin-file-transfer": "1.1.0",
     "cordova-plugin-whitelist": "1.0.0",
     "nl.x-services.plugins.actionsheet": "1.1.4",
+    "org.apache.cordova.console": "0.2.13",
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.geolocation": "0.3.12",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.plugin.ActivityIndicator": "1.0.0",
     "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.vibration": "0.3.13",
-    "org.pbernasconi.progressindicator": "1.1.0",
-    "org.apache.cordova.console": "0.2.13",
-    "com.malomatia.DropBoxChooser": "0.3.0"
+    "org.pbernasconi.progressindicator": "1.1.0"
 }
 // BOTTOM OF METADATA
 });

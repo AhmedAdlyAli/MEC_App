@@ -29,10 +29,12 @@
                 "fn": "onShopsContainerShow",
                 "implHandler": [
                     "",
-                    "var view = component;",
+                    "var view = this.getGoodsPricesView();",
                     "",
                     "var ajaxAndPagingParams = {",
-                    "    list: view.down('#lstShops'),",
+                    "    view: view,",
+                    "    list: component.down('#lstShops'),",
+                    "    selector: \"ShopList\",",
                     "    moreText: Ext.Localization.GetMessage('LoadMore'),",
                     "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
                     "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetAllShops?culture='+ Ext.Global.LanguageFlag,",
@@ -63,11 +65,12 @@
                 "designer|targetType": "Ext.Container",
                 "fn": "onGoodsContainerShow",
                 "implHandler": [
-                    "",
-                    "var view = component;",
+                    "var view = this.getGoodsPricesView();",
                     "",
                     "var ajaxAndPagingParams = {",
-                    "    list: view.down('#lstProducts'),",
+                    "    view: view,",
+                    "    list: component.down('#lstProducts'),",
+                    "    selector: \"ProductList\",",
                     "    moreText: Ext.Localization.GetMessage('LoadMore'),",
                     "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
                     "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+ Ext.Global.LanguageFlag,",
@@ -147,6 +150,20 @@
             },
             "name": "onLstProductsItemTap",
             "designerId": "0e75b393-ad00-4c61-adf9-0a80f0182b7d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "GoodsPricesView",
+                "selector": "GoodsPricesView"
+            },
+            "name": "GoodsPricesView",
+            "designerId": "f98a0594-b26a-41f6-8559-300b4eca0297"
         }
     ]
 }

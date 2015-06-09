@@ -1878,6 +1878,68 @@ background: url(../images/toplogo.png) no-repeat center top;
     }
 }
 
+.x-android {
+    .x-field-search {
+        .x-field-input {
+            padding-left: 2.2em!important;
+            padding-right: 0!important;
+            &:before {
+                right: .5em;
+                left: auto;
+            }
+
+            .x-form-field {
+                margin-left: 0;
+                margin-right: 0;
+                padding: .4em 1.8em .4em .4em;
+            }
+        }
+    }
+
+    .x-field-clearable {
+        .x-field-input {
+            padding-left: 2.2em!important;
+            padding-right: 0!important;
+
+            .x-clear-icon {
+                left: -0.5em;
+                right: auto;
+            }
+        }
+    }
+
+    .ltr-cls {
+        .x-field-search {
+            .x-field-input {
+                padding-right: 2.2em!important;
+                padding-left: 0!important;
+                &:before {
+                    left: .5em;
+                    right: auto;
+                }
+
+                .x-form-field {
+                    margin-right: 0;
+                    margin-left: 0;
+                    padding: .4em .4em .4em 1.8em;
+                }
+            }
+        }
+
+        .x-field-clearable {
+            .x-field-input {
+                padding-right: 2.2em!important;
+                padding-left: 0!important;
+
+                .x-clear-icon {
+                    right: -0.5em;
+                    left: auto;
+                }
+            }
+        }
+    }
+}
+
 .x-label.latest-update {
     position: relative;
     margin: 5px 15px;
@@ -2226,6 +2288,7 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     .x-label.latest-update {
         padding: 0 0 0 25px;
+        margin: 5px 15px;
         direction: ltr;
         &:before {
             right:auto;

@@ -141,12 +141,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             if(selectedValue==53) // CP certificate
                                             {
                                                 me.up('PrintOffsView1').DeliveryPersonalOnly = true;
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(1);
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setValue(1);
 
                                             }else{
                                                 me.up('PrintOffsView1').DeliveryPersonalOnly = false;
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(10);
                                             }
 
                                         },

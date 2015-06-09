@@ -762,7 +762,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Consumer Goods Prices"},
-				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
 				{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
 				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
@@ -779,7 +779,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Daily Prices"},
-				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstPrices", xtype: "emptyText",value:"No Data Available"},
 				{itemId:"lstPrices1", xtype: "emptyText",value:"No Data Available"},
@@ -811,7 +811,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Where to Shop"},
-				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"txtProductName", "xtype": "textfield","value":"Choose Product"},
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"ShopName", xtype: "label",value:"Shop Name"},
