@@ -59,7 +59,8 @@ var localeEn =
 				{Name:'Economic Indicators',Url:'EconomicIndicatorsListing', OpenExternalWindow:false, Icon:'ico-economy-indicator.png'},
              	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
-             	{Name:'Trademark Report',Url:'http://cms.mec.gov.qa/cms/trdmrkrpt/217edition.pdf',OpenExternalWindow:true,Icon:'ico-trade.png'}
+             	{Name:'Trademark Report',Url:'http://cms.mec.gov.qa/cms/trdmrkrpt/217edition.pdf',OpenExternalWindow:true,Icon:'ico-trade.png'},
+             	{Name:'Trade Exchange Report',Url:'http://cms.mec.gov.qa/cms/PDF/TradeExchangeEn.pdf',OpenExternalWindow:true,Icon:'ico-trade-exch.png'}
 			]
 		},
 
@@ -756,10 +757,12 @@ var localeEn =
 
 		{
 			itemId:"GoodsPricesView",
+			cls:"ltr-cls",
 			description: "Goods Prices",
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Consumer Goods Prices"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"ShopsContainer", xtype: "container",value:"Shops"},
 				{itemId:"GoodsContainer", xtype: "container",value:"Goods"},
 				{itemId:"GoodsPricesList", xtype: "cls",value:"ltr-cls"},
@@ -772,9 +775,11 @@ var localeEn =
 		{
 			itemId:"DailyPricesView",
 			description: "Daily Prices",
+			cls:"ltr-cls",
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Daily Prices"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"lstPrices", xtype: "emptyText",value:"No Data Available"},
 				{itemId:"lstPrices1", xtype: "emptyText",value:"No Data Available"},
@@ -806,6 +811,7 @@ var localeEn =
 			items:
 			[
 				{itemId:"lblTitle", xtype: "label",value:"Where to Shop"},
+				{itemId:"lblLastUpdate", xtype: "label",value:"Last Updated "},
 				{itemId:"txtProductName", "xtype": "textfield","value":"Choose Product"},
 				{itemId:"lstPrices", xtype: "cls",value:"ltr-cls"},
 				{itemId:"ShopName", xtype: "label",value:"Shop Name"},

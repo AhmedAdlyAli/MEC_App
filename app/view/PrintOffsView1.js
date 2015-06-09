@@ -21,7 +21,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
         'Ext.Label',
         'Ext.form.FieldSet',
         'Ext.field.Hidden',
-        'Ext.field.Spinner',
         'Ext.Button'
     ],
 
@@ -142,12 +141,9 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                             if(selectedValue==53) // CP certificate
                                             {
                                                 me.up('PrintOffsView1').DeliveryPersonalOnly = true;
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(1);
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setValue(1);
 
                                             }else{
                                                 me.up('PrintOffsView1').DeliveryPersonalOnly = false;
-                                                me.up('PrintOffsView1').down('#txtNoOfCopies').setMaxValue(10);
                                             }
 
                                         },
@@ -368,17 +364,6 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                         name: 'hiddenDeliveryMethod'
                     },
                     {
-                        xtype: 'spinnerfield',
-                        itemId: 'txtNoOfCopies',
-                        label: 'عدد النسخ',
-                        labelWidth: '45%',
-                        name: 'txtNoOfCopies',
-                        required: true,
-                        maxValue: 10,
-                        minValue: 1,
-                        stepValue: 1
-                    },
-                    {
                         xtype: 'button',
                         handler: function(button, e) {
 
@@ -481,7 +466,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
                                 "establishmentSpcId":"",
                                 "caseSubType":"01",
                                 "contactId":"",
-                                "numOfCopies":view.down('#txtNoOfCopies').getValue(),
+                                "numOfCopies":1,
                                 "moiEstablishmentNum":"",
                                 "qatarChamberNum":"",
                                 "commercialPermitNum":cp,
@@ -502,7 +487,7 @@ Ext.define('MEC_App.view.PrintOffsView1', {
 
                                     //invalid or insufficient input!
 
-                                    json.NoOfCopies = view.down('#txtNoOfCopies').getValue();
+                                    json.NoOfCopies = 1;
 
 
                                     if(json.status==='Their is Active Cases for this account from the same case type !')

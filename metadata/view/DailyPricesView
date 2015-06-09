@@ -74,21 +74,36 @@
                     "designerId": "729a98da-66c9-42f5-908b-c008433414d5",
                     "cn": [
                         {
-                            "type": "Ext.field.Search",
+                            "type": "Ext.form.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "docked": "top",
-                                "itemId": "mysearchfield",
-                                "label": null,
-                                "margin": 10,
-                                "placeHolder": "بحث"
+                                "docked": "top"
                             },
-                            "name": "MySearchField",
-                            "designerId": "1c867b0d-db3d-4e0f-9076-7c90fc5573f3"
+                            "name": "MyFormPanel4",
+                            "designerId": "d2cde445-bcc6-4645-ad09-e80850e6dd44",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "top",
+                                        "itemId": "mysearchfield",
+                                        "label": null,
+                                        "margin": 10,
+                                        "placeHolder": "بحث"
+                                    },
+                                    "name": "MySearchField",
+                                    "designerId": "1c867b0d-db3d-4e0f-9076-7c90fc5573f3"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.Panel",
@@ -222,21 +237,36 @@
                     "designerId": "9f39846c-ba0c-49d9-bfce-b9f4b8ba6faa",
                     "cn": [
                         {
-                            "type": "Ext.field.Search",
+                            "type": "Ext.form.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "docked": "top",
-                                "itemId": "mysearchfield1",
-                                "label": null,
-                                "margin": 10,
-                                "placeHolder": "بحث"
+                                "docked": "top"
                             },
-                            "name": "MySearchField1",
-                            "designerId": "c91c0614-6782-44ce-8e82-30a029908a8a"
+                            "name": "MyFormPanel2",
+                            "designerId": "1bc26d8f-5012-4a17-b3a6-66eb9fbba10e",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "top",
+                                        "itemId": "mysearchfield1",
+                                        "label": null,
+                                        "margin": 10,
+                                        "placeHolder": "بحث"
+                                    },
+                                    "name": "MySearchField1",
+                                    "designerId": "c91c0614-6782-44ce-8e82-30a029908a8a"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.Panel",
@@ -370,21 +400,36 @@
                     "designerId": "a2aeab2f-d467-47fe-83dc-b61cd05d6e2e",
                     "cn": [
                         {
-                            "type": "Ext.field.Search",
+                            "type": "Ext.form.Panel",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "docked": "top",
-                                "itemId": "mysearchfield2",
-                                "label": null,
-                                "margin": 10,
-                                "placeHolder": "بحث"
+                                "docked": "top"
                             },
-                            "name": "MySearchField2",
-                            "designerId": "8e7b2e84-74fb-4274-9b4e-ccae090e1a34"
+                            "name": "MyFormPanel1",
+                            "designerId": "742454c9-1817-4871-8cbe-d86a885b9a3a",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Search",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "docked": "top",
+                                        "itemId": "mysearchfield2",
+                                        "label": null,
+                                        "margin": 10,
+                                        "placeHolder": "بحث"
+                                    },
+                                    "name": "MySearchField2",
+                                    "designerId": "8e7b2e84-74fb-4274-9b4e-ccae090e1a34"
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.Panel",
@@ -501,6 +546,26 @@
             ]
         },
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "latest-update"
+                ],
+                "designer|createAlias": null,
+                "docked": "bottom",
+                "html": "اخر تحديث ",
+                "id": null,
+                "itemId": "lblLastUpdate"
+            },
+            "name": "MyLabel1",
+            "designerId": "d8c7c010-fc8e-4b01-9bda-15732224a95c"
+        },
+        {
             "type": "fixedfunction",
             "reference": {
                 "name": "items",
@@ -514,7 +579,12 @@
                     "",
                     "Ext.Localization.LoadLocalization();",
                     "",
-                    "Ext.Localization.LocalizeView(this);"
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "if(Ext.Global.LastUpdatedTime) {",
+                    "    this.down('#lblLastUpdate').setHtml(this.down('#lblLastUpdate').getHtml()+Ext.Global.LastUpdatedTime);",
+                    "}",
+                    ""
                 ]
             },
             "name": "initialize",

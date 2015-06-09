@@ -111,6 +111,13 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'latest-update',
+                docked: 'bottom',
+                html: 'اخر تحديث ',
+                itemId: 'lblLastUpdate'
             }
         ]
     },
@@ -119,6 +126,11 @@ Ext.define('MEC_App.view.GoodsPricesView', {
         this.callParent();
 
         Ext.Localization.LocalizeView(this);
+
+        if(Ext.Global.LastUpdatedTime) {
+            this.down('#lblLastUpdate').setHtml(this.down('#lblLastUpdate').getHtml()+Ext.Global.LastUpdatedTime);
+        }
+
     }
 
 });

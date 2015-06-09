@@ -20,8 +20,8 @@ Ext.define('MEC_App.view.DailyPricesView', {
     requires: [
         'Ext.Label',
         'Ext.tab.Panel',
+        'Ext.form.Panel',
         'Ext.field.Search',
-        'Ext.Panel',
         'Ext.dataview.List',
         'Ext.XTemplate',
         'Ext.plugin.ListPaging'
@@ -54,11 +54,17 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         layout: 'vbox',
                         items: [
                             {
-                                xtype: 'searchfield',
+                                xtype: 'formpanel',
                                 docked: 'top',
-                                itemId: 'mysearchfield',
-                                margin: 10,
-                                placeHolder: 'بحث'
+                                items: [
+                                    {
+                                        xtype: 'searchfield',
+                                        docked: 'top',
+                                        itemId: 'mysearchfield',
+                                        margin: 10,
+                                        placeHolder: 'بحث'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'panel',
@@ -113,11 +119,17 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         layout: 'vbox',
                         items: [
                             {
-                                xtype: 'searchfield',
+                                xtype: 'formpanel',
                                 docked: 'top',
-                                itemId: 'mysearchfield1',
-                                margin: 10,
-                                placeHolder: 'بحث'
+                                items: [
+                                    {
+                                        xtype: 'searchfield',
+                                        docked: 'top',
+                                        itemId: 'mysearchfield1',
+                                        margin: 10,
+                                        placeHolder: 'بحث'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'panel',
@@ -172,11 +184,17 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         layout: 'vbox',
                         items: [
                             {
-                                xtype: 'searchfield',
+                                xtype: 'formpanel',
                                 docked: 'top',
-                                itemId: 'mysearchfield2',
-                                margin: 10,
-                                placeHolder: 'بحث'
+                                items: [
+                                    {
+                                        xtype: 'searchfield',
+                                        docked: 'top',
+                                        itemId: 'mysearchfield2',
+                                        margin: 10,
+                                        placeHolder: 'بحث'
+                                    }
+                                ]
                             },
                             {
                                 xtype: 'panel',
@@ -225,6 +243,13 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'latest-update',
+                docked: 'bottom',
+                html: 'اخر تحديث ',
+                itemId: 'lblLastUpdate'
             }
         ]
     },
@@ -235,6 +260,11 @@ Ext.define('MEC_App.view.DailyPricesView', {
         Ext.Localization.LoadLocalization();
 
         Ext.Localization.LocalizeView(this);
+
+        if(Ext.Global.LastUpdatedTime) {
+            this.down('#lblLastUpdate').setHtml(this.down('#lblLastUpdate').getHtml()+Ext.Global.LastUpdatedTime);
+        }
+
     }
 
 });

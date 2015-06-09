@@ -18,6 +18,10 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
     alias: 'controller.GoodsPricesController',
 
     config: {
+        refs: {
+            GoodsPricesView: 'GoodsPricesView'
+        },
+
         control: {
             "container#ShopsContainer": {
                 show: 'onShopsContainerShow'
@@ -36,10 +40,12 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
 
     onShopsContainerShow: function(component, eOpts) {
 
-        var view = component;
+        var view = this.getGoodsPricesView();
 
         var ajaxAndPagingParams = {
-            list: view.down('#lstShops'),
+            view: view,
+            list: component.down('#lstShops'),
+            selector: "ShopList",
             moreText: Ext.Localization.GetMessage('LoadMore'),
             noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
             url: Ext.Global.GetConfig('CMSWSUrl')+ '/Shop/GetAllShops?culture='+ Ext.Global.LanguageFlag,
@@ -51,11 +57,12 @@ Ext.define('MEC_App.controller.GoodsPricesController', {
     },
 
     onGoodsContainerShow: function(component, eOpts) {
-
-        var view = component;
+        var view = this.getGoodsPricesView();
 
         var ajaxAndPagingParams = {
-            list: view.down('#lstProducts'),
+            view: view,
+            list: component.down('#lstProducts'),
+            selector: "ProductList",
             moreText: Ext.Localization.GetMessage('LoadMore'),
             noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
             url: Ext.Global.GetConfig('CMSWSUrl')+ '/Product/GetAllProducts?culture='+ Ext.Global.LanguageFlag,

@@ -18,6 +18,10 @@ Ext.define('MEC_App.controller.DailyPricesController', {
     alias: 'controller.DailyPricesController',
 
     config: {
+        refs: {
+            DailyPricesView: 'DailyPricesView'
+        },
+
         control: {
             "container#VegentsblesContainer": {
                 show: 'onVegentsblesContainerShow'
@@ -39,32 +43,41 @@ Ext.define('MEC_App.controller.DailyPricesController', {
             "searchfield#mysearchfield": {
                 action: 'onMysearchfieldAction',
                 clearicontap: 'onMysearchfieldClearicontap'
+            },
+            "label#lblLastUpdate": {
+                initialize: 'onLblLastUpdateInitialize'
             }
         }
     },
 
     onVegentsblesContainerShow: function(component, eOpts) {
 
-        this.GetPrices(component,'#lstPrices',1);
+        var view = this.getDailyPricesView();
+
+        this.GetPrices(view,component,'#lstPrices',1);
 
     },
 
     onFruitsContainerShow: function(component, eOpts) {
 
-        this.GetPrices(component,'#lstPrices1',2);
+        var view = this.getDailyPricesView();
+
+        this.GetPrices(view,component,'#lstPrices1',2);
 
     },
 
     onFishContainerShow: function(component, eOpts) {
 
-        this.GetPrices(component,'#lstPrices2',3);
+        var view = this.getDailyPricesView();
+
+        this.GetPrices(view,component,'#lstPrices2',3);
 
     },
 
     onMysearchfield2Action: function(textfield, e, eOpts) {
 
         var me = this,
-            container = textfield.up('container');
+            container = textfield.up('container').up('container');
 
         if(textfield.getValue() === ""){
             if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){
@@ -87,10 +100,11 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
     onMysearchfield2Clearicontap: function(textfield, e, eOpts) {
 
-        container = textfield.up('container');
+        var container = textfield.up('container').up('container');
+        var view = this.getDailyPricesView();
 
-        if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){
-            this.GetPrices(container,'#lstPrices2', 3);
+        if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){
+            this.GetPrices(view,container,'#lstPrices2', 3);
         }
         else {
             return;
@@ -101,7 +115,7 @@ Ext.define('MEC_App.controller.DailyPricesController', {
     onMysearchfield1Action: function(textfield, e, eOpts) {
 
         var me = this,
-            container = textfield.up('container');
+            container = textfield.up('container').up('container');
 
         if(textfield.getValue() === ""){
             if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){
@@ -124,10 +138,11 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
     onMysearchfield1Clearicontap: function(textfield, e, eOpts) {
 
-        container = textfield.up('container');
+        var container = textfield.up('container').up('container');
+        var view = this.getDailyPricesView();
 
-        if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){
-            this.GetPrices(container,'#lstPrices1', 2);
+        if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){
+            this.GetPrices(view,container,'#lstPrices1', 2);
         }
         else {
             return;
@@ -138,7 +153,7 @@ Ext.define('MEC_App.controller.DailyPricesController', {
     onMysearchfieldAction: function(textfield, e, eOpts) {
 
         var me = this,
-            container = textfield.up('container');
+            container = textfield.up('container').up('container');
 
         if(textfield.getValue() === ""){
             if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){
@@ -161,10 +176,11 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
     onMysearchfieldClearicontap: function(textfield, e, eOpts) {
 
-        container = textfield.up('container');
+        var container = textfield.up('container').up('container');
+        var view = this.getDailyPricesView();
 
-        if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){
-            this.GetPrices(container,'#lstPrices', 1);
+        if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){
+            this.GetPrices(view,container,'#lstPrices', 1);
         }
         else {
             return;
@@ -172,10 +188,18 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
     },
 
-    GetPrices: function(view, listID, typeID) {
+    onLblLastUpdateInitialize: function(component, eOpts) {
+
+
+
+    },
+
+    GetPrices: function(view, tabContainer, listID, typeID) {
 
         var ajaxAndPagingParams = {
-            list: view.down(listID),
+            view: view,
+            list: tabContainer.down(listID),
+            selector: 'Prices',
             moreText: Ext.Localization.GetMessage('LoadMore'),
             noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
             url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID,
@@ -186,11 +210,11 @@ Ext.define('MEC_App.controller.DailyPricesController', {
 
     },
 
-    SearchPrices: function(view, listID, typeID, searchString) {
+    SearchPrices: function(tabContainer, listID, typeID, searchString) {
 
         var ajaxAndPagingParams = {
             method: 'post',
-            list: view.down(listID),
+            list: tabContainer.down(listID),
             moreText: Ext.Localization.GetMessage('LoadMore'),
             noRecords: Ext.Localization.GetMessage('NoMoreInfo'),
             url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/SearchDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID+'&name='+searchString,

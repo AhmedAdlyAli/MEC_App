@@ -362,7 +362,9 @@ Ext.define('MEC_App.controller.Global', {
             method : ajaxAndPagingParams.method ? ajaxAndPagingParams.method : 'Get',
             success : function (response) {
 
-                var json = Ext.util.JSON.decode(response.responseText);
+                var selector = ajaxAndPagingParams.selector ? ajaxAndPagingParams.selector : null,
+                    jsonObject = Ext.util.JSON.decode(response.responseText),
+                    json = jsonObject[selector] ? jsonObject[selector] : jsonObject;
 
                 var store = new Ext.data.Store({
                     data : json,
@@ -394,6 +396,19 @@ Ext.define('MEC_App.controller.Global', {
                 ajaxAndPagingParams.list.setStore(store);
 
                 Ext.AnimationHelper.HideLoading();
+
+                if(jsonObject.LastUpdate) {
+
+                    Ext.Global.LastUpdatedTime = jsonObject.LastUpdate;
+
+                    var updatedTimeLabel = ajaxAndPagingParams.view.down('#lblLastUpdate');
+                        lblLastUpdate = 'اخر تحديث ';
+                    if(Ext.Global.LanguageFlag == "en"){
+                        lblLastUpdate = 'Last Updated ';
+                    }
+
+                    updatedTimeLabel.setHtml(lblLastUpdate+jsonObject.LastUpdate);
+                }
             }
         });
 

@@ -29,7 +29,9 @@
                 "fn": "onVegentsblesContainerShow",
                 "implHandler": [
                     "",
-                    "this.GetPrices(component,'#lstPrices',1);",
+                    "var view = this.getDailyPricesView();",
+                    "",
+                    "this.GetPrices(view,component,'#lstPrices',1);",
                     ""
                 ],
                 "name": "show"
@@ -54,7 +56,9 @@
                 "fn": "onFruitsContainerShow",
                 "implHandler": [
                     "",
-                    "this.GetPrices(component,'#lstPrices1',2);",
+                    "var view = this.getDailyPricesView();",
+                    "",
+                    "this.GetPrices(view,component,'#lstPrices1',2);",
                     ""
                 ],
                 "name": "show"
@@ -79,7 +83,9 @@
                 "fn": "onFishContainerShow",
                 "implHandler": [
                     "",
-                    "this.GetPrices(component,'#lstPrices2',3);",
+                    "var view = this.getDailyPricesView();",
+                    "",
+                    "this.GetPrices(view,component,'#lstPrices2',3);",
                     ""
                 ],
                 "name": "show"
@@ -97,6 +103,7 @@
             "userConfig": {
                 "designer|params": [
                     "view",
+                    "tabContainer",
                     "listID",
                     "typeID"
                 ],
@@ -104,7 +111,9 @@
                 "implHandler": [
                     "",
                     "var ajaxAndPagingParams = {",
-                    "    list: view.down(listID),",
+                    "    view: view,",
+                    "    list: tabContainer.down(listID),",
+                    "    selector: 'Prices',",
                     "    moreText: Ext.Localization.GetMessage('LoadMore'),",
                     "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
                     "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/GetAllDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID,",
@@ -127,7 +136,7 @@
             "codeClass": null,
             "userConfig": {
                 "designer|params": [
-                    "view",
+                    "tabContainer",
                     "listID",
                     "typeID",
                     "searchString"
@@ -137,7 +146,7 @@
                     "",
                     "var ajaxAndPagingParams = {",
                     "    method: 'post',",
-                    "    list: view.down(listID),",
+                    "    list: tabContainer.down(listID),",
                     "    moreText: Ext.Localization.GetMessage('LoadMore'),",
                     "    noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
                     "    url: Ext.Global.GetConfig('CMSWSUrl')+ '/DailyDiet/SearchDailyDietsByType?culture='+ Ext.Global.LanguageFlag +'&typeId='+typeID+'&name='+searchString,",
@@ -170,7 +179,7 @@
                 "implHandler": [
                     "",
                     "var me = this,",
-                    "    container = textfield.up('container');",
+                    "    container = textfield.up('container').up('container');",
                     "",
                     "if(textfield.getValue() === \"\"){",
                     "    if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){",
@@ -213,10 +222,11 @@
                 "fn": "onMysearchfield2Clearicontap",
                 "implHandler": [
                     "",
-                    "container = textfield.up('container');",
+                    "var container = textfield.up('container').up('container');",
+                    "var view = this.getDailyPricesView();",
                     "",
-                    "if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().includes('search')){",
-                    "    this.GetPrices(container,'#lstPrices2', 3);",
+                    "if(container.down('#lstPrices2').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){",
+                    "    this.GetPrices(view,container,'#lstPrices2', 3);",
                     "}",
                     "else {",
                     "    return;",
@@ -247,7 +257,7 @@
                 "implHandler": [
                     "",
                     "var me = this,",
-                    "    container = textfield.up('container');",
+                    "    container = textfield.up('container').up('container');",
                     "",
                     "if(textfield.getValue() === \"\"){",
                     "    if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){",
@@ -290,10 +300,11 @@
                 "fn": "onMysearchfield1Clearicontap",
                 "implHandler": [
                     "",
-                    "container = textfield.up('container');",
+                    "var container = textfield.up('container').up('container');",
+                    "var view = this.getDailyPricesView();",
                     "",
-                    "if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().includes('search')){",
-                    "    this.GetPrices(container,'#lstPrices1', 2);",
+                    "if(container.down('#lstPrices1').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){",
+                    "    this.GetPrices(view,container,'#lstPrices1', 2);",
                     "}",
                     "else {",
                     "    return;",
@@ -324,7 +335,7 @@
                 "implHandler": [
                     "",
                     "var me = this,",
-                    "    container = textfield.up('container');",
+                    "    container = textfield.up('container').up('container');",
                     "",
                     "if(textfield.getValue() === \"\"){",
                     "    if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){",
@@ -367,10 +378,11 @@
                 "fn": "onMysearchfieldClearicontap",
                 "implHandler": [
                     "",
-                    "container = textfield.up('container');",
+                    "var container = textfield.up('container').up('container');",
+                    "var view = this.getDailyPricesView();",
                     "",
-                    "if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().includes('search')){",
-                    "    this.GetPrices(container,'#lstPrices', 1);",
+                    "if(container.down('#lstPrices').getStore()._proxy._url.toLowerCase().indexOf('search') > -1){",
+                    "    this.GetPrices(view,container,'#lstPrices', 1);",
                     "}",
                     "else {",
                     "    return;",
@@ -381,6 +393,45 @@
             },
             "name": "onMysearchfieldClearicontap",
             "designerId": "6a8ebac8-7003-4fcd-82bf-f07ce85cdcda"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "DailyPricesView",
+                "selector": "DailyPricesView"
+            },
+            "name": "DailyPricesView",
+            "designerId": "0b33a14a-1eec-482d-83ea-467b0a1fcd84"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "label#lblLastUpdate",
+                "designer|params": [
+                    "component",
+                    "eOpts"
+                ],
+                "designer|targetType": "Ext.Label",
+                "fn": "onLblLastUpdateInitialize",
+                "implHandler": [
+                    "",
+                    "",
+                    ""
+                ],
+                "name": "initialize"
+            },
+            "name": "onLblLastUpdateInitialize",
+            "designerId": "a0866dc8-ead5-48d4-9bdb-d18f61e6b400"
         }
     ]
 }

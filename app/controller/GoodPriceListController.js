@@ -48,12 +48,13 @@ Ext.define('MEC_App.controller.GoodPriceListController', {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
-                if(json.ProductPrices.length>0)
+
+                if(json.ProductsPrice.ProductPrices.length>0)
 
                 {
 
                     var store = new Ext.data.Store({
-                        data : json.ProductPrices
+                        data : json.ProductsPrice.ProductPrices
                     });
 
                     var lstPrices = view.down('#lstPrices');
