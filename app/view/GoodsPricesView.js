@@ -111,6 +111,13 @@ Ext.define('MEC_App.view.GoodsPricesView', {
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'latest-update',
+                docked: 'bottom',
+                html: 'اخر تحديث',
+                itemId: 'lblLastUpdate'
             }
         ]
     },

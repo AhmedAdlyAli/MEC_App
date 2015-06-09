@@ -225,6 +225,13 @@ Ext.define('MEC_App.view.DailyPricesView', {
                         ]
                     }
                 ]
+            },
+            {
+                xtype: 'label',
+                cls: 'latest-update',
+                docked: 'bottom',
+                html: 'اخر تحديث',
+                itemId: 'lblLastUpdate'
             }
         ]
     },

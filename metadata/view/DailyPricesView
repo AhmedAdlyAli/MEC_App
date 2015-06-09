@@ -501,6 +501,24 @@
             ]
         },
         {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "latest-update"
+                ],
+                "docked": "bottom",
+                "html": "اخر تحديث",
+                "itemId": "lblLastUpdate"
+            },
+            "name": "MyLabel1",
+            "designerId": "d8c7c010-fc8e-4b01-9bda-15732224a95c"
+        },
+        {
             "type": "fixedfunction",
             "reference": {
                 "name": "items",

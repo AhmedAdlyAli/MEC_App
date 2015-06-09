@@ -10,7 +10,7 @@
         "cls": [
             "home-wrapper"
         ],
-        "container|animation": "slide",
+        "container|animation": "fade",
         "container|animation.direction": null,
         "container|animation.duration": null,
         "defaultBackButtonText": " ",

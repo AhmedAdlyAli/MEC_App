@@ -1878,6 +1878,26 @@ background: url(../images/toplogo.png) no-repeat center top;
     }
 }
 
+.x-label.latest-update {
+    position: relative;
+    margin: 5px 15px;
+    padding: 0 25px 0 0;
+    direction: rtl;
+    color:#7a7a7a;
+    &:before {
+        position:absolute;
+        top:1px;
+        right:0;
+        bottom:0;
+        content:'t';
+        font-family:'Pictos';
+        color:#7a7a7a;
+        font-size:21px;
+        text-align:center;
+        text-shadow:0 0 0
+    }
+}
+
 .ltr-cls {
     direction:ltr !important;
 
@@ -2199,14 +2219,21 @@ background: url(../images/toplogo.png) no-repeat center top;
             }
         }
     }
-    .mobile{
-    text-align:left
+
+    .mobile {
+        text-align:left;
     }
 
+    .x-label.latest-update {
+        padding: 0 0 0 25px;
+        direction: ltr;
+        &:before {
+            right:auto;
+            left: 0;
+        }
+    }
 
 }
-
-
 
 
 
@@ -2215,9 +2242,8 @@ background: url(../images/toplogo.png) no-repeat center top;
 
     background: transparent url(http://localhost:1841/resources/images/attach-default.png);
     with:120px;
-    heigh:120px;border:0
-
-
+    heigh:120px;
+    border:0;
 }
 
 .android {
@@ -2235,7 +2261,6 @@ background: url(../images/toplogo.png) no-repeat center top;
 
 
 .mobile{
-
     direction:ltr;
     text-align:right
 }

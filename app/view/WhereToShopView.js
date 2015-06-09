@@ -128,6 +128,13 @@ Ext.define('MEC_App.view.WhereToShopView', {
                 ],
                 striped: true,
                 variableHeights: true
+            },
+            {
+                xtype: 'label',
+                cls: 'latest-update',
+                docked: 'bottom',
+                html: 'اخر تحديث',
+                itemId: 'lblLastUpdate'
             }
         ],
         listeners: [

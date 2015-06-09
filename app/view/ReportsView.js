@@ -75,7 +75,7 @@ Ext.define('MEC_App.view.ReportsView', {
                             {
                                 xtype: 'list',
                                 cls: 'CompanyList',
-                                height: 261,
+                                height: 326,
                                 itemId: 'lstViewLinks',
                                 itemCls: 'item-link',
                                 itemTpl: [

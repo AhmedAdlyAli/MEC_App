@@ -285,6 +285,24 @@
                     "designerId": "aadbe0a2-36a6-4161-9f15-ef189666185f"
                 }
             ]
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "latest-update"
+                ],
+                "docked": "bottom",
+                "html": "اخر تحديث",
+                "itemId": "lblLastUpdate"
+            },
+            "name": "MyLabel7",
+            "designerId": "d5488e3a-e30e-4c26-b96e-04d6da272984"
         }
     ]
 }

@@ -493,28 +493,6 @@
                     "designerId": "f5e25fcd-6105-4dc3-a651-2e47617b84fd"
                 },
                 {
-                    "type": "Ext.field.Spinner",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "id": null,
-                        "itemId": "txtNoOfCopies",
-                        "label": "عدد النسخ",
-                        "labelAlign": null,
-                        "labelWidth": "45%",
-                        "maxValue": 10,
-                        "minValue": 1,
-                        "name": "txtNoOfCopies",
-                        "required": true,
-                        "stepValue": 1
-                    },
-                    "name": "MySpinnerField",
-                    "designerId": "636a93be-291f-46bb-967d-7895e60ada0f"
-                },
-                {
                     "type": "Ext.Button",
                     "reference": {
                         "name": "items",
@@ -646,7 +624,7 @@
                                     "    \"establishmentSpcId\":\"\",",
                                     "    \"caseSubType\":\"01\",",
                                     "    \"contactId\":\"\",",
-                                    "    \"numOfCopies\":view.down('#txtNoOfCopies').getValue(),",
+                                    "    \"numOfCopies\":1,",
                                     "    \"moiEstablishmentNum\":\"\",",
                                     "    \"qatarChamberNum\":\"\",",
                                     "    \"commercialPermitNum\":cp,",
@@ -667,7 +645,7 @@
                                     "",
                                     "        //invalid or insufficient input!",
                                     "",
-                                    "        json.NoOfCopies = view.down('#txtNoOfCopies').getValue();",
+                                    "        json.NoOfCopies = 1;",
                                     "",
                                     "",
                                     "        if(json.status==='Their is Active Cases for this account from the same case type !')",

@@ -62,8 +62,8 @@ Ext.define('MEC_App.controller.AnimationHelper', {
         {
             try {
 
-                //ActivityIndicator.show(message);
-                ProgressIndicator.showSimple(true);
+                ActivityIndicator.show(message);
+                //ProgressIndicator.showSimple(true);
 
             }
             catch(err) {
@@ -88,10 +88,10 @@ Ext.define('MEC_App.controller.AnimationHelper', {
         {
             try {
 
-                //ActivityIndicator.hide();
+                ActivityIndicator.hide();
 
 
-                ProgressIndicator.hide();
+                //ProgressIndicator.hide();
 
             }
             catch(err) {
