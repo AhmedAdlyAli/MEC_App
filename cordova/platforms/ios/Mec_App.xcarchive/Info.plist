@@ -5,24 +5,29 @@
 	<key>ApplicationProperties</key>
 	<dict>
 		<key>ApplicationPath</key>
-		<string>Applications/MEC_App.app</string>
+		<string>Applications/MEC_APP.app</string>
 		<key>CFBundleIdentifier</key>
 		<string>MEC.MECAPP</string>
 		<key>CFBundleShortVersionString</key>
-		<string>0.0.2</string>
+		<string>3.0.1</string>
 		<key>CFBundleVersion</key>
-		<string>0.0.2</string>
+		<string>3.0.1</string>
 		<key>IconPaths</key>
 		<array>
-			<string>Applications/MEC_App.app/icon@2x.png</string>
-			<string>Applications/MEC_App.app/icon.png</string>
-			<string>Applications/MEC_App.app/icon-40@2x.png</string>
-			<string>Applications/MEC_App.app/icon-40.png</string>
-			<string>Applications/MEC_App.app/icon-small@2x.png</string>
-			<string>Applications/MEC_App.app/icon-small.png</string>
-			<string>Applications/MEC_App.app/icon@2x.png</string>
-			<string>Applications/MEC_App.app/icon.png</string>
-			<string>Applications/MEC_App.app/icon@2x.png</string>
+			<string>Applications/MEC_APP.app/icon@2x.png</string>
+			<string>Applications/MEC_APP.app/icon.png</string>
+			<string>Applications/MEC_APP.app/icon-40@2x.png</string>
+			<string>Applications/MEC_APP.app/icon-40.png</string>
+			<string>Applications/MEC_APP.app/icon-small@2x.png</string>
+			<string>Applications/MEC_APP.app/icon-small.png</string>
+			<string>Applications/MEC_APP.app/icon-60@2x.png</string>
+			<string>Applications/MEC_APP.app/icon-60.png</string>
+			<string>Applications/MEC_APP.app/icon@2x.png</string>
+			<string>Applications/MEC_APP.app/icon.png</string>
+			<string>Applications/MEC_APP.app/icon@2x.png</string>
+			<string>Applications/MEC_APP.app/icon-72@2x.png</string>
+			<string>Applications/MEC_APP.app/icon-72.png</string>
+			<string>Applications/MEC_APP.app/icon-72@2x.png</string>
 		</array>
 		<key>SigningIdentity</key>
 		<string>iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)</string>
@@ -30,10 +35,10 @@
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2015-05-20T05:46:49Z</date>
+	<date>2015-06-09T21:31:01Z</date>
 	<key>Name</key>
-	<string>MEC_App</string>
+	<string>MEC_APP</string>
 	<key>SchemeName</key>
-	<string>MEC_App</string>
+	<string>MEC_APP</string>
 </dict>
 </plist>
