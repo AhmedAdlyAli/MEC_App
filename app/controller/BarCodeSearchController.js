@@ -26,6 +26,8 @@ Ext.define('MEC_App.controller.BarCodeSearchController', {
     },
 
     onBtnSearchTap: function(button, e, eOpts) {
+
+
         cordova.plugins.barcodeScanner.scan(
             function (result) {
 
@@ -43,19 +45,18 @@ Ext.define('MEC_App.controller.BarCodeSearchController', {
             }
         );
 
-
-
         // CP : 99023 - CR: 19092
 
         /*
+
                 Ext.Viewport.getActiveItem().push({
                     xtype: 'BarCodeEstablishmentDetails',
                     title: Ext.Global.GetFixedTitle(),
                     data: '99023'
                 });
+
+
         */
-
-
 
 
 
