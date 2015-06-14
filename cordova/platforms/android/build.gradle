@@ -241,6 +241,10 @@ android {
     if (cdvDebugSigningPropertiesFile) {
         addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
     }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
