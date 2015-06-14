@@ -22,7 +22,7 @@ Ext.define('MEC_App.controller.LoginController', {
 
     config: {
         refs: {
-            LoginFormView: '#LoginFomView'
+            LoginFormView: 'LoginFomView'
         },
 
         control: {

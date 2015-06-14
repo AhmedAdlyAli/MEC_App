@@ -23,7 +23,7 @@
             "codeClass": null,
             "userConfig": {
                 "ref": "LoginFormView",
-                "selector": "#LoginFomView",
+                "selector": "LoginFomView",
                 "xtype": null
             },
             "name": "LoginFormView",
