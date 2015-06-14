@@ -29,16 +29,13 @@ Ext.define('MEC_App.controller.BarCodeSearchController', {
         cordova.plugins.barcodeScanner.scan(
             function (result) {
 
-
-
-                var data = {commercialRegistration:result.text};
+                var input = result.text;
 
                 Ext.Viewport.getActiveItem().push({
-                    xtype: 'MyEstablishmentDetails',
+                    xtype: 'BarCodeEstablishmentDetails',
                     title: Ext.Global.GetFixedTitle(),
-                    data: data
+                    data: input
                 });
-
 
             },
             function (error) {
@@ -47,6 +44,16 @@ Ext.define('MEC_App.controller.BarCodeSearchController', {
         );
 
 
+
+        // CP : 99023 - CR: 19092
+
+        /*
+                Ext.Viewport.getActiveItem().push({
+                    xtype: 'BarCodeEstablishmentDetails',
+                    title: Ext.Global.GetFixedTitle(),
+                    data: '99023'
+                });
+        */
 
 
 

@@ -59,7 +59,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "إرشادات عن الوثائق التي يمكن استعادة بياناتها ....... "
+                        "cls": [
+                            "help"
+                        ],
+                        "html": "تمكن هذه الخدمة من التحقق من بيانات سجل تجاري أو رخصة تجارية صادرة من وزارة الإقتصاد والتجارة عن طريق الماسح الضوئي",
+                        "itemId": "lblHelp"
                     },
                     "name": "MyLabel",
                     "designerId": "ea92ded8-9750-425a-9ccc-05a95fa22ba7"
@@ -137,6 +141,24 @@
                     ]
                 }
             ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "Ext.Localization.LocalizeView(this);",
+                    ""
+                ]
+            },
+            "name": "initialize",
+            "designerId": "380d4420-6e9c-447f-bdfc-97bd7b36ee9f"
         }
     ]
 }

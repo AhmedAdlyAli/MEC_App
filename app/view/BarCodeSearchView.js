@@ -43,7 +43,9 @@ Ext.define('MEC_App.view.BarCodeSearchView', {
                 items: [
                     {
                         xtype: 'label',
-                        html: 'إرشادات عن الوثائق التي يمكن استعادة بياناتها ....... '
+                        cls: 'help',
+                        html: 'تمكن هذه الخدمة من التحقق من بيانات سجل تجاري أو رخصة تجارية صادرة من وزارة الإقتصاد والتجارة عن طريق الماسح الضوئي',
+                        itemId: 'lblHelp'
                     },
                     {
                         xtype: 'button',
@@ -77,6 +79,12 @@ Ext.define('MEC_App.view.BarCodeSearchView', {
                 ]
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+        Ext.Localization.LocalizeView(this);
+
     }
 
 });

@@ -532,6 +532,17 @@ Ext.ClassManager.addNameAlternateMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -662,6 +673,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.controller.AnimationHelper": [
     "Ext.AnimationHelper"
   ],
+  "MEC_App.controller.BarCodeEstablishmentDetailsController": [],
   "MEC_App.controller.BarCodeSearchController": [],
   "MEC_App.controller.BusinessIndicatorsController": [],
   "MEC_App.controller.ComplaintsController": [],
@@ -706,6 +718,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "MEC_App.view.AboutAppView": [],
   "MEC_App.view.AboutView": [],
   "MEC_App.view.AdminServicesView": [],
+  "MEC_App.view.BarCodeEstablishmentDetails": [],
   "MEC_App.view.BarCodeSearchView": [],
   "MEC_App.view.BusinessIndicatorsView": [],
   "MEC_App.view.ComplaintsView": [],
@@ -1368,6 +1381,17 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.layout.wrapper.BoxDock": [],
   "Ext.layout.wrapper.Dock": [],
   "Ext.layout.wrapper.Inner": [],
+  "Ext.log.Base": [],
+  "Ext.log.Logger": [],
+  "Ext.log.filter.Filter": [],
+  "Ext.log.filter.Priority": [],
+  "Ext.log.formatter.Default": [],
+  "Ext.log.formatter.Formatter": [],
+  "Ext.log.formatter.Identity": [],
+  "Ext.log.writer.Console": [],
+  "Ext.log.writer.DocumentTitle": [],
+  "Ext.log.writer.Remote": [],
+  "Ext.log.writer.Writer": [],
   "Ext.mixin.Bindable": [],
   "Ext.mixin.Filterable": [],
   "Ext.mixin.Mixin": [],
@@ -1510,6 +1534,9 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.viewport.WindowsPhone": [],
   "MEC_App.controller.AjaxHelper": [],
   "MEC_App.controller.AnimationHelper": [],
+  "MEC_App.controller.BarCodeEstablishmentDetailsController": [
+    "controller.BarCodeEstablishmentDetailsController"
+  ],
   "MEC_App.controller.BarCodeSearchController": [
     "controller.BarCodeSearchController"
   ],
@@ -1579,6 +1606,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "MEC_App.view.AdminServicesView": [
     "widget.AdminServicesView"
+  ],
+  "MEC_App.view.BarCodeEstablishmentDetails": [
+    "widget.BarCodeEstablishmentDetails"
   ],
   "MEC_App.view.BarCodeSearchView": [
     "widget.BarCodeSearchView"

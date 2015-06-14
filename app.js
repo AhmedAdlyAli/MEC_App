@@ -118,7 +118,8 @@ Ext.application({
         'MyBisunessFixed',
         'GenericSelectListView',
         'BarCodeSearchView',
-        'TradeExchangeView'
+        'TradeExchangeView',
+        'BarCodeEstablishmentDetails'
     ],
     controllers: [
         'HomeController',
@@ -146,7 +147,8 @@ Ext.application({
         'WhereToShopController',
         'LanguageViewController',
         'SettingsViewController',
-        'BarCodeSearchController'
+        'BarCodeSearchController',
+        'BarCodeEstablishmentDetailsController'
     ],
     name: 'MEC_App',
 

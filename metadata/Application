@@ -32,7 +32,8 @@
             "WhereToShopController",
             "LanguageViewController",
             "SettingsViewController",
-            "BarCodeSearchController"
+            "BarCodeSearchController",
+            "BarCodeEstablishmentDetailsController"
         ],
         "models": [
             "MenuModel",
@@ -132,7 +133,8 @@
             "MyBisunessFixed",
             "GenericSelectListView",
             "BarCodeSearchView",
-            "TradeExchangeView"
+            "TradeExchangeView",
+            "BarCodeEstablishmentDetails"
         ]
     },
     "name": "Application",

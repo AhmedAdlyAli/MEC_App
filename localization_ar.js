@@ -255,7 +255,8 @@ var localeAr =
 		BizIndicatorsTitleReNewCR :'السجلات التجارية المجددة',
 		BizIndicatorsTitleNewCP :'الرخص التجارية الجديدة',
 		BizIndicatorsTitleReNewCP :'الرخص التجارية المجددة',
-		ErrSessionExpired: 'إنتهت جلسة العمل٫ برجاء تسجيل الدخول مرة أخرى'
+		ErrSessionExpired: 'إنتهت جلسة العمل٫ برجاء تسجيل الدخول مرة أخرى',
+		errWrongBarCodeInput:'خطأ في المدخلات٬ يجب إستخدام باركود من وثيقة سجل تجاري أو رخصة تجارية أصلية'	
 	}
 
 }

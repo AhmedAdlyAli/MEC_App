@@ -109,7 +109,8 @@ var localeEn =
                     {Name:'Offprint Request',Url:'PrintOffsView1', RequireLogin:true , Icon:'ico-printOffs.png', OpenExternalWindow:false},
                     {Name:'My Requests',Url:'MyRequestsView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false},
                     {Name:'Establishment Services',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Issue+Representative+Office+General+Instruction+View+eService',RequireLogin:false ,Icon:'ico-registerService.png', OpenExternalWindow:true},
-                    {Name:'Reserve a Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true}
+                    {Name:'Reserve a Trade Name',Url:'https://services.mec.gov.qa/enu/start.swe?SWECmd=GotoView&SWEView=MEC+Trade+Names+Reg+General+Instructions+View+eService',RequireLogin:false , Icon:'ico-reserveTradeName.png', OpenExternalWindow:true},
+                    {Name:'PrintOffs Validation',Url:'BarCodeSearchView',RequireLogin:true,Icon:'ico-myRequests.png', OpenExternalWindow:false}
                 ]
 		},
 
@@ -244,6 +245,46 @@ var localeEn =
 			]
 		},
 
+
+
+
+{
+			itemId:"BarCodeEstablishmentDetails",
+			description: "",
+			items:
+			[
+				{itemId:"lbl1", "xtype": "label","value":"CR Number"},
+				{itemId:"lbl2", "xtype": "label","value":"CR Registration Date"},
+				{itemId:"lbl3", "xtype": "label","value":"CR Expiry Date"},
+				{itemId:"lbl4", "xtype": "label","value":"CR Status"},
+				{itemId:"lbl5", "xtype": "label","value":"CR English Name"},
+				{itemId:"lbl6", "xtype": "label","value":"CR Arabic Name"},
+				{itemId:"lbl7", "xtype": "label","value":"Capital"},
+				{itemId:"lbl8", "xtype": "label","value":"CP Number"},
+				{itemId:"lbl9", "xtype": "label","value":"CP Status"},
+				{itemId:"lbl10", "xtype": "label","value":"CP Expiry Date"},
+				{itemId:"lbl11", "xtype": "label","value":"Establishment Date"},
+				{itemId:"lbl12", "xtype": "label","value":"Establishment Type"},
+				{itemId:"lbl13", "xtype": "label","value":"Legal Form"},
+				{itemId:"lbl14", "xtype": "label","value":"Establishment Status"},
+				{itemId:"lbl15", "xtype": "label","value":"Establishment Registration Number"},
+
+				{itemId:"titlebar1", "xtype": "titlebar","value":"Establishment Information"},
+				{itemId:"titlebar2", "xtype": "titlebar","value":"Business Activities"},
+				{itemId:"titlebar3", "xtype": "titlebar","value":"Branches"},
+				{itemId:"titlebar4", "xtype": "titlebar","value":"Signatories"},
+
+				{itemId:"EstablishmentInfo", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"pnlData", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"BusinessActivities", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"Branches", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"Signatories", "xtype": "cls","value":"ltr-cls"}
+			]
+		},
+
+
+
+
 {
 			itemId:"MyBranchDetails",
 			description: "",
@@ -295,10 +336,22 @@ var localeEn =
 				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"lstTradeNameResults", "xtype": "cls","value":"ltr-cls"},
 				{itemId:"btnSubmit", "xtype": "button","value":"Search"}
-					
-				
 			]
 		},
+
+
+		{
+			itemId:"BarCodeSearchView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", "xtype": "label","value":"PrintOffs Validation"},
+				{itemId:"lblHelp", "xtype": "label","value":"This Service Allows to Display the details of CR and CP PrintOffs"},
+				{itemId:"fsForm", "xtype": "cls","value":"ltr-cls"},
+				{itemId:"btnSearch", "xtype": "button","value":"Search"}
+			]
+		},
+
 
 		{
 			itemId:"tradenameavailabilityview1",
@@ -1178,7 +1231,8 @@ var localeEn =
 		BizIndicatorsTitleReNewCR :'Renewed CRs',
 		BizIndicatorsTitleNewCP :'New CPs',
 		BizIndicatorsTitleReNewCP :'Renewed CPs',
-		ErrSessionExpired: 'Your Session has Expired, Please login Again'	
+		ErrSessionExpired: 'Your Session has Expired, Please login Again',
+		errWrongBarCodeInput:'Wrong input, Please scan a Barcode from Official MEC CR or CP Documents'	
 	}
 
 }

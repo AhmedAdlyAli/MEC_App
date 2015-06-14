@@ -94,7 +94,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         Ext.Localization.LocalizeView(this);
 
         var data = this.getData();
-
+        console.log(data);
 
         this.down('#lblTitle').setHtml(data.NewsTitle);
         this.down('#lblDate').setHtml(Ext.Global.FormatJsonDate(data.NewsDate));
@@ -103,12 +103,23 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
 
         var lblUrl = this.down('#lblUrl');
-        //lblUrl.setHtml(data.NewsLink);
+
+
+
+        var lnk;
+        if(Ext.Global.LanguageFlag==='ar')
+            {
+                lnk = data.NewsLinkAr;
+            }else{
+                if(data.NewsLink==='' || data.NewsLink===null)
+                lnk = data.NewsLinkAr;
+                else
+                lnk = data.NewsLink;
+            }
+
 
         lblUrl.element.on('tap', function(){
-
-            window.open(data.NewsLink,'_system');
-
+            window.open(lnk,'_system');
         });
 
 
