@@ -114,7 +114,9 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
         //alert(data.ValueNew);
 
-        //var currency=' مليون (ر.ق)';
+        var unit=data.ValueString;
+
+        if(unit===null)unit='';
 
 
         //if(Ext.Global.LanguageFlag == 'en'){
@@ -123,7 +125,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
 
         view.down('#lblTitle').setHtml(data.Title);
-        view.down('#lblValue').setHtml(data.Value+ '' + data.ValueString);
+        view.down('#lblValue').setHtml(data.Value+ ' ' + unit);
 
         if(data.ChangePercent>0){
             view.down('#lblPercentOfChange').addCls('arrow-up-details');
