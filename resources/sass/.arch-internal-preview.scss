@@ -372,8 +372,8 @@ body {
 
     .HListItem,
     .CompanyListItem {
-        background: url(../images/HListIcon.png) no-repeat 96% center  !important;
-        padding: 0 36px 0 0;
+        background: url(../images/HListIcon.png) no-repeat 97% center  !important;
+        padding: 0 40px 0 0;
         line-height: 35px;
     }
 
@@ -531,12 +531,14 @@ body {
 
     a {
         color: #89bee9;
-        padding: 0 50px 0 0;
         line-height: 40px;
-        direction: ltr;
-        display: block;
         font-family: HelveticaNeueLTStd57Condensed;
         margin: 0 0 5px;
+        
+        &.call,
+        &.mail {
+            padding: 0 50px 0 0;
+        }
     }
 
     .map-panel {
@@ -2159,9 +2161,10 @@ background: url(../images/toplogo.png) no-repeat center top;
     .e-mail {
         background: #e1e1e1 url(../images/e-mail-title-icon.png) no-repeat 4% center;
     }
-
-    a {
-        padding: 0 0 0 50px;
+    
+    .call,
+    .mail {
+        padding: 0 0 0 50px !important;
     }
 
     .item-indicator{
@@ -2232,8 +2235,20 @@ background: url(../images/toplogo.png) no-repeat center top;
         }
 
     }
+    
+    
+    &.HList,
+    &.CompanyList {
+        direction: ltr;
 
+        .HListItem,
+        .CompanyListItem {
+            background: url(../images/HListIcon.png) no-repeat 3% center  !important;
+            padding: 0 0 0 40px;
+            line-height: 35px;
+        }
 
+    }
 
 
     .mal-text {
@@ -2296,9 +2311,9 @@ background: url(../images/toplogo.png) no-repeat center top;
         }
     }
     .help{
-        
+
         margin:1em;
-        
+
     }
 
 }
