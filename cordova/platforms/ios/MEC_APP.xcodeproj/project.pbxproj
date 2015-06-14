@@ -436,7 +436,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = D2DHSYGQ7A;
+						DevelopmentTeam = J98KS528GJ;
 					};
 				};
 			};
@@ -584,7 +584,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -611,8 +611,8 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "MEC_APP";
-				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
+				PRODUCT_NAME = MEC_APP;
+				PROVISIONING_PROFILE = "79951e3e-77ae-4a1a-8e7f-4aab85bb762e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -622,7 +622,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ministry of Economy and Commerce (J98KS528GJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Mohammed Al-Emadi (D2DHSYGQ7A)";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -648,8 +648,8 @@
 					"-weak-lSystem",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "MEC_APP";
-				PROVISIONING_PROFILE = "e01f650b-c451-47db-8b1b-5917a37eac32";
+				PRODUCT_NAME = MEC_APP;
+				PROVISIONING_PROFILE = "79951e3e-77ae-4a1a-8e7f-4aab85bb762e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

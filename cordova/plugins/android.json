@@ -636,7 +636,7 @@
             "PACKAGE_NAME": "mec.mecapp"
         },
         "org.apache.cordova.console": {
-            "PACKAGE_NAME": "mec.mecapp"
+            "PACKAGE_NAME": "MEC.MECAPP"
         },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "mec.mecapp"
@@ -658,9 +658,6 @@
         },
         "org.pbernasconi.progressindicator": {
             "PACKAGE_NAME": "mec.mecapp"
-        },
-        "org.apache.cordova.console": {
-            "PACKAGE_NAME": "MEC.MECAPP"
         },
         "com.malomatia.DropBoxChooser": {
             "PACKAGE_NAME": "MEC.MECAPP"

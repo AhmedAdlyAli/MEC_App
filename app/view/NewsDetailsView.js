@@ -110,6 +110,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
         if(Ext.Global.LanguageFlag==='ar')
             {
                 lnk = data.NewsLinkAr;
+
             }else{
                 if(data.NewsLink==='' || data.NewsLink===null)
                 lnk = data.NewsLinkAr;
@@ -119,6 +120,7 @@ Ext.define('MEC_App.view.NewsDetailsView', {
 
 
         lblUrl.element.on('tap', function(){
+           // alert(lnk);
             window.open(lnk,'_system');
         });
 
