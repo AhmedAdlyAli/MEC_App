@@ -60,13 +60,6 @@ Ext.define('MEC_App.controller.BarCodeSearchController', {
 
 
 
-
-
-
-
-
-
-
     }
 
 });
