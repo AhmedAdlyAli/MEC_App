@@ -2430,3 +2430,75 @@
 2015-06-10 00:29:26.522 MEC_APP[18904:2808013] [CDVTimer][TotalPluginStartup] 1.213014ms
 2015-06-10 00:29:26.599 MEC_APP[18904:2808013] Resetting plugins due to page load.
 2015-06-10 00:29:27.162 MEC_APP[18904:2808013] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/C3A52BF7-79F3-46DA-B458-3A5CAEC15F67/MEC_APP.app/www/index.html
+2015-06-11 01:37:34.331 MEC_APP[22466:3198214] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/8AD67677-D49A-4E57-91FE-739441AC9A1F/Library/Cookies/Cookies.binarycookies
+2015-06-11 01:37:34.667 MEC_APP[22466:3198214] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-11 01:37:34.667 MEC_APP[22466:3198214] Multi-tasking -> Device: YES, App: YES
+2015-06-11 01:37:34.688 MEC_APP[22466:3198214] Unlimited access to network resources
+2015-06-11 01:37:35.077 MEC_APP[22466:3198214] [CDVTimer][file] 3.242970ms
+2015-06-11 01:37:35.077 MEC_APP[22466:3198214] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-11 01:37:35.077 MEC_APP[22466:3198214] [CDVTimer][splashscreen] 0.129998ms
+2015-06-11 01:37:35.077 MEC_APP[22466:3198214] [CDVTimer][TotalPluginStartup] 4.171014ms
+2015-06-11 01:37:35.339 MEC_APP[22466:3198214] Resetting plugins due to page load.
+2015-06-11 01:37:36.767 MEC_APP[22466:3198214] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A76A16F0-655A-4A8D-858D-90A93D54E876/MEC_APP.app/www/index.html
+2015-06-11 01:37:44.152 MEC_APP[22466:3198214] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2015-06-11 01:37:46.486 MEC_APP[22466:3198214] THREAD WARNING: ['ProgressIndicator'] took '27.587891' ms. Plugin should use a background thread.
+2015-06-11 01:37:46.755 MEC_APP[22466:3198214] [{"id":1,"Title":"التباىل التجاري مع  استراليا","FileName":"aust-ar.pdf","Lang":"ar","Month":5,"Year":2015},{"id":2,"Title":"التباىل التجاري مع  بلجيكا","FileName":"bel-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":3,"Title":"التباىل التجاري مع  الصين","FileName":"china-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":4,"Title":"التباىل التجاري مع  فرنسا","FileName":"france-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":5,"Title":"التباىل التجاري مع  المانيا","FileName":"germany-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":6,"Title":"التباىل التجاري مع  الهنى","FileName":"india-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":7,"Title":"التباىل التجاري مع  اندونسيا","FileName":"indonisia-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":8,"Title":"التباىل التجاري مع  ايطاليا","FileName":"italy-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":9,"Title":"التباىل التجاري مع  اليابان","FileName":"japan-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":10,"Title":"التباىل التجاري مع  كوريا الجنوبيد","FileName":"korea-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":11,"Title":"التباىل التجاري مع  الكويت","FileName":"kuwait-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":12,"Title":"التباىل التجاري مع  ماليزيا","FileName":"malysia-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":13,"Title":"التباىل التجاري مع  هولندا","FileName":"netherland-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":14,"Title":"التباىل التجاري مع  عمان","FileName":"oman-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":15,"Title":"التباىل التجاري مع  الفلبين","FileName":"phil-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":16,"Title":"التباىل التجاري مع  السعودية","FileName":"saudi-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":17,"Title":"التباىل التجاري مع  سنغافورد","FileName":"singapore-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":18,"Title":"التباىل التجاري مع  اسبانيا","FileName":"spain-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":19,"Title":"التباىل التجاري مع  النمسا","FileName":"swit-ar.pdf","Lang":"ar","Month":null,"Year":null},{"id":20,"Title":"التباىل التجاري مع  تايوان","FileName":"taiwan-ar.pdf","Lang":"ar","Month":null,"Year":null}]
+2015-06-11 01:37:47.896 MEC_APP[22466:3198214] THREAD WARNING: ['InAppBrowser'] took '74.294189' ms. Plugin should use a background thread.
+2015-06-11 01:52:10.932 MEC_APP[23932:3208093] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/C189A0AE-1543-4893-B89E-34E04BF1A553/Library/Cookies/Cookies.binarycookies
+2015-06-11 01:52:11.032 MEC_APP[23932:3208093] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-11 01:52:11.032 MEC_APP[23932:3208093] Multi-tasking -> Device: YES, App: YES
+2015-06-11 01:52:11.034 MEC_APP[23932:3208093] Unlimited access to network resources
+2015-06-11 01:52:11.268 MEC_APP[23932:3208093] [CDVTimer][file] 1.966000ms
+2015-06-11 01:52:11.268 MEC_APP[23932:3208093] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-11 01:52:11.268 MEC_APP[23932:3208093] [CDVTimer][splashscreen] 0.099003ms
+2015-06-11 01:52:11.268 MEC_APP[23932:3208093] [CDVTimer][TotalPluginStartup] 2.328992ms
+2015-06-11 01:52:11.432 MEC_APP[23932:3208093] Resetting plugins due to page load.
+2015-06-11 01:52:12.816 MEC_APP[23932:3208093] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/7C3FAF4E-0525-4AA7-AD88-E42C147CE34C/MEC_APP.app/www/index.html
+2015-06-11 01:52:53.241 MEC_APP[23932:3208093] THREAD WARNING: ['ProgressIndicator'] took '24.000977' ms. Plugin should use a background thread.
+2015-06-11 01:52:55.703 MEC_APP[23932:3208093] {"listOfMecContactInfoIo":{"contact":[{"birthDate":"05/01/1980","cityOfBirth":"قطر","fifthNameARA":"","fifthNameENU":"","firstName":"Jack","firstNameA":"جاك","fullNameACalc":"جاك محمد أحمد سبارو ","fullNameECalc":"Jack   Sparo ","grandFatherName":"","grandFatherNameA":"أحمد","lastName":"Sparo","lastNameA":"سبارو","middleName":"","middleNameA":"محمد","identityNationality":"قطر","identityNationalityCode":"Qatar","identityTypeCode":"SSN","identityNum":"99887766554","identityType":"رقم البطاقة الشخصية","emailAddress":"ragabovic@outlook.com","expiryDate":"05/23/2019","issueDate":"02/04/2015","phoneNumber":""}]},"result":"True","token":"7371917251433976774178544971852"}
+2015-06-11 14:25:17.147 MEC_APP[25716:3273308] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/2C21B552-6599-4F47-AAD1-F4D1882C5865/Library/Cookies/Cookies.binarycookies
+2015-06-11 14:25:17.493 MEC_APP[25716:3273308] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-11 14:25:17.493 MEC_APP[25716:3273308] Multi-tasking -> Device: YES, App: YES
+2015-06-11 14:25:17.511 MEC_APP[25716:3273308] Unlimited access to network resources
+2015-06-11 14:25:17.864 MEC_APP[25716:3273308] [CDVTimer][file] 2.155006ms
+2015-06-11 14:25:17.864 MEC_APP[25716:3273308] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-11 14:25:17.864 MEC_APP[25716:3273308] [CDVTimer][splashscreen] 0.102997ms
+2015-06-11 14:25:17.864 MEC_APP[25716:3273308] [CDVTimer][TotalPluginStartup] 3.058970ms
+2015-06-11 14:25:18.141 MEC_APP[25716:3273308] Resetting plugins due to page load.
+2015-06-11 14:25:18.590 MEC_APP[25716:3273308] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/456036A5-EA77-4681-A32D-57EDCF68DE28/MEC_APP.app/www/index.html
+2015-06-14 12:37:29.823 MEC_APP[26933:3406107] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/E34ED376-508C-4601-A14F-27EC2C39F132/Library/Cookies/Cookies.binarycookies
+2015-06-14 12:37:30.196 MEC_APP[26933:3406107] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-14 12:37:30.197 MEC_APP[26933:3406107] Multi-tasking -> Device: YES, App: YES
+2015-06-14 12:37:30.214 MEC_APP[26933:3406107] Unlimited access to network resources
+2015-06-14 12:37:30.587 MEC_APP[26933:3406107] [CDVTimer][file] 2.680004ms
+2015-06-14 12:37:30.587 MEC_APP[26933:3406107] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-14 12:37:30.587 MEC_APP[26933:3406107] [CDVTimer][splashscreen] 0.113010ms
+2015-06-14 12:37:30.587 MEC_APP[26933:3406107] [CDVTimer][TotalPluginStartup] 3.664970ms
+2015-06-14 12:37:30.861 MEC_APP[26933:3406107] Resetting plugins due to page load.
+2015-06-14 12:37:31.320 MEC_APP[26933:3406107] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/63BE3DCD-6A2A-4470-B5F0-B7010312A82C/MEC_APP.app/www/index.html
+2015-06-14 12:37:39.625 MEC_APP[26933:3406107] error JSON.stringify()ing argument: TypeError: JSON.stringify cannot serialize cyclic structures.
+2015-06-14 13:47:20.957 MEC_APP[26933:3448838] Terminating since there is no system app.
+2015-06-14 16:59:07.775 MEC_APP[29019:3560178] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/952F7CB9-DD72-4540-B7A0-E58E20B1F00C/Library/Cookies/Cookies.binarycookies
+2015-06-14 16:59:08.067 MEC_APP[29019:3560178] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-14 16:59:08.067 MEC_APP[29019:3560178] Multi-tasking -> Device: YES, App: YES
+2015-06-14 16:59:08.086 MEC_APP[29019:3560178] Unlimited access to network resources
+2015-06-14 16:59:08.453 MEC_APP[29019:3560178] [CDVTimer][file] 2.830029ms
+2015-06-14 16:59:08.453 MEC_APP[29019:3560178] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-14 16:59:08.453 MEC_APP[29019:3560178] [CDVTimer][splashscreen] 0.187993ms
+2015-06-14 16:59:08.453 MEC_APP[29019:3560178] [CDVTimer][TotalPluginStartup] 4.101038ms
+2015-06-14 16:59:08.681 MEC_APP[29019:3560178] Resetting plugins due to page load.
+2015-06-14 16:59:10.938 MEC_APP[29019:3560178] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/A19226D9-78F6-4B42-9E5E-9ED0A7EE046C/MEC_APP.app/www/index.html
+2015-06-14 17:00:31.204 MEC_Qatar[29757:3562531] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Data/Application/0135E6C9-5578-49EF-8FD9-8F1B364A76F7/Library/Cookies/Cookies.binarycookies
+2015-06-14 17:00:31.268 MEC_Qatar[29757:3562531] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-14 17:00:31.269 MEC_Qatar[29757:3562531] Multi-tasking -> Device: YES, App: YES
+2015-06-14 17:00:31.270 MEC_Qatar[29757:3562531] Unlimited access to network resources
+2015-06-14 17:00:31.352 MEC_Qatar[29757:3562531] [CDVTimer][file] 1.975000ms
+2015-06-14 17:00:31.352 MEC_Qatar[29757:3562531] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2015-06-14 17:00:31.352 MEC_Qatar[29757:3562531] [CDVTimer][splashscreen] 0.109971ms
+2015-06-14 17:00:31.352 MEC_Qatar[29757:3562531] [CDVTimer][TotalPluginStartup] 2.795994ms
+2015-06-14 17:00:31.499 MEC_Qatar[29757:3562531] Resetting plugins due to page load.
+2015-06-14 17:00:36.746 MEC_Qatar[29757:3562531] Finished load of: file:///Users/ahmedadly/Library/Developer/CoreSimulator/Devices/8A9BF7F6-0398-48E8-AF03-0F61E9AC9BFA/data/Containers/Bundle/Application/3B9CB533-C8DC-4997-B7B0-759F777FBE48/MEC_Qatar.app/www/index.html
+2015-06-14 17:00:36.949 MEC_Qatar[29757:3562531] deviceready has not fired after 5 seconds.
+2015-06-14 17:00:36.949 MEC_Qatar[29757:3562531] Channel not fired: onDOMContentLoaded
+2015-06-14 17:00:36.950 MEC_Qatar[29757:3562531] Channel not fired: onFileSystemPathsReady
+2015-06-14 17:00:36.950 MEC_Qatar[29757:3562531] Channel not fired: onCordovaInfoReady

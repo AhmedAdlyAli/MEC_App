@@ -25,7 +25,7 @@ var localeEn =
 				{Name:"How to Request Supply Service", Url:"SupplyServiceHowTo", RequireLogin:false, Icon:"ico-supplyService.png"},
 				{Name:"My Details", Url:"SupplyServiceMyData", RequireLogin:true, Icon:"ico-supplyService.png"},
 				{Name:"Supply Service Request Form", Url:"SupplyServiceView1", RequireLogin:true, Icon:"ico-supplyService.png"},
-				{Name:"Nearest Distributor", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"}
+				{Name:"Nearest Dealers", Url:"SupplyServiceNearestDealer", RequireLogin:false, Icon:"ico-supplyService.png"}
 				//{Name:"Department Services", Url:"SupplyServiceDepartmentServices", RequireLogin:false, Icon:"ico-supplyService.png"}
 			]
 		},
@@ -60,7 +60,7 @@ var localeEn =
              	{Name:'Business Indicators',Url:'BusinessIndicatorsView',OpenExternalWindow:false,Icon:'ico-work-indicator.png'},
              	{Name:'Consumer Indicators',Url:'ConsumerIndicatorsListing' ,OpenExternalWindow:false,Icon:'ico-consume-indicators.png'},
              	{Name:'Trademark Report',Url:'http://cms.mec.gov.qa/cms/trdmrkrpt/217edition.pdf',OpenExternalWindow:true,Icon:'ico-trade.png'},
-             	{Name:'Trade Exchange Report',Url:'http://cms.mec.gov.qa/cms/PDF/TradeExchangeEn.pdf',OpenExternalWindow:true,Icon:'ico-trade-exch.png'}
+             	{Name:'Trade Exchange Reports',Url:'TradeExchangeView',OpenExternalWindow:false,Icon:'ico-trade-exch.png'}
 			]
 		},
 
@@ -71,7 +71,7 @@ var localeEn =
              	{Name:'Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'},
-             	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'}
+             	{Name:'Ministry Staff',Url:'TradeExchangeView', OpenExternalWindow:false ,Icon:'ico-employees.png'}
 			]
 		},
 
@@ -631,8 +631,8 @@ var localeEn =
 				{itemId:"btnSupplyNext2", xtype: "button",value:"Next"},
 				{itemId:"lblGoTo", xtype: "label",value:"Get Directions"},
 				{itemId:"set1", "xtype": "cls",value:"ltr-cls"},
-				{itemId:"radRequestNearby", "xtype": "radiofield",value:"Display Nearest"},
-				{itemId:"radRequestAll", "xtype": "radiofield",value:"Display All"} 
+				{itemId:"radRequestNearby", "xtype": "radiofield",value:"Nearby Dealers"},
+				{itemId:"radRequestAll", "xtype": "radiofield",value:"All Dealers"} 
 			]
 		},
 
@@ -672,8 +672,8 @@ var localeEn =
 				{itemId:"viewLbl", xtype: "label",value:"Supply Services Nearby Distributor"},
 				{itemId:"lblGoTo", "xtype": "label",value:"Get Directions"},
 				{itemId:"set1", "xtype": "cls",value:"ltr-cls"},
-				{itemId:"radDisplayNear", "xtype": "radiofield",value:"Display Nearest"},
-				{itemId:"radDisplayAll", "xtype": "radiofield",value:"Display All"}
+				{itemId:"radDisplayNear", "xtype": "radiofield",value:"Nearby Dealers"},
+				{itemId:"radDisplayAll", "xtype": "radiofield",value:"All Dealers"}
 			]
 		},
 		{
@@ -717,6 +717,16 @@ var localeEn =
 			]
 		},
 
+		{
+			itemId:"TradeExchangeView",
+			description: "",
+			items:
+			[
+				{itemId:"lblTitle", xtype: "label",value:"Trade Exchange Reports"},
+				{itemId:"lstViewLinks", xtype: "cls",value:"ltr-cls"}
+
+			]
+		},
 
 		{
 			itemId:"EconomicIndicatorsListing",
@@ -1167,7 +1177,8 @@ var localeEn =
 		BizIndicatorsTitleNewCR :'New CRs',
 		BizIndicatorsTitleReNewCR :'Renewed CRs',
 		BizIndicatorsTitleNewCP :'New CPs',
-		BizIndicatorsTitleReNewCP :'Renewed CPs'		
+		BizIndicatorsTitleReNewCP :'Renewed CPs',
+		ErrSessionExpired: 'Your Session has Expired, Please login Again'	
 	}
 
 }

@@ -56,6 +56,7 @@ Ext.define('MEC_App.controller.MinistryNewsController', {
             pageSize: 10
         };
 
+
         Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);
 
     }

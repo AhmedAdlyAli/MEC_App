@@ -394,17 +394,7 @@
                 "designer|targetType": "Ext.Button",
                 "fn": "onBtnLogoutTap",
                 "implHandler": [
-                    "Ext.Global.isLogged = false;",
-                    "Ext.Global.userToken = '';",
-                    "",
-                    "Ext.Global.identityType = '';",
-                    "Ext.Global.identityNum = '';",
-                    "Ext.Global.identityNationality = '';",
-                    "",
-                    "Ext.Viewport.toggleMenu('right');",
-                    "",
-                    "Ext.Viewport.getActiveItem().reset();",
-                    "Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();",
+                    "Ext.Global.SignOut();",
                     ""
                 ],
                 "name": "tap"

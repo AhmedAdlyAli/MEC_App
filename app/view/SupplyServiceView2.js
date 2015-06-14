@@ -64,6 +64,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                     {
                         xtype: 'radiofield',
                         flex: 1,
+                        cls: 'radio',
                         itemId: 'radRequestNearby',
                         label: 'عرض الأقرب',
                         labelWidth: '65%',
@@ -73,6 +74,7 @@ Ext.define('MEC_App.view.SupplyServiceView2', {
                     {
                         xtype: 'radiofield',
                         flex: 1,
+                        cls: 'radio',
                         itemId: 'radRequestAll',
                         label: 'عرض الكل',
                         labelWidth: '65%',

@@ -70,6 +70,7 @@ Ext.define('MEC_App.view.BarCodeSearchView', {
 
                         },
                         cls: 'btn-send',
+                        hidden: true,
                         itemId: 'btnDropbox',
                         text: 'اختر ملف من دروب بوكس'
                     }

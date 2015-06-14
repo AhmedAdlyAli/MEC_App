@@ -90,7 +90,8 @@
                                 ],
                                 "fn": "getImgSrc",
                                 "implHandler": [
-                                    "var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InvestorEducation/Image/\"+Id;",
+                                    "",
+                                    "var src = Ext.Global.GetConfig('CMSWSUrl')+\"/InvestorEducation/Image?id=\"+Id + '&Lang=' + Ext.Global.LanguageFlag;",
                                     "return src;"
                                 ]
                             },

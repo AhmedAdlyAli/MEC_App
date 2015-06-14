@@ -58,6 +58,7 @@ Ext.define('MEC_App.view.EconomicIndicatorsListing', {
 
     onLstItemsItemTap: function(dataview, index, target, record, e, eOpts) {
 
+        console.log(record.data);
 
         Ext.Viewport.getActiveItem().push({
             xtype: record.data.Url,

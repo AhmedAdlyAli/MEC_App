@@ -228,9 +228,14 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
         Ext.each(viewData,function(item){
+
+
+            if(formData[item.ItemID]>0){
             var price = formData[item.ItemID] * item.Price;
             consolidatedData.push({ ItemID: item.ItemID,ItemName:item.Name,  Quantity: formData[item.ItemID],ItemPrice:price});
             TotalQuantity += formData[item.ItemID];
+            }
+
         });
 
 
@@ -639,13 +644,67 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
 
 
 
-                Ext.Viewport.getActiveItem().push({
-                    xtype: 'SupplyServiceView4',
-                    title: Ext.Global.GetFixedTitle(),
-                    data: view3Data
-                });
 
 
+
+
+
+        var url = Ext.Global.GetConfig('supplyWebServiceUrl')+ '/ValidateItems';
+
+        var requestData =
+            {"qid": Ext.Global.identityNum,
+             "languageID": Ext.Global.LanguageFlag=='ar'?2:1,
+             "mobileDeviceID":"",
+             "dealerID": view3Data.DealerID,
+             orderItems: view3Data.Items,
+             "sessionID": Ext.Global.userSupplyToken,
+             "mobileNo" : Ext.Global.mobileNumber
+            };
+
+         console.log(requestData);
+
+        Ext.AnimationHelper.ShowLoading();
+
+        Ext.Ajax.request({
+
+            url : url,
+            method : 'POST',
+            jsonData :requestData,
+            success : function (response) {
+
+                Ext.AnimationHelper.HideLoading();
+
+
+                var json1 = Ext.util.JSON.decode(response.responseText);
+                var json2 = Ext.util.JSON.decode(json1);
+
+
+                if(json2.Data==='Validated' && json2.Status==='Success')
+                {
+                    Ext.Viewport.getActiveItem().push({
+                        xtype: 'SupplyServiceView4',
+                        title: Ext.Global.GetFixedTitle(),
+                        data: view3Data
+                    });
+                }else{
+
+
+
+                    //expired session
+                    Ext.device.Notification.show({
+                        title: Ext.Localization.GetMessage('Error'),
+                        buttons:[Ext.Localization.GetMessage('OK')],
+                        message: Ext.Localization.GetMessage('ErrSessionExpired')
+                    });
+
+
+                    Ext.Global.SignOut();
+
+                }
+
+
+            }
+        });
 
 
 
@@ -787,6 +846,8 @@ Ext.define('MEC_App.controller.SupplyServiceController', {
                 var json1 = Ext.util.JSON.decode(response.responseText);
                 var json2 = Ext.util.JSON.decode(json1);
 
+
+                console.log(json2);
 
                 Ext.AnimationHelper.HideLoading();
 

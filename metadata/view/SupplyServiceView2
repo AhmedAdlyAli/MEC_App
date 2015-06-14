@@ -99,6 +99,9 @@
                     "codeClass": null,
                     "userConfig": {
                         "checked": true,
+                        "cls": [
+                            "radio"
+                        ],
                         "itemId": "radRequestNearby",
                         "label": "عرض الأقرب",
                         "labelWidth": "65%",
@@ -116,6 +119,9 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "radio"
+                        ],
                         "itemId": "radRequestAll",
                         "label": "عرض الكل",
                         "labelWidth": "65%",

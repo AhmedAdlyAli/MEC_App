@@ -32,18 +32,6 @@ https://dl.dropboxusercontent.com/s/ubwbruegf0sn96a/Download.htm?dl=0
 
 
 
-    Ext.device.Notification.show({
-        title: 'رسالة',
-        buttons: ["موافق"],
-        message:  Ext.Global.GetConfirmationMsg('msgConfirmComplaints'),
-        callback: function(button) {
-
-            //return user to home page
-
-            Ext.Viewport.getActiveItem().reset();
-
-        }
-    });
 
 
 button.up('MainNavView').push({
@@ -797,3 +785,8 @@ txtBarCode
 
 
 BarCodeSearchView
+
+
+
+
+                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/ConsumerEducation/Image?id="+Id + '&lang=' + Ext.Global.LanguageFlag;

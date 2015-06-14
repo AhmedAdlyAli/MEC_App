@@ -83,6 +83,7 @@
                         "fn": "onLstItemsItemTap",
                         "implHandler": [
                             "",
+                            "console.log(record.data);",
                             "",
                             "Ext.Viewport.getActiveItem().push({",
                             "    xtype: record.data.Url,",

@@ -94,6 +94,7 @@
                             "btn-send"
                         ],
                         "designer|displayName": null,
+                        "hidden": true,
                         "itemId": "btnDropbox",
                         "text": "اختر ملف من دروب بوكس"
                     },

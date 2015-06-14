@@ -66,6 +66,9 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
                 var json = Ext.util.JSON.decode(response.responseText);
 
+                console.log(json);
+
+
 
           if(json.length>0)
             {
@@ -75,7 +78,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
 
                 Ext.each(json,function(item){
 
-                    json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value, Description:item.Description});
+                    json2.push({ChangePercent:item.ChangePercent,Id: item.Id, LastUpdated:item.LastUpdated, Title:item.Title, Value:item.Value,ValueString:item.ValueNew, Description:item.Description});
 
                 });
 
@@ -107,17 +110,20 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         var view = component;
         var data = view.getData();
 
+        //console.log(data);
 
-        var currency=' مليون (ر.ق)';
+        //alert(data.ValueNew);
+
+        //var currency=' مليون (ر.ق)';
 
 
-        if(Ext.Global.LanguageFlag == 'en'){
-            currency=' Million (QAR)';
-        }
+        //if(Ext.Global.LanguageFlag == 'en'){
+        //    currency=' Million (QAR)';
+        //}
 
 
         view.down('#lblTitle').setHtml(data.Title);
-        view.down('#lblValue').setHtml(data.Value+ currency) ;
+        view.down('#lblValue').setHtml(data.Value+ '' + data.ValueString);
 
         if(data.ChangePercent>0){
             view.down('#lblPercentOfChange').addCls('arrow-up-details');
@@ -136,7 +142,7 @@ Ext.define('MEC_App.controller.EconomicIndicatorsController', {
         view.down('#lblWhatIS').setHtml(view.down('#lblWhatIS').getHtml()+ data.Title);
 
         view.down('#pnlPDF').element.on('tap', function () {
-            window.open( Ext.Global.GetConfig('CMSWSUrl') + '/IndicatorsAndReport/PDFReport/'+ data.Id, "_system");
+            window.open( Ext.Global.GetConfig('CMSWSUrl') + '/IndicatorsAndReport/PDFReport?id='+ data.Id + '&Lang='+ Ext.Global.LanguageFlag, "_system");
         });
 
 

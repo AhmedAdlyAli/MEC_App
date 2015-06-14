@@ -51,7 +51,7 @@ Ext.define('MEC_App.view.ConsumerEducationView', {
                     '',
                     {
                         getImgSrc: function(Id) {
-                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/ConsumerEducation/Image/"+Id;
+                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/ConsumerEducation/Image?id="+Id + '&Lang=' + Ext.Global.LanguageFlag;
                             return src;
                         }
                     }

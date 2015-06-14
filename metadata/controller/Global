@@ -184,9 +184,6 @@
                     "",
                     "    //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',",
                     "",
-                    "",
-                    "",
-                    "",
                     "    //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',",
                     "",
                     "    //production",
@@ -571,6 +568,9 @@
                     "            jsonObject = Ext.util.JSON.decode(response.responseText),",
                     "            json = jsonObject[selector] ? jsonObject[selector] : jsonObject;",
                     "",
+                    "        console.log(json);",
+                    "        ",
+                    "        ",
                     "        var store = new Ext.data.Store({",
                     "            data : json,",
                     "            pageSize: ajaxAndPagingParams.pageSize,",
@@ -641,6 +641,33 @@
             },
             "name": "ResetHistory",
             "designerId": "e02bdad9-dfc7-46e1-9b7d-4c4ae7dd66da"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "SignOut",
+                "implHandler": [
+                    "Ext.Global.isLogged = false;",
+                    "Ext.Global.userToken = '';",
+                    "",
+                    "Ext.Global.identityType = '';",
+                    "Ext.Global.identityNum = '';",
+                    "Ext.Global.identityNationality = '';",
+                    "",
+                    "Ext.Viewport.toggleMenu('right');",
+                    "",
+                    "Ext.Viewport.getActiveItem().reset();",
+                    "Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();",
+                    ""
+                ]
+            },
+            "name": "SignOut",
+            "designerId": "b4c6590b-1862-430b-b13c-4cbe8fdcce94"
         }
     ]
 }

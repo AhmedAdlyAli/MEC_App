@@ -117,7 +117,8 @@ Ext.application({
         'AboutAppView',
         'MyBisunessFixed',
         'GenericSelectListView',
-        'BarCodeSearchView'
+        'BarCodeSearchView',
+        'TradeExchangeView'
     ],
     controllers: [
         'HomeController',

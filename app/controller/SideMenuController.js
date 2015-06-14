@@ -227,17 +227,7 @@ Ext.define('MEC_App.controller.SideMenuController', {
     },
 
     onBtnLogoutTap: function(button, e, eOpts) {
-        Ext.Global.isLogged = false;
-        Ext.Global.userToken = '';
-
-        Ext.Global.identityType = '';
-        Ext.Global.identityNum = '';
-        Ext.Global.identityNationality = '';
-
-        Ext.Viewport.toggleMenu('right');
-
-        Ext.Viewport.getActiveItem().reset();
-        Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
+        Ext.Global.SignOut();
 
     },
 

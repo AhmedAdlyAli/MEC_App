@@ -1,0 +1,138 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "complaint-view"
+        ],
+        "designer|userAlias": "TradeExchangeView",
+        "designer|userClassName": "TradeExchangeView",
+        "itemId": "TradeExchangeView",
+        "layout": "fit",
+        "scrollable": false
+    },
+    "name": "AdminServicesView1",
+    "designerId": "c16d96f1-bb3c-492e-a4fc-15323726aec0",
+    "cn": [
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "inners-title"
+                ],
+                "docked": "top",
+                "html": "تقارير التبادل التجاري",
+                "itemId": "lblTitle"
+            },
+            "name": "MyLabel3",
+            "designerId": "1188b4f0-14a4-4839-94ac-bdee2a157863"
+        },
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "HList"
+                ],
+                "height": "100%",
+                "id": null,
+                "itemCls": "HListItem",
+                "itemId": "lstViewLinks",
+                "store": null
+            },
+            "name": "MyList1",
+            "designerId": "a9c006ff-a53b-48e5-8d54-d60eb7b49cda",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "itemTpl",
+                        "implHandler": [
+                            "<div>{Title}</div>"
+                        ]
+                    },
+                    "name": "itemTpl",
+                    "designerId": "38572bdb-72f5-4b15-b241-0cadf5676894"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onLstLinksItemTap",
+                        "implHandler": [
+                            "",
+                            "//            Ext.Global.RedirectToView(record.data);",
+                            "",
+                            "",
+                            "window.open( Ext.Global.GetConfig('CMSWSUrl') + '/TradeExchange/GetReportFile?id=' + record.data.id + '&culture=' + Ext.Global.LanguageFlag ,'_system');",
+                            "",
+                            "",
+                            ""
+                        ],
+                        "name": "itemtap"
+                    },
+                    "name": "onLstLinksItemTap",
+                    "designerId": "2be3b90e-b5f8-402b-80c6-523cd7a7091b"
+                }
+            ]
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "Ext.Localization.LocalizeView(this);",
+                    "",
+                    "//var links = Ext.Localization.getLinks(this);",
+                    "",
+                    "",
+                    "        var view = this;",
+                    "        Ext.Localization.LocalizeView(view);",
+                    "",
+                    "        var ajaxAndPagingParams = {",
+                    "            list: view.down('#lstViewLinks'),",
+                    "            moreText: Ext.Localization.GetMessage('LoadMore'),",
+                    "            noRecords: Ext.Localization.GetMessage('NoMoreInfo'),",
+                    "            url: Ext.Global.GetConfig('CMSWSUrl')+ '/TradeExchange/GetAllReports?culture='+Ext.Global.LanguageFlag,",
+                    "            pageSize: 10",
+                    "        };",
+                    "",
+                    "        Ext.Global.LoadAjaxWithPaging(ajaxAndPagingParams);",
+                    "",
+                    "",
+                    "",
+                    "this.callParent();"
+                ]
+            },
+            "name": "initialize",
+            "designerId": "a4f55e4c-2592-4abf-bcba-acd8db8b0f4b"
+        }
+    ]
+}

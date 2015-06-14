@@ -131,7 +131,8 @@
             "AboutAppView",
             "MyBisunessFixed",
             "GenericSelectListView",
-            "BarCodeSearchView"
+            "BarCodeSearchView",
+            "TradeExchangeView"
         ]
     },
     "name": "Application",

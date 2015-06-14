@@ -50,7 +50,8 @@ Ext.define('MEC_App.view.InvestorEducationView', {
                     '',
                     {
                         getImgSrc: function(Id) {
-                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/InvestorEducation/Image/"+Id;
+
+                            var src = Ext.Global.GetConfig('CMSWSUrl')+"/InvestorEducation/Image?id="+Id + '&Lang=' + Ext.Global.LanguageFlag;
                             return src;
                         }
                     }

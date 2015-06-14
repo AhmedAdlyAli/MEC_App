@@ -93,9 +93,6 @@ Ext.define('MEC_App.controller.Global', {
 
             //    CMSWSUrlEmails : 'http://cms.mec.gov.qa/EmailService/api',
 
-
-
-
             //  supplyWebServiceUrl: 'http://supply-staging.mec.gov.qa/mservice/paymentservice/mob_pay_go.aspx',
 
             //production
@@ -366,6 +363,9 @@ Ext.define('MEC_App.controller.Global', {
                     jsonObject = Ext.util.JSON.decode(response.responseText),
                     json = jsonObject[selector] ? jsonObject[selector] : jsonObject;
 
+                console.log(json);
+
+
                 var store = new Ext.data.Store({
                     data : json,
                     pageSize: ajaxAndPagingParams.pageSize,
@@ -420,6 +420,21 @@ Ext.define('MEC_App.controller.Global', {
         for (i = historyArray.length; i >0 ; i--) {
             Ext.Viewport.getActiveItem().innerItems.splice(i,1);
         }
+    },
+
+    SignOut: function() {
+        Ext.Global.isLogged = false;
+        Ext.Global.userToken = '';
+
+        Ext.Global.identityType = '';
+        Ext.Global.identityNum = '';
+        Ext.Global.identityNationality = '';
+
+        Ext.Viewport.toggleMenu('right');
+
+        Ext.Viewport.getActiveItem().reset();
+        Ext.Viewport.getActiveItem().getNavigationBar().getBackButton().hide();
+
     }
 
 });

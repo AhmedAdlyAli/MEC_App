@@ -78,7 +78,7 @@ Ext.define('MEC_App.view.MainNavView', {
 
                                     Ext.Ajax.request({
 
-                                        url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetAllNewsByCategory?culture='+Ext.Global.LanguageFlag+'&pageIndex=0&pageSize=3&categoryId=1',
+                                        url : Ext.Global.GetConfig('CMSWSUrl')+ '/EconomyNews/GetTopNewsByCategory?culture='+Ext.Global.LanguageFlag+'&categoryId=1',
                                         method : 'Get',
                                         success : function (response) {
 
