@@ -71,7 +71,7 @@ var localeEn =
              	{Name:'Branches',Url:'MinistryBranchesView',OpenExternalWindow:false,Icon:'ico-branches.png'},
              	{Name:'Contact Us',Url:'ContactUs2View',OpenExternalWindow:false,Icon:'ico-contact.png'},
              	{Name:'Suggestions',Url:'FeedbackFormView',OpenExternalWindow:false,Icon:'ico-suggesstion.png'},
-             	{Name:'Ministry Staff',Url:'TradeExchangeView', OpenExternalWindow:false ,Icon:'ico-employees.png'}
+             	{Name:'Ministry Staff',Url:'http://hrss.mec.gov.qa', OpenExternalWindow:true ,Icon:'ico-employees.png'}
 			]
 		},
 
