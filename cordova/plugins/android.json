@@ -9,43 +9,7 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"ListPicker\"><param name=\"android-package\" value=\"am.armsoft.plugins.ListPicker\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"ActionSheet\"><param name=\"android-package\" value=\"nl.xservices.plugins.actionsheet.ActionSheet\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         },
                         {
@@ -61,11 +25,43 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ListPicker\"><param name=\"android-package\" value=\"am.armsoft.plugins.ListPicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"android-package\" value=\"org.apache.cordova.dialogs.Notification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ActionSheet\"><param name=\"android-package\" value=\"nl.xservices.plugins.actionsheet.ActionSheet\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"ProgressIndicator\"><param name=\"android-package\" value=\"org.apache.cordova.plugin.ProgressIndicator\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"DropBoxChooser\"><param name=\"android-package\" value=\"com.malomatia.plugin.DropBoxChooser\" /></feature>",
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -89,6 +85,10 @@
                     ],
                     "/manifest": [
                         {
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+                            "count": 1
+                        },
+                        {
                             "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
                             "count": 1
                         },
@@ -98,10 +98,6 @@
                         },
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"false\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ],
@@ -611,41 +607,11 @@
         }
     },
     "installed_plugins": {
-        "am.armsoft.plugins.ListPicker": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "com.phonegap.plugins.barcodescanner": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "cordova-plugin-camera": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
         "cordova-plugin-file": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "cordova-plugin-file-transfer": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "nl.x-services.plugins.actionsheet": {
             "PACKAGE_NAME": "mec.mecapp"
         },
         "org.apache.cordova.console": {
             "PACKAGE_NAME": "MEC.MECAPP"
-        },
-        "org.apache.cordova.device": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "org.apache.cordova.geolocation": {
-            "PACKAGE_NAME": "mec.mecapp"
-        },
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "mec.mecapp"
         },
         "org.apache.cordova.plugin.ActivityIndicator": {
             "PACKAGE_NAME": "mec.mecapp"
@@ -656,11 +622,38 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "mec.mecapp"
         },
-        "org.pbernasconi.progressindicator": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "mec.mecapp"
         },
-        "com.malomatia.DropBoxChooser": {
-            "PACKAGE_NAME": "MEC.MECAPP"
+        "am.armsoft.plugins.ListPicker": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "nl.x-services.plugins.actionsheet": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "mec.mecapp"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.mec.mecqatar"
+        },
+        "org.pbernasconi.progressindicator": {
+            "PACKAGE_NAME": "com.mec.mecqatar"
+        },
+        "com.phonegap.plugins.barcodescanner": {
+            "PACKAGE_NAME": "com.mec.mecqatar"
         }
     },
     "dependent_plugins": {}

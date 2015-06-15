@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='iso-8859-6'?>
 <widget id="MEC.MECAPP" version="3.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>MEC_APP</name>
+    <name>MEC_Qatar</name>
     <description>
          
     </description>
@@ -43,25 +43,7 @@
 
     </platform>
 
-    <icon src="www/img/logo.png" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-60@3x.png" width="180" height="180" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-60.png" width="60" height="60" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-60@2x.png" width="120" height="120" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-72.png" width="72" height="72" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-72@2x.png" width="144" height="144" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-76.png" width="76" height="76" />
-    <icon src="platforms/ios/MEC_App/Resources/icons/icon-76@2x.png" width="152" height="152" />
-        
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="320" height="480"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" height="960"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="768" height="1024"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1536" height="2048"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1024" height="768"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2048" height="1536"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="640" height="1136"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="750" height="1334"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="1242" height="2208"/>
-    <splash src="platforms/ios/MEC_App/Resources/splash/splash.png" width="2208" height="1242"/>
+
     
         
         

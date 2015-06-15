@@ -1,55 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/am.armsoft.plugins.ListPicker/www/ListPicker.js",
-        "id": "am.armsoft.plugins.ListPicker.ListPicker",
-        "clobbers": [
-            "window.plugins.listpicker"
-        ]
-    },
-    {
-        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
-        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-        "id": "cordova-plugin-camera.Camera",
-        "clobbers": [
-            "Camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-        "id": "cordova-plugin-camera.CameraPopoverOptions",
-        "clobbers": [
-            "CameraPopoverOptions"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/Camera.js",
-        "id": "cordova-plugin-camera.camera",
-        "clobbers": [
-            "navigator.camera"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-camera/www/ios/CameraPopoverHandle.js",
-        "id": "cordova-plugin-camera.CameraPopoverHandle",
-        "clobbers": [
-            "CameraPopoverHandle"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-        "id": "cordova-plugin-dialogs.notification",
-        "merges": [
-            "navigator.notification"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
         "id": "cordova-plugin-file.DirectoryEntry",
         "clobbers": [
@@ -196,27 +147,6 @@ module.exports = [
         "runs": true
     },
     {
-        "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
-        "id": "cordova-plugin-file-transfer.FileTransferError",
-        "clobbers": [
-            "window.FileTransferError"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
-        "id": "cordova-plugin-file-transfer.FileTransfer",
-        "clobbers": [
-            "window.FileTransfer"
-        ]
-    },
-    {
-        "file": "plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js",
-        "id": "nl.x-services.plugins.actionsheet.ActionSheet",
-        "clobbers": [
-            "window.plugins.actionsheet"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.console/www/console-via-logger.js",
         "id": "org.apache.cordova.console.console",
         "clobbers": [
@@ -231,10 +161,88 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.device/www/device.js",
-        "id": "org.apache.cordova.device.device",
+        "file": "plugins/org.apache.cordova.plugin.ActivityIndicator/www/activityIndicator.js",
+        "id": "org.apache.cordova.plugin.ActivityIndicator.ActivityIndicator",
         "clobbers": [
-            "device"
+            "ActivityIndicator"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+        "id": "cordova-plugin-camera.Camera",
+        "clobbers": [
+            "Camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+        "id": "cordova-plugin-camera.CameraPopoverOptions",
+        "clobbers": [
+            "CameraPopoverOptions"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/Camera.js",
+        "id": "cordova-plugin-camera.camera",
+        "clobbers": [
+            "navigator.camera"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-camera/www/ios/CameraPopoverHandle.js",
+        "id": "cordova-plugin-camera.CameraPopoverHandle",
+        "clobbers": [
+            "CameraPopoverHandle"
+        ]
+    },
+    {
+        "file": "plugins/am.armsoft.plugins.ListPicker/www/ListPicker.js",
+        "id": "am.armsoft.plugins.ListPicker.ListPicker",
+        "clobbers": [
+            "window.plugins.listpicker"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+        "id": "cordova-plugin-dialogs.notification",
+        "merges": [
+            "navigator.notification"
+        ]
+    },
+    {
+        "file": "plugins/nl.x-services.plugins.actionsheet/www/ActionSheet.js",
+        "id": "nl.x-services.plugins.actionsheet.ActionSheet",
+        "clobbers": [
+            "window.plugins.actionsheet"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
+        "id": "cordova-plugin-file-transfer.FileTransferError",
+        "clobbers": [
+            "window.FileTransferError"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-file-transfer/www/FileTransfer.js",
+        "id": "cordova-plugin-file-transfer.FileTransfer",
+        "clobbers": [
+            "window.FileTransfer"
         ]
     },
     {
@@ -273,25 +281,10 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.apache.cordova.plugin.ActivityIndicator/www/activityIndicator.js",
-        "id": "org.apache.cordova.plugin.ActivityIndicator.ActivityIndicator",
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
         "clobbers": [
-            "ActivityIndicator"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
-        "id": "org.apache.cordova.splashscreen.SplashScreen",
-        "clobbers": [
-            "navigator.splashscreen"
-        ]
-    },
-    {
-        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
-        "id": "org.apache.cordova.vibration.notification",
-        "merges": [
-            "navigator.notification",
-            "navigator"
+            "device"
         ]
     },
     {
@@ -302,33 +295,32 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.malomatia.DropBoxChooser/www/DropBoxChooser.js",
-        "id": "com.malomatia.DropBoxChooser.DropBoxChooser",
+        "file": "plugins/com.phonegap.plugins.barcodescanner/www/barcodescanner.js",
+        "id": "com.phonegap.plugins.barcodescanner.BarcodeScanner",
         "clobbers": [
-            "DropBoxChooser"
+            "cordova.plugins.barcodeScanner"
         ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "am.armsoft.plugins.ListPicker": "2.2.0",
-    "com.phonegap.plugins.barcodescanner": "2.0.1",
-    "cordova-plugin-camera": "1.1.0",
-    "cordova-plugin-dialogs": "1.1.0",
     "cordova-plugin-file": "2.0.0",
-    "cordova-plugin-file-transfer": "1.1.0",
-    "cordova-plugin-whitelist": "1.0.0",
-    "nl.x-services.plugins.actionsheet": "1.1.4",
     "org.apache.cordova.console": "0.2.13",
-    "org.apache.cordova.device": "0.3.0",
-    "org.apache.cordova.geolocation": "0.3.12",
-    "org.apache.cordova.inappbrowser": "0.6.0",
     "org.apache.cordova.plugin.ActivityIndicator": "1.0.0",
     "org.apache.cordova.splashscreen": "1.0.0",
     "org.apache.cordova.vibration": "0.3.13",
+    "cordova-plugin-camera": "1.1.0",
+    "am.armsoft.plugins.ListPicker": "2.2.0",
+    "cordova-plugin-dialogs": "1.1.0",
+    "cordova-plugin-whitelist": "1.0.0",
+    "nl.x-services.plugins.actionsheet": "1.1.7",
+    "cordova-plugin-file-transfer": "1.1.0",
+    "org.apache.cordova.geolocation": "0.3.12",
+    "org.apache.cordova.inappbrowser": "0.6.0",
+    "org.apache.cordova.device": "0.3.0",
     "org.pbernasconi.progressindicator": "1.1.0",
-    "com.malomatia.DropBoxChooser": "0.3.0"
+    "com.phonegap.plugins.barcodescanner": "2.0.1"
 }
 // BOTTOM OF METADATA
 });

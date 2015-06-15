@@ -29,21 +29,8 @@
  
 https://dl.dropboxusercontent.com/s/ubwbruegf0sn96a/Download.htm?dl=0  
 
-open -a 'Google Chrome.app' --args --disable-web-security
 
-========================== Android Build ===================================
 
-cordova build android --release
-
-cd platforms/android/
-
-jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore mecKeystore build/outputs/apk/MEC_Qatar-unsigned.apk mec_qatar
-
-cd build/outputs/apk/
-
-zipalign -v 4 MEC_Qatar-unsigned.apk MEC_Qatar.apk
-
-============================================================================
 
 
 
@@ -565,8 +552,7 @@ selfreg1
 Jaidahautomotivecrm@jaida.com.qa
 
 
-55030635 Waseem
-
+55030635 Was
 
 
 
@@ -798,9 +784,18 @@ txtBarCode
 
 
 
-BarCodeSearchView
 
 
-- Verify barcode 
-- 
+
+
+
+
+
+
+
+
+
+
+
+
 
